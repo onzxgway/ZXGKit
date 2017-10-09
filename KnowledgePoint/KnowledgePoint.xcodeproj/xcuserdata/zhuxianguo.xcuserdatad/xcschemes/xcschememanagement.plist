@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ZXGConfuse.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>多线程.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>F08E12531F78E01F005DE5F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0B7B7201F8B49FD00B89EFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
