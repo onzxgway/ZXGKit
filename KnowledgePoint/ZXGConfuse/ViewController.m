@@ -38,15 +38,19 @@
      modifyAge
      address
  */
-- (void)modifyAge:(NSInteger)age address:(NSString *)add {
+- (void)modifyAge:(NSInteger)age andAddress:(NSString *)add {
     NSLog(@"hello world!");
 }
 /**
  上述方法的缺陷：
- 1.要混淆的方法名称，需要手动一个一个添加到func.list中。如果自动添加？
+ 1.要混淆的方法名称，需要手动一个一个添加到func.list中，很麻烦，如果自动添加？
  2.代码混淆比较耗时。
- 解决方案：如何屏蔽系统的方法名，将需要屏蔽的方法名添加一个前缀
+ 解决方案：将需要屏蔽的方法名添加一个前缀，然后再sh文件中配置
  */
+
+- (void)XXX_testA {}
+- (void)XXX_testB {}
+- (void)XXX_testC {}
 
 /**
  class-dump的安装和使用:
