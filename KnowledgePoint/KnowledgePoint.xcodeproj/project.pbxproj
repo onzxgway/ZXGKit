@@ -14,6 +14,7 @@
 		04F039DC1F8CF7CB00DBD70D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F039DA1F8CF7CB00DBD70D /* LaunchScreen.storyboard */; };
 		04F039E31F8CF85400DBD70D /* ZXGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F039E21F8CF85400DBD70D /* ZXGView.m */; };
 		F006F6871F8B5B740061F231 /* Confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = F006F6861F8B5B740061F231 /* Confuse.sh */; };
+		F08D34831F8DC83600AE44F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08D34821F8DC83600AE44F3 /* main.m */; };
 		F08E11E51F78DBD3005DE5F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E11E41F78DBD3005DE5F9 /* main.m */; };
 		F08E11E81F78DBD3005DE5F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E11E71F78DBD3005DE5F9 /* AppDelegate.m */; };
 		F08E11EB1F78DBD4005DE5F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E11EA1F78DBD4005DE5F9 /* ViewController.m */; };
@@ -40,6 +41,18 @@
 		F0B7B7411F8B56B500B89EFE /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = F0B7B7401F8B56B500B89EFE /* func.list */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F08D347E1F8DC83600AE44F3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		04F039CA1F8CF7CB00DBD70D /* 获取view所在的控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "获取view所在的控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F039CD1F8CF7CB00DBD70D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,6 +66,8 @@
 		04F039E11F8CF85400DBD70D /* ZXGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGView.h; sourceTree = "<group>"; };
 		04F039E21F8CF85400DBD70D /* ZXGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGView.m; sourceTree = "<group>"; };
 		F006F6861F8B5B740061F231 /* Confuse.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Confuse.sh; sourceTree = "<group>"; };
+		F08D34801F8DC83600AE44F3 /* block循环引用 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "block循环引用"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08D34821F8DC83600AE44F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F08E11E01F78DBD3005DE5F9 /* KnowledgePoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowledgePoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08E11E41F78DBD3005DE5F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F08E11E61F78DBD3005DE5F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +115,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		04F039C71F8CF7CB00DBD70D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08D347D1F8DC83600AE44F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,6 +184,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F08D34811F8DC83600AE44F3 /* block循环引用 */ = {
+			isa = PBXGroup;
+			children = (
+				F08D34821F8DC83600AE44F3 /* main.m */,
+			);
+			path = "block循环引用";
+			sourceTree = "<group>";
+		};
 		F08E11D71F78DBD3005DE5F9 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +200,7 @@
 				F08E12551F78E01F005DE5F9 /* 多线程 */,
 				F0B7B7221F8B49FD00B89EFE /* ZXGConfuse */,
 				04F039CB1F8CF7CB00DBD70D /* 获取view所在的控制器 */,
+				F08D34811F8DC83600AE44F3 /* block循环引用 */,
 				F08E11E11F78DBD3005DE5F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,6 +213,7 @@
 				F08E12541F78E01F005DE5F9 /* 多线程.app */,
 				F0B7B7211F8B49FD00B89EFE /* ZXGConfuse.app */,
 				04F039CA1F8CF7CB00DBD70D /* 获取view所在的控制器.app */,
+				F08D34801F8DC83600AE44F3 /* block循环引用 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,6 +330,23 @@
 			productReference = 04F039CA1F8CF7CB00DBD70D /* 获取view所在的控制器.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F08D347F1F8DC83600AE44F3 /* block循环引用 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F08D34861F8DC83600AE44F3 /* Build configuration list for PBXNativeTarget "block循环引用" */;
+			buildPhases = (
+				F08D347C1F8DC83600AE44F3 /* Sources */,
+				F08D347D1F8DC83600AE44F3 /* Frameworks */,
+				F08D347E1F8DC83600AE44F3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "block循环引用";
+			productName = "block循环引用";
+			productReference = F08D34801F8DC83600AE44F3 /* block循环引用 */;
+			productType = "com.apple.product-type.tool";
+		};
 		F08E11DF1F78DBD3005DE5F9 /* KnowledgePoint */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F08E12021F78DBD4005DE5F9 /* Build configuration list for PBXNativeTarget "KnowledgePoint" */;
@@ -380,6 +429,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					F08D347F1F8DC83600AE44F3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 					F08E11DF1F78DBD3005DE5F9 = {
 						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Automatic;
@@ -417,6 +470,7 @@
 				F08E12531F78E01F005DE5F9 /* 多线程 */,
 				F0B7B7201F8B49FD00B89EFE /* ZXGConfuse */,
 				04F039C91F8CF7CB00DBD70D /* 获取view所在的控制器 */,
+				F08D347F1F8DC83600AE44F3 /* block循环引用 */,
 			);
 		};
 /* End PBXProject section */
@@ -497,6 +551,14 @@
 				04F039D41F8CF7CB00DBD70D /* ViewController.m in Sources */,
 				04F039D11F8CF7CB00DBD70D /* AppDelegate.m in Sources */,
 				04F039CE1F8CF7CB00DBD70D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08D347C1F8DC83600AE44F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08D34831F8DC83600AE44F3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +711,46 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.--view------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F08D34841F8DC83600AE44F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F08D34851F8DC83600AE44F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -874,6 +976,16 @@
 				04F039DF1F8CF7CB00DBD70D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F08D34861F8DC83600AE44F3 /* Build configuration list for PBXNativeTarget "block循环引用" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F08D34841F8DC83600AE44F3 /* Debug */,
+				F08D34851F8DC83600AE44F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F08E11DB1F78DBD3005DE5F9 /* Build configuration list for PBXProject "KnowledgePoint" */ = {
 			isa = XCConfigurationList;
