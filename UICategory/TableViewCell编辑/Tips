@@ -1,0 +1,19 @@
+重点： UITableView编辑状态的使用
+
+1,UITableView的editing属性。该属性值为YES的时候，默认每个cell前出现红色减号样式。
+  如果要想改变默认每个cell的编辑样式的话，需要实现
+   -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+  代理方法。
+
+typedef NS_ENUM(NSInteger, UITableViewCellEditingStyle) {
+    UITableViewCellEditingStyleNone,  无样式
+    UITableViewCellEditingStyleDelete,红色减号
+    UITableViewCellEditingStyleInsert 蓝色加号
+};
+
+UITableViewCellEditingStyleDelete | UITableViewCellEditingStyleInsert 空心圆圈
+
+
+2,取消选中代理方法
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
