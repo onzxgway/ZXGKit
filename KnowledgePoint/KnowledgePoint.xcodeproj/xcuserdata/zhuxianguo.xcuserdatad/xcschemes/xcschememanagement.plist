@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>block循环引用.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
 		<key>多线程.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>04F039C91F8CF7CB00DBD70D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F08D347F1F8DC83600AE44F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
