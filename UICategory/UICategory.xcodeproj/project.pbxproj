@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04344EEC1F8FAE250089F44B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04344EEB1F8FAE250089F44B /* main.m */; };
+		04344EEF1F8FAE250089F44B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04344EEE1F8FAE250089F44B /* AppDelegate.m */; };
+		04344EF21F8FAE250089F44B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04344EF11F8FAE250089F44B /* ViewController.m */; };
+		04344EF51F8FAE250089F44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04344EF31F8FAE250089F44B /* Main.storyboard */; };
+		04344EFA1F8FAE250089F44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04344EF81F8FAE250089F44B /* LaunchScreen.storyboard */; };
+		04344F011F8FAE960089F44B /* ZXGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04344F001F8FAE960089F44B /* ZXGCell.m */; };
+		04344F031F8FAEAB0089F44B /* Tips in Resources */ = {isa = PBXBuildFile; fileRef = 04344F021F8FAEAB0089F44B /* Tips */; };
 		04F03A0F1F8D00BC00DBD70D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F03A0E1F8D00BC00DBD70D /* main.m */; };
 		04F03A121F8D00BC00DBD70D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F03A111F8D00BC00DBD70D /* AppDelegate.m */; };
 		04F03A151F8D00BC00DBD70D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F03A141F8D00BC00DBD70D /* ViewController.m */; };
@@ -35,6 +42,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04344EE81F8FAE250089F44B /* UITableView知识点.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITableView知识点.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04344EEB1F8FAE250089F44B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04344EED1F8FAE250089F44B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04344EEE1F8FAE250089F44B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04344EF01F8FAE250089F44B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04344EF11F8FAE250089F44B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04344EF41F8FAE250089F44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04344EF91F8FAE250089F44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04344EFB1F8FAE250089F44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04344EFF1F8FAE960089F44B /* ZXGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGCell.h; sourceTree = "<group>"; };
+		04344F001F8FAE960089F44B /* ZXGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGCell.m; sourceTree = "<group>"; };
+		04344F021F8FAEAB0089F44B /* Tips */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips; sourceTree = "<group>"; };
 		04F03A0B1F8D00BC00DBD70D /* TableViewCell编辑.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableViewCell编辑.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F03A0E1F8D00BC00DBD70D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F03A101F8D00BC00DBD70D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +80,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04344EE51F8FAE250089F44B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04F03A081F8D00BC00DBD70D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,12 +111,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04344EE91F8FAE250089F44B /* UITableView知识点 */ = {
+			isa = PBXGroup;
+			children = (
+				04344EED1F8FAE250089F44B /* AppDelegate.h */,
+				04344EEE1F8FAE250089F44B /* AppDelegate.m */,
+				04344EF01F8FAE250089F44B /* ViewController.h */,
+				04344EF11F8FAE250089F44B /* ViewController.m */,
+				04344EFF1F8FAE960089F44B /* ZXGCell.h */,
+				04344F001F8FAE960089F44B /* ZXGCell.m */,
+				04344EF31F8FAE250089F44B /* Main.storyboard */,
+				04344EF81F8FAE250089F44B /* LaunchScreen.storyboard */,
+				04344F021F8FAEAB0089F44B /* Tips */,
+				04344EFB1F8FAE250089F44B /* Info.plist */,
+				04344EEA1F8FAE250089F44B /* Supporting Files */,
+			);
+			path = "UITableView知识点";
+			sourceTree = "<group>";
+		};
+		04344EEA1F8FAE250089F44B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04344EEB1F8FAE250089F44B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		04F039E41F8D001200DBD70D = {
 			isa = PBXGroup;
 			children = (
 				04F03A0C1F8D00BC00DBD70D /* TableViewCell编辑 */,
 				F08D34591F8DC53700AE44F3 /* UIApplication作用 */,
 				F08D34761F8DC6EB00AE44F3 /* 项目配置文件 */,
+				04344EE91F8FAE250089F44B /* UITableView知识点 */,
 				04F039EE1F8D001200DBD70D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +154,7 @@
 				04F03A0B1F8D00BC00DBD70D /* TableViewCell编辑.app */,
 				F08D34581F8DC53700AE44F3 /* UIApplication作用.app */,
 				F08D34751F8DC6EB00AE44F3 /* 项目配置文件 */,
+				04344EE81F8FAE250089F44B /* UITableView知识点.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +211,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		04344EE71F8FAE250089F44B /* UITableView知识点 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04344EFE1F8FAE250089F44B /* Build configuration list for PBXNativeTarget "UITableView知识点" */;
+			buildPhases = (
+				04344EE41F8FAE250089F44B /* Sources */,
+				04344EE51F8FAE250089F44B /* Frameworks */,
+				04344EE61F8FAE250089F44B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UITableView知识点";
+			productName = "UITableView知识点";
+			productReference = 04344EE81F8FAE250089F44B /* UITableView知识点.app */;
+			productType = "com.apple.product-type.application";
+		};
 		04F03A0A1F8D00BC00DBD70D /* TableViewCell编辑 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F03A1F1F8D00BC00DBD70D /* Build configuration list for PBXNativeTarget "TableViewCell编辑" */;
@@ -217,6 +288,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "朱献国";
 				TargetAttributes = {
+					04344EE71F8FAE250089F44B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					04F03A0A1F8D00BC00DBD70D = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -247,11 +322,22 @@
 				04F03A0A1F8D00BC00DBD70D /* TableViewCell编辑 */,
 				F08D34571F8DC53700AE44F3 /* UIApplication作用 */,
 				F08D34741F8DC6EB00AE44F3 /* 项目配置文件 */,
+				04344EE71F8FAE250089F44B /* UITableView知识点 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		04344EE61F8FAE250089F44B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04344F031F8FAEAB0089F44B /* Tips in Resources */,
+				04344EFA1F8FAE250089F44B /* LaunchScreen.storyboard in Resources */,
+				04344EF51F8FAE250089F44B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04F03A091F8D00BC00DBD70D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +360,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04344EE41F8FAE250089F44B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04344EF21F8FAE250089F44B /* ViewController.m in Sources */,
+				04344F011F8FAE960089F44B /* ZXGCell.m in Sources */,
+				04344EEF1F8FAE250089F44B /* AppDelegate.m in Sources */,
+				04344EEC1F8FAE250089F44B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04F03A071F8D00BC00DBD70D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +403,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		04344EF31F8FAE250089F44B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04344EF41F8FAE250089F44B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04344EF81F8FAE250089F44B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04344EF91F8FAE250089F44B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		04F03A161F8D00BC00DBD70D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,6 +454,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		04344EFC1F8FAE250089F44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UITableView知识点/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.UITableView---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04344EFD1F8FAE250089F44B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UITableView知识点/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.UITableView---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		04F03A021F8D001200DBD70D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -546,6 +681,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04344EFE1F8FAE250089F44B /* Build configuration list for PBXNativeTarget "UITableView知识点" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04344EFC1F8FAE250089F44B /* Debug */,
+				04344EFD1F8FAE250089F44B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		04F039E81F8D001200DBD70D /* Build configuration list for PBXProject "UICategory" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

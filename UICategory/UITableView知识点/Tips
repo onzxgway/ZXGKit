@@ -1,0 +1,14 @@
+1,UITableView在Plain样式下，设置组间距 方式一无效，设置组间距 方式二有效。
+  在Grouped样式下，设置组间距 方式一和方式二 都有效，
+      区别是：
+      方式二情况下，第一组cell上部只有个组头的高度 最后一组cell下部只有个组尾的高度。tableHeaderView和tableFooterView的高度都是零。
+      方式一情况下，第一组cell上部只有一个默认高度的tableHeaderView 最后一组cell下部有个组尾的高度 + 一个默认高度的tableFooterView。
+      相同点是：
+      除去第一组cell上部 最后一组cell下部 中间组之间的距离都是等于  组头的高度 + 组尾的高度
+
+2,UITableView在Grouped样式下，1)每组的顶部和底部会有分割线 2)组头视图和组尾视图都不会悬停
+             在Plain样式下，1)每组的顶部和底部没有分割线 2)组头视图会悬停，组尾视图都不会悬停
+  相同点：每个cell中间都有分割线。
+
+
+3,组头视图和组尾视图设置frame是无效的，他显示的高度由对应tableView:heightForHeaderInSection:和tableView:heightForFooterInSection:代理方法决定,如果代理方法没实现或者返回的值是零的话，那么就不显示组头视图或者组尾视图，即使你实现了返回视图的代理方法。
