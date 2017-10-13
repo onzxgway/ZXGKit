@@ -1,0 +1,5 @@
+1,只会执行一次的方法有removeFromSuperview、dealloc两个方法(layoutSubviews在子视图布局变动时会多次调用)，所以可以在这两个方法中执行释放内存等操作(eg:移除观察者，定时器等)。
+
+willMoveToSuperview: 和 willMoveToWindow:这俩个方法可以根据参数是否为nil，判断是创建操作还是销毁操作，nil则为销毁，反之，则为创建。
+didMoveToSuperview 这个方法可以根据self.superview的值判定，nil为销毁，反之，则为创建。
+didMoveToWindow 这个方法可以根据self.superview的值判定，nil为创建，反之，则为销毁。(注意这个方法和上面的是相反的)

@@ -60,6 +60,7 @@
         self.tableView.allowsMultipleSelectionDuringEditing = NO;
     }else if (btn.tag == 1002){//done
         self.tableView.editing = NO;
+//        [self.tableView setEditing:<#(BOOL)#> animated:<#(BOOL)#>]
     }else if (btn.tag == 1003){//delete
         [self.dataSource removeObjectsInArray:self.deleteArray];
         [self.tableView reloadData];

@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
+		<key>UIView的生命周期.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>项目配置文件.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>04344EE71F8FAE250089F44B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04B8CC981F904F49002FCFE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

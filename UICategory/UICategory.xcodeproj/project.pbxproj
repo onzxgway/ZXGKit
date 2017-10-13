@@ -14,6 +14,14 @@
 		04344EFA1F8FAE250089F44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04344EF81F8FAE250089F44B /* LaunchScreen.storyboard */; };
 		04344F011F8FAE960089F44B /* ZXGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04344F001F8FAE960089F44B /* ZXGCell.m */; };
 		04344F031F8FAEAB0089F44B /* Tips in Resources */ = {isa = PBXBuildFile; fileRef = 04344F021F8FAEAB0089F44B /* Tips */; };
+		04B8CC9D1F904F49002FCFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CC9C1F904F49002FCFE4 /* main.m */; };
+		04B8CCA01F904F49002FCFE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CC9F1F904F49002FCFE4 /* AppDelegate.m */; };
+		04B8CCA31F904F49002FCFE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CCA21F904F49002FCFE4 /* ViewController.m */; };
+		04B8CCA61F904F49002FCFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CCA41F904F49002FCFE4 /* Main.storyboard */; };
+		04B8CCAB1F904F49002FCFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CCA91F904F49002FCFE4 /* LaunchScreen.storyboard */; };
+		04B8CCB51F905090002FCFE4 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CCB41F905090002FCFE4 /* TestView.m */; };
+		04B8CCB81F9050A0002FCFE4 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CCB71F9050A0002FCFE4 /* TestViewController.m */; };
+		04B8CCBA1F905D01002FCFE4 /* Tips in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CCB91F905D01002FCFE4 /* Tips */; };
 		04F03A0F1F8D00BC00DBD70D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F03A0E1F8D00BC00DBD70D /* main.m */; };
 		04F03A121F8D00BC00DBD70D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F03A111F8D00BC00DBD70D /* AppDelegate.m */; };
 		04F03A151F8D00BC00DBD70D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F03A141F8D00BC00DBD70D /* ViewController.m */; };
@@ -54,6 +62,20 @@
 		04344EFF1F8FAE960089F44B /* ZXGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGCell.h; sourceTree = "<group>"; };
 		04344F001F8FAE960089F44B /* ZXGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGCell.m; sourceTree = "<group>"; };
 		04344F021F8FAEAB0089F44B /* Tips */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips; sourceTree = "<group>"; };
+		04B8CC991F904F49002FCFE4 /* UIView的生命周期.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView的生命周期.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B8CC9C1F904F49002FCFE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04B8CC9E1F904F49002FCFE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04B8CC9F1F904F49002FCFE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04B8CCA11F904F49002FCFE4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04B8CCA21F904F49002FCFE4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04B8CCA51F904F49002FCFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04B8CCAA1F904F49002FCFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04B8CCAC1F904F49002FCFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B8CCB31F905090002FCFE4 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		04B8CCB41F905090002FCFE4 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		04B8CCB61F9050A0002FCFE4 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		04B8CCB71F9050A0002FCFE4 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		04B8CCB91F905D01002FCFE4 /* Tips */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips; sourceTree = "<group>"; };
 		04F03A0B1F8D00BC00DBD70D /* TableViewCell编辑.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableViewCell编辑.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F03A0E1F8D00BC00DBD70D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F03A101F8D00BC00DBD70D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +103,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		04344EE51F8FAE250089F44B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B8CC961F904F49002FCFE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,6 +166,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		04B8CC9A1F904F49002FCFE4 /* UIView的生命周期 */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CC9E1F904F49002FCFE4 /* AppDelegate.h */,
+				04B8CC9F1F904F49002FCFE4 /* AppDelegate.m */,
+				04B8CCA11F904F49002FCFE4 /* ViewController.h */,
+				04B8CCA21F904F49002FCFE4 /* ViewController.m */,
+				04B8CCA41F904F49002FCFE4 /* Main.storyboard */,
+				04B8CCA91F904F49002FCFE4 /* LaunchScreen.storyboard */,
+				04B8CCAC1F904F49002FCFE4 /* Info.plist */,
+				04B8CC9B1F904F49002FCFE4 /* Supporting Files */,
+				04B8CCB31F905090002FCFE4 /* TestView.h */,
+				04B8CCB41F905090002FCFE4 /* TestView.m */,
+				04B8CCB61F9050A0002FCFE4 /* TestViewController.h */,
+				04B8CCB71F9050A0002FCFE4 /* TestViewController.m */,
+				04B8CCB91F905D01002FCFE4 /* Tips */,
+			);
+			path = "UIView的生命周期";
+			sourceTree = "<group>";
+		};
+		04B8CC9B1F904F49002FCFE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CC9C1F904F49002FCFE4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		04F039E41F8D001200DBD70D = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +201,7 @@
 				F08D34591F8DC53700AE44F3 /* UIApplication作用 */,
 				F08D34761F8DC6EB00AE44F3 /* 项目配置文件 */,
 				04344EE91F8FAE250089F44B /* UITableView知识点 */,
+				04B8CC9A1F904F49002FCFE4 /* UIView的生命周期 */,
 				04F039EE1F8D001200DBD70D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,6 +213,7 @@
 				F08D34581F8DC53700AE44F3 /* UIApplication作用.app */,
 				F08D34751F8DC6EB00AE44F3 /* 项目配置文件 */,
 				04344EE81F8FAE250089F44B /* UITableView知识点.app */,
+				04B8CC991F904F49002FCFE4 /* UIView的生命周期.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +287,23 @@
 			productReference = 04344EE81F8FAE250089F44B /* UITableView知识点.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04B8CC981F904F49002FCFE4 /* UIView的生命周期 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04B8CCAF1F904F49002FCFE4 /* Build configuration list for PBXNativeTarget "UIView的生命周期" */;
+			buildPhases = (
+				04B8CC951F904F49002FCFE4 /* Sources */,
+				04B8CC961F904F49002FCFE4 /* Frameworks */,
+				04B8CC971F904F49002FCFE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIView的生命周期";
+			productName = "UIView的生命周期";
+			productReference = 04B8CC991F904F49002FCFE4 /* UIView的生命周期.app */;
+			productType = "com.apple.product-type.application";
+		};
 		04F03A0A1F8D00BC00DBD70D /* TableViewCell编辑 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F03A1F1F8D00BC00DBD70D /* Build configuration list for PBXNativeTarget "TableViewCell编辑" */;
@@ -292,6 +368,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					04B8CC981F904F49002FCFE4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					04F03A0A1F8D00BC00DBD70D = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -323,6 +403,7 @@
 				F08D34571F8DC53700AE44F3 /* UIApplication作用 */,
 				F08D34741F8DC6EB00AE44F3 /* 项目配置文件 */,
 				04344EE71F8FAE250089F44B /* UITableView知识点 */,
+				04B8CC981F904F49002FCFE4 /* UIView的生命周期 */,
 			);
 		};
 /* End PBXProject section */
@@ -335,6 +416,16 @@
 				04344F031F8FAEAB0089F44B /* Tips in Resources */,
 				04344EFA1F8FAE250089F44B /* LaunchScreen.storyboard in Resources */,
 				04344EF51F8FAE250089F44B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B8CC971F904F49002FCFE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B8CCBA1F905D01002FCFE4 /* Tips in Resources */,
+				04B8CCAB1F904F49002FCFE4 /* LaunchScreen.storyboard in Resources */,
+				04B8CCA61F904F49002FCFE4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +459,18 @@
 				04344F011F8FAE960089F44B /* ZXGCell.m in Sources */,
 				04344EEF1F8FAE250089F44B /* AppDelegate.m in Sources */,
 				04344EEC1F8FAE250089F44B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B8CC951F904F49002FCFE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B8CCB51F905090002FCFE4 /* TestView.m in Sources */,
+				04B8CCA31F904F49002FCFE4 /* ViewController.m in Sources */,
+				04B8CCA01F904F49002FCFE4 /* AppDelegate.m in Sources */,
+				04B8CC9D1F904F49002FCFE4 /* main.m in Sources */,
+				04B8CCB81F9050A0002FCFE4 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +518,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				04344EF91F8FAE250089F44B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04B8CCA41F904F49002FCFE4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04B8CCA51F904F49002FCFE4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04B8CCA91F904F49002FCFE4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04B8CCAA1F904F49002FCFE4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -472,6 +591,28 @@
 				INFOPLIST_FILE = "UITableView知识点/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.UITableView---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		04B8CCAD1F904F49002FCFE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UIView的生命周期/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.UIView-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04B8CCAE1F904F49002FCFE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UIView的生命周期/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.UIView-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -686,6 +827,15 @@
 			buildConfigurations = (
 				04344EFC1F8FAE250089F44B /* Debug */,
 				04344EFD1F8FAE250089F44B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04B8CCAF1F904F49002FCFE4 /* Build configuration list for PBXNativeTarget "UIView的生命周期" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B8CCAD1F904F49002FCFE4 /* Debug */,
+				04B8CCAE1F904F49002FCFE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
