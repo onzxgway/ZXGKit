@@ -13,6 +13,13 @@
 		04F039D71F8CF7CB00DBD70D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F039D51F8CF7CB00DBD70D /* Main.storyboard */; };
 		04F039DC1F8CF7CB00DBD70D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F039DA1F8CF7CB00DBD70D /* LaunchScreen.storyboard */; };
 		04F039E31F8CF85400DBD70D /* ZXGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F039E21F8CF85400DBD70D /* ZXGView.m */; };
+		718B7E311FA1D19D000B46CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B7E301FA1D19D000B46CA /* main.m */; };
+		718B7E341FA1D19D000B46CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B7E331FA1D19D000B46CA /* AppDelegate.m */; };
+		718B7E371FA1D19D000B46CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B7E361FA1D19D000B46CA /* ViewController.m */; };
+		718B7E3A1FA1D19D000B46CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718B7E381FA1D19D000B46CA /* Main.storyboard */; };
+		718B7E3C1FA1D19D000B46CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718B7E3B1FA1D19D000B46CA /* Assets.xcassets */; };
+		718B7E3F1FA1D19D000B46CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718B7E3D1FA1D19D000B46CA /* LaunchScreen.storyboard */; };
+		718B7E461FA1D1E9000B46CA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B7E451FA1D1E9000B46CA /* Utils.m */; };
 		F006F6871F8B5B740061F231 /* Confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = F006F6861F8B5B740061F231 /* Confuse.sh */; };
 		F08D34831F8DC83600AE44F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08D34821F8DC83600AE44F3 /* main.m */; };
 		F08E11E51F78DBD3005DE5F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E11E41F78DBD3005DE5F9 /* main.m */; };
@@ -65,6 +72,18 @@
 		04F039DD1F8CF7CB00DBD70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F039E11F8CF85400DBD70D /* ZXGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGView.h; sourceTree = "<group>"; };
 		04F039E21F8CF85400DBD70D /* ZXGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGView.m; sourceTree = "<group>"; };
+		718B7E2D1FA1D19D000B46CA /* 静态内联函数.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "静态内联函数.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		718B7E301FA1D19D000B46CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		718B7E321FA1D19D000B46CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		718B7E331FA1D19D000B46CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		718B7E351FA1D19D000B46CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		718B7E361FA1D19D000B46CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		718B7E391FA1D19D000B46CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		718B7E3B1FA1D19D000B46CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		718B7E3E1FA1D19D000B46CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		718B7E401FA1D19D000B46CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718B7E441FA1D1E9000B46CA /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		718B7E451FA1D1E9000B46CA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		F006F6861F8B5B740061F231 /* Confuse.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Confuse.sh; sourceTree = "<group>"; };
 		F08D34801F8DC83600AE44F3 /* block循环引用 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "block循环引用"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08D34821F8DC83600AE44F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,6 +134,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		04F039C71F8CF7CB00DBD70D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718B7E2A1FA1D19D000B46CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -184,6 +210,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		718B7E2E1FA1D19D000B46CA /* 静态内联函数 */ = {
+			isa = PBXGroup;
+			children = (
+				718B7E321FA1D19D000B46CA /* AppDelegate.h */,
+				718B7E331FA1D19D000B46CA /* AppDelegate.m */,
+				718B7E441FA1D1E9000B46CA /* Utils.h */,
+				718B7E451FA1D1E9000B46CA /* Utils.m */,
+				718B7E351FA1D19D000B46CA /* ViewController.h */,
+				718B7E361FA1D19D000B46CA /* ViewController.m */,
+				718B7E381FA1D19D000B46CA /* Main.storyboard */,
+				718B7E3B1FA1D19D000B46CA /* Assets.xcassets */,
+				718B7E3D1FA1D19D000B46CA /* LaunchScreen.storyboard */,
+				718B7E401FA1D19D000B46CA /* Info.plist */,
+				718B7E2F1FA1D19D000B46CA /* Supporting Files */,
+			);
+			path = "静态内联函数";
+			sourceTree = "<group>";
+		};
+		718B7E2F1FA1D19D000B46CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				718B7E301FA1D19D000B46CA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F08D34811F8DC83600AE44F3 /* block循环引用 */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +253,7 @@
 				F0B7B7221F8B49FD00B89EFE /* ZXGConfuse */,
 				04F039CB1F8CF7CB00DBD70D /* 获取view所在的控制器 */,
 				F08D34811F8DC83600AE44F3 /* block循环引用 */,
+				718B7E2E1FA1D19D000B46CA /* 静态内联函数 */,
 				F08E11E11F78DBD3005DE5F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -214,6 +267,7 @@
 				F0B7B7211F8B49FD00B89EFE /* ZXGConfuse.app */,
 				04F039CA1F8CF7CB00DBD70D /* 获取view所在的控制器.app */,
 				F08D34801F8DC83600AE44F3 /* block循环引用 */,
+				718B7E2D1FA1D19D000B46CA /* 静态内联函数.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,6 +384,23 @@
 			productReference = 04F039CA1F8CF7CB00DBD70D /* 获取view所在的控制器.app */;
 			productType = "com.apple.product-type.application";
 		};
+		718B7E2C1FA1D19D000B46CA /* 静态内联函数 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718B7E431FA1D19D000B46CA /* Build configuration list for PBXNativeTarget "静态内联函数" */;
+			buildPhases = (
+				718B7E291FA1D19D000B46CA /* Sources */,
+				718B7E2A1FA1D19D000B46CA /* Frameworks */,
+				718B7E2B1FA1D19D000B46CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "静态内联函数";
+			productName = "静态内联函数";
+			productReference = 718B7E2D1FA1D19D000B46CA /* 静态内联函数.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F08D347F1F8DC83600AE44F3 /* block循环引用 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F08D34861F8DC83600AE44F3 /* Build configuration list for PBXNativeTarget "block循环引用" */;
@@ -429,6 +500,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					718B7E2C1FA1D19D000B46CA = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
 					F08D347F1F8DC83600AE44F3 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -471,6 +546,7 @@
 				F0B7B7201F8B49FD00B89EFE /* ZXGConfuse */,
 				04F039C91F8CF7CB00DBD70D /* 获取view所在的控制器 */,
 				F08D347F1F8DC83600AE44F3 /* block循环引用 */,
+				718B7E2C1FA1D19D000B46CA /* 静态内联函数 */,
 			);
 		};
 /* End PBXProject section */
@@ -482,6 +558,16 @@
 			files = (
 				04F039DC1F8CF7CB00DBD70D /* LaunchScreen.storyboard in Resources */,
 				04F039D71F8CF7CB00DBD70D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718B7E2B1FA1D19D000B46CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718B7E3F1FA1D19D000B46CA /* LaunchScreen.storyboard in Resources */,
+				718B7E3C1FA1D19D000B46CA /* Assets.xcassets in Resources */,
+				718B7E3A1FA1D19D000B46CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +640,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		718B7E291FA1D19D000B46CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718B7E371FA1D19D000B46CA /* ViewController.m in Sources */,
+				718B7E341FA1D19D000B46CA /* AppDelegate.m in Sources */,
+				718B7E311FA1D19D000B46CA /* main.m in Sources */,
+				718B7E461FA1D1E9000B46CA /* Utils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F08D347C1F8DC83600AE44F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -619,6 +716,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				04F039DB1F8CF7CB00DBD70D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		718B7E381FA1D19D000B46CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				718B7E391FA1D19D000B46CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		718B7E3D1FA1D19D000B46CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				718B7E3E1FA1D19D000B46CA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -711,6 +824,30 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.--view------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		718B7E411FA1D19D000B46CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "静态内联函数/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		718B7E421FA1D19D000B46CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "静态内联函数/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -977,6 +1114,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		718B7E431FA1D19D000B46CA /* Build configuration list for PBXNativeTarget "静态内联函数" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718B7E411FA1D19D000B46CA /* Debug */,
+				718B7E421FA1D19D000B46CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F08D34861F8DC83600AE44F3 /* Build configuration list for PBXNativeTarget "block循环引用" */ = {
 			isa = XCConfigurationList;
