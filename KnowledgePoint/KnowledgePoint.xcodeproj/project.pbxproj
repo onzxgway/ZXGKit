@@ -20,6 +20,7 @@
 		718B7E3C1FA1D19D000B46CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718B7E3B1FA1D19D000B46CA /* Assets.xcassets */; };
 		718B7E3F1FA1D19D000B46CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718B7E3D1FA1D19D000B46CA /* LaunchScreen.storyboard */; };
 		718B7E461FA1D1E9000B46CA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B7E451FA1D1E9000B46CA /* Utils.m */; };
+		71C9B54D1FC6CA9D0061AF3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C9B54C1FC6CA9D0061AF3D /* main.m */; };
 		F006F6871F8B5B740061F231 /* Confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = F006F6861F8B5B740061F231 /* Confuse.sh */; };
 		F08D34831F8DC83600AE44F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08D34821F8DC83600AE44F3 /* main.m */; };
 		F08E11E51F78DBD3005DE5F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E11E41F78DBD3005DE5F9 /* main.m */; };
@@ -49,6 +50,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		71C9B5481FC6CA9D0061AF3D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		F08D347E1F8DC83600AE44F3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,6 +94,8 @@
 		718B7E401FA1D19D000B46CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		718B7E441FA1D1E9000B46CA /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		718B7E451FA1D1E9000B46CA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		71C9B54A1FC6CA9D0061AF3D /* iPhone尺寸 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "iPhone尺寸"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C9B54C1FC6CA9D0061AF3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F006F6861F8B5B740061F231 /* Confuse.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Confuse.sh; sourceTree = "<group>"; };
 		F08D34801F8DC83600AE44F3 /* block循环引用 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "block循环引用"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08D34821F8DC83600AE44F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,6 +153,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		718B7E2A1FA1D19D000B46CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C9B5471FC6CA9D0061AF3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,6 +255,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		71C9B54B1FC6CA9D0061AF3D /* iPhone尺寸 */ = {
+			isa = PBXGroup;
+			children = (
+				71C9B54C1FC6CA9D0061AF3D /* main.m */,
+			);
+			path = "iPhone尺寸";
+			sourceTree = "<group>";
+		};
 		F08D34811F8DC83600AE44F3 /* block循环引用 */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +281,7 @@
 				04F039CB1F8CF7CB00DBD70D /* 获取view所在的控制器 */,
 				F08D34811F8DC83600AE44F3 /* block循环引用 */,
 				718B7E2E1FA1D19D000B46CA /* 静态内联函数 */,
+				71C9B54B1FC6CA9D0061AF3D /* iPhone尺寸 */,
 				F08E11E11F78DBD3005DE5F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -268,6 +296,7 @@
 				04F039CA1F8CF7CB00DBD70D /* 获取view所在的控制器.app */,
 				F08D34801F8DC83600AE44F3 /* block循环引用 */,
 				718B7E2D1FA1D19D000B46CA /* 静态内联函数.app */,
+				71C9B54A1FC6CA9D0061AF3D /* iPhone尺寸 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -401,6 +430,23 @@
 			productReference = 718B7E2D1FA1D19D000B46CA /* 静态内联函数.app */;
 			productType = "com.apple.product-type.application";
 		};
+		71C9B5491FC6CA9D0061AF3D /* iPhone尺寸 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C9B5501FC6CA9D0061AF3D /* Build configuration list for PBXNativeTarget "iPhone尺寸" */;
+			buildPhases = (
+				71C9B5461FC6CA9D0061AF3D /* Sources */,
+				71C9B5471FC6CA9D0061AF3D /* Frameworks */,
+				71C9B5481FC6CA9D0061AF3D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iPhone尺寸";
+			productName = "iPhone尺寸";
+			productReference = 71C9B54A1FC6CA9D0061AF3D /* iPhone尺寸 */;
+			productType = "com.apple.product-type.tool";
+		};
 		F08D347F1F8DC83600AE44F3 /* block循环引用 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F08D34861F8DC83600AE44F3 /* Build configuration list for PBXNativeTarget "block循环引用" */;
@@ -504,6 +550,10 @@
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
+					71C9B5491FC6CA9D0061AF3D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 					F08D347F1F8DC83600AE44F3 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -547,6 +597,7 @@
 				04F039C91F8CF7CB00DBD70D /* 获取view所在的控制器 */,
 				F08D347F1F8DC83600AE44F3 /* block循环引用 */,
 				718B7E2C1FA1D19D000B46CA /* 静态内联函数 */,
+				71C9B5491FC6CA9D0061AF3D /* iPhone尺寸 */,
 			);
 		};
 /* End PBXProject section */
@@ -648,6 +699,14 @@
 				718B7E341FA1D19D000B46CA /* AppDelegate.m in Sources */,
 				718B7E311FA1D19D000B46CA /* main.m in Sources */,
 				718B7E461FA1D1E9000B46CA /* Utils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C9B5461FC6CA9D0061AF3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C9B54D1FC6CA9D0061AF3D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +907,46 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		71C9B54E1FC6CA9D0061AF3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		71C9B54F1FC6CA9D0061AF3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1122,6 +1221,16 @@
 				718B7E421FA1D19D000B46CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C9B5501FC6CA9D0061AF3D /* Build configuration list for PBXNativeTarget "iPhone尺寸" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C9B54E1FC6CA9D0061AF3D /* Debug */,
+				71C9B54F1FC6CA9D0061AF3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F08D34861F8DC83600AE44F3 /* Build configuration list for PBXNativeTarget "block循环引用" */ = {
 			isa = XCConfigurationList;
