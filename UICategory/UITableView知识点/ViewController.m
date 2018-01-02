@@ -109,4 +109,9 @@
 }
 
 
+//给cell加上 点击时候的 高亮样式 手指离开 高亮消失
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 @end

@@ -1,0 +1,11 @@
+1,使用低版本的xcode打开在高版本的xcode中编辑的代码，会出现没用模拟器的现象？
+  原因：在info.plist文件中，Deployment target 所选择的版本比较高，在低版本的xcode中没有满足条件的高版本的模拟器。
+  解决：修改Deployment target的版本，设置较低的版本即可。
+
+2,AutoMonkey步骤：
+  在Xcode8之后，instruments工具集中，没有了Automation功能，所以，该功能只有在Xcode8之前使用。
+  Profile -> Automation -> 把UIAutoMonkey.js内容拷贝到Script中即可。
+   `numberOfEvent` 表示需要产生随机事件的个数
+   `delayBetweenEvents` 表示两个事件之间的延迟时间，如果该值为 0，那么脚本会尽可能快的向设备发送事件
+   `eventWeights` 表示每个事件的触发几率，如果 tap 事件的值为 100、orientation 事件的值为 1，那么 tap 事件触发的几率就是 orientation 的 100 倍
+   `touchProbability 控制不同种类的 tap 事件，默认情况下，tap 就是单击事件。调整这些参数可以设置双击、长按事件发生的频率，这些值要界于0、1之间

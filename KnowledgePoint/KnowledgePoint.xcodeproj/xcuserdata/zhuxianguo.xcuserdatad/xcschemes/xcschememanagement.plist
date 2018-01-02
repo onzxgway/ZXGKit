@@ -29,6 +29,16 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>死锁.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
+		<key>猴子测试.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
 		<key>获取view所在的控制器.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -37,7 +47,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>04D7C8A81F98A0CF008DD0B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>04F039C91F8CF7CB00DBD70D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04F7621B1F97559600F4EF74</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04F7623E1F97590800F4EF74</key>
 		<dict>
 			<key>primary</key>
 			<true/>
