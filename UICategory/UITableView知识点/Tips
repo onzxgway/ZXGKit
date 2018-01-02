@@ -12,3 +12,17 @@
 
 
 3,组头视图和组尾视图设置frame是无效的，他显示的高度由对应tableView:heightForHeaderInSection:和tableView:heightForFooterInSection:代理方法决定,如果代理方法没实现或者返回的值是零的话，那么就不显示组头视图或者组尾视图，即使你实现了返回视图的代理方法。
+
+
+4,设置行高的两种方式比较
+
+UITableView 询问 cell 高度有两种方式。
+
+* 一种是针对所有 Cell 具有固定高度的情况，通过：self.tableView.rowHeight = 88
+上面的代码指定了一个所有 cell 都是 88 高度的 UITableView，对于定高需求的表格，强烈建议使用这种（而非方式二）方式保证不必要的高度计算和调用。rowHeight属性的默认值是 44。
+
+* 另一种方式就是实现 UITableViewDelegate 中的：
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return xxx
+}
+需要注意的是，实现了这个方法后，rowHeight 的设置将无效。这个方法适用于具有多种 cell 高度的情况。
