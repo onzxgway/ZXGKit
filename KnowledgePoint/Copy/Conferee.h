@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Conferee : NSObject <NSCopying>
+@interface Conferee : NSObject <NSCopying, NSMutableCopying>
 
 @property (nonatomic, copy) NSString *name;
 

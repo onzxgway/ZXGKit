@@ -16,4 +16,10 @@
     return ee;
 }
 
+- (id)mutableCopyWithZone:(NSZone *)zone {
+    Conferee *ee = [[[self class] allocWithZone:zone] init];
+    ee.name = [self.name copy];
+    return ee;
+}
+
 @end

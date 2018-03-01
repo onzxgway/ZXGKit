@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Third/Third.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Categorys/Macro_And_Categorys.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PerformanceOptimization/PerformanceOptimization.xcodeproj">
    </FileRef>
    <FileRef

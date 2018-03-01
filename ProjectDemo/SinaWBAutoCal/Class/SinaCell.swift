@@ -71,7 +71,6 @@ class SinaCell: UITableViewCell {
             make.height.equalTo(44)
             make.bottom.equalTo(contentView.snp.bottom)
         }
-
     }
 
     ///MARK: -- 懒加载所有子控件
