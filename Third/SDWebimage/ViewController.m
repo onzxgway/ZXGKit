@@ -2,7 +2,7 @@
 //  ViewController.m
 //  SDWebimage
 //
-//  Created by feizhu on 2018/2/28.
+//  Created by feizhu on 2018/3/6.
 //  Copyright © 2018年 feizhu. All rights reserved.
 //
 
@@ -10,22 +10,16 @@
 #import "UIImageView+WebCache.h"
 
 @interface ViewController ()
-
 @property (weak, nonatomic) IBOutlet UIImageView *myPic;
-
 @end
 
 @implementation ViewController
 
-/**
- 默认情况下非 HTTPS 的网络访问是被禁止。
- 打开方式：在info.plist 中配置 ATS
- */
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [_myPic sd_setImageWithURL:[NSURL URLWithString:@"http://img.ivsky.com/img/tupian/t/201711/28/aerbeisi_xueshan-001.jpg"] placeholderImage:[UIImage imageNamed:@"place_img"]];
+    NSURL *url = [NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520327520385&di=2cb827ea8713b791dd94651f8c474ea1&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fbf096b63f6246b60553a62a0e1f81a4c510fa22a.jpg"];
+    [_myPic sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"test"]];
 }
 
 

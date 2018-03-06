@@ -1,14 +1,16 @@
 //
 //  AppDelegate.h
-//  Third
+//  SDWebimage
 //
 //  Created by feizhu on 2018/2/28.
 //  Copyright © 2018年 feizhu. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <UIKit/UIKit.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 
 @end

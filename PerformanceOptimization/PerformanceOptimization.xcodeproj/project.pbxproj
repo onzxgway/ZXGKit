@@ -42,6 +42,7 @@
 		045AEEB61F8EFC5E0076F7B8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 045AEEB51F8EFC5E0076F7B8 /* libz.tbd */; };
 		045AEEBA1F8EFF850076F7B8 /* place.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 045AEEB91F8EFF850076F7B8 /* place.jpg */; };
 		045AEEBC1F8F03190076F7B8 /* Tips in Resources */ = {isa = PBXBuildFile; fileRef = 045AEEBB1F8F03190076F7B8 /* Tips */; };
+		DC2F35D5B4BAFA535CFBDBFA /* libPods-TablePerformanceOptimization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2DBE5F1EA7B569C5AA07AB /* libPods-TablePerformanceOptimization.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,9 @@
 		045AEEB51F8EFC5E0076F7B8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		045AEEB91F8EFF850076F7B8 /* place.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = place.jpg; sourceTree = "<group>"; };
 		045AEEBB1F8F03190076F7B8 /* Tips */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips; sourceTree = "<group>"; };
+		94CC737A961D1B64B21CA16A /* Pods-TablePerformanceOptimization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TablePerformanceOptimization.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TablePerformanceOptimization/Pods-TablePerformanceOptimization.release.xcconfig"; sourceTree = "<group>"; };
+		FADAC660A3C21B23078724C7 /* Pods-TablePerformanceOptimization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TablePerformanceOptimization.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TablePerformanceOptimization/Pods-TablePerformanceOptimization.debug.xcconfig"; sourceTree = "<group>"; };
+		FF2DBE5F1EA7B569C5AA07AB /* libPods-TablePerformanceOptimization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TablePerformanceOptimization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,18 +123,29 @@
 				045AEEAC1F8EFC370076F7B8 /* QuartzCore.framework in Frameworks */,
 				045AEEAA1F8EFC2E0076F7B8 /* CoreFoundation.framework in Frameworks */,
 				045AEEA81F8EFBAB0076F7B8 /* libsqlite3.tbd in Frameworks */,
+				DC2F35D5B4BAFA535CFBDBFA /* libPods-TablePerformanceOptimization.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E87FDFF001B909EF381DF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FADAC660A3C21B23078724C7 /* Pods-TablePerformanceOptimization.debug.xcconfig */,
+				94CC737A961D1B64B21CA16A /* Pods-TablePerformanceOptimization.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		045AEE0C1F8EF8070076F7B8 = {
 			isa = PBXGroup;
 			children = (
 				045AEE341F8EF8C80076F7B8 /* TablePerformanceOptimization */,
 				045AEE161F8EF8070076F7B8 /* Products */,
 				045AEEA61F8EFBAA0076F7B8 /* Frameworks */,
+				00E87FDFF001B909EF381DF7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,6 +265,7 @@
 				045AEEAB1F8EFC370076F7B8 /* QuartzCore.framework */,
 				045AEEA91F8EFC2E0076F7B8 /* CoreFoundation.framework */,
 				045AEEA71F8EFBAB0076F7B8 /* libsqlite3.tbd */,
+				FF2DBE5F1EA7B569C5AA07AB /* libPods-TablePerformanceOptimization.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,9 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045AEE491F8EF8C90076F7B8 /* Build configuration list for PBXNativeTarget "TablePerformanceOptimization" */;
 			buildPhases = (
+				F1013FF36BD188D574EED785 /* [CP] Check Pods Manifest.lock */,
 				045AEE2F1F8EF8C80076F7B8 /* Sources */,
 				045AEE301F8EF8C80076F7B8 /* Frameworks */,
 				045AEE311F8EF8C80076F7B8 /* Resources */,
+				6BC50E6F635F3240DEB8492B /* [CP] Embed Pods Frameworks */,
+				FC423B21C4982BFC6293A350 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +341,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BC50E6F635F3240DEB8492B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TablePerformanceOptimization/Pods-TablePerformanceOptimization-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1013FF36BD188D574EED785 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TablePerformanceOptimization-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC423B21C4982BFC6293A350 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TablePerformanceOptimization/Pods-TablePerformanceOptimization-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		045AEE2F1F8EF8C80076F7B8 /* Sources */ = {
@@ -465,6 +535,7 @@
 		};
 		045AEE471F8EF8C90076F7B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FADAC660A3C21B23078724C7 /* Pods-TablePerformanceOptimization.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S2AND6YRQ7;
@@ -478,6 +549,7 @@
 		};
 		045AEE481F8EF8C90076F7B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94CC737A961D1B64B21CA16A /* Pods-TablePerformanceOptimization.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S2AND6YRQ7;

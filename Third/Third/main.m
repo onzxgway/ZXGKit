@@ -1,13 +1,16 @@
 //
 //  main.m
-//  Third
+//  SDWebimage
 //
 //  Created by feizhu on 2018/2/28.
 //  Copyright © 2018年 feizhu. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-int main(int argc, const char * argv[]) {
-    return NSApplicationMain(argc, argv);
+int main(int argc, char * argv[]) {
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
 }

@@ -18,12 +18,13 @@
  NSCache是苹果官方提供的 内存缓存类，类似于 NSDictionary 集合，key-value形似存储。
 
  NSCache优于NSDictionary之处在于:
- 1.当系统资源将要耗尽时，它可以自动删减缓存。普通的字典需要在系统发出“低内存”通知时手工删减缓存。
+
+ 1.当内存资源将要耗尽时，它可以自动删减缓存。普通的字典需要在系统发出“低内存”通知时手工删减缓存。
    NSCache类结合了各种自动删除策略，以确保不会占用过多的系统内存。如果其它应用需要内存时，系统自动执行这些策略。当调用这些策略时，会从缓存中删除一些对象，以最大限度减少内存的占用。
  2.NSCache是线程安全的，我们可以在不同的线程中添加、删除和查询缓存中的对象，而不需要锁定缓存区域。
  3.不像NSMutableDictionary对象，一个缓存对象不会拷贝key对象。很多时候，键都是不支持拷贝操作的对象来充当的。因此，NSCache不会自动拷贝键，所以说，在键不支持拷贝操作的情况下，该类用起来比字典更方便。
 
- 总结：1.自动删减功能。2.线程安全的。3.不会拷贝键。
+ 总结：1.自动删减功能。2.线程安全的。3.不会拷贝键。4.可以指定缓存的数量和成本的概念。
  */
 
 /**
@@ -36,21 +37,9 @@
 
     for (int i = 0; i < 10; i++) {
         NSString *str = [NSString stringWithFormat:@"我是第%d个",i];
-        [self.cache setObject:str forKey:[NSString stringWithFormat:@"%d",i] ];
+        [self.cache setObject:str forKey:@(i)];
+        NSLog(@"%@", [self.cache objectForKey:@(i)]);
     }
-
-    NSString *str = [self.cache objectForKey:@"0"];
-    NSLog(@"str0:%@",str);
-
-    str =  [self.cache objectForKey:@"5"];
-    NSLog(@"str5:%@",str);
-
-    str = [self.cache objectForKey:@"6"];
-    NSLog(@"str6:%@",str);
-
-    str = [self.cache objectForKey:@"7"];
-    NSLog(@"str7:%@",str);
-
 }
 
 - (NSCache *)cache {
@@ -74,6 +63,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

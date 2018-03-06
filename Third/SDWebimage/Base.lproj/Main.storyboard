@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,19 +19,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2G-P4-ijp">
-                                <rect key="frame" x="67" y="262" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IMn-k5-2r4">
+                                <rect key="frame" x="0.0" y="145.5" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IMn-k5-2r4" secondAttribute="height" multiplier="1:1" id="R1o-FG-mjS"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h2G-P4-ijp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8a7-ZR-ZMU"/>
-                            <constraint firstItem="h2G-P4-ijp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhc-LM-Oeh"/>
+                            <constraint firstItem="IMn-k5-2r4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aMk-vs-x9l"/>
+                            <constraint firstItem="IMn-k5-2r4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c2u-93-j3H"/>
+                            <constraint firstItem="IMn-k5-2r4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="wGo-Ic-wHK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="myPic" destination="h2G-P4-ijp" id="Fyy-6w-7jz"/>
+                        <outlet property="myPic" destination="IMn-k5-2r4" id="jsG-tW-adw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
