@@ -20,6 +20,9 @@ typedef NSMapTable<NSString *, id<SDWebImageOperation>> SDOperationsDictionary;
 
 @implementation UIView (WebCacheOperation)
 
+/**
+ 给当前的控件对象绑定一个属性，用于记录 该对象的图片下载操作
+ */
 - (SDOperationsDictionary *)sd_operationDictionary {
     @synchronized(self) {
         SDOperationsDictionary *operations = objc_getAssociatedObject(self, &loadOperationKey);
@@ -44,6 +47,10 @@ typedef NSMapTable<NSString *, id<SDWebImageOperation>> SDOperationsDictionary;
     }
 }
 
+/**
+ 当前控件的operationDictionary中，是否有下载操作，如果有，则该操作取消，并且从
+ operationDictionary中移除
+ */
 - (void)sd_cancelImageLoadOperationWithKey:(nullable NSString *)key {
     // Cancel in progress downloader from queue
 

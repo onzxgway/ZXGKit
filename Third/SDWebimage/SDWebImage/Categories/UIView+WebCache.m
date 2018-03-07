@@ -55,6 +55,7 @@ static char TAG_ACTIVITY_SHOW;
     return [self sd_internalSetImageWithURL:url placeholderImage:placeholder options:options operationKey:operationKey setImageBlock:setImageBlock progress:progressBlock completed:completedBlock context:nil];
 }
 
+// 以上所有的调用方法，最终都是进入这个方法进行图片的加载
 - (void)sd_internalSetImageWithURL:(nullable NSURL *)url
                   placeholderImage:(nullable UIImage *)placeholder
                            options:(SDWebImageOptions)options
@@ -71,15 +72,17 @@ static char TAG_ACTIVITY_SHOW;
      completedBlock = nil
      context = nil
      */
+    //1, 取消当前的下载操作
+    // 当前控件绑定 &loadOperationKey 属性 ，记录的SDOperationsDictionary中，如果有下载操作，则移除
     NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);  // validOperationKey = @"UIImageView"
-
-    //1, NSMapTable如果有validOperationKey对应的对象，则调用该对象的Cancel方法
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
 
-    //2,给UIView绑定 &imageURLKey 属性 ，存储的值是 图片的url
+
+    //2,给当前控件绑定 &imageURLKey 属性 ，更新url
     objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
-    //3
+
+    //
     if (!(options & SDWebImageDelayPlaceholder)) {
         //立即显示展位图片
         if ([context valueForKey:SDWebImageInternalSetImageGroupKey]) {
@@ -92,7 +95,7 @@ static char TAG_ACTIVITY_SHOW;
         });
     }
 
-    //4.判断图片url是否为空，
+    //3.判断图片url是否为空，
     if (url) {
         // check if activityView is enabled or not
         if ([self sd_showActivityIndicatorView]) {
@@ -121,6 +124,10 @@ static char TAG_ACTIVITY_SHOW;
         };
 
         //图片url不为空， SDWebImageManager下载图片。
+        // 核心管理类 SDWebImageManager 来处理图片下载
+
+        // 下载有三层 1.当前manager调用下载  2.从缓存中获取，失败用SDWebImageDownloader对象调用下载 3.SDWebImageDownloaderOperation最终用继承NSOperation的对象NSURLSession的方法去下载图片，代理里面进行操作
+
         id <SDWebImageOperation> operation = [manager loadImageWithURL:url options:options progress:combinedProgressBlock completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             __strong __typeof (wself) sself = wself;
 
@@ -152,7 +159,7 @@ static char TAG_ACTIVITY_SHOW;
                 dispatch_main_async_safe(callCompletedBlockClojure);
                 return;
             }
-            
+
             UIImage *targetImage = nil;
             NSData *targetData = nil;
             if (image) {
@@ -188,11 +195,11 @@ static char TAG_ACTIVITY_SHOW;
             }
         }];
 
-        //存储 validOperationKey = operation 到 NSMapTable 中
+        //图片下载的操作 存储 validOperationKey = operation 到 NSMapTable 中
         [self sd_setImageLoadOperation:operation forKey:validOperationKey];
     }
     else {
-        //图片url是为空，出错处理
+        //图片url为空，出错处理
         dispatch_main_async_safe(^{
             [self sd_removeActivityIndicator];
             if (completedBlock) {

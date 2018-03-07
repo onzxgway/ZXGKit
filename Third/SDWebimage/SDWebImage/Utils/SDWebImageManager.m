@@ -47,9 +47,17 @@
 
 - (nonnull instancetype)initWithCache:(nonnull SDImageCache *)cache downloader:(nonnull SDWebImageDownloader *)downloader {
     if ((self = [super init])) {
+
+        //初始化 SDImageCache
         _imageCache = cache;
+
+        //初始化 SDWebImageDownloader
         _imageDownloader = downloader;
+
+        //初始化 黑名单set
         _failedURLs = [NSMutableSet new];
+
+        //初始化 操作集合
         _runningOperations = [NSMutableArray new];
     }
     return self;
@@ -122,15 +130,16 @@
 
     // Very common mistake is to send the URL using NSString object instead of NSURL. For some strange reason, Xcode won't
     // throw any warning for this type mismatch. Here we failsafe this error by allowing URLs to be passed as NSString.
+    //
     if ([url isKindOfClass:NSString.class]) {
         url = [NSURL URLWithString:(NSString *)url];
     }
-
     // Prevents app crashing on argument type error like sending NSNull instead of NSURL
     if (![url isKindOfClass:NSURL.class]) {
         url = nil;
     }
 
+    //
     SDWebImageCombinedOperation *operation = [SDWebImageCombinedOperation new];
     operation.manager = self;
 
@@ -161,8 +170,16 @@
     if (options & SDWebImageQueryDiskSync) cacheOptions |= SDImageCacheQueryDiskSync;
 
     //先从缓存查找图片
+    /**
+      前面的操作,主要作了如下处理：
+      1. 判断url的合法性
+      2. 创建SDWebImageCombinedOperation对象
+      3. 查看url是否是之前下载失败过的
+     */
     __weak SDWebImageCombinedOperation *weakOperation = operation;
     operation.cacheOperation = [self.imageCache queryCacheOperationForKey:key options:cacheOptions done:^(UIImage *cachedImage, NSData *cachedData, SDImageCacheType cacheType) {
+
+        //缓存查询 结果的回调  cachedImage缓存图片  cachedData缓存图片数据  cacheType缓存类型
 
         __strong __typeof(weakOperation) strongOperation = weakOperation;
         if (!strongOperation || strongOperation.isCancelled) {
@@ -174,7 +191,9 @@
         BOOL shouldDownload = (!(options & SDWebImageFromCacheOnly))
             && (!cachedImage || options & SDWebImageRefreshCached)
             && (![self.delegate respondsToSelector:@selector(imageManager:shouldDownloadImageForURL:)] || [self.delegate imageManager:self shouldDownloadImageForURL:url]);
+
         if (shouldDownload) {
+            //网络下载图片
             if (cachedImage && options & SDWebImageRefreshCached) {
                 // If image was found in the cache but SDWebImageRefreshCached is provided, notify about the cached image
                 // AND try to re-download it in order to let a chance to NSURLCache to refresh it from server.
@@ -201,6 +220,7 @@
             
             // `SDWebImageCombinedOperation` -> `SDWebImageDownloadToken` -> `downloadOperationCancelToken`, which is a `SDCallbacksDictionary` and retain the completed block bellow, so we need weak-strong again to avoid retain cycle
             __weak typeof(strongOperation) weakSubOperation = strongOperation;
+            
             strongOperation.downloadToken = [self.imageDownloader downloadImageWithURL:url options:downloaderOptions progress:progressBlock completed:^(UIImage *downloadedImage, NSData *downloadedData, NSError *error, BOOL finished) {
                 __strong typeof(weakSubOperation) strongSubOperation = weakSubOperation;
                 if (!strongSubOperation || strongSubOperation.isCancelled) {

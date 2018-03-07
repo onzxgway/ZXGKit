@@ -1,0 +1,25 @@
+//
+//  sdpch.pch
+//  SD知识点
+//
+//  Created by feizhu on 2018/3/7.
+//  Copyright © 2018年 朱献国. All rights reserved.
+//
+
+#ifndef sdpch_pch
+#define sdpch_pch
+
+//#ifndef dispatch_queue_async_safe
+//#define dispatch_queue_async_safe(queue, block)\
+//    if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(queue)) == 0) {\
+//        block();\
+//    } else {\
+//        dispatch_async(queue, block);\
+//    }
+//#endif
+//
+//#ifndef dispatch_main_async_safe
+//#define dispatch_main_async_safe(block) dispatch_queue_async_safe(dispatch_get_main_queue(), block)
+//#endif
+
+#endif /* sdpch_pch */

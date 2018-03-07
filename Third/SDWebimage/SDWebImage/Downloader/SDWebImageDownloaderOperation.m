@@ -318,16 +318,21 @@ didReceiveResponse:(NSURLResponse *)response
     }
 }
 
+
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+
+    // 0. 附加数据
     if (!self.imageData) {
         self.imageData = [[NSMutableData alloc] initWithCapacity:self.expectedSize];
     }
     [self.imageData appendData:data];
 
+    // 1. 附加数据
     if ((self.options & SDWebImageDownloaderProgressiveDownload) && self.expectedSize > 0) {
         // Get the image data
         __block NSData *imageData = [self.imageData copy];
         // Get the total bytes downloaded
+        // 2. 获取已下载数据总大小 
         const NSInteger totalSize = imageData.length;
         // Get the finish status
         BOOL finished = (totalSize >= self.expectedSize);

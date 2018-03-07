@@ -203,6 +203,8 @@
 
     return [self addProgressCallback:progressBlock completedBlock:completedBlock forURL:url createCallback:^SDWebImageDownloaderOperation *{
         __strong __typeof (wself) sself = wself;
+
+
         NSTimeInterval timeoutInterval = sself.downloadTimeout;
         if (timeoutInterval == 0.0) {
             timeoutInterval = 15.0;
@@ -263,18 +265,27 @@
     UNLOCK(self.operationsLock);
 }
 
+
 - (nullable SDWebImageDownloadToken *)addProgressCallback:(SDWebImageDownloaderProgressBlock)progressBlock
                                            completedBlock:(SDWebImageDownloaderCompletedBlock)completedBlock
                                                    forURL:(nullable NSURL *)url
                                            createCallback:(SDWebImageDownloaderOperation *(^)(void))createCallback {
     // The URL will be used as the key to the callbacks dictionary so it cannot be nil. If it is nil immediately call the completed block with no image or data.
+
+    /**
+     UIImage * _Nullable image,
+     NSData * _Nullable data,
+     NSError * _Nullable error,
+     BOOL finished
+     */
     if (url == nil) {
         if (completedBlock != nil) {
             completedBlock(nil, nil, nil, NO);
         }
         return nil;
     }
-    
+
+    //下载 操作 添加到缓存集合中
     LOCK(self.operationsLock);
     SDWebImageDownloaderOperation *operation = [self.URLOperations objectForKey:url];
     if (!operation) {
@@ -296,6 +307,7 @@
     }
     UNLOCK(self.operationsLock);
 
+    //创建了 token
     id downloadOperationCancelToken = [operation addHandlersForProgress:progressBlock completed:completedBlock];
     
     SDWebImageDownloadToken *token = [SDWebImageDownloadToken new];

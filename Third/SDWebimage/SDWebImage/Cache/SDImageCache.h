@@ -16,24 +16,28 @@ typedef NS_ENUM(NSInteger, SDImageCacheType) {
     /**
      * The image wasn't available the SDWebImage caches, but was downloaded from the web.
      */
-    SDImageCacheTypeNone,
+    SDImageCacheTypeNone, //网络
     /**
      * The image was obtained from the disk cache.
      */
-    SDImageCacheTypeDisk,
+    SDImageCacheTypeDisk, //磁盘
     /**
      * The image was obtained from the memory cache.
      */
-    SDImageCacheTypeMemory
+    SDImageCacheTypeMemory //内存
 };
 
 typedef NS_OPTIONS(NSUInteger, SDImageCacheOptions) {
     /**
      * By default, we do not query disk data when the image is cached in memory. This mask can force to query disk data at the same time.
+     默认情况下，如果内存缓存有图片，就不会再去磁盘缓存中查询。
+     此标志可以 让内存缓存有图片的情况下，也去磁盘查询
      */
     SDImageCacheQueryDataWhenInMemory = 1 << 0,
     /**
      * By default, we query the memory cache synchronously, disk cache asynchronously. This mask can force to query disk cache synchronously.
+     默认情况下，查询内存缓存是 同步的 ，查询磁盘缓存是 异步的
+     此标志可以 使磁盘缓存查询 变为同步的
      */
     SDImageCacheQueryDiskSync = 1 << 1
 };
