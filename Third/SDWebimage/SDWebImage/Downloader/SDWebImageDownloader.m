@@ -215,15 +215,17 @@
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url
                                                                     cachePolicy:cachePolicy
                                                                 timeoutInterval:timeoutInterval];
-        
-        request.HTTPShouldHandleCookies = (options & SDWebImageDownloaderHandleCookies);
-        request.HTTPShouldUsePipelining = YES;
+        request.HTTPShouldHandleCookies = (options & SDWebImageDownloaderHandleCookies); //指定是否使用存储cookie。
+        request.HTTPShouldUsePipelining = YES;  //通常默认情况下请求和响应是顺序的, 也就是说请求–>得到响应后, 再请求。 如果将HTTPShouldUsePipelining设置为YES, 则允许不必等到response, 就可以再次请求，这个优点是可以极大的提高网络请求的效率,但是也可能会出问题，因为客户端无法正确的匹配请求与响应, 所以这依赖于服务器必须保证,响应的顺序与客户端请求的顺序一致.如果服务器不能保证这一点, 那可能导致响应和请求混乱.
         if (sself.headersFilter) {
             request.allHTTPHeaderFields = sself.headersFilter(url, [sself allHTTPHeaderFields]);
         }
         else {
             request.allHTTPHeaderFields = [sself allHTTPHeaderFields];
-        }
+        } //设置请求头
+        //-------设置超时时长、缓存策略、url、请求头--------
+
+
         SDWebImageDownloaderOperation *operation = [[sself.operationClass alloc] initWithRequest:request inSession:sself.session options:options];
         operation.shouldDecompressImages = sself.shouldDecompressImages;
         
@@ -238,7 +240,8 @@
         } else if (options & SDWebImageDownloaderLowPriority) {
             operation.queuePriority = NSOperationQueuePriorityLow;
         }
-        
+
+        //通过NSOperation的依赖功能，实现 LIFO 和 FIFO
         if (sself.executionOrder == SDWebImageDownloaderLIFOExecutionOrder) {
             // Emulate LIFO execution order by systematically adding new operations as last operation's dependency
             [sself.lastAddedOperation addDependency:operation];

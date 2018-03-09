@@ -13,9 +13,9 @@
 @interface SDWebImageCombinedOperation : NSObject <SDWebImageOperation>
 
 @property (assign, nonatomic, getter = isCancelled) BOOL cancelled;
-@property (strong, nonatomic, nullable) SDWebImageDownloadToken *downloadToken;
-@property (strong, nonatomic, nullable) NSOperation *cacheOperation;
-@property (weak, nonatomic, nullable) SDWebImageManager *manager;
+@property (strong, nonatomic, nullable) SDWebImageDownloadToken *downloadToken; //下载操作
+@property (strong, nonatomic, nullable) NSOperation *cacheOperation; //缓存操作
+@property (weak, nonatomic, nullable) SDWebImageManager *manager;    //核心管理对象
 
 @end
 
@@ -130,7 +130,8 @@
 
     // Very common mistake is to send the URL using NSString object instead of NSURL. For some strange reason, Xcode won't
     // throw any warning for this type mismatch. Here we failsafe this error by allowing URLs to be passed as NSString.
-    //
+
+    //1. 处理url
     if ([url isKindOfClass:NSString.class]) {
         url = [NSURL URLWithString:(NSString *)url];
     }
@@ -139,11 +140,11 @@
         url = nil;
     }
 
-    //
+    //2. 创建SDWebImageCombinedOperation对象
     SDWebImageCombinedOperation *operation = [SDWebImageCombinedOperation new];
     operation.manager = self;
 
-    // 判断 黑名单集合中是否包含当前url
+    // 查看url是否是之前下载失败过的 黑名单集合中是否包含当前url
     BOOL isFailedUrl = NO;
     if (url) {
         @synchronized (self.failedURLs) {
@@ -153,6 +154,7 @@
 
     //url为空字符串 或者
     if (url.absoluteString.length == 0 || (!(options & SDWebImageRetryFailed) && isFailedUrl)) {
+        // url在黑名单中，且没有设置 SDWebImageRetryFailed 值
         [self callCompletionBlockForOperation:operation completion:completedBlock error:[NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorFileDoesNotExist userInfo:nil] url:url];
         return operation;
     }
@@ -170,12 +172,6 @@
     if (options & SDWebImageQueryDiskSync) cacheOptions |= SDImageCacheQueryDiskSync;
 
     //先从缓存查找图片
-    /**
-      前面的操作,主要作了如下处理：
-      1. 判断url的合法性
-      2. 创建SDWebImageCombinedOperation对象
-      3. 查看url是否是之前下载失败过的
-     */
     __weak SDWebImageCombinedOperation *weakOperation = operation;
     operation.cacheOperation = [self.imageCache queryCacheOperationForKey:key options:cacheOptions done:^(UIImage *cachedImage, NSData *cachedData, SDImageCacheType cacheType) {
 

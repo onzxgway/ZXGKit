@@ -280,12 +280,13 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     return YES;
 }
 
-#pragma mark NSURLSessionDataDelegate
+#pragma mark - NSURLSessionDataDelegate
 
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
 didReceiveResponse:(NSURLResponse *)response
  completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler {
+
     NSURLSessionResponseDisposition disposition = NSURLSessionResponseAllow;
     NSInteger expected = (NSInteger)response.expectedContentLength;
     expected = expected > 0 ? expected : 0;
@@ -386,7 +387,7 @@ didReceiveResponse:(NSURLResponse *)response
     }
 }
 
-#pragma mark NSURLSessionTaskDelegate
+#pragma mark - NSURLSessionTaskDelegate
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     @synchronized(self) {

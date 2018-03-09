@@ -52,7 +52,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
         // This is useful when the memory warning, the cache was purged. However, the image instance can be retained by other instance such as imageViews and alive.
         // At this case, we can sync weak cache back and do not need to load from disk cache
         self.weakCache = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsWeakMemory capacity:0];
-        self.weakCacheLock = dispatch_semaphore_create(1);
+        self.weakCacheLock = dispatch_semaphore_create(1); // 信号量
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didReceiveMemoryWarning:)
                                                      name:UIApplicationDidReceiveMemoryWarningNotification
@@ -61,6 +61,11 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     return self;
 }
 
+/**
+ 框架内部监听系统内存警告的通知,
+ 系统内存警告时:
+ NSCache 清空
+ */
 - (void)didReceiveMemoryWarning:(NSNotification *)notification {
     // Only remove cache, but keep weak cache
     [super removeAllObjects];

@@ -33,6 +33,7 @@
 		714026ED204FE94700D2993D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714026EC204FE94700D2993D /* Assets.xcassets */; };
 		714026F0204FE94700D2993D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714026EE204FE94700D2993D /* LaunchScreen.storyboard */; };
 		714026F3204FE94700D2993D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 714026F2204FE94700D2993D /* main.m */; };
+		71402706205135E900D2993D /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 71402705205135E900D2993D /* Test.m */; };
 		716A9709204CEED0004AAB60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 716A9708204CEED0004AAB60 /* AppDelegate.m */; };
 		716A970C204CEED0004AAB60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716A970B204CEED0004AAB60 /* ViewController.m */; };
 		716A970F204CEED0004AAB60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716A970D204CEED0004AAB60 /* Main.storyboard */; };
@@ -303,6 +304,9 @@
 		714026F1204FE94700D2993D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		714026F2204FE94700D2993D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		714026F7204FE99300D2993D /* sdpch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sdpch.pch; sourceTree = "<group>"; };
+		71402704205135E900D2993D /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		71402705205135E900D2993D /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		7140270720513FC000D2993D /* Delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delegate.h; sourceTree = "<group>"; };
 		716A9705204CEED0004AAB60 /* 架构.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "架构.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		716A9707204CEED0004AAB60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		716A9708204CEED0004AAB60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -890,6 +894,9 @@
 				714026F1204FE94700D2993D /* Info.plist */,
 				714026F2204FE94700D2993D /* main.m */,
 				714026F7204FE99300D2993D /* sdpch.pch */,
+				71402704205135E900D2993D /* Test.h */,
+				71402705205135E900D2993D /* Test.m */,
+				7140270720513FC000D2993D /* Delegate.h */,
 			);
 			path = "SD知识点";
 			sourceTree = "<group>";
@@ -2050,6 +2057,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714026E8204FE94600D2993D /* ViewController.m in Sources */,
+				71402706205135E900D2993D /* Test.m in Sources */,
 				714026F3204FE94700D2993D /* main.m in Sources */,
 				714026E5204FE94600D2993D /* AppDelegate.m in Sources */,
 			);

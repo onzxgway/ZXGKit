@@ -1,10 +1,15 @@
 1. 为什么操作缓存，用NSMapTable替代NSDictionary?
-2. 为什么内存缓存，使用NSCache?
+2. 为什么内存缓存，使用NSCache? NSFileManager 管理磁盘文件
 3. 为什么使用Designated Initializer?
 4. 字典 和 NSMapTable 是线程不安全的，如何解决？
 
-
-
-
 次之：
-1.Block 和 Associated Objects  — runtime
+1. 位运算  和  位移运算
+2. NSEnum 和 NSOption
+3. NSOperation 和 NSOperationQueue
+4. GCD的使用：
+    dispatch_queue_get_label
+    dispatch_semaphore
+5. 复杂宏的使用
+6. 断言的使用
+7. Block 和 Associated Objects  — runtime

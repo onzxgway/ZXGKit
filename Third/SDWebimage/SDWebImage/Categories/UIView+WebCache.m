@@ -72,7 +72,8 @@ static char TAG_ACTIVITY_SHOW;
      completedBlock = nil
      context = nil
      */
-    //1, 取消当前的下载操作
+
+    //1, 取消控件当前的下载操作
     // 当前控件绑定 &loadOperationKey 属性 ，记录的SDOperationsDictionary中，如果有下载操作，则移除
     NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);  // validOperationKey = @"UIImageView"
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
@@ -81,8 +82,9 @@ static char TAG_ACTIVITY_SHOW;
     //2,给当前控件绑定 &imageURLKey 属性 ，更新url
     objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
+    //-----至此-----：控件本身绑定了  1. ‘控件本身对应的下载操作’ 集合  2.下载图片的URL ------
 
-    //
+    //3,设置占位图片
     if (!(options & SDWebImageDelayPlaceholder)) {
         //立即显示展位图片
         if ([context valueForKey:SDWebImageInternalSetImageGroupKey]) {
@@ -95,7 +97,7 @@ static char TAG_ACTIVITY_SHOW;
         });
     }
 
-    //3.判断图片url是否为空，
+    //4.判断图片url是否为空
     if (url) {
         // check if activityView is enabled or not
         if ([self sd_showActivityIndicatorView]) {
@@ -219,6 +221,13 @@ static char TAG_ACTIVITY_SHOW;
 }
 
 - (void)sd_setImage:(UIImage *)image imageData:(NSData *)imageData basedOnClassOrViaCustomSetImageBlock:(SDSetImageBlock)setImageBlock transition:(SDWebImageTransition *)transition cacheType:(SDImageCacheType)cacheType imageURL:(NSURL *)imageURL {
+    /**
+     imageData = nil
+     setImageBlock = nil
+     transition = nil
+     cacheType = SDImageCacheTypeNone
+     imageURL = nil
+     */
     UIView *view = self;
     SDSetImageBlock finalSetImageBlock;
     if (setImageBlock) {
