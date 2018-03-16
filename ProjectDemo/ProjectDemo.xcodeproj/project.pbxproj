@@ -10,13 +10,13 @@
 		015BE0B621EF66A968F3253B /* libPods-NetEase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388C7776F65E66391123F2DD /* libPods-NetEase.a */; };
 		04234DB61F8BA1AC001133ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234DB51F8BA1AC001133ED /* main.m */; };
 		04234DB91F8BA1AC001133ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234DB81F8BA1AC001133ED /* AppDelegate.m */; };
-		04234DBC1F8BA1AC001133ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234DBB1F8BA1AC001133ED /* ViewController.m */; };
+		04234DBC1F8BA1AC001133ED /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234DBB1F8BA1AC001133ED /* TableViewController.m */; };
 		04234DBF1F8BA1AC001133ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04234DBD1F8BA1AC001133ED /* Main.storyboard */; };
 		04234DC41F8BA1AC001133ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04234DC21F8BA1AC001133ED /* LaunchScreen.storyboard */; };
 		04234E861F8BA693001133ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234E6D1F8BA693001133ED /* AppDelegate.m */; };
 		04234E891F8BA693001133ED /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04234E731F8BA693001133ED /* Info.plist */; };
 		04234E8A1F8BA693001133ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234E741F8BA693001133ED /* main.m */; };
-		04234E8B1F8BA693001133ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234E771F8BA693001133ED /* ViewController.m */; };
+		04234E8B1F8BA693001133ED /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234E771F8BA693001133ED /* TableViewController.m */; };
 		04234E8C1F8BA693001133ED /* EntertainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234E7A1F8BA693001133ED /* EntertainController.m */; };
 		04234E8D1F8BA693001133ED /* FinaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234E7C1F8BA693001133ED /* FinaceController.m */; };
 		04234E8E1F8BA693001133ED /* HotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234E7E1F8BA693001133ED /* HotController.m */; };
@@ -43,7 +43,7 @@
 		04234EE81F8BAFB8001133ED /* ShoppingCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234ED11F8BAFB8001133ED /* ShoppingCarCell.m */; };
 		04234EE91F8BAFB8001133ED /* TBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234ED31F8BAFB8001133ED /* TBButton.m */; };
 		04234EEA1F8BAFB8001133ED /* ShoppingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234ED61F8BAFB8001133ED /* ShoppingViewModel.m */; };
-		04234EEB1F8BAFB8001133ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234ED81F8BAFB8001133ED /* ViewController.m */; };
+		04234EEB1F8BAFB8001133ED /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234ED81F8BAFB8001133ED /* TableViewController.m */; };
 		04234EEC1F8BAFB8001133ED /* 重难点 in Resources */ = {isa = PBXBuildFile; fileRef = 04234ED91F8BAFB8001133ED /* 重难点 */; };
 		04234FA91F8BB06E001133ED /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234F641F8BB06E001133ED /* MASCompositeConstraint.m */; };
 		04234FAA1F8BB06E001133ED /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234F671F8BB06E001133ED /* MASConstraint.m */; };
@@ -80,7 +80,7 @@
 		042350591F8BB474001133ED /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423500C1F8BB474001133ED /* NSObject+MJKeyValue.m */; };
 		0423505A1F8BB474001133ED /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423500E1F8BB474001133ED /* NSObject+MJProperty.m */; };
 		0423505B1F8BB474001133ED /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 042350101F8BB474001133ED /* NSString+MJExtension.m */; };
-		042350741F8BB474001133ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042350461F8BB474001133ED /* ViewController.m */; };
+		042350741F8BB474001133ED /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042350461F8BB474001133ED /* TableViewController.m */; };
 		042350791F8BB4EF001133ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042350751F8BB4EF001133ED /* LaunchScreen.storyboard */; };
 		0423507A1F8BB4EF001133ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042350771F8BB4EF001133ED /* Main.storyboard */; };
 		042350FD1F8BB580001133ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042350971F8BB580001133ED /* AppDelegate.swift */; };
@@ -139,8 +139,8 @@
 		04234DB51F8BA1AC001133ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04234DB71F8BA1AC001133ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04234DB81F8BA1AC001133ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04234DBA1F8BA1AC001133ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04234DBB1F8BA1AC001133ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04234DBA1F8BA1AC001133ED /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		04234DBB1F8BA1AC001133ED /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		04234DBE1F8BA1AC001133ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04234DC31F8BA1AC001133ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04234DC51F8BA1AC001133ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 		04234E731F8BA693001133ED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04234E741F8BA693001133ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04234E751F8BA693001133ED /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		04234E761F8BA693001133ED /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04234E771F8BA693001133ED /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04234E761F8BA693001133ED /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		04234E771F8BA693001133ED /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		04234E791F8BA693001133ED /* EntertainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntertainController.h; sourceTree = "<group>"; };
 		04234E7A1F8BA693001133ED /* EntertainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntertainController.m; sourceTree = "<group>"; };
 		04234E7B1F8BA693001133ED /* FinaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinaceController.h; sourceTree = "<group>"; };
@@ -198,8 +198,8 @@
 		04234ED31F8BAFB8001133ED /* TBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBButton.m; sourceTree = "<group>"; };
 		04234ED51F8BAFB8001133ED /* ShoppingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewModel.h; sourceTree = "<group>"; };
 		04234ED61F8BAFB8001133ED /* ShoppingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewModel.m; sourceTree = "<group>"; };
-		04234ED71F8BAFB8001133ED /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04234ED81F8BAFB8001133ED /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04234ED71F8BAFB8001133ED /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		04234ED81F8BAFB8001133ED /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		04234ED91F8BAFB8001133ED /* 重难点 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "重难点"; sourceTree = "<group>"; };
 		04234F631F8BB06E001133ED /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		04234F641F8BB06E001133ED /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -274,8 +274,8 @@
 		0423500F1F8BB474001133ED /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		042350101F8BB474001133ED /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		042350111F8BB474001133ED /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		042350451F8BB474001133ED /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		042350461F8BB474001133ED /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		042350451F8BB474001133ED /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		042350461F8BB474001133ED /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		042350761F8BB4EF001133ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042350781F8BB4EF001133ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0423507F1F8BB540001133ED /* SinaWBAutoCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWBAutoCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,8 +415,8 @@
 			children = (
 				04234DB71F8BA1AC001133ED /* AppDelegate.h */,
 				04234DB81F8BA1AC001133ED /* AppDelegate.m */,
-				04234DBA1F8BA1AC001133ED /* ViewController.h */,
-				04234DBB1F8BA1AC001133ED /* ViewController.m */,
+				04234DBA1F8BA1AC001133ED /* TableViewController.h */,
+				04234DBB1F8BA1AC001133ED /* TableViewController.m */,
 				04234DBD1F8BA1AC001133ED /* Main.storyboard */,
 				04234DC21F8BA1AC001133ED /* LaunchScreen.storyboard */,
 				04234DC51F8BA1AC001133ED /* Info.plist */,
@@ -443,8 +443,8 @@
 				04234E731F8BA693001133ED /* Info.plist */,
 				04234E741F8BA693001133ED /* main.m */,
 				04234E751F8BA693001133ED /* PrefixHeader.pch */,
-				04234E761F8BA693001133ED /* ViewController.h */,
-				04234E771F8BA693001133ED /* ViewController.m */,
+				04234E761F8BA693001133ED /* TableViewController.h */,
+				04234E771F8BA693001133ED /* TableViewController.m */,
 				04234E781F8BA693001133ED /* WYNews */,
 				04234E851F8BA693001133ED /* 重难点 */,
 			);
@@ -482,8 +482,8 @@
 				04234EB71F8BAFB8001133ED /* Info.plist */,
 				04234EB81F8BAFB8001133ED /* main.m */,
 				04234EB91F8BAFB8001133ED /* TaoBaoShoppingCar */,
-				04234ED71F8BAFB8001133ED /* ViewController.h */,
-				04234ED81F8BAFB8001133ED /* ViewController.m */,
+				04234ED71F8BAFB8001133ED /* TableViewController.h */,
+				04234ED81F8BAFB8001133ED /* TableViewController.m */,
 				04234ED91F8BAFB8001133ED /* 重难点 */,
 			);
 			path = JDShopCart;
@@ -615,8 +615,8 @@
 				042350751F8BB4EF001133ED /* LaunchScreen.storyboard */,
 				042350771F8BB4EF001133ED /* Main.storyboard */,
 				04234FEA1F8BB474001133ED /* Assets.xcassets */,
-				042350451F8BB474001133ED /* ViewController.h */,
-				042350461F8BB474001133ED /* ViewController.m */,
+				042350451F8BB474001133ED /* TableViewController.h */,
+				042350461F8BB474001133ED /* TableViewController.m */,
 				04234FF81F8BB474001133ED /* Info.plist */,
 				04234FF91F8BB474001133ED /* main.m */,
 				042350111F8BB474001133ED /* PrefixHeader.pch */,
@@ -1194,7 +1194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04234DBC1F8BA1AC001133ED /* ViewController.m in Sources */,
+				04234DBC1F8BA1AC001133ED /* TableViewController.m in Sources */,
 				04234DB91F8BA1AC001133ED /* AppDelegate.m in Sources */,
 				04234DB61F8BA1AC001133ED /* main.m in Sources */,
 			);
@@ -1205,7 +1205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04234E911F8BA693001133ED /* VideoController.m in Sources */,
-				04234E8B1F8BA693001133ED /* ViewController.m in Sources */,
+				04234E8B1F8BA693001133ED /* TableViewController.m in Sources */,
 				04234E901F8BA693001133ED /* TopController.m in Sources */,
 				04234E8A1F8BA693001133ED /* main.m in Sources */,
 				04234E8C1F8BA693001133ED /* EntertainController.m in Sources */,
@@ -1235,7 +1235,7 @@
 				04234FB21F8BB06E001133ED /* ViewController+MASAdditions.m in Sources */,
 				04234EE91F8BAFB8001133ED /* TBButton.m in Sources */,
 				04234EDA1F8BAFB8001133ED /* AppDelegate.m in Sources */,
-				04234EEB1F8BAFB8001133ED /* ViewController.m in Sources */,
+				04234EEB1F8BAFB8001133ED /* TableViewController.m in Sources */,
 				04234EE21F8BAFB8001133ED /* CommodityModel.m in Sources */,
 				04234EEA1F8BAFB8001133ED /* ShoppingViewModel.m in Sources */,
 				04234FA91F8BB06E001133ED /* MASCompositeConstraint.m in Sources */,
@@ -1254,7 +1254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042350741F8BB474001133ED /* ViewController.m in Sources */,
+				042350741F8BB474001133ED /* TableViewController.m in Sources */,
 				042350591F8BB474001133ED /* NSObject+MJKeyValue.m in Sources */,
 				042350561F8BB474001133ED /* MJPropertyType.m in Sources */,
 				0423504D1F8BB474001133ED /* SinaToolBar.m in Sources */,

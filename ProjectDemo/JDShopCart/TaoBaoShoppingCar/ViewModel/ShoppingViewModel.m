@@ -21,7 +21,15 @@
     NSDictionary *dataDict = [NSDictionary dictionaryWithContentsOfFile:path];
     
     NSArray *common = [dataDict objectForKey:@"common"];
-    NSMutableArray *commonShoppingCarModels = [NSMutableArray arrayWithArray:[NSArray yy_modelArrayWithClass:[ShoppingCarModel class] json:common]];
+    
+//    NSMutableArray *commonShoppingCarModels = [NSMutableArray arrayWithArray:[NSArray yy_modelArrayWithClass:[ShoppingCarModel class] json:common]];
+
+    NSMutableArray *commonShoppingCarModels = [NSMutableArray arrayWithCapacity:common.count];
+    dispatch_apply(common.count, dispatch_get_global_queue(0, 0), ^(size_t index) {
+        ShoppingCarModel *model = [ShoppingCarModel yy_modelWithDictionary:[common objectAtIndex:index]];
+        [commonShoppingCarModels addObject:model];
+    });
+
     [commonShoppingCarModels enumerateObjectsUsingBlock:^(ShoppingCarModel * _Nonnull shoppingCarModel, NSUInteger idx, BOOL * _Nonnull stop) {
         shoppingCarModel.isSelected = YES;
         ShoppingViewModel *model = [[self alloc] init];
@@ -54,7 +62,6 @@
                 datas(@[commonShoppingCarModels,kuajingShoppingCarModels]);
             }
         });
-        
     });
     
 }
