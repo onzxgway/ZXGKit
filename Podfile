@@ -38,7 +38,8 @@ ProjectDemoArray = ['NetEase','JDShopCart','SinaWBFrameModel','SinaWBAutoCal']
 ProjectDemoArray.each do |t|
     target t do
         project 'ProjectDemo/ProjectDemo.project'
-        pod 'SDWebImage'
+        pod 'YYKit', '~> 1.0.9'
+        #pod 'SDWebImage'
         pod 'SVProgressHUD', '~> 2.2.2'
         pod 'MBProgressHUD', '~> 1.1.0'
     end

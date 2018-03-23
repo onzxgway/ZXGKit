@@ -27,6 +27,8 @@
     _imageView.backgroundColor = [UIColor redColor];
     [_scrollView addSubview:_imageView];
 }
+- (IBAction)clicked:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
