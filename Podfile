@@ -6,11 +6,11 @@ workspace 'ZXGKit.xcworkspace'
 # ruby语法
 # target数组 如果有新的target直接加入该数组
 # Third.project
-thirdArray = ['SDWebimage', 'Third']
+thirdArray = ['SDWebimage', 'Third', 'LearnFMDB']
 thirdArray.each do |t|
     target t do
     	project 'Third/Third.project'
-        
+        pod 'FMDB'
     end
 end
 

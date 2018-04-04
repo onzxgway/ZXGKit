@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019129102074DC4C0054912E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191290F2074DC4C0054912E /* AppDelegate.m */; };
+		019129132074DC4C0054912E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129122074DC4C0054912E /* ViewController.m */; };
+		019129162074DC4C0054912E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019129142074DC4C0054912E /* Main.storyboard */; };
+		019129182074DC4C0054912E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019129172074DC4C0054912E /* Assets.xcassets */; };
+		0191291B2074DC4C0054912E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019129192074DC4C0054912E /* LaunchScreen.storyboard */; };
+		0191291E2074DC4C0054912E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191291D2074DC4C0054912E /* main.m */; };
+		0191292E2074DC5A0054912E /* JZDatabaseColunmCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129242074DC590054912E /* JZDatabaseColunmCondition.m */; };
+		0191292F2074DC5A0054912E /* JZDatabaseCRUDCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129262074DC590054912E /* JZDatabaseCRUDCondition.m */; };
+		019129302074DC5A0054912E /* JZDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129292074DC590054912E /* JZDatabaseManager.m */; };
+		019129312074DC5A0054912E /* JZDatabaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191292B2074DC590054912E /* JZDatabaseOperation.m */; };
+		019129322074DC5A0054912E /* JZDatabaseWhereCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191292D2074DC590054912E /* JZDatabaseWhereCondition.m */; };
 		1E57DD9B65E5DFFBC38592FE /* libPods-SDWebimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77678643378FDBB80F8A0FE7 /* libPods-SDWebimage.a */; };
 		714026D9204FC0EC00D2993D /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 714026D6204FC0EC00D2993D /* SDWebImageCodersManager.m */; };
 		714026DA204FC0EC00D2993D /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 714026D7204FC0EC00D2993D /* SDWebImageCoder.m */; };
@@ -57,10 +68,32 @@
 		71764191204E6ABB006D3A18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71764170204E6ABB006D3A18 /* Info.plist */; };
 		71764193204E6B99006D3A18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71764192204E6B99006D3A18 /* Assets.xcassets */; };
 		8EB8A6EDB903288C5BE45EB7 /* libPods-Third.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 534CD848BDCCA385D90370C9 /* libPods-Third.a */; };
+		DEC078ED49C9F7D5014AD879 /* libPods-LearnFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF6E6539E0762694EDCBE30 /* libPods-LearnFMDB.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		015296A1E3AAACD1121D2246 /* Pods-Third.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Third.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Third/Pods-Third.debug.xcconfig"; sourceTree = "<group>"; };
+		0191290C2074DC4C0054912E /* LearnFMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnFMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0191290E2074DC4C0054912E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0191290F2074DC4C0054912E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		019129112074DC4C0054912E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		019129122074DC4C0054912E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		019129152074DC4C0054912E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		019129172074DC4C0054912E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0191291A2074DC4C0054912E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0191291C2074DC4C0054912E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0191291D2074DC4C0054912E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		019129232074DC590054912E /* JZDatabaseColunmCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseColunmCondition.h; sourceTree = "<group>"; };
+		019129242074DC590054912E /* JZDatabaseColunmCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseColunmCondition.m; sourceTree = "<group>"; };
+		019129252074DC590054912E /* JZDatabaseCRUDCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseCRUDCondition.h; sourceTree = "<group>"; };
+		019129262074DC590054912E /* JZDatabaseCRUDCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseCRUDCondition.m; sourceTree = "<group>"; };
+		019129272074DC590054912E /* JZDatabaseMacrocDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseMacrocDefine.h; sourceTree = "<group>"; };
+		019129282074DC590054912E /* JZDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseManager.h; sourceTree = "<group>"; };
+		019129292074DC590054912E /* JZDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseManager.m; sourceTree = "<group>"; };
+		0191292A2074DC590054912E /* JZDatabaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseOperation.h; sourceTree = "<group>"; };
+		0191292B2074DC590054912E /* JZDatabaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseOperation.m; sourceTree = "<group>"; };
+		0191292C2074DC590054912E /* JZDatabaseWhereCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseWhereCondition.h; sourceTree = "<group>"; };
+		0191292D2074DC590054912E /* JZDatabaseWhereCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseWhereCondition.m; sourceTree = "<group>"; };
 		534CD848BDCCA385D90370C9 /* libPods-Third.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Third.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		714026D5204FC0EC00D2993D /* SDWebImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCoder.h; sourceTree = "<group>"; };
 		714026D6204FC0EC00D2993D /* SDWebImageCodersManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCodersManager.m; sourceTree = "<group>"; };
@@ -151,11 +184,22 @@
 		71DDFCFA20468F90002B54D8 /* Third.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Third.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77678643378FDBB80F8A0FE7 /* libPods-SDWebimage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDWebimage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5DCEC92601A4563ECE649B /* Pods-Third.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Third.release.xcconfig"; path = "Pods/Target Support Files/Pods-Third/Pods-Third.release.xcconfig"; sourceTree = "<group>"; };
+		ACF6E6539E0762694EDCBE30 /* libPods-LearnFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnFMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F6A901B4C6B1EE2484AFB8 /* Pods-SDWebimage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebimage.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage.release.xcconfig"; sourceTree = "<group>"; };
 		D750594FC610D37555E2915D /* Pods-SDWebimage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebimage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage.debug.xcconfig"; sourceTree = "<group>"; };
+		E7DCCC48E1558686B3013D57 /* Pods-LearnFMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnFMDB.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB.release.xcconfig"; sourceTree = "<group>"; };
+		EAE26EF61E8F69CC3D0E8B1F /* Pods-LearnFMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnFMDB.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		019129092074DC4C0054912E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC078ED49C9F7D5014AD879 /* libPods-LearnFMDB.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71764101204E6A33006D3A18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,11 +219,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0191290D2074DC4C0054912E /* LearnFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				019129222074DC590054912E /* JZDataManager(数据库) */,
+				0191290E2074DC4C0054912E /* AppDelegate.h */,
+				0191290F2074DC4C0054912E /* AppDelegate.m */,
+				019129112074DC4C0054912E /* ViewController.h */,
+				019129122074DC4C0054912E /* ViewController.m */,
+				019129142074DC4C0054912E /* Main.storyboard */,
+				019129172074DC4C0054912E /* Assets.xcassets */,
+				019129192074DC4C0054912E /* LaunchScreen.storyboard */,
+				0191291C2074DC4C0054912E /* Info.plist */,
+				0191291D2074DC4C0054912E /* main.m */,
+			);
+			path = LearnFMDB;
+			sourceTree = "<group>";
+		};
+		019129222074DC590054912E /* JZDataManager(数据库) */ = {
+			isa = PBXGroup;
+			children = (
+				019129232074DC590054912E /* JZDatabaseColunmCondition.h */,
+				019129242074DC590054912E /* JZDatabaseColunmCondition.m */,
+				019129252074DC590054912E /* JZDatabaseCRUDCondition.h */,
+				019129262074DC590054912E /* JZDatabaseCRUDCondition.m */,
+				019129272074DC590054912E /* JZDatabaseMacrocDefine.h */,
+				019129282074DC590054912E /* JZDatabaseManager.h */,
+				019129292074DC590054912E /* JZDatabaseManager.m */,
+				0191292A2074DC590054912E /* JZDatabaseOperation.h */,
+				0191292B2074DC590054912E /* JZDatabaseOperation.m */,
+				0191292C2074DC590054912E /* JZDatabaseWhereCondition.h */,
+				0191292D2074DC590054912E /* JZDatabaseWhereCondition.m */,
+			);
+			path = "JZDataManager(数据库)";
+			sourceTree = "<group>";
+		};
 		043A97B6894260887FC53591 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				77678643378FDBB80F8A0FE7 /* libPods-SDWebimage.a */,
 				534CD848BDCCA385D90370C9 /* libPods-Third.a */,
+				ACF6E6539E0762694EDCBE30 /* libPods-LearnFMDB.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,6 +271,8 @@
 				B7F6A901B4C6B1EE2484AFB8 /* Pods-SDWebimage.release.xcconfig */,
 				015296A1E3AAACD1121D2246 /* Pods-Third.debug.xcconfig */,
 				9A5DCEC92601A4563ECE649B /* Pods-Third.release.xcconfig */,
+				EAE26EF61E8F69CC3D0E8B1F /* Pods-LearnFMDB.debug.xcconfig */,
+				E7DCCC48E1558686B3013D57 /* Pods-LearnFMDB.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -347,6 +429,7 @@
 			children = (
 				71DDFCFC20468F90002B54D8 /* Third */,
 				71764105204E6A33006D3A18 /* SDWebimage */,
+				0191290D2074DC4C0054912E /* LearnFMDB */,
 				71DDFCFB20468F90002B54D8 /* Products */,
 				378122F29E919E62AC4265DB /* Pods */,
 				043A97B6894260887FC53591 /* Frameworks */,
@@ -358,6 +441,7 @@
 			children = (
 				71DDFCFA20468F90002B54D8 /* Third.app */,
 				71764104204E6A33006D3A18 /* SDWebimage.app */,
+				0191290C2074DC4C0054912E /* LearnFMDB.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -381,6 +465,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0191290B2074DC4C0054912E /* LearnFMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019129212074DC4C0054912E /* Build configuration list for PBXNativeTarget "LearnFMDB" */;
+			buildPhases = (
+				33EA2D0445A23750160CECBB /* [CP] Check Pods Manifest.lock */,
+				019129082074DC4C0054912E /* Sources */,
+				019129092074DC4C0054912E /* Frameworks */,
+				0191290A2074DC4C0054912E /* Resources */,
+				D1763E0B406E0A9B7555CECB /* [CP] Embed Pods Frameworks */,
+				EDB16D6CED6453A698484210 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnFMDB;
+			productName = LearnFMDB;
+			productReference = 0191290C2074DC4C0054912E /* LearnFMDB.app */;
+			productType = "com.apple.product-type.application";
+		};
 		71764103204E6A33006D3A18 /* SDWebimage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71764117204E6A33006D3A18 /* Build configuration list for PBXNativeTarget "SDWebimage" */;
@@ -430,6 +534,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = feizhu;
 				TargetAttributes = {
+					0191290B2074DC4C0054912E = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
 					71764103204E6A33006D3A18 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -455,11 +563,22 @@
 			targets = (
 				71DDFCF920468F90002B54D8 /* Third */,
 				71764103204E6A33006D3A18 /* SDWebimage */,
+				0191290B2074DC4C0054912E /* LearnFMDB */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0191290A2074DC4C0054912E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0191291B2074DC4C0054912E /* LaunchScreen.storyboard in Resources */,
+				019129182074DC4C0054912E /* Assets.xcassets in Resources */,
+				019129162074DC4C0054912E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71764102204E6A33006D3A18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,6 +618,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Third-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33EA2D0445A23750160CECBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnFMDB-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -553,6 +690,21 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D1763E0B406E0A9B7555CECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DA0FF5A34D4AB2B1D7A4EEBE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,9 +735,39 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EDB16D6CED6453A698484210 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		019129082074DC4C0054912E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019129322074DC5A0054912E /* JZDatabaseWhereCondition.m in Sources */,
+				019129312074DC5A0054912E /* JZDatabaseOperation.m in Sources */,
+				019129302074DC5A0054912E /* JZDatabaseManager.m in Sources */,
+				0191292F2074DC5A0054912E /* JZDatabaseCRUDCondition.m in Sources */,
+				0191292E2074DC5A0054912E /* JZDatabaseColunmCondition.m in Sources */,
+				019129132074DC4C0054912E /* ViewController.m in Sources */,
+				0191291E2074DC4C0054912E /* main.m in Sources */,
+				019129102074DC4C0054912E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71764100204E6A33006D3A18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -641,6 +823,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		019129142074DC4C0054912E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				019129152074DC4C0054912E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		019129192074DC4C0054912E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0191291A2074DC4C0054912E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		717640FA204E69A9006D3A18 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -676,6 +874,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0191291F2074DC4C0054912E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAE26EF61E8F69CC3D0E8B1F /* Pods-LearnFMDB.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LearnFMDB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Custom.LearnFMDB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		019129202074DC4C0054912E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7DCCC48E1558686B3013D57 /* Pods-LearnFMDB.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LearnFMDB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Custom.LearnFMDB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		71764118204E6A33006D3A18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D750594FC610D37555E2915D /* Pods-SDWebimage.debug.xcconfig */;
@@ -847,6 +1080,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		019129212074DC4C0054912E /* Build configuration list for PBXNativeTarget "LearnFMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0191291F2074DC4C0054912E /* Debug */,
+				019129202074DC4C0054912E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		71764117204E6A33006D3A18 /* Build configuration list for PBXNativeTarget "SDWebimage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
