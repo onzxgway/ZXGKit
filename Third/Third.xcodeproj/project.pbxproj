@@ -18,6 +18,7 @@
 		019129302074DC5A0054912E /* JZDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129292074DC590054912E /* JZDatabaseManager.m */; };
 		019129312074DC5A0054912E /* JZDatabaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191292B2074DC590054912E /* JZDatabaseOperation.m */; };
 		019129322074DC5A0054912E /* JZDatabaseWhereCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191292D2074DC590054912E /* JZDatabaseWhereCondition.m */; };
+		019129352074DDC10054912E /* JZUserDataServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129342074DDC10054912E /* JZUserDataServiceManager.m */; };
 		1E57DD9B65E5DFFBC38592FE /* libPods-SDWebimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77678643378FDBB80F8A0FE7 /* libPods-SDWebimage.a */; };
 		714026D9204FC0EC00D2993D /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 714026D6204FC0EC00D2993D /* SDWebImageCodersManager.m */; };
 		714026DA204FC0EC00D2993D /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 714026D7204FC0EC00D2993D /* SDWebImageCoder.m */; };
@@ -94,6 +95,8 @@
 		0191292B2074DC590054912E /* JZDatabaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseOperation.m; sourceTree = "<group>"; };
 		0191292C2074DC590054912E /* JZDatabaseWhereCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseWhereCondition.h; sourceTree = "<group>"; };
 		0191292D2074DC590054912E /* JZDatabaseWhereCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseWhereCondition.m; sourceTree = "<group>"; };
+		019129332074DDC10054912E /* JZUserDataServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZUserDataServiceManager.h; sourceTree = "<group>"; };
+		019129342074DDC10054912E /* JZUserDataServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZUserDataServiceManager.m; sourceTree = "<group>"; };
 		534CD848BDCCA385D90370C9 /* libPods-Third.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Third.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		714026D5204FC0EC00D2993D /* SDWebImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCoder.h; sourceTree = "<group>"; };
 		714026D6204FC0EC00D2993D /* SDWebImageCodersManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCodersManager.m; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				019129222074DC590054912E /* JZDataManager(数据库) */,
 				0191290E2074DC4C0054912E /* AppDelegate.h */,
 				0191290F2074DC4C0054912E /* AppDelegate.m */,
+				019129332074DDC10054912E /* JZUserDataServiceManager.h */,
+				019129342074DDC10054912E /* JZUserDataServiceManager.m */,
 				019129112074DC4C0054912E /* ViewController.h */,
 				019129122074DC4C0054912E /* ViewController.m */,
 				019129142074DC4C0054912E /* Main.storyboard */,
@@ -759,6 +764,7 @@
 			files = (
 				019129322074DC5A0054912E /* JZDatabaseWhereCondition.m in Sources */,
 				019129312074DC5A0054912E /* JZDatabaseOperation.m in Sources */,
+				019129352074DDC10054912E /* JZUserDataServiceManager.m in Sources */,
 				019129302074DC5A0054912E /* JZDatabaseManager.m in Sources */,
 				0191292F2074DC5A0054912E /* JZDatabaseCRUDCondition.m in Sources */,
 				0191292E2074DC5A0054912E /* JZDatabaseColunmCondition.m in Sources */,
