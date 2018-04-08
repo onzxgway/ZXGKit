@@ -17,6 +17,9 @@
 /** 建表 表名*/
 @property (nonatomic, copy  ) NSString *tableName;
 
+/** 建表 字段属性集合*/
+@property (nonatomic, strong) NSArray<ZXGDBColumnCondition *> *colunmConditions;
+
 /** 操作sql语句*/
 @property (nonatomic, copy  , readonly) NSString *sqlStr;
 

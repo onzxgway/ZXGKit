@@ -24,6 +24,7 @@
 - (NSString *)sqlPartStr {
     
     if (!_columnName || [@"" isEqualToString:_columnName]) {
+        [self createTableErr:@"建表错误 字段名称不可以为空"];
         return nil;
     }
     
@@ -74,6 +75,11 @@
     }
     
     return sqlPartStr;
+}
+
+- (void)createTableErr:(NSString *)errorMsg {
+    NSString *errMsg = [NSString stringWithFormat:@"%@ %@", NSStringFromClass([self class]), errorMsg];
+    NSAssert(0, errMsg);
 }
 
 @end

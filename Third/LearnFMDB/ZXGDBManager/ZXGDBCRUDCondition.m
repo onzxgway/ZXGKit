@@ -41,16 +41,39 @@
 }
 
 - (NSString *_Nullable)createTable {
-    if ([JZStringUitil stringIsNull:self.tableName]) {
-        NSLog(@"%@ 建表错误没有表名字",NSStringFromClass([JZDatabaseCRUDCondition class]));
-        return nil;
-    }
-    if (self.createColunmConditions.count == 0) {
-        NSLog(@"%@ 建表错误没有属性字段",NSStringFromClass([JZDatabaseCRUDCondition class]));
+    
+    if (!_tableName || [@"" isEqualToString:_tableName]) {
+        [self createTableErr:@"建表错误没有表名称"];
         return nil;
     }
     
+    if (!_colunmConditions || _colunmConditions.count == 0) {
+        [self createTableErr:@"建表错误没有属性字段"];
+        return nil;
+    }
+    
+    NSMutableString *sqlStr = [NSMutableString string];
+    [sqlStr appendFormat:@"create table if not exists %@ (", _tableName];
+    
+    for (NSInteger i = 0 ; i < _colunmConditions.count ; ++i) {
+        
+        ZXGDBColumnCondition *columnCondition = [_colunmConditions objectAtIndex:i];
+        
+        if (i != _colunmConditions.count - 1) {
+            [sqlStr appendFormat:@"%@,", columnCondition.sqlPartStr];
+            
+        }
+        else {
+            [sqlStr appendFormat:@"%@)", columnCondition.sqlPartStr];
+        }
+    }
+    
     return nil;
+}
+
+- (void)createTableErr:(NSString *)errorMsg {
+    NSString *errMsg = [NSString stringWithFormat:@"%@ %@", NSStringFromClass([self class]), errorMsg];
+    NSAssert(0, errMsg);
 }
 
 @end
