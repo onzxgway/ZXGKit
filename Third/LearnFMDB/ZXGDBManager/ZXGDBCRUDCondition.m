@@ -20,7 +20,7 @@
         }
             break;
         case ZXGDBActionTypeInsert: {
-            
+            return [self insertQuery];
         }
             break;
         case ZXGDBActionTypeDelete: {
@@ -42,6 +42,39 @@
     return nil;
 }
 
+- (NSString *_Nullable)insertQuery {
+    
+    if (_updateValues.count == 0) {
+        NSLog(@"试图更新表，却没有任何更新值！");
+        return nil;
+    }
+    NSDictionary *item = [_updateValues firstObject];
+    NSMutableString *sqlStr = [NSMutableString string];
+    
+    [sqlStr appendFormat:@"INSERT INTO %@ (%@) VALUES %@", _tableName, [self updateKeysToString:item.allKeys], [self argumentTupleOfSize:item.allKeys.count]];;
+    
+    return sqlStr;
+}
+
+- (NSString *)updateKeysToString:(NSArray *)array {
+    return [array componentsJoinedByString:@","];
+}
+
+- (NSString *)argumentTupleOfSize:(NSUInteger)tupleSize {
+    NSMutableArray * tupleString = [NSMutableArray array];
+    [tupleString addObject:@"("];
+    for (NSUInteger columnIdx = 0; columnIdx < tupleSize; columnIdx++)
+    {
+        if (columnIdx > 0) {
+            [tupleString addObject:@","];
+        }
+        [tupleString addObject:@"?"];
+    }
+    [tupleString addObject:@")"];
+    
+    return [tupleString componentsJoinedByString:@" "];
+}
+
 - (NSString *_Nullable)deleteQuery {
     
     NSMutableString *sql = [NSMutableString string];
@@ -56,8 +89,32 @@
 }
 
 - (NSString *_Nullable)updateQuery {
+    if (_updateValues.count == 0) {
+        NSLog(@"试图更新表，却没有任何更新值！");
+        return nil;
+    }
+    NSDictionary *item = [_updateValues firstObject];
+    NSMutableString *sqlStr = [NSMutableString string];
     
-    return nil;
+    [sqlStr appendFormat:@"update %@ set %@ where %@", _tableName, [self argumentTupleOfSizeWithParams:item.allKeys], [self whereConditionSql]];
+
+    return sqlStr;
+}
+
+- (NSString *)argumentTupleOfSizeWithParams:(NSArray *)params {
+    NSMutableArray * tupleString = [NSMutableArray array];
+    for (NSUInteger columnIdx = 0; columnIdx < params.count; columnIdx++)
+    {
+        if (columnIdx > 0)
+        {
+            [tupleString addObject:@","];
+        }
+        [tupleString addObject:[params objectAtIndex:columnIdx]];
+        [tupleString addObject:@"="];
+        [tupleString addObject:@"?"];
+    }
+    
+    return [tupleString componentsJoinedByString:@" "];
 }
 
 - (NSString *_Nullable)selectQuery {
@@ -147,6 +204,41 @@
     }
     
     return sql;
+}
+
+
+- (BOOL)isValidate {
+    BOOL isValidate = YES;
+    
+    if (!_tableName || [@"" isEqualToString:_tableName]) {
+        isValidate = NO;
+//        _conditionErrorMsg = @"没有表名";
+        return isValidate;
+    }
+    
+    switch (_actionType) {
+        case ZXGDBActionTypeInsert: {
+            if (_updateValues.count == 0) {
+//                _conditionErrorMsg = @"插入一行记录但是没有任何值可以用";
+                isValidate = NO;
+            }
+        }
+            break;
+        default:
+            break;
+    }
+    
+    return isValidate;
+}
+
+- (NSArray *)insertValues {
+    NSMutableArray *valueArray = [NSMutableArray array];
+    
+    for (NSDictionary *item in _updateValues) {
+        [valueArray addObject:item.allValues];
+    }
+    
+    return valueArray;
 }
 
 @end

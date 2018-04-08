@@ -17,4 +17,13 @@
 /** <#备注#>*/
 @property (nonatomic, strong) ZXGDBCRUDCondition *actionCondition;
 
+/** 操作失败回调*/
+@property (nonatomic, copy  ) ZXGDBOperationFailBlock failCallback;
+
+/** <#备注#>*/
+@property (nonatomic, copy  ) ZXGDBOperationUpdateSuccessBlock updateSuccessCallback;
+
+/** <#备注#>*/
+@property (nonatomic, copy  ) ZXGDBOperationQuerySuccessBlock querySuccessCallback;
+
 @end

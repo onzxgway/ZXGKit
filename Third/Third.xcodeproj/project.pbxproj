@@ -18,12 +18,6 @@
 		019129182074DC4C0054912E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019129172074DC4C0054912E /* Assets.xcassets */; };
 		0191291B2074DC4C0054912E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019129192074DC4C0054912E /* LaunchScreen.storyboard */; };
 		0191291E2074DC4C0054912E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191291D2074DC4C0054912E /* main.m */; };
-		0191292E2074DC5A0054912E /* JZDatabaseColunmCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129242074DC590054912E /* JZDatabaseColunmCondition.m */; };
-		0191292F2074DC5A0054912E /* JZDatabaseCRUDCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129262074DC590054912E /* JZDatabaseCRUDCondition.m */; };
-		019129302074DC5A0054912E /* JZDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129292074DC590054912E /* JZDatabaseManager.m */; };
-		019129312074DC5A0054912E /* JZDatabaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191292B2074DC590054912E /* JZDatabaseOperation.m */; };
-		019129322074DC5A0054912E /* JZDatabaseWhereCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191292D2074DC590054912E /* JZDatabaseWhereCondition.m */; };
-		019129352074DDC10054912E /* JZUserDataServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129342074DDC10054912E /* JZUserDataServiceManager.m */; };
 		1E57DD9B65E5DFFBC38592FE /* libPods-SDWebimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77678643378FDBB80F8A0FE7 /* libPods-SDWebimage.a */; };
 		714026D9204FC0EC00D2993D /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 714026D6204FC0EC00D2993D /* SDWebImageCodersManager.m */; };
 		714026DA204FC0EC00D2993D /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 714026D7204FC0EC00D2993D /* SDWebImageCoder.m */; };
@@ -100,19 +94,6 @@
 		0191291A2074DC4C0054912E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0191291C2074DC4C0054912E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0191291D2074DC4C0054912E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		019129232074DC590054912E /* JZDatabaseColunmCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseColunmCondition.h; sourceTree = "<group>"; };
-		019129242074DC590054912E /* JZDatabaseColunmCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseColunmCondition.m; sourceTree = "<group>"; };
-		019129252074DC590054912E /* JZDatabaseCRUDCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseCRUDCondition.h; sourceTree = "<group>"; };
-		019129262074DC590054912E /* JZDatabaseCRUDCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseCRUDCondition.m; sourceTree = "<group>"; };
-		019129272074DC590054912E /* JZDatabaseMacrocDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseMacrocDefine.h; sourceTree = "<group>"; };
-		019129282074DC590054912E /* JZDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseManager.h; sourceTree = "<group>"; };
-		019129292074DC590054912E /* JZDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseManager.m; sourceTree = "<group>"; };
-		0191292A2074DC590054912E /* JZDatabaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseOperation.h; sourceTree = "<group>"; };
-		0191292B2074DC590054912E /* JZDatabaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseOperation.m; sourceTree = "<group>"; };
-		0191292C2074DC590054912E /* JZDatabaseWhereCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDatabaseWhereCondition.h; sourceTree = "<group>"; };
-		0191292D2074DC590054912E /* JZDatabaseWhereCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDatabaseWhereCondition.m; sourceTree = "<group>"; };
-		019129332074DDC10054912E /* JZUserDataServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZUserDataServiceManager.h; sourceTree = "<group>"; };
-		019129342074DDC10054912E /* JZUserDataServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZUserDataServiceManager.m; sourceTree = "<group>"; };
 		534CD848BDCCA385D90370C9 /* libPods-Third.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Third.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		714026D5204FC0EC00D2993D /* SDWebImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCoder.h; sourceTree = "<group>"; };
 		714026D6204FC0EC00D2993D /* SDWebImageCodersManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCodersManager.m; sourceTree = "<group>"; };
@@ -260,11 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				0139D0A12079A5E500012ADC /* ZXGDBManager */,
-				019129222074DC590054912E /* JZDataManager(数据库) */,
 				0191290E2074DC4C0054912E /* AppDelegate.h */,
 				0191290F2074DC4C0054912E /* AppDelegate.m */,
-				019129332074DDC10054912E /* JZUserDataServiceManager.h */,
-				019129342074DDC10054912E /* JZUserDataServiceManager.m */,
 				019129112074DC4C0054912E /* ViewController.h */,
 				019129122074DC4C0054912E /* ViewController.m */,
 				019129142074DC4C0054912E /* Main.storyboard */,
@@ -274,24 +252,6 @@
 				0191291D2074DC4C0054912E /* main.m */,
 			);
 			path = LearnFMDB;
-			sourceTree = "<group>";
-		};
-		019129222074DC590054912E /* JZDataManager(数据库) */ = {
-			isa = PBXGroup;
-			children = (
-				019129232074DC590054912E /* JZDatabaseColunmCondition.h */,
-				019129242074DC590054912E /* JZDatabaseColunmCondition.m */,
-				019129252074DC590054912E /* JZDatabaseCRUDCondition.h */,
-				019129262074DC590054912E /* JZDatabaseCRUDCondition.m */,
-				019129272074DC590054912E /* JZDatabaseMacrocDefine.h */,
-				019129282074DC590054912E /* JZDatabaseManager.h */,
-				019129292074DC590054912E /* JZDatabaseManager.m */,
-				0191292A2074DC590054912E /* JZDatabaseOperation.h */,
-				0191292B2074DC590054912E /* JZDatabaseOperation.m */,
-				0191292C2074DC590054912E /* JZDatabaseWhereCondition.h */,
-				0191292D2074DC590054912E /* JZDatabaseWhereCondition.m */,
-			);
-			path = "JZDataManager(数据库)";
 			sourceTree = "<group>";
 		};
 		043A97B6894260887FC53591 /* Frameworks */ = {
@@ -797,14 +757,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019129322074DC5A0054912E /* JZDatabaseWhereCondition.m in Sources */,
 				0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */,
-				019129312074DC5A0054912E /* JZDatabaseOperation.m in Sources */,
-				019129352074DDC10054912E /* JZUserDataServiceManager.m in Sources */,
-				019129302074DC5A0054912E /* JZDatabaseManager.m in Sources */,
 				01793E462079AE0D0030B167 /* ZXGDBColumnCondition.m in Sources */,
-				0191292F2074DC5A0054912E /* JZDatabaseCRUDCondition.m in Sources */,
-				0191292E2074DC5A0054912E /* JZDatabaseColunmCondition.m in Sources */,
 				019129132074DC4C0054912E /* ViewController.m in Sources */,
 				01793E4C2079C6510030B167 /* ZXGDBManager.m in Sources */,
 				0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */,

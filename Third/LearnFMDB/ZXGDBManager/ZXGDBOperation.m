@@ -16,11 +16,12 @@
     if (fileDir && ![@"" isEqualToString:fileDir]) {
         
         NSFileManager *manager = [NSFileManager defaultManager];
-        BOOL isDir = YES;
-        if (![manager fileExistsAtPath:fileDir isDirectory:&isDir]) {
+        BOOL isDir;
+        BOOL isExists = [manager fileExistsAtPath:fileDir isDirectory:&isDir];
+        if (!isExists || !isDir) {
             [manager createDirectoryAtPath:fileDir withIntermediateDirectories:YES attributes:nil error:nil];
         }
-        return [fileDir stringByAppendingPathComponent:@"database.db"];
+        return [fileDir stringByAppendingPathComponent:@"database.sqlite"];
     }
     
     return nil;

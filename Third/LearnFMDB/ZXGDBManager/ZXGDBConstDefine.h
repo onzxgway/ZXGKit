@@ -10,6 +10,12 @@
 #define ZXGDBConstDefine_h
 #import <FMDB/FMDB.h>
 
+typedef void (^ZXGDBOperationQuerySuccessBlock) (FMResultSet *resultSet);
+
+typedef void (^ZXGDBOperationUpdateSuccessBlock) (void);
+
+typedef void (^ZXGDBOperationFailBlock) (NSError *);
+
 /**
  数据库操作类型
 

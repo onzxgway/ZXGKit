@@ -27,7 +27,16 @@
 /** 查询 条件集合*/
 @property (nonatomic, strong) NSArray<ZXGDBWhereCondition *> *andConditions;
 
+/** 更新 */
+@property (nonatomic, strong) NSArray<NSDictionary<NSString *, id> *> *updateValues;
+
+/** 插入的值*/
+@property (nonatomic, strong) NSArray<NSArray *> *insertValues;
+
 /** 操作sql语句*/
 @property (nonatomic, copy  , readonly) NSString *sqlStr;
+
+/** 是否合法*/
+@property (nonatomic, assign, readonly) BOOL isValidate;
 
 @end
