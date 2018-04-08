@@ -53,6 +53,7 @@
     
     [sqlStr appendFormat:@"INSERT INTO %@ (%@) VALUES %@", _tableName, [self updateKeysToString:item.allKeys], [self argumentTupleOfSize:item.allKeys.count]];;
     
+    NSLog(@"%@ %@", NSStringFromClass([self class]), sqlStr);
     return sqlStr;
 }
 
@@ -85,6 +86,8 @@
     else {
         [sql appendFormat:@"DELETE FROM %@ WHERE %@", _tableName, [self whereConditionSql]];
     }
+    
+    NSLog(@"%@ %@", NSStringFromClass([self class]), sql);
     return sql;
 }
 
@@ -98,6 +101,8 @@
     
     [sqlStr appendFormat:@"update %@ set %@ where %@", _tableName, [self argumentTupleOfSizeWithParams:item.allKeys], [self whereConditionSql]];
 
+    
+    NSLog(@"%@ %@", NSStringFromClass([self class]), sqlStr);
     return sqlStr;
 }
 
@@ -141,6 +146,7 @@
         
     }
     
+    NSLog(@"%@ %@", NSStringFromClass([self class]), sqlStr);
     return sqlStr;
 }
 
@@ -167,6 +173,7 @@
         }
     }
     
+    NSLog(@"%@ %@", NSStringFromClass([self class]), sqlStr);
     return sqlStr;
 }
 

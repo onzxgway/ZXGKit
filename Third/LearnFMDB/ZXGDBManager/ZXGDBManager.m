@@ -44,7 +44,7 @@
     
     //如果能找到对应的数据库路径
     if (!findQueue) {
-        
+        //创建一个新的库
         FMDatabaseQueue *queue = [[FMDatabaseQueue alloc] initWithPath:operation.dbPath];
         [_operationPools addObject:queue];
         NSLog(@"数据库地址:-->\n %@ \n<--\n",operation.dbPath);
@@ -77,9 +77,8 @@
     
     switch (operation.actionCondition.actionType) {
         case ZXGDBActionTypeCreateTable: {
-            
+            NSLog(@"创建表");
         }
-            break;
         case ZXGDBActionTypeDelete: {
             [self delete:db opera:operation];
         }

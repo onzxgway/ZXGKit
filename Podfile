@@ -11,6 +11,7 @@ thirdArray.each do |t|
     target t do
     	project 'Third/Third.project'
         pod 'FMDB'
+        pod 'MJExtension'
     end
 end
 

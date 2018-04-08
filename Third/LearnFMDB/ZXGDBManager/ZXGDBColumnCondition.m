@@ -16,7 +16,7 @@
     if (self) {
         _isPrimaryKey = NO;
         _isAutoIncrease = NO;
-        _isNull = NO;
+        _isNull = YES;
     }
     return self;
 }

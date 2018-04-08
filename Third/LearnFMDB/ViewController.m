@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "ZXGPerson.h"
+#import "ZXGUseage.h"
 
 @interface ViewController ()
 
@@ -16,13 +18,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [ZXGUseage createDataBaseTable];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    ZXGPerson *p = [[ZXGPerson alloc] init];
+    p.currentAccount = @"1001";
+    p.name = @"kobe";
+    p.age = 38;
+    p.homeAdress = @"LA";
+    p.studyNo = nil;
+    
+    [ZXGUseage insertinto:p];
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [ZXGUseage queryDataBaseTableWithAccountParams:nil withSuccessBlock:^(NSArray *dataArray) {
+        ZXGPerson *p = [dataArray firstObject];
+        NSLog(@"%@__%@", p.name, p.homeAdress);
+    } withFaileBlock:^(NSString *errorStr) {
+        NSLog(@"%@", errorStr);
+    }];
 }
 
 

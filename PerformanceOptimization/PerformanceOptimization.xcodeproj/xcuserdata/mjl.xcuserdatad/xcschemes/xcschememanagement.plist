@@ -7,12 +7,12 @@
 		<key>GCD_Basic.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>39</integer>
 		</dict>
 		<key>TablePerformanceOptimization.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>38</integer>
 		</dict>
 	</dict>
 </dict>

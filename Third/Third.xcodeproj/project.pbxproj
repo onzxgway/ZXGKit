@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012309322079FFA50090DC05 /* ZXGUseage.m in Sources */ = {isa = PBXBuildFile; fileRef = 012309312079FFA50090DC05 /* ZXGUseage.m */; };
+		01230935207A03410090DC05 /* ZXGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01230934207A03410090DC05 /* ZXGPerson.m */; };
 		0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A32079A62D00012ADC /* ZXGDBOperation.m */; };
 		0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */; };
 		01793E462079AE0D0030B167 /* ZXGDBColumnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */; };
@@ -72,6 +74,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		012309302079FFA50090DC05 /* ZXGUseage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGUseage.h; sourceTree = "<group>"; };
+		012309312079FFA50090DC05 /* ZXGUseage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGUseage.m; sourceTree = "<group>"; };
+		01230933207A03410090DC05 /* ZXGPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPerson.h; sourceTree = "<group>"; };
+		01230934207A03410090DC05 /* ZXGPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPerson.m; sourceTree = "<group>"; };
 		0139D0A22079A62D00012ADC /* ZXGDBOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBOperation.h; sourceTree = "<group>"; };
 		0139D0A32079A62D00012ADC /* ZXGDBOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBOperation.m; sourceTree = "<group>"; };
 		0139D0A52079A9C500012ADC /* ZXGDBCRUDCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBCRUDCondition.h; sourceTree = "<group>"; };
@@ -243,6 +249,10 @@
 				0139D0A12079A5E500012ADC /* ZXGDBManager */,
 				0191290E2074DC4C0054912E /* AppDelegate.h */,
 				0191290F2074DC4C0054912E /* AppDelegate.m */,
+				012309302079FFA50090DC05 /* ZXGUseage.h */,
+				012309312079FFA50090DC05 /* ZXGUseage.m */,
+				01230933207A03410090DC05 /* ZXGPerson.h */,
+				01230934207A03410090DC05 /* ZXGPerson.m */,
 				019129112074DC4C0054912E /* ViewController.h */,
 				019129122074DC4C0054912E /* ViewController.m */,
 				019129142074DC4C0054912E /* Main.storyboard */,
@@ -759,8 +769,10 @@
 			files = (
 				0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */,
 				01793E462079AE0D0030B167 /* ZXGDBColumnCondition.m in Sources */,
+				01230935207A03410090DC05 /* ZXGPerson.m in Sources */,
 				019129132074DC4C0054912E /* ViewController.m in Sources */,
 				01793E4C2079C6510030B167 /* ZXGDBManager.m in Sources */,
+				012309322079FFA50090DC05 /* ZXGUseage.m in Sources */,
 				0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */,
 				01793E492079BA370030B167 /* ZXGDBWhereCondition.m in Sources */,
 				0191291E2074DC4C0054912E /* main.m in Sources */,
@@ -881,10 +893,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PHWVAXF5Q9;
 				INFOPLIST_FILE = LearnFMDB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Custom.LearnFMDB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orangenet.eParentTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -898,10 +911,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PHWVAXF5Q9;
 				INFOPLIST_FILE = LearnFMDB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Custom.LearnFMDB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orangenet.eParentTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

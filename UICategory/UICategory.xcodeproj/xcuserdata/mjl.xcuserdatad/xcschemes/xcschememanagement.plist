@@ -7,27 +7,27 @@
 		<key>TableViewCell编辑.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>2</integer>
 		</dict>
 		<key>UIApplication作用.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>3</integer>
 		</dict>
 		<key>UITableView知识点.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>0</integer>
 		</dict>
 		<key>UIView的生命周期.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>4</integer>
 		</dict>
 		<key>项目配置文件.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>
