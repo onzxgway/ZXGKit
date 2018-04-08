@@ -154,5 +154,77 @@
     [[ZXGDBManager sharedManager] addOperation:operation];
 }
 
+//更新数据
++ (void)updateDataBaseTableWithAccountData:(ZXGPerson *)loginModel {
+    
+    if (loginModel.currentAccount == nil) {
+        return;
+    }
+    NSMutableDictionary *paramsDic = [NSMutableDictionary dictionary];
+    [paramsDic setObject:loginModel.currentAccount forKey:@"currentAccount"];
+    [self queryDataBaseTableWithAccountParams:paramsDic withSuccessBlock:^(NSArray *dataArray) {
+        if (dataArray.count > 0) {
+            [self performSelectorOnMainThread:@selector(updateDataBase:) withObject:loginModel waitUntilDone:0];
+        }else{
+            [self performSelectorOnMainThread:@selector(insertDataBase:) withObject:loginModel waitUntilDone:0];
+        }
+    } withFaileBlock:^(NSString *errorStr) {
+        NSLog(@"更新数据失败");
+    }];
+}
+
++ (void)updateDataBase:(ZXGPerson *)loginModel {
+    
+    ZXGDBOperation *operation = [[ZXGDBOperation alloc] init];
+    ZXGDBCRUDCondition *condition = [[ZXGDBCRUDCondition alloc] init];
+    condition.tableName = @"zxg_haha";
+    condition.actionType = ZXGDBActionTypeUpdate;
+    
+    NSString *currentAccount = loginModel.currentAccount ?: @"";
+    
+    NSMutableDictionary *paramsDic = [NSMutableDictionary dictionaryWithDictionary:[loginModel mj_keyValues]];
+    condition.updateValues = @[paramsDic];
+    if(loginModel){
+        ZXGDBWhereCondition *whereCondition = [[ZXGDBWhereCondition alloc] init];
+        whereCondition.columnName = @"currentAccount";
+        whereCondition.value = currentAccount;
+        whereCondition.operaType = ZXGDBWhereOperationTypeEqual;
+        condition.andConditions = @[whereCondition];
+    }
+    operation.actionCondition = condition;
+    operation.updateSuccessCallback = ^{
+        NSLog(@"更新数据成功");
+    };
+    operation.failCallback = ^(NSError *error) {
+        NSLog(@"error ------- %@",error);
+        NSLog(@"更新数据失败");
+    };
+    [[ZXGDBManager sharedManager] addOperation:operation];
+}
+
+//删除数据
++ (void)deleteDataBaseTableWithLoginModel:(ZXGPerson *)loginModel withSuccessBlock:(void(^)(NSString *successStr))successBlock withFailureBlock:(void(^)(NSString *errorStr))failureBlock {
+    
+    ZXGDBOperation *operation = [[ZXGDBOperation alloc] init];
+    ZXGDBCRUDCondition *condition = [[ZXGDBCRUDCondition alloc] init];
+    condition.tableName = @"zxg_haha";
+    condition.actionType = ZXGDBActionTypeDelete;
+    ZXGDBWhereCondition *whereCondition = [[ZXGDBWhereCondition alloc] init];
+    whereCondition.columnName = @"currentAccount";
+    whereCondition.value = loginModel.currentAccount;
+    whereCondition.operaType = ZXGDBWhereOperationTypeEqual;
+    condition.andConditions = @[whereCondition];
+    
+    operation.actionCondition = condition;
+    operation.updateSuccessCallback = ^{
+        successBlock(@"删除数据成功");
+    };
+    operation.failCallback = ^(NSError *error) {
+        NSLog(@"error ------- %@",error);
+        failureBlock(@"删除数据失败");
+    };
+    [[ZXGDBManager sharedManager] addOperation:operation];
+    
+}
 
 @end

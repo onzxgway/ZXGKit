@@ -23,22 +23,36 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
+
     ZXGPerson *p = [[ZXGPerson alloc] init];
     p.currentAccount = @"1001";
-    p.name = @"kobe";
+    p.name = @"James";
     p.age = 38;
-    p.homeAdress = @"LA";
+    p.homeAdress = @"CAL";
     p.studyNo = nil;
-    
-    [ZXGUseage insertinto:p];
+
+//    [ZXGUseage insertinto:p];
+    [ZXGUseage updateDataBaseTableWithAccountData:p];
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
     [ZXGUseage queryDataBaseTableWithAccountParams:nil withSuccessBlock:^(NSArray *dataArray) {
         ZXGPerson *p = [dataArray firstObject];
         NSLog(@"%@__%@", p.name, p.homeAdress);
     } withFaileBlock:^(NSString *errorStr) {
+        NSLog(@"%@", errorStr);
+    }];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    ZXGPerson *p = [[ZXGPerson alloc] init];
+    p.currentAccount = @"1001";
+    
+    [ZXGUseage deleteDataBaseTableWithLoginModel:p withSuccessBlock:^(NSString *successStr) {
+        NSLog(@"%@", successStr);
+    } withFailureBlock:^(NSString *errorStr) {
         NSLog(@"%@", errorStr);
     }];
 }

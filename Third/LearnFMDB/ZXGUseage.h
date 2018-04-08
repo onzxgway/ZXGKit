@@ -20,13 +20,8 @@
 //存储数据
 + (void)insertinto:(ZXGPerson *)loginModel;
 
-
 //更新数据
 + (void)updateDataBaseTableWithAccountData:(ZXGPerson *)loginModel;
-
-//更新数据中的密码
-+ (void)updateLoginPassword:(NSDictionary *)paramsDic;
-
 
 //删除数据
 + (void)deleteDataBaseTableWithLoginModel:(ZXGPerson *)loginModel withSuccessBlock:(void(^)(NSString *successStr))successBlock withFailureBlock:(void(^)(NSString *errorStr))failureBlock;
