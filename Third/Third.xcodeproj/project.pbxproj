@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A32079A62D00012ADC /* ZXGDBOperation.m */; };
+		0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */; };
+		01793E462079AE0D0030B167 /* ZXGDBColumnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */; };
 		019129102074DC4C0054912E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191290F2074DC4C0054912E /* AppDelegate.m */; };
 		019129132074DC4C0054912E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129122074DC4C0054912E /* ViewController.m */; };
 		019129162074DC4C0054912E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019129142074DC4C0054912E /* Main.storyboard */; };
@@ -73,7 +76,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0139D0A22079A62D00012ADC /* ZXGDBOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBOperation.h; sourceTree = "<group>"; };
+		0139D0A32079A62D00012ADC /* ZXGDBOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBOperation.m; sourceTree = "<group>"; };
+		0139D0A52079A9C500012ADC /* ZXGDBCRUDCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBCRUDCondition.h; sourceTree = "<group>"; };
+		0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBCRUDCondition.m; sourceTree = "<group>"; };
+		0139D0A82079AAF400012ADC /* ZXGDBConstDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBConstDefine.h; sourceTree = "<group>"; };
 		015296A1E3AAACD1121D2246 /* Pods-Third.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Third.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Third/Pods-Third.debug.xcconfig"; sourceTree = "<group>"; };
+		01793E442079AE0D0030B167 /* ZXGDBColumnCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBColumnCondition.h; sourceTree = "<group>"; };
+		01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBColumnCondition.m; sourceTree = "<group>"; };
 		0191290C2074DC4C0054912E /* LearnFMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnFMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0191290E2074DC4C0054912E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0191290F2074DC4C0054912E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -222,9 +232,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0139D0A12079A5E500012ADC /* ZXGDBManager */ = {
+			isa = PBXGroup;
+			children = (
+				0139D0A22079A62D00012ADC /* ZXGDBOperation.h */,
+				0139D0A32079A62D00012ADC /* ZXGDBOperation.m */,
+				0139D0A52079A9C500012ADC /* ZXGDBCRUDCondition.h */,
+				0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */,
+				0139D0A82079AAF400012ADC /* ZXGDBConstDefine.h */,
+				01793E442079AE0D0030B167 /* ZXGDBColumnCondition.h */,
+				01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */,
+			);
+			path = ZXGDBManager;
+			sourceTree = "<group>";
+		};
 		0191290D2074DC4C0054912E /* LearnFMDB */ = {
 			isa = PBXGroup;
 			children = (
+				0139D0A12079A5E500012ADC /* ZXGDBManager */,
 				019129222074DC590054912E /* JZDataManager(数据库) */,
 				0191290E2074DC4C0054912E /* AppDelegate.h */,
 				0191290F2074DC4C0054912E /* AppDelegate.m */,
@@ -763,12 +788,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				019129322074DC5A0054912E /* JZDatabaseWhereCondition.m in Sources */,
+				0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */,
 				019129312074DC5A0054912E /* JZDatabaseOperation.m in Sources */,
 				019129352074DDC10054912E /* JZUserDataServiceManager.m in Sources */,
 				019129302074DC5A0054912E /* JZDatabaseManager.m in Sources */,
+				01793E462079AE0D0030B167 /* ZXGDBColumnCondition.m in Sources */,
 				0191292F2074DC5A0054912E /* JZDatabaseCRUDCondition.m in Sources */,
 				0191292E2074DC5A0054912E /* JZDatabaseColunmCondition.m in Sources */,
 				019129132074DC4C0054912E /* ViewController.m in Sources */,
+				0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */,
 				0191291E2074DC4C0054912E /* main.m in Sources */,
 				019129102074DC4C0054912E /* AppDelegate.m in Sources */,
 			);
