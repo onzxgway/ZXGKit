@@ -8,7 +8,7 @@
 
 #ifndef ZXGDBConstDefine_h
 #define ZXGDBConstDefine_h
-
+#import <FMDB/FMDB.h>
 
 /**
  数据库操作类型
@@ -41,6 +41,23 @@ typedef NS_ENUM(NSUInteger, ZXGDBColumnValueType) {
     ZXGDBColumnValueTypeVarchar,
     ZXGDBColumnValueTypeInt,
     ZXGDBColumnValueTypeBigInt,
+};
+
+/**
+ 查询条件语句连接符
+
+ - ZXGDBWhereOperationTypeEqual: 等于
+ - ZXGDBWhereOperationTypeBigger: 大于
+ - ZXGDBWhereOperationTypeSmaller: 小于
+ - ZXGDBWhereOperationTypeBiggerEqual: 大于等于
+ - ZXGDBWhereOperationTypeSmallerEqual: 小于等于
+ */
+typedef NS_ENUM(NSUInteger, ZXGDBWhereOperationType) {
+    ZXGDBWhereOperationTypeEqual,
+    ZXGDBWhereOperationTypeBigger,
+    ZXGDBWhereOperationTypeSmaller,
+    ZXGDBWhereOperationTypeBiggerEqual,
+    ZXGDBWhereOperationTypeSmallerEqual,
 };
 
 #endif /* ZXGDBConstDefine_h */

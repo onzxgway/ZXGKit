@@ -10,6 +10,8 @@
 		0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A32079A62D00012ADC /* ZXGDBOperation.m */; };
 		0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */; };
 		01793E462079AE0D0030B167 /* ZXGDBColumnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */; };
+		01793E492079BA370030B167 /* ZXGDBWhereCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E482079BA370030B167 /* ZXGDBWhereCondition.m */; };
+		01793E4C2079C6510030B167 /* ZXGDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E4B2079C6510030B167 /* ZXGDBManager.m */; };
 		019129102074DC4C0054912E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191290F2074DC4C0054912E /* AppDelegate.m */; };
 		019129132074DC4C0054912E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129122074DC4C0054912E /* ViewController.m */; };
 		019129162074DC4C0054912E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019129142074DC4C0054912E /* Main.storyboard */; };
@@ -84,6 +86,10 @@
 		015296A1E3AAACD1121D2246 /* Pods-Third.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Third.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Third/Pods-Third.debug.xcconfig"; sourceTree = "<group>"; };
 		01793E442079AE0D0030B167 /* ZXGDBColumnCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBColumnCondition.h; sourceTree = "<group>"; };
 		01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBColumnCondition.m; sourceTree = "<group>"; };
+		01793E472079BA370030B167 /* ZXGDBWhereCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBWhereCondition.h; sourceTree = "<group>"; };
+		01793E482079BA370030B167 /* ZXGDBWhereCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBWhereCondition.m; sourceTree = "<group>"; };
+		01793E4A2079C6510030B167 /* ZXGDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBManager.h; sourceTree = "<group>"; };
+		01793E4B2079C6510030B167 /* ZXGDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBManager.m; sourceTree = "<group>"; };
 		0191290C2074DC4C0054912E /* LearnFMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnFMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0191290E2074DC4C0054912E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0191290F2074DC4C0054912E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -242,6 +248,10 @@
 				0139D0A82079AAF400012ADC /* ZXGDBConstDefine.h */,
 				01793E442079AE0D0030B167 /* ZXGDBColumnCondition.h */,
 				01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */,
+				01793E472079BA370030B167 /* ZXGDBWhereCondition.h */,
+				01793E482079BA370030B167 /* ZXGDBWhereCondition.m */,
+				01793E4A2079C6510030B167 /* ZXGDBManager.h */,
+				01793E4B2079C6510030B167 /* ZXGDBManager.m */,
 			);
 			path = ZXGDBManager;
 			sourceTree = "<group>";
@@ -796,7 +806,9 @@
 				0191292F2074DC5A0054912E /* JZDatabaseCRUDCondition.m in Sources */,
 				0191292E2074DC5A0054912E /* JZDatabaseColunmCondition.m in Sources */,
 				019129132074DC4C0054912E /* ViewController.m in Sources */,
+				01793E4C2079C6510030B167 /* ZXGDBManager.m in Sources */,
 				0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */,
+				01793E492079BA370030B167 /* ZXGDBWhereCondition.m in Sources */,
 				0191291E2074DC4C0054912E /* main.m in Sources */,
 				019129102074DC4C0054912E /* AppDelegate.m in Sources */,
 			);

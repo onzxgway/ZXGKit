@@ -10,6 +10,7 @@
 //
 
 #import "JZDatabaseManager.h"
+
 @interface JZDatabaseManager ()
 
 @property (nonatomic,strong)NSMutableArray *databasePools;
