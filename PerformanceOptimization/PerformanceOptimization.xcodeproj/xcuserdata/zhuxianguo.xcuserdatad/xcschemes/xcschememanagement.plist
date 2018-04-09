@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GCD_Basic.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>31</integer>
+		</dict>
 		<key>TablePerformanceOptimization.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>045AEE321F8EF8C80076F7B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>712BCD98205A595400C181A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
