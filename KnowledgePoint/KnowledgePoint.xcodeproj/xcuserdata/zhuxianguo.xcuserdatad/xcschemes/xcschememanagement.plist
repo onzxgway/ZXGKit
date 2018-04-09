@@ -9,10 +9,35 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>DesignatedInitializer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
 		<key>KnowledgePoint.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>NSCache.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
+		<key>NSHashTableNSMapTable.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>27</integer>
+		</dict>
+		<key>RAC.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>25</integer>
+		</dict>
+		<key>XibSBCode.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
 		</dict>
 		<key>ZXGConfuse.xcscheme</key>
 		<dict>
@@ -28,6 +53,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>架构.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>26</integer>
 		</dict>
 		<key>死锁.xcscheme</key>
 		<dict>
@@ -63,6 +93,36 @@
 			<true/>
 		</dict>
 		<key>04F7623E1F97590800F4EF74</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>716A9704204CEED0004AAB60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>716FFBC7204408E400443E32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>716FFBF72044F9E800443E32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71764197204E7CF9006D3A18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71DDFCDA20465779002B54D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71DDFD9220478DAE002B54D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
