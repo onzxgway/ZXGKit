@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>33</integer>
 		</dict>
+		<key>LearnYYKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>44</integer>
+		</dict>
 		<key>SDWebimage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0191290B2074DC4C0054912E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>047C26A0207CFA600042572C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
