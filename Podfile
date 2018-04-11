@@ -10,8 +10,8 @@ thirdArray = ['SDWebimage', 'Third', 'LearnFMDB']
 thirdArray.each do |t|
     target t do
     	project 'Third/Third.project'
-        pod 'FMDB'
-        pod 'MJExtension'
+        #pod 'FMDB'
+        #pod 'MJExtension'
         pod 'YYKit', '~> 1.0.9'
     end
 end
