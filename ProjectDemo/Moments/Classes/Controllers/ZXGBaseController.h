@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZXGBaseController.h
 //  Moments
 //
 //  Created by 朱献国 on 2018/4/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZXGBaseController : UIViewController
 
 @end
-
