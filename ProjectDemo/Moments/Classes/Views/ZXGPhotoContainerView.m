@@ -15,9 +15,9 @@
 
 @interface ZXGPhotoContainerView () //<SDPhotoBrowserDelegate>
 
-@property (nonatomic, strong) NSArray *imageViewsArray;//配图集合
+@property (nonatomic, strong) NSArray *imageViewsArr;//配图集合
 
-@property (nonatomic, strong) UIImageView *videoImg;//视频首帧图片
+@property (nonatomic, strong) UIImageView *videoImg; //视频首帧图片
 
 @end
 
@@ -31,42 +31,52 @@
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
 #pragma mark - Initial
 - (void)setup {
     self.backgroundColor = kRandomColor;
 
-    //
-    NSMutableArray *temp = [NSMutableArray array];
+    //配图
+    NSMutableArray *tempArr = [NSMutableArray array];
     
     for (int i = 0; i < 9; i++) {
 
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
-        [self addSubview:imageView];
         imageView.userInteractionEnabled = YES;
         imageView.tag = i;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView:)];
         [imageView addGestureRecognizer:tap];
-        [temp addObject:imageView];
+        [tempArr addObject:imageView];
+        [self addSubview:imageView];
     }
     
-    self.imageViewsArray = [temp copy];
+    self.imageViewsArr = [tempArr copy];
 
-    //
+    //视频首帧图片
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.clipsToBounds = YES;
-    [self addSubview:imageView];
     imageView.userInteractionEnabled = YES;
     imageView.tag = 10;
-    self.videoImg = imageView;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView:)];
     [imageView addGestureRecognizer:tap];
+    [self addSubview:imageView];
+    self.videoImg = imageView;
+    
+    
     //▶️图片
     UIImageView *playImg = [[UIImageView alloc] init];
     playImg.contentMode = UIViewContentModeScaleAspectFit;
-    playImg.image = GET_IMAGE(@"btn_personal_bf");
+    playImg.image = GET_IMAGE(@"video_play");
     [imageView addSubview:playImg];
     [playImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.mas_equalTo(imageView);
@@ -295,20 +305,20 @@
 #pragma mark - Events
 - (void)tapImageView:(UITapGestureRecognizer *)tap {
 
-    if (tap.view.tag == 10) {
-        if (self.playCallback) {
-            self.playCallback();
-        }
-        return;
-    }
-
-    UIView *imageView = tap.view;
-    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
-    browser.currentImageIndex = imageView.tag;
-    browser.sourceImagesContainerView = self;
-    browser.imageCount = self.picPathStringsArray.count;
-    browser.delegate = self;
-    [browser show:_model.comments];
+//    if (tap.view.tag == 10) {
+//        if (self.playCallback) {
+//            self.playCallback();
+//        }
+//        return;
+//    }
+//
+//    UIView *imageView = tap.view;
+//    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
+//    browser.currentImageIndex = imageView.tag;
+//    browser.sourceImagesContainerView = self;
+//    browser.imageCount = self.picPathStringsArray.count;
+//    browser.delegate = self;
+//    [browser show:_model.comments];
 }
 
 #pragma mark - Private
