@@ -14,14 +14,12 @@
 		010468B6207DAB4100DC5BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010468B4207DAB4100DC5BA0 /* LaunchScreen.storyboard */; };
 		010468B9207DAB4100DC5BA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468B8207DAB4100DC5BA0 /* main.m */; };
 		010468C0207DAC4500DC5BA0 /* ZXGNetworkCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468BF207DAC4500DC5BA0 /* ZXGNetworkCenter.m */; };
-		010468C3207DACCF00DC5BA0 /* ZXGNetWorkCenterCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468C2207DACCF00DC5BA0 /* ZXGNetWorkCenterCondition.m */; };
-		010468C7207DB14100DC5BA0 /* ZXGNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468C6207DB14100DC5BA0 /* ZXGNetworkManager.m */; };
 		010468CA207DB4D000DC5BA0 /* ZXGNetworkTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468C9207DB4D000DC5BA0 /* ZXGNetworkTask.m */; };
-		010468CF207DC00C00DC5BA0 /* JZStringUitil.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468CE207DC00C00DC5BA0 /* JZStringUitil.m */; };
 		010468D3207DD49E00DC5BA0 /* ZXGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468D2207DD49E00DC5BA0 /* ZXGBaseModel.m */; };
 		010468D6207DD4D600DC5BA0 /* ZXGBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468D5207DD4D600DC5BA0 /* ZXGBaseDataModel.m */; };
 		010468D9207DD97E00DC5BA0 /* ZXGUploadFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010468D8207DD97E00DC5BA0 /* ZXGUploadFileModel.m */; };
-		799F5CE02EAD7EF43B4E9636 /* libPods-网络封装.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE3BCE0BA4DF734EFEBE69F /* libPods-网络封装.a */; };
+		01A46FF9208479D300740B98 /* HomeNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A46FF8208479D300740B98 /* HomeNetworkTool.m */; };
+		AE52FE39BA5EDE560B60D7DB /* libPods-封装.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C70B5EF93A31DDE1D37B8962 /* libPods-封装.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,25 +36,21 @@
 		010468B8207DAB4100DC5BA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		010468BE207DAC4500DC5BA0 /* ZXGNetworkCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGNetworkCenter.h; sourceTree = "<group>"; };
 		010468BF207DAC4500DC5BA0 /* ZXGNetworkCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGNetworkCenter.m; sourceTree = "<group>"; };
-		010468C1207DACCF00DC5BA0 /* ZXGNetWorkCenterCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGNetWorkCenterCondition.h; sourceTree = "<group>"; };
-		010468C2207DACCF00DC5BA0 /* ZXGNetWorkCenterCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGNetWorkCenterCondition.m; sourceTree = "<group>"; };
 		010468C4207DAD0200DC5BA0 /* ZXGNetworkConstsDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGNetworkConstsDefine.h; sourceTree = "<group>"; };
-		010468C5207DB14100DC5BA0 /* ZXGNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGNetworkManager.h; sourceTree = "<group>"; };
-		010468C6207DB14100DC5BA0 /* ZXGNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGNetworkManager.m; sourceTree = "<group>"; };
 		010468C8207DB4D000DC5BA0 /* ZXGNetworkTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGNetworkTask.h; sourceTree = "<group>"; };
 		010468C9207DB4D000DC5BA0 /* ZXGNetworkTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGNetworkTask.m; sourceTree = "<group>"; };
-		010468CC207DC00C00DC5BA0 /* JZStringMacrocDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZStringMacrocDefine.h; sourceTree = "<group>"; };
-		010468CD207DC00C00DC5BA0 /* JZStringUitil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZStringUitil.h; sourceTree = "<group>"; };
-		010468CE207DC00C00DC5BA0 /* JZStringUitil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZStringUitil.m; sourceTree = "<group>"; };
 		010468D1207DD49E00DC5BA0 /* ZXGBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseModel.h; sourceTree = "<group>"; };
 		010468D2207DD49E00DC5BA0 /* ZXGBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseModel.m; sourceTree = "<group>"; };
 		010468D4207DD4D600DC5BA0 /* ZXGBaseDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseDataModel.h; sourceTree = "<group>"; };
 		010468D5207DD4D600DC5BA0 /* ZXGBaseDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseDataModel.m; sourceTree = "<group>"; };
 		010468D7207DD97E00DC5BA0 /* ZXGUploadFileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGUploadFileModel.h; sourceTree = "<group>"; };
 		010468D8207DD97E00DC5BA0 /* ZXGUploadFileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGUploadFileModel.m; sourceTree = "<group>"; };
-		5821E9B4A4F092C66D7A7DB9 /* Pods-网络封装.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网络封装.release.xcconfig"; path = "../Pods/Target Support Files/Pods-网络封装/Pods-网络封装.release.xcconfig"; sourceTree = "<group>"; };
-		5D5E01556013153D1ECFCA7B /* Pods-网络封装.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网络封装.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-网络封装/Pods-网络封装.debug.xcconfig"; sourceTree = "<group>"; };
+		01A46FF7208479D300740B98 /* HomeNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNetworkTool.h; sourceTree = "<group>"; };
+		01A46FF8208479D300740B98 /* HomeNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNetworkTool.m; sourceTree = "<group>"; };
+		4E87B4407ACEB0A7EDB32C6C /* Pods-封装.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装.release.xcconfig"; path = "../Pods/Target Support Files/Pods-封装/Pods-封装.release.xcconfig"; sourceTree = "<group>"; };
 		9BE3BCE0BA4DF734EFEBE69F /* libPods-网络封装.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网络封装.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0EE7474B78A77A50A5767E2 /* Pods-封装.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-封装/Pods-封装.debug.xcconfig"; sourceTree = "<group>"; };
+		C70B5EF93A31DDE1D37B8962 /* libPods-封装.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-封装.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE52FE39BA5EDE560B60D7DB /* libPods-封装.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				799F5CE02EAD7EF43B4E9636 /* libPods-网络封装.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				010468D0207DD48300DC5BA0 /* Model */,
-				010468CB207DC00C00DC5BA0 /* JZStringUitil */,
 				010468BD207DABD000DC5BA0 /* Net */,
 				010468A9207DAB4100DC5BA0 /* AppDelegate.h */,
 				010468AA207DAB4100DC5BA0 /* AppDelegate.m */,
+				01A46FF7208479D300740B98 /* HomeNetworkTool.h */,
+				01A46FF8208479D300740B98 /* HomeNetworkTool.m */,
 				010468AC207DAB4100DC5BA0 /* ViewController.h */,
 				010468AD207DAB4100DC5BA0 /* ViewController.m */,
 				010468AF207DAB4100DC5BA0 /* Main.storyboard */,
@@ -121,25 +116,11 @@
 			children = (
 				010468BE207DAC4500DC5BA0 /* ZXGNetworkCenter.h */,
 				010468BF207DAC4500DC5BA0 /* ZXGNetworkCenter.m */,
-				010468C1207DACCF00DC5BA0 /* ZXGNetWorkCenterCondition.h */,
-				010468C2207DACCF00DC5BA0 /* ZXGNetWorkCenterCondition.m */,
 				010468C4207DAD0200DC5BA0 /* ZXGNetworkConstsDefine.h */,
-				010468C5207DB14100DC5BA0 /* ZXGNetworkManager.h */,
-				010468C6207DB14100DC5BA0 /* ZXGNetworkManager.m */,
 				010468C8207DB4D000DC5BA0 /* ZXGNetworkTask.h */,
 				010468C9207DB4D000DC5BA0 /* ZXGNetworkTask.m */,
 			);
 			path = Net;
-			sourceTree = "<group>";
-		};
-		010468CB207DC00C00DC5BA0 /* JZStringUitil */ = {
-			isa = PBXGroup;
-			children = (
-				010468CC207DC00C00DC5BA0 /* JZStringMacrocDefine.h */,
-				010468CD207DC00C00DC5BA0 /* JZStringUitil.h */,
-				010468CE207DC00C00DC5BA0 /* JZStringUitil.m */,
-			);
-			path = JZStringUitil;
 			sourceTree = "<group>";
 		};
 		010468D0207DD48300DC5BA0 /* Model */ = {
@@ -159,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				9BE3BCE0BA4DF734EFEBE69F /* libPods-网络封装.a */,
+				C70B5EF93A31DDE1D37B8962 /* libPods-封装.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,8 +148,8 @@
 		6870B1D4F4700A43EF3F001A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D5E01556013153D1ECFCA7B /* Pods-网络封装.debug.xcconfig */,
-				5821E9B4A4F092C66D7A7DB9 /* Pods-网络封装.release.xcconfig */,
+				B0EE7474B78A77A50A5767E2 /* Pods-封装.debug.xcconfig */,
+				4E87B4407ACEB0A7EDB32C6C /* Pods-封装.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -179,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 010468A0207DAAF700DC5BA0 /* Build configuration list for PBXNativeTarget "封装" */;
 			buildPhases = (
+				A1E4CD86CF59C5459702E482 /* [CP] Check Pods Manifest.lock */,
 				01046886207DAAF700DC5BA0 /* Sources */,
 				01046887207DAAF700DC5BA0 /* Frameworks */,
 				01046888207DAAF700DC5BA0 /* Resources */,
+				5D6B20F6B3426EB758DD1319 /* [CP] Embed Pods Frameworks */,
+				736C9C4D284DC5D0CA93FEC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,12 +181,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 010468BC207DAB4100DC5BA0 /* Build configuration list for PBXNativeTarget "网络封装" */;
 			buildPhases = (
-				EB4D8BFE68E1EF797355FB24 /* [CP] Check Pods Manifest.lock */,
 				010468A3207DAB4100DC5BA0 /* Sources */,
 				010468A4207DAB4100DC5BA0 /* Frameworks */,
 				010468A5207DAB4100DC5BA0 /* Resources */,
-				8430FECC5269A549D5BF83C1 /* [CP] Embed Pods Frameworks */,
-				5EA456CA1E78EE32E9326F13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,22 +253,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5EA456CA1E78EE32E9326F13 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-网络封装/Pods-网络封装-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8430FECC5269A549D5BF83C1 /* [CP] Embed Pods Frameworks */ = {
+		5D6B20F6B3426EB758DD1319 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,10 +265,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-网络封装/Pods-网络封装-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-封装/Pods-封装-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB4D8BFE68E1EF797355FB24 /* [CP] Check Pods Manifest.lock */ = {
+		736C9C4D284DC5D0CA93FEC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-封装/Pods-封装-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1E4CD86CF59C5459702E482 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,7 +294,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-网络封装-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-封装-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -334,14 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				010468D3207DD49E00DC5BA0 /* ZXGBaseModel.m in Sources */,
-				010468C3207DACCF00DC5BA0 /* ZXGNetWorkCenterCondition.m in Sources */,
 				010468CA207DB4D000DC5BA0 /* ZXGNetworkTask.m in Sources */,
 				010468AE207DAB4100DC5BA0 /* ViewController.m in Sources */,
-				010468C7207DB14100DC5BA0 /* ZXGNetworkManager.m in Sources */,
-				010468CF207DC00C00DC5BA0 /* JZStringUitil.m in Sources */,
 				010468C0207DAC4500DC5BA0 /* ZXGNetworkCenter.m in Sources */,
 				010468B9207DAB4100DC5BA0 /* main.m in Sources */,
 				010468D9207DD97E00DC5BA0 /* ZXGUploadFileModel.m in Sources */,
+				01A46FF9208479D300740B98 /* HomeNetworkTool.m in Sources */,
 				010468D6207DD4D600DC5BA0 /* ZXGBaseDataModel.m in Sources */,
 				010468AB207DAB4100DC5BA0 /* AppDelegate.m in Sources */,
 			);
@@ -475,6 +455,7 @@
 		};
 		010468A1207DAAF700DC5BA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0EE7474B78A77A50A5767E2 /* Pods-封装.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +469,7 @@
 		};
 		010468A2207DAAF700DC5BA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E87B4407ACEB0A7EDB32C6C /* Pods-封装.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -501,7 +483,6 @@
 		};
 		010468BA207DAB4100DC5BA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D5E01556013153D1ECFCA7B /* Pods-网络封装.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -515,7 +496,6 @@
 		};
 		010468BB207DAB4100DC5BA0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5821E9B4A4F092C66D7A7DB9 /* Pods-网络封装.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,17 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZXGNetWorkCenterCondition.h"
-#import "ZXGNetworkManager.h"
+#import "ZXGNetworkTask.h"
+
 
 @interface ZXGNetworkCenter : NSObject
 
 + (ZXGNetworkCenter *)sharedNetworkCenter;
 
-
-- (NSString *)requestWithCondition:(ZXGNetWorkCenterCondition *)condition
-                  withSuccessBlock:(ZXGRequestSuccessBlock)success
-                     withFailBlock:(ZXGRequestFailureBlock)faild;
+- (void)addTask:(ZXGNetworkTask *)task;
 
 
 @end

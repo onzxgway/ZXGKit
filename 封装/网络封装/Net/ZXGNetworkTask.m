@@ -8,18 +8,21 @@
 
 #import "ZXGNetworkTask.h"
 
-@implementation ZXGNetworkTask
+@implementation ZXGNetworkTask 
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _taskType = ZXGNetworkTaskTypeJsonRequest;
+        
+        _requestType = ZXGNetworkRequestTypeOrange;
         _requestMethod = ZXGHttpRequestMethod_POST;
+        _reqDataType = ZXGNetworkRequestDataTypeJson;
+        _timeoutInterval = 30.0f;
+        
         _host = @"";
         _reqHeaders = [@{} mutableCopy];
 //        _taskIdentifier = [JZSystemUtils currentTimeStampString];
-        _timeoutInterval = 30.0f;
     }
     return self;
 }

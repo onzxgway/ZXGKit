@@ -49,18 +49,18 @@ typedef NS_ENUM (NSUInteger, ZXGHttpRequestMethod) {
 
 
 /**
- 网络请求任务类型
+ 网络请求数据类型
 
- - ZXGNetworkTaskTypeJsonRequest: json请求
- - ZXGNetworkTaskTypeXmlRequest: xml请求
- - ZXGNetworkTaskTypeUploadFile: 上传文件
- - ZXGNetworkTaskTypeDownloadFile: 下载文件
+ - ZXGNetworkRequestDataTypeJson: json请求
+ - ZXGNetworkRequestDataTypeXml: xml请求  区别是请求头 和 请求参数格式  不同
+ - ZXGNetworkDataTypeUploadFile: 上传文件
+ - ZXGNetworkDataTypeDownloadFile: 下载文件
  */
-typedef NS_ENUM(NSUInteger, ZXGNetworkTaskType){
-    ZXGNetworkTaskTypeJsonRequest,
-    ZXGNetworkTaskTypeXmlRequest,
-    ZXGNetworkTaskTypeUploadFile,
-    ZXGNetworkTaskTypeDownloadFile,
+typedef NS_ENUM(NSUInteger, ZXGNetworkRequestDataType){
+    ZXGNetworkRequestDataTypeJson,
+    ZXGNetworkRequestDataTypeXml,
+    ZXGNetworkRequestDataTypeUploadFile,
+    ZXGNetworkRequestDataTypeDownloadFile,
 };
 
 #endif /* ZXGNetworkConstsDefine_h */

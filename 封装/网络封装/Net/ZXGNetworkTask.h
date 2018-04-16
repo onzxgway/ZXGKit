@@ -20,23 +20,27 @@
 /** 网络请求方式 默认是 POST请求*/
 @property (nonatomic, assign) ZXGHttpRequestMethod requestMethod;
 
-/** 如果该host有值,就不使用BaseUrl*/
+/** 服务器地址 如果有值就不使用BaseUrl*/
 @property (nonatomic, copy  ) NSString *host;
 
-/** 接口 和上面的 interfaceType 二选一*/
+/** 接口路径 */ //和上面的 interfaceType 二选一
 @property (nonatomic, copy  ) NSString *interface;
-
-/** 网络请求任务类型*/
-@property (nonatomic, assign) ZXGNetworkTaskType taskType;
 
 /** 请求参数*/
 @property (nonatomic, strong) NSDictionary *reqParams;
 
-/** 携带数据 Uid,AccessToken*/
-@property (nonatomic, strong) NSMutableDictionary *reqHeaders;
-
 /** 超时时长 默认是30s*/
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
+
+/** 网络请求数据类型 默认是Json*/
+@property (nonatomic, assign) ZXGNetworkRequestDataType reqDataType;
+
+
+
+/** 携带数据 Uid,AccessToken*/
+@property (nonatomic, strong) NSMutableDictionary *reqHeaders;
+@property (nonatomic, strong) NSMutableArray<ZXGUploadFileModel *> *fileModels;
+
 
 /** 成功回调*/
 @property (nonatomic, copy  ) ZXGRequestSuccessBlock successBlock;
@@ -48,8 +52,7 @@
 @property (nonatomic, copy  ) ZXGRequestProgressBlock progressBlock;
 
 /** NSURLSessionDataTask*/
-@property (nonatomic, strong) NSURLSessionDataTask *task;
+@property (nonatomic, strong) NSURLSessionDataTask *sessionDataTask;
 
-@property (nonatomic, strong) NSMutableArray<ZXGUploadFileModel *> *fileModels;
 
 @end
