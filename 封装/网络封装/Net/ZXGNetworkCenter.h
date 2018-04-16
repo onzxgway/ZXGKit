@@ -16,5 +16,4 @@
 
 - (void)addTask:(ZXGNetworkTask *)task;
 
-
 @end
