@@ -3,15 +3,20 @@ platform :ios, '9.0'
 
 workspace 'ZXGKit.xcworkspace'
 
+def pods
+    #pod 'ZXGCommonsKit', :path => '../ZXGCommonsKit'
+    pod 'YYKit', '~> 1.0.9'
+    pod 'MJExtension'
+end
+
 # ruby语法
 # target数组 如果有新的target直接加入该数组
 fengzhuangArray = ['Packaging']
 fengzhuangArray.each do |t|
     target t do
         project '封装/封装.project'
+        pods
         pod 'AFNetworking', '~> 3.0'
-        pod 'YYKit', '~> 1.0.9'
-	pod 'MJExtension'
     end
 end
 
@@ -21,8 +26,7 @@ thirdArray.each do |t|
     target t do
     	project 'Third/Third.project'
         #pod 'FMDB'
-        #pod 'MJExtension'
-        pod 'YYKit', '~> 1.0.9'
+        pods
     end
 end
 
@@ -41,7 +45,7 @@ POArray = ['TablePerformanceOptimization']
 POArray.each do |t|
     target t do
     project 'PerformanceOptimization/PerformanceOptimization.project'
-        
+    
     end
 end
 
@@ -50,7 +54,7 @@ ProjectDemoArray = ['NetEase','JDShopCart','SinaWBFrameModel','SinaWBAutoCal','M
 ProjectDemoArray.each do |t|
     target t do
         project 'ProjectDemo/ProjectDemo.project'
-        pod 'YYKit', '~> 1.0.9'
+        pods
         pod 'SDWebImage'
         pod 'SVProgressHUD', '~> 2.2.2'
         pod 'MBProgressHUD', '~> 1.1.0'

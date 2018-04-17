@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01BE447C2085F8BE00121BED /* libZXGCommonsKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE447D2085F8BE00121BED /* libZXGCommonsKit.a */; };
 		01E3ADF920858AAE00151E1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3ADF820858AAE00151E1B /* AppDelegate.m */; };
 		01E3ADFC20858AAE00151E1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3ADFB20858AAE00151E1B /* ViewController.m */; };
 		01E3ADFF20858AAE00151E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E3ADFD20858AAE00151E1B /* Main.storyboard */; };
@@ -19,10 +20,14 @@
 		01E3AE2520858AFA00151E1B /* ZXGNetworkCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE1E20858AFA00151E1B /* ZXGNetworkCenter.m */; };
 		01E3AE2620858AFA00151E1B /* ZXGNetworkTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE2120858AFA00151E1B /* ZXGNetworkTask.m */; };
 		01E3AE2920858B1500151E1B /* HomeNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE2820858B1500151E1B /* HomeNetworkTool.m */; };
+		01E3AE312085D0CB00151E1B /* ZXGBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE302085D0CB00151E1B /* ZXGBaseTableViewController.m */; };
+		01E3AE342085D1B500151E1B /* ZXGBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE332085D1B500151E1B /* ZXGBaseTableView.m */; };
 		52E662819C155C29E54C327F /* libPods-Packaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01BE447D2085F8BE00121BED /* libZXGCommonsKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZXGCommonsKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		01BE447E2085F9F600121BED /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		01E3ADF520858AAE00151E1B /* Packaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Packaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E3ADF720858AAE00151E1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01E3ADF820858AAE00151E1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,6 +51,10 @@
 		01E3AE2120858AFA00151E1B /* ZXGNetworkTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGNetworkTask.m; sourceTree = "<group>"; };
 		01E3AE2720858B1400151E1B /* HomeNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNetworkTool.h; sourceTree = "<group>"; };
 		01E3AE2820858B1500151E1B /* HomeNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNetworkTool.m; sourceTree = "<group>"; };
+		01E3AE2F2085D0CB00151E1B /* ZXGBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseTableViewController.h; sourceTree = "<group>"; };
+		01E3AE302085D0CB00151E1B /* ZXGBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseTableViewController.m; sourceTree = "<group>"; };
+		01E3AE322085D1B500151E1B /* ZXGBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseTableView.h; sourceTree = "<group>"; };
+		01E3AE332085D1B500151E1B /* ZXGBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseTableView.m; sourceTree = "<group>"; };
 		27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Packaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E87B4407ACEB0A7EDB32C6C /* Pods-封装.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装.release.xcconfig"; path = "../Pods/Target Support Files/Pods-封装/Pods-封装.release.xcconfig"; sourceTree = "<group>"; };
 		9BE3BCE0BA4DF734EFEBE69F /* libPods-网络封装.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网络封装.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BE447C2085F8BE00121BED /* libZXGCommonsKit.a in Frameworks */,
 				52E662819C155C29E54C327F /* libPods-Packaging.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +98,7 @@
 		01E3ADF620858AAE00151E1B /* Packaging */ = {
 			isa = PBXGroup;
 			children = (
+				01E3AE2D2085D0AA00151E1B /* Controllers */,
 				01E3AE1520858AFA00151E1B /* Model */,
 				01E3AE1C20858AFA00151E1B /* Net */,
 				01E3ADF720858AAE00151E1B /* AppDelegate.h */,
@@ -101,6 +112,7 @@
 				01E3AE0220858AAE00151E1B /* LaunchScreen.storyboard */,
 				01E3AE0520858AAE00151E1B /* Info.plist */,
 				01E3AE0620858AAE00151E1B /* main.m */,
+				01BE447E2085F9F600121BED /* PrefixHeader.pch */,
 			);
 			path = Packaging;
 			sourceTree = "<group>";
@@ -130,9 +142,29 @@
 			path = Net;
 			sourceTree = "<group>";
 		};
+		01E3AE2D2085D0AA00151E1B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01E3AE2E2085D0AA00151E1B /* UITableViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		01E3AE2E2085D0AA00151E1B /* UITableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01E3AE2F2085D0CB00151E1B /* ZXGBaseTableViewController.h */,
+				01E3AE302085D0CB00151E1B /* ZXGBaseTableViewController.m */,
+				01E3AE322085D1B500151E1B /* ZXGBaseTableView.h */,
+				01E3AE332085D1B500151E1B /* ZXGBaseTableView.m */,
+			);
+			path = UITableViewController;
+			sourceTree = "<group>";
+		};
 		489AFC8005142EA0A6268AE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01BE447D2085F8BE00121BED /* libZXGCommonsKit.a */,
 				9BE3BCE0BA4DF734EFEBE69F /* libPods-网络封装.a */,
 				C70B5EF93A31DDE1D37B8962 /* libPods-封装.a */,
 				27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */,
@@ -276,10 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E3AE342085D1B500151E1B /* ZXGBaseTableView.m in Sources */,
 				01E3AE2220858AFA00151E1B /* ZXGBaseDataModel.m in Sources */,
 				01E3AE2620858AFA00151E1B /* ZXGNetworkTask.m in Sources */,
 				01E3AE2320858AFA00151E1B /* ZXGBaseModel.m in Sources */,
 				01E3AE2420858AFA00151E1B /* ZXGUploadFileModel.m in Sources */,
+				01E3AE312085D0CB00151E1B /* ZXGBaseTableViewController.m in Sources */,
 				01E3ADFC20858AAE00151E1B /* ViewController.m in Sources */,
 				01E3AE0720858AAE00151E1B /* main.m in Sources */,
 				01E3AE2920858B1500151E1B /* HomeNetworkTool.m in Sources */,
@@ -420,12 +454,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Packaging/PrefixHeader.pch;
 				INFOPLIST_FILE = Packaging/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxg.Packaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = /Users/zjhaha/Documents/ZXGKit/Categorys/ZXGCommonsKit;
 			};
 			name = Debug;
 		};
@@ -435,12 +472,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Packaging/PrefixHeader.pch;
 				INFOPLIST_FILE = Packaging/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxg.Packaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = /Users/zjhaha/Documents/ZXGKit/Categorys/ZXGCommonsKit;
 			};
 			name = Release;
 		};
