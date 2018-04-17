@@ -5,11 +5,13 @@ workspace 'ZXGKit.xcworkspace'
 
 # ruby语法
 # target数组 如果有新的target直接加入该数组
-fengzhuangArray = ['封装']
+fengzhuangArray = ['Packaging']
 fengzhuangArray.each do |t|
     target t do
         project '封装/封装.project'
         pod 'AFNetworking', '~> 3.0'
+        pod 'YYKit', '~> 1.0.9'
+	pod 'MJExtension'
     end
 end
 

@@ -18,8 +18,9 @@
     task.successBlock = successBlock;
     task.failureBlock = failureBlock;
     
-    return [[ZXGNetworkCenter sharedNetworkCenter] addTask:task];
+    [[ZXGNetworkCenter sharedNetworkCenter] addTask:task];
     
+    return task.taskIdentifier;
 }
 
 @end

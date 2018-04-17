@@ -22,9 +22,20 @@
         
         _host = @"";
         _reqHeaders = [@{} mutableCopy];
-//        _taskIdentifier = [JZSystemUtils currentTimeStampString];
+        _taskIdentifier = [self currentTimeStampString];
     }
     return self;
+}
+
+//获取当前时间戳
+- (NSString*)currentTimeStampString {
+    NSDate *now = [NSDate date];
+    NSTimeInterval timeInterval = [now timeIntervalSinceReferenceDate];
+    
+    NSString *timeString = [NSString stringWithFormat:@"%lf",timeInterval];
+    timeString = [timeString stringByReplacingOccurrencesOfString:@"." withString:@""];
+    
+    return timeString;
 }
 
 @end

@@ -8,6 +8,9 @@
 
 #import "ZXGNetworkCenter.h"
 
+static NSString * const CustomErrorDomain = @"com.networkTask.test";
+static NSUInteger const XDefultFailed = 1000;
+
 @implementation ZXGNetworkCenter {
     AFHTTPSessionManager *_manager;
 }
@@ -50,9 +53,10 @@
     // 1.开始请求
     
     //请求头 参数
+    id params = nil;
     if (networkTask.requestType == ZXGNetworkRequestDataTypeJson) {
         [self makeJsonReqHead:_manager];
-        id params = networkTask.reqParams;
+        params = networkTask.reqParams;
         NSLog(@"请求的参数:%@",params);
     }
     else if (networkTask.requestType == ZXGNetworkRequestDataTypeXml){
@@ -74,7 +78,7 @@
             networkTask.sessionDataTask = task;
             [self successWithTask:networkTask response:responseObject];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            networkTask.task = task;
+            networkTask.sessionDataTask = task;
             [self failureWithTask:networkTask error:error];
         }];
     }
@@ -85,7 +89,7 @@
             networkTask.sessionDataTask = task;
             [self successWithTask:networkTask response:responseObject];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            networkTask.task = task;
+            networkTask.sessionDataTask = task;
             [self failureWithTask:networkTask error:error];
         }];
     }
@@ -123,7 +127,7 @@
  */
 - (void)failureWithTask:(ZXGNetworkTask *)task error:(NSError *)error{
     
-    NSString * customString = [self failureWithError:error];
+    NSString * customString = nil; //[self failureWithError:error];
     
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:customString                                                                      forKey:NSLocalizedDescriptionKey];
     

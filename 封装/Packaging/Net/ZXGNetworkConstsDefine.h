@@ -10,7 +10,6 @@
 #define ZXGNetworkConstsDefine_h
 
 #import "AFNetworking.h"
-#import "JZStringMacrocDefine.h"
 #import <YYKit.h>
 #import "MJExtension.h"
 @class ZXGNetworkTask;

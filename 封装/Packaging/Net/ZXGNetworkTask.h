@@ -12,6 +12,7 @@
 
 @interface ZXGNetworkTask : NSObject
 
+/** 网络请求类型 唯一标识*/
 @property (nonatomic, copy  , readonly) NSString *taskIdentifier;
 
 /** 网络请求类型 默认是 橘子网络的请求*/
