@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04314E6F20862FD700A9D3EE /* 细微知识点 in Resources */ = {isa = PBXBuildFile; fileRef = 04314E6E20862FD700A9D3EE /* 细微知识点 */; };
 		04D7C8AD1F98A0CF008DD0B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C8AC1F98A0CF008DD0B1 /* main.m */; };
 		04D7C8B01F98A0CF008DD0B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C8AF1F98A0CF008DD0B1 /* AppDelegate.m */; };
 		04D7C8B31F98A0CF008DD0B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C8B21F98A0CF008DD0B1 /* ViewController.m */; };
@@ -265,6 +266,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04314E6E20862FD700A9D3EE /* 细微知识点 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细微知识点"; sourceTree = "<group>"; };
 		04D7C8A91F98A0CF008DD0B1 /* 死锁.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "死锁.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7C8AC1F98A0CF008DD0B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04D7C8AE1F98A0CF008DD0B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1056,6 +1058,7 @@
 				7199A2CE205F9D040051812D /* main.m */,
 				7199A2D3205FA0BB0051812D /* ZXGPerson.h */,
 				7199A2D4205FA0BB0051812D /* ZXGPerson.m */,
+				04314E6E20862FD700A9D3EE /* 细微知识点 */,
 			);
 			path = "零碎知识点";
 			sourceTree = "<group>";
@@ -2000,6 +2003,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7199A2CC205F9D040051812D /* LaunchScreen.storyboard in Resources */,
+				04314E6F20862FD700A9D3EE /* 细微知识点 in Resources */,
 				7199A2C9205F9D040051812D /* Assets.xcassets in Resources */,
 				7199A2C7205F9D040051812D /* Main.storyboard in Resources */,
 			);

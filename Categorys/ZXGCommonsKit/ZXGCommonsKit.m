@@ -8,6 +8,3 @@
 
 #import "ZXGCommonsKit.h"
 
-@implementation ZXGCommonsKit
-
-@end

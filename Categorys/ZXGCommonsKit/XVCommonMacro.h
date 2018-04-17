@@ -9,6 +9,9 @@
 #ifndef XVCommonMacro_h
 #define XVCommonMacro_h
 
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 //屏幕尺寸
 #define SCREEN_WIDTH  [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height

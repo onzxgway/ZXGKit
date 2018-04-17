@@ -6,9 +6,6 @@
 //  Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "XVCommonMacro.h"
 #import "XVColorMacros.h"
 
-@interface ZXGCommonsKit : NSObject
-
-@end

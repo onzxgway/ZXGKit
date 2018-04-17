@@ -56,8 +56,8 @@ ProjectDemoArray.each do |t|
         project 'ProjectDemo/ProjectDemo.project'
         pods
         pod 'SDWebImage'
-        pod 'SVProgressHUD', '~> 2.2.2'
-        pod 'MBProgressHUD', '~> 1.1.0'
+        pod 'SVProgressHUD'
+        pod 'MBProgressHUD'
         pod 'Masonry'
         pod 'MJRefresh'
     end

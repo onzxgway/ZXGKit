@@ -6,6 +6,7 @@
 //  Copyright (c) 2018年 xiaov. All rights reserved.
 //
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //判断是否是iPad
 #define ISIPAD() ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
