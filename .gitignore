@@ -53,3 +53,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+封装/封装.xcodeproj/project.pbxproj
+
+封装/Packaging/ViewController.m
