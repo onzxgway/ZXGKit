@@ -7,6 +7,7 @@ def pods
     #pod 'ZXGCommonsKit', :path => '../ZXGCommonsKit'
     pod 'YYKit', '~> 1.0.9'
     pod 'MJExtension'
+    pod 'Masonry'
 end
 
 # ruby语法
@@ -17,6 +18,7 @@ fengzhuangArray.each do |t|
         project '封装/封装.project'
         pods
         pod 'AFNetworking', '~> 3.0'
+        pod 'NJKWebViewProgress'
     end
 end
 
@@ -58,7 +60,6 @@ ProjectDemoArray.each do |t|
         pod 'SDWebImage'
         pod 'SVProgressHUD'
         pod 'MBProgressHUD'
-        pod 'Masonry'
         pod 'MJRefresh'
     end
 end

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZXGWebViewModel.h"
+#import "NJKWebViewProgress.h"
+#import "NJKWebViewProgressView.h"
 
-@interface ZXGWebViewController : UIViewController
+@interface ZXGWebViewController : UIViewController 
+
+/** model*/
+@property (nonatomic, strong) ZXGWebViewModel *contentModel;
 
 @end

@@ -8,4 +8,4 @@
 
 #import "XVCommonMacro.h"
 #import "XVColorMacros.h"
-
+#import "IOSDeviceMacro.h"
