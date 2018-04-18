@@ -4,7 +4,7 @@ platform :ios, '9.0'
 workspace 'ZXGKit.xcworkspace'
 
 def pods
-    #pod 'ZXGCommonsKit', :path => '../ZXGCommonsKit'
+    pod 'ZXGCommontKit', :path => '../ZXGCommontKit'
     pod 'YYKit', '~> 1.0.9'
     pod 'MJExtension'
     pod 'Masonry'
