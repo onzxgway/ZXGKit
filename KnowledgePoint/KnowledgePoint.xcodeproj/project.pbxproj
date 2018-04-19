@@ -302,6 +302,8 @@
 		04F7623F1F97590800F4EF74 /* 猴子测试UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "猴子测试UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F762411F97590800F4EF74 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		04F762431F97590800F4EF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FC2DEE33B1CF378585BC0A5 /* Pods-OCAndJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.release.xcconfig"; sourceTree = "<group>"; };
+		5A852473A6967D95F75F9B56 /* libPods-OCAndJS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCAndJS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		714026E1204FE94600D2993D /* SD知识点.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SD知识点.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		714026E3204FE94600D2993D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		714026E4204FE94600D2993D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 		71DDFFFD20479139002B54D8 /* UITextField+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+RACSignalSupport.h"; sourceTree = "<group>"; };
 		71DDFFFE20479139002B54D8 /* UIStepper+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStepper+RACSignalSupport.m"; sourceTree = "<group>"; };
 		71DDFFFF20479139002B54D8 /* RACSubscriptionScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubscriptionScheduler.m; sourceTree = "<group>"; };
+		AAD019E11DDC8478213A2CFD /* Pods-OCAndJS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.debug.xcconfig"; sourceTree = "<group>"; };
 		F006F6861F8B5B740061F231 /* Confuse.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Confuse.sh; sourceTree = "<group>"; };
 		F08D34801F8DC83600AE44F3 /* block循环引用 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "block循环引用"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08D34821F8DC83600AE44F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -909,6 +912,14 @@
 				04F762431F97590800F4EF74 /* Info.plist */,
 			);
 			path = "猴子测试UITests";
+			sourceTree = "<group>";
+		};
+		39248CB0E8D6D3D61B8936C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A852473A6967D95F75F9B56 /* libPods-OCAndJS.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		714026E2204FE94600D2993D /* SD知识点 */ = {
@@ -1387,6 +1398,15 @@
 			path = ReactiveObjC;
 			sourceTree = "<group>";
 		};
+		EFF871DCB3FA620DE2960126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAD019E11DDC8478213A2CFD /* Pods-OCAndJS.debug.xcconfig */,
+				4FC2DEE33B1CF378585BC0A5 /* Pods-OCAndJS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F08D34811F8DC83600AE44F3 /* block循环引用 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1416,6 +1436,8 @@
 				7199A2BE205F9D040051812D /* 零碎知识点 */,
 				7199A2DB2060999F0051812D /* UIWindow */,
 				F08E11E11F78DBD3005DE5F9 /* Products */,
+				EFF871DCB3FA620DE2960126 /* Pods */,
+				39248CB0E8D6D3D61B8936C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1811,6 +1833,7 @@
 		F08E11D81F78DBD3005DE5F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZXG;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "朱献国";
 				TargetAttributes = {

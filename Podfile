@@ -1,6 +1,6 @@
+# ruby语法
 # CocoaPods为多个 具备多个target的project  添加依赖库
 platform :ios, '9.0'
-
 workspace 'ZXGKit.xcworkspace'
 
 def pods
@@ -10,12 +10,11 @@ def pods
     pod 'Masonry'
 end
 
-# ruby语法
 # target数组 如果有新的target直接加入该数组
-fengzhuangArray = ['Packaging']
-fengzhuangArray.each do |t|
+KnowledgePointDemoArray = ['Packaging','OCAndJS']
+KnowledgePointDemoArray.each do |t|
     target t do
-        project '封装/封装.project'
+        project '封装/KnowledgePointDemo.project'
         pods
         pod 'AFNetworking', '~> 3.0'
         pod 'NJKWebViewProgress'
@@ -63,3 +62,15 @@ ProjectDemoArray.each do |t|
         pod 'MJRefresh'
     end
 end
+
+# KNPArray = ['OCAndJS']
+# KNPArray.each do |t|
+#     target t do
+#         project 'KnowledgePoint/KnowledgePoint.project'
+#         pods
+#         pod 'NJKWebViewProgress'
+#     end
+# end
+
+
+

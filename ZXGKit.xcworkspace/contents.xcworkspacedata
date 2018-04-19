@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:&#x5c01;&#x88c5;/&#x5c01;&#x88c5;.xcodeproj">
+      location = "group:/Users/zjhaha/Documents/ZXGKit/&#x5c01;&#x88c5;/KnowledgePointDemo.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Third/Third.xcodeproj">
