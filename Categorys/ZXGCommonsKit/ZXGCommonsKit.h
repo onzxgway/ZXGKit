@@ -6,6 +6,3 @@
 //  Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import "XVCommonMacro.h"
-#import "XVColorMacros.h"
-#import "IOSDeviceMacro.h"

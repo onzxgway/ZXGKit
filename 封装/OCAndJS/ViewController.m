@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ZXGWebViewController.h"
 #import "ZXGOCCallJSViewController.h"
+#import "ZXGJSCallOCWKWebViewController.h"
 
 @interface ViewController ()
 
@@ -28,11 +29,12 @@
 - (void)rightClicked {
     NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
     
-    ZXGWebViewController *ctrl = [[ZXGWebViewController alloc] init];
+//    ZXGWebViewController *ctrl = [[ZXGWebViewController alloc] init];
+    ZXGJSCallOCWKWebViewController *ctrl = [[ZXGJSCallOCWKWebViewController alloc] init];
     ZXGBaseWebViewModel *contentModel = [[ZXGBaseWebViewModel alloc] init];
     contentModel.pageTitle = @"小e头条";
     contentModel.type = ZXGWebPageDisplayTypeShare;
-    contentModel.articleLinkStr = path;
+    contentModel.articleLinkStr = @"https://www.baidu.com/";//path;
     ctrl.contentModel = contentModel;
     [self.navigationController pushViewController:ctrl animated:YES];
 }

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import "ZXGBaseWebViewController.h"
+#import "ZXGBaseUIWebViewController.h"
 
-@interface ZXGWebViewController : ZXGBaseWebViewController
+@interface ZXGWebViewController : ZXGBaseUIWebViewController
 
 @end

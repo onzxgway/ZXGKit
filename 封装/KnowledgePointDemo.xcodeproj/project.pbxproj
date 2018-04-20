@@ -32,6 +32,7 @@
 		01E3AE2920858B1500151E1B /* HomeNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE2820858B1500151E1B /* HomeNetworkTool.m */; };
 		01E3AE312085D0CB00151E1B /* ZXGBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE302085D0CB00151E1B /* ZXGBaseTableViewController.m */; };
 		01E3AE342085D1B500151E1B /* ZXGBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE332085D1B500151E1B /* ZXGBaseTableView.m */; };
+		01EDF5F12089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EDF5F02089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m */; };
 		07955D1C7552EC3A2A3805AC /* libPods-OCAndJS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B34BEC4A6DA2310E21CD59D2 /* libPods-OCAndJS.a */; };
 		52E662819C155C29E54C327F /* libPods-Packaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,8 @@
 		01E3AE302085D0CB00151E1B /* ZXGBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseTableViewController.m; sourceTree = "<group>"; };
 		01E3AE322085D1B500151E1B /* ZXGBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseTableView.h; sourceTree = "<group>"; };
 		01E3AE332085D1B500151E1B /* ZXGBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseTableView.m; sourceTree = "<group>"; };
+		01EDF5EF2089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGJSCallOCWKWebViewController.h; sourceTree = "<group>"; };
+		01EDF5F02089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGJSCallOCWKWebViewController.m; sourceTree = "<group>"; };
 		27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Packaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E87B4407ACEB0A7EDB32C6C /* Pods-封装.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装.release.xcconfig"; path = "../Pods/Target Support Files/Pods-封装/Pods-封装.release.xcconfig"; sourceTree = "<group>"; };
 		80A5062107C1C3D881C5C1B9 /* Pods-OCAndJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				018305112088991F009EC766 /* ZXGJSAndOCCallObject.m */,
 				018305122088991F009EC766 /* ZXGWebViewController.h */,
 				018305132088991F009EC766 /* ZXGWebViewController.m */,
+				01EDF5EF2089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.h */,
+				01EDF5F02089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m */,
 			);
 			path = JSCallOC;
 			sourceTree = "<group>";
@@ -415,9 +420,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -463,9 +471,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-Packaging/Pods-Packaging-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -483,6 +494,7 @@
 				0183051B20889978009EC766 /* ZXGOCCallJSViewController.m in Sources */,
 				018304EB2088897C009EC766 /* ViewController.m in Sources */,
 				018304F62088897C009EC766 /* main.m in Sources */,
+				01EDF5F12089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m in Sources */,
 				018305162088991F009EC766 /* ZXGJSAndOCCallObject.m in Sources */,
 				018304E82088897C009EC766 /* AppDelegate.m in Sources */,
 				018305172088991F009EC766 /* ZXGWebViewController.m in Sources */,

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01BE44AA2086071F00121BED /* iOSDeviceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE44A72086071F00121BED /* iOSDeviceConfig.m */; };
-		7133934320244C4E00FA225E /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7133934220244C4E00FA225E /* NSString+Common.m */; };
 		7141A3D420217ECB007CDD0F /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7141A3D320217ECB007CDD0F /* timg.gif */; };
 		714CC0942022EB5B0060340C /* bbb.png in Resources */ = {isa = PBXBuildFile; fileRef = 714CC0932022EB5B0060340C /* bbb.png */; };
 		7187619E2015EB1D00337C5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7187619D2015EB1D00337C5D /* AppDelegate.m */; };
@@ -16,7 +14,6 @@
 		718761A42015EB1D00337C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718761A22015EB1D00337C5D /* Main.storyboard */; };
 		718761A92015EB1D00337C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718761A72015EB1D00337C5D /* LaunchScreen.storyboard */; };
 		718761AC2015EB1D00337C5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 718761AB2015EB1D00337C5D /* main.m */; };
-		718761BE2015EDEE00337C5D /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 718761BD2015EDEE00337C5D /* UIImage+Common.m */; };
 		718761DD2015FB1E00337C5D /* aaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 718761DC2015FB1E00337C5D /* aaa.png */; };
 		71E30B3D2028074E000A8683 /* NSObject+CommonBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E30B3B2028074E000A8683 /* NSObject+CommonBlock.m */; };
 		F164998B521CBBE077AED014 /* libPods-Macro_And_Categorys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7A3F576BFBBB369BCB7C74 /* libPods-Macro_And_Categorys.a */; };
@@ -38,16 +35,9 @@
 		01BE44672085F77100121BED /* ZXGCommonsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGCommonsKit.h; sourceTree = "<group>"; };
 		01BE44682085F77100121BED /* ZXGCommonsKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGCommonsKit.m; sourceTree = "<group>"; };
 		01BE44722085F7A500121BED /* libZXGCommonsKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZXGCommonsKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		01BE44A52086071F00121BED /* XVCommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XVCommonMacro.h; sourceTree = "<group>"; };
-		01BE44A62086071F00121BED /* iOSDeviceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSDeviceConfig.h; sourceTree = "<group>"; };
-		01BE44A72086071F00121BED /* iOSDeviceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSDeviceConfig.m; sourceTree = "<group>"; };
-		01BE44A82086071F00121BED /* XVColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XVColorMacros.h; sourceTree = "<group>"; };
-		01BE44A92086071F00121BED /* IOSDeviceMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSDeviceMacro.h; sourceTree = "<group>"; };
 		0CF62F62B0F26E9AECB4B9D7 /* Pods-Macro_And_Categorys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macro_And_Categorys.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Macro_And_Categorys/Pods-Macro_And_Categorys.release.xcconfig"; sourceTree = "<group>"; };
 		2810849E03ED8C27EB2C4BA1 /* Pods-Macro_And_Categorys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macro_And_Categorys.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Macro_And_Categorys/Pods-Macro_And_Categorys.debug.xcconfig"; sourceTree = "<group>"; };
 		6B7A3F576BFBBB369BCB7C74 /* libPods-Macro_And_Categorys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Macro_And_Categorys.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7133934120244C4E00FA225E /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
-		7133934220244C4E00FA225E /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
 		7141A3D320217ECB007CDD0F /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
 		714CC0932022EB5B0060340C /* bbb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbb.png; sourceTree = "<group>"; };
 		718761992015EB1D00337C5D /* Macro_And_Categorys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macro_And_Categorys.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,8 +51,6 @@
 		718761AB2015EB1D00337C5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		718761B82015EC0F00337C5D /* practice.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = practice.pch; sourceTree = "<group>"; };
 		718761B92015EC5800337C5D /* categoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = categoryHeader.h; sourceTree = "<group>"; };
-		718761BC2015EDEE00337C5D /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
-		718761BD2015EDEE00337C5D /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
 		718761DC2015FB1E00337C5D /* aaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa.png; sourceTree = "<group>"; };
 		71E30B3B2028074E000A8683 /* NSObject+CommonBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CommonBlock.m"; sourceTree = "<group>"; };
 		71E30B3C2028074E000A8683 /* NSObject+CommonBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CommonBlock.h"; sourceTree = "<group>"; };
@@ -90,11 +78,6 @@
 		01BE44662085F77100121BED /* ZXGCommonsKit */ = {
 			isa = PBXGroup;
 			children = (
-				01BE44A62086071F00121BED /* iOSDeviceConfig.h */,
-				01BE44A72086071F00121BED /* iOSDeviceConfig.m */,
-				01BE44A92086071F00121BED /* IOSDeviceMacro.h */,
-				01BE44A82086071F00121BED /* XVColorMacros.h */,
-				01BE44A52086071F00121BED /* XVCommonMacro.h */,
 				01BE44672085F77100121BED /* ZXGCommonsKit.h */,
 				01BE44682085F77100121BED /* ZXGCommonsKit.m */,
 			);
@@ -155,21 +138,9 @@
 			children = (
 				71E30B3C2028074E000A8683 /* NSObject+CommonBlock.h */,
 				71E30B3B2028074E000A8683 /* NSObject+CommonBlock.m */,
-				718761BA2015EDDA00337C5D /* UIImage */,
-				7133934120244C4E00FA225E /* NSString+Common.h */,
-				7133934220244C4E00FA225E /* NSString+Common.m */,
 				718761B92015EC5800337C5D /* categoryHeader.h */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		718761BA2015EDDA00337C5D /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				718761BC2015EDEE00337C5D /* UIImage+Common.h */,
-				718761BD2015EDEE00337C5D /* UIImage+Common.m */,
-			);
-			path = UIImage;
 			sourceTree = "<group>";
 		};
 		9FE3D2883762E5BBF21AC04E /* Frameworks */ = {
@@ -330,7 +301,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BE44AA2086071F00121BED /* iOSDeviceConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,10 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				71E30B3D2028074E000A8683 /* NSObject+CommonBlock.m in Sources */,
-				718761BE2015EDEE00337C5D /* UIImage+Common.m in Sources */,
 				718761A12015EB1D00337C5D /* TableViewController.m in Sources */,
 				718761AC2015EB1D00337C5D /* main.m in Sources */,
-				7133934320244C4E00FA225E /* NSString+Common.m in Sources */,
 				7187619E2015EB1D00337C5D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
