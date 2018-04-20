@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01BE44AA2086071F00121BED /* iOSDeviceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE44A72086071F00121BED /* iOSDeviceConfig.m */; };
-		01E3AE2C20859C2E00151E1B /* UIViewController+Dealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE2B20859C2E00151E1B /* UIViewController+Dealloc.m */; };
 		7133934320244C4E00FA225E /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7133934220244C4E00FA225E /* NSString+Common.m */; };
 		7141A3D420217ECB007CDD0F /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7141A3D320217ECB007CDD0F /* timg.gif */; };
 		714CC0942022EB5B0060340C /* bbb.png in Resources */ = {isa = PBXBuildFile; fileRef = 714CC0932022EB5B0060340C /* bbb.png */; };
@@ -45,8 +44,6 @@
 		01BE44A72086071F00121BED /* iOSDeviceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSDeviceConfig.m; sourceTree = "<group>"; };
 		01BE44A82086071F00121BED /* XVColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XVColorMacros.h; sourceTree = "<group>"; };
 		01BE44A92086071F00121BED /* IOSDeviceMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSDeviceMacro.h; sourceTree = "<group>"; };
-		01E3AE2A20859C2E00151E1B /* UIViewController+Dealloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Dealloc.h"; sourceTree = "<group>"; };
-		01E3AE2B20859C2E00151E1B /* UIViewController+Dealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Dealloc.m"; sourceTree = "<group>"; };
 		0CF62F62B0F26E9AECB4B9D7 /* Pods-Macro_And_Categorys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macro_And_Categorys.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Macro_And_Categorys/Pods-Macro_And_Categorys.release.xcconfig"; sourceTree = "<group>"; };
 		2810849E03ED8C27EB2C4BA1 /* Pods-Macro_And_Categorys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macro_And_Categorys.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Macro_And_Categorys/Pods-Macro_And_Categorys.debug.xcconfig"; sourceTree = "<group>"; };
 		6B7A3F576BFBBB369BCB7C74 /* libPods-Macro_And_Categorys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Macro_And_Categorys.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,8 +163,6 @@
 				7133934120244C4E00FA225E /* NSString+Common.h */,
 				7133934220244C4E00FA225E /* NSString+Common.m */,
 				718761B92015EC5800337C5D /* categoryHeader.h */,
-				01E3AE2A20859C2E00151E1B /* UIViewController+Dealloc.h */,
-				01E3AE2B20859C2E00151E1B /* UIViewController+Dealloc.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -360,7 +355,6 @@
 				718761D52015EE9900337C5D /* UIView+Extension.m in Sources */,
 				718761BE2015EDEE00337C5D /* UIImage+Common.m in Sources */,
 				718761A12015EB1D00337C5D /* TableViewController.m in Sources */,
-				01E3AE2C20859C2E00151E1B /* UIViewController+Dealloc.m in Sources */,
 				718761AC2015EB1D00337C5D /* main.m in Sources */,
 				7133934320244C4E00FA225E /* NSString+Common.m in Sources */,
 				7187619E2015EB1D00337C5D /* AppDelegate.m in Sources */,
