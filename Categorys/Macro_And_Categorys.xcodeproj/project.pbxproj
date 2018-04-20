@@ -17,7 +17,6 @@
 		718761A92015EB1D00337C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718761A72015EB1D00337C5D /* LaunchScreen.storyboard */; };
 		718761AC2015EB1D00337C5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 718761AB2015EB1D00337C5D /* main.m */; };
 		718761BE2015EDEE00337C5D /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 718761BD2015EDEE00337C5D /* UIImage+Common.m */; };
-		718761D52015EE9900337C5D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 718761D42015EE9900337C5D /* UIView+Extension.m */; };
 		718761DD2015FB1E00337C5D /* aaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 718761DC2015FB1E00337C5D /* aaa.png */; };
 		71E30B3D2028074E000A8683 /* NSObject+CommonBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E30B3B2028074E000A8683 /* NSObject+CommonBlock.m */; };
 		F164998B521CBBE077AED014 /* libPods-Macro_And_Categorys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7A3F576BFBBB369BCB7C74 /* libPods-Macro_And_Categorys.a */; };
@@ -64,8 +63,6 @@
 		718761B92015EC5800337C5D /* categoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = categoryHeader.h; sourceTree = "<group>"; };
 		718761BC2015EDEE00337C5D /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
 		718761BD2015EDEE00337C5D /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
-		718761D32015EE9900337C5D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		718761D42015EE9900337C5D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		718761DC2015FB1E00337C5D /* aaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa.png; sourceTree = "<group>"; };
 		71E30B3B2028074E000A8683 /* NSObject+CommonBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CommonBlock.m"; sourceTree = "<group>"; };
 		71E30B3C2028074E000A8683 /* NSObject+CommonBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CommonBlock.h"; sourceTree = "<group>"; };
@@ -159,7 +156,6 @@
 				71E30B3C2028074E000A8683 /* NSObject+CommonBlock.h */,
 				71E30B3B2028074E000A8683 /* NSObject+CommonBlock.m */,
 				718761BA2015EDDA00337C5D /* UIImage */,
-				718761BB2015EDDA00337C5D /* UIViews */,
 				7133934120244C4E00FA225E /* NSString+Common.h */,
 				7133934220244C4E00FA225E /* NSString+Common.m */,
 				718761B92015EC5800337C5D /* categoryHeader.h */,
@@ -174,15 +170,6 @@
 				718761BD2015EDEE00337C5D /* UIImage+Common.m */,
 			);
 			path = UIImage;
-			sourceTree = "<group>";
-		};
-		718761BB2015EDDA00337C5D /* UIViews */ = {
-			isa = PBXGroup;
-			children = (
-				718761D32015EE9900337C5D /* UIView+Extension.h */,
-				718761D42015EE9900337C5D /* UIView+Extension.m */,
-			);
-			path = UIViews;
 			sourceTree = "<group>";
 		};
 		9FE3D2883762E5BBF21AC04E /* Frameworks */ = {
@@ -352,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				71E30B3D2028074E000A8683 /* NSObject+CommonBlock.m in Sources */,
-				718761D52015EE9900337C5D /* UIView+Extension.m in Sources */,
 				718761BE2015EDEE00337C5D /* UIImage+Common.m in Sources */,
 				718761A12015EB1D00337C5D /* TableViewController.m in Sources */,
 				718761AC2015EB1D00337C5D /* main.m in Sources */,
