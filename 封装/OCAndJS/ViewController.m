@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "ZXGWebViewController.h"
 #import "ZXGOCCallJSViewController.h"
-#import "ZXGCommonKit.h"
 
 @interface ViewController ()
 
