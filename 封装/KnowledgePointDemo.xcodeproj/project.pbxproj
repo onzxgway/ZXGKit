@@ -494,7 +494,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/ZXGCommontKit.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -545,7 +545,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Packaging/Pods-Packaging-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/ZXGCommontKit.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
