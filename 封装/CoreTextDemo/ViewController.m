@@ -7,16 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "CTDisplayView.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet CTDisplayView *displayView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+//    [self.displayView setLayerCornerRadius:16 andBorder:kRedColor width:1];
+//    [self.displayView setLayerShadow:kBlueColor offset:CGSizeMake(16, 16) radius:6];
 }
 
 

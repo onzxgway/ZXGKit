@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/zjhaha/Documents/ZXGKit/封装/KnowledgePointDemo.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Third/Third.xcodeproj">
    </FileRef>
    <FileRef
@@ -26,6 +23,6 @@
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:封装/KnowledgePointDemo.xcodeproj">
+      location = "group:&#x5c01;&#x88c5;/KnowledgePointDemo.xcodeproj">
    </FileRef>
 </Workspace>

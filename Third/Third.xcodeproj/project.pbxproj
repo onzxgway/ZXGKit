@@ -532,7 +532,6 @@
 				019129082074DC4C0054912E /* Sources */,
 				019129092074DC4C0054912E /* Frameworks */,
 				0191290A2074DC4C0054912E /* Resources */,
-				D1763E0B406E0A9B7555CECB /* [CP] Embed Pods Frameworks */,
 				EDB16D6CED6453A698484210 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -569,7 +568,6 @@
 				71764100204E6A33006D3A18 /* Sources */,
 				71764101204E6A33006D3A18 /* Frameworks */,
 				71764102204E6A33006D3A18 /* Resources */,
-				DA0FF5A34D4AB2B1D7A4EEBE /* [CP] Embed Pods Frameworks */,
 				C625683C01BCF1EEF8450FCF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -589,7 +587,6 @@
 				71DDFCF620468F90002B54D8 /* Sources */,
 				71DDFCF720468F90002B54D8 /* Frameworks */,
 				71DDFCF820468F90002B54D8 /* Resources */,
-				945907145FFF58BA85EB334E /* [CP] Embed Pods Frameworks */,
 				EAD29C9E7077B94CE006E868 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -733,21 +730,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		945907145FFF58BA85EB334E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A541AA9E76E5FCD0979148E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -773,45 +755,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/ZXGCommontKit.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D1763E0B406E0A9B7555CECB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DA0FF5A34D4AB2B1D7A4EEBE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EAD29C9E7077B94CE006E868 /* [CP] Copy Pods Resources */ = {
@@ -821,11 +773,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/ZXGCommontKit.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -839,11 +791,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/ZXGCommontKit.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
