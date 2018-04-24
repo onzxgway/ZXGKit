@@ -755,11 +755,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-resources.sh",
-<<<<<<< HEAD
 				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
-=======
-				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
->>>>>>> origin/master
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -777,11 +773,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-resources.sh",
-<<<<<<< HEAD
 				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
-=======
-				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
->>>>>>> origin/master
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
