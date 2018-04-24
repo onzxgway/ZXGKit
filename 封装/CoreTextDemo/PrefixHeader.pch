@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  CoreTextDemo
+//
+//  Created by 朱献国 on 2018/4/23.
+//  Copyright © 2018 朱献国. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "ZXGCommonKit.h"
+
+#endif /* PrefixHeader_pch */
