@@ -1555,6 +1555,7 @@
 				01B3F7FD207F037200F64113 /* Frameworks */,
 				01B3F7FE207F037200F64113 /* Resources */,
 				29793DB9951DEF0354A5CEAE /* [CP] Copy Pods Resources */,
+				59AD9CE61127B2A10CCC4155 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1591,6 +1592,7 @@
 				04234E521F8BA622001133ED /* Frameworks */,
 				04234E531F8BA622001133ED /* Resources */,
 				A73ABD18CEECAA04BA3AAE6F /* [CP] Copy Pods Resources */,
+				B6E4F9BDC5419D22C85B8659 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1610,6 +1612,7 @@
 				04234E9A1F8BA98C001133ED /* Frameworks */,
 				04234E9B1F8BA98C001133ED /* Resources */,
 				0149163463B7A3CDEFFF56F3 /* [CP] Copy Pods Resources */,
+				B1C959A08C21AEF61706FBC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1629,6 +1632,7 @@
 				04234FCE1F8BB426001133ED /* Frameworks */,
 				04234FCF1F8BB426001133ED /* Resources */,
 				FF38A0441FA239481119F2EE /* [CP] Copy Pods Resources */,
+				5CDE7C087EEE6B5DA40058FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1648,6 +1652,7 @@
 				0423507C1F8BB540001133ED /* Frameworks */,
 				0423507D1F8BB540001133ED /* Resources */,
 				4A643EAFB7A8A4AACAE88B3B /* [CP] Copy Pods Resources */,
+				26AA53800BD3910F27A5B500 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1841,13 +1846,26 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26AA53800BD3910F27A5B500 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBAutoCal/Pods-SinaWBAutoCal-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		29793DB9951DEF0354A5CEAE /* [CP] Copy Pods Resources */ = {
@@ -1863,9 +1881,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1885,9 +1901,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1928,6 +1942,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59AD9CE61127B2A10CCC4155 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Moments/Pods-Moments-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CDE7C087EEE6B5DA40058FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBFrameModel/Pods-SinaWBFrameModel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6D7921A715941863BAF6193C /* [CP] Check Pods Manifest.lock */ = {
@@ -1997,13 +2041,41 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-NetEase/Pods-NetEase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C959A08C21AEF61706FBC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6E4F9BDC5419D22C85B8659 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-NetEase/Pods-NetEase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF38A0441FA239481119F2EE /* [CP] Copy Pods Resources */ = {
@@ -2019,9 +2091,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
