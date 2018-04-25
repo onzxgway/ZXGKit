@@ -12,7 +12,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "XVColorMacros.h"
-#import "YYKit.h"
+#import "ZXGCommonKit.h"
 
 #endif /* pchFile_pch */

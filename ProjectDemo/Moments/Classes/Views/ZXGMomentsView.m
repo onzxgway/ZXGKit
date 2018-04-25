@@ -29,6 +29,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         [self setupUI];
+        
     }
     return self;
 }

@@ -51,7 +51,7 @@ POArray.each do |t|
 end
 
 # ProjectDemo.project
-ProjectDemoArray = ['NetEase','JDShopCart','SinaWBFrameModel','SinaWBAutoCal','Moments']
+ProjectDemoArray = ['NetEase','JDShopCart','SinaWBFrameModel','SinaWBAutoCal','Moments','SinaWeibo']
 ProjectDemoArray.each do |t|
     target t do
         project 'ProjectDemo/ProjectDemo.project'

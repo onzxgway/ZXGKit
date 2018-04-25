@@ -30,7 +30,7 @@
     [super viewDidLoad];
 
 //    [self.view addSubview:_tableView];
-    self.view.backgroundColor = kWBCellBackgroundColor;
+//    self.view.backgroundColor = kWBCellBackgroundColor;
 
 
     //字典转模型放在后台线程

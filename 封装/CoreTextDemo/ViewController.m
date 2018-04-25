@@ -70,7 +70,6 @@
                                                  name:CTDisplayViewImagePressedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(linkPressed:)
                                                  name:CTDisplayViewLinkPressedNotification object:nil];
-    
 }
 
 - (void)imagePressed:(NSNotification*)notification {
