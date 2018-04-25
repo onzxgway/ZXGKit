@@ -26,6 +26,14 @@
 		0183051B20889978009EC766 /* ZXGOCCallJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183051A20889978009EC766 /* ZXGOCCallJSViewController.m */; };
 		0183051D20889A3A009EC766 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 0183051C20889A3A009EC766 /* test.js */; };
 		01BE447C2085F8BE00121BED /* libZXGCommonsKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE447D2085F8BE00121BED /* libZXGCommonsKit.a */; };
+		01DC45DB20902D55006A26A0 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = 01DC45DA20902D55006A26A0 /* content.json */; };
+		01DC45DE20902FD2006A26A0 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DC45DD20902FD2006A26A0 /* CoreTextImageData.m */; };
+		01DC45E1209031A0006A26A0 /* CoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DC45E0209031A0006A26A0 /* CoreTextLinkData.m */; };
+		01DC45E820907B4B006A26A0 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DC45E720907B4B006A26A0 /* CoreTextUtils.m */; };
+		01DC45EF20907D9D006A26A0 /* WebContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DC45E920907D9C006A26A0 /* WebContentViewController.xib */; };
+		01DC45F020907D9D006A26A0 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DC45EA20907D9C006A26A0 /* ImageViewController.xib */; };
+		01DC45F120907D9D006A26A0 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DC45EB20907D9C006A26A0 /* ImageViewController.m */; };
+		01DC45F220907D9D006A26A0 /* WebContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DC45EE20907D9D006A26A0 /* WebContentViewController.m */; };
 		01E3ADF920858AAE00151E1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3ADF820858AAE00151E1B /* AppDelegate.m */; };
 		01E3ADFC20858AAE00151E1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3ADFB20858AAE00151E1B /* ViewController.m */; };
 		01E3AE0120858AAE00151E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E3AE0020858AAE00151E1B /* Assets.xcassets */; };
@@ -82,6 +90,19 @@
 		0183051E2088A0A2009EC766 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		01BE447D2085F8BE00121BED /* libZXGCommonsKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZXGCommonsKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE447E2085F9F600121BED /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		01DC45DA20902D55006A26A0 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
+		01DC45DC20902FD2006A26A0 /* CoreTextImageData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextImageData.h; sourceTree = "<group>"; };
+		01DC45DD20902FD2006A26A0 /* CoreTextImageData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextImageData.m; sourceTree = "<group>"; };
+		01DC45DF209031A0006A26A0 /* CoreTextLinkData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextLinkData.h; sourceTree = "<group>"; };
+		01DC45E0209031A0006A26A0 /* CoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextLinkData.m; sourceTree = "<group>"; };
+		01DC45E620907B4B006A26A0 /* CoreTextUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
+		01DC45E720907B4B006A26A0 /* CoreTextUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
+		01DC45E920907D9C006A26A0 /* WebContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebContentViewController.xib; sourceTree = "<group>"; };
+		01DC45EA20907D9C006A26A0 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
+		01DC45EB20907D9C006A26A0 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		01DC45EC20907D9C006A26A0 /* WebContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebContentViewController.h; sourceTree = "<group>"; };
+		01DC45ED20907D9C006A26A0 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		01DC45EE20907D9D006A26A0 /* WebContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebContentViewController.m; sourceTree = "<group>"; };
 		01E3ADF520858AAE00151E1B /* Packaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Packaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E3ADF720858AAE00151E1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01E3ADF820858AAE00151E1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,6 +213,12 @@
 				0165F164208DB91100BCA095 /* AppDelegate.m */,
 				0165F166208DB91100BCA095 /* ViewController.h */,
 				0165F167208DB91100BCA095 /* ViewController.m */,
+				01DC45ED20907D9C006A26A0 /* ImageViewController.h */,
+				01DC45EB20907D9C006A26A0 /* ImageViewController.m */,
+				01DC45EA20907D9C006A26A0 /* ImageViewController.xib */,
+				01DC45EC20907D9C006A26A0 /* WebContentViewController.h */,
+				01DC45EE20907D9D006A26A0 /* WebContentViewController.m */,
+				01DC45E920907D9C006A26A0 /* WebContentViewController.xib */,
 				0165F169208DB91100BCA095 /* Main.storyboard */,
 				0165F16C208DB91100BCA095 /* Assets.xcassets */,
 				0165F16E208DB91100BCA095 /* LaunchScreen.storyboard */,
@@ -314,6 +341,7 @@
 		01EBA3BA208EE32600B92A42 /* 排版引擎框架 */ = {
 			isa = PBXGroup;
 			children = (
+				01DC45DA20902D55006A26A0 /* content.json */,
 				01EBA3C4208EF59800B92A42 /* CTDisplayView.h */,
 				01EBA3C5208EF59800B92A42 /* CTDisplayView.m */,
 				01EBA3BB208EF4CA00B92A42 /* CTFrameParserConfig.h */,
@@ -322,6 +350,12 @@
 				01EBA3BF208EF54700B92A42 /* CTFrameParser.m */,
 				01EBA3C1208EF56700B92A42 /* CoreTextData.h */,
 				01EBA3C2208EF56700B92A42 /* CoreTextData.m */,
+				01DC45DC20902FD2006A26A0 /* CoreTextImageData.h */,
+				01DC45DD20902FD2006A26A0 /* CoreTextImageData.m */,
+				01DC45DF209031A0006A26A0 /* CoreTextLinkData.h */,
+				01DC45E0209031A0006A26A0 /* CoreTextLinkData.m */,
+				01DC45E620907B4B006A26A0 /* CoreTextUtils.h */,
+				01DC45E720907B4B006A26A0 /* CoreTextUtils.m */,
 			);
 			path = "排版引擎框架";
 			sourceTree = "<group>";
@@ -466,9 +500,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DC45EF20907D9D006A26A0 /* WebContentViewController.xib in Resources */,
 				0165F170208DB91100BCA095 /* LaunchScreen.storyboard in Resources */,
 				0165F16D208DB91100BCA095 /* Assets.xcassets in Resources */,
 				0165F16B208DB91100BCA095 /* Main.storyboard in Resources */,
+				01DC45F020907D9D006A26A0 /* ImageViewController.xib in Resources */,
+				01DC45DB20902D55006A26A0 /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,10 +693,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0165F168208DB91100BCA095 /* ViewController.m in Sources */,
+				01DC45F220907D9D006A26A0 /* WebContentViewController.m in Sources */,
+				01DC45DE20902FD2006A26A0 /* CoreTextImageData.m in Sources */,
+				01DC45E1209031A0006A26A0 /* CoreTextLinkData.m in Sources */,
 				0165F173208DB91100BCA095 /* main.m in Sources */,
+				01DC45F120907D9D006A26A0 /* ImageViewController.m in Sources */,
 				01EBA3C3208EF56700B92A42 /* CoreTextData.m in Sources */,
 				01EBA3BD208EF4CA00B92A42 /* CTFrameParserConfig.m in Sources */,
 				0165F165208DB91100BCA095 /* AppDelegate.m in Sources */,
+				01DC45E820907B4B006A26A0 /* CoreTextUtils.m in Sources */,
 				01EBA3C6208EF59800B92A42 /* CTDisplayView.m in Sources */,
 				01EBA3C0208EF54700B92A42 /* CTFrameParser.m in Sources */,
 			);

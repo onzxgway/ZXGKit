@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" id="oei-dr-Zcy" customClass="CTDisplayView">
-                                <rect key="frame" x="16" y="38" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48615737399999998" green="1" blue="0.99971027619999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>

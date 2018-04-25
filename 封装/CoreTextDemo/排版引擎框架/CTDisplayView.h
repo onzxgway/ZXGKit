@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CoreTextData.h"
 
+extern NSString *const CTDisplayViewImagePressedNotification;
+extern NSString *const CTDisplayViewLinkPressedNotification;
+
 @interface CTDisplayView : UIView
 
 @property (strong, nonatomic) CoreTextData * data;

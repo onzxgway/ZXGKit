@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import "CTDisplayView.h"
 #import "CTFrameParser.h"
+#import "CoreTextImageData.h"
+#import "CoreTextLinkData.h"
+#import "ImageViewController.h"
+#import "WebContentViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet CTDisplayView *displayView;
@@ -18,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupNotifications];
 //    [self.displayView setLayerCornerRadius:16 andBorder:kRedColor width:1];
 //    [self.displayView setLayerShadow:kBlueColor offset:CGSizeMake(16, 16) radius:6];
     
@@ -31,6 +37,7 @@
     self.displayView.backgroundColor = [UIColor yellowColor];
     */
     
+    /**
     CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
     config.width = self.displayView.width;
     config.textColor = kRedColor;
@@ -47,10 +54,42 @@
     self.displayView.data = data;
     self.displayView.height = data.height;
     self.displayView.backgroundColor = [UIColor yellowColor];
+    */
+    
+    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
+    config.width = self.displayView.width;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"json"];
+    CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
+    self.displayView.data = data;
+    self.displayView.height = data.height;
+    self.displayView.backgroundColor = [UIColor yellowColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)setupNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imagePressed:)
+                                                 name:CTDisplayViewImagePressedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(linkPressed:)
+                                                 name:CTDisplayViewLinkPressedNotification object:nil];
+    
+}
+
+- (void)imagePressed:(NSNotification*)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    CoreTextImageData *imageData = userInfo[@"imageData"];
+    
+    ImageViewController *vc = [[ImageViewController alloc] init];
+    vc.image = [UIImage imageNamed:imageData.name];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)linkPressed:(NSNotification*)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    CoreTextLinkData *linkData = userInfo[@"linkData"];
+    
+    WebContentViewController *vc = [[WebContentViewController alloc] init];
+    vc.urlTitle = linkData.title;
+    vc.url = linkData.url;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 
