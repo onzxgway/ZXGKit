@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010DABCD2091A3F3004385A8 /* WBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010DABCC2091A3F3004385A8 /* WBModel.m */; };
+		010DABD42091B8B4004385A8 /* WBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010DABD32091B8B4004385A8 /* WBStatusCell.m */; };
 		015BE0B621EF66A968F3253B /* libPods-NetEase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388C7776F65E66391123F2DD /* libPods-NetEase.a */; };
 		01B3F804207F037200F64113 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F803207F037200F64113 /* AppDelegate.m */; };
 		01B3F80C207F037200F64113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B3F80B207F037200F64113 /* Assets.xcassets */; };
@@ -160,15 +162,17 @@
 		7169020F206232780094BA7D /* weibo_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 71690207206232780094BA7D /* weibo_1.json */; };
 		71690210206232780094BA7D /* weibo_0.json in Resources */ = {isa = PBXBuildFile; fileRef = 71690208206232780094BA7D /* weibo_0.json */; };
 		71690216206233100094BA7D /* WBStatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71690215206233100094BA7D /* WBStatusController.m */; };
-		716902192062346D0094BA7D /* ZXGTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 716902182062346D0094BA7D /* ZXGTableView.m */; };
 		7169021C206237050094BA7D /* WBStatusLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7169021B206237050094BA7D /* WBStatusLayout.m */; };
-		71690221206239030094BA7D /* WBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71690220206239030094BA7D /* WBModel.m */; };
 		7F2A56997E1016345DDB52CE /* libPods-JDShopCart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CB2DA698FF8D9E7DC2EFB7 /* libPods-JDShopCart.a */; };
 		B5E81446C9CAB44692DCE484 /* libPods-SinaWeibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5B4C7621DD058EE09B51D9 /* libPods-SinaWeibo.a */; };
 		B8F013137D1B75407E5C0DDF /* libPods-Moments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4187232567AAB48CA3EE908 /* libPods-Moments.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010DABCB2091A3F3004385A8 /* WBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBModel.h; sourceTree = "<group>"; };
+		010DABCC2091A3F3004385A8 /* WBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBModel.m; sourceTree = "<group>"; };
+		010DABD22091B8B4004385A8 /* WBStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStatusCell.h; sourceTree = "<group>"; };
+		010DABD32091B8B4004385A8 /* WBStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStatusCell.m; sourceTree = "<group>"; };
 		01B3F800207F037200F64113 /* Moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3F802207F037200F64113 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01B3F803207F037200F64113 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -417,13 +421,9 @@
 		71690208206232780094BA7D /* weibo_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_0.json; sourceTree = "<group>"; };
 		71690214206233100094BA7D /* WBStatusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStatusController.h; sourceTree = "<group>"; };
 		71690215206233100094BA7D /* WBStatusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStatusController.m; sourceTree = "<group>"; };
-		716902172062346D0094BA7D /* ZXGTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGTableView.h; sourceTree = "<group>"; };
-		716902182062346D0094BA7D /* ZXGTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGTableView.m; sourceTree = "<group>"; };
 		7169021A206237050094BA7D /* WBStatusLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStatusLayout.h; sourceTree = "<group>"; };
 		7169021B206237050094BA7D /* WBStatusLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStatusLayout.m; sourceTree = "<group>"; };
 		7169021E206237D80094BA7D /* pchFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pchFile.pch; sourceTree = "<group>"; };
-		7169021F206239030094BA7D /* WBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBModel.h; sourceTree = "<group>"; };
-		71690220206239030094BA7D /* WBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBModel.m; sourceTree = "<group>"; };
 		73748228413837CEDFA7D948 /* Pods-JDShopCart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDShopCart.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart.debug.xcconfig"; sourceTree = "<group>"; };
 		84DF843DF16E8304B1EE82CE /* Pods-SinaWBFrameModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWBFrameModel.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SinaWBFrameModel/Pods-SinaWBFrameModel.debug.xcconfig"; sourceTree = "<group>"; };
 		8B27ADAD6B5D8808D9CCFA42 /* Pods-SinaWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.release.xcconfig"; sourceTree = "<group>"; };
@@ -997,6 +997,8 @@
 		71690211206232F60094BA7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				010DABCB2091A3F3004385A8 /* WBModel.h */,
+				010DABCC2091A3F3004385A8 /* WBModel.m */,
 				7169021A206237050094BA7D /* WBStatusLayout.h */,
 				7169021B206237050094BA7D /* WBStatusLayout.m */,
 			);
@@ -1006,8 +1008,8 @@
 		71690212206232F60094BA7D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				716902172062346D0094BA7D /* ZXGTableView.h */,
-				716902182062346D0094BA7D /* ZXGTableView.m */,
+				010DABD22091B8B4004385A8 /* WBStatusCell.h */,
+				010DABD32091B8B4004385A8 /* WBStatusCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1017,8 +1019,6 @@
 			children = (
 				71690214206233100094BA7D /* WBStatusController.h */,
 				71690215206233100094BA7D /* WBStatusController.m */,
-				7169021F206239030094BA7D /* WBModel.h */,
-				71690220206239030094BA7D /* WBModel.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1809,12 +1809,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71690216206233100094BA7D /* WBStatusController.m in Sources */,
-				716902192062346D0094BA7D /* ZXGTableView.m in Sources */,
 				716901F12062322D0094BA7D /* ViewController.m in Sources */,
-				71690221206239030094BA7D /* WBModel.m in Sources */,
+				010DABCD2091A3F3004385A8 /* WBModel.m in Sources */,
 				716901FC2062322D0094BA7D /* main.m in Sources */,
 				7169021C206237050094BA7D /* WBStatusLayout.m in Sources */,
 				716901EE2062322C0094BA7D /* AppDelegate.m in Sources */,
+				010DABD42091B8B4004385A8 /* WBStatusCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

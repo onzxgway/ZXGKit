@@ -6,13 +6,13 @@
 //Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import "ZXGBaseTableView.h"
+#import "ZXGRTableView.h"
 
-@interface ZXGBaseTableView ()
+@interface ZXGRTableView ()
 
 @end
 
-@implementation ZXGBaseTableView
+@implementation ZXGRTableView
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
     self = [super initWithFrame:frame style:style];

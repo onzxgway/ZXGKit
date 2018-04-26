@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class ZXGMomentsLayout;
 
-@interface ZXGBaseTableView : UITableView <UITableViewDataSource, UITableViewDelegate> {
+@interface ZXGRTableView : UITableView <UITableViewDataSource, UITableViewDelegate> {
     @protected
     NSMutableArray<ZXGMomentsLayout *> *_momentModels;
 }

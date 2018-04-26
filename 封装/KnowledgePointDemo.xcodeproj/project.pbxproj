@@ -44,8 +44,6 @@
 		01E3AE2520858AFA00151E1B /* ZXGNetworkCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE1E20858AFA00151E1B /* ZXGNetworkCenter.m */; };
 		01E3AE2620858AFA00151E1B /* ZXGNetworkTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE2120858AFA00151E1B /* ZXGNetworkTask.m */; };
 		01E3AE2920858B1500151E1B /* HomeNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE2820858B1500151E1B /* HomeNetworkTool.m */; };
-		01E3AE312085D0CB00151E1B /* ZXGBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE302085D0CB00151E1B /* ZXGBaseTableViewController.m */; };
-		01E3AE342085D1B500151E1B /* ZXGBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3AE332085D1B500151E1B /* ZXGBaseTableView.m */; };
 		01EBA3BD208EF4CA00B92A42 /* CTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBA3BC208EF4CA00B92A42 /* CTFrameParserConfig.m */; };
 		01EBA3C0208EF54700B92A42 /* CTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBA3BF208EF54700B92A42 /* CTFrameParser.m */; };
 		01EBA3C3208EF56700B92A42 /* CoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBA3C2208EF56700B92A42 /* CoreTextData.m */; };
@@ -124,10 +122,6 @@
 		01E3AE2120858AFA00151E1B /* ZXGNetworkTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGNetworkTask.m; sourceTree = "<group>"; };
 		01E3AE2720858B1400151E1B /* HomeNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNetworkTool.h; sourceTree = "<group>"; };
 		01E3AE2820858B1500151E1B /* HomeNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNetworkTool.m; sourceTree = "<group>"; };
-		01E3AE2F2085D0CB00151E1B /* ZXGBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseTableViewController.h; sourceTree = "<group>"; };
-		01E3AE302085D0CB00151E1B /* ZXGBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseTableViewController.m; sourceTree = "<group>"; };
-		01E3AE322085D1B500151E1B /* ZXGBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseTableView.h; sourceTree = "<group>"; };
-		01E3AE332085D1B500151E1B /* ZXGBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseTableView.m; sourceTree = "<group>"; };
 		01EBA3BB208EF4CA00B92A42 /* CTFrameParserConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTFrameParserConfig.h; sourceTree = "<group>"; };
 		01EBA3BC208EF4CA00B92A42 /* CTFrameParserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFrameParserConfig.m; sourceTree = "<group>"; };
 		01EBA3BE208EF54700B92A42 /* CTFrameParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTFrameParser.h; sourceTree = "<group>"; };
@@ -322,20 +316,8 @@
 		01E3AE2D2085D0AA00151E1B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				01E3AE2E2085D0AA00151E1B /* UITableViewController */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		01E3AE2E2085D0AA00151E1B /* UITableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				01E3AE2F2085D0CB00151E1B /* ZXGBaseTableViewController.h */,
-				01E3AE302085D0CB00151E1B /* ZXGBaseTableViewController.m */,
-				01E3AE322085D1B500151E1B /* ZXGBaseTableView.h */,
-				01E3AE332085D1B500151E1B /* ZXGBaseTableView.m */,
-			);
-			path = UITableViewController;
 			sourceTree = "<group>";
 		};
 		01EBA3BA208EE32600B92A42 /* 排版引擎框架 */ = {
@@ -726,12 +708,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E3AE342085D1B500151E1B /* ZXGBaseTableView.m in Sources */,
 				01E3AE2220858AFA00151E1B /* ZXGBaseDataModel.m in Sources */,
 				01E3AE2620858AFA00151E1B /* ZXGNetworkTask.m in Sources */,
 				01E3AE2320858AFA00151E1B /* ZXGBaseModel.m in Sources */,
 				01E3AE2420858AFA00151E1B /* ZXGUploadFileModel.m in Sources */,
-				01E3AE312085D0CB00151E1B /* ZXGBaseTableViewController.m in Sources */,
 				01E3ADFC20858AAE00151E1B /* ViewController.m in Sources */,
 				01E3AE0720858AAE00151E1B /* main.m in Sources */,
 				01E3AE2920858B1500151E1B /* HomeNetworkTool.m in Sources */,

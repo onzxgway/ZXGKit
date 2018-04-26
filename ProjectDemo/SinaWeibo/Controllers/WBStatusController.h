@@ -6,8 +6,8 @@
 //  Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZXGBaseTableViewController.h"
 
-@interface WBStatusController : UIViewController
+@interface WBStatusController : ZXGBaseTableViewController
 
 @end
