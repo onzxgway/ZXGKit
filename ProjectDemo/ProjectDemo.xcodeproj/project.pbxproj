@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		010DABCD2091A3F3004385A8 /* WBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010DABCC2091A3F3004385A8 /* WBModel.m */; };
 		010DABD42091B8B4004385A8 /* WBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010DABD32091B8B4004385A8 /* WBStatusCell.m */; };
+		0112E23C2091DB7600ED9632 /* ZXGPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0112E23B2091DB7600ED9632 /* ZXGPictureView.m */; };
 		015BE0B621EF66A968F3253B /* libPods-NetEase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388C7776F65E66391123F2DD /* libPods-NetEase.a */; };
 		01B3F804207F037200F64113 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F803207F037200F64113 /* AppDelegate.m */; };
 		01B3F80C207F037200F64113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B3F80B207F037200F64113 /* Assets.xcassets */; };
@@ -173,6 +174,8 @@
 		010DABCC2091A3F3004385A8 /* WBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBModel.m; sourceTree = "<group>"; };
 		010DABD22091B8B4004385A8 /* WBStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStatusCell.h; sourceTree = "<group>"; };
 		010DABD32091B8B4004385A8 /* WBStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStatusCell.m; sourceTree = "<group>"; };
+		0112E23A2091DB7600ED9632 /* ZXGPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPictureView.h; sourceTree = "<group>"; };
+		0112E23B2091DB7600ED9632 /* ZXGPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPictureView.m; sourceTree = "<group>"; };
 		01B3F800207F037200F64113 /* Moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3F802207F037200F64113 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01B3F803207F037200F64113 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1010,6 +1013,8 @@
 			children = (
 				010DABD22091B8B4004385A8 /* WBStatusCell.h */,
 				010DABD32091B8B4004385A8 /* WBStatusCell.m */,
+				0112E23A2091DB7600ED9632 /* ZXGPictureView.h */,
+				0112E23B2091DB7600ED9632 /* ZXGPictureView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1811,6 +1816,7 @@
 				71690216206233100094BA7D /* WBStatusController.m in Sources */,
 				716901F12062322D0094BA7D /* ViewController.m in Sources */,
 				010DABCD2091A3F3004385A8 /* WBModel.m in Sources */,
+				0112E23C2091DB7600ED9632 /* ZXGPictureView.m in Sources */,
 				716901FC2062322D0094BA7D /* main.m in Sources */,
 				7169021C206237050094BA7D /* WBStatusLayout.m in Sources */,
 				716901EE2062322C0094BA7D /* AppDelegate.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "WBStatusController.h"
+#import "WBStatusCell.h"
 #import "WBStatusLayout.h"
 #import "WBModel.h"
 
@@ -38,8 +39,8 @@
 //                [_layouts addObject:layout];
             }
             ZXGBaseTableViewCellModel *model = [[ZXGBaseTableViewCellModel alloc] init];
-            model.reuseIdentifier = @"ZXGBaseTableViewCell";
-            model.cellClass = [ZXGBaseTableViewCell class];
+            model.reuseIdentifier = @"WBStatusCell";
+            model.cellClass = [WBStatusCell class];
             model.rowHeight = 88;
             [secModel addCellModel:model];
         }
