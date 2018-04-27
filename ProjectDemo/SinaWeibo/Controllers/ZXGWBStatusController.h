@@ -8,6 +8,6 @@
 
 #import "ZXGBaseTableViewController.h"
 
-@interface WBStatusController : ZXGBaseTableViewController
+@interface ZXGWBStatusController : ZXGBaseTableViewController
 
 @end

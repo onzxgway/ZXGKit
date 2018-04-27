@@ -6,16 +6,14 @@
 //  Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import "WBStatusController.h"
+#import "ZXGWBStatusController.h"
 #import "WBStatusCell.h"
-#import "WBStatusLayout.h"
-#import "WBModel.h"
 
-@interface WBStatusController ()
+@interface ZXGWBStatusController ()
 
 @end
 
-@implementation WBStatusController
+@implementation ZXGWBStatusController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,27 +27,22 @@
     //字典转模型放在后台线程
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
 
-        [NSThread sleepForTimeInterval:2.f];
         ZXGBaseTableViewSectionModel *secModel = [[ZXGBaseTableViewSectionModel alloc] init];
         for (int i = 0; i <= 7; i++) {
             NSData *data = [self dataNamed:[NSString stringWithFormat:@"weibo_%d.json",i]];
-            WBTimelineItem *item = [WBTimelineItem modelWithJSON:data];
-            for (WBStatus *status in item.statuses) {
-//                WBStatusLayout *layout = [[WBStatusLayout alloc] initWithStatus:status style:WBLayoutStyleTimeline];
-//                [_layouts addObject:layout];
+            ZXGWBTimelineItem *item = [ZXGWBTimelineItem modelWithJSON:data];
+            for (ZXGWBStatus *status in item.statuses) {
+                ZXGWBStatusLayout *layout = [[ZXGWBStatusLayout alloc] initWithStatus:status style:WBLayoutStyleTimeline];
+                layout.reuseIdentifier = NSStringFromClass([WBStatusCell class]);
+                layout.cellClass = [WBStatusCell class];
+                [secModel addCellModel:layout];
             }
-            ZXGBaseTableViewCellModel *model = [[ZXGBaseTableViewCellModel alloc] init];
-            model.reuseIdentifier = @"WBStatusCell";
-            model.cellClass = [WBStatusCell class];
-            model.rowHeight = 88;
-            [secModel addCellModel:model];
         }
-        
-        [self.dataSource addObject:secModel];
+        [_dataSource addObject:secModel];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.navigationController.view.userInteractionEnabled = YES;
-            [self.tableView reloadData];
+            [_tableView reloadData];
         });
     });
     

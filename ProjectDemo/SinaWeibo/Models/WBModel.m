@@ -8,23 +8,29 @@
 
 #import "WBModel.h"
 
-@implementation WBPictureMetadata
+@implementation ZXGWBPictureMetadata
+
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"cutType" : @"cut_type"};
 }
+
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
     if ([_type isEqualToString:@"GIF"]) {
         _badgeType = WBPictureBadgeTypeGIF;
-    } else {
+    }
+    else {
         if (_width > 0 && (float)_height / _width > 3) {
             _badgeType = WBPictureBadgeTypeLong;
         }
     }
     return YES;
 }
+
 @end
 
-@implementation WBPicture
+
+@implementation ZXGWBPicture
+
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"picID" : @"pic_id",
              @"keepSize" : @"keep_size",
@@ -32,11 +38,13 @@
              @"objectID" : @"object_id",
              @"middlePlus" : @"middleplus"};
 }
+
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
-    WBPictureMetadata *meta = _large ? _large : _largest ? _largest : _original;
+    ZXGWBPictureMetadata *meta = _large ? _large : _largest ? _largest : _original;
     _badgeType = meta.badgeType;
     return YES;
 }
+
 @end
 
 @implementation WBURL
@@ -54,7 +62,7 @@
 }
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"picIds" : [NSString class],
-             @"picInfos" : [WBPicture class]};
+             @"picInfos" : [ZXGWBPicture class]};
 }
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
     // 自动 model-mapper 不能完成的，这里可以进行额外处理
@@ -62,7 +70,7 @@
     if (_picIds.count != 0) {
         NSMutableArray *pics = [NSMutableArray new];
         for (NSString *picId in _picIds) {
-            WBPicture *pic = _picInfos[picId];
+            ZXGWBPicture *pic = _picInfos[picId];
             if (pic) {
                 [pics addObject:pic];
             }
@@ -93,7 +101,7 @@
 @implementation WBButtonLink
 @end
 
-@implementation WBPageInfo
+@implementation ZXGWBPageInfo
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"pageTitle" : @"page_title",
              @"pageID" : @"page_id",
@@ -112,14 +120,21 @@
 }
 @end
 
-@implementation WBStatusTitle
+
+
+@implementation ZXGWBStatusTitle
+
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"baseColor" : @"base_color",
              @"iconURL" : @"icon_url"};
 }
+
 @end
 
+
+
 @implementation WBUser
+
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"userID" : @"id",
              @"idString" : @"idstr",
@@ -189,9 +204,13 @@
 }
 @end
 
-@implementation WBStatus
+
+
+@implementation ZXGWBStatus
+
 + (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"statusID" : @"id",
+    return @{
+             @"statusID" : @"id",
              @"createdAt" : @"created_at",
              @"attitudesStatus" : @"attitudes_status",
              @"inReplyToScreenName" : @"in_reply_to_screen_name",
@@ -217,22 +236,25 @@
              @"userType" : @"userType",
              @"picInfos" : @"pic_infos",
              @"inReplyToUserId" : @"in_reply_to_user_id",
-             @"originalPic" : @"original_pic"};
+             @"originalPic" : @"original_pic"
+             };
 }
+
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"picIds" : [NSString class],
-             @"picInfos" : [WBPicture class],
+             @"picInfos" : [ZXGWBPicture class],
              @"urlStruct" : [WBURL class],
              @"topicStruct" : [WBTopic class],
              @"tagStruct" : [WBTag class]};
 }
+
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
     // 自动 model-mapper 不能完成的，这里可以进行额外处理
     _pics = nil;
     if (_picIds.count != 0) {
         NSMutableArray *pics = [NSMutableArray new];
         for (NSString *picId in _picIds) {
-            WBPicture *pic = _picInfos[picId];
+            ZXGWBPicture *pic = _picInfos[picId];
             if (pic) {
                 [pics addObject:pic];
             }
@@ -250,23 +272,28 @@
     return YES;
     
 }
+
 @end
 
-@implementation WBTimelineItem
+
+@implementation ZXGWBTimelineItem
 
 + (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"hasVisible" : @"hasvisible",
+    
+    return @{
+             @"hasVisible" : @"hasvisible",
              @"previousCursor" : @"previous_cursor",
              @"uveBlank" : @"uve_blank",
              @"hasUnread" : @"has_unread",
              @"totalNumber" : @"total_number",
              @"maxID" : @"max_id",
              @"sinceID" : @"since_id",
-             @"nextCursor" : @"next_cursor"};
+             @"nextCursor" : @"next_cursor"
+             };
 }
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"statuses" : [WBStatus class]};
+    return @{@"statuses" : [ZXGWBStatus class]};
 }
 
 @end

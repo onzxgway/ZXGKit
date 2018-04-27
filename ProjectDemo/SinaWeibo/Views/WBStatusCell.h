@@ -6,8 +6,8 @@
 //  Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import "ZXGBaseTableViewCell.h"
-#import "WBStatusLayout.h"
+#import "ZXGRootTableViewCell.h"
+#import "ZXGWBStatusLayout.h"
 @class WBStatusCell;
 
 // 标题栏
@@ -72,9 +72,9 @@
 @property (nonatomic, strong) CALayer *bottomLine;
 @property (nonatomic, weak  ) WBStatusCell *cell;
 
-//- (void)setWithLayout:(WBStatusLayout *)layout;
-//// set both "liked" and "likeCount"
-//- (void)setLiked:(BOOL)liked withAnimation:(BOOL)animation;
+- (void)setWithLayout:(ZXGWBStatusLayout *)layout;
+// set both "liked" and "likeCount"
+- (void)setLiked:(BOOL)liked withAnimation:(BOOL)animation;
 @end
 
 @interface WBStatusView : UIView
@@ -93,13 +93,13 @@
 @property (nonatomic, strong) UIButton *menuButton;             // 菜单按钮
 @property (nonatomic, strong) UIButton *followButton;           // 关注按钮
 
-@property (nonatomic, strong) WBStatusLayout *layout;
+@property (nonatomic, strong) ZXGWBStatusLayout *layout;
 @property (nonatomic, weak  ) WBStatusCell *cell;
 
 @end
 
 
-@interface WBStatusCell : ZXGBaseTableViewCell
+@interface WBStatusCell : ZXGRootTableViewCell <ZXGTableViewCellAble>
 
 @property (nonatomic, strong) WBStatusView *statusView;
 

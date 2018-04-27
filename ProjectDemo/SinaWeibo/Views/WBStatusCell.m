@@ -8,6 +8,7 @@
 
 #import "WBStatusCell.h"
 #import "ZXGPictureView.h"
+#import "WBStatusHelper.h"
 
 @implementation WBStatusTitleView
 
@@ -96,7 +97,7 @@
     _sourceLabel.ignoreCommonProperties = YES;
     _sourceLabel.fadeOnAsynchronouslyDisplay = NO;
     _sourceLabel.fadeOnHighlight = NO;
-    @weakify(self);
+//    @weakify(self);
     _sourceLabel.highlightTapAction = ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
 //        if ([weak_self.cell.delegate respondsToSelector:@selector(cell:didClickInLabel:textRange:)]) {
 //            [weak_self.cell.delegate cell:weak_self.cell didClickInLabel:(YYLabel *)containerView textRange:range];
@@ -151,6 +152,82 @@
     return self;
 }
 
+- (void)setWithLayout:(ZXGWBStatusLayout *)layout isRetweet:(BOOL)isRetweet {
+    ZXGWBPageInfo *pageInfo = isRetweet ? layout.status.retweetedStatus.pageInfo : layout.status.pageInfo;
+    if (!pageInfo) return;
+    self.height = isRetweet ? layout.retweetCardHeight : layout.cardHeight;
+    
+    /*
+     badge: 25,25 左上角 (42)
+     image: 70,70 方形
+     100, 70 矩形
+     btn:  60,70
+     
+     lineheight 20
+     padding 10
+     */
+    
+    _isRetweet = isRetweet;
+    switch (isRetweet ? layout.retweetCardType : layout.cardType) {
+        case WBStatusCardTypeNone: {
+            
+        } break;
+        case WBStatusCardTypeNormal: {
+            self.width = kWBCellContentWidth;
+            if (pageInfo.typeIcon) {
+                _badgeImageView.hidden = NO;
+                _badgeImageView.frame = CGRectMake(0, 0, 25, 25);
+                [_badgeImageView setImageWithURL:pageInfo.typeIcon placeholder:nil];
+            } else {
+                _badgeImageView.hidden = YES;
+            }
+            if (pageInfo.pagePic) {
+                _imageView.hidden = NO;
+                if (pageInfo.typeIcon) {
+                    _imageView.frame = CGRectMake(0, 0, 100, 70);
+                } else {
+                    _imageView.frame = CGRectMake(0, 0, 70, 70);
+                }
+                [_imageView setImageWithURL:pageInfo.pagePic placeholder:nil];
+            } else {
+                _imageView.hidden = YES;
+            }
+            _label.hidden = NO;
+            _label.frame = isRetweet ? layout.retweetCardTextRect : layout.cardTextRect;
+            _label.textLayout = isRetweet ? layout.retweetCardTextLayout : layout.cardTextLayout;
+            WBButtonLink *button = pageInfo.buttons.firstObject;
+            if (button.pic && button.name) {
+                _button.hidden = NO;
+                _button.size = CGSizeMake(60, 70);
+                _button.top = 0;
+                _button.right = self.width;
+                [_button setTitle:button.name forState:UIControlStateNormal];
+                [_button setImageWithURL:button.pic forState:UIControlStateNormal placeholder:nil];
+            } else {
+                _button.hidden = YES;
+            }
+        }break;
+        case WBStatusCardTypeVideo: {
+            self.width = self.height;
+            _badgeImageView.hidden = YES;
+            _label.hidden = YES;
+            _imageView.frame = self.bounds;
+            [_imageView setImageWithURL:pageInfo.pagePic options:kNilOptions];
+            _button.hidden = NO;
+            _button.frame = self.bounds;
+            [_button setTitle:nil forState:UIControlStateNormal];
+            [_button cancelImageRequestForState:UIControlStateNormal];
+            [_button setImage:GET_IMAGE(@"multimedia_videocard_play") forState:UIControlStateNormal];
+            
+        } break;
+        default: {
+            
+        } break;
+    }
+    
+    self.backgroundColor = isRetweet ? [UIColor whiteColor] : kWBCellInnerViewColor;
+}
+
 @end
 
 
@@ -158,7 +235,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    @weakify(self);
+//    @weakify(self);
     //
     _button = [UIButton buttonWithType:UIButtonTypeCustom];
     [_button setBackgroundImage:[UIImage imageWithColor:kWBCellBackgroundColor] forState:UIControlStateNormal];
@@ -198,6 +275,31 @@
     return self;
 }
 
+- (void)setWithLayout:(ZXGWBStatusLayout *)layout {
+    if (layout.tagType == WBStatusTagTypePlace) {
+        _label.height = kWBCellTagPlaceHeight;
+        _imageView.hidden = NO;
+        _button.hidden = NO;
+        
+        _label.left = _imageView.right + 6;
+        _label.width = layout.tagTextLayout.textBoundingRect.size.width + 6;
+        _label.textLayout = layout.tagTextLayout;
+        _label.userInteractionEnabled = NO;
+        
+        self.width = _label.right;
+        _label.width = self.width;
+        _button.width = self.width;
+    } else if (layout.tagType == WBStatusTagTypeNormal) {
+        _imageView.hidden = YES;
+        _button.hidden = YES;
+        
+        _label.left = 0;
+        _label.width = layout.tagTextLayout.textBoundingRect.size.width + 1;
+        _label.userInteractionEnabled = YES;
+        _label.textLayout = layout.tagTextLayout;
+    }
+}
+
 @end
 
 
@@ -212,12 +314,13 @@
     if (self) {
         
         self.exclusiveTouch = YES;
-        @weakify(self);
+//        @weakify(self);
         
+        // 容器视图
         _contentView = [[UIView alloc] init];
         _contentView.width = SCREEN_WIDTH;
         _contentView.height = 1;
-        _contentView.backgroundColor = kWhiteColor;
+        _contentView.backgroundColor = kRedColor;
         [self addSubview:_contentView];
         
         static UIImage *topLineBG, *bottomLineBG;
@@ -243,6 +346,7 @@
         topLine.bottom = 0;
         topLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
         [_contentView addSubview:topLine];
+        
         // 底部分割线
         UIImageView *bottomLine = [[UIImageView alloc] initWithImage:bottomLineBG];
         bottomLine.width = _contentView.width;
@@ -253,10 +357,12 @@
         // 标题栏
         _titleView = [[WBStatusTitleView alloc] init];
         _titleView.hidden = YES;
+        _titleView.backgroundColor = kRandomColor;
         [_contentView addSubview:_titleView];
         
         // 用户资料
         _profileView = [[WBStatusProfileView alloc] init];
+        _profileView.backgroundColor = kRandomColor;
         [_contentView addSubview:_profileView];
         
         // vip图片
@@ -300,6 +406,7 @@
 //                [weak_self.cell.delegate cell:weak_self.cell didClickInLabel:(YYLabel *)containerView textRange:range];
 //            }
         };
+        _textLabel.backgroundColor = kRandomColor;
         [_contentView addSubview:_textLabel];
         
         // 转发文本
@@ -371,6 +478,201 @@
         [_contentView addSubview:_toolbarView];
     }
     return self;
+}
+
+- (void)setLayout:(ZXGWBStatusLayout *)layout {
+    _layout = layout;
+    //
+    self.height = layout.rowHeight;
+    
+    //
+    _contentView.top = layout.marginTop;
+    _contentView.height = layout.rowHeight - layout.marginTop - layout.marginBottom;
+    
+    // 标题栏
+    CGFloat top = 0;
+    if (layout.titleHeight > 0) {
+        _titleView.hidden = NO;
+        _titleView.height = layout.titleHeight;
+        _titleView.titleLabel.textLayout = layout.titleTextLayout;
+        top = layout.titleHeight;
+    }
+    else {
+        _titleView.hidden = YES;
+    }
+    
+    // 个人资料
+    [_profileView.avatarView setImageWithURL:layout.status.user.avatarLarge //profileImageURL
+                                 placeholder:nil
+                                     options:kNilOptions
+                                     manager:[WBStatusHelper avatarImageManager] // 圆角头像manager，内置圆角处理
+                                    progress:nil
+                                   transform:nil
+                                  completion:nil];
+    _profileView.nameLabel.textLayout = layout.nameTextLayout;
+    _profileView.sourceLabel.textLayout = layout.sourceTextLayout;
+//    _profileView.verifyType = layout.status.user.userVerifyType;
+    _profileView.height = layout.profileHeight;
+    _profileView.top = top;
+    top += layout.profileHeight;
+    
+    // vip自定义图片
+    NSURL *picBg = [WBStatusHelper defaultURLForImageURL:layout.status.picBg];
+    __weak typeof(_vipBackgroundView) vipBackgroundView = _vipBackgroundView;
+    [_vipBackgroundView setImageWithURL:picBg placeholder:nil options:YYWebImageOptionAvoidSetImage completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
+        if (image) {
+            image = [UIImage imageWithCGImage:image.CGImage scale:2.0 orientation:image.imageOrientation];
+            vipBackgroundView.image = image;
+        }
+    }];
+    
+    //
+    _textLabel.top = top;
+    _textLabel.height = layout.textHeight;
+    _textLabel.textLayout = layout.textLayout;
+    top += layout.textHeight;
+    
+    //
+    _retweetBackgroundView.hidden = YES;
+    _retweetTextLabel.hidden = YES;
+    _cardView.hidden = YES;
+    if (layout.picHeight == 0 && layout.retweetPicHeight == 0) {
+        [self _hideImageViews];
+    }
+    
+    
+    // 优先级是 转发->图片->卡片
+    if (layout.retweetHeight > 0) {
+        _retweetBackgroundView.top = top;
+        _retweetBackgroundView.height = layout.retweetHeight;
+        _retweetBackgroundView.hidden = NO;
+        
+        _retweetTextLabel.top = top;
+        _retweetTextLabel.height = layout.retweetTextHeight;
+        _retweetTextLabel.textLayout = layout.retweetTextLayout;
+        _retweetTextLabel.hidden = NO;
+        
+        if (layout.retweetPicHeight > 0) {
+            [self _setImageViewWithTop:_retweetTextLabel.bottom isRetweet:YES];
+        }
+        else {
+            [self _hideImageViews];
+            if (layout.retweetCardHeight > 0) {
+                _cardView.top = _retweetTextLabel.bottom;
+                _cardView.hidden = NO;
+                [_cardView setWithLayout:layout isRetweet:YES];
+            }
+        }
+    }
+    else if (layout.picHeight > 0) {
+        [self _setImageViewWithTop:top isRetweet:NO];
+    }
+    else if (layout.cardHeight > 0) {
+        _cardView.top = top;
+        _cardView.hidden = NO;
+        [_cardView setWithLayout:layout isRetweet:NO];
+    }
+    
+    //
+    if (layout.tagHeight > 0) {
+        _tagView.hidden = NO;
+        [_tagView setWithLayout:layout];
+        _tagView.centerY = _contentView.height - kWBCellToolbarHeight - layout.tagHeight / 2;
+    }
+    else {
+        _tagView.hidden = YES;
+    }
+    
+    //
+    _toolbarView.bottom = _contentView.height;
+    [_toolbarView setWithLayout:layout];
+}
+
+- (void)_hideImageViews {
+    for (UIImageView *imageView in _picViews) {
+        imageView.hidden = YES;
+    }
+}
+
+- (void)_setImageViewWithTop:(CGFloat)imageTop isRetweet:(BOOL)isRetweet {
+    CGSize picSize = isRetweet ? _layout.retweetPicSize : _layout.picSize;
+    NSArray *pics = isRetweet ? _layout.status.retweetedStatus.pics : _layout.status.pics;
+    int picsCount = (int)pics.count;
+    
+    for (int i = 0; i < 9; i++) {
+        UIView *imageView = _picViews[i];
+        if (i >= picsCount) {
+            [imageView.layer cancelCurrentImageRequest];
+            imageView.hidden = YES;
+        } else {
+            CGPoint origin = {0};
+            switch (picsCount) {
+                case 1: {
+                    origin.x = kWBCellPadding;
+                    origin.y = imageTop;
+                } break;
+                case 4: {
+                    origin.x = kWBCellPadding + (i % 2) * (picSize.width + kWBCellPaddingPic);
+                    origin.y = imageTop + (int)(i / 2) * (picSize.height + kWBCellPaddingPic);
+                } break;
+                default: {
+                    origin.x = kWBCellPadding + (i % 3) * (picSize.width + kWBCellPaddingPic);
+                    origin.y = imageTop + (int)(i / 3) * (picSize.height + kWBCellPaddingPic);
+                } break;
+            }
+            imageView.frame = (CGRect){.origin = origin, .size = picSize};
+            imageView.hidden = NO;
+            [imageView.layer removeAnimationForKey:@"contents"];
+            ZXGWBPicture *pic = pics[i];
+            
+            UIView *badge = imageView.subviews.firstObject;
+            switch (pic.largest.badgeType) {
+                case WBPictureBadgeTypeNone: {
+                    if (badge.layer.contents) {
+                        badge.layer.contents = nil;
+                        badge.hidden = YES;
+                    }
+                } break;
+                case WBPictureBadgeTypeLong: {
+                    badge.layer.contents = (__bridge id)(GET_IMAGE(@"timeline_image_longimage").CGImage);
+                    badge.hidden = NO;
+                } break;
+                case WBPictureBadgeTypeGIF: {
+                    badge.layer.contents = (__bridge id)(GET_IMAGE(@"timeline_image_gif").CGImage);
+                    badge.hidden = NO;
+                } break;
+            }
+            
+            @weakify(imageView);
+            [imageView.layer setImageWithURL:pic.bmiddle.url
+                                 placeholder:nil
+                                     options:YYWebImageOptionAvoidSetImage
+                                  completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
+                                      @strongify(imageView);
+                                      if (!imageView) return;
+                                      if (image && stage == YYWebImageStageFinished) {
+                                          int width = pic.bmiddle.width;
+                                          int height = pic.bmiddle.height;
+                                          CGFloat scale = (height / width) / (imageView.height / imageView.width);
+                                          if (scale < 0.99 || isnan(scale)) { // 宽图把左右两边裁掉
+                                              imageView.contentMode = UIViewContentModeScaleAspectFill;
+                                              imageView.layer.contentsRect = CGRectMake(0, 0, 1, 1);
+                                          } else { // 高图只保留顶部
+                                              imageView.contentMode = UIViewContentModeScaleToFill;
+                                              imageView.layer.contentsRect = CGRectMake(0, 0, 1, (float)width / height);
+                                          }
+                                          ((ZXGPictureView *)imageView).image = image;
+                                          if (from != YYWebImageFromMemoryCacheFast) {
+                                              CATransition *transition = [CATransition animation];
+                                              transition.duration = 0.15;
+                                              transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+                                              transition.type = kCATransitionFade;
+                                              [imageView.layer addAnimation:transition forKey:@"contents"];
+                                          }
+                                      }
+                                  }];
+        }
+    }
 }
 
 @end
@@ -491,28 +793,71 @@
     [self.layer addSublayer:_topLine];
     [self.layer addSublayer:_bottomLine];
     
-    @weakify(self);
+//    @weakify(self);
     [_repostButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-        WBStatusCell *cell = weak_self.cell;
+//        WBStatusCell *cell = weak_self.cell;
 //        if ([cell.delegate respondsToSelector:@selector(cellDidClickRepost:)]) {
 //            [cell.delegate cellDidClickRepost:cell];
 //        }
     }];
     
     [_commentButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-        WBStatusCell *cell = weak_self.cell;
+//        WBStatusCell *cell = weak_self.cell;
 //        if ([cell.delegate respondsToSelector:@selector(cellDidClickComment:)]) {
 //            [cell.delegate cellDidClickComment:cell];
 //        }
     }];
     
     [_likeButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-        WBStatusCell *cell = weak_self.cell;
+//        WBStatusCell *cell = weak_self.cell;
 //        if ([cell.delegate respondsToSelector:@selector(cellDidClickLike:)]) {
 //            [cell.delegate cellDidClickLike:cell];
 //        }
     }];
     return self;
+}
+
+- (void)setWithLayout:(ZXGWBStatusLayout *)layout {
+    _repostLabel.width = layout.toolbarRepostTextWidth;
+    _commentLabel.width = layout.toolbarCommentTextWidth;
+    _likeLabel.width = layout.toolbarLikeTextWidth;
+    
+    _repostLabel.textLayout = layout.toolbarRepostTextLayout;
+    _commentLabel.textLayout = layout.toolbarCommentTextLayout;
+    _likeLabel.textLayout = layout.toolbarLikeTextLayout;
+    
+    [self adjustImage:_repostImageView label:_repostLabel inButton:_repostButton];
+    [self adjustImage:_commentImageView label:_commentLabel inButton:_commentButton];
+    [self adjustImage:_likeImageView label:_likeLabel inButton:_likeButton];
+    
+    _likeImageView.image = layout.status.attitudesStatus ? [self likeImage] : [self unlikeImage];
+}
+
+- (UIImage *)likeImage {
+    static UIImage *img;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        img = GET_IMAGE(@"timeline_icon_like");
+    });
+    return img;
+}
+
+- (UIImage *)unlikeImage {
+    static UIImage *img;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        img = GET_IMAGE(@"timeline_icon_unlike");
+    });
+    return img;
+}
+
+- (void)adjustImage:(UIImageView *)image label:(YYLabel *)label inButton:(UIButton *)button {
+    CGFloat imageWidth = image.bounds.size.width;
+    CGFloat labelWidth = label.width;
+    CGFloat paddingMid = 5;
+    CGFloat paddingSide = (button.width - imageWidth - labelWidth - paddingMid) / 2.0;
+    image.centerX = CGFloatPixelRound(paddingSide + imageWidth / 2);
+    label.right = CGFloatPixelRound(button.width - paddingSide);
 }
 
 @end
@@ -538,11 +883,12 @@
 }
 
 - (void)setupSelf {
-    self.backgroundView.backgroundColor = kRandomColor;
+    self.backgroundView.backgroundColor = kBlackColor;
     self.contentView.backgroundColor = kRandomColor;
-    self.backgroundColor = kRandomColor;
+    self.backgroundColor = kBlackColor;
     
     _statusView = [[WBStatusView alloc] init];
+    _statusView.backgroundColor = kRandomColor;
     _statusView.cell = self;
     _statusView.titleView.cell = self;
     _statusView.profileView.cell = self;
@@ -550,6 +896,13 @@
     _statusView.toolbarView.cell = self;
     _statusView.tagView.cell = self;
     [self.contentView addSubview:_statusView];
+}
+
+- (void)settingModel:(id<ZXGTableViewCellModelAble>)model secModel:(ZXGBaseTableViewSectionModel *)secModel indexPath:(NSIndexPath *)indexPath {
+    ZXGWBStatusLayout *layout = (ZXGWBStatusLayout *)model;
+    self.height = layout.rowHeight;
+    self.contentView.height = layout.rowHeight;
+    _statusView.layout = layout;
 }
 
 @end

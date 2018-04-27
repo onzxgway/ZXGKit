@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "WBStatusController.h"
+#import "ZXGWBStatusController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *myBtn;
@@ -25,7 +25,7 @@
 
 
 - (void)weiboClicked {
-    [self.navigationController pushViewController:[WBStatusController new] animated:YES];
+    [self.navigationController pushViewController:[ZXGWBStatusController new] animated:YES];
 }
 
 

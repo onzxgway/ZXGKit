@@ -17,43 +17,46 @@ typedef NS_ENUM(NSUInteger, WBUserVerifyType){
 };
 
 
-/// 图片标记
+// 图片标记
 typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
-    WBPictureBadgeTypeNone = 0, ///< 正常图片
-    WBPictureBadgeTypeLong,     ///< 长图
-    WBPictureBadgeTypeGIF,      ///< GIF
+    WBPictureBadgeTypeNone = 0, // 正常图片
+    WBPictureBadgeTypeLong,     // 长图
+    WBPictureBadgeTypeGIF,      // GIF
 };
 
 
-
 /**
- 一个图片的元数据
+ 一张图片的元数据
  */
-@interface WBPictureMetadata : NSObject
-@property (nonatomic, strong) NSURL *url; ///< Full image url
-@property (nonatomic, assign) int width; ///< pixel width
-@property (nonatomic, assign) int height; ///< pixel height
-@property (nonatomic, strong) NSString *type; ///< "WEBP" "JPEG" "GIF"
-@property (nonatomic, assign) int cutType; ///< Default:1
-@property (nonatomic, assign) WBPictureBadgeType badgeType;
+@interface ZXGWBPictureMetadata : NSObject
+
+@property (nonatomic, strong) NSURL *url; // Full image url
+@property (nonatomic) NSInteger width;    // pixel width
+@property (nonatomic) NSInteger height;   // pixel height
+@property (nonatomic, copy  ) NSString *type; // "WEBP" "JPEG" "GIF"
+@property (nonatomic) NSInteger cutType;  // Default:1
+@property (nonatomic) WBPictureBadgeType badgeType;
+
 @end
 
 
 /**
  图片
  */
-@interface WBPicture : NSObject
-@property (nonatomic, strong) NSString *picID;
-@property (nonatomic, strong) NSString *objectID;
-@property (nonatomic, assign) int photoTag;
-@property (nonatomic, assign) BOOL keepSize; ///< YES:固定为方形 NO:原始宽高比
-@property (nonatomic, strong) WBPictureMetadata *thumbnail;  ///< w:180
-@property (nonatomic, strong) WBPictureMetadata *bmiddle;    ///< w:360 (列表中的缩略图)
-@property (nonatomic, strong) WBPictureMetadata *middlePlus; ///< w:480
-@property (nonatomic, strong) WBPictureMetadata *large;      ///< w:720 (放大查看)
-@property (nonatomic, strong) WBPictureMetadata *largest;    ///<       (查看原图)
-@property (nonatomic, strong) WBPictureMetadata *original;   ///<
-@property (nonatomic, assign) WBPictureBadgeType badgeType;
+@interface ZXGWBPicture : NSObject
+
+@property (nonatomic, copy  ) NSString *picID;
+@property (nonatomic, copy  ) NSString *objectID;
+@property (nonatomic) int photoTag;
+@property (nonatomic) BOOL keepSize; // YES:固定为方形 NO:原始宽高比
+@property (nonatomic, strong) ZXGWBPictureMetadata *thumbnail;  ///< w:180
+@property (nonatomic, strong) ZXGWBPictureMetadata *bmiddle;    ///< w:360 (列表中的缩略图)
+@property (nonatomic, strong) ZXGWBPictureMetadata *middlePlus; ///< w:480
+@property (nonatomic, strong) ZXGWBPictureMetadata *large;      ///< w:720 (放大查看)
+@property (nonatomic, strong) ZXGWBPictureMetadata *largest;    ///<       (查看原图)
+@property (nonatomic, strong) ZXGWBPictureMetadata *original;   ///<
+@property (nonatomic) WBPictureBadgeType badgeType;
+
 @end
 
 
@@ -61,20 +64,20 @@ typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
  链接
  */
 @interface WBURL : NSObject
-@property (nonatomic, assign) BOOL result;
+@property (nonatomic) BOOL result;
 @property (nonatomic, strong) NSString *shortURL; ///< 短域名 (原文)
 @property (nonatomic, strong) NSString *oriURL;   ///< 原始链接
 @property (nonatomic, strong) NSString *urlTitle; ///< 显示文本，例如"网页链接"，可能需要裁剪(24)
 @property (nonatomic, strong) NSString *urlTypePic; ///< 链接类型的图片URL
-@property (nonatomic, assign) int32_t urlType; ///< 0:一般链接 36地点 39视频/图片
+@property (nonatomic) int32_t urlType; ///< 0:一般链接 36地点 39视频/图片
 @property (nonatomic, strong) NSString *log;
 @property (nonatomic, strong) NSDictionary *actionLog;
 @property (nonatomic, strong) NSString *pageID; ///< 对应着 WBPageInfo
 @property (nonatomic, strong) NSString *storageType;
 //如果是图片，则会有下面这些，可以直接点开看
 @property (nonatomic, strong) NSArray<NSString *> *picIds;
-@property (nonatomic, strong) NSDictionary<NSString *, WBPicture *> *picInfos;
-@property (nonatomic, strong) NSArray<WBPicture *> *pics;
+@property (nonatomic, strong) NSDictionary<NSString *, ZXGWBPicture *> *picInfos;
+@property (nonatomic, strong) NSArray<ZXGWBPicture *> *pics;
 @end
 
 
@@ -93,8 +96,8 @@ typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
 @interface WBTag : NSObject
 @property (nonatomic, strong) NSString *tagName; ///< 标签名字，例如"上海·上海文庙"
 @property (nonatomic, strong) NSString *tagScheme; ///< 链接 sinaweibo://...
-@property (nonatomic, assign) int32_t tagType; ///< 1 地点 2其他
-@property (nonatomic, assign) int32_t tagHidden;
+@property (nonatomic) int32_t tagType; ///< 1 地点 2其他
+@property (nonatomic) int32_t tagHidden;
 @property (nonatomic, strong) NSURL *urlTypePic; ///< 需要加 _default
 @end
 
@@ -118,207 +121,211 @@ typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
           tips
  -----------------------------
  */
-@interface WBPageInfo : NSObject
-@property (nonatomic, strong) NSString *pageTitle; ///< 页面标题，例如"上海·上海文庙"
-@property (nonatomic, strong) NSString *pageID;
-@property (nonatomic, strong) NSString *pageDesc; ///< 页面描述，例如"上海市黄浦区文庙路215号"
-@property (nonatomic, strong) NSString *content1;
-@property (nonatomic, strong) NSString *content2;
-@property (nonatomic, strong) NSString *content3;
-@property (nonatomic, strong) NSString *content4;
-@property (nonatomic, strong) NSString *tips; ///< 提示，例如"4222条微博"
-@property (nonatomic, strong) NSString *objectType; ///< 类型，例如"place" "video"
-@property (nonatomic, strong) NSString *objectID;
-@property (nonatomic, strong) NSString *scheme; ///< 真实链接，例如 http://v.qq.com/xxx
+@interface ZXGWBPageInfo : NSObject
+
+@property (nonatomic, copy  ) NSString *pageTitle;  // 页面标题，例如"上海·上海文庙"
+@property (nonatomic, copy  ) NSString *pageID;
+@property (nonatomic, copy  ) NSString *pageDesc;   // 页面描述，例如"上海市黄浦区文庙路215号"
+@property (nonatomic, copy  ) NSString *content1;
+@property (nonatomic, copy  ) NSString *content2;
+@property (nonatomic, copy  ) NSString *content3;
+@property (nonatomic, copy  ) NSString *content4;
+@property (nonatomic, copy  ) NSString *tips;       // 提示，例如"4222条微博"
+@property (nonatomic, copy  ) NSString *objectType; // 类型，例如"place" "video"
+@property (nonatomic, copy  ) NSString *objectID;
+@property (nonatomic, copy  ) NSString *scheme;     // 真实链接，例如 http://v.qq.com/xxx
 @property (nonatomic, strong) NSArray<WBButtonLink *> *buttons;
 
-@property (nonatomic, assign) int32_t isAsyn;
-@property (nonatomic, assign) int32_t type;
-@property (nonatomic, strong) NSString *pageURL; ///< 链接 sinaweibo://...
-@property (nonatomic, strong) NSURL *pagePic; ///< 图片URL，不需要加(_default) 通常是左侧的方形图片
-@property (nonatomic, strong) NSURL *typeIcon; ///< Badge 图片URL，不需要加(_default) 通常放在最左上角角落里
-@property (nonatomic, assign) int32_t actStatus;
+@property (nonatomic) NSInteger isAsyn;
+@property (nonatomic) NSInteger type;
+@property (nonatomic, copy  ) NSString *pageURL; // 链接 sinaweibo://...
+@property (nonatomic, strong) NSURL *pagePic;    // 图片URL，不需要加(_default) 通常是左侧的方形图片
+@property (nonatomic, strong) NSURL *typeIcon;   // Badge 图片URL，不需要加(_default) 通常放在最左上角角落里
+@property (nonatomic) NSInteger actStatus;
 @property (nonatomic, strong) NSDictionary *actionlog;
 @property (nonatomic, strong) NSDictionary *mediaInfo;
+
 @end
 
 /**
- 微博标题
+ 微博标题栏
  */
-@interface WBStatusTitle : NSObject
+@interface ZXGWBStatusTitle : NSObject
 
-@property (nonatomic, assign) int32_t baseColor;
-@property (nonatomic, strong) NSString *text; ///< 文本，例如"仅自己可见"
-@property (nonatomic, strong) NSString *iconURL; ///< 图标URL，需要加Default
+@property (nonatomic) NSInteger baseColor;
+@property (nonatomic, copy  ) NSString *text;       // 文本，例如"仅自己可见"
+@property (nonatomic, copy  ) NSString *iconURL;    // 图标URL，需要加Default
+
 @end
 
 /**
  用户
  */
 @interface WBUser : NSObject
-@property (nonatomic, assign) uint64_t userID; ///< id (int)
-@property (nonatomic, strong) NSString *idString; ///< id (string)
-@property (nonatomic, assign) int32_t gender; /// 0:none 1:男 2:女
-@property (nonatomic, strong) NSString *genderString; /// "m":男 "f":女 "n"未知
-@property (nonatomic, strong) NSString *desc; ///< 个人简介
-@property (nonatomic, strong) NSString *domain; ///< 个性域名
 
-@property (nonatomic, strong) NSString *name; ///< 昵称
-@property (nonatomic, strong) NSString *screenName; ///< 友好昵称
-@property (nonatomic, strong) NSString *remark; ///< 备注
+@property (nonatomic) NSInteger userID;             // id (int)
+@property (nonatomic, copy  ) NSString *idString;   // id (string)
 
-@property (nonatomic, assign) int32_t followersCount; ///< 粉丝数
-@property (nonatomic, assign) int32_t friendsCount; ///< 关注数
-@property (nonatomic, assign) int32_t biFollowersCount; ///< 好友数 (双向关注)
-@property (nonatomic, assign) int32_t favouritesCount; ///< 收藏数
-@property (nonatomic, assign) int32_t statusesCount; ///< 微博数
-@property (nonatomic, assign) int32_t topicsCount; ///< 话题数
-@property (nonatomic, assign) int32_t blockedCount; ///< 屏蔽数
-@property (nonatomic, assign) int32_t pagefriendsCount;
-@property (nonatomic, assign) BOOL followMe;
-@property (nonatomic, assign) BOOL following;
+@property (nonatomic) NSInteger gender;             // 0:none 1:男 2:女  "gender":"m",
+@property (nonatomic, copy  ) NSString *genderString; // "m":男 "f":女 "n"未知
 
-@property (nonatomic, strong) NSString *province; ///< 省
-@property (nonatomic, strong) NSString *city;     ///< 市
+@property (nonatomic, copy  ) NSString *desc;       // 个人简介
+@property (nonatomic, copy  ) NSString *domain;     // 个性域名
 
-@property (nonatomic, strong) NSString *url; ///< 博客地址
-@property (nonatomic, strong) NSURL *profileImageURL; ///< 头像 50x50 (FeedList)
-@property (nonatomic, strong) NSURL *avatarLarge;     ///< 头像 180*180
-@property (nonatomic, strong) NSURL *avatarHD;        ///< 头像 原图
-@property (nonatomic, strong) NSURL *coverImage;      ///< 封面图 920x300
+@property (nonatomic, copy  ) NSString *name;       // 昵称
+@property (nonatomic, copy  ) NSString *screenName; // 友好昵称
+@property (nonatomic, copy  ) NSString *remark;     // 备注
+
+@property (nonatomic) NSInteger followersCount;     // 粉丝数
+@property (nonatomic) NSInteger friendsCount;       // 关注数
+@property (nonatomic) NSInteger biFollowersCount;   // 好友数 (双向关注)
+@property (nonatomic) NSInteger favouritesCount;    // 收藏数
+@property (nonatomic) NSInteger statusesCount;      // 微博数
+@property (nonatomic) NSInteger topicsCount;        // 话题数
+@property (nonatomic) NSInteger blockedCount;       // 屏蔽数
+@property (nonatomic) NSInteger pagefriendsCount;
+@property (nonatomic) BOOL followMe;
+@property (nonatomic) BOOL following;
+
+@property (nonatomic, copy  ) NSString *province;   // 省
+@property (nonatomic, copy  ) NSString *city;       // 市
+
+@property (nonatomic, copy  ) NSString *url;        // 博客地址
+@property (nonatomic, strong) NSURL *profileImageURL; // 头像 50x50 (FeedList)
+@property (nonatomic, strong) NSURL *avatarLarge;     // 头像 180*180
+@property (nonatomic, strong) NSURL *avatarHD;        // 头像 原图
+@property (nonatomic, strong) NSURL *coverImage;      // 封面图 920x300
 @property (nonatomic, strong) NSURL *coverImagePhone;
 
-@property (nonatomic, strong) NSString *profileURL;
-@property (nonatomic, assign) int32_t type;
-@property (nonatomic, assign) int32_t ptype;
-@property (nonatomic, assign) int32_t mbtype;
-@property (nonatomic, assign) int32_t urank; ///< 微博等级 (LV)
-@property (nonatomic, assign) int32_t uclass;
-@property (nonatomic, assign) int32_t ulevel;
-@property (nonatomic, assign) int32_t mbrank; ///< 会员等级 (橙名 VIP)
-@property (nonatomic, assign) int32_t star;
-@property (nonatomic, assign) int32_t level;
+@property (nonatomic, copy  ) NSString *profileURL;
+@property (nonatomic) NSInteger type;
+@property (nonatomic) NSInteger ptype;
+@property (nonatomic) NSInteger mbtype;
+@property (nonatomic) NSInteger urank; ///< 微博等级 (LV)
+@property (nonatomic) NSInteger uclass;
+@property (nonatomic) NSInteger ulevel;
+@property (nonatomic) NSInteger mbrank; ///< 会员等级 (橙名 VIP)
+@property (nonatomic) NSInteger star;
+@property (nonatomic) NSInteger level;
 @property (nonatomic, strong) NSDate *createdAt; ///< 注册时间
-@property (nonatomic, assign) BOOL allowAllActMsg;
-@property (nonatomic, assign) BOOL allowAllComment;
-@property (nonatomic, assign) BOOL geoEnabled;
-@property (nonatomic, assign) int32_t onlineStatus;
-@property (nonatomic, strong) NSString *location; ///< 所在地
+@property (nonatomic) BOOL allowAllActMsg;
+@property (nonatomic) BOOL allowAllComment;
+@property (nonatomic) BOOL geoEnabled;
+@property (nonatomic) NSInteger onlineStatus;
+@property (nonatomic, copy  ) NSString *location; ///< 所在地
 @property (nonatomic, strong) NSArray<NSDictionary<NSString *, NSString *> *> *icons;
-@property (nonatomic, strong) NSString *weihao;
-@property (nonatomic, strong) NSString *badgeTop;
-@property (nonatomic, assign) int32_t blockWord;
-@property (nonatomic, assign) int32_t blockApp;
-@property (nonatomic, assign) int32_t hasAbilityTag;
-@property (nonatomic, assign) int32_t creditScore; ///< 信用积分
-@property (nonatomic, strong) NSDictionary<NSString *, NSNumber *> *badge; ///< 勋章
-@property (nonatomic, strong) NSString *lang;
-@property (nonatomic, assign) int32_t userAbility;
+@property (nonatomic, copy  ) NSString *weihao;
+@property (nonatomic, copy  ) NSString *badgeTop;
+@property (nonatomic) NSInteger blockWord;
+@property (nonatomic) NSInteger blockApp;
+@property (nonatomic) NSInteger hasAbilityTag;
+@property (nonatomic) NSInteger creditScore; // 信用积分
+@property (nonatomic, strong) NSDictionary<NSString *, NSNumber *> *badge; // 勋章
+@property (nonatomic, copy  ) NSString *lang;
+@property (nonatomic) NSInteger userAbility;
 @property (nonatomic, strong) NSDictionary *extend;
 
-@property (nonatomic, assign) BOOL verified; ///< 微博认证 (大V)
-@property (nonatomic, assign) int32_t verifiedType;
-@property (nonatomic, assign) int32_t verifiedLevel;
-@property (nonatomic, assign) int32_t verifiedState;
-@property (nonatomic, strong) NSString *verifiedContactEmail;
-@property (nonatomic, strong) NSString *verifiedContactMobile;
-@property (nonatomic, strong) NSString *verifiedTrade;
-@property (nonatomic, strong) NSString *verifiedContactName;
-@property (nonatomic, strong) NSString *verifiedSource;
-@property (nonatomic, strong) NSString *verifiedSourceURL;
-@property (nonatomic, strong) NSString *verifiedReason; ///< 微博认证描述
-@property (nonatomic, strong) NSString *verifiedReasonURL;
-@property (nonatomic, strong) NSString *verifiedReasonModified;
+@property (nonatomic) BOOL verified; // 微博认证 (大V)
+@property (nonatomic) NSInteger verifiedType;
+@property (nonatomic) NSInteger verifiedLevel;
+@property (nonatomic) NSInteger verifiedState;
+@property (nonatomic, copy  ) NSString *verifiedContactEmail;
+@property (nonatomic, copy  ) NSString *verifiedContactMobile;
+@property (nonatomic, copy  ) NSString *verifiedTrade;
+@property (nonatomic, copy  ) NSString *verifiedContactName;
+@property (nonatomic, copy  ) NSString *verifiedSource;
+@property (nonatomic, copy  ) NSString *verifiedSourceURL;
+@property (nonatomic, copy  ) NSString *verifiedReason; // 微博认证描述
+@property (nonatomic, copy  ) NSString *verifiedReasonURL;
+@property (nonatomic, copy  ) NSString *verifiedReasonModified;
 
-@property (nonatomic, assign) WBUserVerifyType userVerifyType;
+@property (nonatomic) WBUserVerifyType userVerifyType;
 
 @end
 
 
-// 单条微博 Model
-@interface WBStatus : NSObject
+/**
+ 一条微博 Model
+ */
+@interface ZXGWBStatus : NSObject
 
-@property (nonatomic, assign) NSInteger statusID; ///< id (number)
-@property (nonatomic, strong) NSString *idstr; ///< id (string)
-@property (nonatomic, strong) NSString *mid;
-@property (nonatomic, strong) NSString *rid;
-@property (nonatomic, strong) NSDate *createdAt; ///< 发布时间
+@property (nonatomic) NSInteger statusID; // 唯一标示
+@property (nonatomic, copy  ) NSString *idstr; //唯一标示 字符串类型
+@property (nonatomic, copy  ) NSString *mid;
+@property (nonatomic, copy  ) NSString *rid;
 
+
+@property (nonatomic, strong) NSDate *createdAt; // 发布时间
 @property (nonatomic, strong) WBUser *user;
-@property (nonatomic, assign) int32_t userType;
+@property (nonatomic) NSInteger userType;
 
-@property (nonatomic, strong) WBStatusTitle *title; ///< 标题栏 (通常为nil)
-@property (nonatomic, strong) NSString *picBg; ///< 微博VIP背景图，需要替换 "os7"
-@property (nonatomic, strong) NSString *text; ///< 正文
-@property (nonatomic, strong) NSURL *thumbnailPic; ///< 缩略图
-@property (nonatomic, strong) NSURL *bmiddlePic; ///< 中图
-@property (nonatomic, strong) NSURL *originalPic; ///< 大图
+@property (nonatomic, strong) ZXGWBStatusTitle *title; // 标题栏(通常为nil)
+@property (nonatomic, copy  ) NSString *picBg;         // 微博VIP背景图，需要替换 "os7"
+@property (nonatomic, copy  ) NSString *text;          // 正文
+@property (nonatomic, strong) NSURL *thumbnailPic;     // 缩略图
+@property (nonatomic, strong) NSURL *bmiddlePic;       // 中图
+@property (nonatomic, strong) NSURL *originalPic;      // 大图
 
-@property (nonatomic, strong) WBStatus *retweetedStatus; ///转发微博
+@property (nonatomic, strong) ZXGWBStatus *retweetedStatus; // 转发微博
 
 @property (nonatomic, strong) NSArray<NSString *> *picIds;
-@property (nonatomic, strong) NSDictionary<NSString *, WBPicture *> *picInfos;
+@property (nonatomic, strong) NSDictionary<NSString *, ZXGWBPicture *> *picInfos;
 
-@property (nonatomic, strong) NSArray<WBPicture *> *pics;
+@property (nonatomic, strong) ZXGWBPageInfo *pageInfo;
+@property (nonatomic, strong) NSArray<ZXGWBPicture *> *pics;
 @property (nonatomic, strong) NSArray<WBURL *> *urlStruct;
 @property (nonatomic, strong) NSArray<WBTopic *> *topicStruct;
 @property (nonatomic, strong) NSArray<WBTag *> *tagStruct;
-@property (nonatomic, strong) WBPageInfo *pageInfo;
 
-@property (nonatomic, assign) BOOL favorited; ///< 是否收藏
-@property (nonatomic, assign) BOOL truncated;  ///< 是否截断
-@property (nonatomic, assign) NSInteger repostsCount; ///< 转发数
-@property (nonatomic, assign) NSInteger commentsCount; ///< 评论数
-@property (nonatomic, assign) NSInteger attitudesCount; ///< 赞数
-@property (nonatomic, assign) NSInteger attitudesStatus; ///< 是否已赞 0:没有
-@property (nonatomic, assign) NSInteger recomState;
+@property (nonatomic) BOOL favorited;  // 是否收藏
+@property (nonatomic) BOOL truncated;  // 是否截断
+@property (nonatomic) NSInteger repostsCount;    // 转发数
+@property (nonatomic) NSInteger commentsCount;   // 评论数
+@property (nonatomic) NSInteger attitudesCount;  // 赞数
+@property (nonatomic) NSInteger attitudesStatus; // 是否已赞 0:没有
+@property (nonatomic) NSInteger recomState;
 
-@property (nonatomic, strong) NSString *inReplyToScreenName;
-@property (nonatomic, strong) NSString *inReplyToStatusId;
-@property (nonatomic, strong) NSString *inReplyToUserId;
+@property (nonatomic, copy  ) NSString *inReplyToScreenName;
+@property (nonatomic, copy  ) NSString *inReplyToStatusId;
+@property (nonatomic, copy  ) NSString *inReplyToUserId;
 
-@property (nonatomic, strong) NSString *source; ///< 来自 XXX
-@property (nonatomic, assign) NSInteger sourceType;
-@property (nonatomic, assign) NSInteger sourceAllowClick; ///< 来源是否允许点击
+@property (nonatomic, copy  ) NSString *source;   // 来自 XXX
+@property (nonatomic) NSInteger sourceType;
+@property (nonatomic) NSInteger sourceAllowClick; // 来源是否允许点击
 
 @property (nonatomic, strong) NSDictionary *geo;
-@property (nonatomic, strong) NSArray *annotations; ///< 地理位置
-@property (nonatomic, assign) NSInteger bizFeature;
-@property (nonatomic, assign) NSInteger mlevel;
-@property (nonatomic, strong) NSString *mblogid;
-@property (nonatomic, strong) NSString *mblogTypeName;
-@property (nonatomic, strong) NSString *scheme;
+@property (nonatomic, strong) NSArray *annotations; // 地理位置
+@property (nonatomic) NSInteger bizFeature;
+@property (nonatomic) NSInteger mlevel;
+@property (nonatomic, copy  ) NSString *mblogid;
+@property (nonatomic, copy  ) NSString *mblogTypeName;
+@property (nonatomic, copy  ) NSString *scheme;
 @property (nonatomic, strong) NSDictionary *visible;
 @property (nonatomic, strong) NSArray *darwinTags;
+
 @end
 
 
-// 一次API请求的数据
-
-@interface WBTimelineItem : NSObject
+/**
+ 一次API请求的 最外层Model
+ */
+@interface ZXGWBTimelineItem : NSObject
 
 @property (nonatomic, strong) NSArray *ad;
 @property (nonatomic, strong) NSArray *advertises;
-@property (nonatomic, strong) NSString *gsid;
-@property (nonatomic, assign) NSInteger interval;
-@property (nonatomic, assign) NSInteger uveBlank;
-@property (nonatomic, assign) NSInteger hasUnread;
-@property (nonatomic, assign) NSInteger totalNumber;
-@property (nonatomic, strong) NSString *sinceID;
-@property (nonatomic, strong) NSString *maxID;
-@property (nonatomic, strong) NSString *previousCursor;
-@property (nonatomic, strong) NSString *nextCursor;
-@property (nonatomic, strong) NSArray<WBStatus *> *statuses;
-/*
- groupInfo
- trends
- */
+@property (nonatomic, strong) NSArray<ZXGWBStatus *> *statuses;
+@property (nonatomic) NSInteger interval;
+@property (nonatomic) NSInteger uveBlank;
+@property (nonatomic) NSInteger hasUnread;
+@property (nonatomic) NSInteger totalNumber;
+@property (nonatomic, copy  ) NSString *gsid;
+@property (nonatomic, copy  ) NSString *sinceID;
+@property (nonatomic, copy  ) NSString *maxID;
+@property (nonatomic, copy  ) NSString *previousCursor;
+@property (nonatomic, copy  ) NSString *nextCursor;
+//    "hasvisible":false,
+//    "trends":Array[1],
 @end
-
-
-
-
-
 
 
 @class WBEmoticonGroup;
@@ -334,18 +341,18 @@ typedef NS_ENUM(NSUInteger, WBEmoticonType) {
 @property (nonatomic, strong) NSString *gif;  ///< 例如 d_chijing.gif
 @property (nonatomic, strong) NSString *png;  ///< 例如 d_chijing.png
 @property (nonatomic, strong) NSString *code; ///< 例如 0x1f60d
-@property (nonatomic, assign) WBEmoticonType type;
+@property (nonatomic) WBEmoticonType type;
 @property (nonatomic, weak) WBEmoticonGroup *group;
 @end
 
 
 @interface WBEmoticonGroup : NSObject
 @property (nonatomic, strong) NSString *groupID; ///< 例如 com.sina.default
-@property (nonatomic, assign) NSInteger version;
+@property (nonatomic) NSInteger version;
 @property (nonatomic, strong) NSString *nameCN; ///< 例如 浪小花
 @property (nonatomic, strong) NSString *nameEN;
 @property (nonatomic, strong) NSString *nameTW;
-@property (nonatomic, assign) NSInteger displayOnly;
-@property (nonatomic, assign) NSInteger groupType;
+@property (nonatomic) NSInteger displayOnly;
+@property (nonatomic) NSInteger groupType;
 @property (nonatomic, strong) NSArray<WBEmoticon *> *emoticons;
 @end

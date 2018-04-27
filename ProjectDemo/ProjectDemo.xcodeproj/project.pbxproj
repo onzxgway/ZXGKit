@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01059DB22092FE8C0072B9FA /* WBStatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01059DB12092FE8C0072B9FA /* WBStatusHelper.m */; };
 		010DABCD2091A3F3004385A8 /* WBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010DABCC2091A3F3004385A8 /* WBModel.m */; };
 		010DABD42091B8B4004385A8 /* WBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010DABD32091B8B4004385A8 /* WBStatusCell.m */; };
 		0112E23C2091DB7600ED9632 /* ZXGPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0112E23B2091DB7600ED9632 /* ZXGPictureView.m */; };
@@ -162,14 +163,16 @@
 		7169020E206232780094BA7D /* weibo_6.json in Resources */ = {isa = PBXBuildFile; fileRef = 71690206206232780094BA7D /* weibo_6.json */; };
 		7169020F206232780094BA7D /* weibo_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 71690207206232780094BA7D /* weibo_1.json */; };
 		71690210206232780094BA7D /* weibo_0.json in Resources */ = {isa = PBXBuildFile; fileRef = 71690208206232780094BA7D /* weibo_0.json */; };
-		71690216206233100094BA7D /* WBStatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71690215206233100094BA7D /* WBStatusController.m */; };
-		7169021C206237050094BA7D /* WBStatusLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7169021B206237050094BA7D /* WBStatusLayout.m */; };
+		71690216206233100094BA7D /* ZXGWBStatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71690215206233100094BA7D /* ZXGWBStatusController.m */; };
+		7169021C206237050094BA7D /* ZXGWBStatusLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7169021B206237050094BA7D /* ZXGWBStatusLayout.m */; };
 		7F2A56997E1016345DDB52CE /* libPods-JDShopCart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CB2DA698FF8D9E7DC2EFB7 /* libPods-JDShopCart.a */; };
 		B5E81446C9CAB44692DCE484 /* libPods-SinaWeibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5B4C7621DD058EE09B51D9 /* libPods-SinaWeibo.a */; };
 		B8F013137D1B75407E5C0DDF /* libPods-Moments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4187232567AAB48CA3EE908 /* libPods-Moments.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01059DB02092FE8C0072B9FA /* WBStatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusHelper.h; sourceTree = "<group>"; };
+		01059DB12092FE8C0072B9FA /* WBStatusHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusHelper.m; sourceTree = "<group>"; };
 		010DABCB2091A3F3004385A8 /* WBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBModel.h; sourceTree = "<group>"; };
 		010DABCC2091A3F3004385A8 /* WBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBModel.m; sourceTree = "<group>"; };
 		010DABD22091B8B4004385A8 /* WBStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStatusCell.h; sourceTree = "<group>"; };
@@ -422,10 +425,10 @@
 		71690206206232780094BA7D /* weibo_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_6.json; sourceTree = "<group>"; };
 		71690207206232780094BA7D /* weibo_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_1.json; sourceTree = "<group>"; };
 		71690208206232780094BA7D /* weibo_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_0.json; sourceTree = "<group>"; };
-		71690214206233100094BA7D /* WBStatusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStatusController.h; sourceTree = "<group>"; };
-		71690215206233100094BA7D /* WBStatusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStatusController.m; sourceTree = "<group>"; };
-		7169021A206237050094BA7D /* WBStatusLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStatusLayout.h; sourceTree = "<group>"; };
-		7169021B206237050094BA7D /* WBStatusLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStatusLayout.m; sourceTree = "<group>"; };
+		71690214206233100094BA7D /* ZXGWBStatusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGWBStatusController.h; sourceTree = "<group>"; };
+		71690215206233100094BA7D /* ZXGWBStatusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGWBStatusController.m; sourceTree = "<group>"; };
+		7169021A206237050094BA7D /* ZXGWBStatusLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGWBStatusLayout.h; sourceTree = "<group>"; };
+		7169021B206237050094BA7D /* ZXGWBStatusLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGWBStatusLayout.m; sourceTree = "<group>"; };
 		7169021E206237D80094BA7D /* pchFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pchFile.pch; sourceTree = "<group>"; };
 		73748228413837CEDFA7D948 /* Pods-JDShopCart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDShopCart.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart.debug.xcconfig"; sourceTree = "<group>"; };
 		84DF843DF16E8304B1EE82CE /* Pods-SinaWBFrameModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWBFrameModel.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SinaWBFrameModel/Pods-SinaWBFrameModel.debug.xcconfig"; sourceTree = "<group>"; };
@@ -497,6 +500,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01059DAF2092FE8C0072B9FA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				01059DB02092FE8C0072B9FA /* WBStatusHelper.h */,
+				01059DB12092FE8C0072B9FA /* WBStatusHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		01B3F801207F037200F64113 /* Moments */ = {
 			isa = PBXGroup;
 			children = (
@@ -964,6 +976,7 @@
 		716901EB2062322C0094BA7D /* SinaWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				01059DAF2092FE8C0072B9FA /* Helper */,
 				716901EC2062322C0094BA7D /* AppDelegate.h */,
 				716901ED2062322C0094BA7D /* AppDelegate.m */,
 				71690200206232780094BA7D /* API_Data */,
@@ -1002,8 +1015,8 @@
 			children = (
 				010DABCB2091A3F3004385A8 /* WBModel.h */,
 				010DABCC2091A3F3004385A8 /* WBModel.m */,
-				7169021A206237050094BA7D /* WBStatusLayout.h */,
-				7169021B206237050094BA7D /* WBStatusLayout.m */,
+				7169021A206237050094BA7D /* ZXGWBStatusLayout.h */,
+				7169021B206237050094BA7D /* ZXGWBStatusLayout.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1022,8 +1035,8 @@
 		71690213206232F60094BA7D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				71690214206233100094BA7D /* WBStatusController.h */,
-				71690215206233100094BA7D /* WBStatusController.m */,
+				71690214206233100094BA7D /* ZXGWBStatusController.h */,
+				71690215206233100094BA7D /* ZXGWBStatusController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1813,12 +1826,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71690216206233100094BA7D /* WBStatusController.m in Sources */,
+				71690216206233100094BA7D /* ZXGWBStatusController.m in Sources */,
 				716901F12062322D0094BA7D /* ViewController.m in Sources */,
 				010DABCD2091A3F3004385A8 /* WBModel.m in Sources */,
 				0112E23C2091DB7600ED9632 /* ZXGPictureView.m in Sources */,
 				716901FC2062322D0094BA7D /* main.m in Sources */,
-				7169021C206237050094BA7D /* WBStatusLayout.m in Sources */,
+				7169021C206237050094BA7D /* ZXGWBStatusLayout.m in Sources */,
+				01059DB22092FE8C0072B9FA /* WBStatusHelper.m in Sources */,
 				716901EE2062322C0094BA7D /* AppDelegate.m in Sources */,
 				010DABD42091B8B4004385A8 /* WBStatusCell.m in Sources */,
 			);
