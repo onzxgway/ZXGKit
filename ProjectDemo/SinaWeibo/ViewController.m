@@ -10,7 +10,9 @@
 #import "ZXGWBStatusController.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *myBtn;
+
 @end
 
 @implementation ViewController

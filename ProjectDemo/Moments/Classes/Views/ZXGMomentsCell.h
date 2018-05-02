@@ -8,14 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZXGMomentsCell : UITableViewCell
+// 卡片
+@interface ZXGMomentsCardView : UIView
 
-/**
- 初始化类方法
- 
- @param tableView 所在的 tableView
- @return 实例
- */
-+ (instancetype)momentsCell:(UITableView *)tableView;
+@property (nonatomic, strong) UIImageView *imageView;
+//@property (nonatomic, strong) UIImageView *badgeImageView;
+@property (nonatomic, strong) YYLabel *label;
+//@property (nonatomic, strong) UIButton *button;
+//@property (nonatomic, weak  ) WBStatusCell *cell;
+
+@end
+
+@interface ZXGMomentsView : UIView
+
+@property (nonatomic, strong) UIImageView *iconImg;  //头像
+@property (nonatomic, strong) YYLabel *nameLab;      //名称
+@property (nonatomic, strong) YYLabel *contentLab;   //内容
+@property (nonatomic, strong) ZXGMomentsCardView *cardView;   //卡片
+@property (nonatomic, strong) NSArray<UIView *> *picViews;    //配图
+@property (nonatomic, strong) YYLabel *timeAndSourceLab;      //时间 和 来源
+@property (nonatomic, strong) UIButton *moreBtn;              //点赞 评论 按钮
+
+@end
+
+@interface ZXGMomentsCell : UITableViewCell <ZXGTableViewCellAble>
 
 @end

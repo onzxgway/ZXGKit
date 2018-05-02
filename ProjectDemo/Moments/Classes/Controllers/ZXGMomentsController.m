@@ -8,12 +8,10 @@
 
 #import "ZXGMomentsController.h"
 #import "ZXGDynamicModel.h"
-#import "ZXGMomentsView.h"
 #import "ZXGMomentsLayout.h"
 
 @interface ZXGMomentsController ()
-@property (nonatomic, strong) ZXGMomentsView *momentsView;
-@property (nonatomic, strong) NSMutableArray<ZXGMomentsLayout *> *momentsModels;
+
 @end
 
 @implementation ZXGMomentsController
@@ -34,10 +32,7 @@
     //
     self.navigationItem.title = @"朋友圈";
     //
-    [self.view addSubview:self.momentsView];
-    [self.momentsView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
+
 //    //
 //    self.dynamicView.mj_header = [MJRefreshHelper MMHeaderWithTarget:self Action:@selector(headerRefresh)];
 //    self.dynamicView.mj_footer = [MJRefreshHelper MMFooterWithTarget:self Action:@selector(footerRefresh)];
@@ -66,25 +61,22 @@
 - (void)getResourece {
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     dispatch_async(queue, ^{
+        
+        ZXGBaseTableViewSectionModel *secModel = [[ZXGBaseTableViewSectionModel alloc] init];
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"moment0" ofType:@"plist"];
         NSArray *sourceArr = [NSArray arrayWithContentsOfFile:plistPath];
         sourceArr = [NSArray modelArrayWithClass:ZXGDynamicModel.class json:sourceArr];
         
-        NSMutableArray *tempArr = [NSMutableArray arrayWithCapacity:sourceArr.count];
         for (ZXGDynamicModel *model in sourceArr) {
             ZXGMomentsLayout *layout = [[ZXGMomentsLayout alloc] initWithMoments:model];
-            [tempArr addObject:layout];
+            [secModel addCellModel:layout];
         }
         
         [NSThread sleepForTimeInterval:2.f];
         NSLog(@"%@", sourceArr);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.momentsModels removeAllObjects];
-            
-            [self.momentsModels addObjectsFromArray:tempArr];
-            
-            [self.momentsView reloadData];
+            [_tableView reloadData];
         });
     });
     
@@ -93,19 +85,5 @@
 
 #pragma mark - public
 #pragma mark - lazyLoad
-- (ZXGMomentsView *)momentsView {
-    if (!_momentsView) {
-        _momentsView = [[ZXGMomentsView alloc] init];
-        _momentsView.momentModels = self.momentsModels;
-    }
-    return _momentsView;
-}
-
-- (NSMutableArray<ZXGMomentsLayout *> *)momentsModels {
-    if (!_momentsModels) {
-        _momentsModels = [NSMutableArray array];
-    }
-    return _momentsModels;
-}
 
 @end

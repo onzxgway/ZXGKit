@@ -20,12 +20,8 @@
 		01B3F81A207F09E000F64113 /* moment1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01B3F818207F09E000F64113 /* moment1.plist */; };
 		01B3F821207F0E4C00F64113 /* ZXGDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F820207F0E4C00F64113 /* ZXGDynamicModel.m */; };
 		01B3F824207F0EDC00F64113 /* ZXGMomentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F823207F0EDC00F64113 /* ZXGMomentsController.m */; };
-		01B3F828207F2AD600F64113 /* ZXGBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F827207F2AD600F64113 /* ZXGBaseController.m */; };
-		01B3F82D207F2C7900F64113 /* ZXGMomentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F82C207F2C7900F64113 /* ZXGMomentsView.m */; };
-		01B3F830207F2F2300F64113 /* ZXGBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F82F207F2F2300F64113 /* ZXGBaseTableView.m */; };
 		01B3F833207F32C900F64113 /* ZXGMomentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F832207F32C900F64113 /* ZXGMomentsCell.m */; };
 		01B3F836207F595C00F64113 /* ZXGMomentsLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F835207F595C00F64113 /* ZXGMomentsLayout.m */; };
-		01B3F839207F600F00F64113 /* ZXGPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F837207F600F00F64113 /* ZXGPhotoContainerView.m */; };
 		04234DB61F8BA1AC001133ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234DB51F8BA1AC001133ED /* main.m */; };
 		04234DB91F8BA1AC001133ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234DB81F8BA1AC001133ED /* AppDelegate.m */; };
 		04234DBC1F8BA1AC001133ED /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04234DBB1F8BA1AC001133ED /* TableViewController.m */; };
@@ -193,19 +189,11 @@
 		01B3F822207F0EDC00F64113 /* ZXGMomentsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGMomentsController.h; sourceTree = "<group>"; };
 		01B3F823207F0EDC00F64113 /* ZXGMomentsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGMomentsController.m; sourceTree = "<group>"; };
 		01B3F825207F0FCA00F64113 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		01B3F826207F2AD600F64113 /* ZXGBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseController.h; sourceTree = "<group>"; };
-		01B3F827207F2AD600F64113 /* ZXGBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseController.m; sourceTree = "<group>"; };
 		01B3F82A207F2B2B00F64113 /* XVColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XVColorMacros.h; path = ../../../Categorys/Category/Macro/XVColorMacros.h; sourceTree = "<group>"; };
-		01B3F82B207F2C7900F64113 /* ZXGMomentsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGMomentsView.h; sourceTree = "<group>"; };
-		01B3F82C207F2C7900F64113 /* ZXGMomentsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGMomentsView.m; sourceTree = "<group>"; };
-		01B3F82E207F2F2300F64113 /* ZXGBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseTableView.h; sourceTree = "<group>"; };
-		01B3F82F207F2F2300F64113 /* ZXGBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseTableView.m; sourceTree = "<group>"; };
 		01B3F831207F32C900F64113 /* ZXGMomentsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGMomentsCell.h; sourceTree = "<group>"; };
 		01B3F832207F32C900F64113 /* ZXGMomentsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGMomentsCell.m; sourceTree = "<group>"; };
 		01B3F834207F595C00F64113 /* ZXGMomentsLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGMomentsLayout.h; sourceTree = "<group>"; };
 		01B3F835207F595C00F64113 /* ZXGMomentsLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGMomentsLayout.m; sourceTree = "<group>"; };
-		01B3F837207F600F00F64113 /* ZXGPhotoContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGPhotoContainerView.m; sourceTree = "<group>"; };
-		01B3F838207F600F00F64113 /* ZXGPhotoContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGPhotoContainerView.h; sourceTree = "<group>"; };
 		04234DB11F8BA1AC001133ED /* ProjectDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04234DB51F8BA1AC001133ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04234DB71F8BA1AC001133ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -548,8 +536,6 @@
 		01B3F81C207F0E0800F64113 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				01B3F826207F2AD600F64113 /* ZXGBaseController.h */,
-				01B3F827207F2AD600F64113 /* ZXGBaseController.m */,
 				01B3F822207F0EDC00F64113 /* ZXGMomentsController.h */,
 				01B3F823207F0EDC00F64113 /* ZXGMomentsController.m */,
 			);
@@ -570,14 +556,8 @@
 		01B3F81E207F0E0800F64113 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				01B3F82E207F2F2300F64113 /* ZXGBaseTableView.h */,
-				01B3F82F207F2F2300F64113 /* ZXGBaseTableView.m */,
-				01B3F82B207F2C7900F64113 /* ZXGMomentsView.h */,
-				01B3F82C207F2C7900F64113 /* ZXGMomentsView.m */,
 				01B3F831207F32C900F64113 /* ZXGMomentsCell.h */,
 				01B3F832207F32C900F64113 /* ZXGMomentsCell.m */,
-				01B3F838207F600F00F64113 /* ZXGPhotoContainerView.h */,
-				01B3F837207F600F00F64113 /* ZXGPhotoContainerView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1205,7 +1185,7 @@
 				TargetAttributes = {
 					01B3F7FF207F037200F64113 = {
 						CreatedOnToolsVersion = 9.0.1;
-						DevelopmentTeam = PHWVAXF5Q9;
+						DevelopmentTeam = K2B7L95AWX;
 						ProvisioningStyle = Automatic;
 					};
 					04234DB01F8BA1AC001133ED = {
@@ -1673,14 +1653,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B3F82D207F2C7900F64113 /* ZXGMomentsView.m in Sources */,
 				01B3F824207F0EDC00F64113 /* ZXGMomentsController.m in Sources */,
 				01B3F812207F037200F64113 /* main.m in Sources */,
 				01B3F804207F037200F64113 /* AppDelegate.m in Sources */,
-				01B3F830207F2F2300F64113 /* ZXGBaseTableView.m in Sources */,
-				01B3F828207F2AD600F64113 /* ZXGBaseController.m in Sources */,
 				01B3F821207F0E4C00F64113 /* ZXGDynamicModel.m in Sources */,
-				01B3F839207F600F00F64113 /* ZXGPhotoContainerView.m in Sources */,
 				01B3F836207F595C00F64113 /* ZXGMomentsLayout.m in Sources */,
 				01B3F833207F32C900F64113 /* ZXGMomentsCell.m in Sources */,
 			);
@@ -1948,14 +1924,14 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PHWVAXF5Q9;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Moments/PrefixHeader.pch;
 				INFOPLIST_FILE = Moments/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orangenet.eTeacherTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1977,14 +1953,14 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PHWVAXF5Q9;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Moments/PrefixHeader.pch;
 				INFOPLIST_FILE = Moments/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orangenet.eTeacherTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

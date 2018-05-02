@@ -330,7 +330,6 @@
         [nameText appendString:@" "];
         [nameText appendAttributedString:vipText];
     }
-    
     nameText.font = [UIFont systemFontOfSize:kWBCellNameFontSize];
     nameText.color = user.mbrank > 0 ? kWBCellNameOrangeColor : kWBCellNameNormalColor;
     nameText.lineBreakMode = NSLineBreakByCharWrapping;

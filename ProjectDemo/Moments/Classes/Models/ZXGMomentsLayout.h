@@ -9,7 +9,15 @@
 #import <Foundation/Foundation.h>
 @class ZXGDynamicModel;
 
-@interface ZXGMomentsLayout : NSObject
+@interface ZXGMomentsLayout : NSObject <ZXGTableViewCellModelAble>
+
+#pragma mark - ZXGTableViewCellModelAble
+
+@property (nonatomic, copy) NSString *reuseIdentifier;  //cell重用标识符
+
+@property (nonatomic) Class cellClass;                  //cell类
+
+@property (nonatomic) CGFloat rowHeight;                // cell行高
 
 /** model*/
 @property (nonatomic, strong, readonly) ZXGDynamicModel *momentsModel;

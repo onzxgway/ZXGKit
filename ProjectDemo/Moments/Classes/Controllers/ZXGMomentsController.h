@@ -6,8 +6,8 @@
 //  Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import "ZXGBaseController.h"
+#import "ZXGBaseTableViewController.h"
 
-@interface ZXGMomentsController : ZXGBaseController
+@interface ZXGMomentsController : ZXGBaseTableViewController
 
 @end
