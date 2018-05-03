@@ -8,11 +8,15 @@
 
 #import "ZXGMomentsCell.h"
 
+// 评论
+@implementation ZXGMomentsCommentView
+
+@end
+
 
 @implementation ZXGMomentsCardView
 
 @end
-
 
 
 @implementation ZXGMomentsView 
@@ -57,7 +61,7 @@
     return _nameLab;
 }
 
-//时间
+//时间 和 来源
 - (YYLabel *)timeAndSourceLab {
     if (!_timeAndSourceLab) {
         _timeAndSourceLab = [[YYLabel alloc] init];
@@ -73,7 +77,32 @@
     return _contentLab;
 }
 
+//卡片
+- (ZXGMomentsCardView *)cardView {
+    if (!_cardView) {
+        _cardView = [[ZXGMomentsCardView alloc] init];
+    }
+    return _cardView;
+}
 
+//评论
+- (ZXGMomentsCommentView *)commentView {
+    if (!_commentView) {
+        _commentView = [[ZXGMomentsCommentView alloc] init];
+    }
+    return _commentView;
+}
+
+//点赞 评论 按钮
+- (UIButton *)moreBtn {
+    if (!_moreBtn) {
+        _moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    }
+    return _moreBtn;
+}
+
+//配图
+//@property (nonatomic, strong) NSArray<UIView *> *picViews;
 
 @end
 
