@@ -9,9 +9,10 @@
 #import "ZXGMomentsController.h"
 #import "ZXGDynamicModel.h"
 #import "ZXGMomentsLayout.h"
+#import "ZXGMomentsCell.h"
 
 @interface ZXGMomentsController ()
-
+//@property (nonatomic, strong) ZXGMomentsOperationMenu *vies;
 @end
 
 @implementation ZXGMomentsController
@@ -32,29 +33,20 @@
     //
     self.navigationItem.title = @"朋友圈";
     //
-
-//    //
-//    self.dynamicView.mj_header = [MJRefreshHelper MMHeaderWithTarget:self Action:@selector(headerRefresh)];
-//    self.dynamicView.mj_footer = [MJRefreshHelper MMFooterWithTarget:self Action:@selector(footerRefresh)];
-//    [self.dynamicView.mj_header beginRefreshing];
-//
-//    //
-//    [self rightBarButtonItem:GET_IMAGE(@"icon_fabu") withClickCallback:^{
-//
-//        [self.view endEditing:YES];
-//        if (STRING_EQUAL(@"Y", XVDataMgr.userSession.isAnchor)) {
-//
-//            IBActionSheet *actionSheet = [[IBActionSheet alloc] initWithTitle:@"发布动态" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"选择照片" otherButtonTitles:@"选择视频", nil];
-//            [actionSheet showInView:APPDELEGATE.window];
-//        }
-//        else if (STRING_EQUAL(@"N", XVDataMgr.userSession.isAnchor)) {
-//            [self showRemendWarningView:@"非主播不能发布动态" withBlock:nil];
-//        }
-//
-//    }];
-//    //
-//    [self.view addSubview:self.inputToolbar];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[GET_IMAGE(@"barbuttonicon_Camera") imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(sendStatus)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+//    self.navigationController.view.userInteractionEnabled = NO;
+    
+//    ZXGMomentsOperationMenu *vies = [[ZXGMomentsOperationMenu alloc] init];
+//    vies.origin = CGPointMake(80, 80);
+//    [self.view addSubview:vies];
+//    self.vies = vies;
 }
+
+- (void)sendStatus {
+    
+}
+
 
 #pragma mark - createViews
 #pragma mark - private
@@ -69,9 +61,11 @@
         
         for (ZXGDynamicModel *model in sourceArr) {
             ZXGMomentsLayout *layout = [[ZXGMomentsLayout alloc] initWithMoments:model];
+            layout.cellClass = [ZXGMomentsCell class];
+            layout.reuseIdentifier = NSStringFromClass(ZXGMomentsCell.class);
             [secModel addCellModel:layout];
         }
-        
+        [_dataSource addObject:secModel];
         [NSThread sleepForTimeInterval:2.f];
         NSLog(@"%@", sourceArr);
         
