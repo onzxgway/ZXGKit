@@ -108,26 +108,8 @@
 
 
 
-
-static NSString *const CellRereuseID = @"ZXGMomentsCell";
-static CGFloat const kTimeFontSize = 11;//时间字体大小
-static CGFloat const kContentFontSize = 16;//内容字体大小
-CGFloat maxContentLabelHeight = 0; // 根据具体font而定
-static CGFloat const kNameFontSize = 16.f;
-
 @interface ZXGMomentsCell ()
-
-#pragma mark - subViews
-//@property (nonatomic, strong) UIView *topLine;       //顶部分割线
-
-//@property (nonatomic, strong) UIImageView *genderImg;//性别
-//@property (nonatomic, strong) XVLevel *levelView;   //等级
-
-
-//@property (nonatomic, strong) ZXGPhotoContainerView *picContainerView;//图片容器
-
 @property (nonatomic, strong) ZXGMomentsView *momentsView;
-
 @end
 
 @implementation ZXGMomentsCell
@@ -163,6 +145,5 @@ static CGFloat const kNameFontSize = 16.f;
     }
     return _momentsView;
 }
-
 
 @end

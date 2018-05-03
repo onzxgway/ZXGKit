@@ -143,6 +143,7 @@
 		0423513B1F8BB580001133ED /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042350EE1F8BB580001133ED /* LayoutConstraintItem.swift */; };
 		0423513C1F8BB580001133ED /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042350F01F8BB580001133ED /* UILayoutSupport+Extensions.swift */; };
 		042351421F8BB580001133ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042350FC1F8BB580001133ED /* ViewController.swift */; };
+		044DB5ED2099F76E000A3E96 /* ZXGMomentsConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DB5EC2099F76E000A3E96 /* ZXGMomentsConst.m */; };
 		17E38D5AB01BE720B5E37528 /* libPods-SinaWBAutoCal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D1F40ADB10A668FBA7B701 /* libPods-SinaWBAutoCal.a */; };
 		2D2F483D645DEACA1317D88B /* libPods-SinaWBFrameModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF96EB1361DC65B397EA01A9 /* libPods-SinaWBFrameModel.a */; };
 		716901EE2062322C0094BA7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 716901ED2062322C0094BA7D /* AppDelegate.m */; };
@@ -386,6 +387,8 @@
 		042350EF1F8BB580001133ED /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
 		042350F01F8BB580001133ED /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		042350FC1F8BB580001133ED /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		044DB5EB2099F6FD000A3E96 /* ZXGMomentsConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGMomentsConst.h; sourceTree = "<group>"; };
+		044DB5EC2099F76E000A3E96 /* ZXGMomentsConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGMomentsConst.m; sourceTree = "<group>"; };
 		1FFA502FC542AD4FBDB4AEAF /* Pods-Moments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Moments/Pods-Moments.debug.xcconfig"; sourceTree = "<group>"; };
 		28CB2DA698FF8D9E7DC2EFB7 /* libPods-JDShopCart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JDShopCart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		388C7776F65E66391123F2DD /* libPods-NetEase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetEase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -558,6 +561,8 @@
 			children = (
 				01B3F831207F32C900F64113 /* ZXGMomentsCell.h */,
 				01B3F832207F32C900F64113 /* ZXGMomentsCell.m */,
+				044DB5EB2099F6FD000A3E96 /* ZXGMomentsConst.h */,
+				044DB5EC2099F76E000A3E96 /* ZXGMomentsConst.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1046,7 +1051,6 @@
 				01B3F7FD207F037200F64113 /* Frameworks */,
 				01B3F7FE207F037200F64113 /* Resources */,
 				29793DB9951DEF0354A5CEAE /* [CP] Copy Pods Resources */,
-				59AD9CE61127B2A10CCC4155 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1083,7 +1087,6 @@
 				04234E521F8BA622001133ED /* Frameworks */,
 				04234E531F8BA622001133ED /* Resources */,
 				A73ABD18CEECAA04BA3AAE6F /* [CP] Copy Pods Resources */,
-				B6E4F9BDC5419D22C85B8659 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1103,7 +1106,6 @@
 				04234E9A1F8BA98C001133ED /* Frameworks */,
 				04234E9B1F8BA98C001133ED /* Resources */,
 				0149163463B7A3CDEFFF56F3 /* [CP] Copy Pods Resources */,
-				B1C959A08C21AEF61706FBC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1123,7 +1125,6 @@
 				04234FCE1F8BB426001133ED /* Frameworks */,
 				04234FCF1F8BB426001133ED /* Resources */,
 				FF38A0441FA239481119F2EE /* [CP] Copy Pods Resources */,
-				5CDE7C087EEE6B5DA40058FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1143,7 +1144,6 @@
 				0423507C1F8BB540001133ED /* Frameworks */,
 				0423507D1F8BB540001133ED /* Resources */,
 				4A643EAFB7A8A4AACAE88B3B /* [CP] Copy Pods Resources */,
-				26AA53800BD3910F27A5B500 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1162,7 +1162,6 @@
 				716901E62062322C0094BA7D /* Sources */,
 				716901E72062322C0094BA7D /* Frameworks */,
 				716901E82062322C0094BA7D /* Resources */,
-				1CD4D924EA6440639D565678 /* [CP] Embed Pods Frameworks */,
 				FA6AE76D71B2DD449BF0E3BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1335,47 +1334,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1CD4D924EA6440639D565678 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		26AA53800BD3910F27A5B500 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBAutoCal/Pods-SinaWBAutoCal-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		29793DB9951DEF0354A5CEAE /* [CP] Copy Pods Resources */ = {
@@ -1385,13 +1356,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Moments/Pods-Moments-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1405,13 +1378,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBAutoCal/Pods-SinaWBAutoCal-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1452,36 +1427,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		59AD9CE61127B2A10CCC4155 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Moments/Pods-Moments-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5CDE7C087EEE6B5DA40058FA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBFrameModel/Pods-SinaWBFrameModel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6D7921A715941863BAF6193C /* [CP] Check Pods Manifest.lock */ = {
@@ -1545,47 +1490,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-NetEase/Pods-NetEase-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-NetEase/Pods-NetEase-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1C959A08C21AEF61706FBC1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B6E4F9BDC5419D22C85B8659 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-NetEase/Pods-NetEase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA0077C8EC2AF18CBC13990D /* [CP] Check Pods Manifest.lock */ = {
@@ -1613,13 +1530,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1633,13 +1552,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBFrameModel/Pods-SinaWBFrameModel-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1657,6 +1578,7 @@
 				01B3F812207F037200F64113 /* main.m in Sources */,
 				01B3F804207F037200F64113 /* AppDelegate.m in Sources */,
 				01B3F821207F0E4C00F64113 /* ZXGDynamicModel.m in Sources */,
+				044DB5ED2099F76E000A3E96 /* ZXGMomentsConst.m in Sources */,
 				01B3F836207F595C00F64113 /* ZXGMomentsLayout.m in Sources */,
 				01B3F833207F32C900F64113 /* ZXGMomentsCell.m in Sources */,
 			);

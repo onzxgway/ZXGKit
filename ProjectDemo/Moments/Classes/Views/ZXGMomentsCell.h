@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZXGMomentsConst.h"
 
 // 评论
 @interface ZXGMomentsCommentView : UIView
@@ -18,10 +19,7 @@
 @interface ZXGMomentsCardView : UIView
 
 @property (nonatomic, strong) UIImageView *imageView;
-//@property (nonatomic, strong) UIImageView *badgeImageView;
 @property (nonatomic, strong) YYLabel *label;
-//@property (nonatomic, strong) UIButton *button;
-//@property (nonatomic, weak  ) WBStatusCell *cell;
 
 @end
 
