@@ -41,7 +41,7 @@ typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
 
 
 /**
- 图片
+ 图片 
  */
 @interface ZXGWBPicture : NSObject
 

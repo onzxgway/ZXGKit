@@ -32,24 +32,30 @@
 @property (nonatomic, strong) YYLabel *contentlab;
 @property (nonatomic, strong) UIButton *button;
 
+- (void)setWithLayout:(ZXGMomentsLayout *)layout;
+
 @end
+
 
 @interface ZXGMomentsView : UIView
 
-@property (nonatomic, strong) UIImageView *avatarView;  //头像
-@property (nonatomic, strong) YYLabel *nameLab;         //名称
-@property (nonatomic, strong) YYLabel *contentLab;      //内容
-@property (nonatomic, strong) ZXGMomentsCardView *cardView;          //卡片
-@property (nonatomic, strong) NSArray<UIView *> *picViews;           //配图
-@property (nonatomic, strong) YYLabel *timeAndSourceLab;             //时间 和 来源
-@property (nonatomic, strong) UIButton *moreBtn;                     //点赞 评论 按钮
-@property (nonatomic, strong) ZXGMomentsCommentView *commentView;    //评论
-@property (nonatomic, strong) ZXGMomentsOperationMenu *operationMenu;//点赞 和 评论
+@property (nonatomic, strong) UIImageView *avatarView;                  //头像
+@property (nonatomic, strong) YYLabel *nameLab;                         //名称
+@property (nonatomic, strong) YYLabel *contentLab;                      //内容
+@property (nonatomic, strong) NSArray<UIView *> *picViews;              //配图
+@property (nonatomic, strong) ZXGMomentsCardView *cardView;             //卡片
+@property (nonatomic, strong) YYLabel *locLab;                          //位置
+@property (nonatomic, strong) YYLabel *timeAndSourceLab;                //时间 和 来源
+@property (nonatomic, strong) UIButton *moreBtn;                        //点赞 评论 按钮
+@property (nonatomic, strong) UIButton *delBtn;                         //删除 按钮
+@property (nonatomic, strong) ZXGMomentsCommentView *commentView;       //评论
+@property (nonatomic, strong) ZXGMomentsOperationMenu *operationMenu;   //点赞 和 评论
 
 @property (nonatomic, strong) ZXGMomentsLayout *layout;
 
 @end
 
-@interface ZXGMomentsCell : UITableViewCell <ZXGTableViewCellAble>
 
+@interface ZXGMomentsCell : UITableViewCell <ZXGTableViewCellAble>
+@property (nonatomic, strong) ZXGMomentsView *momentsView;
 @end

@@ -11,6 +11,7 @@
 		010DABCD2091A3F3004385A8 /* WBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010DABCC2091A3F3004385A8 /* WBModel.m */; };
 		010DABD42091B8B4004385A8 /* WBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010DABD32091B8B4004385A8 /* WBStatusCell.m */; };
 		0112E23C2091DB7600ED9632 /* ZXGPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0112E23B2091DB7600ED9632 /* ZXGPictureView.m */; };
+		012B31EF209C04B800D84B0A /* ZXGPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B31EE209C04B800D84B0A /* ZXGPictureView.m */; };
 		015BE0B621EF66A968F3253B /* libPods-NetEase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388C7776F65E66391123F2DD /* libPods-NetEase.a */; };
 		01B3F804207F037200F64113 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F803207F037200F64113 /* AppDelegate.m */; };
 		01B3F80C207F037200F64113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B3F80B207F037200F64113 /* Assets.xcassets */; };
@@ -176,6 +177,8 @@
 		010DABD32091B8B4004385A8 /* WBStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStatusCell.m; sourceTree = "<group>"; };
 		0112E23A2091DB7600ED9632 /* ZXGPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPictureView.h; sourceTree = "<group>"; };
 		0112E23B2091DB7600ED9632 /* ZXGPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPictureView.m; sourceTree = "<group>"; };
+		012B31ED209C04B800D84B0A /* ZXGPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPictureView.h; sourceTree = "<group>"; };
+		012B31EE209C04B800D84B0A /* ZXGPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPictureView.m; sourceTree = "<group>"; };
 		01B3F800207F037200F64113 /* Moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3F802207F037200F64113 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01B3F803207F037200F64113 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -563,6 +566,8 @@
 				01B3F832207F32C900F64113 /* ZXGMomentsCell.m */,
 				044DB5EB2099F6FD000A3E96 /* ZXGMomentsConst.h */,
 				044DB5EC2099F76E000A3E96 /* ZXGMomentsConst.m */,
+				012B31ED209C04B800D84B0A /* ZXGPictureView.h */,
+				012B31EE209C04B800D84B0A /* ZXGPictureView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1340,7 +1345,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -1360,7 +1365,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Moments/Pods-Moments-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -1380,7 +1385,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBAutoCal/Pods-SinaWBAutoCal-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -1550,7 +1555,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-NetEase/Pods-NetEase-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -1618,7 +1623,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -1638,7 +1643,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBFrameModel/Pods-SinaWBFrameModel-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -1661,6 +1666,7 @@
 				01B3F824207F0EDC00F64113 /* ZXGMomentsController.m in Sources */,
 				01B3F812207F037200F64113 /* main.m in Sources */,
 				01B3F804207F037200F64113 /* AppDelegate.m in Sources */,
+				012B31EF209C04B800D84B0A /* ZXGPictureView.m in Sources */,
 				01B3F821207F0E4C00F64113 /* ZXGDynamicModel.m in Sources */,
 				044DB5ED2099F76E000A3E96 /* ZXGMomentsConst.m in Sources */,
 				01B3F836207F595C00F64113 /* ZXGMomentsLayout.m in Sources */,
