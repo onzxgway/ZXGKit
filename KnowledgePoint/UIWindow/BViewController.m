@@ -7,6 +7,8 @@
 //
 
 #import "BViewController.h"
+#import "ZXGCommonKit.h"
+#import "AppDelegate.h"
 
 @interface BViewController ()
 
@@ -17,21 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    //
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"exchangeKeyWindow" style:UIBarButtonItemStylePlain target:self action:@selector(exchangeKeyWindow)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)exchangeKeyWindow {
+    UIWindow *win = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];//一旦创建好了之后，自动添加在整个界面上
+    win.hidden = NO;
+    win.backgroundColor = kRandomColor;
+    [win makeKeyAndVisible];
+    [APPDELEGATE setWindow:win];
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

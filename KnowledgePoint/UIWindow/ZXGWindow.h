@@ -10,7 +10,7 @@
 
 @interface ZXGWindow : UIWindow
 
-+ (instancetype)sharedZXGWindow;
++ (instancetype)sharedWindow;
 
 - (void)show;
 

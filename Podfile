@@ -21,6 +21,15 @@ KnowledgePointDemoArray.each do |t|
     end
 end
 
+# target数组 如果有新的target直接加入该数组
+KnowledgePointArray = ['UIWindow']
+KnowledgePointArray.each do |t|
+    target t do
+        project 'KnowledgePoint/KnowledgePoint.project'
+        pods
+    end
+end
+
 # Third.project
 thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit']
 thirdArray.each do |t|

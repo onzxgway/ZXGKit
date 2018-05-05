@@ -10,9 +10,9 @@
 #import "ZXGDynamicModel.h"
 #import "ZXGMomentsLayout.h"
 #import "ZXGMomentsCell.h"
+#import "NSDictionary+Log.h"
 
 @interface ZXGMomentsController ()
-//@property (nonatomic, strong) ZXGMomentsOperationMenu *vies;
 @end
 
 @implementation ZXGMomentsController
@@ -37,10 +37,12 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 //    self.navigationController.view.userInteractionEnabled = NO;
     
-//    ZXGMomentsOperationMenu *vies = [[ZXGMomentsOperationMenu alloc] init];
-//    vies.origin = CGPointMake(80, 80);
-//    [self.view addSubview:vies];
-//    self.vies = vies;
+    NSDictionary *arr = @{@"哈哈1":@"123",
+                          @"哈哈2":@"123",
+                          @"哈哈3":@"大家好",
+                          @"哈哈4":@"123",
+                          @"哈哈5":@"123"};
+    NSLog(@"%@", arr);
 }
 
 - (void)sendStatus {
@@ -67,7 +69,6 @@
         }
         [_dataSource addObject:secModel];
         [NSThread sleepForTimeInterval:2.f];
-        NSLog(@"%@", sourceArr);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [_tableView reloadData];

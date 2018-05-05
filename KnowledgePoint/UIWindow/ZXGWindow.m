@@ -16,11 +16,11 @@
 @implementation ZXGWindow
 
 //Window一旦被创建，会自动添加到界面上。
-+ (instancetype)sharedZXGWindow {
++ (instancetype)sharedWindow {
     static ZXGWindow *_instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[self alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _instance = [[self alloc] initWithFrame:CGRectMake(50, 260, 220, 66)];
     });
     return _instance;
 }
@@ -36,11 +36,11 @@
         self.btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.btn addTarget:self action:@selector(clicked) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.btn];
-        self.btn.frame = CGRectMake(10, 100, 60, 20);
+        self.btn.frame = CGRectMake(10, 10, 60, 20);
         [self.btn setTitle:@"Log in" forState:UIControlStateNormal];
         //
         self.tf = [[UITextField alloc] init];
-        self.tf.frame = CGRectMake(10, 200, 60, 20);
+        self.tf.frame = CGRectMake(10, 40, 60, 20);
         [self addSubview:self.tf];
         [self.tf setPlaceholder:@"请输入"];
 

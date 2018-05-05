@@ -212,6 +212,7 @@
 		71DDFFF520479100002B54D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DDFF9020479100002B54D8 /* main.m */; };
 		71DDFFF620479100002B54D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DDFF9120479100002B54D8 /* AppDelegate.m */; };
 		71DDFFF720479100002B54D8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71DDFF9320479100002B54D8 /* Info.plist */; };
+		B7A9DC347C3FCA51B9ADD755 /* libPods-UIWindow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF77EBF8BBA6D3E16C052F3 /* libPods-UIWindow.a */; };
 		F006F6871F8B5B740061F231 /* Confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = F006F6861F8B5B740061F231 /* Confuse.sh */; };
 		F08D34831F8DC83600AE44F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08D34821F8DC83600AE44F3 /* main.m */; };
 		F08E12291F78DDB1005DE5F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08E12281F78DDB1005DE5F9 /* main.m */; };
@@ -300,8 +301,9 @@
 		04F762371F97565600F4EF74 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		04F762391F97584600F4EF74 /* Tips */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips; sourceTree = "<group>"; };
 		04F7623F1F97590800F4EF74 /* 猴子测试UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "猴子测试UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04F762411F97590800F4EF74 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
+		04F762411F97590800F4EF74 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ____UITests.m; sourceTree = "<group>"; };
 		04F762431F97590800F4EF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF77EBF8BBA6D3E16C052F3 /* libPods-UIWindow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIWindow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC2DEE33B1CF378585BC0A5 /* Pods-OCAndJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.release.xcconfig"; sourceTree = "<group>"; };
 		5A852473A6967D95F75F9B56 /* libPods-OCAndJS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCAndJS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		714026E1204FE94600D2993D /* SD知识点.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SD知识点.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -670,6 +672,8 @@
 		71DDFFFE20479139002B54D8 /* UIStepper+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStepper+RACSignalSupport.m"; sourceTree = "<group>"; };
 		71DDFFFF20479139002B54D8 /* RACSubscriptionScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubscriptionScheduler.m; sourceTree = "<group>"; };
 		AAD019E11DDC8478213A2CFD /* Pods-OCAndJS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.debug.xcconfig"; sourceTree = "<group>"; };
+		B7F0CB296B9D394EDF12E8F2 /* Pods-UIWindow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIWindow.release.xcconfig"; path = "../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow.release.xcconfig"; sourceTree = "<group>"; };
+		C9493FF91E75F436CDC66959 /* Pods-UIWindow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIWindow.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow.debug.xcconfig"; sourceTree = "<group>"; };
 		F006F6861F8B5B740061F231 /* Confuse.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Confuse.sh; sourceTree = "<group>"; };
 		F08D34801F8DC83600AE44F3 /* block循环引用 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "block循环引用"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08D34821F8DC83600AE44F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -783,6 +787,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A9DC347C3FCA51B9ADD755 /* libPods-UIWindow.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,6 +923,7 @@
 			isa = PBXGroup;
 			children = (
 				5A852473A6967D95F75F9B56 /* libPods-OCAndJS.a */,
+				2CF77EBF8BBA6D3E16C052F3 /* libPods-UIWindow.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1403,6 +1409,8 @@
 			children = (
 				AAD019E11DDC8478213A2CFD /* Pods-OCAndJS.debug.xcconfig */,
 				4FC2DEE33B1CF378585BC0A5 /* Pods-OCAndJS.release.xcconfig */,
+				C9493FF91E75F436CDC66959 /* Pods-UIWindow.debug.xcconfig */,
+				B7F0CB296B9D394EDF12E8F2 /* Pods-UIWindow.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1711,9 +1719,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7199A2EF2060999F0051812D /* Build configuration list for PBXNativeTarget "UIWindow" */;
 			buildPhases = (
+				10C37B3105359DD399B7C960 /* [CP] Check Pods Manifest.lock */,
 				7199A2D62060999F0051812D /* Sources */,
 				7199A2D72060999F0051812D /* Frameworks */,
 				7199A2D82060999F0051812D /* Resources */,
+				9B4834C64D8B4B041FCB8E91 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2096,6 +2106,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10C37B3105359DD399B7C960 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIWindow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B4834C64D8B4B041FCB8E91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F006F6841F8B58130061F231 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3012,6 +3058,7 @@
 		};
 		7199A2ED2060999F0051812D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9493FF91E75F436CDC66959 /* Pods-UIWindow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -3036,6 +3083,7 @@
 		};
 		7199A2EE2060999F0051812D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7F0CB296B9D394EDF12E8F2 /* Pods-UIWindow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
