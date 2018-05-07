@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ZXGMomentsConst.h"
-#import "ZXGDynamicModel.h"
+#import "ZXGMomentModel.h"
 
 @interface ZXGMomentsLayout : NSObject <ZXGTableViewCellModelAble>
 
@@ -20,12 +20,11 @@
 
 @property (nonatomic) CGFloat rowHeight;                // cell行高
 
-/** model*/
-@property (nonatomic, strong, readonly) ZXGDynamicModel *momentsModel;
+@property (nonatomic, strong, readonly) ZXGMomentModel *momentsModel; // model
 
-- (instancetype)initWithMoments:(ZXGDynamicModel *)moments NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMoments:(ZXGMomentModel *)moments NS_DESIGNATED_INITIALIZER;
 
-//---------->以下是布局结果<----------
+//              ---------->以下是布局结果<----------
 // 名称
 @property (nonatomic) CGFloat nameHeight; // 名称栏高度，0为没名称栏
 @property (nonatomic, strong) YYTextLayout *nameTextLayout; // 名称栏
@@ -52,13 +51,28 @@
 @property (nonatomic) CGFloat locHeight; // 位置高度，0为没位置
 @property (nonatomic, strong) YYTextLayout *locTextLayout; //位置文本
 
-// 工具栏
-@property (nonatomic) CGFloat toolbarHeight; // 工具栏
-@property (nonatomic, strong) YYTextLayout *toolbarRepostTextLayout;
-@property (nonatomic, strong) YYTextLayout *toolbarCommentTextLayout;
-@property (nonatomic, strong) YYTextLayout *toolbarLikeTextLayout;
-@property (nonatomic) CGFloat toolbarRepostTextWidth;
-@property (nonatomic) CGFloat toolbarCommentTextWidth;
-@property (nonatomic) CGFloat toolbarLikeTextWidth;
+// 评论
+@property (nonatomic) CGFloat comHeight; // 评论高度，0为没评论
+@property (nonatomic, strong) NSMutableArray *comTextLayouts;//评论和点赞文本
 
 @end
+
+
+/**
+ 文本 Line 位置修改
+ 将每行文本的高度和位置固定下来，不受中英文/Emoji字体的 ascent/descent 影响
+ */
+@interface ZXGMomentsTextLinePositionModifier : NSObject <YYTextLinePositionModifier>
+
+@property (nonatomic, strong) UIFont *font;         // 基准字体 (例如 Heiti SC/PingFang SC)
+@property (nonatomic) CGFloat paddingTop;           // 文本顶部留白
+@property (nonatomic) CGFloat paddingBottom;        // 文本底部留白
+@property (nonatomic) CGFloat lineHeightMultiple;   // 行距倍数
+- (CGFloat)heightForLineCount:(NSUInteger)lineCount;
+
+@end
+
+
+
+
+

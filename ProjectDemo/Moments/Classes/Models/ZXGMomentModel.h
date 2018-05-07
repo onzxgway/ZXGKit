@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ZXGDynamicCommentModel : NSObject
+@interface ZXGMomentsLikeModel : NSObject
+@property (nonatomic, copy  ) NSString *memberName;     //点赞者名称
+@property (nonatomic, copy  ) NSString *memberId;       //点赞者ID
+@end
+
+@interface ZXGMomentsCommentModel : NSObject
 @property (nonatomic, copy  ) NSString *memberName;     //发布者名称
 @property (nonatomic, copy  ) NSString *content;        //发布内容
 @property (nonatomic, copy  ) NSString *replyMemberName;//被回复者名称
@@ -18,13 +23,13 @@
 @end
 
 
-@interface ZXGDynamicLocationModel : NSObject
+@interface ZXGMomentsLocationModel : NSObject
 @property (nonatomic, copy  ) NSString *name; //位置名称
 @property (nonatomic, copy  ) NSString *url;  //位置详情
 @end
 
 
-@interface ZXGDynamicModel : NSObject
+@interface ZXGMomentModel : NSObject
 
 @property (nonatomic, copy  ) NSString *userId;     //用户ID  唯一标示
 @property (nonatomic, copy  ) NSString *avatalUrl;  //用户头像
@@ -44,13 +49,11 @@
 //@property(nonatomic,strong)NSString * remark;//用户个性签名
 //@property(nonatomic,strong)NSString * favorite;//该字段存在,则表示当前登录微赚宝用户已收藏过这个店铺
 
-@property (nonatomic, strong) ZXGDynamicLocationModel *locaionMsg;          //位置信息
-@property (nonatomic, strong) NSArray *optthumb;                            //点赞数组
-@property (nonatomic, strong) NSArray<ZXGDynamicCommentModel *> *comments;  //评论集合
+@property (nonatomic, strong) ZXGMomentsLocationModel *locaionMsg;          //位置信息
+@property (nonatomic, strong) NSArray<ZXGMomentsLikeModel *> *likes;        //点赞数组
+@property (nonatomic, strong) NSArray<ZXGMomentsCommentModel *> *comments;  //评论集合
 //@property(nonatomic,strong)NSDictionary * spreadparams;//推广内容
-//@property(nonatomic,strong)NSMutableArray<DynamicsLikeItemModel *> * likeArr;//存放Model点赞数组
 //@property(nonatomic,strong)NSData * photocollectionsData;//照片数组(存入数据库)
-//
 //
 //@property (nonatomic, assign) BOOL isOpening;//已展开文字
 //@property (nonatomic, assign, readonly) BOOL shouldShowMoreButton;//应该显示"全文"

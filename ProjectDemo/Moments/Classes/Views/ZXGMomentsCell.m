@@ -7,8 +7,8 @@
 //
 
 #import "ZXGMomentsCell.h"
-#import "ZXGMomentsLayout.h"
 #import "ZXGPictureView.h"
+#import "ZXGArrowTopLayer.h"
 
 @implementation ZXGMomentsOperationMenu
 
@@ -94,7 +94,75 @@
 @end
 
 // 评论
-@implementation ZXGMomentsCommentView
+@implementation ZXGMomentsCommentView {
+    NSMutableArray<YYLabel *> *_cacheLabels;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = kMomentsCardAndCommentColor;
+        _cacheLabels = [NSMutableArray array];
+        
+        //🔼
+        ZXGArrowTopLayer *layer = [ZXGArrowTopLayer layer];
+        // 设置层的宽高
+        layer.frame = CGRectMake(9, -6, 14, 6);
+        // 开始绘制图层
+        [layer setNeedsDisplay];
+        [self.layer addSublayer:layer];
+    }
+    return self;
+}
+
+- (void)setLayout:(ZXGMomentsLayout *)layout {
+    _layout = layout;
+    
+    if (!layout.comTextLayouts || layout.comTextLayouts.count <= 0) return;
+    
+    for (YYLabel *lab in _cacheLabels) {
+        lab.hidden = YES;
+    }
+    
+    // 缓存Label的个数
+    NSInteger cacheLabelsCount = _cacheLabels.count;
+    // 需要新增的Label的个数
+    NSInteger needsToAddCount = layout.comTextLayouts.count > cacheLabelsCount ? (layout.comTextLayouts.count - cacheLabelsCount) : 0;
+    // 新增Label
+    for (int i = 0; i < needsToAddCount; ++i) {
+        YYLabel *label = [[YYLabel alloc] init];
+        label.textVerticalAlignment = YYTextVerticalAlignmentCenter;
+        label.displaysAsynchronously = YES;
+        label.ignoreCommonProperties = YES;
+        label.fadeOnHighlight = NO;
+        label.fadeOnAsynchronouslyDisplay = NO;
+        label.hidden = YES;
+        [self addSubview:label];
+        [_cacheLabels addObject:label];
+    }
+    
+    CGFloat x = 0;
+    CGFloat y = 0;
+    CGFloat w = kMomentsContentWidth;
+    for (NSInteger i = 0; i < layout.comTextLayouts.count; ++i) {
+        YYTextLayout *textLayout = [layout.comTextLayouts objectAtIndex:i];
+        YYLabel *label = [_cacheLabels objectAtIndex:i];
+        label.hidden = NO;
+        label.textLayout = textLayout;
+        label.frame = CGRectMake(x, y, w, textLayout.textBoundingSize.height);
+        y += textLayout.textBoundingSize.height;
+        if (i == 0 && layout.momentsModel.likes && layout.momentsModel.likes.count > 0) {
+            // 点赞分割线
+            CALayer *bottomLine = [[CALayer alloc] init];
+            bottomLine.backgroundColor = kMomentsLineColor.CGColor;
+            bottomLine.width = kMomentsContentWidth;
+            bottomLine.left = 0;
+            bottomLine.height = ONE_PIXEL;
+            bottomLine.top = label.layer.height - ONE_PIXEL;
+            [label.layer addSublayer:bottomLine];
+        }
+    }
+}
 
 @end
 
@@ -110,7 +178,7 @@
     self = [super initWithFrame:frame];
     
     self.exclusiveTouch = YES;
-    self.backgroundColor = RGB(242, 242, 245);
+    self.backgroundColor = kMomentsCardAndCommentColor;
     
     // 头像
     _avatarView = [[UIImageView alloc] init];
@@ -119,6 +187,7 @@
     _avatarView.top = kCardHVMargin;
     _avatarView.left = kCardHVMargin;
     _avatarView.contentMode = UIViewContentModeScaleAspectFill;
+    _avatarView.clipsToBounds = YES;
     [self addSubview:_avatarView];
     
     // 简介
@@ -148,6 +217,21 @@
     
     _contentlab.textLayout = layout.cardTextLayout;
     
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.backgroundColor = kMomentsCardHighlightColor;
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.backgroundColor = kMomentsCardAndCommentColor;
+    if ([_cell.delegate respondsToSelector:@selector(cellDidClickCard:)]) {
+        [_cell.delegate cellDidClickCard:_cell];
+    }
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.backgroundColor = kMomentsCardAndCommentColor;
 }
 
 @end
@@ -211,7 +295,7 @@
     
     // 底部分割线
     CALayer *bottomLine = [[CALayer alloc] init];
-    bottomLine.backgroundColor = RGB(228, 224, 228).CGColor;
+    bottomLine.backgroundColor = kMomentsLineColor.CGColor;
     bottomLine.width = self.width;
     bottomLine.bottom = self.height;
     bottomLine.height = ONE_PIXEL;
@@ -221,7 +305,7 @@
 - (void)setLayout:(ZXGMomentsLayout *)layout {
     _layout = layout;
     
-    ZXGDynamicModel *model = layout.momentsModel;
+    ZXGMomentModel *model = layout.momentsModel;
     //
     self.height = layout.rowHeight;
     CGFloat top = kTopBtmMargin;
@@ -285,7 +369,7 @@
     _timeAndSourceLab.width = layout.publichTimeTextLayout.textBoundingSize.width;
     _timeAndSourceLab.top = top;
     
-    CGFloat timeAndSourceLabCenterY = layout.rowHeight - kTopBtmMargin - _timeAndSourceLab.height * 0.5;
+    CGFloat timeAndSourceLabCenterY = top + layout.publichTimeHeight * 0.5;
     // more按钮
     _moreBtn.centerY = timeAndSourceLabCenterY;
     //
@@ -305,6 +389,18 @@
     
     top += layout.publichTimeHeight;
     top += kVMargin;
+    
+    // 评论
+    if (layout.comHeight > 0) {
+        _commentView.hidden = NO;
+        _commentView.height = layout.comHeight;
+        _commentView.top = top;
+        _commentView.layout = layout;
+    }
+    else {
+        _commentView.hidden = YES;
+    }
+    
 }
 
 #pragma mark - private
@@ -368,6 +464,11 @@
 - (void)moreClick {
     _operationMenu.show = !_operationMenu.isShowing;
 }
+
+- (void)delClick {
+    
+}
+
 
 #pragma mark - lazyLoad
 // 头像
@@ -459,8 +560,8 @@
 - (ZXGMomentsCommentView *)commentView {
     if (!_commentView) {
         _commentView = [[ZXGMomentsCommentView alloc] init];
-        _commentView.left = self.avatarView.right + kHMargin;
-        _commentView.right = SCREEN_WIDTH - kLeftRightMargin;
+        _commentView.left = kMomentsContentLeft;
+        _commentView.width = kMomentsContentWidth;
     }
     return _commentView;
 }
@@ -524,6 +625,8 @@
 - (void)settingModel:(id<ZXGTableViewCellModelAble>)model secModel:(ZXGBaseTableViewSectionModel *)secModel indexPath:(NSIndexPath *)indexPath {
     ZXGMomentsLayout *layout = (ZXGMomentsLayout *)model;
     self.contentView.height = layout.rowHeight;
+    _momentsView.cell = self;
+    _momentsView.cardView.cell = self;
     _momentsView.layout = layout;
 }
 

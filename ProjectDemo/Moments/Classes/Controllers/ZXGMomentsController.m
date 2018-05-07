@@ -7,11 +7,11 @@
 //
 
 #import "ZXGMomentsController.h"
-#import "ZXGDynamicModel.h"
+#import "ZXGMomentModel.h"
 #import "ZXGMomentsLayout.h"
 #import "ZXGMomentsCell.h"
 
-@interface ZXGMomentsController ()
+@interface ZXGMomentsController () <ZXGMomentsCellDelegate>
 //@property (nonatomic, strong) ZXGMomentsOperationMenu *vies;
 @end
 
@@ -36,11 +36,6 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[GET_IMAGE(@"barbuttonicon_Camera") imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(sendStatus)];
     self.navigationItem.rightBarButtonItem = rightItem;
 //    self.navigationController.view.userInteractionEnabled = NO;
-    
-//    ZXGMomentsOperationMenu *vies = [[ZXGMomentsOperationMenu alloc] init];
-//    vies.origin = CGPointMake(80, 80);
-//    [self.view addSubview:vies];
-//    self.vies = vies;
 }
 
 - (void)sendStatus {
@@ -48,7 +43,18 @@
 }
 
 
-#pragma mark - createViews
+#pragma mark - ZXGMomentsCellDelegate
+- (void)cellDidClickCard:(ZXGMomentsCell *)cell {
+    
+    ZXGBaseWKWebViewController *ctrl = [[ZXGBaseWKWebViewController alloc] init];
+    
+    ZXGBaseWebViewModel *model = [[ZXGBaseWebViewModel alloc] init];
+    model.articleLinkStr = cell.momentsView.layout.momentsModel.url;
+    
+    ctrl.contentModel = model;
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
 #pragma mark - private
 - (void)getResourece {
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
@@ -57,17 +63,15 @@
         ZXGBaseTableViewSectionModel *secModel = [[ZXGBaseTableViewSectionModel alloc] init];
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"moment0" ofType:@"plist"];
         NSArray *sourceArr = [NSArray arrayWithContentsOfFile:plistPath];
-        sourceArr = [NSArray modelArrayWithClass:ZXGDynamicModel.class json:sourceArr];
+        sourceArr = [NSArray modelArrayWithClass:ZXGMomentModel.class json:sourceArr];
         
-        for (ZXGDynamicModel *model in sourceArr) {
+        for (ZXGMomentModel *model in sourceArr) {
             ZXGMomentsLayout *layout = [[ZXGMomentsLayout alloc] initWithMoments:model];
             layout.cellClass = [ZXGMomentsCell class];
             layout.reuseIdentifier = NSStringFromClass(ZXGMomentsCell.class);
             [secModel addCellModel:layout];
         }
         [_dataSource addObject:secModel];
-        [NSThread sleepForTimeInterval:2.f];
-        NSLog(@"%@", sourceArr);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [_tableView reloadData];
