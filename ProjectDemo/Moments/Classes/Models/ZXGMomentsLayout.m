@@ -240,12 +240,11 @@
     
     NSMutableString *tempStr = @"".mutableCopy;
     if (likes.count > 0) {
-        
         for (ZXGMomentsLikeModel *model in likes) {
-            [tempStr appendFormat:@", %@", model.memberName];
+            [tempStr appendFormat:@"，%@", model.memberName];
         }
-        if ([tempStr hasPrefix:@", "]) {
-            [tempStr deleteCharactersInRange:NSMakeRange(0, 2)];
+        if ([tempStr hasPrefix:@"，"]) {
+            [tempStr deleteCharactersInRange:NSMakeRange(0, 1)];
         }
         NSMutableAttributedString *likeString = [[NSMutableAttributedString alloc] initWithString:tempStr];
         [likeString setFont:SYSTEMFONT(kComFontSize)];

@@ -182,7 +182,7 @@
     
     // 头像
     _avatarView = [[UIImageView alloc] init];
-    _avatarView.backgroundColor = kRandomColor;
+    _avatarView.backgroundColor = kWhiteColor;
     _avatarView.size = CGSizeMake(kAvaterSize, kAvaterSize);
     _avatarView.top = kCardHVMargin;
     _avatarView.left = kCardHVMargin;
@@ -275,6 +275,7 @@
         imageView.size = CGSizeMake(100, 100);
         imageView.hidden = YES;
         imageView.clipsToBounds = YES;
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.backgroundColor = kLightGrayColor;
         imageView.exclusiveTouch = YES;
         //            imageView.touchBlock = ^(YYControl *view, YYGestureRecognizerState state, NSSet *touches, UIEvent *event) {
@@ -475,12 +476,13 @@
 - (UIImageView *)avatarView {
     if (!_avatarView) {
         _avatarView = [[UIImageView alloc] init];
-        _avatarView.backgroundColor = kRandomColor;
+        _avatarView.backgroundColor = kWhiteColor;
         _avatarView.userInteractionEnabled = YES;
         _avatarView.size = CGSizeMake(kAvaterSize, kAvaterSize);
         _avatarView.top = kTopBtmMargin;
         _avatarView.left = kLeftRightMargin;
         _avatarView.contentMode = UIViewContentModeScaleAspectFill;
+        _avatarView.clipsToBounds = YES;
 //        [_iconImg addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(iconImgClick)]];
     }
     return _avatarView;

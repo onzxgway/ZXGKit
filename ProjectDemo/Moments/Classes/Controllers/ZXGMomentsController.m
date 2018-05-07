@@ -12,12 +12,8 @@
 #import "ZXGMomentsCell.h"
 #import "NSDictionary+Log.h"
 
-<<<<<<< HEAD
 @interface ZXGMomentsController () <ZXGMomentsCellDelegate>
-//@property (nonatomic, strong) ZXGMomentsOperationMenu *vies;
-=======
-@interface ZXGMomentsController ()
->>>>>>> origin/master
+
 @end
 
 @implementation ZXGMomentsController
@@ -41,16 +37,6 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[GET_IMAGE(@"barbuttonicon_Camera") imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(sendStatus)];
     self.navigationItem.rightBarButtonItem = rightItem;
 //    self.navigationController.view.userInteractionEnabled = NO;
-<<<<<<< HEAD
-=======
-    
-    NSDictionary *arr = @{@"哈哈1":@"123",
-                          @"哈哈2":@"123",
-                          @"哈哈3":@"大家好",
-                          @"哈哈4":@"123",
-                          @"哈哈5":@"123"};
-    NSLog(@"%@", arr);
->>>>>>> origin/master
 }
 
 - (void)sendStatus {
@@ -87,10 +73,6 @@
             [secModel addCellModel:layout];
         }
         [_dataSource addObject:secModel];
-<<<<<<< HEAD
-=======
-        [NSThread sleepForTimeInterval:2.f];
->>>>>>> origin/master
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [_tableView reloadData];
