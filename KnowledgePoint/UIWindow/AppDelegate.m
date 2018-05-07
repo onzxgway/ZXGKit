@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "ZXGWindow.h"
+#import "ZXGCommonKit.h"
 
 @interface AppDelegate ()
 
@@ -47,11 +48,11 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
-
+// app启动的时候，不走这个方法
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 
-    [[ZXGWindow sharedZXGWindow] show];
+    [[ZXGWindow sharedWindow] show];
 }
 
 
@@ -60,7 +61,7 @@
 
     self.littleW = [[UIWindow alloc] initWithFrame:CGRectMake(50, 50, 220, 66)];
     self.littleW.windowLevel = UIWindowLevelStatusBar;
-    self.littleW.backgroundColor = [UIColor blueColor];
+    self.littleW.backgroundColor = kRandomColor;
     self.littleW.hidden = NO;
 }
 
