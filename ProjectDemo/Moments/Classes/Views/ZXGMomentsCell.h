@@ -50,7 +50,7 @@
 @property (nonatomic, strong) YYLabel *locLab;                          //位置
 @property (nonatomic, strong) YYLabel *timeAndSourceLab;                //时间 和 来源
 @property (nonatomic, strong) UIButton *moreBtn;                        //点赞 评论 按钮
-@property (nonatomic, strong) UIButton *delBtn;                         //删除 按钮
+@property (nonatomic, strong) YYLabel  *allLab;                         //全文 按钮
 @property (nonatomic, strong) ZXGMomentsCommentView *commentView;       //评论
 @property (nonatomic, strong) ZXGMomentsOperationMenu *operationMenu;   //点赞 和 评论
 
@@ -66,22 +66,22 @@
 - (void)cellDidClick:(ZXGMomentsCell *)cell;
 // 点击了 Card
 - (void)cellDidClickCard:(ZXGMomentsCell *)cell;
-///// 点击了转发内容
-//- (void)cellDidClickRetweet:(ZXGMomentsCell *)cell;
+// 点击了 全文/收起
+- (void)cellDidClickAll:(ZXGMomentsCell *)cell;
 ///// 点击了Cell菜单
 //- (void)cellDidClickMenu:(ZXGMomentsCell *)cell;
 ///// 点击了关注
 //- (void)cellDidClickFollow:(ZXGMomentsCell *)cell;
 ///// 点击了转发
 //- (void)cellDidClickRepost:(ZXGMomentsCell *)cell;
-///// 点击了下方 Tag
-//- (void)cellDidClickTag:(ZXGMomentsCell *)cell;
+// 点击了 昵称
+- (void)cellDidClickNickname:(ZXGMomentsCell *)cell;
 ///// 点击了评论
 //- (void)cellDidClickComment:(ZXGMomentsCell *)cell;
 ///// 点击了赞
 //- (void)cellDidClickLike:(ZXGMomentsCell *)cell;
-///// 点击了用户
-//- (void)cell:(ZXGMomentsCell *)cell didClickUser:(WBUser *)user;
+// 点击了 用户
+- (void)cell:(ZXGMomentsCell *)cell didClickUser:(id)user;
 ///// 点击了图片
 //- (void)cell:(ZXGMomentsCell *)cell didClickImageAtIndex:(NSUInteger)index;
 ///// 点击了 Label 的链接

@@ -22,6 +22,14 @@
 
 @implementation ZXGMomentModel
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _isExpand = NO;
+    }
+    return self;
+}
+
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{
              @"locaionMsg" : [ZXGMomentsLocationModel class],

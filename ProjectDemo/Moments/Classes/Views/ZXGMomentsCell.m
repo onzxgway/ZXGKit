@@ -137,6 +137,9 @@
         label.fadeOnHighlight = NO;
         label.fadeOnAsynchronouslyDisplay = NO;
         label.hidden = YES;
+        label.textTapAction = ^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+            
+        };
         [self addSubview:label];
         [_cacheLabels addObject:label];
     }
@@ -264,7 +267,7 @@
     [self addSubview:self.cardView];
     [self addSubview:self.commentView];
     [self addSubview:self.moreBtn];
-    [self addSubview:self.delBtn];
+    [self addSubview:self.allLab];
     [self addSubview:self.operationMenu];
     
     // 配图
@@ -328,6 +331,19 @@
     top += layout.textHeight;
     top += kVMargin;
     
+    // 全文
+    if (layout.allHeight > 0) {
+        _allLab.hidden = NO;
+        _allLab.textLayout = layout.allLayout;
+        _allLab.size = layout.allLayout.textBoundingSize;
+        _allLab.top = top;
+        top += layout.allHeight;
+        top += kVMargin;
+    }
+    else {
+        _allLab.hidden = YES;
+    }
+    
     // 配图
     if (layout.picHeight == 0) {
         for (UIView *imageView in _picViews) {
@@ -377,16 +393,6 @@
     _operationMenu.centerY = _moreBtn.centerY;
     _operationMenu.right = _moreBtn.left;
     _operationMenu.width = 0;
-    
-    //删除按钮
-    if (STRING_EQUAL(@"18539951882", layout.momentsModel.userId)) {
-        _delBtn.hidden = NO;
-        _delBtn.left = _timeAndSourceLab.right + kHMargin;
-        _delBtn.centerY = timeAndSourceLabCenterY;
-    }
-    else {
-        _delBtn.hidden = YES;
-    }
     
     top += layout.publichTimeHeight;
     top += kVMargin;
@@ -466,11 +472,6 @@
     _operationMenu.show = !_operationMenu.isShowing;
 }
 
-- (void)delClick {
-    
-}
-
-
 #pragma mark - lazyLoad
 // 头像
 - (UIImageView *)avatarView {
@@ -499,6 +500,13 @@
         _nameLab.ignoreCommonProperties = YES;
         _nameLab.fadeOnAsynchronouslyDisplay = NO;
         _nameLab.fadeOnHighlight = NO;
+        @weakify(self)
+        _nameLab.highlightTapAction = ^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+            @strongify(self)
+            if (self.cell.delegate && [_cell.delegate respondsToSelector:@selector(cellDidClickNickname:)]) {
+                [self.cell.delegate cellDidClickNickname:self.cell];
+            }
+        };
     }
     return _nameLab;
 }
@@ -582,18 +590,27 @@
     return _moreBtn;
 }
 
-//删除 按钮
-- (UIButton *)delBtn {
-    if (!_delBtn) {
-        _delBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_delBtn setTitle:@"删除" forState:UIControlStateNormal];
-        [_delBtn setTitleColor:RGB(84, 95, 141) forState:UIControlStateNormal];
-        [_delBtn sizeToFit];
-        _delBtn.titleLabel.font = SYSTEMFONT(12);
-        _delBtn.hidden = YES;
-        [_delBtn addTarget:self action:@selector(delClick) forControlEvents:UIControlEventTouchUpInside];
+//全文 
+- (YYLabel *)allLab {
+    if (!_allLab) {
+        _allLab = [[YYLabel alloc] init];
+        _allLab.displaysAsynchronously = YES;
+        _allLab.ignoreCommonProperties = YES;
+        _allLab.fadeOnAsynchronouslyDisplay = NO;
+        _allLab.fadeOnHighlight = NO;
+        _allLab.textVerticalAlignment = YYTextVerticalAlignmentCenter;
+        _allLab.left = kMomentsContentLeft;
+        _allLab.hidden = YES;
+        @weakify(self)
+        _allLab.highlightTapAction = ^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+            @strongify(self)
+            NSLog(@"highlightTapAction__%@__%@__", text.string, NSStringFromCGRect(rect));
+            if (self.cell.delegate && [_cell.delegate respondsToSelector:@selector(cellDidClickAll:)]) {
+                [self.cell.delegate cellDidClickAll:self.cell];
+            }
+        };
     }
-    return _delBtn;
+    return _allLab;
 }
 
 //

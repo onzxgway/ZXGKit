@@ -56,6 +56,15 @@
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
+- (void)cellDidClickAll:(ZXGMomentsCell *)cell {
+    cell.momentsView.layout.momentsModel.isExpand = !cell.momentsView.layout.momentsModel.isExpand;
+    [cell.momentsView.layout layout];
+    
+    NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
+
+    [_tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 #pragma mark - private
 - (void)getResourece {
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);

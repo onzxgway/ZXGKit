@@ -27,7 +27,7 @@ UIKIT_EXTERN CGFloat const kZXGMomentsOperationMenuW;       //宽度
 
 
 //--------------字体大小--------------
-#define kMomentsNameColor RGB(84, 95, 141)
+#define kMomentsNameColor RGB(84, 95, 141)  // name字体颜色
 UIKIT_EXTERN CGFloat const kNameFontSize;   // name字体大小
 UIKIT_EXTERN CGFloat const kAvaterSize;     // 头像尺寸
 UIKIT_EXTERN CGFloat const kContentFontSize;// 文本字体大小
@@ -42,3 +42,4 @@ UIKIT_EXTERN CGFloat const kComFontSize;    // 评论字体大小
 #define kMomentsContentLeft (SCREEN_WIDTH - kMomentsContentWidth - kLeftRightMargin)        // cell 内容的左边
 #define kMomentsCardH (kCardHVMargin * 2 + kAvaterSize)                                     // 卡片高度
 #define kMomentsCardHighlightColor  RGB(212, 212, 212)                                      // 卡片高亮时灰色
+#define kMomentsTextHighlightBackgroundColor kLightGrayColor

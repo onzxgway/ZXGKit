@@ -29,6 +29,7 @@
     
     [self layoutName];
     [self layoutContent];
+    [self layoutAllBtn];
     [self layoutPics]; // 配图优先级高于卡片
     if (_picHeight == 0) {
         [self layoutCard];
@@ -44,6 +45,10 @@
     _rowHeight += kVMargin;
     _rowHeight += _textHeight;
     _rowHeight += kVMargin;
+    if (_allHeight > 0) {
+        _rowHeight += _allHeight;
+        _rowHeight += kVMargin;
+    }
     if (_picHeight > 0) {
         _rowHeight += _picHeight;
         _rowHeight += kVMargin;
@@ -71,6 +76,17 @@
     
 }
 
+- (void)resetLayout {
+    _rowHeight = _rowHeight - _textHeight;
+    if (_momentsModel.isExpand) {
+        _textHeight = _textLayout.textBoundingSize.height / _textLayout.lines.count * 6;
+    }
+    else {
+       _textHeight = _textHeight / 6 * _textLayout.lines.count;
+    }
+    _rowHeight = _rowHeight + _textHeight;
+}
+
 #pragma mark - Private
 - (void)layoutName {
     _nameHeight = 0;
@@ -79,9 +95,19 @@
     NSString *nickName = _momentsModel.nickName;
     if (!nickName || nickName.length == 0) return;
     
+    
+    
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:nickName];
     text.color = kMomentsNameColor;
     text.font = BOLDSYSTEMFONT(kNameFontSize);
+    //高亮背景
+    YYTextBorder *border = [[YYTextBorder alloc] init];
+    [border setInsets:UIEdgeInsetsMake(0, -2, 0, -2)];
+    [border setFillColor:kLightGrayColor];
+    //高亮
+    YYTextHighlight *highlight = [[YYTextHighlight alloc] init];
+    [highlight setBackgroundBorder:border];
+    [text setTextHighlight:highlight range:NSMakeRange(0, text.length)];
     
     ZXGMomentsTextLinePositionModifier *linePositionModifier = [[ZXGMomentsTextLinePositionModifier alloc] init];
     linePositionModifier.font = FONT(@"Heiti SC", kNameFontSize);
@@ -118,7 +144,52 @@
     _textLayout = [YYTextLayout layoutWithContainer:container text:text];
     if (!_textLayout) return;
     
-    _textHeight = _textLayout.textBoundingSize.height;
+    // 判断是否显示 '全文'/'收起'
+    // 字数大于等于100 且 行数大于等于6行 显示
+    if (content && content.length >= 100 && _textLayout && _textLayout.lines.count >= 6 && !_momentsModel.isExpand) {
+        // 判断是 折叠 / 全文 状态
+        _textHeight = _textLayout.textBoundingSize.height / _textLayout.lines.count * 6;
+    }
+    else {        
+        _textHeight = _textLayout.textBoundingSize.height;
+    }
+    
+}
+
+// 全文
+- (void)layoutAllBtn {
+    _allHeight = 0;
+    _allLayout = nil;
+    
+    // 字数大于等于100 且 行数大于等于6行 显示
+    NSString *content = _momentsModel.content;
+    if (content && content.length >= 100 && _textLayout && _textLayout.lines.count >= 6) {
+        // 判断是 折叠 / 全文 状态
+        NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@""];
+        if (_momentsModel.isExpand) {
+            text = [[NSMutableAttributedString alloc] initWithString:@"收起"];
+        }
+        else {
+            text = [[NSMutableAttributedString alloc] initWithString:@"全文"];
+        }
+        // 高亮状态的背景
+        YYTextBorder *highlightBorder = [[YYTextBorder alloc] init];
+        highlightBorder.insets = UIEdgeInsetsZero;
+        highlightBorder.fillColor = kMomentsTextHighlightBackgroundColor;
+        
+        // 高亮状态
+        YYTextHighlight *highlight = [[YYTextHighlight alloc] init];
+        [highlight setBackgroundBorder:highlightBorder];
+//        highlight.userInfo = @{kWBLinkURLName : wburl}; // 数据信息，用于稍后用户点击
+        [text setTextHighlight:highlight range:NSMakeRange(0, text.length)];
+        
+        text.font = SYSTEMFONT(kContentFontSize);
+        text.color = kMomentsNameColor;
+        YYTextContainer *container = [[YYTextContainer alloc] init];
+        container.size = CGSizeMake(HUGE, HUGE);
+        _allLayout = [YYTextLayout layoutWithContainer:container text:text];
+        _allHeight = _allLayout.textBoundingSize.height;
+    }
 }
 
 - (void)layoutPics {
@@ -220,11 +291,18 @@
 - (void)layoutTime {
     _publichTimeHeight = 0;
     _publichTimeTextLayout = nil;
+    
     NSString *time = [_momentsModel.createTime stringValue];
+    NSRange range = NSMakeRange(0, 0);
+    if (STRING_EQUAL(@"18539951882", _momentsModel.userId)) {
+        time = [NSString stringWithFormat:@"%@\t\t\t\t\t\t\t\t%@", time, @"删除"];
+        range = [time rangeOfString:@"删除"];
+    }
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:time];
     text.font = SYSTEMFONT(kTimeFontSize);
     text.color = kGrayColor;
-    YYTextContainer *container = [YYTextContainer containerWithSize:CGSizeMake(kMomentsContentWidth * 0.5, HUGE)];
+    [text setColor:kMomentsNameColor range:range];
+    YYTextContainer *container = [YYTextContainer containerWithSize:CGSizeMake(kMomentsContentWidth * 0.7, HUGE)];
     container.maximumNumberOfRows = 1;
     
     _publichTimeTextLayout = [YYTextLayout layoutWithContainer:container text:text];
@@ -238,6 +316,7 @@
     
     _comTextLayouts = [NSMutableArray array];
     
+    // 点赞语句
     NSMutableString *tempStr = @"".mutableCopy;
     if (likes.count > 0) {
         for (ZXGMomentsLikeModel *model in likes) {
@@ -246,14 +325,38 @@
         if ([tempStr hasPrefix:@"，"]) {
             [tempStr deleteCharactersInRange:NSMakeRange(0, 1)];
         }
+        
+        
+        UIImage *likeImage = [UIImage imageNamed:@"AlbumCommentLike"];
+        NSAttributedString *likeText = [self attachmentWithFontSize:kComFontSize image:likeImage shrink:NO];
+
         NSMutableAttributedString *likeString = [[NSMutableAttributedString alloc] initWithString:tempStr];
+        [likeString insertAttributedString:likeText atIndex:0];
         [likeString setFont:SYSTEMFONT(kComFontSize)];
+        
+        for (ZXGMomentsLikeModel *model in likes) {
+            NSRange range = [tempStr rangeOfString:model.memberName];
+            range = NSMakeRange(range.location + 1, range.length);
+            
+            [likeString setFont:BOLDSYSTEMFONT(kComFontSize) range:range];
+            [likeString setColor:kMomentsNameColor range:range];
+            //高亮
+            YYTextBorder *border = [[YYTextBorder alloc] init];
+            border.insets = UIEdgeInsetsMake(0, 0, 0, 0);
+            border.fillColor = kLightGrayColor;
+            YYTextHighlight *highlight = [[YYTextHighlight alloc] init];
+            [highlight setBackgroundBorder:border];
+            [likeString setTextHighlight:highlight range:range];
+        }
+        
         YYTextContainer *likeContain = [YYTextContainer containerWithSize:CGSizeMake(kMomentsContentWidth, HUGE) insets:UIEdgeInsetsMake(kMomentsCellPaddingCom, kMomentsCellPaddingComH, kMomentsCellPaddingCom, kMomentsCellPaddingComH)];
         YYTextLayout *likeTextLayout = [YYTextLayout layoutWithContainer:likeContain text:likeString];
         [_comTextLayouts addObject:likeTextLayout];
         _comHeight += likeTextLayout.textBoundingSize.height;
+        
     }
     
+    // 评论语句
     if (comments.count > 0) {
         
         for (ZXGMomentsCommentModel *model in comments) {
@@ -261,7 +364,7 @@
             // 标记名称文字
             if (model.replyMemberName && model.replyMemberName.length > 0) {
                 
-                NSString *comment = [NSString stringWithFormat:@"%@回复%@:%@", model.memberName, model.replyMemberName, model.content];
+                NSString *comment = [NSString stringWithFormat:@"%@回复%@: %@", model.memberName, model.replyMemberName, model.content];
                 text = [[NSMutableAttributedString alloc] initWithString:comment];
                 [text setFont:SYSTEMFONT(kComFontSize)];
                 NSRange range = [comment rangeOfString:model.memberName];
@@ -271,15 +374,32 @@
                 NSRange replyRange = [comment rangeOfString:model.replyMemberName];
                 [text setFont:BOLDSYSTEMFONT(kComFontSize) range:replyRange];
                 [text setColor:kMomentsNameColor range:replyRange];
+                
+                //高亮
+                YYTextBorder *border = [[YYTextBorder alloc] init];
+                border.insets = UIEdgeInsetsMake(0, 0, 0, 0);
+                border.fillColor = kLightGrayColor;
+                YYTextHighlight *highlight = [[YYTextHighlight alloc] init];
+                [highlight setBackgroundBorder:border];
+                [text setTextHighlight:highlight range:range];
+                [text setTextHighlight:highlight range:replyRange];
             }
             else {
                 
-                NSString *comment = [NSString stringWithFormat:@"%@:%@", model.memberName, model.content];
+                NSString *comment = [NSString stringWithFormat:@"%@: %@", model.memberName, model.content];
                 text = [[NSMutableAttributedString alloc] initWithString:comment];
+                
                 [text setFont:SYSTEMFONT(kComFontSize)];
                 NSRange range = [comment rangeOfString:model.memberName];
                 [text setFont:BOLDSYSTEMFONT(kComFontSize) range:range];
                 [text setColor:kMomentsNameColor range:range];
+                //高亮
+                YYTextBorder *border = [[YYTextBorder alloc] init];
+                border.insets = UIEdgeInsetsMake(0, 0, 0, 0);
+                border.fillColor = kLightGrayColor;
+                YYTextHighlight *highlight = [[YYTextHighlight alloc] init];
+                [highlight setBackgroundBorder:border];
+                [text setTextHighlight:highlight range:range];
             }
                         
             YYTextContainer *contain = [YYTextContainer containerWithSize:CGSizeMake(kMomentsContentWidth, HUGE) insets:UIEdgeInsetsMake(kMomentsCellPaddingCom, kMomentsCellPaddingComH, kMomentsCellPaddingCom, kMomentsCellPaddingComH)];
@@ -289,6 +409,48 @@
         }
     }
     
+}
+
+- (NSAttributedString *)attachmentWithFontSize:(CGFloat)fontSize image:(UIImage *)image shrink:(BOOL)shrink {
+    
+    //    CGFloat ascent = YYEmojiGetAscentWithFontSize(fontSize);
+    //    CGFloat descent = YYEmojiGetDescentWithFontSize(fontSize);
+    //    CGRect bounding = YYEmojiGetGlyphBoundingRectWithFontSize(fontSize);
+    
+    // Heiti SC 字体。。
+    CGFloat ascent = fontSize * 0.86;
+    CGFloat descent = fontSize * 0.14;
+    CGRect bounding = CGRectMake(0, -0.14 * fontSize, fontSize, fontSize);
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(ascent - (bounding.size.height + bounding.origin.y), 0, descent + bounding.origin.y, 0);
+    
+    YYTextRunDelegate *delegate = [YYTextRunDelegate new];
+    delegate.ascent = ascent;
+    delegate.descent = descent;
+    delegate.width = bounding.size.width;
+    
+    YYTextAttachment *attachment = [YYTextAttachment new];
+    attachment.contentMode = UIViewContentModeScaleAspectFit;
+    attachment.contentInsets = contentInsets;
+    attachment.content = image;
+    
+    if (shrink) {
+        // 缩小~
+        CGFloat scale = 1 / 10.0;
+        contentInsets.top += fontSize * scale;
+        contentInsets.bottom += fontSize * scale;
+        contentInsets.left += fontSize * scale;
+        contentInsets.right += fontSize * scale;
+        contentInsets = UIEdgeInsetPixelFloor(contentInsets);
+        attachment.contentInsets = contentInsets;
+    }
+    
+    NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:YYTextAttachmentToken];
+    [atr setTextAttachment:attachment range:NSMakeRange(0, atr.length)];
+    CTRunDelegateRef ctDelegate = delegate.CTRunDelegate;
+    [atr setRunDelegate:ctDelegate range:NSMakeRange(0, atr.length)];
+    if (ctDelegate) CFRelease(ctDelegate);
+    
+    return atr;
 }
 
 @end

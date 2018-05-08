@@ -23,6 +23,8 @@
 @property (nonatomic, strong, readonly) ZXGMomentModel *momentsModel; // model
 
 - (instancetype)initWithMoments:(ZXGMomentModel *)moments NS_DESIGNATED_INITIALIZER;
+- (void)layout;// 文本排版，计算布局
+
 
 //              ---------->以下是布局结果<----------
 // 名称
@@ -36,6 +38,10 @@
 // 文本
 @property (nonatomic) CGFloat textHeight; // 文本高度(包括下方留白)
 @property (nonatomic, strong) YYTextLayout *textLayout; //文本
+
+// 全文
+@property (nonatomic) CGFloat allHeight;
+@property (nonatomic, strong) YYTextLayout *allLayout;
 
 // 配图
 @property (nonatomic) CGFloat picHeight;    // 配图高度，0为没配图
