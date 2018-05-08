@@ -75,11 +75,13 @@
         NSArray *sourceArr = [NSArray arrayWithContentsOfFile:plistPath];
         sourceArr = [NSArray modelArrayWithClass:ZXGMomentModel.class json:sourceArr];
         
-        for (ZXGMomentModel *model in sourceArr) {
-            ZXGMomentsLayout *layout = [[ZXGMomentsLayout alloc] initWithMoments:model];
-            layout.cellClass = [ZXGMomentsCell class];
-            layout.reuseIdentifier = NSStringFromClass(ZXGMomentsCell.class);
-            [secModel addCellModel:layout];
+        for (int i = 0; i < 15; ++i) {
+            for (ZXGMomentModel *model in sourceArr) {
+                ZXGMomentsLayout *layout = [[ZXGMomentsLayout alloc] initWithMoments:model];
+                layout.cellClass = [ZXGMomentsCell class];
+                layout.reuseIdentifier = NSStringFromClass(ZXGMomentsCell.class);
+                [secModel addCellModel:layout];
+            }
         }
         [_dataSource addObject:secModel];
         
