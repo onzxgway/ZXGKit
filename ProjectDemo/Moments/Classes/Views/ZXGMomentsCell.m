@@ -425,8 +425,8 @@
             CGPoint origin = {0};
             switch (picsCount) {
                 case 1: {
-//                    origin.x = kWBCellPadding;
-//                    origin.y = imageTop;
+                    origin.x = kMomentsContentLeft;
+                    origin.y = imageTop;
                 }
                     break;
                 case 4: {

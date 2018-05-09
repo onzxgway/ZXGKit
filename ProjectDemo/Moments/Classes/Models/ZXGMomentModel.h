@@ -46,8 +46,9 @@
 @property (nonatomic, strong) ZXGMomentsLocationModel *locaionMsg;          //位置信息
 @property (nonatomic, strong) NSArray<ZXGMomentsLikeModel *> *likes;        //点赞数组
 @property (nonatomic, strong) NSArray<ZXGMomentsCommentModel *> *comments;  //评论集合
-//@property(nonatomic,strong)NSDictionary * spreadparams;//推广内容
-//@property(nonatomic,strong)NSData * photocollectionsData;//照片数组(存入数据库)
+
+@property (nonatomic, strong) NSNumber *picWidth;
+@property (nonatomic, strong) NSNumber *picHeight;
 
 @property (nonatomic) BOOL isExpand;   //文字是否已展开
 //@property (nonatomic, readonly) BOOL shouldShowMoreButton;//应该显示"全文"

@@ -205,27 +205,67 @@
     len1_3 = CGFloatPixelRound(len1_3);
     switch (_momentsModel.images.count) {
         case 1: {
-            /**
-            ZXGWBPicture *pic = _momentsModel.images.firstObject;
-            ZXGWBPictureMetadata *bmiddle = pic.bmiddle;
-            if (pic.keepSize || bmiddle.width < 1 || bmiddle.height < 1) {
-                CGFloat maxLen = kWBCellContentWidth / 2.0;
-                maxLen = CGFloatPixelRound(maxLen);
-                picSize = CGSizeMake(maxLen, maxLen);
-                picHeight = maxLen;
-            } else {
-                CGFloat maxLen = len1_3 * 2 + kWBCellPaddingPic;
-                if (bmiddle.width < bmiddle.height) {
-                    picSize.width = (float)bmiddle.width / (float)bmiddle.height * maxLen;
-                    picSize.height = maxLen;
-                } else {
-                    picSize.width = maxLen;
-                    picSize.height = (float)bmiddle.height / (float)bmiddle.width * maxLen;
+        
+            CGSize singleImgSize = CGSizeZero;
+            
+            CGFloat maxW = kMomentsContentWidth * 0.7;
+            CGFloat maxH = SCREEN_HEIGHT * 0.25;
+            
+            CGFloat singleW = [_momentsModel.picWidth floatValue];
+            CGFloat singleH = [_momentsModel.picHeight floatValue];
+            
+            if (singleW > singleH) { //以宽为准  横图
+                if (singleW >= maxW) {
+                    singleImgSize = CGSizeMake(maxW, maxW * (singleH / singleW));
+                    NSLog(@"以宽为准:%@",NSStringFromCGSize(singleImgSize));
                 }
-                picSize = CGSizePixelRound(picSize);
-                picHeight = picSize.height;
+                else if (singleW < maxW) {
+                    singleImgSize = CGSizeMake(singleW, singleH);
+                    NSLog(@"以宽为准:%@",NSStringFromCGSize(singleImgSize));
+                }
             }
-             */
+            else if (singleW < singleH) { //以高为准 竖图
+                if (singleH >= maxH) {
+                    singleImgSize = CGSizeMake(maxH * (singleW / singleH), maxH);
+                    NSLog(@"以高为准:%@",NSStringFromCGSize(singleImgSize));
+                }
+                else if (singleH < maxH) {
+                    singleImgSize = CGSizeMake(singleW, singleH);
+                    NSLog(@"以高为准:%@",NSStringFromCGSize(singleImgSize));
+                }
+            }
+            else if (singleW == singleH) { //宽=高 正方形图片
+                if (maxW > maxH) {
+                    
+                    if (maxH >= singleH) {
+                        singleImgSize = CGSizeMake(singleW, singleH);
+                    }
+                    else if (maxH < singleH) {
+                        singleImgSize = CGSizeMake(maxH, maxH);
+                    }
+                }
+                else if (maxW < maxH) {
+                    singleImgSize = CGSizeMake(maxW, maxW);
+                    
+                    if (maxW >= singleH) {
+                        singleImgSize = CGSizeMake(singleW, singleH);
+                    }
+                    else if (maxW < singleH) {
+                        singleImgSize = CGSizeMake(maxW, maxW);
+                    }
+                }
+                else if (maxW == maxH) {
+                    if (maxH >= singleH) {
+                        singleImgSize = CGSizeMake(singleW, singleH);
+                    }
+                    else if (maxH < singleH) {
+                        singleImgSize = CGSizeMake(maxH, maxH );
+                    }
+                }
+            }
+            
+            picSize = singleImgSize;
+            picHeight = singleImgSize.height;
         }
             break;
         case 2: case 3: {
