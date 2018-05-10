@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0108FCA520A426C1009B5C29 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0108FCA420A426C1009B5C29 /* MJRefreshStateHeader.m */; };
+		0108FCA920A428B5009B5C29 /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0108FCA620A428B5009B5C29 /* NSBundle+MJRefresh.m */; };
+		0108FCAA20A428B5009B5C29 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0108FCA820A428B5009B5C29 /* MJRefresh.bundle */; };
+		0108FCAD20A42C21009B5C29 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0108FCAC20A42C21009B5C29 /* MJRefreshNormalHeader.m */; };
+		010989F720A3E0D80041C430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 010989F620A3E0D80041C430 /* AppDelegate.m */; };
+		010989FA20A3E0D80041C430 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010989F920A3E0D80041C430 /* ViewController.m */; };
+		010989FD20A3E0D80041C430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010989FB20A3E0D80041C430 /* Main.storyboard */; };
+		010989FF20A3E0D80041C430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010989FE20A3E0D80041C430 /* Assets.xcassets */; };
+		01098A0220A3E0D80041C430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01098A0020A3E0D80041C430 /* LaunchScreen.storyboard */; };
+		01098A0520A3E0D80041C430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01098A0420A3E0D80041C430 /* main.m */; };
+		01098A2820A3E2920041C430 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 01098A2720A3E2920041C430 /* MJRefreshComponent.m */; };
+		01098A3420A3E4DC0041C430 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 01098A3120A3E4DC0041C430 /* UIScrollView+MJExtension.m */; };
+		01098A3520A3E4DC0041C430 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 01098A3320A3E4DC0041C430 /* UIView+MJExtension.m */; };
+		01098A3920A3E6280041C430 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 01098A3820A3E6280041C430 /* MJRefreshConst.m */; };
+		01098A3F20A3EBFA0041C430 /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 01098A3D20A3EBFA0041C430 /* MJRefreshHeader.m */; };
 		012309322079FFA50090DC05 /* ZXGUseage.m in Sources */ = {isa = PBXBuildFile; fileRef = 012309312079FFA50090DC05 /* ZXGUseage.m */; };
 		01230935207A03410090DC05 /* ZXGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01230934207A03410090DC05 /* ZXGPerson.m */; };
 		0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A32079A62D00012ADC /* ZXGDBOperation.m */; };
@@ -81,6 +96,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0108FCA320A426C1009B5C29 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshStateHeader.h; sourceTree = "<group>"; };
+		0108FCA420A426C1009B5C29 /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshStateHeader.m; sourceTree = "<group>"; };
+		0108FCA620A428B5009B5C29 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
+		0108FCA720A428B5009B5C29 /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
+		0108FCA820A428B5009B5C29 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		0108FCAB20A42C21009B5C29 /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshNormalHeader.h; sourceTree = "<group>"; };
+		0108FCAC20A42C21009B5C29 /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalHeader.m; sourceTree = "<group>"; };
+		010989F320A3E0D80041C430 /* LearnMJRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnMJRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		010989F520A3E0D80041C430 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		010989F620A3E0D80041C430 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		010989F820A3E0D80041C430 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		010989F920A3E0D80041C430 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		010989FC20A3E0D80041C430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		010989FE20A3E0D80041C430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01098A0120A3E0D80041C430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01098A0320A3E0D80041C430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01098A0420A3E0D80041C430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01098A2620A3E2920041C430 /* MJRefreshComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
+		01098A2720A3E2920041C430 /* MJRefreshComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
+		01098A3020A3E4DC0041C430 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		01098A3120A3E4DC0041C430 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		01098A3220A3E4DC0041C430 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		01098A3320A3E4DC0041C430 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		01098A3620A3E6280041C430 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		01098A3720A3E6280041C430 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		01098A3820A3E6280041C430 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		01098A3D20A3EBFA0041C430 /* MJRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeader.m; sourceTree = "<group>"; };
+		01098A3E20A3EBFA0041C430 /* MJRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeader.h; sourceTree = "<group>"; };
 		012309302079FFA50090DC05 /* ZXGUseage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGUseage.h; sourceTree = "<group>"; };
 		012309312079FFA50090DC05 /* ZXGUseage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGUseage.m; sourceTree = "<group>"; };
 		01230933207A03410090DC05 /* ZXGPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPerson.h; sourceTree = "<group>"; };
@@ -218,6 +261,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		010989F020A3E0D80041C430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		019129092074DC4C0054912E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +303,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010989F420A3E0D80041C430 /* LearnMJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				01098A2520A3E2060041C430 /* MJRefresh */,
+				010989F520A3E0D80041C430 /* AppDelegate.h */,
+				010989F620A3E0D80041C430 /* AppDelegate.m */,
+				010989F820A3E0D80041C430 /* ViewController.h */,
+				010989F920A3E0D80041C430 /* ViewController.m */,
+				010989FB20A3E0D80041C430 /* Main.storyboard */,
+				010989FE20A3E0D80041C430 /* Assets.xcassets */,
+				01098A0020A3E0D80041C430 /* LaunchScreen.storyboard */,
+				01098A0320A3E0D80041C430 /* Info.plist */,
+				01098A0420A3E0D80041C430 /* main.m */,
+			);
+			path = LearnMJRefresh;
+			sourceTree = "<group>";
+		};
+		01098A2520A3E2060041C430 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				01098A2F20A3E4DC0041C430 /* Category */,
+				01098A2620A3E2920041C430 /* MJRefreshComponent.h */,
+				01098A2720A3E2920041C430 /* MJRefreshComponent.m */,
+				01098A3E20A3EBFA0041C430 /* MJRefreshHeader.h */,
+				01098A3D20A3EBFA0041C430 /* MJRefreshHeader.m */,
+				0108FCA320A426C1009B5C29 /* MJRefreshStateHeader.h */,
+				0108FCA420A426C1009B5C29 /* MJRefreshStateHeader.m */,
+				0108FCAB20A42C21009B5C29 /* MJRefreshNormalHeader.h */,
+				0108FCAC20A42C21009B5C29 /* MJRefreshNormalHeader.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		01098A2F20A3E4DC0041C430 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0108FCA820A428B5009B5C29 /* MJRefresh.bundle */,
+				0108FCA720A428B5009B5C29 /* NSBundle+MJRefresh.h */,
+				0108FCA620A428B5009B5C29 /* NSBundle+MJRefresh.m */,
+				01098A3720A3E6280041C430 /* MJRefresh.h */,
+				01098A3620A3E6280041C430 /* MJRefreshConst.h */,
+				01098A3820A3E6280041C430 /* MJRefreshConst.m */,
+				01098A3020A3E4DC0041C430 /* UIScrollView+MJExtension.h */,
+				01098A3120A3E4DC0041C430 /* UIScrollView+MJExtension.m */,
+				01098A3220A3E4DC0041C430 /* UIView+MJExtension.h */,
+				01098A3320A3E4DC0041C430 /* UIView+MJExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		0139D0A12079A5E500012ADC /* ZXGDBManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +596,7 @@
 				71764105204E6A33006D3A18 /* SDWebimage */,
 				0191290D2074DC4C0054912E /* LearnFMDB */,
 				047C26A2207CFA600042572C /* LearnYYKit */,
+				010989F420A3E0D80041C430 /* LearnMJRefresh */,
 				71DDFCFB20468F90002B54D8 /* Products */,
 				378122F29E919E62AC4265DB /* Pods */,
 				043A97B6894260887FC53591 /* Frameworks */,
@@ -509,6 +610,7 @@
 				71764104204E6A33006D3A18 /* SDWebimage.app */,
 				0191290C2074DC4C0054912E /* LearnFMDB.app */,
 				047C26A1207CFA600042572C /* LearnYYKit.app */,
+				010989F320A3E0D80041C430 /* LearnMJRefresh.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -532,6 +634,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		010989F220A3E0D80041C430 /* LearnMJRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01098A2220A3E0D90041C430 /* Build configuration list for PBXNativeTarget "LearnMJRefresh" */;
+			buildPhases = (
+				010989EF20A3E0D80041C430 /* Sources */,
+				010989F020A3E0D80041C430 /* Frameworks */,
+				010989F120A3E0D80041C430 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnMJRefresh;
+			productName = LearnMJRefresh;
+			productReference = 010989F320A3E0D80041C430 /* LearnMJRefresh.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0191290B2074DC4C0054912E /* LearnFMDB */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 019129212074DC4C0054912E /* Build configuration list for PBXNativeTarget "LearnFMDB" */;
@@ -621,6 +740,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = feizhu;
 				TargetAttributes = {
+					010989F220A3E0D80041C430 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
 					0191290B2074DC4C0054912E = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -656,11 +779,23 @@
 				71764103204E6A33006D3A18 /* SDWebimage */,
 				0191290B2074DC4C0054912E /* LearnFMDB */,
 				047C26A0207CFA600042572C /* LearnYYKit */,
+				010989F220A3E0D80041C430 /* LearnMJRefresh */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		010989F120A3E0D80041C430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01098A0220A3E0D80041C430 /* LaunchScreen.storyboard in Resources */,
+				010989FF20A3E0D80041C430 /* Assets.xcassets in Resources */,
+				0108FCAA20A428B5009B5C29 /* MJRefresh.bundle in Resources */,
+				010989FD20A3E0D80041C430 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0191290A2074DC4C0054912E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -715,7 +850,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnYYKit/Pods-LearnYYKit-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -865,7 +1000,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -883,7 +1018,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -901,7 +1036,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -915,6 +1050,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		010989EF20A3E0D80041C430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01098A2820A3E2920041C430 /* MJRefreshComponent.m in Sources */,
+				01098A3520A3E4DC0041C430 /* UIView+MJExtension.m in Sources */,
+				010989FA20A3E0D80041C430 /* ViewController.m in Sources */,
+				0108FCA920A428B5009B5C29 /* NSBundle+MJRefresh.m in Sources */,
+				01098A3F20A3EBFA0041C430 /* MJRefreshHeader.m in Sources */,
+				0108FCA520A426C1009B5C29 /* MJRefreshStateHeader.m in Sources */,
+				01098A3920A3E6280041C430 /* MJRefreshConst.m in Sources */,
+				0108FCAD20A42C21009B5C29 /* MJRefreshNormalHeader.m in Sources */,
+				01098A0520A3E0D80041C430 /* main.m in Sources */,
+				010989F720A3E0D80041C430 /* AppDelegate.m in Sources */,
+				01098A3420A3E4DC0041C430 /* UIScrollView+MJExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		019129082074DC4C0054912E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -997,6 +1150,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		010989FB20A3E0D80041C430 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010989FC20A3E0D80041C430 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01098A0020A3E0D80041C430 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01098A0120A3E0D80041C430 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		019129142074DC4C0054912E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1064,6 +1233,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		01098A1C20A3E0D90041C430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = LearnMJRefresh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgwayy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		01098A1D20A3E0D90041C430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = LearnMJRefresh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgwayy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		0191291F2074DC4C0054912E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EAE26EF61E8F69CC3D0E8B1F /* Pods-LearnFMDB.debug.xcconfig */;
@@ -1309,6 +1513,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01098A2220A3E0D90041C430 /* Build configuration list for PBXNativeTarget "LearnMJRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01098A1C20A3E0D90041C430 /* Debug */,
+				01098A1D20A3E0D90041C430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		019129212074DC4C0054912E /* Build configuration list for PBXNativeTarget "LearnFMDB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
