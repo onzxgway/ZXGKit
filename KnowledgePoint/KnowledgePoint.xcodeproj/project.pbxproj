@@ -1724,7 +1724,6 @@
 				7199A2D72060999F0051812D /* Frameworks */,
 				7199A2D82060999F0051812D /* Resources */,
 				9B4834C64D8B4B041FCB8E91 /* [CP] Copy Pods Resources */,
-				7B2B0FBC0BA4AC1F97DA7E3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2125,21 +2124,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B2B0FBC0BA4AC1F97DA7E3D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9B4834C64D8B4B041FCB8E91 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2147,11 +2131,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

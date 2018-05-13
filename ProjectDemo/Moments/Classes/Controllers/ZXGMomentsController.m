@@ -11,6 +11,7 @@
 #import "ZXGMomentsLayout.h"
 #import "ZXGMomentsCell.h"
 #import "NSDictionary+Log.h"
+#import "ZXGViewController.h"
 
 @interface ZXGMomentsController () <ZXGMomentsCellDelegate>
 
@@ -40,7 +41,8 @@
 }
 
 - (void)sendStatus {
-    
+    ZXGViewController *controller = [[ZXGViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 

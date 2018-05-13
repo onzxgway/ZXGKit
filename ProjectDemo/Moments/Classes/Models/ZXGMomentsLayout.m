@@ -217,21 +217,21 @@
             if (singleW > singleH) { //以宽为准  横图
                 if (singleW >= maxW) {
                     singleImgSize = CGSizeMake(maxW, maxW * (singleH / singleW));
-                    NSLog(@"以宽为准:%@",NSStringFromCGSize(singleImgSize));
+//                    NSLog(@"以宽为准:%@",NSStringFromCGSize(singleImgSize));
                 }
                 else if (singleW < maxW) {
                     singleImgSize = CGSizeMake(singleW, singleH);
-                    NSLog(@"以宽为准:%@",NSStringFromCGSize(singleImgSize));
+//                    NSLog(@"以宽为准:%@",NSStringFromCGSize(singleImgSize));
                 }
             }
             else if (singleW < singleH) { //以高为准 竖图
                 if (singleH >= maxH) {
                     singleImgSize = CGSizeMake(maxH * (singleW / singleH), maxH);
-                    NSLog(@"以高为准:%@",NSStringFromCGSize(singleImgSize));
+//                    NSLog(@"以高为准:%@",NSStringFromCGSize(singleImgSize));
                 }
                 else if (singleH < maxH) {
                     singleImgSize = CGSizeMake(singleW, singleH);
-                    NSLog(@"以高为准:%@",NSStringFromCGSize(singleImgSize));
+//                    NSLog(@"以高为准:%@",NSStringFromCGSize(singleImgSize));
                 }
             }
             else if (singleW == singleH) { //宽=高 正方形图片

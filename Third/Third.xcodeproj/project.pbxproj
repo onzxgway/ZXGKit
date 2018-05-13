@@ -38,7 +38,6 @@
 		047C26A5207CFA600042572C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C26A4207CFA600042572C /* main.m */; };
 		047C26A8207CFA600042572C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C26A7207CFA600042572C /* AppDelegate.m */; };
 		047C26AB207CFA600042572C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C26AA207CFA600042572C /* ViewController.m */; };
-		047C26AE207CFA600042572C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047C26AC207CFA600042572C /* Main.storyboard */; };
 		047C26B0207CFA600042572C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047C26AF207CFA600042572C /* Assets.xcassets */; };
 		047C26B3207CFA600042572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047C26B1207CFA600042572C /* LaunchScreen.storyboard */; };
 		1E57DD9B65E5DFFBC38592FE /* libPods-SDWebimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77678643378FDBB80F8A0FE7 /* libPods-SDWebimage.a */; };
@@ -156,7 +155,6 @@
 		047C26A7207CFA600042572C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		047C26A9207CFA600042572C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		047C26AA207CFA600042572C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		047C26AD207CFA600042572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		047C26AF207CFA600042572C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047C26B2207CFA600042572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047C26B4207CFA600042572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -410,7 +408,6 @@
 				047C26A7207CFA600042572C /* AppDelegate.m */,
 				047C26A9207CFA600042572C /* ViewController.h */,
 				047C26AA207CFA600042572C /* ViewController.m */,
-				047C26AC207CFA600042572C /* Main.storyboard */,
 				047C26AF207CFA600042572C /* Assets.xcassets */,
 				047C26B1207CFA600042572C /* LaunchScreen.storyboard */,
 				047C26B4207CFA600042572C /* Info.plist */,
@@ -660,7 +657,6 @@
 				019129092074DC4C0054912E /* Frameworks */,
 				0191290A2074DC4C0054912E /* Resources */,
 				EDB16D6CED6453A698484210 /* [CP] Copy Pods Resources */,
-				B21255EDEA00368D3BC760CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -680,7 +676,6 @@
 				047C269E207CFA600042572C /* Frameworks */,
 				047C269F207CFA600042572C /* Resources */,
 				027B583CE02E2DD9AEBF75AD /* [CP] Copy Pods Resources */,
-				86F17B6FFCAAF4CFC0348303 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -700,7 +695,6 @@
 				71764101204E6A33006D3A18 /* Frameworks */,
 				71764102204E6A33006D3A18 /* Resources */,
 				C625683C01BCF1EEF8450FCF /* [CP] Copy Pods Resources */,
-				30FD434463638941293D2625 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -720,7 +714,6 @@
 				71DDFCF720468F90002B54D8 /* Frameworks */,
 				71DDFCF820468F90002B54D8 /* Resources */,
 				EAD29C9E7077B94CE006E868 /* [CP] Copy Pods Resources */,
-				87684FAAC62D78FA7B74360F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -812,7 +805,6 @@
 			files = (
 				047C26B3207CFA600042572C /* LaunchScreen.storyboard in Resources */,
 				047C26B0207CFA600042572C /* Assets.xcassets in Resources */,
-				047C26AE207CFA600042572C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,11 +842,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnYYKit/Pods-LearnYYKit-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -877,21 +869,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		30FD434463638941293D2625 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		33EA2D0445A23750160CECBB /* [CP] Check Pods Manifest.lock */ = {
@@ -930,36 +907,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		86F17B6FFCAAF4CFC0348303 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnYYKit/Pods-LearnYYKit-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		87684FAAC62D78FA7B74360F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A541AA9E76E5FCD0979148E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -978,21 +925,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B21255EDEA00368D3BC760CC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C625683C01BCF1EEF8450FCF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1000,11 +932,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1018,11 +950,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1036,11 +968,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1180,14 +1112,6 @@
 				0191291A2074DC4C0054912E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		047C26AC207CFA600042572C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				047C26AD207CFA600042572C /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		047C26B1207CFA600042572C /* LaunchScreen.storyboard */ = {
