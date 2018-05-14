@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZXGViewController : UIViewController
+@interface ZXGViewController : UITableViewController
 
 @end

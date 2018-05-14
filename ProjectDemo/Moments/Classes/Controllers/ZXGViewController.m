@@ -7,6 +7,7 @@
 //
 
 #import "ZXGViewController.h"
+#import "ZXGTableViewCell.h"
 
 #define kToolbarHeight (35 + 46)
 
@@ -20,7 +21,38 @@
     [super viewDidLoad];
     
     [self.view setBackgroundColor:kRandomColor];
-    [self learnYYTextView];
+//    [self learnYYTextView];
+    
+    self.title = @"cell中的textView自适应";
+    self.tableView.rowHeight= UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 60;
+    self.tableView.sectionFooterHeight = 10;
+    self.tableView.sectionHeaderHeight= 0.01;
+    self.tableView.tableFooterView = [UIView new];
+}
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ZXGTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[ZXGTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    
+    cell.selectionStyle = 0;
+    // Configure the cell...
+    
+    return cell;
 }
 
 - (void)learnYYTextView {
