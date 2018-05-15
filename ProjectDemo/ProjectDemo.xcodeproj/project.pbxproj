@@ -145,6 +145,8 @@
 		0423513B1F8BB580001133ED /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042350EE1F8BB580001133ED /* LayoutConstraintItem.swift */; };
 		0423513C1F8BB580001133ED /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042350F01F8BB580001133ED /* UILayoutSupport+Extensions.swift */; };
 		042351421F8BB580001133ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042350FC1F8BB580001133ED /* ViewController.swift */; };
+		0443921E20A9B32100CBAF53 /* ZXGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0443921D20A9B32100CBAF53 /* ZXGTableViewCell.m */; };
+		0443922420A9B37200CBAF53 /* ZXGCustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0443922220A9B37200CBAF53 /* ZXGCustomTextView.m */; };
 		044DB5ED2099F76E000A3E96 /* ZXGMomentsConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DB5EC2099F76E000A3E96 /* ZXGMomentsConst.m */; };
 		04CDB92120A862FA005CF158 /* ZXGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CDB92020A862FA005CF158 /* ZXGViewController.m */; };
 		17E38D5AB01BE720B5E37528 /* libPods-SinaWBAutoCal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D1F40ADB10A668FBA7B701 /* libPods-SinaWBAutoCal.a */; };
@@ -394,6 +396,10 @@
 		042350EF1F8BB580001133ED /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
 		042350F01F8BB580001133ED /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		042350FC1F8BB580001133ED /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0443921C20A9B32100CBAF53 /* ZXGTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGTableViewCell.h; sourceTree = "<group>"; };
+		0443921D20A9B32100CBAF53 /* ZXGTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGTableViewCell.m; sourceTree = "<group>"; };
+		0443922120A9B37200CBAF53 /* ZXGCustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGCustomTextView.h; sourceTree = "<group>"; };
+		0443922220A9B37200CBAF53 /* ZXGCustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGCustomTextView.m; sourceTree = "<group>"; };
 		044DB5EB2099F6FD000A3E96 /* ZXGMomentsConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGMomentsConst.h; sourceTree = "<group>"; };
 		044DB5EC2099F76E000A3E96 /* ZXGMomentsConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGMomentsConst.m; sourceTree = "<group>"; };
 		04CDB91F20A862FA005CF158 /* ZXGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGViewController.h; sourceTree = "<group>"; };
@@ -570,6 +576,8 @@
 		01B3F81E207F0E0800F64113 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0443922120A9B37200CBAF53 /* ZXGCustomTextView.h */,
+				0443922220A9B37200CBAF53 /* ZXGCustomTextView.m */,
 				01B3F831207F32C900F64113 /* ZXGMomentsCell.h */,
 				01B3F832207F32C900F64113 /* ZXGMomentsCell.m */,
 				044DB5EB2099F6FD000A3E96 /* ZXGMomentsConst.h */,
@@ -578,6 +586,8 @@
 				012B31EE209C04B800D84B0A /* ZXGPictureView.m */,
 				0128E38B20A024DD00B456C9 /* ZXGArrowTopLayer.h */,
 				0128E38C20A024DD00B456C9 /* ZXGArrowTopLayer.m */,
+				0443921C20A9B32100CBAF53 /* ZXGTableViewCell.h */,
+				0443921D20A9B32100CBAF53 /* ZXGTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1673,10 +1683,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0443921E20A9B32100CBAF53 /* ZXGTableViewCell.m in Sources */,
 				01B3F824207F0EDC00F64113 /* ZXGMomentsController.m in Sources */,
 				01B3F812207F037200F64113 /* main.m in Sources */,
 				01B3F804207F037200F64113 /* AppDelegate.m in Sources */,
 				012B31EF209C04B800D84B0A /* ZXGPictureView.m in Sources */,
+				0443922420A9B37200CBAF53 /* ZXGCustomTextView.m in Sources */,
 				01B3F821207F0E4C00F64113 /* ZXGMomentModel.m in Sources */,
 				044DB5ED2099F76E000A3E96 /* ZXGMomentsConst.m in Sources */,
 				04CDB92120A862FA005CF158 /* ZXGViewController.m in Sources */,
