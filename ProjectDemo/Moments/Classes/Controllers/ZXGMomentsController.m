@@ -63,8 +63,12 @@
     [cell.momentsView.layout layout];
     
     NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
-
-    [_tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [_tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    //update tableView 关闭刷新动画
+//    [UIView performWithoutAnimation:^{
+//        [_tableView beginUpdates];
+//        [_tableView endUpdates];
+//    }];
 }
 
 #pragma mark - private
