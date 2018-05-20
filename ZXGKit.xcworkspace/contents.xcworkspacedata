@@ -5,7 +5,7 @@
       location = "group:Third/Third.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Categorys/Macro_And_Categorys.xcodeproj">
+      location = "group:/Users/zhuxianguo/Documents/Github/ZXGKit/Categorys/CustomView.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:PerformanceOptimization/PerformanceOptimization.xcodeproj">
