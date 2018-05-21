@@ -42,13 +42,13 @@ end
 
 
 # CustomView.project
-MacroArray = ['ZXGCustomView']
-MacroArray.each do |t|
-    target t do
-    project 'Categorys/CustomView.project'
-        pods
-    end
-end
+#MacroArray = ['ZXGCustomView']
+#MacroArray.each do |t|
+#    target t do
+#    project 'Categorys/CustomView.project'
+#        pods
+#    end
+#end
 
 # PerformanceOptimization.project
 POArray = ['TablePerformanceOptimization']
