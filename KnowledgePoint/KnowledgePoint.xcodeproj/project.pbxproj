@@ -14,6 +14,7 @@
 		04D7C8B61F98A0CF008DD0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7C8B41F98A0CF008DD0B1 /* Main.storyboard */; };
 		04D7C8B81F98A0CF008DD0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D7C8B71F98A0CF008DD0B1 /* Assets.xcassets */; };
 		04D7C8BB1F98A0CF008DD0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7C8B91F98A0CF008DD0B1 /* LaunchScreen.storyboard */; };
+		04D9580320B14F89006EE2CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D9580220B14F89006EE2CA /* main.m */; };
 		04F039CE1F8CF7CB00DBD70D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F039CD1F8CF7CB00DBD70D /* main.m */; };
 		04F039D11F8CF7CB00DBD70D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F039D01F8CF7CB00DBD70D /* AppDelegate.m */; };
 		04F039D41F8CF7CB00DBD70D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F039D31F8CF7CB00DBD70D /* ViewController.m */; };
@@ -246,6 +247,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		04D957FE20B14F89006EE2CA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		716FFBC6204408E400443E32 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +288,8 @@
 		04D7C8B71F98A0CF008DD0B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04D7C8BA1F98A0CF008DD0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04D7C8BC1F98A0CF008DD0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D9580020B14F89006EE2CA /* ScrollView回收键盘方式 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ScrollView回收键盘方式"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D9580220B14F89006EE2CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F039CA1F8CF7CB00DBD70D /* 获取view所在的控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "获取view所在的控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F039CD1F8CF7CB00DBD70D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F039CF1F8CF7CB00DBD70D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -301,7 +313,7 @@
 		04F762371F97565600F4EF74 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		04F762391F97584600F4EF74 /* Tips */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips; sourceTree = "<group>"; };
 		04F7623F1F97590800F4EF74 /* 猴子测试UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "猴子测试UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04F762411F97590800F4EF74 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ____UITests.m; sourceTree = "<group>"; };
+		04F762411F97590800F4EF74 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		04F762431F97590800F4EF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CF77EBF8BBA6D3E16C052F3 /* libPods-UIWindow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIWindow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC2DEE33B1CF378585BC0A5 /* Pods-OCAndJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.release.xcconfig"; sourceTree = "<group>"; };
@@ -720,6 +732,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04D957FD20B14F89006EE2CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04F039C71F8CF7CB00DBD70D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -858,6 +877,14 @@
 				04D7C8AC1F98A0CF008DD0B1 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04D9580120B14F89006EE2CA /* ScrollView回收键盘方式 */ = {
+			isa = PBXGroup;
+			children = (
+				04D9580220B14F89006EE2CA /* main.m */,
+			);
+			path = "ScrollView回收键盘方式";
 			sourceTree = "<group>";
 		};
 		04F039CB1F8CF7CB00DBD70D /* 获取view所在的控制器 */ = {
@@ -1443,6 +1470,7 @@
 				714026E2204FE94600D2993D /* SD知识点 */,
 				7199A2BE205F9D040051812D /* 零碎知识点 */,
 				7199A2DB2060999F0051812D /* UIWindow */,
+				04D9580120B14F89006EE2CA /* ScrollView回收键盘方式 */,
 				F08E11E11F78DBD3005DE5F9 /* Products */,
 				EFF871DCB3FA620DE2960126 /* Pods */,
 				39248CB0E8D6D3D61B8936C0 /* Frameworks */,
@@ -1469,6 +1497,7 @@
 				714026E1204FE94600D2993D /* SD知识点.app */,
 				7199A2BD205F9D040051812D /* 零碎知识点.app */,
 				7199A2DA2060999F0051812D /* UIWindow.app */,
+				04D9580020B14F89006EE2CA /* ScrollView回收键盘方式 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1560,6 +1589,23 @@
 			productName = "死锁";
 			productReference = 04D7C8A91F98A0CF008DD0B1 /* 死锁.app */;
 			productType = "com.apple.product-type.application";
+		};
+		04D957FF20B14F89006EE2CA /* ScrollView回收键盘方式 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04D9580620B14F8A006EE2CA /* Build configuration list for PBXNativeTarget "ScrollView回收键盘方式" */;
+			buildPhases = (
+				04D957FC20B14F89006EE2CA /* Sources */,
+				04D957FD20B14F89006EE2CA /* Frameworks */,
+				04D957FE20B14F89006EE2CA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ScrollView回收键盘方式";
+			productName = "ScrollView回收键盘方式";
+			productReference = 04D9580020B14F89006EE2CA /* ScrollView回收键盘方式 */;
+			productType = "com.apple.product-type.tool";
 		};
 		04F039C91F8CF7CB00DBD70D /* 获取view所在的控制器 */ = {
 			isa = PBXNativeTarget;
@@ -1852,6 +1898,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					04D957FF20B14F89006EE2CA = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
 					04F039C91F8CF7CB00DBD70D = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -1950,6 +2000,7 @@
 				714026E0204FE94600D2993D /* SD知识点 */,
 				7199A2BC205F9D040051812D /* 零碎知识点 */,
 				7199A2D92060999F0051812D /* UIWindow */,
+				04D957FF20B14F89006EE2CA /* ScrollView回收键盘方式 */,
 			);
 		};
 /* End PBXProject section */
@@ -2181,6 +2232,14 @@
 				04D7C8B31F98A0CF008DD0B1 /* ViewController.m in Sources */,
 				04D7C8B01F98A0CF008DD0B1 /* AppDelegate.m in Sources */,
 				04D7C8AD1F98A0CF008DD0B1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D957FC20B14F89006EE2CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D9580320B14F89006EE2CA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2709,6 +2768,52 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "onzxgway.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		04D9580420B14F8A006EE2CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		04D9580520B14F8A006EE2CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -3458,6 +3563,15 @@
 			buildConfigurations = (
 				04D7C8BD1F98A0CF008DD0B1 /* Debug */,
 				04D7C8BE1F98A0CF008DD0B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04D9580620B14F8A006EE2CA /* Build configuration list for PBXNativeTarget "ScrollView回收键盘方式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04D9580420B14F8A006EE2CA /* Debug */,
+				04D9580520B14F8A006EE2CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

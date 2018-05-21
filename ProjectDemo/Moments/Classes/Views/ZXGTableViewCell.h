@@ -10,8 +10,8 @@
 #import "ZXGCustomTextView.h"
 
 @interface ZXGTableViewCell : UITableViewCell
-
-@property (strong, nonatomic) ZXGCustomTextView *textView;
-@property (nonatomic, strong) UILabel *title;
+//@property (strong, nonatomic) ZXGCustomTextView *textView;
+//@property (nonatomic, strong) UILabel *title;
+@property (nonatomic, strong) UITableView *table;
 
 @end

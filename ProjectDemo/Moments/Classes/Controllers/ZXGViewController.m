@@ -39,20 +39,29 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    ZXGTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[ZXGTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    if (indexPath.row == 0) {
+        ZXGTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        if (!cell) {
+            cell = [[ZXGTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        }
+        
+        cell.selectionStyle = 0;
+        // Configure the cell...
+        
+        return cell;
+    }
+    else {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"123"];
+        cell.contentView.backgroundColor = kRandomColor;
+        return cell;
     }
     
-    cell.selectionStyle = 0;
-    // Configure the cell...
-    
-    return cell;
+    return nil;
 }
 
 - (void)learnYYTextView {

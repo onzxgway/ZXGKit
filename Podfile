@@ -41,12 +41,12 @@ thirdArray.each do |t|
 end
 
 
-# Macro_And_Categorys.project
-MacroArray = ['Macro_And_Categorys']
+# CustomView.project
+MacroArray = ['ZXGCustomView']
 MacroArray.each do |t|
     target t do
-    project 'Categorys/Macro_And_Categorys.project'
-        
+    project 'Categorys/CustomView.project'
+        pods
     end
 end
 
