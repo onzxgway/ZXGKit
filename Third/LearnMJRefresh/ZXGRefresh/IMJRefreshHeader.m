@@ -1,123 +1,109 @@
 //
-//  MJRefreshHeader.m
+//  IMJRefreshHeader.m
 //  Third
 //
-//  Created by 朱献国 on 2018/5/10.
-//Copyright © 2018年 feizhu. All rights reserved.
+//  Created by 朱献国 on 2018/5/21.
+//  Copyright © 2018年 feizhu. All rights reserved.
 //
 
-#import "MJRefreshHeader.h"
+#import "IMJRefreshHeader.h"
 
-@interface MJRefreshHeader ()
-@property (assign, nonatomic) CGFloat insetTDelta;
+@interface IMJRefreshHeader ()
+@property (nonatomic) CGFloat insetTDelta;
 @end
 
-@implementation MJRefreshHeader
+@implementation IMJRefreshHeader
 
 #pragma mark - 构造方法
-+ (instancetype)headerWithRefreshingBlock:(MJRefreshComponentRefreshingBlock)refreshingBlock
-{
-    MJRefreshHeader *cmp = [[self alloc] init];
-    cmp.refreshingBlock = refreshingBlock;
-    return cmp;
+/** 创建header */
++ (instancetype)headerWithRefreshingBlock:(MJRefreshComponentRefreshingBlock)refreshingBlock {
+    IMJRefreshHeader *header = [[IMJRefreshHeader alloc] init];
+    header.refreshingBlock = refreshingBlock;
+    return header;
 }
-+ (instancetype)headerWithRefreshingTarget:(id)target refreshingAction:(SEL)action
-{
-    MJRefreshHeader *cmp = [[self alloc] init];
-    [cmp setRefreshingTarget:target refreshingAction:action];
-    return cmp;
+
+/** 创建header */
++ (instancetype)headerWithRefreshingTarget:(id)target refreshingAction:(SEL)action {
+    IMJRefreshHeader *header = [[IMJRefreshHeader alloc] init];
+    [header setRefreshingTarget:target refreshingAction:action];
+    return header;
 }
-#pragma mark - 覆盖父类的方法
+
 - (void)prepare {
     [super prepare];
     
+    self.mj_h = MJRefreshHeaderHeight;
+    
     // 设置key
     self.lastUpdatedTimeKey = MJRefreshHeaderLastUpdatedTimeKey;
-    
-    // 设置高度
-    self.mj_h = MJRefreshHeaderHeight;
 }
 
 - (void)placeSubviews {
     [super placeSubviews];
-    
     // 设置y值(当自己的高度发生改变了，肯定要重新调整Y值，所以放到placeSubviews方法中设置y值)
-    self.mj_y = - self.mj_h - self.ignoredScrollViewContentInsetTop;
+    self.mj_y = - self.mj_h;
 }
 
+// 根据不同的偏移量设置不同的状态
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change {
     [super scrollViewContentOffsetDidChange:change];
     
-    // 在刷新的refreshing状态
     if (self.state == MJRefreshStateRefreshing) {
         // 暂时保留
         if (self.window == nil) return;
-        
+
         // sectionheader停留解决
         CGFloat insetT = - self.scrollView.mj_offsetY > _scrollViewOriginalInset.top ? - self.scrollView.mj_offsetY : _scrollViewOriginalInset.top;
         insetT = insetT > self.mj_h + _scrollViewOriginalInset.top ? self.mj_h + _scrollViewOriginalInset.top : insetT;
         self.scrollView.mj_insetT = insetT;
-        
+
         self.insetTDelta = _scrollViewOriginalInset.top - insetT;
         return;
     }
-    
-    // 跳转到下一个控制器时，contentInset可能会变
-    _scrollViewOriginalInset = self.scrollView.mj_inset;
-    
-    // 当前的contentOffset
-    CGFloat offsetY = self.scrollView.mj_offsetY;
-    // 头部控件刚好出现的offsetY
-    CGFloat happenOffsetY = - self.scrollViewOriginalInset.top;
-    
-    // 如果是向上滚动到看不见头部控件，直接返回
-    // >= -> >
+
+    // 当前的偏移量
+    CGFloat offsetY = _scrollView.mj_offsetY;
+    // 头部控件刚好出现的偏移量
+    CGFloat happenOffsetY = -_scrollViewOriginalInset.top;
     if (offsetY > happenOffsetY) return;
-    
+    NSLog(@"----->offsetY:%f", offsetY);
+    NSLog(@"happenOffsetY:%f<-----", happenOffsetY);
+
     // 普通 和 即将刷新 的临界点
     CGFloat normal2pullingOffsetY = happenOffsetY - self.mj_h;
     CGFloat pullingPercent = (happenOffsetY - offsetY) / self.mj_h;
-    
-    if (self.scrollView.isDragging) { // 如果正在拖拽
+
+    if (_scrollView.isDragging) {
         self.pullingPercent = pullingPercent;
         if (self.state == MJRefreshStateIdle && offsetY < normal2pullingOffsetY) {
-            // 转为即将刷新状态
             self.state = MJRefreshStatePulling;
-        }
-        else if (self.state == MJRefreshStatePulling && offsetY >= normal2pullingOffsetY) {
-            // 转为普通状态
+        } else if (self.state == MJRefreshStatePulling && offsetY >= normal2pullingOffsetY) {
             self.state = MJRefreshStateIdle;
         }
-    }
-    else if (self.state == MJRefreshStatePulling) {// 即将刷新 && 手松开
-        // 开始刷新
+    } else if (self.state == MJRefreshStatePulling) {
         [self beginRefreshing];
-    }
-    else if (pullingPercent < 1) {
-        self.pullingPercent = pullingPercent;
     }
 }
 
 - (void)setState:(MJRefreshState)state {
     MJRefreshCheckState
     
-    // 根据状态做事情
     if (state == MJRefreshStateIdle) {
         if (oldState != MJRefreshStateRefreshing) return;
-        
+
         // 保存刷新时间
-        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:self.lastUpdatedTimeKey];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:MJRefreshHeaderLastUpdatedTimeKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        
+
         // 恢复inset和offset
         [UIView animateWithDuration:MJRefreshSlowAnimationDuration animations:^{
-            self.scrollView.mj_insetT += self.insetTDelta;
-            
+            _scrollView.mj_insetT += self.insetTDelta;
+
             // 自动调整透明度
             if (self.isAutomaticallyChangeAlpha) self.alpha = 0.0;
         } completion:^(BOOL finished) {
             self.pullingPercent = 0.0;
-            
+
             if (self.endRefreshingCompletionBlock) {
                 self.endRefreshingCompletionBlock();
             }
@@ -126,13 +112,13 @@
     else if (state == MJRefreshStateRefreshing) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
-                CGFloat top = self.scrollViewOriginalInset.top + self.mj_h;
                 // 增加滚动区域top
-                self.scrollView.mj_insetT = top;
-                // 设置滚动位置
-                CGPoint offset = self.scrollView.contentOffset;
+                CGFloat top = _scrollViewOriginalInset.top + self.mj_h;
+                _scrollView.mj_insetT = top;
+                CGPoint offset = _scrollView.contentOffset;
                 offset.y = -top;
-                [self.scrollView setContentOffset:offset animated:NO];
+                // 设置滚动位置
+                [_scrollView setContentOffset:offset animated:NO];
             } completion:^(BOOL finished) {
                 [self executeRefreshingCallback];
             }];
@@ -143,12 +129,6 @@
 #pragma mark - 公共方法
 - (NSDate *)lastUpdatedTime {
     return [[NSUserDefaults standardUserDefaults] objectForKey:self.lastUpdatedTimeKey];
-}
-
-- (void)setIgnoredScrollViewContentInsetTop:(CGFloat)ignoredScrollViewContentInsetTop {
-    _ignoredScrollViewContentInsetTop = ignoredScrollViewContentInsetTop;
-    
-    self.mj_y = - self.mj_h - _ignoredScrollViewContentInsetTop;
 }
 
 @end

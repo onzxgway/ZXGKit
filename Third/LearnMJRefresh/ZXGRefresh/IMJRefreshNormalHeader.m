@@ -1,46 +1,20 @@
 //
-//  MJRefreshNormalHeader.m
+//  IMJRefreshNormalHeader.m
 //  Third
 //
-//  Created by 朱献国 on 2018/5/10.
+//  Created by 朱献国 on 2018/5/22.
 //  Copyright © 2018年 feizhu. All rights reserved.
 //
 
-#import "MJRefreshNormalHeader.h"
+#import "IMJRefreshNormalHeader.h"
 
-@interface MJRefreshNormalHeader () {
+@interface IMJRefreshNormalHeader () {
     __unsafe_unretained UIImageView *_arrowView;
 }
-@property (weak, nonatomic) UIActivityIndicatorView *loadingView;
+@property (weak  , nonatomic) UIActivityIndicatorView *loadingView;
 @end
 
-@implementation MJRefreshNormalHeader
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-    }
-    return self;
-}
-
-#pragma mark - 懒加载子控件
-- (UIImageView *)arrowView {
-    if (!_arrowView) {
-        UIImageView *arrowView = [[UIImageView alloc] initWithImage:[NSBundle mj_arrowImage]];
-        [self addSubview:_arrowView = arrowView];
-    }
-    return _arrowView;
-}
-
-- (UIActivityIndicatorView *)loadingView {
-    if (!_loadingView) {
-        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:self.activityIndicatorViewStyle];
-        loadingView.hidesWhenStopped = YES;
-        [self addSubview:_loadingView = loadingView];
-    }
-    return _loadingView;
-}
+@implementation IMJRefreshNormalHeader
 
 #pragma mark - 重写父类的方法
 - (void)prepare {
@@ -105,19 +79,43 @@
                 self.arrowView.transform = CGAffineTransformIdentity;
             }];
         }
-    }
-    else if (state == MJRefreshStatePulling) {
+    } else if (state == MJRefreshStatePulling) {
         [self.loadingView stopAnimating];
         self.arrowView.hidden = NO;
         [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
             self.arrowView.transform = CGAffineTransformMakeRotation(0.000001 - M_PI);
         }];
-    }
-    else if (state == MJRefreshStateRefreshing) {
+    } else if (state == MJRefreshStateRefreshing) {
         self.loadingView.alpha = 1.0; // 防止refreshing -> idle的动画完毕动作没有被执行
         [self.loadingView startAnimating];
         self.arrowView.hidden = YES;
     }
+}
+
+#pragma mark - 公共方法
+- (void)setActivityIndicatorViewStyle:(UIActivityIndicatorViewStyle)activityIndicatorViewStyle {
+    _activityIndicatorViewStyle = activityIndicatorViewStyle;
+    
+    self.loadingView = nil;
+    [self setNeedsLayout];
+}
+
+#pragma mark - 懒加载子控件
+- (UIImageView *)arrowView {
+    if (!_arrowView) {
+        UIImageView *arrowView = [[UIImageView alloc] initWithImage:[NSBundle mj_arrowImage]];
+        [self addSubview:_arrowView = arrowView];
+    }
+    return _arrowView;
+}
+
+- (UIActivityIndicatorView *)loadingView {
+    if (!_loadingView) {
+        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:self.activityIndicatorViewStyle];
+        loadingView.hidesWhenStopped = YES;
+        [self addSubview:_loadingView = loadingView];
+    }
+    return _loadingView;
 }
 
 @end

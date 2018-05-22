@@ -7,7 +7,7 @@
 //
 
 #import "NSBundle+MJRefresh.h"
-#import "MJRefreshComponent.h"
+#import "IMJRefreshComponent.h"
 
 @implementation NSBundle (MJRefresh)
 + (instancetype)mj_refreshBundle
@@ -15,7 +15,7 @@
     static NSBundle *refreshBundle = nil;
     if (refreshBundle == nil) {
         // 这里不使用mainBundle是为了适配pod 1.x和0.x
-        refreshBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[MJRefreshComponent class]] pathForResource:@"MJRefresh" ofType:@"bundle"]];
+        refreshBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[IMJRefreshComponent class]] pathForResource:@"MJRefresh" ofType:@"bundle"]];
     }
     return refreshBundle;
 }

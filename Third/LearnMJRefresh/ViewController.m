@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "MJRefreshNormalHeader.h"
+#import "IMJRefreshNormalHeader.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+@property (weak  , nonatomic) IBOutlet UIScrollView *myScrollView;
+@property (nonatomic, strong) IMJRefreshNormalHeader *refreshComponent;
 @end
 
 @implementation ViewController
@@ -18,14 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MJRefreshNormalHeader *com = [[MJRefreshNormalHeader alloc] init];
-    [self.myScrollView insertSubview:com atIndex:0];
+//    self.myScrollView.contentInset = UIEdgeInsetsMake(120, 0, 0, 0);
+    self.myScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT * 2);
+    [self.myScrollView addSubview:self.refreshComponent];
+    NSLog(@"%@", NSStringFromCGRect(self.refreshComponent.frame));
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.refreshComponent endRefreshing];
+    });
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (IMJRefreshNormalHeader *)refreshComponent {
+    if (!_refreshComponent) {
+        _refreshComponent = [[IMJRefreshNormalHeader alloc] init];
+        _refreshComponent.automaticallyChangeAlpha = YES;
+    }
+    return _refreshComponent;
 }
-
 
 @end

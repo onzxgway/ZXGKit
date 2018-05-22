@@ -1,14 +1,14 @@
 //
-//  MJRefreshStateHeader.m
+//  IMJRefreshStateHeader.m
 //  Third
 //
-//  Created by 朱献国 on 2018/5/10.
+//  Created by 朱献国 on 2018/5/22.
 //  Copyright © 2018年 feizhu. All rights reserved.
 //
 
-#import "MJRefreshStateHeader.h"
+#import "IMJRefreshStateHeader.h"
 
-@interface MJRefreshStateHeader () {
+@interface IMJRefreshStateHeader () {
     /** 显示上一次刷新时间的label */
     __unsafe_unretained UILabel *_lastUpdatedTimeLabel;
     /** 显示刷新状态的label */
@@ -16,50 +16,10 @@
 }
 /** 所有状态对应的文字 */
 @property (strong, nonatomic) NSMutableDictionary *stateTitles;
-
 @end
 
-@implementation MJRefreshStateHeader
+@implementation IMJRefreshStateHeader
 
-#pragma mark - 懒加载
-- (NSMutableDictionary *)stateTitles {
-    if (!_stateTitles) {
-        self.stateTitles = [NSMutableDictionary dictionary];
-    }
-    return _stateTitles;
-}
-
-- (UILabel *)stateLabel {
-    if (!_stateLabel) {
-        [self addSubview:_stateLabel = [UILabel mj_label]];
-    }
-    return _stateLabel;
-}
-
-- (UILabel *)lastUpdatedTimeLabel
-{
-    if (!_lastUpdatedTimeLabel) {
-        [self addSubview:_lastUpdatedTimeLabel = [UILabel mj_label]];
-    }
-    return _lastUpdatedTimeLabel;
-}
-
-#pragma mark - 公共方法
-- (void)setTitle:(NSString *)title forState:(MJRefreshState)state {
-    if (title == nil) return;
-    self.stateTitles[@(state)] = title;
-    self.stateLabel.text = self.stateTitles[@(self.state)];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-    }
-    return self;
-}
-
-#pragma mark - 覆盖父类的方法
 - (void)prepare {
     [super prepare];
     
@@ -75,10 +35,7 @@
 - (void)placeSubviews {
     [super placeSubviews];
     
-    if (self.stateLabel.hidden) return;
-    
     BOOL noConstrainsOnStatusLabel = self.stateLabel.constraints.count == 0;
-    
     if (self.lastUpdatedTimeLabel.hidden) {
         // 状态
         if (noConstrainsOnStatusLabel) self.stateLabel.frame = self.bounds;
@@ -120,6 +77,7 @@
     return [NSCalendar currentCalendar];
 }
 
+
 #pragma mark key的处理
 - (void)setLastUpdatedTimeKey:(NSString *)lastUpdatedTimeKey {
     [super setLastUpdatedTimeKey:lastUpdatedTimeKey];
@@ -135,6 +93,7 @@
         return;
     }
     
+    //
     if (lastUpdatedTime) {
         // 1.获得年月日
         NSCalendar *calendar = [self currentCalendar];
@@ -160,12 +119,41 @@
                                           [NSBundle mj_localizedStringForKey:MJRefreshHeaderLastTimeText],
                                           isToday ? [NSBundle mj_localizedStringForKey:MJRefreshHeaderDateTodayText] : @"",
                                           time];
-    }
-    else {
+    } else {
         self.lastUpdatedTimeLabel.text = [NSString stringWithFormat:@"%@%@",
                                           [NSBundle mj_localizedStringForKey:MJRefreshHeaderLastTimeText],
                                           [NSBundle mj_localizedStringForKey:MJRefreshHeaderNoneLastDateText]];
     }
+}
+
+#pragma mark - 懒加载
+- (NSMutableDictionary *)stateTitles {
+    if (!_stateTitles) {
+        self.stateTitles = [NSMutableDictionary dictionary];
+    }
+    return _stateTitles;
+}
+
+- (UILabel *)stateLabel {
+    if (!_stateLabel) {
+        [self addSubview:_stateLabel = [UILabel mj_label]];
+    }
+    return _stateLabel;
+}
+
+- (UILabel *)lastUpdatedTimeLabel {
+    if (!_lastUpdatedTimeLabel) {
+        [self addSubview:_lastUpdatedTimeLabel = [UILabel mj_label]];
+    }
+    return _lastUpdatedTimeLabel;
+}
+
+#pragma mark - 公共方法
+- (void)setTitle:(NSString *)title forState:(MJRefreshState)state {
+    if (title == nil) return;
+    
+    self.stateTitles[@(state)] = title;
+    self.stateLabel.text = self.stateTitles[@(self.state)];
 }
 
 @end
