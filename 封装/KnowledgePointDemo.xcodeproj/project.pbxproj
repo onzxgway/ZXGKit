@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010E44EC20B3FDCF000877B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 010E44EB20B3FDCF000877B1 /* AppDelegate.m */; };
+		010E44EF20B3FDCF000877B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010E44EE20B3FDCF000877B1 /* ViewController.m */; };
+		010E44F220B3FDCF000877B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010E44F020B3FDCF000877B1 /* Main.storyboard */; };
+		010E44F420B3FDCF000877B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010E44F320B3FDCF000877B1 /* Assets.xcassets */; };
+		010E44F720B3FDCF000877B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010E44F520B3FDCF000877B1 /* LaunchScreen.storyboard */; };
+		010E44FA20B3FDCF000877B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 010E44F920B3FDCF000877B1 /* main.m */; };
+		010E451C20B3FE70000877B1 /* ZXGPickerViewComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 010E451A20B3FE6F000877B1 /* ZXGPickerViewComponent.m */; };
 		0165F165208DB91100BCA095 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0165F164208DB91100BCA095 /* AppDelegate.m */; };
 		0165F168208DB91100BCA095 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0165F167208DB91100BCA095 /* ViewController.m */; };
 		0165F16B208DB91100BCA095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0165F169208DB91100BCA095 /* Main.storyboard */; };
@@ -26,6 +33,7 @@
 		0183051B20889978009EC766 /* ZXGOCCallJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183051A20889978009EC766 /* ZXGOCCallJSViewController.m */; };
 		0183051D20889A3A009EC766 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 0183051C20889A3A009EC766 /* test.js */; };
 		01BE447C2085F8BE00121BED /* libZXGCommonsKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE447D2085F8BE00121BED /* libZXGCommonsKit.a */; };
+		01BF6721F5E0572B9D3FEE9C /* libPods-ZXGDatePickView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA51E6EA295344576ECF4922 /* libPods-ZXGDatePickView.a */; };
 		01DC45DB20902D55006A26A0 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = 01DC45DA20902D55006A26A0 /* content.json */; };
 		01DC45DE20902FD2006A26A0 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DC45DD20902FD2006A26A0 /* CoreTextImageData.m */; };
 		01DC45E1209031A0006A26A0 /* CoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DC45E0209031A0006A26A0 /* CoreTextLinkData.m */; };
@@ -55,6 +63,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010E44E820B3FDCF000877B1 /* ZXGDatePickView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXGDatePickView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		010E44EA20B3FDCF000877B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		010E44EB20B3FDCF000877B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		010E44ED20B3FDCF000877B1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		010E44EE20B3FDCF000877B1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		010E44F120B3FDCF000877B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		010E44F320B3FDCF000877B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		010E44F620B3FDCF000877B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		010E44F820B3FDCF000877B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		010E44F920B3FDCF000877B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		010E451A20B3FE6F000877B1 /* ZXGPickerViewComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGPickerViewComponent.m; sourceTree = "<group>"; };
+		010E451B20B3FE6F000877B1 /* ZXGPickerViewComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGPickerViewComponent.h; sourceTree = "<group>"; };
+		010E451D20B3FF45000877B1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0165F161208DB91100BCA095 /* CoreTextDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTextDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0165F163208DB91100BCA095 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0165F164208DB91100BCA095 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,6 +157,7 @@
 		0AEA8EAF9398037384C83DA3 /* Pods-CoreTextDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTextDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CoreTextDemo/Pods-CoreTextDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		206C968552FCA7CBA0EEC10D /* Pods-CoreTextDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTextDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CoreTextDemo/Pods-CoreTextDemo.release.xcconfig"; sourceTree = "<group>"; };
 		27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Packaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		368D4C59B8015FD37E5EA2C5 /* Pods-ZXGDatePickView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGDatePickView.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ZXGDatePickView/Pods-ZXGDatePickView.debug.xcconfig"; sourceTree = "<group>"; };
 		4E87B4407ACEB0A7EDB32C6C /* Pods-封装.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装.release.xcconfig"; path = "../Pods/Target Support Files/Pods-封装/Pods-封装.release.xcconfig"; sourceTree = "<group>"; };
 		80A5062107C1C3D881C5C1B9 /* Pods-OCAndJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.release.xcconfig"; sourceTree = "<group>"; };
 		9BE3BCE0BA4DF734EFEBE69F /* libPods-网络封装.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网络封装.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,10 +167,20 @@
 		C70B5EF93A31DDE1D37B8962 /* libPods-封装.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-封装.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EFCE7CAFFB0F81252BC07B /* Pods-Packaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Packaging.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Packaging/Pods-Packaging.release.xcconfig"; sourceTree = "<group>"; };
 		E2490CD6417B10AEC0A8E801 /* Pods-OCAndJS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.debug.xcconfig"; sourceTree = "<group>"; };
+		FA51E6EA295344576ECF4922 /* libPods-ZXGDatePickView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXGDatePickView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8DFC43E1BAE8D3E3C9B7CB /* Pods-Packaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Packaging.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Packaging/Pods-Packaging.debug.xcconfig"; sourceTree = "<group>"; };
+		FD74055DEB917EBB61E684E8 /* Pods-ZXGDatePickView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGDatePickView.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ZXGDatePickView/Pods-ZXGDatePickView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		010E44E520B3FDCF000877B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01BF6721F5E0572B9D3FEE9C /* libPods-ZXGDatePickView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0165F15E208DB91100BCA095 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +215,7 @@
 				01E3ADF620858AAE00151E1B /* Packaging */,
 				018304E52088897C009EC766 /* OCAndJS */,
 				0165F162208DB91100BCA095 /* CoreTextDemo */,
+				010E44E920B3FDCF000877B1 /* ZXGDatePickView */,
 				0104688B207DAAF700DC5BA0 /* Products */,
 				6870B1D4F4700A43EF3F001A /* Pods */,
 				489AFC8005142EA0A6268AE3 /* Frameworks */,
@@ -195,8 +228,28 @@
 				01E3ADF520858AAE00151E1B /* Packaging.app */,
 				018304E42088897C009EC766 /* OCAndJS.app */,
 				0165F161208DB91100BCA095 /* CoreTextDemo.app */,
+				010E44E820B3FDCF000877B1 /* ZXGDatePickView.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		010E44E920B3FDCF000877B1 /* ZXGDatePickView */ = {
+			isa = PBXGroup;
+			children = (
+				010E451B20B3FE6F000877B1 /* ZXGPickerViewComponent.h */,
+				010E451A20B3FE6F000877B1 /* ZXGPickerViewComponent.m */,
+				010E44EA20B3FDCF000877B1 /* AppDelegate.h */,
+				010E44EB20B3FDCF000877B1 /* AppDelegate.m */,
+				010E44ED20B3FDCF000877B1 /* ViewController.h */,
+				010E44EE20B3FDCF000877B1 /* ViewController.m */,
+				010E44F020B3FDCF000877B1 /* Main.storyboard */,
+				010E44F320B3FDCF000877B1 /* Assets.xcassets */,
+				010E44F520B3FDCF000877B1 /* LaunchScreen.storyboard */,
+				010E44F820B3FDCF000877B1 /* Info.plist */,
+				010E44F920B3FDCF000877B1 /* main.m */,
+				010E451D20B3FF45000877B1 /* PrefixHeader.pch */,
+			);
+			path = ZXGDatePickView;
 			sourceTree = "<group>";
 		};
 		0165F162208DB91100BCA095 /* CoreTextDemo */ = {
@@ -351,6 +404,7 @@
 				27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */,
 				B34BEC4A6DA2310E21CD59D2 /* libPods-OCAndJS.a */,
 				BBD331ECFADBF613C3E85A78 /* libPods-CoreTextDemo.a */,
+				FA51E6EA295344576ECF4922 /* libPods-ZXGDatePickView.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -366,6 +420,8 @@
 				80A5062107C1C3D881C5C1B9 /* Pods-OCAndJS.release.xcconfig */,
 				0AEA8EAF9398037384C83DA3 /* Pods-CoreTextDemo.debug.xcconfig */,
 				206C968552FCA7CBA0EEC10D /* Pods-CoreTextDemo.release.xcconfig */,
+				368D4C59B8015FD37E5EA2C5 /* Pods-ZXGDatePickView.debug.xcconfig */,
+				FD74055DEB917EBB61E684E8 /* Pods-ZXGDatePickView.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -373,6 +429,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		010E44E720B3FDCF000877B1 /* ZXGDatePickView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 010E451720B3FDCF000877B1 /* Build configuration list for PBXNativeTarget "ZXGDatePickView" */;
+			buildPhases = (
+				C1B4A8A3C5FDD3C5414E8C14 /* [CP] Check Pods Manifest.lock */,
+				010E44E420B3FDCF000877B1 /* Sources */,
+				010E44E520B3FDCF000877B1 /* Frameworks */,
+				010E44E620B3FDCF000877B1 /* Resources */,
+				0A5BAA45037DEE1ECCE03493 /* [CP] Embed Pods Frameworks */,
+				292892A6ACD09DCA237F8D84 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZXGDatePickView;
+			productName = ZXGDatePickView;
+			productReference = 010E44E820B3FDCF000877B1 /* ZXGDatePickView.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0165F160208DB91100BCA095 /* CoreTextDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0165F190208DB91100BCA095 /* Build configuration list for PBXNativeTarget "CoreTextDemo" */;
@@ -443,6 +519,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "朱献国";
 				TargetAttributes = {
+					010E44E720B3FDCF000877B1 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
 					0165F160208DB91100BCA095 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -473,11 +553,22 @@
 				01E3ADF420858AAE00151E1B /* Packaging */,
 				018304E32088897C009EC766 /* OCAndJS */,
 				0165F160208DB91100BCA095 /* CoreTextDemo */,
+				010E44E720B3FDCF000877B1 /* ZXGDatePickView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		010E44E620B3FDCF000877B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010E44F720B3FDCF000877B1 /* LaunchScreen.storyboard in Resources */,
+				010E44F420B3FDCF000877B1 /* Assets.xcassets in Resources */,
+				010E44F220B3FDCF000877B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0165F15F208DB91100BCA095 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,6 +605,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0A5BAA45037DEE1ECCE03493 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ZXGDatePickView/Pods-ZXGDatePickView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0DF8A9255576AAB29BFD28B2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,7 +627,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-CoreTextDemo/Pods-CoreTextDemo-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -545,6 +651,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		292892A6ACD09DCA237F8D84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-ZXGDatePickView/Pods-ZXGDatePickView-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ZXGDatePickView/Pods-ZXGDatePickView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		33C5F0BFDE916F5DAF0EDEBF /* [CP] Check Pods Manifest.lock */ = {
@@ -590,7 +714,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -614,6 +738,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Packaging/Pods-Packaging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1B4A8A3C5FDD3C5414E8C14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZXGDatePickView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E662B53C0964D7BBCA9357AB /* [CP] Check Pods Manifest.lock */ = {
@@ -641,7 +783,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Packaging/Pods-Packaging-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -670,6 +812,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		010E44E420B3FDCF000877B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010E451C20B3FE70000877B1 /* ZXGPickerViewComponent.m in Sources */,
+				010E44EF20B3FDCF000877B1 /* ViewController.m in Sources */,
+				010E44FA20B3FDCF000877B1 /* main.m in Sources */,
+				010E44EC20B3FDCF000877B1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0165F15D208DB91100BCA095 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -723,6 +876,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		010E44F020B3FDCF000877B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010E44F120B3FDCF000877B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		010E44F520B3FDCF000877B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010E44F620B3FDCF000877B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		0165F169208DB91100BCA095 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -859,6 +1028,42 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		010E451120B3FDCF000877B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368D4C59B8015FD37E5EA2C5 /* Pods-ZXGDatePickView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ZXGDatePickView/PrefixHeader.pch;
+				INFOPLIST_FILE = ZXGDatePickView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		010E451220B3FDCF000877B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD74055DEB917EBB61E684E8 /* Pods-ZXGDatePickView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ZXGDatePickView/PrefixHeader.pch;
+				INFOPLIST_FILE = ZXGDatePickView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1004,6 +1209,15 @@
 			buildConfigurations = (
 				0104689E207DAAF700DC5BA0 /* Debug */,
 				0104689F207DAAF700DC5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		010E451720B3FDCF000877B1 /* Build configuration list for PBXNativeTarget "ZXGDatePickView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				010E451120B3FDCF000877B1 /* Debug */,
+				010E451220B3FDCF000877B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
