@@ -20,6 +20,7 @@
     
     [self.view addSubview:self.subView];
 }
+
 - (IBAction)weiboClicked:(id)sender {
 }
 - (IBAction)weiboClicked:(id)sender {

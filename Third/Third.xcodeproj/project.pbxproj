@@ -26,6 +26,9 @@
 		0124C7A620B28D6B00C0BA30 /* IMJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7A520B28D6B00C0BA30 /* IMJRefreshHeader.m */; };
 		0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A32079A62D00012ADC /* ZXGDBOperation.m */; };
 		0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */; };
+		0175829420B4FD10008A626B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829320B4FD10008A626B /* MJRefreshComponent.m */; };
+		0175829720B53113008A626B /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829620B53113008A626B /* MJRefreshHeader.m */; };
+		0175829A20B56963008A626B /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829920B56963008A626B /* MJRefreshStateHeader.m */; };
 		01793E462079AE0D0030B167 /* ZXGDBColumnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */; };
 		01793E492079BA370030B167 /* ZXGDBWhereCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E482079BA370030B167 /* ZXGDBWhereCondition.m */; };
 		01793E4C2079C6510030B167 /* ZXGDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E4B2079C6510030B167 /* ZXGDBManager.m */; };
@@ -134,6 +137,12 @@
 		0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBCRUDCondition.m; sourceTree = "<group>"; };
 		0139D0A82079AAF400012ADC /* ZXGDBConstDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBConstDefine.h; sourceTree = "<group>"; };
 		015296A1E3AAACD1121D2246 /* Pods-Third.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Third.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Third/Pods-Third.debug.xcconfig"; sourceTree = "<group>"; };
+		0175829220B4FD10008A626B /* MJRefreshComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
+		0175829320B4FD10008A626B /* MJRefreshComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
+		0175829520B53113008A626B /* MJRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeader.h; sourceTree = "<group>"; };
+		0175829620B53113008A626B /* MJRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeader.m; sourceTree = "<group>"; };
+		0175829820B56963008A626B /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshStateHeader.h; sourceTree = "<group>"; };
+		0175829920B56963008A626B /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshStateHeader.m; sourceTree = "<group>"; };
 		01793E442079AE0D0030B167 /* ZXGDBColumnCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBColumnCondition.h; sourceTree = "<group>"; };
 		01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBColumnCondition.m; sourceTree = "<group>"; };
 		01793E472079BA370030B167 /* ZXGDBWhereCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBWhereCondition.h; sourceTree = "<group>"; };
@@ -344,6 +353,12 @@
 				010E44E220B3F682000877B1 /* IMJRefreshNormalHeader.m */,
 				0124C79B20B272DF00C0BA30 /* MJRefreshConst.h */,
 				0124C79A20B272DF00C0BA30 /* MJRefreshConst.m */,
+				0175829220B4FD10008A626B /* MJRefreshComponent.h */,
+				0175829320B4FD10008A626B /* MJRefreshComponent.m */,
+				0175829520B53113008A626B /* MJRefreshHeader.h */,
+				0175829620B53113008A626B /* MJRefreshHeader.m */,
+				0175829820B56963008A626B /* MJRefreshStateHeader.h */,
+				0175829920B56963008A626B /* MJRefreshStateHeader.m */,
 			);
 			path = ZXGRefresh;
 			sourceTree = "<group>";
@@ -1112,6 +1127,9 @@
 				0124C7A220B273D300C0BA30 /* UIScrollView+MJExtension.m in Sources */,
 				01098A0520A3E0D80041C430 /* main.m in Sources */,
 				0124C7A620B28D6B00C0BA30 /* IMJRefreshHeader.m in Sources */,
+				0175829720B53113008A626B /* MJRefreshHeader.m in Sources */,
+				0175829420B4FD10008A626B /* MJRefreshComponent.m in Sources */,
+				0175829A20B56963008A626B /* MJRefreshStateHeader.m in Sources */,
 				010E44DB20B3EDA8000877B1 /* IMJRefreshStateHeader.m in Sources */,
 				010989F720A3E0D80041C430 /* AppDelegate.m in Sources */,
 				0124C79920B26D5100C0BA30 /* IMJRefreshComponent.m in Sources */,
@@ -1288,7 +1306,7 @@
 				INFOPLIST_FILE = LearnMJRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgwayy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1308,7 +1326,7 @@
 				INFOPLIST_FILE = LearnMJRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgwayy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
