@@ -11,7 +11,7 @@ def pods
 end
 
 # target数组 如果有新的target直接加入该数组
-KnowledgePointDemoArray = ['Packaging','OCAndJS','CoreTextDemo']
+KnowledgePointDemoArray = ['Packaging','OCAndJS','CoreTextDemo', 'ZXGDatePickView']
 KnowledgePointDemoArray.each do |t|
     target t do
         project '封装/KnowledgePointDemo.project'
