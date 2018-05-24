@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017C2BE120B6C22B00C73595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C2BE020B6C22B00C73595 /* AppDelegate.m */; };
+		017C2BE420B6C22B00C73595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C2BE320B6C22B00C73595 /* ViewController.m */; };
+		017C2BE720B6C22B00C73595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017C2BE520B6C22B00C73595 /* Main.storyboard */; };
+		017C2BE920B6C22B00C73595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017C2BE820B6C22B00C73595 /* Assets.xcassets */; };
+		017C2BEC20B6C22B00C73595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017C2BEA20B6C22B00C73595 /* LaunchScreen.storyboard */; };
+		017C2BEF20B6C22B00C73595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C2BEE20B6C22B00C73595 /* main.m */; };
+		017C2C1020B6C25800C73595 /* UMErrorCode.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017C2C0F20B6C25800C73595 /* UMErrorCode.strings */; };
 		04314E6F20862FD700A9D3EE /* 细微知识点 in Resources */ = {isa = PBXBuildFile; fileRef = 04314E6E20862FD700A9D3EE /* 细微知识点 */; };
 		04D7C8AD1F98A0CF008DD0B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C8AC1F98A0CF008DD0B1 /* main.m */; };
 		04D7C8B01F98A0CF008DD0B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C8AF1F98A0CF008DD0B1 /* AppDelegate.m */; };
@@ -277,6 +284,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		017C2BDD20B6C22B00C73595 /* string.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = string.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		017C2BDF20B6C22B00C73595 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		017C2BE020B6C22B00C73595 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		017C2BE220B6C22B00C73595 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		017C2BE320B6C22B00C73595 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		017C2BE620B6C22B00C73595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		017C2BE820B6C22B00C73595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		017C2BEB20B6C22B00C73595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		017C2BED20B6C22B00C73595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		017C2BEE20B6C22B00C73595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		017C2C0F20B6C25800C73595 /* UMErrorCode.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = UMErrorCode.strings; sourceTree = "<group>"; };
 		04314E6E20862FD700A9D3EE /* 细微知识点 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细微知识点"; sourceTree = "<group>"; };
 		04D7C8A91F98A0CF008DD0B1 /* 死锁.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "死锁.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7C8AC1F98A0CF008DD0B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -725,6 +743,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		017C2BDA20B6C22B00C73595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D7C8A61F98A0CF008DD0B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -855,6 +880,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		017C2BDE20B6C22B00C73595 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				017C2BDF20B6C22B00C73595 /* AppDelegate.h */,
+				017C2BE020B6C22B00C73595 /* AppDelegate.m */,
+				017C2BE220B6C22B00C73595 /* ViewController.h */,
+				017C2BE320B6C22B00C73595 /* ViewController.m */,
+				017C2BE520B6C22B00C73595 /* Main.storyboard */,
+				017C2BE820B6C22B00C73595 /* Assets.xcassets */,
+				017C2BEA20B6C22B00C73595 /* LaunchScreen.storyboard */,
+				017C2BED20B6C22B00C73595 /* Info.plist */,
+				017C2BEE20B6C22B00C73595 /* main.m */,
+				017C2C0F20B6C25800C73595 /* UMErrorCode.strings */,
+			);
+			path = string;
+			sourceTree = "<group>";
+		};
 		04D7C8AA1F98A0CF008DD0B1 /* 死锁 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1471,6 +1513,7 @@
 				7199A2BE205F9D040051812D /* 零碎知识点 */,
 				7199A2DB2060999F0051812D /* UIWindow */,
 				04D9580120B14F89006EE2CA /* ScrollView回收键盘方式 */,
+				017C2BDE20B6C22B00C73595 /* string */,
 				F08E11E11F78DBD3005DE5F9 /* Products */,
 				EFF871DCB3FA620DE2960126 /* Pods */,
 				39248CB0E8D6D3D61B8936C0 /* Frameworks */,
@@ -1498,6 +1541,7 @@
 				7199A2BD205F9D040051812D /* 零碎知识点.app */,
 				7199A2DA2060999F0051812D /* UIWindow.app */,
 				04D9580020B14F89006EE2CA /* ScrollView回收键盘方式 */,
+				017C2BDD20B6C22B00C73595 /* string.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1573,6 +1617,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		017C2BDC20B6C22B00C73595 /* string */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 017C2C0620B6C22C00C73595 /* Build configuration list for PBXNativeTarget "string" */;
+			buildPhases = (
+				017C2BD920B6C22B00C73595 /* Sources */,
+				017C2BDA20B6C22B00C73595 /* Frameworks */,
+				017C2BDB20B6C22B00C73595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = string;
+			productName = string;
+			productReference = 017C2BDD20B6C22B00C73595 /* string.app */;
+			productType = "com.apple.product-type.application";
+		};
 		04D7C8A81F98A0CF008DD0B1 /* 死锁 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04D7C8BF1F98A0CF008DD0B1 /* Build configuration list for PBXNativeTarget "死锁" */;
@@ -1894,6 +1955,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "朱献国";
 				TargetAttributes = {
+					017C2BDC20B6C22B00C73595 = {
+						CreatedOnToolsVersion = 9.0.1;
+						DevelopmentTeam = K2B7L95AWX;
+						ProvisioningStyle = Automatic;
+					};
 					04D7C8A81F98A0CF008DD0B1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -1957,6 +2023,7 @@
 					};
 					F08E12241F78DDB1005DE5F9 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = K2B7L95AWX;
 						ProvisioningStyle = Automatic;
 					};
 					F08E12531F78E01F005DE5F9 = {
@@ -2001,11 +2068,23 @@
 				7199A2BC205F9D040051812D /* 零碎知识点 */,
 				7199A2D92060999F0051812D /* UIWindow */,
 				04D957FF20B14F89006EE2CA /* ScrollView回收键盘方式 */,
+				017C2BDC20B6C22B00C73595 /* string */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		017C2BDB20B6C22B00C73595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				017C2BEC20B6C22B00C73595 /* LaunchScreen.storyboard in Resources */,
+				017C2BE920B6C22B00C73595 /* Assets.xcassets in Resources */,
+				017C2C1020B6C25800C73595 /* UMErrorCode.strings in Resources */,
+				017C2BE720B6C22B00C73595 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D7C8A71F98A0CF008DD0B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2198,7 +2277,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -2225,6 +2304,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		017C2BD920B6C22B00C73595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				017C2BE420B6C22B00C73595 /* ViewController.m in Sources */,
+				017C2BEF20B6C22B00C73595 /* main.m in Sources */,
+				017C2BE120B6C22B00C73595 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D7C8A51F98A0CF008DD0B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2544,6 +2633,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		017C2BE520B6C22B00C73595 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				017C2BE620B6C22B00C73595 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		017C2BEA20B6C22B00C73595 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				017C2BEB20B6C22B00C73595 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		04D7C8B41F98A0CF008DD0B1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2747,6 +2852,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		017C2C0720B6C22C00C73595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = string/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		017C2C0820B6C22C00C73595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = string/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		04D7C8BD1F98A0CF008DD0B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3461,6 +3616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = Copy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = onzxgway.Copy;
@@ -3472,6 +3628,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = Copy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = onzxgway.Copy;
@@ -3558,6 +3715,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		017C2C0620B6C22C00C73595 /* Build configuration list for PBXNativeTarget "string" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				017C2C0720B6C22C00C73595 /* Debug */,
+				017C2C0820B6C22C00C73595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04D7C8BF1F98A0CF008DD0B1 /* Build configuration list for PBXNativeTarget "死锁" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
