@@ -12,7 +12,8 @@
     UILabel *_stateLabel;
     UILabel *_lastUpdatedTimeLabel;
 }
-
+/** 所有状态对应的文字 */
+@property (strong, nonatomic) NSMutableDictionary *stateTitles;
 @end
 
 @implementation MJRefreshStateHeader
@@ -20,7 +21,31 @@
 - (void)prepare {
     [super prepare];
     
+    // 初始化文字
+    [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshHeaderIdleText] forState:MJJRefreshStateIdle];
+    [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshHeaderPullingText] forState:MJJRefreshStatePulling];
+    [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshHeaderRefreshingText] forState:MJJRefreshStateRefreshing];
+}
+
+- (void)placeSubviews {
+    [super placeSubviews];
     
+    
+}
+
+#pragma mark - 公共方法
+- (void)setTitle:(NSString *)title forState:(MJJRefreshState)state {
+    if (title == nil) return;
+    
+    self.stateTitles[@(state)] = title;
+    _stateLabel.text = self.stateTitles[@(self.state)];
+}
+
+- (NSMutableDictionary *)stateTitles {
+    if (!_stateTitles) {
+        self.stateTitles = [NSMutableDictionary dictionary];
+    }
+    return _stateTitles;
 }
 
 #pragma mark - 日历获取在9.x之后的系统使用currentCalendar会出异常。在8.0之后使用系统新API。
