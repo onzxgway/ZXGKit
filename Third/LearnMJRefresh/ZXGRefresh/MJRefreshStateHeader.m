@@ -21,6 +21,9 @@
 - (void)prepare {
     [super prepare];
     
+    // 初始化间距
+    self.labelLeftInset = MJRefreshLabelLeftInset;
+    
     // 初始化文字
     [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshHeaderIdleText] forState:MJJRefreshStateIdle];
     [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshHeaderPullingText] forState:MJJRefreshStatePulling];
@@ -30,7 +33,43 @@
 - (void)placeSubviews {
     [super placeSubviews];
     
+    if (self.stateLabel.hidden) {
+        return;
+    }
     
+    // 判断时间控件是否隐藏
+    if (self.lastUpdatedTimeLabel.hidden) {
+        if (self.stateLabel.constraints.count == 0) {
+            self.stateLabel.frame = self.bounds;
+        }
+    }
+    else {
+        
+        if (_stateLabel.constraints.count == 0) {
+            _stateLabel.mj_x = 0;
+            _stateLabel.mj_y = 0;
+            _stateLabel.mj_w = self.mj_w;
+            _stateLabel.mj_h = self.mj_h * 0.5;
+        }
+        
+        if (_lastUpdatedTimeLabel.constraints.count == 0) {
+            _lastUpdatedTimeLabel.mj_x = 0;
+            _lastUpdatedTimeLabel.mj_y = self.mj_h * 0.5;
+            _lastUpdatedTimeLabel.mj_w = self.mj_w;
+            _lastUpdatedTimeLabel.mj_h = self.mj_h * 0.5;
+        }
+    }
+}
+
+- (void)setState:(MJJRefreshState)state {
+    MJJRefreshState oldState = self.state;
+    if (state == oldState) return;
+    [super setState:state];
+    
+    self.stateLabel.text = self.stateTitles[@(state)];
+    
+    // 重新设置key（重新显示时间）
+    self.lastUpdatedTimeKey = self.lastUpdatedTimeKey;
 }
 
 #pragma mark - 公共方法
@@ -38,7 +77,7 @@
     if (title == nil) return;
     
     self.stateTitles[@(state)] = title;
-    _stateLabel.text = self.stateTitles[@(self.state)];
+    self.stateLabel.text = self.stateTitles[@(self.state)];
 }
 
 - (NSMutableDictionary *)stateTitles {
@@ -105,7 +144,7 @@
     }
 }
 
-- (UILabel *)stateLable {
+- (UILabel *)stateLabel {
     if (!_stateLabel) {
         [self addSubview:_stateLabel = [UILabel mj_label]];
     }

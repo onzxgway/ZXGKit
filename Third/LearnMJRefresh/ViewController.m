@@ -8,17 +8,15 @@
 
 #import "ViewController.h"
 #import "IMJRefreshNormalHeader.h"
-#import "MJRefreshStateHeader.h"
+#import "MJRefreshNormalHeader.h"
 
 @interface ViewController ()
 @property (weak  , nonatomic) IBOutlet UIScrollView *myScrollView;
-@property (nonatomic, strong) MJRefreshStateHeader *refreshComponent;
-@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak  , nonatomic) IBOutlet UIView *topView;
+@property (strong, nonatomic) MJRefreshNormalHeader *refreshComponent;
 @end
 
 @implementation ViewController
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,21 +26,20 @@
     self.myScrollView.contentInset = UIEdgeInsetsMake(128, 0, 0, 0);
     self.myScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT * 2);
     [self.myScrollView addSubview:self.refreshComponent];
-    NSLog(@"%@", NSStringFromCGRect(self.refreshComponent.frame));
+    
 }
 
 - (void)end {
     [self.refreshComponent endRefresh];
 }
 
-- (MJRefreshStateHeader *)refreshComponent {
+- (MJRefreshNormalHeader *)refreshComponent {
     if (!_refreshComponent) {
-        _refreshComponent = [[MJRefreshStateHeader alloc] init];
+        _refreshComponent = [[MJRefreshNormalHeader alloc] init];
         _refreshComponent.automaticallyChangeAlpha = YES;
+        _refreshComponent.lastUpdatedTimeLabel.hidden = YES;
     }
     return _refreshComponent;
 }
-
-
 
 @end

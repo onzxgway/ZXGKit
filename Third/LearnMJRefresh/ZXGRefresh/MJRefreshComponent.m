@@ -19,7 +19,7 @@
     if (self) {
         [self prepare];
         
-        _state = MJJRefreshStateIdle;
+        self.state = MJJRefreshStateIdle;
     }
     return self;
 }
@@ -130,6 +130,15 @@
 - (void)setRefreshingTarget:(id)target refreshingAction:(SEL)action {
     _refreshingTarget = target;
     _refreshingAction = action;
+}
+
+- (void)setState:(MJJRefreshState)state {
+    _state = state;
+    
+//    // 加入主队列的目的是等setState:方法调用完毕、设置完文字后再去布局子控件
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self setNeedsLayout];
+//    });
 }
 
 #pragma mark - 是否正在刷新

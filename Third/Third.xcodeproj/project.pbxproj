@@ -26,6 +26,7 @@
 		0124C7A620B28D6B00C0BA30 /* IMJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7A520B28D6B00C0BA30 /* IMJRefreshHeader.m */; };
 		0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A32079A62D00012ADC /* ZXGDBOperation.m */; };
 		0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */; };
+		014D028920B8030C00E3779C /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D028820B8030C00E3779C /* MJRefreshNormalHeader.m */; };
 		0175829420B4FD10008A626B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829320B4FD10008A626B /* MJRefreshComponent.m */; };
 		0175829720B53113008A626B /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829620B53113008A626B /* MJRefreshHeader.m */; };
 		0175829A20B56963008A626B /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829920B56963008A626B /* MJRefreshStateHeader.m */; };
@@ -136,6 +137,8 @@
 		0139D0A52079A9C500012ADC /* ZXGDBCRUDCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBCRUDCondition.h; sourceTree = "<group>"; };
 		0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBCRUDCondition.m; sourceTree = "<group>"; };
 		0139D0A82079AAF400012ADC /* ZXGDBConstDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBConstDefine.h; sourceTree = "<group>"; };
+		014D028720B8030C00E3779C /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshNormalHeader.h; sourceTree = "<group>"; };
+		014D028820B8030C00E3779C /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalHeader.m; sourceTree = "<group>"; };
 		015296A1E3AAACD1121D2246 /* Pods-Third.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Third.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Third/Pods-Third.debug.xcconfig"; sourceTree = "<group>"; };
 		0175829220B4FD10008A626B /* MJRefreshComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
 		0175829320B4FD10008A626B /* MJRefreshComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 				0175829620B53113008A626B /* MJRefreshHeader.m */,
 				0175829820B56963008A626B /* MJRefreshStateHeader.h */,
 				0175829920B56963008A626B /* MJRefreshStateHeader.m */,
+				014D028720B8030C00E3779C /* MJRefreshNormalHeader.h */,
+				014D028820B8030C00E3779C /* MJRefreshNormalHeader.m */,
 			);
 			path = ZXGRefresh;
 			sourceTree = "<group>";
@@ -1045,6 +1050,7 @@
 				010989FA20A3E0D80041C430 /* ViewController.m in Sources */,
 				010E44DE20B3F195000877B1 /* NSBundle+MJRefresh.m in Sources */,
 				0124C7A220B273D300C0BA30 /* UIScrollView+MJExtension.m in Sources */,
+				014D028920B8030C00E3779C /* MJRefreshNormalHeader.m in Sources */,
 				01098A0520A3E0D80041C430 /* main.m in Sources */,
 				0124C7A620B28D6B00C0BA30 /* IMJRefreshHeader.m in Sources */,
 				0175829720B53113008A626B /* MJRefreshHeader.m in Sources */,

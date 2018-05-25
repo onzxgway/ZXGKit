@@ -11,7 +11,9 @@
 @interface MJRefreshStateHeader : MJRefreshHeader
 
 @property (nonatomic, copy  ) NSString *(^lastUpdatedTimeText)(NSDate *lastUpdatedTime);
-@property (nonatomic, strong, readonly) UILabel *stateLable;
+@property (nonatomic, strong, readonly) UILabel *stateLabel;
 @property (nonatomic, strong, readonly) UILabel *lastUpdatedTimeLabel;
+/** 文字距离圈圈、箭头的距离 */
+@property (nonatomic) CGFloat labelLeftInset;
 
 @end
