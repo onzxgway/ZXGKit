@@ -24,6 +24,7 @@
 		0124C7A120B273D300C0BA30 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C79D20B273D300C0BA30 /* UIView+MJExtension.m */; };
 		0124C7A220B273D300C0BA30 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C79F20B273D300C0BA30 /* UIScrollView+MJExtension.m */; };
 		0124C7A620B28D6B00C0BA30 /* IMJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7A520B28D6B00C0BA30 /* IMJRefreshHeader.m */; };
+		012837B720BBA11E00C37918 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 012837B620BBA11E00C37918 /* UIScrollView+MJRefresh.m */; };
 		0139D0A42079A62D00012ADC /* ZXGDBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A32079A62D00012ADC /* ZXGDBOperation.m */; };
 		0139D0A72079A9C500012ADC /* ZXGDBCRUDCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139D0A62079A9C500012ADC /* ZXGDBCRUDCondition.m */; };
 		014D028920B8030C00E3779C /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D028820B8030C00E3779C /* MJRefreshNormalHeader.m */; };
@@ -132,6 +133,8 @@
 		0124C7A320B28B2400C0BA30 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0124C7A420B28D6B00C0BA30 /* IMJRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMJRefreshHeader.h; sourceTree = "<group>"; };
 		0124C7A520B28D6B00C0BA30 /* IMJRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMJRefreshHeader.m; sourceTree = "<group>"; };
+		012837B520BBA11E00C37918 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		012837B620BBA11E00C37918 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		0139D0A22079A62D00012ADC /* ZXGDBOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBOperation.h; sourceTree = "<group>"; };
 		0139D0A32079A62D00012ADC /* ZXGDBOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBOperation.m; sourceTree = "<group>"; };
 		0139D0A52079A9C500012ADC /* ZXGDBCRUDCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBCRUDCondition.h; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				0175829920B56963008A626B /* MJRefreshStateHeader.m */,
 				014D028720B8030C00E3779C /* MJRefreshNormalHeader.h */,
 				014D028820B8030C00E3779C /* MJRefreshNormalHeader.m */,
+				012837B520BBA11E00C37918 /* UIScrollView+MJRefresh.h */,
+				012837B620BBA11E00C37918 /* UIScrollView+MJRefresh.m */,
 			);
 			path = ZXGRefresh;
 			sourceTree = "<group>";
@@ -660,6 +665,7 @@
 				010989F020A3E0D80041C430 /* Frameworks */,
 				010989F120A3E0D80041C430 /* Resources */,
 				06DBD3A7A5FF88FC0534F50B /* [CP] Copy Pods Resources */,
+				0C99523D0554195E5200D141 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -679,6 +685,7 @@
 				019129092074DC4C0054912E /* Frameworks */,
 				0191290A2074DC4C0054912E /* Resources */,
 				EDB16D6CED6453A698484210 /* [CP] Copy Pods Resources */,
+				61C79B8A2808083B17502B80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -698,6 +705,7 @@
 				047C269E207CFA600042572C /* Frameworks */,
 				047C269F207CFA600042572C /* Resources */,
 				027B583CE02E2DD9AEBF75AD /* [CP] Copy Pods Resources */,
+				8567D49B73099525D1336D3C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -717,6 +725,7 @@
 				71764101204E6A33006D3A18 /* Frameworks */,
 				71764102204E6A33006D3A18 /* Resources */,
 				C625683C01BCF1EEF8450FCF /* [CP] Copy Pods Resources */,
+				990022B85395BB418DB3400D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -736,6 +745,7 @@
 				71DDFCF720468F90002B54D8 /* Frameworks */,
 				71DDFCF820468F90002B54D8 /* Resources */,
 				EAD29C9E7077B94CE006E868 /* [CP] Copy Pods Resources */,
+				8441E7A359B49F4A67D784BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -864,11 +874,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnYYKit/Pods-LearnYYKit-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -882,15 +892,30 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnMJRefresh/Pods-LearnMJRefresh-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnMJRefresh/Pods-LearnMJRefresh-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C99523D0554195E5200D141 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnMJRefresh/Pods-LearnMJRefresh-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1950CB46339EFC96CD2C9176 /* [CP] Check Pods Manifest.lock */ = {
@@ -929,6 +954,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		61C79B8A2808083B17502B80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		72014FE07539188D40107D34 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -945,6 +985,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8441E7A359B49F4A67D784BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8567D49B73099525D1336D3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnYYKit/Pods-LearnYYKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		990022B85395BB418DB3400D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A541AA9E76E5FCD0979148E3 /* [CP] Check Pods Manifest.lock */ = {
@@ -972,11 +1057,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1008,11 +1093,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Third/Pods-Third-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1026,11 +1111,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1056,6 +1141,7 @@
 				0175829720B53113008A626B /* MJRefreshHeader.m in Sources */,
 				0175829420B4FD10008A626B /* MJRefreshComponent.m in Sources */,
 				0175829A20B56963008A626B /* MJRefreshStateHeader.m in Sources */,
+				012837B720BBA11E00C37918 /* UIScrollView+MJRefresh.m in Sources */,
 				010E44DB20B3EDA8000877B1 /* IMJRefreshStateHeader.m in Sources */,
 				010989F720A3E0D80041C430 /* AppDelegate.m in Sources */,
 				0124C79920B26D5100C0BA30 /* IMJRefreshComponent.m in Sources */,

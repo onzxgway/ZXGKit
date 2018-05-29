@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "IMJRefreshNormalHeader.h"
 #import "MJRefreshNormalHeader.h"
+#import "UIScrollView+MJRefresh.h"
 
 @interface ViewController ()
 @property (weak  , nonatomic) IBOutlet UIScrollView *myScrollView;
@@ -25,11 +26,15 @@
     
     self.myScrollView.contentInset = UIEdgeInsetsMake(128, 0, 0, 0);
     self.myScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT * 2);
-    [self.myScrollView addSubview:self.refreshComponent];
-    
+//    [self.myScrollView addSubview:self.refreshComponent];
+    self.myScrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
 }
 
 - (void)end {
+    [self.myScrollView.mj_header endRefresh];
+}
+
+- (void)refresh {
     [self.refreshComponent endRefresh];
 }
 

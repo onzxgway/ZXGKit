@@ -72,14 +72,13 @@ ProjectDemoArray.each do |t|
     end
 end
 
-# KNPArray = ['OCAndJS']
-# KNPArray.each do |t|
-#     target t do
-#         project 'KnowledgePoint/KnowledgePoint.project'
-#         pods
-#         pod 'NJKWebViewProgress'
-#     end
-# end
+ KNPArray = ['UICollectionView']
+ KNPArray.each do |t|
+     target t do
+         project 'KnowledgePoint/KnowledgePoint.project'
+         pods
+     end
+end
 
 
 
