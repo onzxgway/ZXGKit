@@ -21,6 +21,7 @@
 		017C2BEC20B6C22B00C73595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017C2BEA20B6C22B00C73595 /* LaunchScreen.storyboard */; };
 		017C2BEF20B6C22B00C73595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C2BEE20B6C22B00C73595 /* main.m */; };
 		017C2C1020B6C25800C73595 /* UMErrorCode.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017C2C0F20B6C25800C73595 /* UMErrorCode.strings */; };
+		01C1858B20BD05FB002FFF70 /* ZXGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C1858A20BD05FB002FFF70 /* ZXGAppDelegate.m */; };
 		04314E6F20862FD700A9D3EE /* 细微知识点 in Resources */ = {isa = PBXBuildFile; fileRef = 04314E6E20862FD700A9D3EE /* 细微知识点 */; };
 		04D7C8AD1F98A0CF008DD0B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C8AC1F98A0CF008DD0B1 /* main.m */; };
 		04D7C8B01F98A0CF008DD0B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C8AF1F98A0CF008DD0B1 /* AppDelegate.m */; };
@@ -315,6 +316,8 @@
 		017C2BED20B6C22B00C73595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		017C2BEE20B6C22B00C73595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		017C2C0F20B6C25800C73595 /* UMErrorCode.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = UMErrorCode.strings; sourceTree = "<group>"; };
+		01C1858920BD05FB002FFF70 /* ZXGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGAppDelegate.h; sourceTree = "<group>"; };
+		01C1858A20BD05FB002FFF70 /* ZXGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGAppDelegate.m; sourceTree = "<group>"; };
 		04314E6E20862FD700A9D3EE /* 细微知识点 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细微知识点"; sourceTree = "<group>"; };
 		04D7C8A91F98A0CF008DD0B1 /* 死锁.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "死锁.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7C8AC1F98A0CF008DD0B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1213,6 +1216,8 @@
 				7199A2F32060AE310051812D /* BViewController.m */,
 				7199A2F52060AEBD0051812D /* ZXGWindow.h */,
 				7199A2F62060AEBD0051812D /* ZXGWindow.m */,
+				01C1858920BD05FB002FFF70 /* ZXGAppDelegate.h */,
+				01C1858A20BD05FB002FFF70 /* ZXGAppDelegate.m */,
 			);
 			path = UIWindow;
 			sourceTree = "<group>";
@@ -2086,6 +2091,7 @@
 					};
 					7199A2D92060999F0051812D = {
 						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = K2B7L95AWX;
 						ProvisioningStyle = Automatic;
 					};
 					71DDFCDA20465779002B54D8 = {
@@ -2601,6 +2607,7 @@
 				7199A2F42060AE310051812D /* BViewController.m in Sources */,
 				7199A2F72060AEBD0051812D /* ZXGWindow.m in Sources */,
 				7199A2EC2060999F0051812D /* main.m in Sources */,
+				01C1858B20BD05FB002FFF70 /* ZXGAppDelegate.m in Sources */,
 				7199A2DE2060999F0051812D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3567,11 +3574,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = UIWindow/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "---.UIWindow";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3592,11 +3600,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = UIWindow/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "---.UIWindow";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
