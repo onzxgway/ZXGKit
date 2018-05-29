@@ -31,11 +31,12 @@ KnowledgePointArray.each do |t|
 end
 
 # Third.project
-thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit', 'LearnMJRefresh']
+thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit', 'LearnMJRefresh', 'LearnMJExtension']
 thirdArray.each do |t|
     target t do
     	project 'Third/Third.project'
         #pod 'FMDB'
+        pod 'MJExtension'
         pods
     end
 end
