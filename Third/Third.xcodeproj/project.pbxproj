@@ -17,6 +17,7 @@
 		010E44DE20B3F195000877B1 /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 010E44DD20B3F195000877B1 /* NSBundle+MJRefresh.m */; };
 		010E44E020B3F23D000877B1 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 010E44DF20B3F23D000877B1 /* MJRefresh.bundle */; };
 		010E44E320B3F682000877B1 /* IMJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 010E44E220B3F682000877B1 /* IMJRefreshNormalHeader.m */; };
+		0119870620BE51C800AB465F /* ZXGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0119870520BE51C800AB465F /* ZXGViewController.m */; };
 		012309322079FFA50090DC05 /* ZXGUseage.m in Sources */ = {isa = PBXBuildFile; fileRef = 012309312079FFA50090DC05 /* ZXGUseage.m */; };
 		01230935207A03410090DC05 /* ZXGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01230934207A03410090DC05 /* ZXGPerson.m */; };
 		0124C79920B26D5100C0BA30 /* IMJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C79820B26D5100C0BA30 /* IMJRefreshComponent.m */; };
@@ -42,7 +43,6 @@
 		0191291E2074DC4C0054912E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191291D2074DC4C0054912E /* main.m */; };
 		01C1859420BD1E35002FFF70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C1859320BD1E35002FFF70 /* AppDelegate.m */; };
 		01C1859720BD1E35002FFF70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C1859620BD1E35002FFF70 /* ViewController.m */; };
-		01C1859A20BD1E35002FFF70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C1859820BD1E35002FFF70 /* Main.storyboard */; };
 		01C1859C20BD1E35002FFF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C1859B20BD1E35002FFF70 /* Assets.xcassets */; };
 		01C1859F20BD1E35002FFF70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C1859D20BD1E35002FFF70 /* LaunchScreen.storyboard */; };
 		01C185A220BD1E35002FFF70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C185A120BD1E35002FFF70 /* main.m */; };
@@ -132,6 +132,8 @@
 		010E44DF20B3F23D000877B1 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		010E44E120B3F682000877B1 /* IMJRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMJRefreshNormalHeader.h; sourceTree = "<group>"; };
 		010E44E220B3F682000877B1 /* IMJRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMJRefreshNormalHeader.m; sourceTree = "<group>"; };
+		0119870420BE51C800AB465F /* ZXGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGViewController.h; sourceTree = "<group>"; };
+		0119870520BE51C800AB465F /* ZXGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGViewController.m; sourceTree = "<group>"; };
 		012309302079FFA50090DC05 /* ZXGUseage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGUseage.h; sourceTree = "<group>"; };
 		012309312079FFA50090DC05 /* ZXGUseage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGUseage.m; sourceTree = "<group>"; };
 		01230933207A03410090DC05 /* ZXGPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPerson.h; sourceTree = "<group>"; };
@@ -184,7 +186,6 @@
 		01C1859320BD1E35002FFF70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01C1859520BD1E35002FFF70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		01C1859620BD1E35002FFF70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		01C1859920BD1E35002FFF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01C1859B20BD1E35002FFF70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C1859E20BD1E35002FFF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01C185A020BD1E35002FFF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -482,7 +483,8 @@
 				01C185B220BD57B5002FFF70 /* MJStatusResult.m */,
 				01C1859520BD1E35002FFF70 /* ViewController.h */,
 				01C1859620BD1E35002FFF70 /* ViewController.m */,
-				01C1859820BD1E35002FFF70 /* Main.storyboard */,
+				0119870420BE51C800AB465F /* ZXGViewController.h */,
+				0119870520BE51C800AB465F /* ZXGViewController.m */,
 				01C1859B20BD1E35002FFF70 /* Assets.xcassets */,
 				01C1859D20BD1E35002FFF70 /* LaunchScreen.storyboard */,
 				01C185A020BD1E35002FFF70 /* Info.plist */,
@@ -948,7 +950,6 @@
 			files = (
 				01C1859F20BD1E35002FFF70 /* LaunchScreen.storyboard in Resources */,
 				01C1859C20BD1E35002FFF70 /* Assets.xcassets in Resources */,
-				01C1859A20BD1E35002FFF70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,6 +1352,7 @@
 				01C1859420BD1E35002FFF70 /* AppDelegate.m in Sources */,
 				01C185AD20BD492D002FFF70 /* MJUser.m in Sources */,
 				01C185BC20BD5BBC002FFF70 /* MJBag.m in Sources */,
+				0119870620BE51C800AB465F /* ZXGViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1449,14 +1451,6 @@
 				0191291A2074DC4C0054912E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		01C1859820BD1E35002FFF70 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01C1859920BD1E35002FFF70 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		01C1859D20BD1E35002FFF70 /* LaunchScreen.storyboard */ = {
