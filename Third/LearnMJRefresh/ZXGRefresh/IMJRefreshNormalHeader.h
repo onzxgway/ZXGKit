@@ -9,8 +9,8 @@
 #import "IMJRefreshStateHeader.h"
 
 @interface IMJRefreshNormalHeader : IMJRefreshStateHeader
-@property (weak  , nonatomic, readonly) UIImageView *arrowView;
-/** 菊花的样式 */
-@property (nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
+
+@property (nonatomic, readonly, weak  ) UIImageView *arrowView;
+@property (nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle;  // 菊花的样式
 
 @end

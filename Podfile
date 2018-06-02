@@ -31,11 +31,12 @@ KnowledgePointArray.each do |t|
 end
 
 # Third.project
-thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit', 'LearnMJRefresh']
+thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit', 'LearnMJRefresh', 'LearnMJExtension']
 thirdArray.each do |t|
     target t do
     	project 'Third/Third.project'
         #pod 'FMDB'
+        pod 'MJExtension'
         pods
     end
 end
@@ -72,14 +73,13 @@ ProjectDemoArray.each do |t|
     end
 end
 
-# KNPArray = ['OCAndJS']
-# KNPArray.each do |t|
-#     target t do
-#         project 'KnowledgePoint/KnowledgePoint.project'
-#         pods
-#         pod 'NJKWebViewProgress'
-#     end
-# end
+ KNPArray = ['UICollectionView']
+ KNPArray.each do |t|
+     target t do
+         project 'KnowledgePoint/KnowledgePoint.project'
+         pods
+     end
+end
 
 
 
