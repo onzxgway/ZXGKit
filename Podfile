@@ -31,7 +31,7 @@ KnowledgePointArray.each do |t|
 end
 
 # Third.project
-thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit', 'LearnMJRefresh', 'LearnMJExtension']
+thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit', 'LearnMJRefresh', 'LearnMJExtension', 'LearnMasonry']
 thirdArray.each do |t|
     target t do
     	project 'Third/Third.project'
