@@ -10,11 +10,12 @@
 #import "IMJRefreshNormalHeader.h"
 #import "MJRefreshNormalHeader.h"
 #import "UIScrollView+MJRefresh.h"
+#import "OneRefreshHeader.h"
 
 @interface ViewController ()
 @property (weak  , nonatomic) IBOutlet UIScrollView *myScrollView;
 @property (weak  , nonatomic) IBOutlet UIView *topView;
-@property (strong, nonatomic) MJRefreshNormalHeader *refreshComponent;
+@property (strong, nonatomic) OneRefreshHeader *refreshComponent;
 @end
 
 @implementation ViewController
@@ -26,25 +27,32 @@
     
     self.myScrollView.contentInset = UIEdgeInsetsMake(128, 0, 0, 0);
     self.myScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT * 2);
-//    [self.myScrollView addSubview:self.refreshComponent];
-    self.myScrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
+    [self.myScrollView addSubview:self.refreshComponent];
+//    self.myScrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
 }
 
 - (void)end {
-    [self.myScrollView.mj_header endRefresh];
+//    [self.myScrollView.mj_header endRefresh];
 }
 
 - (void)refresh {
-    [self.refreshComponent endRefresh];
+//    [self.refreshComponent endRefresh];
 }
 
-- (MJRefreshNormalHeader *)refreshComponent {
+- (OneRefreshHeader *)refreshComponent {
     if (!_refreshComponent) {
-        _refreshComponent = [[MJRefreshNormalHeader alloc] init];
-        _refreshComponent.automaticallyChangeAlpha = YES;
-        _refreshComponent.lastUpdatedTimeLabel.hidden = YES;
+        _refreshComponent = [[OneRefreshHeader alloc] init];
+//        _refreshComponent.automaticallyChangeAlpha = YES;
+//        _refreshComponent.lastUpdatedTimeLabel.hidden = YES;
     }
     return _refreshComponent;
 }
+
+/**
+ 思路:
+ 1.刷新指示器 是个 控件UIView, 有3种状态.
+ 2.监听scrollView的contentOffsetY来实现状态的切换.
+ 3.不同状态对应不同的子控件.
+ */
 
 @end
