@@ -68,6 +68,19 @@
     [self.superview removeObserver:self forKeyPath:OneRefreshObservingContentOffset];
 }
 
+- (void)executeRefreshingCallback {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (_target && [_target respondsToSelector:_action]) {
+            [_target performSelector:_action];
+        }
+        
+        if (_beginRefreshingCallback) {
+            _beginRefreshingCallback();
+        }
+    });
+    
+}
 
 - (void)prepare {
     self.backgroundColor = kRandomColor;
@@ -81,4 +94,40 @@
     self.status = OneRefreshStatusRefreshing;
 }
 
+- (void)endRefresh {
+    self.status = OneRefreshStatusNormal;
+}
+
+- (void)setTarget:(id)target sel:(SEL)action {
+    _target = target;
+    _action = action;
+}
+
+- (void)setAlphaPercent:(CGFloat)alphaPercent {
+    _alphaPercent = alphaPercent;
+    
+    if (_status == OneRefreshStatusRefreshing) return;
+    
+    self.alpha = alphaPercent;
+}
+
 @end
+
+
+@implementation UILabel (OneRefresh)
+
++ (instancetype)oneRefreshLabel {
+    UILabel *label = [[UILabel alloc] init];
+    label.font = OneRefreshLabelFont;
+    label.textColor = OneRefreshLabelTextColor;
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.backgroundColor = kClearColor;
+    return label;
+}
+
+@end
+
+
+
+

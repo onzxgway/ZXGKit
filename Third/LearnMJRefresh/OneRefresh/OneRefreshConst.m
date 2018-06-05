@@ -12,3 +12,8 @@ NSString * const OneRefreshObservingContentOffset = @"contentOffset";
 CGFloat const OneRefreshHeaderHeight = 50; 
 NSTimeInterval const OneRefreshFastDuration = 0.25f;
 NSTimeInterval const OneRefreshSlowDuration = 0.4f;
+
+
+NSString * const OneRefreshHeaderNormalText = @"OneRefreshHeaderNormalText";
+NSString * const OneRefreshHeaderPullingText = @"OneRefreshHeaderPullingText";
+NSString * const OneRefreshHeaderRefreshingText = @"OneRefreshHeaderRefreshingText";

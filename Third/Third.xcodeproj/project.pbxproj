@@ -64,6 +64,9 @@
 		01F0BE1520C4E23000D96C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F0BE1420C4E23000D96C63 /* Assets.xcassets */; };
 		01F0BE1820C4E23000D96C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F0BE1620C4E23000D96C63 /* LaunchScreen.storyboard */; };
 		01F0BE1B20C4E23000D96C63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0BE1A20C4E23000D96C63 /* main.m */; };
+		046465C220C6BE9E007C223B /* OneRefreshHeaderState.m in Sources */ = {isa = PBXBuildFile; fileRef = 046465C120C6BE9E007C223B /* OneRefreshHeaderState.m */; };
+		046465C420C6C189007C223B /* OneRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 046465C320C6C189007C223B /* OneRefresh.bundle */; };
+		046465C920C6C6C2007C223B /* NSBundle+OneRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 046465C820C6C6C2007C223B /* NSBundle+OneRefresh.m */; };
 		047C26A5207CFA600042572C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C26A4207CFA600042572C /* main.m */; };
 		047C26A8207CFA600042572C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C26A7207CFA600042572C /* AppDelegate.m */; };
 		047C26AB207CFA600042572C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C26AA207CFA600042572C /* ViewController.m */; };
@@ -238,6 +241,11 @@
 		01F0BE1720C4E23000D96C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01F0BE1920C4E23000D96C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01F0BE1A20C4E23000D96C63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		046465C020C6BE9E007C223B /* OneRefreshHeaderState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneRefreshHeaderState.h; sourceTree = "<group>"; };
+		046465C120C6BE9E007C223B /* OneRefreshHeaderState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneRefreshHeaderState.m; sourceTree = "<group>"; };
+		046465C320C6C189007C223B /* OneRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = OneRefresh.bundle; sourceTree = "<group>"; };
+		046465C720C6C6C2007C223B /* NSBundle+OneRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+OneRefresh.h"; sourceTree = "<group>"; };
+		046465C820C6C6C2007C223B /* NSBundle+OneRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+OneRefresh.m"; sourceTree = "<group>"; };
 		047C26A1207CFA600042572C /* LearnYYKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYYKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047C26A4207CFA600042572C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		047C26A6207CFA600042572C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -517,6 +525,11 @@
 				01B18A2A20C6241700B1B552 /* OneRefreshConst.m */,
 				01B18A2C20C6269600B1B552 /* OneRefreshHeader.h */,
 				01B18A2D20C6269600B1B552 /* OneRefreshHeader.m */,
+				046465C020C6BE9E007C223B /* OneRefreshHeaderState.h */,
+				046465C120C6BE9E007C223B /* OneRefreshHeaderState.m */,
+				046465C320C6C189007C223B /* OneRefresh.bundle */,
+				046465C720C6C6C2007C223B /* NSBundle+OneRefresh.h */,
+				046465C820C6C6C2007C223B /* NSBundle+OneRefresh.m */,
 			);
 			path = OneRefresh;
 			sourceTree = "<group>";
@@ -1036,6 +1049,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046465C420C6C189007C223B /* OneRefresh.bundle in Resources */,
 				01098A0220A3E0D80041C430 /* LaunchScreen.storyboard in Resources */,
 				010989FF20A3E0D80041C430 /* Assets.xcassets in Resources */,
 				010E44E020B3F23D000877B1 /* MJRefresh.bundle in Resources */,
@@ -1475,8 +1489,10 @@
 				010E44E320B3F682000877B1 /* IMJRefreshNormalHeader.m in Sources */,
 				0124C79C20B272E000C0BA30 /* MJRefreshConst.m in Sources */,
 				0124C7A120B273D300C0BA30 /* UIView+MJExtension.m in Sources */,
+				046465C920C6C6C2007C223B /* NSBundle+OneRefresh.m in Sources */,
 				01B18A2E20C6269600B1B552 /* OneRefreshHeader.m in Sources */,
 				010989FA20A3E0D80041C430 /* ViewController.m in Sources */,
+				046465C220C6BE9E007C223B /* OneRefreshHeaderState.m in Sources */,
 				010E44DE20B3F195000877B1 /* NSBundle+MJRefresh.m in Sources */,
 				0124C7A220B273D300C0BA30 /* UIScrollView+MJExtension.m in Sources */,
 				014D028920B8030C00E3779C /* MJRefreshNormalHeader.m in Sources */,

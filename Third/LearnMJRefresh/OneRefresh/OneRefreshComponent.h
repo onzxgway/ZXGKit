@@ -15,6 +15,8 @@ typedef NS_ENUM(NSUInteger, OneRefreshStatus) {
     OneRefreshStatusRefreshing,
 };
 
+typedef void(^BeginRefreshingCallback)(void);
+
 /**
  刷新控件 基类
  */
@@ -27,10 +29,31 @@ typedef NS_ENUM(NSUInteger, OneRefreshStatus) {
 @property (nonatomic) UIEdgeInsets originalInsets;
 @property (nonatomic) OneRefreshStatus status;
 
+
+@property (nonatomic, copy  ) BeginRefreshingCallback beginRefreshingCallback;
+- (void)setTarget:(id)target sel:(SEL)action;
+@property (nonatomic, weak  ) id target;
+@property (nonatomic) SEL action;
+- (void)executeRefreshingCallback;
+
 - (void)beginRefresh;
+- (void)endRefresh;
 
 - (void)prepare NS_REQUIRES_SUPER;
 - (void)placeSubviews NS_REQUIRES_SUPER;
 - (void)scrollViewContentOffsetChanged:(NSDictionary<NSKeyValueChangeKey,id> *)change NS_REQUIRES_SUPER;
 
+@property (nonatomic) CGFloat alphaPercent;
+
 @end
+
+
+@interface UILabel (OneRefresh)
+
++ (instancetype)oneRefreshLabel;
+
+@end
+
+
+
+
