@@ -17,3 +17,9 @@ NSTimeInterval const OneRefreshSlowDuration = 0.4f;
 NSString * const OneRefreshHeaderNormalText = @"OneRefreshHeaderNormalText";
 NSString * const OneRefreshHeaderPullingText = @"OneRefreshHeaderPullingText";
 NSString * const OneRefreshHeaderRefreshingText = @"OneRefreshHeaderRefreshingText";
+
+NSString * const OneRefreshHeaderLastUpdatedTimeKey = @"OneRefreshHeaderLastUpdatedTimeKey";
+
+NSString * const OneRefreshHeaderLastTimeText = @"OneRefreshHeaderLastTimeText";
+NSString * const OneRefreshHeaderDateTodayText = @"OneRefreshHeaderDateTodayText";
+NSString * const OneRefreshHeaderNoneLastDateText = @"OneRefreshHeaderNoneLastDateText";

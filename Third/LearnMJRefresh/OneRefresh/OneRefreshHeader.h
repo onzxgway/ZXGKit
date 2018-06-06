@@ -10,4 +10,6 @@
 
 @interface OneRefreshHeader : OneRefreshComponent
 
+@property (nonatomic, copy) NSString *lastUpdatedTimeKey;
+
 @end

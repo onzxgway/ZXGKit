@@ -11,4 +11,7 @@
 
 @interface OneRefreshHeaderState : OneRefreshHeader
 
+@property (nonatomic, strong, readonly) UILabel *stateLabel;
+@property (nonatomic, strong, readonly) UILabel *timeLabel;
+
 @end

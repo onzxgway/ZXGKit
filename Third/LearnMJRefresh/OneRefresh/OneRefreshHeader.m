@@ -17,6 +17,8 @@
 - (void)prepare {
     [super prepare];
     
+    self.lastUpdatedTimeKey = OneRefreshHeaderLastUpdatedTimeKey;
+    
     self.height = OneRefreshHeaderHeight;
     self.top = - OneRefreshHeaderHeight;
 }
@@ -82,6 +84,10 @@
     }
     else if (status == OneRefreshStatusNormal) {
         if (oldStatus != OneRefreshStatusRefreshing) return;
+        
+        // 保存本次刷新结束时间
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:_lastUpdatedTimeKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
         [UIView animateWithDuration:OneRefreshSlowDuration animations:^{
             
