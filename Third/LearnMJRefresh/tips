@@ -1,0 +1,32 @@
+
+核心思想:
+首先，在MJRefreshComponent基类当中捕获了当前的父view，利用kvo技术，监听父控件的ContentOffset属性的y值，具体的处理需要交给子类去实现。
+然后，在MJRefreshHeader类中，监听方法中，会判断刷新控件的位置，根据位置不同，给控件设置不同的状态。（这个状态属性自己添加的）
+在  本类及其子类的setState方法中，根据状态的不同，设置不同的位置，不同的文字，不同的图像。
+
+关键技术:
+3,继承、整个项目结构就是继承  prepare方法,  placeSubview方法，setState方法，必须实现super,
+1,KVO、 监听scrollview的contentOff等属性
+2,runtime、关联 对象 在category中绑定属性 UIScrollView+MJRefresh用到,
+4,GCD等知识
+
+刷新控件就是一个UIView.
+5种状态：
+一，普通闲置状态
+二，松开就可以刷新状态
+三，正在刷新中的状态
+四，即将刷新的状态
+五，没有更多数据状态
+
+监听3个值：
+1，scrollview的偏移量
+2，scrollView的内容的大小
+3，scrollView的点击手势
+
+UIWindow默认是影藏的
+UIWindowLevelNormal=0.000000==Alert=2000.000000=StatusBar=1000
+
+
+自动布局方式2种：
+1，autoresizing
+2，autolayout

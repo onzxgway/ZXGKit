@@ -126,6 +126,16 @@
     return label;
 }
 
+- (CGFloat)textWidth {
+    
+    CGSize size = CGSizeMake(CGFLOAT_MAX, MAXFLOAT);
+    if (self.text.length > 0) {
+        return [self.text boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.font} context:nil].size.width;
+    }
+    
+    return 0;
+}
+
 @end
 
 

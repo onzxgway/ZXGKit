@@ -13,6 +13,7 @@ CGFloat const OneRefreshHeaderHeight = 50;
 NSTimeInterval const OneRefreshFastDuration = 0.25f;
 NSTimeInterval const OneRefreshSlowDuration = 0.4f;
 
+const CGFloat OneRefreshLabelLeftInset = 25;
 
 NSString * const OneRefreshHeaderNormalText = @"OneRefreshHeaderNormalText";
 NSString * const OneRefreshHeaderPullingText = @"OneRefreshHeaderPullingText";

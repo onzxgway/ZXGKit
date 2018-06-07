@@ -14,4 +14,6 @@
 @property (nonatomic, strong, readonly) UILabel *stateLabel;
 @property (nonatomic, strong, readonly) UILabel *timeLabel;
 
+@property (nonatomic) CGFloat labelLeftInset;
+
 @end

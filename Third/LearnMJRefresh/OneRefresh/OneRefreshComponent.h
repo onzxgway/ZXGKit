@@ -52,6 +52,8 @@ typedef void(^BeginRefreshingCallback)(void);
 
 + (instancetype)oneRefreshLabel;
 
+- (CGFloat)textWidth;
+
 @end
 
 

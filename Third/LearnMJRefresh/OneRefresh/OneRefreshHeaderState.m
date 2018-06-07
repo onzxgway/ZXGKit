@@ -22,6 +22,8 @@
 - (void)prepare {
     [super prepare];
     
+    self.labelLeftInset = OneRefreshLabelLeftInset;
+    
     // 初始化文字
     [self setState:OneRefreshStatusNormal value:[NSBundle localizedStringForKey:OneRefreshHeaderNormalText]];
     [self setState:OneRefreshStatusPulling value:[NSBundle localizedStringForKey:OneRefreshHeaderPullingText]];
@@ -110,7 +112,6 @@
 - (UILabel *)stateLabel {
     if (!_stateLabel) {
         [self addSubview:_stateLabel = [UILabel oneRefreshLabel]];
-        _stateLabel.backgroundColor = kRandomColor;
     }
     return _stateLabel;
 }
@@ -118,7 +119,6 @@
 - (UILabel *)timeLabel {
     if (!_timeLabel) {
         [self addSubview:_timeLabel = [UILabel oneRefreshLabel]];
-        _timeLabel.backgroundColor = kRandomColor;
     }
     return _timeLabel;
 }

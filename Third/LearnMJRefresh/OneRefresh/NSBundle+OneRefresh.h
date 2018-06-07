@@ -13,5 +13,6 @@
 + (instancetype)refreshBundle;
 + (NSString *)localizedStringForKey:(NSString *)key;
 + (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value;
++ (UIImage *)arrowImage;
 
 @end

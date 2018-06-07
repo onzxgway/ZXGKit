@@ -51,4 +51,12 @@
     return [[NSBundle mainBundle] localizedStringForKey:key value:value table:nil];
 }
 
++ (UIImage *)arrowImage {
+    static UIImage *arrowImage = nil;
+    if (arrowImage == nil) {
+        arrowImage = [[UIImage imageWithContentsOfFile:[[self refreshBundle] pathForResource:@"arrow@2x" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    }
+    return arrowImage;
+}
+
 @end

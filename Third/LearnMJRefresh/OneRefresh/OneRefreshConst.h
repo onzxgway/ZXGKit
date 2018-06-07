@@ -22,6 +22,7 @@ UIKIT_EXTERN NSString * const OneRefreshHeaderLastTimeText;
 UIKIT_EXTERN NSString * const OneRefreshHeaderDateTodayText;
 UIKIT_EXTERN NSString * const OneRefreshHeaderNoneLastDateText;
 
+UIKIT_EXTERN const CGFloat OneRefreshLabelLeftInset;
 
 // 文字颜色
 #define OneRefreshLabelTextColor RGB(90, 90, 90)

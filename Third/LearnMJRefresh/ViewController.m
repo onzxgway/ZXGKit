@@ -10,12 +10,12 @@
 #import "IMJRefreshNormalHeader.h"
 #import "MJRefreshNormalHeader.h"
 #import "UIScrollView+MJRefresh.h"
-#import "OneRefreshHeaderState.h"
+#import "OneRefreshStateNormal.h"
 
 @interface ViewController ()
 @property (weak  , nonatomic) IBOutlet UIScrollView *myScrollView;
 @property (weak  , nonatomic) IBOutlet UIView *topView;
-@property (strong, nonatomic) OneRefreshHeaderState *refreshComponent;
+@property (strong, nonatomic) OneRefreshStateNormal *refreshComponent;
 @end
 
 @implementation ViewController
@@ -40,9 +40,9 @@
 //    [self.refreshComponent endRefresh];
 }
 
-- (OneRefreshHeaderState *)refreshComponent {
+- (OneRefreshStateNormal *)refreshComponent {
     if (!_refreshComponent) {
-        _refreshComponent = [[OneRefreshHeaderState alloc] init];
+        _refreshComponent = [[OneRefreshStateNormal alloc] init];
 //        _refreshComponent.automaticallyChangeAlpha = YES;
 //        _refreshComponent.lastUpdatedTimeLabel.hidden = YES;
     }
