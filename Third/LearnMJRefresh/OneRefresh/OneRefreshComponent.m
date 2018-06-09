@@ -109,6 +109,8 @@
     if (_status == OneRefreshStatusRefreshing) return;
     
     self.alpha = alphaPercent;
+    
+    NSLog(@"%lf+++", alphaPercent);
 }
 
 @end

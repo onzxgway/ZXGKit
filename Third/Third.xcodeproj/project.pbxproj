@@ -72,8 +72,11 @@
 		047C26AB207CFA600042572C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C26AA207CFA600042572C /* ViewController.m */; };
 		047C26B0207CFA600042572C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047C26AF207CFA600042572C /* Assets.xcassets */; };
 		047C26B3207CFA600042572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047C26B1207CFA600042572C /* LaunchScreen.storyboard */; };
+		04A31CED20CB682400968D08 /* UIScrollView+OneRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A31CEC20CB682400968D08 /* UIScrollView+OneRefresh.m */; };
 		04B4C70120C95E3200950C60 /* OneRefreshStateNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4C70020C95E3200950C60 /* OneRefreshStateNormal.m */; };
 		04B4C70320C96DD400950C60 /* tips in Resources */ = {isa = PBXBuildFile; fileRef = 04B4C70220C96DD400950C60 /* tips */; };
+		04BCF43E20CBF0FF0048549C /* OneRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BCF43D20CBF0FF0048549C /* OneRefreshGifHeader.m */; };
+		04BCF44120CC0B340048549C /* OneRefreshEatHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BCF44020CC0B340048549C /* OneRefreshEatHeader.m */; };
 		1E57DD9B65E5DFFBC38592FE /* libPods-SDWebimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77678643378FDBB80F8A0FE7 /* libPods-SDWebimage.a */; };
 		2EF54EB26814DAD19DF85A95 /* libPods-LearnMJExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6AEA0E5F5C8732B365E35D4 /* libPods-LearnMJExtension.a */; };
 		4525939C624E6DE4249F44AC /* libPods-LearnMasonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7784621D9DC5F18243309F /* libPods-LearnMasonry.a */; };
@@ -257,9 +260,15 @@
 		047C26AF207CFA600042572C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047C26B2207CFA600042572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047C26B4207CFA600042572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A31CEB20CB682400968D08 /* UIScrollView+OneRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+OneRefresh.h"; sourceTree = "<group>"; };
+		04A31CEC20CB682400968D08 /* UIScrollView+OneRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+OneRefresh.m"; sourceTree = "<group>"; };
 		04B4C6FF20C95E3200950C60 /* OneRefreshStateNormal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneRefreshStateNormal.h; sourceTree = "<group>"; };
 		04B4C70020C95E3200950C60 /* OneRefreshStateNormal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneRefreshStateNormal.m; sourceTree = "<group>"; };
 		04B4C70220C96DD400950C60 /* tips */ = {isa = PBXFileReference; lastKnownFileType = text; path = tips; sourceTree = "<group>"; };
+		04BCF43C20CBF0FF0048549C /* OneRefreshGifHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneRefreshGifHeader.h; sourceTree = "<group>"; };
+		04BCF43D20CBF0FF0048549C /* OneRefreshGifHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneRefreshGifHeader.m; sourceTree = "<group>"; };
+		04BCF43F20CC0B340048549C /* OneRefreshEatHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneRefreshEatHeader.h; sourceTree = "<group>"; };
+		04BCF44020CC0B340048549C /* OneRefreshEatHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneRefreshEatHeader.m; sourceTree = "<group>"; };
 		0C2C78D8BD7AC75F7DE09334 /* libPods-LearnMJRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnMJRefresh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E77B51F3A12DFB2905E8249 /* Pods-LearnMJExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnMJExtension.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LearnMJExtension/Pods-LearnMJExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		185D3EAAA491151B8FBDE867 /* Pods-LearnMasonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnMasonry.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LearnMasonry/Pods-LearnMasonry.release.xcconfig"; sourceTree = "<group>"; };
@@ -436,6 +445,8 @@
 				0124C79620B26C9200C0BA30 /* ZXGRefresh */,
 				010989F520A3E0D80041C430 /* AppDelegate.h */,
 				010989F620A3E0D80041C430 /* AppDelegate.m */,
+				04BCF43F20CC0B340048549C /* OneRefreshEatHeader.h */,
+				04BCF44020CC0B340048549C /* OneRefreshEatHeader.m */,
 				010989F820A3E0D80041C430 /* ViewController.h */,
 				010989F920A3E0D80041C430 /* ViewController.m */,
 				010989FB20A3E0D80041C430 /* Main.storyboard */,
@@ -538,6 +549,10 @@
 				046465C820C6C6C2007C223B /* NSBundle+OneRefresh.m */,
 				04B4C6FF20C95E3200950C60 /* OneRefreshStateNormal.h */,
 				04B4C70020C95E3200950C60 /* OneRefreshStateNormal.m */,
+				04A31CEB20CB682400968D08 /* UIScrollView+OneRefresh.h */,
+				04A31CEC20CB682400968D08 /* UIScrollView+OneRefresh.m */,
+				04BCF43C20CBF0FF0048549C /* OneRefreshGifHeader.h */,
+				04BCF43D20CBF0FF0048549C /* OneRefreshGifHeader.m */,
 			);
 			path = OneRefresh;
 			sourceTree = "<group>";
@@ -1498,6 +1513,7 @@
 				010E44E320B3F682000877B1 /* IMJRefreshNormalHeader.m in Sources */,
 				0124C79C20B272E000C0BA30 /* MJRefreshConst.m in Sources */,
 				0124C7A120B273D300C0BA30 /* UIView+MJExtension.m in Sources */,
+				04BCF44120CC0B340048549C /* OneRefreshEatHeader.m in Sources */,
 				04B4C70120C95E3200950C60 /* OneRefreshStateNormal.m in Sources */,
 				046465C920C6C6C2007C223B /* NSBundle+OneRefresh.m in Sources */,
 				01B18A2E20C6269600B1B552 /* OneRefreshHeader.m in Sources */,
@@ -1505,11 +1521,13 @@
 				046465C220C6BE9E007C223B /* OneRefreshHeaderState.m in Sources */,
 				010E44DE20B3F195000877B1 /* NSBundle+MJRefresh.m in Sources */,
 				0124C7A220B273D300C0BA30 /* UIScrollView+MJExtension.m in Sources */,
+				04A31CED20CB682400968D08 /* UIScrollView+OneRefresh.m in Sources */,
 				014D028920B8030C00E3779C /* MJRefreshNormalHeader.m in Sources */,
 				01098A0520A3E0D80041C430 /* main.m in Sources */,
 				0124C7A620B28D6B00C0BA30 /* IMJRefreshHeader.m in Sources */,
 				0175829720B53113008A626B /* MJRefreshHeader.m in Sources */,
 				01B18A2B20C6241700B1B552 /* OneRefreshConst.m in Sources */,
+				04BCF43E20CBF0FF0048549C /* OneRefreshGifHeader.m in Sources */,
 				0175829420B4FD10008A626B /* MJRefreshComponent.m in Sources */,
 				0175829A20B56963008A626B /* MJRefreshStateHeader.m in Sources */,
 				012837B720BBA11E00C37918 /* UIScrollView+MJRefresh.m in Sources */,

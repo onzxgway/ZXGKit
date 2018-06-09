@@ -14,6 +14,12 @@
 
 @implementation OneRefreshHeader
 
++ (instancetype)oneRefreshHeader:(id)target action:(SEL)action {
+    OneRefreshHeader *header = [[self alloc] init];
+    [header setTarget:target sel:action];
+    return header;
+}
+
 - (void)prepare {
     [super prepare];
     

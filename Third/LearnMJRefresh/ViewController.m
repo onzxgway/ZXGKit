@@ -11,6 +11,9 @@
 #import "MJRefreshNormalHeader.h"
 #import "UIScrollView+MJRefresh.h"
 #import "OneRefreshStateNormal.h"
+#import "UIScrollView+OneRefresh.h"
+#import "OneRefreshGifHeader.h"
+#import "OneRefreshEatHeader.h"
 
 @interface ViewController ()
 @property (weak  , nonatomic) IBOutlet UIScrollView *myScrollView;
@@ -25,26 +28,30 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"END" style:UIBarButtonItemStyleDone target:self action:@selector(end)];
     
+    [self.myScrollView addObserver:self forKeyPath:@"one_Refresh" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     self.myScrollView.contentInset = UIEdgeInsetsMake(128, 0, 0, 0);
     self.myScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT * 2);
-    [self.myScrollView addSubview:self.refreshComponent];
-//    self.myScrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
+//    [self.myScrollView addSubview:self.refreshComponent];
+    self.myScrollView.one_Refresh = [OneRefreshEatHeader oneRefreshHeader:self action:@selector(refresh)];
 }
 
 - (void)end {
-//    [self.myScrollView.mj_header endRefresh];
-    [self.refreshComponent endRefresh];
+    [self.myScrollView.one_Refresh endRefresh];
 }
 
 - (void)refresh {
-//    [self.refreshComponent endRefresh];
+    NSLog(@"refresh...");
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if (STRING_EQUAL(keyPath, @"one_Refresh")) {
+        NSLog(@"one_Refresh changed");
+    }
 }
 
 - (OneRefreshStateNormal *)refreshComponent {
     if (!_refreshComponent) {
         _refreshComponent = [[OneRefreshStateNormal alloc] init];
-//        _refreshComponent.automaticallyChangeAlpha = YES;
-//        _refreshComponent.lastUpdatedTimeLabel.hidden = YES;
     }
     return _refreshComponent;
 }
