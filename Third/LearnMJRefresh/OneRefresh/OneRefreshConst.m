@@ -12,3 +12,15 @@ NSString * const OneRefreshObservingContentOffset = @"contentOffset";
 CGFloat const OneRefreshHeaderHeight = 50; 
 NSTimeInterval const OneRefreshFastDuration = 0.25f;
 NSTimeInterval const OneRefreshSlowDuration = 0.4f;
+
+const CGFloat OneRefreshLabelLeftInset = 25;
+
+NSString * const OneRefreshHeaderNormalText = @"OneRefreshHeaderNormalText";
+NSString * const OneRefreshHeaderPullingText = @"OneRefreshHeaderPullingText";
+NSString * const OneRefreshHeaderRefreshingText = @"OneRefreshHeaderRefreshingText";
+
+NSString * const OneRefreshHeaderLastUpdatedTimeKey = @"OneRefreshHeaderLastUpdatedTimeKey";
+
+NSString * const OneRefreshHeaderLastTimeText = @"OneRefreshHeaderLastTimeText";
+NSString * const OneRefreshHeaderDateTodayText = @"OneRefreshHeaderDateTodayText";
+NSString * const OneRefreshHeaderNoneLastDateText = @"OneRefreshHeaderNoneLastDateText";

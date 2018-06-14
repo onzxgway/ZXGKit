@@ -10,4 +10,8 @@
 
 @interface OneRefreshHeader : OneRefreshComponent
 
++ (instancetype)oneRefreshHeader:(id)target action:(SEL)action;
+
+@property (nonatomic, copy) NSString *lastUpdatedTimeKey;
+
 @end

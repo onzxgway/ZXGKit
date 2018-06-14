@@ -1,0 +1,7 @@
+"OneRefreshHeaderNormalText" = "下拉刷新";
+"OneRefreshHeaderPullingText" = "松开刷新";
+"OneRefreshHeaderRefreshingText" = "刷新中...";
+
+"OneRefreshHeaderLastTimeText" = "最后更新：";
+"OneRefreshHeaderDateTodayText" = "今天";
+"OneRefreshHeaderNoneLastDateText" = "无记录";
