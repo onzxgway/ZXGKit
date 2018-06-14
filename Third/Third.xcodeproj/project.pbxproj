@@ -31,6 +31,13 @@
 		013B7F5D20C4EF0B008A9E7B /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B7F5C20C4EF0B008A9E7B /* NewViewController.m */; };
 		013B7F6120C4FF67008A9E7B /* NewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B7F6020C4FF67008A9E7B /* NewTableViewCell.m */; };
 		014D028920B8030C00E3779C /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D028820B8030C00E3779C /* MJRefreshNormalHeader.m */; };
+		01694DA520D25FFC0029783F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01694DA420D25FFC0029783F /* AppDelegate.m */; };
+		01694DA820D25FFC0029783F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01694DA720D25FFC0029783F /* ViewController.m */; };
+		01694DAB20D25FFC0029783F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01694DA920D25FFC0029783F /* Main.storyboard */; };
+		01694DAD20D25FFC0029783F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01694DAC20D25FFC0029783F /* Assets.xcassets */; };
+		01694DB020D25FFC0029783F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01694DAE20D25FFC0029783F /* LaunchScreen.storyboard */; };
+		01694DB320D25FFC0029783F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01694DB220D25FFC0029783F /* main.m */; };
+		01694DBA20D262460029783F /* OneKeyBoardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01694DB920D262460029783F /* OneKeyBoardManager.m */; };
 		0175829420B4FD10008A626B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829320B4FD10008A626B /* MJRefreshComponent.m */; };
 		0175829720B53113008A626B /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829620B53113008A626B /* MJRefreshHeader.m */; };
 		0175829A20B56963008A626B /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175829920B56963008A626B /* MJRefreshStateHeader.m */; };
@@ -184,6 +191,18 @@
 		014D028720B8030C00E3779C /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshNormalHeader.h; sourceTree = "<group>"; };
 		014D028820B8030C00E3779C /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalHeader.m; sourceTree = "<group>"; };
 		015296A1E3AAACD1121D2246 /* Pods-Third.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Third.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Third/Pods-Third.debug.xcconfig"; sourceTree = "<group>"; };
+		01694DA120D25FFC0029783F /* LearnIQKeyBoardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnIQKeyBoardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01694DA320D25FFC0029783F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		01694DA420D25FFC0029783F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		01694DA620D25FFC0029783F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		01694DA720D25FFC0029783F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		01694DAA20D25FFC0029783F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01694DAC20D25FFC0029783F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01694DAF20D25FFC0029783F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01694DB120D25FFC0029783F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01694DB220D25FFC0029783F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01694DB820D262460029783F /* OneKeyBoardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneKeyBoardManager.h; sourceTree = "<group>"; };
+		01694DB920D262460029783F /* OneKeyBoardManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneKeyBoardManager.m; sourceTree = "<group>"; };
 		0175829220B4FD10008A626B /* MJRefreshComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
 		0175829320B4FD10008A626B /* MJRefreshComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
 		0175829520B53113008A626B /* MJRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeader.h; sourceTree = "<group>"; };
@@ -387,6 +406,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01694D9E20D25FFC0029783F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		019129092074DC4C0054912E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -510,6 +536,32 @@
 				01793E4B2079C6510030B167 /* ZXGDBManager.m */,
 			);
 			path = ZXGDBManager;
+			sourceTree = "<group>";
+		};
+		01694DA220D25FFC0029783F /* LearnIQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				01694DB720D261E90029783F /* one */,
+				01694DA320D25FFC0029783F /* AppDelegate.h */,
+				01694DA420D25FFC0029783F /* AppDelegate.m */,
+				01694DA620D25FFC0029783F /* ViewController.h */,
+				01694DA720D25FFC0029783F /* ViewController.m */,
+				01694DA920D25FFC0029783F /* Main.storyboard */,
+				01694DAC20D25FFC0029783F /* Assets.xcassets */,
+				01694DAE20D25FFC0029783F /* LaunchScreen.storyboard */,
+				01694DB120D25FFC0029783F /* Info.plist */,
+				01694DB220D25FFC0029783F /* main.m */,
+			);
+			path = LearnIQKeyBoardManager;
+			sourceTree = "<group>";
+		};
+		01694DB720D261E90029783F /* one */ = {
+			isa = PBXGroup;
+			children = (
+				01694DB820D262460029783F /* OneKeyBoardManager.h */,
+				01694DB920D262460029783F /* OneKeyBoardManager.m */,
+			);
+			path = one;
 			sourceTree = "<group>";
 		};
 		0191290D2074DC4C0054912E /* LearnFMDB */ = {
@@ -825,6 +877,7 @@
 				010989F420A3E0D80041C430 /* LearnMJRefresh */,
 				01C1859120BD1E35002FFF70 /* LearnMJExtension */,
 				01F0BE0A20C4E23000D96C63 /* LearnMasonry */,
+				01694DA220D25FFC0029783F /* LearnIQKeyBoardManager */,
 				71DDFCFB20468F90002B54D8 /* Products */,
 				378122F29E919E62AC4265DB /* Pods */,
 				043A97B6894260887FC53591 /* Frameworks */,
@@ -841,6 +894,7 @@
 				010989F320A3E0D80041C430 /* LearnMJRefresh.app */,
 				01C1859020BD1E35002FFF70 /* LearnMJExtension.app */,
 				01F0BE0920C4E22F00D96C63 /* LearnMasonry.app */,
+				01694DA120D25FFC0029783F /* LearnIQKeyBoardManager.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -882,6 +936,23 @@
 			name = LearnMJRefresh;
 			productName = LearnMJRefresh;
 			productReference = 010989F320A3E0D80041C430 /* LearnMJRefresh.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01694DA020D25FFC0029783F /* LearnIQKeyBoardManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01694DB620D25FFC0029783F /* Build configuration list for PBXNativeTarget "LearnIQKeyBoardManager" */;
+			buildPhases = (
+				01694D9D20D25FFC0029783F /* Sources */,
+				01694D9E20D25FFC0029783F /* Frameworks */,
+				01694D9F20D25FFC0029783F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnIQKeyBoardManager;
+			productName = LearnIQKeyBoardManager;
+			productReference = 01694DA120D25FFC0029783F /* LearnIQKeyBoardManager.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0191290B2074DC4C0054912E /* LearnFMDB */ = {
@@ -1017,6 +1088,10 @@
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
 					};
+					01694DA020D25FFC0029783F = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
 					0191290B2074DC4C0054912E = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -1063,6 +1138,7 @@
 				010989F220A3E0D80041C430 /* LearnMJRefresh */,
 				01C1858F20BD1E35002FFF70 /* LearnMJExtension */,
 				01F0BE0820C4E22F00D96C63 /* LearnMasonry */,
+				01694DA020D25FFC0029783F /* LearnIQKeyBoardManager */,
 			);
 		};
 /* End PBXProject section */
@@ -1078,6 +1154,16 @@
 				010989FF20A3E0D80041C430 /* Assets.xcassets in Resources */,
 				010E44E020B3F23D000877B1 /* MJRefresh.bundle in Resources */,
 				010989FD20A3E0D80041C430 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01694D9F20D25FFC0029783F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01694DB020D25FFC0029783F /* LaunchScreen.storyboard in Resources */,
+				01694DAD20D25FFC0029783F /* Assets.xcassets in Resources */,
+				01694DAB20D25FFC0029783F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1538,6 +1624,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01694D9D20D25FFC0029783F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01694DA820D25FFC0029783F /* ViewController.m in Sources */,
+				01694DBA20D262460029783F /* OneKeyBoardManager.m in Sources */,
+				01694DB320D25FFC0029783F /* main.m in Sources */,
+				01694DA520D25FFC0029783F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		019129082074DC4C0054912E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1666,6 +1763,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		01694DA920D25FFC0029783F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01694DAA20D25FFC0029783F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01694DAE20D25FFC0029783F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01694DAF20D25FFC0029783F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		019129142074DC4C0054912E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1786,6 +1899,41 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01694DB420D25FFC0029783F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = LearnIQKeyBoardManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01694DB520D25FFC0029783F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = LearnIQKeyBoardManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -2122,6 +2270,15 @@
 			buildConfigurations = (
 				01098A1C20A3E0D90041C430 /* Debug */,
 				01098A1D20A3E0D90041C430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01694DB620D25FFC0029783F /* Build configuration list for PBXNativeTarget "LearnIQKeyBoardManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01694DB420D25FFC0029783F /* Debug */,
+				01694DB520D25FFC0029783F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
