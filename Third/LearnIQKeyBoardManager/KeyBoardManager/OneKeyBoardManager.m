@@ -44,17 +44,34 @@
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification {
-    
+        
     CGFloat duration = [[aNotification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
     NSUInteger curve = [[aNotification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
     _kbSize = [[[aNotification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    NSLog(@"keyboardWillShow:%@", NSStringFromCGSize(_kbSize));
+    
     _kbSize.height += _keyboardDistanceFromTextField;
     
     [self adjustFrameWithDuration:duration curve:curve];
 }
 
 - (void)keyboardWillHide:(NSNotification *)aNotification {
+    NSLog(@"keyboardWillHide");
     
+    if (_textFieldView == nil) return;
+    
+    //Boolean to know keyboard is showing/hiding
+    _isKeyboardShowing = NO;
+    
+    //Getting keyboard animation duration
+    CGFloat aDuration = [[aNotification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    if (aDuration != 0.0f) {
+        //Setitng keyboard animation duration
+        _animationDuration = [[aNotification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    }
+    
+    //Setting rootViewController frame to it's original position.
+    [self setRootViewFrame:_topViewBeginRect curve:0];
 }
 
 #pragma mark - UITextField Delegate methods
@@ -166,12 +183,8 @@
     //Getting topMost ViewController.
     UIViewController *controller = [OneKeyBoardManager topMostController];
     
-//    [UIView animateWithDuration:_animationDuration animations:^{
-//        //Setting it's new frame
-//        [controller.view setFrame:frame];
-//    }];
-    
-    [UIView animateWithDuration:_animationDuration delay:0 options:curve animations:^{
+    [UIView animateWithDuration:_animationDuration animations:^{
+        //Setting it's new frame
         [controller.view setFrame:frame];
     } completion:nil];
 }

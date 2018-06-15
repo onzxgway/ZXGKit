@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "OneKeyBoardManager.h"
+#import "RootViewController.h"
+#import "IQKeyBoardManager.h"
+#import "TwoKeyBoardManager.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +20,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [OneKeyBoardManager sharedKeyBoardManager];
+    [TwoKeyBoardManager sharedKeyBoardManager];
+//    [IQKeyboardManager sharedManager];
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[RootViewController new]];
+//    
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }

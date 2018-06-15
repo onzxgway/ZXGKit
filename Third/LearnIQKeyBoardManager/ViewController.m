@@ -20,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor whiteColor];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.myScrollVIEW.contentSize = CGSizeMake(0, [UIScreen mainScreen].bounds.size.height * 2);
     [self.myScrollVIEW scrollsToTop];
@@ -30,19 +32,13 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

@@ -12,6 +12,7 @@
         <!--View Controller-->
         <scene sceneID="4Ka-Jv-Izc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDN-WC-Ohl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="sFD-uM-sha" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YJ7-Fn-fCG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -26,9 +27,8 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GDN-WC-Ohl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101.86666666666666" y="31.239999999999991"/>
+            <point key="canvasLocation" x="-73" y="5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -38,12 +38,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="VFi-ao-IyL">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="VFi-ao-IyL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入..." textAlignment="natural" minimumFontSize="17" id="ZHT-fW-ea6">
                                         <rect key="frame" x="62" y="388" width="197" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入..." textAlignment="natural" minimumFontSize="17" id="BAl-cj-FOQ">
+                                        <rect key="frame" x="52" y="69" width="197" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入..." textAlignment="natural" minimumFontSize="17" id="YbI-K7-82U">
+                                        <rect key="frame" x="62" y="459" width="197" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,11 +77,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418.13333333333333" y="31.239999999999998"/>
+            <point key="canvasLocation" x="269" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ewf-1I-4j2">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1f-RI-zxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xvi-Y9-aur" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rzk-Dh-QSZ">
@@ -79,7 +94,6 @@
                         <segue destination="sFD-uM-sha" kind="relationship" relationship="rootViewController" id="hKf-k4-a0y"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M1f-RI-zxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-411.19999999999999" y="5.6799999999999988"/>
         </scene>
