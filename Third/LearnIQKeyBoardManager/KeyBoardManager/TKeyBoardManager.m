@@ -18,7 +18,11 @@
  */
 
 @interface TKeyBoardManager () {
-    UIView *_textFieldView;
+    __weak UIView *_textFieldView;
+    
+    NSTimeInterval _animationDuration;
+    
+    CGSize _kbSize;
 }
 
 @end
@@ -48,6 +52,9 @@
             
             [strongSelf registerNotification];
             
+            _animationDuration = 0.25;
+            
+            strongSelf.distanceFromKeyBoard = 10.f;
         });
     }
     return self;
@@ -82,6 +89,37 @@
 
 - (void)keyboardWillShow:(NSNotification *)aNotification {
     
+    NSTimeInterval duration = [[aNotification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    _animationDuration = duration != 0.0f ? duration : _animationDuration;
+    
+    CGRect rect = [[aNotification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGRect screenSize = [UIScreen mainScreen].bounds;
+    CGRect resRect = CGRectIntersection(rect, screenSize);
+    if (CGRectIsNull(resRect)) {
+        _kbSize = CGSizeZero;
+    }
+    else {
+        CGSize size = resRect.size;
+        size.height += _distanceFromKeyBoard;
+        _kbSize = size;
+    }
+    
+    [self adjustFrame];
+    
+}
+
+- (void)adjustFrame {
+    // 坐标转换
+    CGRect textFieldRect = [_textFieldView.superview convertRect:_textFieldView.frame toView:[self keyWindow]];
+    
+    CGFloat move = CGRectGetMaxY(textFieldRect) - (CGRectGetHeight([UIScreen mainScreen].bounds) - _kbSize.height);
+    
+    if (move > 0) {
+        
+    }
+    else {
+        
+    }
 }
 
 - (void)keyboardWillHide:(NSNotification *)aNotification {
@@ -96,5 +134,12 @@
     
 }
 
+- (UIWindow *)keyWindow {
+    return [UIApplication sharedApplication].keyWindow;
+}
+
+- (void)setDistanceFromKeyBoard:(CGFloat)distanceFromKeyBoard {
+    _distanceFromKeyBoard = MAX(distanceFromKeyBoard, 0);
+}
 
 @end

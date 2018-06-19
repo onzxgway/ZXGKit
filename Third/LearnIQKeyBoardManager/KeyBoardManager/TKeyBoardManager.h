@@ -11,6 +11,8 @@
 
 @interface TKeyBoardManager : NSObject
 
+@property (nonatomic) CGFloat distanceFromKeyBoard; // <#备注#>
+
 + (instancetype)sharedKeyBoardManager;
 
 @end
