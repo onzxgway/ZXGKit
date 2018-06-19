@@ -20,7 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [TwoKeyBoardManager sharedKeyBoardManager];
+//    [TwoKeyBoardManager sharedKeyBoardManager];
 //    [IQKeyboardManager sharedManager];
 //    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    

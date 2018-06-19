@@ -24,6 +24,7 @@
 		0119870620BE51C800AB465F /* ZXGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0119870520BE51C800AB465F /* ZXGViewController.m */; };
 		012309322079FFA50090DC05 /* ZXGUseage.m in Sources */ = {isa = PBXBuildFile; fileRef = 012309312079FFA50090DC05 /* ZXGUseage.m */; };
 		01230935207A03410090DC05 /* ZXGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01230934207A03410090DC05 /* ZXGPerson.m */; };
+		0124151420D8E1E100D41BA8 /* TKeyBoardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124151320D8E1E100D41BA8 /* TKeyBoardManager.m */; };
 		0124C79920B26D5100C0BA30 /* IMJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C79820B26D5100C0BA30 /* IMJRefreshComponent.m */; };
 		0124C79C20B272E000C0BA30 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C79A20B272DF00C0BA30 /* MJRefreshConst.m */; };
 		0124C7A120B273D300C0BA30 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124C79D20B273D300C0BA30 /* UIView+MJExtension.m */; };
@@ -176,6 +177,8 @@
 		012309312079FFA50090DC05 /* ZXGUseage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGUseage.m; sourceTree = "<group>"; };
 		01230933207A03410090DC05 /* ZXGPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPerson.h; sourceTree = "<group>"; };
 		01230934207A03410090DC05 /* ZXGPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPerson.m; sourceTree = "<group>"; };
+		0124151220D8E1E100D41BA8 /* TKeyBoardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKeyBoardManager.h; sourceTree = "<group>"; };
+		0124151320D8E1E100D41BA8 /* TKeyBoardManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKeyBoardManager.m; sourceTree = "<group>"; };
 		0124C79720B26D5100C0BA30 /* IMJRefreshComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMJRefreshComponent.h; sourceTree = "<group>"; };
 		0124C79820B26D5100C0BA30 /* IMJRefreshComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMJRefreshComponent.m; sourceTree = "<group>"; };
 		0124C79A20B272DF00C0BA30 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
@@ -504,6 +507,8 @@
 				011964CC20D36E0700A7BF64 /* OneKeyBoardManager.m */,
 				011964CD20D36E0700A7BF64 /* TwoKeyBoardManager.h */,
 				011964CE20D36E0700A7BF64 /* TwoKeyBoardManager.m */,
+				0124151220D8E1E100D41BA8 /* TKeyBoardManager.h */,
+				0124151320D8E1E100D41BA8 /* TKeyBoardManager.m */,
 			);
 			path = KeyBoardManager;
 			sourceTree = "<group>";
@@ -1648,6 +1653,7 @@
 				01694DB320D25FFC0029783F /* main.m in Sources */,
 				011964D020D36E0700A7BF64 /* OneKeyBoardManager.m in Sources */,
 				01694DA520D25FFC0029783F /* AppDelegate.m in Sources */,
+				0124151420D8E1E100D41BA8 /* TKeyBoardManager.m in Sources */,
 				011964D120D36E0700A7BF64 /* TwoKeyBoardManager.m in Sources */,
 				011964C120D35F8A00A7BF64 /* RootViewController.m in Sources */,
 			);
