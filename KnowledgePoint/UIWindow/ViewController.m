@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property (nonatomic, strong) UIButton *btn;
+@property (nonatomic, strong) UIButton *alertBtn;
 @end
 
 @implementation ViewController
@@ -25,9 +26,16 @@
     self.btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.btn addTarget:self action:@selector(clicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.btn];
-    self.btn.frame = CGRectMake(50, 50, 60, 20);
+    self.btn.frame = CGRectMake(50, 150, 60, 20);
     [self.btn setTitle:@"clicked" forState:UIControlStateNormal];
 
+    //
+    self.alertBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.alertBtn addTarget:self action:@selector(alertClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.alertBtn];
+    self.alertBtn.frame = CGRectMake(50, 250, 60, 20);
+    [self.alertBtn setTitle:@"alert" forState:UIControlStateNormal];
+    
     self.view.backgroundColor = [UIColor lightGrayColor];
 
     [self windonLevel];
@@ -35,6 +43,19 @@
 
 - (void)Clicked {
     [self.navigationController pushViewController:[[BViewController alloc] init] animated:YES];
+}
+
+- (void)alertClick {
+    
+    UIAlertController *ctrl = [UIAlertController alertControllerWithTitle:@"window" message:@"Hello world!" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"%@", [UIApplication sharedApplication].keyWindow);
+    }];
+    
+    [ctrl addAction:cancel];
+    
+    [self presentViewController:ctrl animated:YES completion:nil];
 }
 
 /**

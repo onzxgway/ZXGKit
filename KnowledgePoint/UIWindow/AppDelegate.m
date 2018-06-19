@@ -59,7 +59,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 
-    self.littleW = [[UIWindow alloc] initWithFrame:CGRectMake(50, 50, 220, 66)];
+    self.littleW = [[UIWindow alloc] initWithFrame:CGRectMake(50, 150, 180, 66)];
     self.littleW.windowLevel = UIWindowLevelStatusBar;
     self.littleW.backgroundColor = kRandomColor;
     self.littleW.hidden = NO;
