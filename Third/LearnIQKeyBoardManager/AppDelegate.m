@@ -11,6 +11,7 @@
 #import "RootViewController.h"
 #import "IQKeyBoardManager.h"
 #import "TwoKeyBoardManager.h"
+#import "TKeyBoardManager.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    [TwoKeyBoardManager sharedKeyBoardManager];
 //    [IQKeyboardManager sharedManager];
+    [[TKeyBoardManager sharedKeyBoardManager] setEnable:YES];
+    
 //    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    
 //    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[RootViewController new]];

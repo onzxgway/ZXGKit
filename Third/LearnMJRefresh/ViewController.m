@@ -38,6 +38,8 @@
 - (void)end {
     [self.myScrollView.one_Refresh endRefresh];
 }
+- (IBAction)ableEvent:(id)sender {
+}
 
 - (void)refresh {
     NSLog(@"refresh...");

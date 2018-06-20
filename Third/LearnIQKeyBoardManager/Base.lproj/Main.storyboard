@@ -12,7 +12,6 @@
         <!--View Controller-->
         <scene sceneID="4Ka-Jv-Izc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GDN-WC-Ohl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="sFD-uM-sha" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YJ7-Fn-fCG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -27,6 +26,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDN-WC-Ohl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-73" y="5"/>
         </scene>
@@ -63,6 +63,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qv3-kW-LhW">
+                                        <rect key="frame" x="62" y="283" width="66" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Disabled">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sS3-pr-vKl">
+                                        <rect key="frame" x="62" y="205" width="66" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Abled">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80030299180967313" green="1" blue="0.97292002731117178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
@@ -71,6 +87,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="qK0-hh-JOI"/>
                     <connections>
+                        <outlet property="abled" destination="sS3-pr-vKl" id="Hxw-kv-0Yh"/>
+                        <outlet property="disabled" destination="Qv3-kW-LhW" id="idR-yD-kff"/>
                         <outlet property="myScrollVIEW" destination="VFi-ao-IyL" id="FgU-6Q-QCk"/>
                         <outlet property="myTextField" destination="ZHT-fW-ea6" id="EaH-Sk-pBp"/>
                     </connections>
@@ -82,7 +100,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Ewf-1I-4j2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M1f-RI-zxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xvi-Y9-aur" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rzk-Dh-QSZ">
@@ -94,6 +111,7 @@
                         <segue destination="sFD-uM-sha" kind="relationship" relationship="rootViewController" id="hKf-k4-a0y"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1f-RI-zxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-411.19999999999999" y="5.6799999999999988"/>
         </scene>

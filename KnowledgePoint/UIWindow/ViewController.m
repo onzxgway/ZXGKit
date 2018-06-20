@@ -12,6 +12,7 @@
 @interface ViewController ()
 @property (nonatomic, strong) UIButton *btn;
 @property (nonatomic, strong) UIButton *alertBtn;
+@property (nonatomic, strong) UIView   *showView;
 @end
 
 @implementation ViewController
@@ -50,12 +51,17 @@
     UIAlertController *ctrl = [UIAlertController alertControllerWithTitle:@"window" message:@"Hello world!" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"%@", [UIApplication sharedApplication].keyWindow);
+        NSLog(@"__%@__%@__", [UIApplication sharedApplication].keyWindow, self.view.window);
     }];
     
     [ctrl addAction:cancel];
     
     [self presentViewController:ctrl animated:YES completion:nil];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication].keyWindow addSubview:self.showView];
+    });
 }
 
 /**
@@ -83,6 +89,15 @@
 
 - (void)windonLevel {
     NSLog(@"__%f__%f__%f__", UIWindowLevelNormal, UIWindowLevelStatusBar, UIWindowLevelAlert);
+}
+
+- (UIView *)showView {
+    if (!_showView) {
+        _showView = [[UIView alloc] init];
+        _showView.frame = CGRectMake(10, 10, 66, 44);
+        _showView.backgroundColor = [UIColor greenColor];
+    }
+    return _showView;
 }
 
 @end

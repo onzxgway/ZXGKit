@@ -48,6 +48,8 @@
 		01793E462079AE0D0030B167 /* ZXGDBColumnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E452079AE0D0030B167 /* ZXGDBColumnCondition.m */; };
 		01793E492079BA370030B167 /* ZXGDBWhereCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E482079BA370030B167 /* ZXGDBWhereCondition.m */; };
 		01793E4C2079C6510030B167 /* ZXGDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E4B2079C6510030B167 /* ZXGDBManager.m */; };
+		018ACB1F20D9EA0700796EA3 /* UIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 018ACB1E20D9EA0700796EA3 /* UIView+Hierarchy.m */; };
+		018ACB2220D9FEA200796EA3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018ACB2120D9FEA200796EA3 /* SecondViewController.m */; };
 		019129102074DC4C0054912E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191290F2074DC4C0054912E /* AppDelegate.m */; };
 		019129132074DC4C0054912E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129122074DC4C0054912E /* ViewController.m */; };
 		019129162074DC4C0054912E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019129142074DC4C0054912E /* Main.storyboard */; };
@@ -227,6 +229,10 @@
 		01793E482079BA370030B167 /* ZXGDBWhereCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBWhereCondition.m; sourceTree = "<group>"; };
 		01793E4A2079C6510030B167 /* ZXGDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGDBManager.h; sourceTree = "<group>"; };
 		01793E4B2079C6510030B167 /* ZXGDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGDBManager.m; sourceTree = "<group>"; };
+		018ACB1D20D9EA0700796EA3 /* UIView+Hierarchy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Hierarchy.h"; sourceTree = "<group>"; };
+		018ACB1E20D9EA0700796EA3 /* UIView+Hierarchy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Hierarchy.m"; sourceTree = "<group>"; };
+		018ACB2020D9FEA200796EA3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		018ACB2120D9FEA200796EA3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0191290C2074DC4C0054912E /* LearnFMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnFMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0191290E2074DC4C0054912E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0191290F2074DC4C0054912E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -501,6 +507,7 @@
 		011964C820D36E0700A7BF64 /* KeyBoardManager */ = {
 			isa = PBXGroup;
 			children = (
+				018ACB1C20D9E9D400796EA3 /* Category */,
 				011964C920D36E0700A7BF64 /* IQKeyBoardManager.h */,
 				011964CA20D36E0700A7BF64 /* IQKeyboardManager.m */,
 				011964CB20D36E0700A7BF64 /* OneKeyBoardManager.h */,
@@ -580,8 +587,19 @@
 				01694DB220D25FFC0029783F /* main.m */,
 				011964BF20D35F8A00A7BF64 /* RootViewController.h */,
 				011964C020D35F8A00A7BF64 /* RootViewController.m */,
+				018ACB2020D9FEA200796EA3 /* SecondViewController.h */,
+				018ACB2120D9FEA200796EA3 /* SecondViewController.m */,
 			);
 			path = LearnIQKeyBoardManager;
+			sourceTree = "<group>";
+		};
+		018ACB1C20D9E9D400796EA3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				018ACB1D20D9EA0700796EA3 /* UIView+Hierarchy.h */,
+				018ACB1E20D9EA0700796EA3 /* UIView+Hierarchy.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		0191290D2074DC4C0054912E /* LearnFMDB */ = {
@@ -1648,7 +1666,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018ACB2220D9FEA200796EA3 /* SecondViewController.m in Sources */,
 				011964CF20D36E0700A7BF64 /* IQKeyboardManager.m in Sources */,
+				018ACB1F20D9EA0700796EA3 /* UIView+Hierarchy.m in Sources */,
 				01694DA820D25FFC0029783F /* ViewController.m in Sources */,
 				01694DB320D25FFC0029783F /* main.m in Sources */,
 				011964D020D36E0700A7BF64 /* OneKeyBoardManager.m in Sources */,
