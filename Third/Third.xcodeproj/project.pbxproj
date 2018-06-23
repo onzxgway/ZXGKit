@@ -50,6 +50,10 @@
 		01793E4C2079C6510030B167 /* ZXGDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01793E4B2079C6510030B167 /* ZXGDBManager.m */; };
 		018ACB1F20D9EA0700796EA3 /* UIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 018ACB1E20D9EA0700796EA3 /* UIView+Hierarchy.m */; };
 		018ACB2220D9FEA200796EA3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018ACB2120D9FEA200796EA3 /* SecondViewController.m */; };
+		018ACB2A20DA577B00796EA3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 018ACB2420DA577B00796EA3 /* .gitignore */; };
+		018ACB2B20DA577B00796EA3 /* YYView3D.png in Resources */ = {isa = PBXBuildFile; fileRef = 018ACB2620DA577B00796EA3 /* YYView3D.png */; };
+		018ACB2C20DA577B00796EA3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 018ACB2720DA577B00796EA3 /* README.md */; };
+		018ACB2D20DA577B00796EA3 /* YYViewHierarchy3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 018ACB2920DA577B00796EA3 /* YYViewHierarchy3D.m */; };
 		019129102074DC4C0054912E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0191290F2074DC4C0054912E /* AppDelegate.m */; };
 		019129132074DC4C0054912E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019129122074DC4C0054912E /* ViewController.m */; };
 		019129162074DC4C0054912E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019129142074DC4C0054912E /* Main.storyboard */; };
@@ -71,6 +75,9 @@
 		01C185B620BD586A002FFF70 /* MJAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C185B520BD586A002FFF70 /* MJAd.m */; };
 		01C185B920BD5B42002FFF70 /* MJStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C185B720BD5B42002FFF70 /* MJStudent.m */; };
 		01C185BC20BD5BBC002FFF70 /* MJBag.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C185BA20BD5BBB002FFF70 /* MJBag.m */; };
+		01E5DD9820DC8D3F004C943C /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E5DD9720DC8D3F004C943C /* LeftViewController.m */; };
+		01E5DD9B20DCA77D004C943C /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E5DD9A20DCA77D004C943C /* ScrollViewController.m */; };
+		01E5DD9E20DCC5CB004C943C /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E5DD9D20DCC5CB004C943C /* MasonryViewController.m */; };
 		01F0BE0D20C4E23000D96C63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0BE0C20C4E23000D96C63 /* AppDelegate.m */; };
 		01F0BE1020C4E23000D96C63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0BE0F20C4E23000D96C63 /* ViewController.m */; };
 		01F0BE1320C4E23000D96C63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F0BE1120C4E23000D96C63 /* Main.storyboard */; };
@@ -233,6 +240,11 @@
 		018ACB1E20D9EA0700796EA3 /* UIView+Hierarchy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Hierarchy.m"; sourceTree = "<group>"; };
 		018ACB2020D9FEA200796EA3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		018ACB2120D9FEA200796EA3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		018ACB2420DA577B00796EA3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		018ACB2620DA577B00796EA3 /* YYView3D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YYView3D.png; sourceTree = "<group>"; };
+		018ACB2720DA577B00796EA3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		018ACB2820DA577B00796EA3 /* YYViewHierarchy3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYViewHierarchy3D.h; sourceTree = "<group>"; };
+		018ACB2920DA577B00796EA3 /* YYViewHierarchy3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYViewHierarchy3D.m; sourceTree = "<group>"; };
 		0191290C2074DC4C0054912E /* LearnFMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnFMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0191290E2074DC4C0054912E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0191290F2074DC4C0054912E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -273,6 +285,12 @@
 		01C185B820BD5B42002FFF70 /* MJStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJStudent.h; sourceTree = "<group>"; };
 		01C185BA20BD5BBB002FFF70 /* MJBag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBag.m; sourceTree = "<group>"; };
 		01C185BB20BD5BBB002FFF70 /* MJBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBag.h; sourceTree = "<group>"; };
+		01E5DD9620DC8D3F004C943C /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		01E5DD9720DC8D3F004C943C /* LeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		01E5DD9920DCA77D004C943C /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		01E5DD9A20DCA77D004C943C /* ScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		01E5DD9C20DCC5CB004C943C /* MasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
+		01E5DD9D20DCC5CB004C943C /* MasonryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		01F0BE0920C4E22F00D96C63 /* LearnMasonry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnMasonry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F0BE0B20C4E23000D96C63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01F0BE0C20C4E23000D96C63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -575,6 +593,7 @@
 		01694DA220D25FFC0029783F /* LearnIQKeyBoardManager */ = {
 			isa = PBXGroup;
 			children = (
+				018ACB2320DA577B00796EA3 /* YYViewHierarchy3D-master */,
 				011964C820D36E0700A7BF64 /* KeyBoardManager */,
 				01694DA320D25FFC0029783F /* AppDelegate.h */,
 				01694DA420D25FFC0029783F /* AppDelegate.m */,
@@ -600,6 +619,26 @@
 				018ACB1E20D9EA0700796EA3 /* UIView+Hierarchy.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		018ACB2320DA577B00796EA3 /* YYViewHierarchy3D-master */ = {
+			isa = PBXGroup;
+			children = (
+				018ACB2420DA577B00796EA3 /* .gitignore */,
+				018ACB2520DA577B00796EA3 /* Demo */,
+				018ACB2720DA577B00796EA3 /* README.md */,
+				018ACB2820DA577B00796EA3 /* YYViewHierarchy3D.h */,
+				018ACB2920DA577B00796EA3 /* YYViewHierarchy3D.m */,
+			);
+			path = "YYViewHierarchy3D-master";
+			sourceTree = "<group>";
+		};
+		018ACB2520DA577B00796EA3 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				018ACB2620DA577B00796EA3 /* YYView3D.png */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		0191290D2074DC4C0054912E /* LearnFMDB */ = {
@@ -691,6 +730,12 @@
 				013B7F5C20C4EF0B008A9E7B /* NewViewController.m */,
 				013B7F5F20C4FF67008A9E7B /* NewTableViewCell.h */,
 				013B7F6020C4FF67008A9E7B /* NewTableViewCell.m */,
+				01E5DD9620DC8D3F004C943C /* LeftViewController.h */,
+				01E5DD9720DC8D3F004C943C /* LeftViewController.m */,
+				01E5DD9920DCA77D004C943C /* ScrollViewController.h */,
+				01E5DD9A20DCA77D004C943C /* ScrollViewController.m */,
+				01E5DD9C20DCC5CB004C943C /* MasonryViewController.h */,
+				01E5DD9D20DCC5CB004C943C /* MasonryViewController.m */,
 				01F0BE1420C4E23000D96C63 /* Assets.xcassets */,
 				01F0BE1620C4E23000D96C63 /* LaunchScreen.storyboard */,
 				01F0BE1920C4E23000D96C63 /* Info.plist */,
@@ -1199,6 +1244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018ACB2C20DA577B00796EA3 /* README.md in Resources */,
+				018ACB2B20DA577B00796EA3 /* YYView3D.png in Resources */,
+				018ACB2A20DA577B00796EA3 /* .gitignore in Resources */,
 				01694DB020D25FFC0029783F /* LaunchScreen.storyboard in Resources */,
 				01694DAD20D25FFC0029783F /* Assets.xcassets in Resources */,
 				01694DAB20D25FFC0029783F /* Main.storyboard in Resources */,
@@ -1668,6 +1716,7 @@
 			files = (
 				018ACB2220D9FEA200796EA3 /* SecondViewController.m in Sources */,
 				011964CF20D36E0700A7BF64 /* IQKeyboardManager.m in Sources */,
+				018ACB2D20DA577B00796EA3 /* YYViewHierarchy3D.m in Sources */,
 				018ACB1F20D9EA0700796EA3 /* UIView+Hierarchy.m in Sources */,
 				01694DA820D25FFC0029783F /* ViewController.m in Sources */,
 				01694DB320D25FFC0029783F /* main.m in Sources */,
@@ -1718,9 +1767,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E5DD9B20DCA77D004C943C /* ScrollViewController.m in Sources */,
 				01F0BE1020C4E23000D96C63 /* ViewController.m in Sources */,
+				01E5DD9E20DCC5CB004C943C /* MasonryViewController.m in Sources */,
 				01F0BE1B20C4E23000D96C63 /* main.m in Sources */,
 				01F0BE0D20C4E23000D96C63 /* AppDelegate.m in Sources */,
+				01E5DD9820DC8D3F004C943C /* LeftViewController.m in Sources */,
 				013B7F5D20C4EF0B008A9E7B /* NewViewController.m in Sources */,
 				013B7F6120C4FF67008A9E7B /* NewTableViewCell.m in Sources */,
 			);

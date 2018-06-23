@@ -12,6 +12,7 @@
 #import "IQKeyBoardManager.h"
 #import "TwoKeyBoardManager.h"
 #import "TKeyBoardManager.h"
+#import "YYViewHierarchy3D.h"
 
 @interface AppDelegate ()
 
@@ -23,13 +24,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    [TwoKeyBoardManager sharedKeyBoardManager];
 //    [IQKeyboardManager sharedManager];
-    [[TKeyBoardManager sharedKeyBoardManager] setEnable:YES];
+//    [[TKeyBoardManager sharedKeyBoardManager] setEnable:YES];
     
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[RootViewController new]];
-//    
-//    [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[RootViewController new]];
+    
+    [self.window makeKeyAndVisible];
+    
+//    [YYViewHierarchy3D show];
     
     return YES;
 }
