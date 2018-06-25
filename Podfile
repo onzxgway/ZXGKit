@@ -22,7 +22,7 @@ KnowledgePointDemoArray.each do |t|
 end
 
 # target数组 如果有新的target直接加入该数组
-KnowledgePointArray = ['UIWindow']
+KnowledgePointArray = ['UIWindow', 'UITabBarViewController']
 KnowledgePointArray.each do |t|
     target t do
         project 'KnowledgePoint/KnowledgePoint.project'
