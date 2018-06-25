@@ -31,6 +31,7 @@
 		016CF6EC20E07E81007839DB /* ZXGOnePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6EB20E07E81007839DB /* ZXGOnePushController.m */; };
 		016CF6EF20E07E8E007839DB /* ZXGTwoPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6EE20E07E8E007839DB /* ZXGTwoPushController.m */; };
 		016CF6F220E07FED007839DB /* ZXGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6F120E07FED007839DB /* ZXGNavigationController.m */; };
+		016CF6F520E09036007839DB /* ZXGExpandAbleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6F420E09036007839DB /* ZXGExpandAbleLabel.m */; };
 		017C2BE120B6C22B00C73595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C2BE020B6C22B00C73595 /* AppDelegate.m */; };
 		017C2BE420B6C22B00C73595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C2BE320B6C22B00C73595 /* ViewController.m */; };
 		017C2BE720B6C22B00C73595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017C2BE520B6C22B00C73595 /* Main.storyboard */; };
