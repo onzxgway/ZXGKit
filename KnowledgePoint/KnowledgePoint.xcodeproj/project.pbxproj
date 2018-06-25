@@ -19,6 +19,18 @@
 		01694D9320D240F50029783F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01694D9120D240F50029783F /* LaunchScreen.storyboard */; };
 		01694D9620D240F50029783F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01694D9520D240F50029783F /* main.m */; };
 		01694D9C20D241720029783F /* ZXGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01694D9B20D241720029783F /* ZXGAppDelegate.m */; };
+		016CF6CF20E07A33007839DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6CE20E07A33007839DB /* AppDelegate.m */; };
+		016CF6D220E07A33007839DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6D120E07A33007839DB /* ViewController.m */; };
+		016CF6D520E07A33007839DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016CF6D320E07A33007839DB /* Main.storyboard */; };
+		016CF6D720E07A33007839DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016CF6D620E07A33007839DB /* Assets.xcassets */; };
+		016CF6DA20E07A33007839DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016CF6D820E07A33007839DB /* LaunchScreen.storyboard */; };
+		016CF6DD20E07A33007839DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6DC20E07A33007839DB /* main.m */; };
+		016CF6E320E07C50007839DB /* ZXGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6E220E07C50007839DB /* ZXGTabBarController.m */; };
+		016CF6E620E07DB9007839DB /* ZXGItemOneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6E520E07DB9007839DB /* ZXGItemOneController.m */; };
+		016CF6E920E07DC9007839DB /* ZXGItemTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6E820E07DC9007839DB /* ZXGItemTwoController.m */; };
+		016CF6EC20E07E81007839DB /* ZXGOnePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6EB20E07E81007839DB /* ZXGOnePushController.m */; };
+		016CF6EF20E07E8E007839DB /* ZXGTwoPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6EE20E07E8E007839DB /* ZXGTwoPushController.m */; };
+		016CF6F220E07FED007839DB /* ZXGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CF6F120E07FED007839DB /* ZXGNavigationController.m */; };
 		017C2BE120B6C22B00C73595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C2BE020B6C22B00C73595 /* AppDelegate.m */; };
 		017C2BE420B6C22B00C73595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C2BE320B6C22B00C73595 /* ViewController.m */; };
 		017C2BE720B6C22B00C73595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017C2BE520B6C22B00C73595 /* Main.storyboard */; };
@@ -309,6 +321,28 @@
 		01694D9520D240F50029783F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01694D9A20D241720029783F /* ZXGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGAppDelegate.h; sourceTree = "<group>"; };
 		01694D9B20D241720029783F /* ZXGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGAppDelegate.m; sourceTree = "<group>"; };
+		016CF6CB20E07A33007839DB /* UITabBarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITabBarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		016CF6CD20E07A33007839DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		016CF6CE20E07A33007839DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		016CF6D020E07A33007839DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		016CF6D120E07A33007839DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		016CF6D420E07A33007839DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		016CF6D620E07A33007839DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		016CF6D920E07A33007839DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		016CF6DB20E07A33007839DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016CF6DC20E07A33007839DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		016CF6E120E07C50007839DB /* ZXGTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGTabBarController.h; sourceTree = "<group>"; };
+		016CF6E220E07C50007839DB /* ZXGTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGTabBarController.m; sourceTree = "<group>"; };
+		016CF6E420E07DB9007839DB /* ZXGItemOneController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGItemOneController.h; sourceTree = "<group>"; };
+		016CF6E520E07DB9007839DB /* ZXGItemOneController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGItemOneController.m; sourceTree = "<group>"; };
+		016CF6E720E07DC9007839DB /* ZXGItemTwoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGItemTwoController.h; sourceTree = "<group>"; };
+		016CF6E820E07DC9007839DB /* ZXGItemTwoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGItemTwoController.m; sourceTree = "<group>"; };
+		016CF6EA20E07E81007839DB /* ZXGOnePushController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGOnePushController.h; sourceTree = "<group>"; };
+		016CF6EB20E07E81007839DB /* ZXGOnePushController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGOnePushController.m; sourceTree = "<group>"; };
+		016CF6ED20E07E8E007839DB /* ZXGTwoPushController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGTwoPushController.h; sourceTree = "<group>"; };
+		016CF6EE20E07E8E007839DB /* ZXGTwoPushController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGTwoPushController.m; sourceTree = "<group>"; };
+		016CF6F020E07FED007839DB /* ZXGNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGNavigationController.h; sourceTree = "<group>"; };
+		016CF6F120E07FED007839DB /* ZXGNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGNavigationController.m; sourceTree = "<group>"; };
 		017C2BDD20B6C22B00C73595 /* string.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = string.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		017C2BDF20B6C22B00C73595 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		017C2BE020B6C22B00C73595 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -786,6 +820,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		016CF6C820E07A33007839DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		017C2BDA20B6C22B00C73595 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -947,6 +988,34 @@
 				01694D9520D240F50029783F /* main.m */,
 			);
 			path = "ScrollView 键盘回收";
+			sourceTree = "<group>";
+		};
+		016CF6CC20E07A33007839DB /* UITabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				016CF6CD20E07A33007839DB /* AppDelegate.h */,
+				016CF6CE20E07A33007839DB /* AppDelegate.m */,
+				016CF6D020E07A33007839DB /* ViewController.h */,
+				016CF6D120E07A33007839DB /* ViewController.m */,
+				016CF6D320E07A33007839DB /* Main.storyboard */,
+				016CF6D620E07A33007839DB /* Assets.xcassets */,
+				016CF6D820E07A33007839DB /* LaunchScreen.storyboard */,
+				016CF6DB20E07A33007839DB /* Info.plist */,
+				016CF6DC20E07A33007839DB /* main.m */,
+				016CF6E120E07C50007839DB /* ZXGTabBarController.h */,
+				016CF6E220E07C50007839DB /* ZXGTabBarController.m */,
+				016CF6E420E07DB9007839DB /* ZXGItemOneController.h */,
+				016CF6E520E07DB9007839DB /* ZXGItemOneController.m */,
+				016CF6E720E07DC9007839DB /* ZXGItemTwoController.h */,
+				016CF6E820E07DC9007839DB /* ZXGItemTwoController.m */,
+				016CF6EA20E07E81007839DB /* ZXGOnePushController.h */,
+				016CF6EB20E07E81007839DB /* ZXGOnePushController.m */,
+				016CF6ED20E07E8E007839DB /* ZXGTwoPushController.h */,
+				016CF6EE20E07E8E007839DB /* ZXGTwoPushController.m */,
+				016CF6F020E07FED007839DB /* ZXGNavigationController.h */,
+				016CF6F120E07FED007839DB /* ZXGNavigationController.m */,
+			);
+			path = UITabBarViewController;
 			sourceTree = "<group>";
 		};
 		017C2BDE20B6C22B00C73595 /* string */ = {
@@ -1581,6 +1650,7 @@
 				017C2BDE20B6C22B00C73595 /* string */,
 				012837BD20BBB4D300C37918 /* UICollectionView */,
 				01694D8520D240F40029783F /* ScrollView 键盘回收 */,
+				016CF6CC20E07A33007839DB /* UITabBarViewController */,
 				F08E11E11F78DBD3005DE5F9 /* Products */,
 				EFF871DCB3FA620DE2960126 /* Pods */,
 				39248CB0E8D6D3D61B8936C0 /* Frameworks */,
@@ -1610,6 +1680,7 @@
 				017C2BDD20B6C22B00C73595 /* string.app */,
 				012837BC20BBB4D300C37918 /* UICollectionView.app */,
 				01694D8420D240F40029783F /* ScrollView 键盘回收.app */,
+				016CF6CB20E07A33007839DB /* UITabBarViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1720,6 +1791,23 @@
 			name = "ScrollView 键盘回收";
 			productName = "ScrollView 键盘回收";
 			productReference = 01694D8420D240F40029783F /* ScrollView 键盘回收.app */;
+			productType = "com.apple.product-type.application";
+		};
+		016CF6CA20E07A33007839DB /* UITabBarViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016CF6DE20E07A33007839DB /* Build configuration list for PBXNativeTarget "UITabBarViewController" */;
+			buildPhases = (
+				016CF6C720E07A33007839DB /* Sources */,
+				016CF6C820E07A33007839DB /* Frameworks */,
+				016CF6C920E07A33007839DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UITabBarViewController;
+			productName = UITabBarViewController;
+			productReference = 016CF6CB20E07A33007839DB /* UITabBarViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 		017C2BDC20B6C22B00C73595 /* string */ = {
@@ -2040,6 +2128,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZXG;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "朱献国";
 				TargetAttributes = {
@@ -2049,6 +2138,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					01694D8320D240F40029783F = {
+						CreatedOnToolsVersion = 9.0.1;
+						DevelopmentTeam = K2B7L95AWX;
+						ProvisioningStyle = Automatic;
+					};
+					016CF6CA20E07A33007839DB = {
 						CreatedOnToolsVersion = 9.0.1;
 						DevelopmentTeam = K2B7L95AWX;
 						ProvisioningStyle = Automatic;
@@ -2165,6 +2259,7 @@
 				017C2BDC20B6C22B00C73595 /* string */,
 				012837BB20BBB4D300C37918 /* UICollectionView */,
 				01694D8320D240F40029783F /* ScrollView 键盘回收 */,
+				016CF6CA20E07A33007839DB /* UITabBarViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -2186,6 +2281,16 @@
 			files = (
 				01694D9320D240F50029783F /* LaunchScreen.storyboard in Resources */,
 				01694D9020D240F50029783F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016CF6C920E07A33007839DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016CF6DA20E07A33007839DB /* LaunchScreen.storyboard in Resources */,
+				016CF6D720E07A33007839DB /* Assets.xcassets in Resources */,
+				016CF6D520E07A33007839DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2488,6 +2593,22 @@
 				01694D9C20D241720029783F /* ZXGAppDelegate.m in Sources */,
 				01694D8B20D240F50029783F /* ViewController.m in Sources */,
 				01694D9620D240F50029783F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016CF6C720E07A33007839DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016CF6EF20E07E8E007839DB /* ZXGTwoPushController.m in Sources */,
+				016CF6D220E07A33007839DB /* ViewController.m in Sources */,
+				016CF6F220E07FED007839DB /* ZXGNavigationController.m in Sources */,
+				016CF6E620E07DB9007839DB /* ZXGItemOneController.m in Sources */,
+				016CF6E320E07C50007839DB /* ZXGTabBarController.m in Sources */,
+				016CF6EC20E07E81007839DB /* ZXGOnePushController.m in Sources */,
+				016CF6DD20E07A33007839DB /* main.m in Sources */,
+				016CF6CF20E07A33007839DB /* AppDelegate.m in Sources */,
+				016CF6E920E07DC9007839DB /* ZXGItemTwoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2837,6 +2958,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		016CF6D320E07A33007839DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016CF6D420E07A33007839DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		016CF6D820E07A33007839DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016CF6D920E07A33007839DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		017C2BE520B6C22B00C73595 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3150,6 +3287,56 @@
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ScrollView 键盘回收/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		016CF6DF20E07A33007839DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = UITabBarViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		016CF6E020E07A33007839DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = UITabBarViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
@@ -3991,6 +4178,15 @@
 			buildConfigurations = (
 				01694D9720D240F50029783F /* Debug */,
 				01694D9820D240F50029783F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		016CF6DE20E07A33007839DB /* Build configuration list for PBXNativeTarget "UITabBarViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016CF6DF20E07A33007839DB /* Debug */,
+				016CF6E020E07A33007839DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
