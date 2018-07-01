@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 @property (nonatomic, strong) UIButton *btn;
+@property (nonatomic, strong) UIButton *alertBtn;
+@property (nonatomic, strong) UIView   *showView;
 @end
 
 @implementation ViewController
@@ -25,9 +27,16 @@
     self.btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.btn addTarget:self action:@selector(clicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.btn];
-    self.btn.frame = CGRectMake(50, 50, 60, 20);
+    self.btn.frame = CGRectMake(50, 150, 60, 20);
     [self.btn setTitle:@"clicked" forState:UIControlStateNormal];
 
+    //
+    self.alertBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.alertBtn addTarget:self action:@selector(alertClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.alertBtn];
+    self.alertBtn.frame = CGRectMake(50, 250, 60, 20);
+    [self.alertBtn setTitle:@"alert" forState:UIControlStateNormal];
+    
     self.view.backgroundColor = [UIColor lightGrayColor];
 
     [self windonLevel];
@@ -35,6 +44,24 @@
 
 - (void)Clicked {
     [self.navigationController pushViewController:[[BViewController alloc] init] animated:YES];
+}
+
+- (void)alertClick {
+    
+    UIAlertController *ctrl = [UIAlertController alertControllerWithTitle:@"window" message:@"Hello world!" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"__%@__%@__", [UIApplication sharedApplication].keyWindow, self.view.window);
+    }];
+    
+    [ctrl addAction:cancel];
+    
+    [self presentViewController:ctrl animated:YES completion:nil];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication].keyWindow addSubview:self.showView];
+    });
 }
 
 /**
@@ -62,6 +89,15 @@
 
 - (void)windonLevel {
     NSLog(@"__%f__%f__%f__", UIWindowLevelNormal, UIWindowLevelStatusBar, UIWindowLevelAlert);
+}
+
+- (UIView *)showView {
+    if (!_showView) {
+        _showView = [[UIView alloc] init];
+        _showView.frame = CGRectMake(10, 10, 66, 44);
+        _showView.backgroundColor = [UIColor greenColor];
+    }
+    return _showView;
 }
 
 @end
