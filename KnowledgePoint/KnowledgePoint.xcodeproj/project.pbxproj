@@ -354,7 +354,7 @@
 		04F762371F97565600F4EF74 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		04F762391F97584600F4EF74 /* Tips */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips; sourceTree = "<group>"; };
 		04F7623F1F97590800F4EF74 /* 猴子测试UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "猴子测试UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04F762411F97590800F4EF74 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
+		04F762411F97590800F4EF74 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ____UITests.m; sourceTree = "<group>"; };
 		04F762431F97590800F4EF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CF77EBF8BBA6D3E16C052F3 /* libPods-UIWindow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIWindow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC2DEE33B1CF378585BC0A5 /* Pods-OCAndJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.release.xcconfig"; sourceTree = "<group>"; };
@@ -1684,7 +1684,6 @@
 				012837B820BBB4D300C37918 /* Sources */,
 				012837B920BBB4D300C37918 /* Frameworks */,
 				012837BA20BBB4D300C37918 /* Resources */,
-				C4A2662B6D37379633A6AD60 /* [CP] Embed Pods Frameworks */,
 				7DF9DD33A68AF9C6D96B79BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1910,7 +1909,6 @@
 				7199A2D72060999F0051812D /* Frameworks */,
 				7199A2D82060999F0051812D /* Resources */,
 				9B4834C64D8B4B041FCB8E91 /* [CP] Copy Pods Resources */,
-				3F5C9EF34974D3159BD81E74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2351,21 +2349,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3F5C9EF34974D3159BD81E74 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7DF9DD33A68AF9C6D96B79BA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2373,11 +2356,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-UICollectionView/Pods-UICollectionView-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2409,30 +2392,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4A2662B6D37379633A6AD60 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UICollectionView/Pods-UICollectionView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F006F6841F8B58130061F231 /* ShellScript */ = {
