@@ -367,11 +367,12 @@
 				TargetAttributes = {
 					045AEE321F8EF8C80076F7B8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = S2AND6YRQ7;
+						DevelopmentTeam = K2B7L95AWX;
 						ProvisioningStyle = Automatic;
 					};
 					712BCD98205A595400C181A7 = {
 						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = K2B7L95AWX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -643,11 +644,11 @@
 			baseConfigurationReference = FADAC660A3C21B23078724C7 /* Pods-TablePerformanceOptimization.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S2AND6YRQ7;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = TablePerformanceOptimization/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = onzxgway.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -657,11 +658,11 @@
 			baseConfigurationReference = 94CC737A961D1B64B21CA16A /* Pods-TablePerformanceOptimization.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S2AND6YRQ7;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = TablePerformanceOptimization/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = onzxgway.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -681,11 +682,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = GCD_Basic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "---.GCD-Basic";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -706,11 +708,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = GCD_Basic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "---.GCD-Basic";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

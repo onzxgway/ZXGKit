@@ -14,6 +14,12 @@
 		012837CB20BBB4D500C37918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012837C920BBB4D500C37918 /* LaunchScreen.storyboard */; };
 		012837CE20BBB4D500C37918 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 012837CD20BBB4D500C37918 /* main.m */; };
 		012837D420BBB5AE00C37918 /* ZXGCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012837D320BBB5AE00C37918 /* ZXGCollectionViewController.m */; };
+		012939A220E1D142005C78C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 012939A120E1D142005C78C2 /* AppDelegate.m */; };
+		012939A520E1D142005C78C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012939A420E1D142005C78C2 /* ViewController.m */; };
+		012939A820E1D142005C78C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012939A620E1D142005C78C2 /* Main.storyboard */; };
+		012939AA20E1D142005C78C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012939A920E1D142005C78C2 /* Assets.xcassets */; };
+		012939AD20E1D142005C78C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012939AB20E1D142005C78C2 /* LaunchScreen.storyboard */; };
+		012939B020E1D142005C78C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 012939AF20E1D142005C78C2 /* main.m */; };
 		01694D8B20D240F50029783F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01694D8A20D240F50029783F /* ViewController.m */; };
 		01694D9020D240F50029783F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01694D8F20D240F50029783F /* Assets.xcassets */; };
 		01694D9320D240F50029783F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01694D9120D240F50029783F /* LaunchScreen.storyboard */; };
@@ -245,6 +251,7 @@
 		71DDFFF520479100002B54D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DDFF9020479100002B54D8 /* main.m */; };
 		71DDFFF620479100002B54D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DDFF9120479100002B54D8 /* AppDelegate.m */; };
 		71DDFFF720479100002B54D8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71DDFF9320479100002B54D8 /* Info.plist */; };
+		760250AEF8906308E7121D7D /* libPods-UIStackView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F2F6569A4574B7980B731A /* libPods-UIStackView.a */; };
 		B48F219E6BDC6996EA9F08DE /* libPods-UITabBarViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A53E39D185D1C190B68ABEE6 /* libPods-UITabBarViewController.a */; };
 		B7A9DC347C3FCA51B9ADD755 /* libPods-UIWindow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF77EBF8BBA6D3E16C052F3 /* libPods-UIWindow.a */; };
 		DCD163AF875D87CA3CF83AA9 /* libPods-UICollectionView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E625465FA7C2AB52EFA3E9C8 /* libPods-UICollectionView.a */; };
@@ -314,6 +321,16 @@
 		012837CD20BBB4D500C37918 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		012837D220BBB5AE00C37918 /* ZXGCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGCollectionViewController.h; sourceTree = "<group>"; };
 		012837D320BBB5AE00C37918 /* ZXGCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGCollectionViewController.m; sourceTree = "<group>"; };
+		0129399E20E1D141005C78C2 /* UIStackView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIStackView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		012939A020E1D142005C78C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		012939A120E1D142005C78C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		012939A320E1D142005C78C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		012939A420E1D142005C78C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		012939A720E1D142005C78C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		012939A920E1D142005C78C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		012939AC20E1D142005C78C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		012939AE20E1D142005C78C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012939AF20E1D142005C78C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01694D8420D240F40029783F /* ScrollView 键盘回收.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScrollView 键盘回收.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01694D8920D240F50029783F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		01694D8A20D240F50029783F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -396,6 +413,7 @@
 		04F7623F1F97590800F4EF74 /* 猴子测试UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "猴子测试UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F762411F97590800F4EF74 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ____UITests.m; sourceTree = "<group>"; };
 		04F762431F97590800F4EF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23A77FE0337E4C136C6C51FD /* Pods-UIStackView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIStackView.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-UIStackView/Pods-UIStackView.debug.xcconfig"; sourceTree = "<group>"; };
 		2CF77EBF8BBA6D3E16C052F3 /* libPods-UIWindow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIWindow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4513D14D240B8433F63A349A /* Pods-UITabBarViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITabBarViewController.release.xcconfig"; path = "../Pods/Target Support Files/Pods-UITabBarViewController/Pods-UITabBarViewController.release.xcconfig"; sourceTree = "<group>"; };
 		4FC2DEE33B1CF378585BC0A5 /* Pods-OCAndJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.release.xcconfig"; sourceTree = "<group>"; };
@@ -766,6 +784,7 @@
 		71DDFFFE20479139002B54D8 /* UIStepper+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStepper+RACSignalSupport.m"; sourceTree = "<group>"; };
 		71DDFFFF20479139002B54D8 /* RACSubscriptionScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubscriptionScheduler.m; sourceTree = "<group>"; };
 		7F39074173B2AF681EF7CA88 /* Pods-UICollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionView.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-UICollectionView/Pods-UICollectionView.debug.xcconfig"; sourceTree = "<group>"; };
+		8BD2331C9BDE61D33CDB4739 /* Pods-UIStackView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIStackView.release.xcconfig"; path = "../Pods/Target Support Files/Pods-UIStackView/Pods-UIStackView.release.xcconfig"; sourceTree = "<group>"; };
 		A53E39D185D1C190B68ABEE6 /* libPods-UITabBarViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UITabBarViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD019E11DDC8478213A2CFD /* Pods-OCAndJS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.debug.xcconfig"; sourceTree = "<group>"; };
 		B6887028A43D4165BA6604B3 /* Pods-UICollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionView.release.xcconfig"; path = "../Pods/Target Support Files/Pods-UICollectionView/Pods-UICollectionView.release.xcconfig"; sourceTree = "<group>"; };
@@ -809,6 +828,7 @@
 		F0B7B7391F8B4EA300B89EFE /* ZXGConfuse.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGConfuse.pch; sourceTree = "<group>"; };
 		F0B7B7401F8B56B500B89EFE /* func.list */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = func.list; sourceTree = "<group>"; };
 		F4E75153E6E9AB01265BB7AD /* Pods-UITabBarViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITabBarViewController.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-UITabBarViewController/Pods-UITabBarViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		F4F2F6569A4574B7980B731A /* libPods-UIStackView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIStackView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -817,6 +837,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD163AF875D87CA3CF83AA9 /* libPods-UICollectionView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0129399B20E1D141005C78C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760250AEF8906308E7121D7D /* libPods-UIStackView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +1011,22 @@
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
+		0129399F20E1D141005C78C2 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				012939A020E1D142005C78C2 /* AppDelegate.h */,
+				012939A120E1D142005C78C2 /* AppDelegate.m */,
+				012939A320E1D142005C78C2 /* ViewController.h */,
+				012939A420E1D142005C78C2 /* ViewController.m */,
+				012939A620E1D142005C78C2 /* Main.storyboard */,
+				012939A920E1D142005C78C2 /* Assets.xcassets */,
+				012939AB20E1D142005C78C2 /* LaunchScreen.storyboard */,
+				012939AE20E1D142005C78C2 /* Info.plist */,
+				012939AF20E1D142005C78C2 /* main.m */,
+			);
+			path = UIStackView;
+			sourceTree = "<group>";
+		};
 		01694D8520D240F40029783F /* ScrollView 键盘回收 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1135,6 +1179,7 @@
 				2CF77EBF8BBA6D3E16C052F3 /* libPods-UIWindow.a */,
 				E625465FA7C2AB52EFA3E9C8 /* libPods-UICollectionView.a */,
 				A53E39D185D1C190B68ABEE6 /* libPods-UITabBarViewController.a */,
+				F4F2F6569A4574B7980B731A /* libPods-UIStackView.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1628,6 +1673,8 @@
 				B6887028A43D4165BA6604B3 /* Pods-UICollectionView.release.xcconfig */,
 				F4E75153E6E9AB01265BB7AD /* Pods-UITabBarViewController.debug.xcconfig */,
 				4513D14D240B8433F63A349A /* Pods-UITabBarViewController.release.xcconfig */,
+				23A77FE0337E4C136C6C51FD /* Pods-UIStackView.debug.xcconfig */,
+				8BD2331C9BDE61D33CDB4739 /* Pods-UIStackView.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1664,6 +1711,7 @@
 				012837BD20BBB4D300C37918 /* UICollectionView */,
 				01694D8520D240F40029783F /* ScrollView 键盘回收 */,
 				016CF6CC20E07A33007839DB /* UITabBarViewController */,
+				0129399F20E1D141005C78C2 /* UIStackView */,
 				F08E11E11F78DBD3005DE5F9 /* Products */,
 				EFF871DCB3FA620DE2960126 /* Pods */,
 				39248CB0E8D6D3D61B8936C0 /* Frameworks */,
@@ -1694,6 +1742,7 @@
 				012837BC20BBB4D300C37918 /* UICollectionView.app */,
 				01694D8420D240F40029783F /* ScrollView 键盘回收.app */,
 				016CF6CB20E07A33007839DB /* UITabBarViewController.app */,
+				0129399E20E1D141005C78C2 /* UIStackView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1787,6 +1836,26 @@
 			name = UICollectionView;
 			productName = UICollectionView;
 			productReference = 012837BC20BBB4D300C37918 /* UICollectionView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0129399D20E1D141005C78C2 /* UIStackView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 012939B320E1D142005C78C2 /* Build configuration list for PBXNativeTarget "UIStackView" */;
+			buildPhases = (
+				2DD40EC49F9512B6D35F95CF /* [CP] Check Pods Manifest.lock */,
+				0129399A20E1D141005C78C2 /* Sources */,
+				0129399B20E1D141005C78C2 /* Frameworks */,
+				0129399C20E1D141005C78C2 /* Resources */,
+				597A7F063B63F255A92F4E06 /* [CP] Embed Pods Frameworks */,
+				9C7CDD6A15F57C2CDD8C4F47 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIStackView;
+			productName = UIStackView;
+			productReference = 0129399E20E1D141005C78C2 /* UIStackView.app */;
 			productType = "com.apple.product-type.application";
 		};
 		01694D8320D240F40029783F /* ScrollView 键盘回收 */ = {
@@ -2153,6 +2222,11 @@
 						DevelopmentTeam = K2B7L95AWX;
 						ProvisioningStyle = Automatic;
 					};
+					0129399D20E1D141005C78C2 = {
+						CreatedOnToolsVersion = 9.0.1;
+						DevelopmentTeam = K2B7L95AWX;
+						ProvisioningStyle = Automatic;
+					};
 					01694D8320D240F40029783F = {
 						CreatedOnToolsVersion = 9.0.1;
 						DevelopmentTeam = K2B7L95AWX;
@@ -2276,6 +2350,7 @@
 				012837BB20BBB4D300C37918 /* UICollectionView */,
 				01694D8320D240F40029783F /* ScrollView 键盘回收 */,
 				016CF6CA20E07A33007839DB /* UITabBarViewController */,
+				0129399D20E1D141005C78C2 /* UIStackView */,
 			);
 		};
 /* End PBXProject section */
@@ -2288,6 +2363,16 @@
 				012837CB20BBB4D500C37918 /* LaunchScreen.storyboard in Resources */,
 				012837C820BBB4D400C37918 /* Assets.xcassets in Resources */,
 				012837C620BBB4D400C37918 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0129399C20E1D141005C78C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012939AD20E1D142005C78C2 /* LaunchScreen.storyboard in Resources */,
+				012939AA20E1D142005C78C2 /* Assets.xcassets in Resources */,
+				012939A820E1D142005C78C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2491,6 +2576,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2DD40EC49F9512B6D35F95CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIStackView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3F5C9EF34974D3159BD81E74 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2504,6 +2607,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		597A7F063B63F255A92F4E06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIStackView/Pods-UIStackView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7DF9DD33A68AF9C6D96B79BA /* [CP] Copy Pods Resources */ = {
@@ -2558,6 +2676,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C7CDD6A15F57C2CDD8C4F47 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-UIStackView/Pods-UIStackView-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIStackView/Pods-UIStackView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C4A2662B6D37379633A6AD60 /* [CP] Embed Pods Frameworks */ = {
@@ -2650,6 +2786,16 @@
 				012837C320BBB4D400C37918 /* ViewController.m in Sources */,
 				012837CE20BBB4D500C37918 /* main.m in Sources */,
 				012837C020BBB4D400C37918 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0129399A20E1D141005C78C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012939A520E1D142005C78C2 /* ViewController.m in Sources */,
+				012939B020E1D142005C78C2 /* main.m in Sources */,
+				012939A220E1D142005C78C2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3018,6 +3164,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		012939A620E1D142005C78C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				012939A720E1D142005C78C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		012939AB20E1D142005C78C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				012939AC20E1D142005C78C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		01694D9120D240F50029783F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3305,6 +3467,58 @@
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = UICollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		012939B120E1D142005C78C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23A77FE0337E4C136C6C51FD /* Pods-UIStackView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = UIStackView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		012939B220E1D142005C78C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD2331C9BDE61D33CDB4739 /* Pods-UIStackView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = UIStackView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
@@ -4239,6 +4453,15 @@
 			buildConfigurations = (
 				012837CF20BBB4D500C37918 /* Debug */,
 				012837D020BBB4D500C37918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		012939B320E1D142005C78C2 /* Build configuration list for PBXNativeTarget "UIStackView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				012939B120E1D142005C78C2 /* Debug */,
+				012939B220E1D142005C78C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

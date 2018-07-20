@@ -14,6 +14,7 @@
 		0128E38D20A024DD00B456C9 /* ZXGArrowTopLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0128E38C20A024DD00B456C9 /* ZXGArrowTopLayer.m */; };
 		012B31EF209C04B800D84B0A /* ZXGPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B31EE209C04B800D84B0A /* ZXGPictureView.m */; };
 		015BE0B621EF66A968F3253B /* libPods-NetEase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388C7776F65E66391123F2DD /* libPods-NetEase.a */; };
+		0187A14C20F369E8004A5F9D /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0187A14B20F369E8004A5F9D /* LearnViewController.m */; };
 		01B3F804207F037200F64113 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3F803207F037200F64113 /* AppDelegate.m */; };
 		01B3F80C207F037200F64113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B3F80B207F037200F64113 /* Assets.xcassets */; };
 		01B3F80F207F037200F64113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3F80D207F037200F64113 /* LaunchScreen.storyboard */; };
@@ -194,6 +195,8 @@
 		0128E38C20A024DD00B456C9 /* ZXGArrowTopLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGArrowTopLayer.m; sourceTree = "<group>"; };
 		012B31ED209C04B800D84B0A /* ZXGPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPictureView.h; sourceTree = "<group>"; };
 		012B31EE209C04B800D84B0A /* ZXGPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPictureView.m; sourceTree = "<group>"; };
+		0187A14A20F369E8004A5F9D /* LearnViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnViewController.h; sourceTree = "<group>"; };
+		0187A14B20F369E8004A5F9D /* LearnViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnViewController.m; sourceTree = "<group>"; };
 		01B3F800207F037200F64113 /* Moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3F802207F037200F64113 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01B3F803207F037200F64113 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -634,6 +637,8 @@
 		04234DA81F8BA1AC001133ED = {
 			isa = PBXGroup;
 			children = (
+				0187A14A20F369E8004A5F9D /* LearnViewController.h */,
+				0187A14B20F369E8004A5F9D /* LearnViewController.m */,
 				04234DB31F8BA1AC001133ED /* ProjectDemo */,
 				04234E561F8BA622001133ED /* NetEase */,
 				04234E9E1F8BA98C001133ED /* JDShopCart */,
@@ -1455,7 +1460,6 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-JDShopCart/Pods-JDShopCart-resources.sh",
 				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1475,7 +1479,6 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Moments/Pods-Moments-resources.sh",
 				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1510,7 +1513,6 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBAutoCal/Pods-SinaWBAutoCal-resources.sh",
 				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1680,7 +1682,6 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-NetEase/Pods-NetEase-resources.sh",
 				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1733,7 +1734,6 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo-resources.sh",
 				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1753,7 +1753,6 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SinaWBFrameModel/Pods-SinaWBFrameModel-resources.sh",
 				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1792,6 +1791,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04234DBC1F8BA1AC001133ED /* TableViewController.m in Sources */,
+				0187A14C20F369E8004A5F9D /* LearnViewController.m in Sources */,
 				04234DB91F8BA1AC001133ED /* AppDelegate.m in Sources */,
 				04234DB61F8BA1AC001133ED /* main.m in Sources */,
 			);

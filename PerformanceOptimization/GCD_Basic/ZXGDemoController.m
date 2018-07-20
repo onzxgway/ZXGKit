@@ -488,7 +488,7 @@ _Pragma("clang diagnostic pop") \
 - (void)dispatch_semaphore {
     NSLog(@"__BEGIN:%@__", [NSThread currentThread]);
 
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
     dispatch_async(queue, ^{
