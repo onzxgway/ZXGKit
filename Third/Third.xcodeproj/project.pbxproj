@@ -1097,11 +1097,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0187A14620F36826004A5F9D /* Build configuration list for PBXNativeTarget "LearnDTCoreText" */;
 			buildPhases = (
-				67E4BDB4673060CDDD386B7F /* [CP] Check Pods Manifest.lock */,
+				1AFDC3C202FB4FA6ACF16524 /* [CP] Check Pods Manifest.lock */,
 				0187A12D20F36825004A5F9D /* Sources */,
 				0187A12E20F36825004A5F9D /* Frameworks */,
 				0187A12F20F36825004A5F9D /* Resources */,
-				271709AF5306C6D52C279342 /* [CP] Embed Pods Frameworks */,
 				29B09EB82786CF4849545818 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1456,19 +1455,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		271709AF5306C6D52C279342 /* [CP] Embed Pods Frameworks */ = {
+		1AFDC3C202FB4FA6ACF16524 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnDTCoreText-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LearnDTCoreText/Pods-LearnDTCoreText-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		29B09EB82786CF4849545818 /* [CP] Copy Pods Resources */ = {
@@ -1478,11 +1480,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-LearnDTCoreText/Pods-LearnDTCoreText-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

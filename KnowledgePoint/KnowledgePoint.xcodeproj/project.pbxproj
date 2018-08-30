@@ -1822,11 +1822,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 012837D120BBB4D500C37918 /* Build configuration list for PBXNativeTarget "UICollectionView" */;
 			buildPhases = (
-				86C7785A33B31B6398DEE2B7 /* [CP] Check Pods Manifest.lock */,
+				A987CB456325B0EAC92E1CC3 /* [CP] Check Pods Manifest.lock */,
 				012837B820BBB4D300C37918 /* Sources */,
 				012837B920BBB4D300C37918 /* Frameworks */,
 				012837BA20BBB4D300C37918 /* Resources */,
-				7DF9DD33A68AF9C6D96B79BA /* [CP] Copy Pods Resources */,
+				E592185BE23016FFDC568299 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1845,7 +1845,6 @@
 				0129399A20E1D141005C78C2 /* Sources */,
 				0129399B20E1D141005C78C2 /* Frameworks */,
 				0129399C20E1D141005C78C2 /* Resources */,
-				597A7F063B63F255A92F4E06 /* [CP] Embed Pods Frameworks */,
 				9C7CDD6A15F57C2CDD8C4F47 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1882,7 +1881,6 @@
 				016CF6C720E07A33007839DB /* Sources */,
 				016CF6C820E07A33007839DB /* Frameworks */,
 				016CF6C920E07A33007839DB /* Resources */,
-				FEE5FF195C2F462BD647CD37 /* [CP] Embed Pods Frameworks */,
 				FA5D375DBC09996DB84470BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -2090,7 +2088,7 @@
 				7199A2D62060999F0051812D /* Sources */,
 				7199A2D72060999F0051812D /* Frameworks */,
 				7199A2D82060999F0051812D /* Resources */,
-				9B4834C64D8B4B041FCB8E91 /* [CP] Copy Pods Resources */,
+				E352AC90927E510FB16C7F7E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2592,36 +2590,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3F5C9EF34974D3159BD81E74 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		597A7F063B63F255A92F4E06 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIStackView/Pods-UIStackView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9C7CDD6A15F57C2CDD8C4F47 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2629,30 +2597,69 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-UIStackView/Pods-UIStackView-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIStackView/Pods-UIStackView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C4A2662B6D37379633A6AD60 /* [CP] Embed Pods Frameworks */ = {
+		A987CB456325B0EAC92E1CC3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UICollectionView-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UICollectionView/Pods-UICollectionView-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E352AC90927E510FB16C7F7E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UIWindow/Pods-UIWindow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E592185BE23016FFDC568299 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-UICollectionView/Pods-UICollectionView-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UICollectionView/Pods-UICollectionView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F006F6841F8B58130061F231 /* ShellScript */ = {
@@ -2675,30 +2682,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-UITabBarViewController/Pods-UITabBarViewController-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/ZXGCommontKit/BaseClassResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UITabBarViewController/Pods-UITabBarViewController-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FEE5FF195C2F462BD647CD37 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-UITabBarViewController/Pods-UITabBarViewController-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF24E7D1A5F3886C41143FEA /* [CP] Check Pods Manifest.lock */ = {
