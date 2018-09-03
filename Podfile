@@ -22,7 +22,7 @@ KnowledgePointDemoArray.each do |t|
 end
 
 # target数组 如果有新的target直接加入该数组
-KnowledgePointArray = ['UIWindow', 'UITabBarViewController']
+KnowledgePointArray = ['UIWindow', 'UITabBarViewController', 'UIStackView']
 KnowledgePointArray.each do |t|
     target t do
         project 'KnowledgePoint/KnowledgePoint.project'
@@ -31,12 +31,13 @@ KnowledgePointArray.each do |t|
 end
 
 # Third.project
-thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit', 'LearnMJRefresh', 'LearnMJExtension', 'LearnMasonry']
+thirdArray = ['SDWebimage', 'Third', 'LearnFMDB', 'LearnYYKit', 'LearnMJRefresh', 'LearnMJExtension', 'LearnMasonry', 'LearnDTCoreText']
 thirdArray.each do |t|
     target t do
     	project 'Third/Third.project'
         #pod 'FMDB'
         pod 'MJExtension'
+        pod 'DTCoreText'
         pods
     end
 end
@@ -69,7 +70,7 @@ ProjectDemoArray.each do |t|
         pod 'SDWebImage'
         pod 'SVProgressHUD'
         pod 'MBProgressHUD'
-        pod 'MJRefresh'
+        #pod 'MJRefresh'
     end
 end
 

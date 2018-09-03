@@ -16,7 +16,7 @@ class MainTabBarController: UITabBarController {
     // MARK: - lazy load
     lazy var customTabBar : UIImageView = {
         let img = UIImageView()
-        img.frame = CGRect(x: 0, y: SCREEN_HEIGHT - kCustomTabBar, width: SCREEN_WIDTH, height: kCustomTabBar)
+        img.frame = CGRect(x: 0, y: KSCREEN_HEIGHT - kCustomTabBar, width: KSCREEN_WIDTH, height: kCustomTabBar)
         img.image = UIImage(named: "tabbar_bg")
         img.isUserInteractionEnabled = true
         return img
@@ -61,7 +61,7 @@ extension MainTabBarController {
         // 自定义tabBar
         view.addSubview(customTabBar)
         
-        let w = SCREEN_WIDTH * 0.2
+        let w = KSCREEN_WIDTH * 0.2
         // tabBar上面的item
         for index in 0...(normalItemImages.count - 1) {
             let btn = UIButton(type: .custom)
