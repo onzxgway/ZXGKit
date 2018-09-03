@@ -8,12 +8,13 @@
 
 import UIKit
 
-class FindController: UIViewController {
+class FindController: BaseViewController {
 
+    // MARK: - LiftCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.red
+        
+        createView()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "ClickMe", style: .plain, target: self, action: #selector(rightClicked))
     }
@@ -21,5 +22,20 @@ class FindController: UIViewController {
     @objc func rightClicked() {
         navigationController?.pushViewController(PlayController(), animated: true)
     }
+    
+}
 
+
+extension FindController {
+    
+    func createView() -> Void {
+        navigationItem.title = "发现";
+        
+        let controllers = [RecommendController(), CategoryController(), BroadcastController(), LiveController(), VipController()];
+        
+        for controller in controllers {
+            self.addChildViewController(controller)
+        }
+    }
+    
 }
