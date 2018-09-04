@@ -23,6 +23,7 @@
 		017EBA8A21017F1300D46E97 /* FatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017EBA8921017F1300D46E97 /* FatherController.swift */; };
 		017EBA8C2101821700D46E97 /* SonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017EBA8B2101821700D46E97 /* SonController.swift */; };
 		0415A0FB213D31C000D8461D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415A0FA213D31C000D8461D /* Common.swift */; };
+		042D6952213D68900056CD93 /* PageCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D6951213D68900056CD93 /* PageCategoryView.swift */; };
 		0475AF35213D399200DEBFC1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF34213D399200DEBFC1 /* BaseViewController.swift */; };
 		0475AF3F213D3B9D00DEBFC1 /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF38213D3B9D00DEBFC1 /* FindController.swift */; };
 		0475AF51213D3DB600DEBFC1 /* RecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF4E213D3DB600DEBFC1 /* RecommendController.swift */; };
@@ -55,6 +56,7 @@
 		017EBA8921017F1300D46E97 /* FatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatherController.swift; sourceTree = "<group>"; };
 		017EBA8B2101821700D46E97 /* SonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonController.swift; sourceTree = "<group>"; };
 		0415A0FA213D31C000D8461D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		042D6951213D68900056CD93 /* PageCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCategoryView.swift; sourceTree = "<group>"; };
 		0475AF34213D399200DEBFC1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0475AF38213D3B9D00DEBFC1 /* FindController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindController.swift; sourceTree = "<group>"; };
 		0475AF4E213D3DB600DEBFC1 /* RecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				0475AF38213D3B9D00DEBFC1 /* FindController.swift */,
 				0475AF5A213D414C00DEBFC1 /* PageView.swift */,
+				042D6951213D68900056CD93 /* PageCategoryView.swift */,
 				0475AF3C213D3B9D00DEBFC1 /* 发现 */,
 				0475AF3A213D3B9D00DEBFC1 /* 分类 */,
 				0475AF3B213D3B9D00DEBFC1 /* 广播 */,
@@ -600,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0135D3B820DE253B008E83D9 /* CustomNavigationController.swift in Sources */,
+				042D6952213D68900056CD93 /* PageCategoryView.swift in Sources */,
 				0475AF5B213D414C00DEBFC1 /* PageView.swift in Sources */,
 				0135D3B020DDFCA1008E83D9 /* AppDelegate.swift in Sources */,
 				0135D3D120DE2851008E83D9 /* DownloadController.swift in Sources */,
