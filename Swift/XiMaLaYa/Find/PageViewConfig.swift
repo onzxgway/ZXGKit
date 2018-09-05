@@ -25,4 +25,9 @@ class PageViewConfig {
     public var showIndicatorLine: Bool = true
     public var indicatorLineColor: UIColor = UIColor.blue
     public var indicatorLineHeight: CGFloat = 2
+    public var indicatorLineWidth: CGFloat = 22
+    
+    public var categoryViewScrollEnable = true
+    
+    
 }

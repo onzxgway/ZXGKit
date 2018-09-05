@@ -27,7 +27,8 @@ class PageCategoryView: UIView {
     
     private lazy var indicatorLine: UIView = {
         let line = UIView()
-        
+        line.isHidden = !pageViewConfig.showIndicatorLine
+        line.backgroundColor = pageViewConfig.indicatorLineColor
         return line
     }()
     
@@ -72,7 +73,7 @@ extension PageCategoryView {
             lab.textColor = index == selectedIndex ? pageViewConfig.titleSelectedColor : pageViewConfig.titleColor
             lab.font = index == selectedIndex ? pageViewConfig.titleSelectedFont : pageViewConfig.titleFont
             
-            addSubview(lab)
+            scrollView.addSubview(lab)
             categoryLabels.append(lab)
             
         }
@@ -91,6 +92,7 @@ extension PageCategoryView {
         
         layoutLables()
         
+        layoutIndicatorLine()
     }
     
     /**
@@ -99,27 +101,51 @@ extension PageCategoryView {
      */
     private func layoutLables() {
         
-        var x = pageViewConfig.titleMargin * 0.5
-        let y: CGFloat = 0, h = bounds.size.height
+        var x: CGFloat = 0
+        let y: CGFloat = 0, h = scrollView.bounds.size.height, w = scrollView.bounds.width / CGFloat(categoryLabels.count)
         
         for (index, lab) in categoryLabels.enumerated() {
             var labF = lab.frame
-            labF.origin.x = x
-            labF.origin.y = y
-            labF.size.height = h
-            let size = lab.sizeThatFits(CGSize(width: 0, height: 0))
-            labF.size.width = size.width + pageViewConfig.titleMargin
+            
+            if pageViewConfig.categoryViewScrollEnable {
+                if index == 0 {
+                    x = pageViewConfig.titleMargin * 0.5
+                }
+                labF.origin.x = x
+                labF.origin.y = y
+                labF.size.height = h
+                let size = lab.sizeThatFits(CGSize(width: 0, height: 0))
+                labF.size.width = size.width + pageViewConfig.titleMargin
+                
+                x += labF.size.width
+            }
+            else {
+                labF.origin.x = CGFloat(index) * lab.frame.width
+                labF.origin.y = y
+                labF.size.width = w
+                labF.size.height = h
+            }
+            
             lab.frame = labF
-            
-            x += lab.frame.width //+  pageViewConfig.titleMargin
-            
+        }
+        
+        if pageViewConfig.categoryViewScrollEnable {
+            guard let lab = categoryLabels.last else { return }
+            let w = lab.frame.maxX + pageViewConfig.titleMargin * 0.5
+            scrollView.contentSize.width = w
         }
         
     }
     
     private func layoutIndicatorLine() {
         
+        let lab = categoryLabels[selectedIndex]
+        let x: CGFloat = lab.frame.origin.x + (lab.frame.size.width - pageViewConfig.indicatorLineWidth) * 0.5
+        let y: CGFloat = bounds.size.height - pageViewConfig.indicatorLineHeight
+        let w: CGFloat = pageViewConfig.indicatorLineWidth
+        let h: CGFloat = pageViewConfig.indicatorLineHeight
         
+        indicatorLine.frame = CGRect(x: x, y: y, width: w, height: h)
         
     }
 }
