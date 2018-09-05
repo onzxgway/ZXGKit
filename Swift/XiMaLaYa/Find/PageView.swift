@@ -17,7 +17,7 @@ import UIKit
 class PageView: UIView {
 
     // 1.类或结构体 实例
-    lazy var categoryTitleScrollview = UIScrollView()
+    lazy var pageCategoryView = PageCategoryView(frame: .zero, config: pageViewConfig, titles: titles)
     
     // 2.闭包
     lazy var dict:[String: String] = {
@@ -25,4 +25,41 @@ class PageView: UIView {
         dict["key"] = "test"
         return dict
     }()
+    
+    private var pageViewConfig: PageViewConfig
+    private var titles: [String]
+    
+    public init(frame: CGRect, config: PageViewConfig, titles: [String]) {
+        
+        pageViewConfig = config
+        self.titles = titles
+        
+        super.init(frame: frame)
+        
+        backgroundColor = UIColor.blue
+        clipsToBounds = true
+        
+        createView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
+
+extension PageView {
+    private func createView() {
+        addSubview(pageCategoryView)
+        
+        pageCategoryView.frame = CGRect(x: 0, y: 0, width: bounds.size.width, height: pageViewConfig.categoryViewHeight)
+        
+        
+    }
+}
+
+
+
+
+
+

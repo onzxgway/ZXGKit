@@ -11,7 +11,7 @@ import UIKit
 class PageViewConfig {
     
     // Category Label
-    public var categoryViewHeight: CGFloat = 32.0
+    public var categoryViewHeight: CGFloat = 44.0
     public var categoryViewBackgroudColor: UIColor = UIColor.white
     
     public var titleColor: UIColor = UIColor.black
