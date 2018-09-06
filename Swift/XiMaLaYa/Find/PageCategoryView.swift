@@ -23,6 +23,7 @@ class PageCategoryView: UIView {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.backgroundColor = UIColor.white
+        scrollView.delegate = self
         return scrollView
     }()
     
@@ -86,7 +87,7 @@ extension PageCategoryView {
         }
         
         // 2.
-        addSubview(indicatorLine)
+        scrollView.addSubview(indicatorLine)
         
     }
 }
@@ -148,6 +149,7 @@ extension PageCategoryView {
         
         let lab = categoryLabels[selectedIndex]
         let x: CGFloat = lab.frame.origin.x + (lab.frame.size.width - pageViewConfig.indicatorLineWidth) * 0.5
+//        let x: CGFloat = lab.frame.midX
         let y: CGFloat = bounds.size.height - pageViewConfig.indicatorLineHeight
         let w: CGFloat = pageViewConfig.indicatorLineWidth
         let h: CGFloat = pageViewConfig.indicatorLineHeight
@@ -161,12 +163,14 @@ extension PageCategoryView {
 extension PageCategoryView {
     
     @objc private func labTap(ges: UITapGestureRecognizer) {
-       guard let tapTag = ges.view?.tag else { return }
+       guard let index = ges.view?.tag else { return }
         
-        setupLabel(atIndex: tapTag)
+        changeLabelStyle(atIndex: index)
+        changeIndicator(toIndex: index)
+        scrollTo(index: index)
     }
     
-    private func setupLabel(atIndex: Int) {
+    private func changeLabelStyle(atIndex: Int) {
         
         // 切换颜色和字体
         let lab = categoryLabels[atIndex]
@@ -190,6 +194,80 @@ extension PageCategoryView {
             selectedLab = lab
         }
         
+        
+    }
+    
+    private func changeIndicator(toIndex: Int) {
+        
+        let lab = categoryLabels[toIndex]
+        
+        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            
+            var rect = self.indicatorLine.frame
+            rect.origin.x = lab.frame.minX + (lab.frame.size.width - rect.size.width) * 0.5
+            self.indicatorLine.frame = rect
+            
+        }, completion: nil)
+        
+        
+    }
+    
+    private func scrollTo(index: Int) {
+
+        let lab = categoryLabels[index]
+        let rect = self.convert(lab.frame, from: scrollView)
+        
+        if index == 0 || index == categoryLabels.count - 1 {
+            
+            if rect.minX < 0 {
+                
+                let point = CGPoint(x: 0, y: scrollView.contentOffset.y)
+                scrollView.setContentOffset(point, animated: true)
+                
+                return
+            }
+            
+            if rect.maxX > bounds.size.width {
+                
+                let margin = rect.maxX - bounds.size.width
+                let x = scrollView.contentOffset.x + margin
+                let point = CGPoint(x: x, y: scrollView.contentOffset.y)
+                scrollView.setContentOffset(point, animated: true)
+            }
+            
+            return
+        }
+        
+        
+        let prelab = categoryLabels[index - 1]
+        
+        let nextlab = categoryLabels[index + 1]
+        
+        
+        if (rect.minX < prelab.frame.size.width && rect.minX >= 0) || rect.minX < 0 {
+            let leftMargin = prelab.frame.size.width - rect.minX
+            let x = scrollView.contentOffset.x - leftMargin
+            let point = CGPoint(x: x, y: scrollView.contentOffset.y)
+            scrollView.setContentOffset(point, animated: true)
+            return
+        }
+        
+        let rightMargin = bounds.size.width - rect.maxX
+        if (rightMargin < nextlab.frame.size.width && rightMargin >= 0) || rightMargin < 0 {
+            let margin = nextlab.frame.size.width - rightMargin
+            let x = scrollView.contentOffset.x + margin
+            let point = CGPoint(x: x, y: scrollView.contentOffset.y)
+            scrollView.setContentOffset(point, animated: true)
+        }
+        
+        
+    }
+    
+}
+
+extension PageCategoryView: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
     }
     
