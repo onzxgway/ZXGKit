@@ -103,6 +103,7 @@ extension MainTabBarController {
     
     func navigationControllerWith(_ vc:UIViewController) -> CustomNavigationController {
         let navCtrl = CustomNavigationController(rootViewController: vc)
+        vc.automaticallyAdjustsScrollViewInsets = false
         navCtrl.delegate = self
         return navCtrl
     }

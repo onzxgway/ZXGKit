@@ -14,6 +14,7 @@ class PageCategoryView: UIView {
     var titles: [String]
     var selectedIndex: Int = 0
     var pageViewConfig: PageViewConfig
+    private var selectedLab: UILabel?
     
     private lazy var categoryLabels = [UILabel]()
     
@@ -72,9 +73,15 @@ extension PageCategoryView {
             lab.textAlignment = .center
             lab.textColor = index == selectedIndex ? pageViewConfig.titleSelectedColor : pageViewConfig.titleColor
             lab.font = index == selectedIndex ? pageViewConfig.titleSelectedFont : pageViewConfig.titleFont
+            if index == selectedIndex {
+                selectedLab = lab
+            }
             
             scrollView.addSubview(lab)
             categoryLabels.append(lab)
+            
+            lab.isUserInteractionEnabled = true
+            lab.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(labTap(ges:))))
             
         }
         
@@ -150,5 +157,41 @@ extension PageCategoryView {
     }
 }
 
-
+// MARK: - Eevet
+extension PageCategoryView {
+    
+    @objc private func labTap(ges: UITapGestureRecognizer) {
+       guard let tapTag = ges.view?.tag else { return }
+        
+        setupLabel(atIndex: tapTag)
+    }
+    
+    private func setupLabel(atIndex: Int) {
+        
+        // 切换颜色和字体
+        let lab = categoryLabels[atIndex]
+        
+        if let selectedLabel = selectedLab {
+            if selectedLabel != lab {
+                
+                selectedLabel.textColor = pageViewConfig.titleColor
+                selectedLabel.font = pageViewConfig.titleFont
+                
+                lab.textColor = pageViewConfig.titleSelectedColor
+                lab.font = pageViewConfig.titleSelectedFont
+                
+                selectedLab = lab
+            }
+        }
+        else {
+            lab.textColor = pageViewConfig.titleSelectedColor
+            lab.font = pageViewConfig.titleSelectedFont
+            
+            selectedLab = lab
+        }
+        
+        
+    }
+    
+}
 
