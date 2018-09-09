@@ -33,6 +33,7 @@
 		0475AF57213D3E1100DEBFC1 /* LiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF56213D3E1100DEBFC1 /* LiveController.swift */; };
 		0475AF59213D3E1B00DEBFC1 /* VipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF58213D3E1B00DEBFC1 /* VipController.swift */; };
 		0475AF5B213D414C00DEBFC1 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF5A213D414C00DEBFC1 /* PageView.swift */; };
+		04D98E582143A87E000E24C1 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D98E572143A87E000E24C1 /* PageContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		0475AF56213D3E1100DEBFC1 /* LiveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveController.swift; sourceTree = "<group>"; };
 		0475AF58213D3E1B00DEBFC1 /* VipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipController.swift; sourceTree = "<group>"; };
 		0475AF5A213D414C00DEBFC1 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		04D98E572143A87E000E24C1 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				0475AF5A213D414C00DEBFC1 /* PageView.swift */,
 				0466EDF8213FA3EA00CB7589 /* PageViewConfig.swift */,
 				042D6951213D68900056CD93 /* PageCategoryView.swift */,
+				04D98E572143A87E000E24C1 /* PageContentView.swift */,
 				0475AF3C213D3B9D00DEBFC1 /* 发现 */,
 				0475AF3A213D3B9D00DEBFC1 /* 分类 */,
 				0475AF3B213D3B9D00DEBFC1 /* 广播 */,
@@ -612,6 +615,7 @@
 				0135D3D120DE2851008E83D9 /* DownloadController.swift in Sources */,
 				0475AF57213D3E1100DEBFC1 /* LiveController.swift in Sources */,
 				0135D3D520DE2874008E83D9 /* MineController.swift in Sources */,
+				04D98E582143A87E000E24C1 /* PageContentView.swift in Sources */,
 				0415A0FB213D31C000D8461D /* Common.swift in Sources */,
 				0475AF53213D3DE700DEBFC1 /* CategoryController.swift in Sources */,
 				0466EDF9213FA3EA00CB7589 /* PageViewConfig.swift in Sources */,
