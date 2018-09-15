@@ -37,7 +37,7 @@ extension FindController {
             self.addChildViewController(controller)
         }
         
-        let page = PageView(frame: CGRect(x: 10, y: 80, width: 230, height: 396), config:PageViewConfig(), titles: ["dafda", "答", "dfada","da", "答复的", "dfada","dafda", "答复的", "dfada"], viewControllers: controllers)
+        let page = PageView(frame: CGRect(x: 10, y: 80, width: 230, height: 396), config:PageViewConfig(), titles: ["dafda", "addd答", "dfada","da", "答复的"], viewControllers: controllers)
         view.addSubview(page)
     }
     
