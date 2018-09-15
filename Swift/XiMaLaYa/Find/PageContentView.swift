@@ -47,9 +47,7 @@ class PageContentView: UIView {
 
 extension PageContentView {
     private func createView() {
-        
         addSubview(scrollView)
-    
     }
 }
 

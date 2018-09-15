@@ -14,6 +14,8 @@ class FatherController: UIViewController {
         super.viewDidLoad()
 
         setBackButton()
+        
+        view.backgroundColor = UIColor.white
     }
 
     func setBackButton() {

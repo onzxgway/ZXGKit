@@ -14,6 +14,8 @@ class SonController: FatherController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.red
+        
+        
     }
 
     override func back() {
