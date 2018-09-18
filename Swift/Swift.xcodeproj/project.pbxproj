@@ -24,6 +24,7 @@
 		017EBA8C2101821700D46E97 /* SonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017EBA8B2101821700D46E97 /* SonController.swift */; };
 		0415A0FB213D31C000D8461D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415A0FA213D31C000D8461D /* Common.swift */; };
 		042D6952213D68900056CD93 /* PageCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D6951213D68900056CD93 /* PageCategoryView.swift */; };
+		044AA2CF2150899000801CA6 /* OOOrFunctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AA2CE2150899000801CA6 /* OOOrFunctionController.swift */; };
 		0466EDF9213FA3EA00CB7589 /* PageViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466EDF8213FA3EA00CB7589 /* PageViewConfig.swift */; };
 		0475AF35213D399200DEBFC1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF34213D399200DEBFC1 /* BaseViewController.swift */; };
 		0475AF3F213D3B9D00DEBFC1 /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF38213D3B9D00DEBFC1 /* FindController.swift */; };
@@ -60,6 +61,7 @@
 		017EBA8B2101821700D46E97 /* SonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonController.swift; sourceTree = "<group>"; };
 		0415A0FA213D31C000D8461D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		042D6951213D68900056CD93 /* PageCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCategoryView.swift; sourceTree = "<group>"; };
+		044AA2CE2150899000801CA6 /* OOOrFunctionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOOrFunctionController.swift; sourceTree = "<group>"; };
 		0466EDF8213FA3EA00CB7589 /* PageViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewConfig.swift; sourceTree = "<group>"; };
 		0475AF34213D399200DEBFC1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0475AF38213D3B9D00DEBFC1 /* FindController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindController.swift; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				049DBD59214B67E1007A1826 /* ClassAndStructController.swift */,
+				044AA2CE2150899000801CA6 /* OOOrFunctionController.swift */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 					};
 					016AE39B2100271200A0D2D4 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -645,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044AA2CF2150899000801CA6 /* OOOrFunctionController.swift in Sources */,
 				017EBA8A21017F1300D46E97 /* FatherController.swift in Sources */,
 				016AE3A12100271300A0D2D4 /* ViewController.swift in Sources */,
 				017EBA8C2101821700D46E97 /* SonController.swift in Sources */,
@@ -848,6 +853,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = SwiftTour/Info.plist;
@@ -855,6 +861,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -864,6 +873,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = SwiftTour/Info.plist;
@@ -871,6 +881,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

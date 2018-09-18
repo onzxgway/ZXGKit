@@ -15,6 +15,9 @@ class ViewController: UIViewController {
         let arr = [
             [
                 "类（class）和结构体（struct）有什么区别？" : "ClassAndStructController"
+            ],
+            [
+                "Swift是面向对象还是函数式的编程语言？" : "OOOrFunctionController"
             ]
         ]
 
@@ -40,7 +43,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         let dic = dataSources[indexPath.row]
-        cell.textLabel?.text = Array(dic.keys)[indexPath.row]
+        cell.textLabel?.text = Array(dic.keys)[0]
         cell.textLabel?.font = UIFont.systemFont(ofSize: 12)
         return cell
     }
@@ -52,8 +55,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dic = dataSources[indexPath.row]
         
-        let cla: AnyClass = NSClassFromString(dic.values.first ?? "") ?? ClassAndStructController.self
+        let clas: AnyClass
+        // 由字符串转为类型的时候  如果类型是自定义的 需要在类型字符串前边加上你的项目的名字！
+        if let cla = NSClassFromString("SwiftTour." + (dic[Array(dic.keys)[0]] ?? "")) {
+            clas = cla
+        }
+        else {
+            clas = ClassAndStructController.self
+        }
         
-        self.navigationController?.pushViewController(cla.alloc() as! UIViewController, animated: true)
+//        let cla: AnyClass = NSClassFromString(dic.values.first ?? "") ?? ClassAndStructController.self
+        
+        self.navigationController?.pushViewController(clas.alloc() as! UIViewController, animated: true)
     }
 }
