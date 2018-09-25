@@ -10,6 +10,8 @@ import UIKit
 
 class FindController: BaseViewController {
 
+    var from: String?
+    
     // MARK: - LiftCycle
     override func viewDidLoad() {
         super.viewDidLoad()

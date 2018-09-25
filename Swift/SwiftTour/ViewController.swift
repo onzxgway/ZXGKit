@@ -18,6 +18,9 @@ class ViewController: UIViewController {
             ],
             [
                 "Swift是面向对象还是函数式的编程语言？" : "OOOrFunctionController"
+            ],
+            [
+                "Open, Public, Internal, File-private, Private" : "AuthorityController"
             ]
         ]
 
@@ -30,6 +33,8 @@ class ViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(clicked))
+        
+        navigationItem.title = "Swift"
     }
 
     @objc func clicked() {
