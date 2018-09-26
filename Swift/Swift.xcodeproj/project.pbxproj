@@ -24,6 +24,7 @@
 		017EBA8C2101821700D46E97 /* SonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017EBA8B2101821700D46E97 /* SonController.swift */; };
 		0415A0FB213D31C000D8461D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415A0FA213D31C000D8461D /* Common.swift */; };
 		042D6952213D68900056CD93 /* PageCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D6951213D68900056CD93 /* PageCategoryView.swift */; };
+		0440BC87215B38F0000A8E5E /* CopyonwriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440BC86215B38F0000A8E5E /* CopyonwriteController.swift */; };
 		044AA2CF2150899000801CA6 /* OOOrFunctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AA2CE2150899000801CA6 /* OOOrFunctionController.swift */; };
 		044D10142151DA170098BB3B /* AuthorityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D10132151DA170098BB3B /* AuthorityController.swift */; };
 		044F69772159E1960006071B /* ModuleTestA.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F69752159E1960006071B /* ModuleTestA.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +64,7 @@
 		017EBA8B2101821700D46E97 /* SonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonController.swift; sourceTree = "<group>"; };
 		0415A0FA213D31C000D8461D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		042D6951213D68900056CD93 /* PageCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCategoryView.swift; sourceTree = "<group>"; };
+		0440BC86215B38F0000A8E5E /* CopyonwriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyonwriteController.swift; sourceTree = "<group>"; };
 		044AA2CE2150899000801CA6 /* OOOrFunctionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOOrFunctionController.swift; sourceTree = "<group>"; };
 		044D10132151DA170098BB3B /* AuthorityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorityController.swift; sourceTree = "<group>"; };
 		044F69732159E1960006071B /* ModuleTestA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModuleTestA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -499,6 +501,7 @@
 				049DBD59214B67E1007A1826 /* ClassAndStructController.swift */,
 				044AA2CE2150899000801CA6 /* OOOrFunctionController.swift */,
 				044D10132151DA170098BB3B /* AuthorityController.swift */,
+				0440BC86215B38F0000A8E5E /* CopyonwriteController.swift */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				017EBA8A21017F1300D46E97 /* FatherController.swift in Sources */,
 				016AE3A12100271300A0D2D4 /* ViewController.swift in Sources */,
 				017EBA8C2101821700D46E97 /* SonController.swift in Sources */,
+				0440BC87215B38F0000A8E5E /* CopyonwriteController.swift in Sources */,
 				016AE39F2100271300A0D2D4 /* AppDelegate.swift in Sources */,
 				049DBD5A214B67E1007A1826 /* ClassAndStructController.swift in Sources */,
 			);
