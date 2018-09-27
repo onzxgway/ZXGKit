@@ -24,6 +24,9 @@ class ViewController: UIViewController {
             ],
             [
                 "在 Swift 中，怎样理解是 copy-on-write？" : "CopyonwriteController"
+            ],
+            [
+                "什么是属性观察（Property Observer）？" : "PropertyObserverController"
             ]
         ]
 
