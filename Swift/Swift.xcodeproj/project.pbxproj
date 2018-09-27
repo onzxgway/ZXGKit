@@ -30,6 +30,7 @@
 		044F69772159E1960006071B /* ModuleTestA.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F69752159E1960006071B /* ModuleTestA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		044F697C2159E1C40006071B /* TestA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F697B2159E1C40006071B /* TestA.swift */; };
 		045F6951215C69C000B572CE /* PropertyObserverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F6950215C69C000B572CE /* PropertyObserverController.swift */; };
+		045F695E215CC0AA00B572CE /* ReallyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F695D215CC0AA00B572CE /* ReallyController.swift */; };
 		0466EDF9213FA3EA00CB7589 /* PageViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466EDF8213FA3EA00CB7589 /* PageViewConfig.swift */; };
 		0475AF35213D399200DEBFC1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF34213D399200DEBFC1 /* BaseViewController.swift */; };
 		0475AF3F213D3B9D00DEBFC1 /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF38213D3B9D00DEBFC1 /* FindController.swift */; };
@@ -73,6 +74,7 @@
 		044F69762159E1960006071B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044F697B2159E1C40006071B /* TestA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestA.swift; sourceTree = "<group>"; };
 		045F6950215C69C000B572CE /* PropertyObserverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyObserverController.swift; sourceTree = "<group>"; };
+		045F695D215CC0AA00B572CE /* ReallyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReallyController.swift; sourceTree = "<group>"; };
 		0466EDF8213FA3EA00CB7589 /* PageViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewConfig.swift; sourceTree = "<group>"; };
 		0475AF34213D399200DEBFC1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0475AF38213D3B9D00DEBFC1 /* FindController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindController.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 				044D10132151DA170098BB3B /* AuthorityController.swift */,
 				0440BC86215B38F0000A8E5E /* CopyonwriteController.swift */,
 				045F6950215C69C000B572CE /* PropertyObserverController.swift */,
+				045F695D215CC0AA00B572CE /* ReallyController.swift */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045F695E215CC0AA00B572CE /* ReallyController.swift in Sources */,
 				045F6951215C69C000B572CE /* PropertyObserverController.swift in Sources */,
 				044AA2CF2150899000801CA6 /* OOOrFunctionController.swift in Sources */,
 				044D10142151DA170098BB3B /* AuthorityController.swift in Sources */,

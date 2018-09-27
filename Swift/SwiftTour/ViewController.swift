@@ -27,6 +27,9 @@ class ViewController: UIViewController {
             ],
             [
                 "什么是属性观察（Property Observer）？" : "PropertyObserverController"
+            ],
+            [
+                "Swift 实战题" : "ReallyController"
             ]
         ]
 
