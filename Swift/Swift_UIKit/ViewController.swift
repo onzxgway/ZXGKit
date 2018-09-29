@@ -9,30 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
     
-    lazy var dataSources: [[String : String]] = {
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 64
+        return tableView
+    }()
+    
+    lazy var dataSources: [[[String : String]]] = {
         
         let arr = [
             [
-                "UILabel" : "LabelController"
+                [
+                    "UILabel" : "A view that displays one or more lines of read-only text, often used in conjunction with controls to describe their intended purpose."
+                ],
+                [
+                    "UITextField" : "An object that displays an editable text area in your interface."
+                ]
             ],
             [
-                "UIControl" : "ControlController"
+                [
+                    "UIImageView" : "An object that displays a single image or a sequence of animated images in your interface."
+                ]
             ],
             [
-                "Open, Public, Internal, File-private, Private" : "AuthorityController"
+                [
+                    "UIControl" : "Gather input and respond to user interactions with controls."
+                ]
             ],
-            [
-                "在 Swift 中，怎样理解是 copy-on-write？" : "CopyonwriteController"
-            ],
-            [
-                "什么是属性观察（Property Observer）？" : "PropertyObserverController"
-            ],
-            [
-                "Swift 实战题" : "ReallyController"
-            ]
         ]
         
         return arr
@@ -41,52 +47,68 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        view.addSubview(tableView)
+        
+        navigationItem.title = "UIView"
     }
-
 
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        let dic = dataSources[indexPath.row]
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let dic = dataSources[indexPath.section][indexPath.row]
+        
         cell.textLabel?.text = Array(dic.keys)[0]
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 12)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 14)
+        cell.detailTextLabel?.text = Array(dic.values)[0]
+        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 8)
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.detailTextLabel?.lineBreakMode = .byCharWrapping
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSources.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSources[section].count
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let dic = dataSources[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let dic = dataSources[indexPath.section][indexPath.row]
         
         let clas: AnyClass
         // 由字符串转为类型的时候  如果类型是自定义的 需要在类型字符串前边加上你的项目的名字！
-        if let cla = NSClassFromString("Swift_UIKit." + (dic[Array(dic.keys)[0]] ?? "")) {
+        
+        var name = Array(dic.keys)[0]
+        name = String(name.suffix(name.count - 2))
+        if let cla = NSClassFromString("Swift_UIKit." + name + "Controller") {
             clas = cla
         }
         else {
             clas = BaseController.self
         }
         
-        //        let cla: AnyClass = NSClassFromString(dic.values.first ?? "") ?? ClassAndStructController.self
+        let ctrl = clas.alloc() as! UIViewController
+        ctrl.navigationItem.title = Array(dic.keys)[0]
         
-        self.navigationController?.pushViewController(clas.alloc() as! UIViewController, animated: true)
+        self.navigationController?.pushViewController(ctrl, animated: true)
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if section == 0 {
-//            return
-//        }
-//    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "UIView"
+            return "Text Views"
+        }
+        else if section == 1 {
+            return "Content Views"
+        }
+        else if section == 2 {
+            return "Controls"
         }
         
         return ""

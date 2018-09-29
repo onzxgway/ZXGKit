@@ -15,6 +15,13 @@ class BaseController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        setAttribute()
     }
 
+}
+
+extension BaseController {
+    @objc func setAttribute() -> Void {
+        
+    }
 }

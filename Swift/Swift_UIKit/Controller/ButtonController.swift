@@ -54,15 +54,13 @@ class ButtonController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .lightGray
-        setAttribute()
     }
 
 }
 
 extension ButtonController {
-    private func setAttribute() -> Void {
+    override func setAttribute() -> Void {
         
         // 1
         btn.addTarget(self, action: #selector(clicked), for: .touchUpInside)
@@ -107,7 +105,7 @@ extension ButtonController {
         /**
          默认全是 UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
          */
-        
+        // AAAAA
         /**
          
          前置知识点：titleEdgeInsets是title相对于其上下左右的inset，跟tableView的contentInset是类似的，
@@ -131,13 +129,28 @@ extension ButtonController {
              所以bn.titleEdgeInsets = UIEdgeInsetsMake(0, -imageWith, 0, imageWith);
              这样就完成image在右边，label在左边的效果了。
          */
+        
+        
+        /**
+         方式一 偶然间发现,只要在获取titleSize之前,使用一次button的titleLabel和imageView,就能获取到他的size了,设置一下titleLabel和imageView的任意属性都行(只是为了提前使用一次)
+         */
+//        bn.titleLabel?.backgroundColor = .clear
+//        bn.imageView?.backgroundColor = .clear
+//        let titleSize: CGSize = bn.titleLabel?.bounds.size ?? .zero
+//        let imageSize: CGSize = bn.imageView?.bounds.size ?? .zero
+        
+        // 方式二
+        let titleSize: CGSize = bn.titleLabel?.sizeThatFits(.zero) ?? .zero
+        let imageSize: CGSize = bn.imageView?.sizeThatFits(.zero) ?? .zero
+        
+        let interval: CGFloat = 8 / 2
+        
+        bn.imageEdgeInsets = UIEdgeInsets(top: 0, left: titleSize.width + interval, bottom: 0, right: -titleSize.width - interval)
+        bn.titleEdgeInsets = UIEdgeInsets(top: 0, left: -imageSize.width - interval, bottom: 0, right: imageSize.width + interval)
+        bn.contentEdgeInsets = UIEdgeInsets(top: 0, left: interval, bottom: 0, right: interval) // btn整体内容距离四周的间距
+        
         bn.sizeToFit()                        // 给完具体内容之后，再调用此方法
         bn.center = CGPoint(x: view.center.x, y: view.center.y + 66)
-        
-        
-        bn.imageEdgeInsets = UIEdgeInsets(top: 0, left: (bn.titleLabel?.sizeThatFits(.zero).width)!, bottom: 0, right: -(bn.titleLabel?.sizeThatFits(.zero).width)!)
-        bn.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(bn.imageView?.bounds.size.width)!, bottom: 0, right: (bn.imageView?.bounds.size.width)!)
-//        bn.contentEdgeInsets = UIEdgeInsets(top: 6, left: 20, bottom: 6, right: 20) // btn整体内容距离四周的间距
         
         print(bn.imageEdgeInsets)
         print(bn.titleEdgeInsets)
