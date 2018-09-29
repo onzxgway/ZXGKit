@@ -51,11 +51,6 @@ class ButtonController: BaseController {
         view.addSubview(bn)
         return bn
     }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .lightGray
-    }
 
 }
 

@@ -10,11 +10,11 @@ import UIKit
 
 class TextFieldController: BaseController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
+}
+
+extension TextFieldController {
+    override func setAttribute() {
         
     }
-
-
 }

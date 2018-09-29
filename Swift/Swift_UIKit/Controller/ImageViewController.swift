@@ -51,8 +51,6 @@ class ImageViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .lightGray
-
         resizableImage()
     }
     
