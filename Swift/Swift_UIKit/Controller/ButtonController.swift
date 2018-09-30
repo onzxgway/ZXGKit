@@ -56,15 +56,43 @@ class ButtonController: BaseController {
 
 extension ButtonController {
     override func setAttribute() -> Void {
-        
+        /**
+          touchDown
+         
+          touchDownRepeat
+         
+          touchDragInside
+         
+          touchDragOutside
+         
+          touchDragEnter
+         
+          touchDragExit
+         
+          touchUpInside
+         
+          touchUpOutside
+         
+          touchCancel
+         */
         // 1
-        btn.addTarget(self, action: #selector(clicked), for: .touchUpInside)
+//        btn.addTarget(self, action: #selector(touchDownClicked), for: .touchDown)
+//        btn.addTarget(self, action: #selector(touchDownRepeatClicked), for: .touchDownRepeat)
+//        btn.addTarget(self, action: #selector(touchUpInsideClicked), for: .touchUpInside)
+//        btn.addTarget(self, action: #selector(touchUpOutsideClicked), for: .touchUpOutside)
+
+//        btn.addTarget(self, action: #selector(touchDragInsideClicked), for: .touchDragInside)
+//        btn.addTarget(self, action: #selector(touchDragOutsideClicked), for: .touchDragOutside)
+//        btn.addTarget(self, action: #selector(touchDragEnterClicked), for: .touchDragEnter)
+//        btn.addTarget(self, action: #selector(touchDragExitClicked), for: .touchDragExit)
+
+        btn.addTarget(self, action: #selector(touchCancelExitClicked), for: .touchCancel)
         
         // 2
-        bt.addTarget(self, action: #selector(clicked), for: .touchUpInside)
+        bt.addTarget(self, action: #selector(touchUpInsideClicked), for: .touchUpInside)
         
         // 3
-        b.addTarget(self, action: #selector(clicked), for: .touchUpInside)
+        b.addTarget(self, action: #selector(touchUpInsideClicked), for: .touchUpInside)
         b.setTitle("生活不止眼前的苟且 还有诗和远方的田野 你赤手空拳来到人世间 为找到那片海不顾一切", for: .normal)
         b.setImage(UIImage(named: "img"), for: .normal)                 // 如果图片的size < button的size，不会被拉伸，原比例显示， 如果图片的size > button的size，会被压缩
         b.setBackgroundImage(UIImage(named: "bg_Img"), for: .normal)    // 默认会被拉伸，充满整个button
@@ -93,7 +121,7 @@ extension ButtonController {
         bn.backgroundColor = .gray
         bn.setImage(UIImage(named: "img"), for: .normal)
 //        bn.setImage(UIImage(named: "img"), for: .highlighted)
-        bn.addTarget(self, action: #selector(clicked), for: .touchUpInside)
+        bn.addTarget(self, action: #selector(touchUpInsideClicked), for: .touchUpInside)
         bn.showsTouchWhenHighlighted = false  // 用户手指接触的部分会发亮，就是变成白色。按钮有图片的话，只有图片发亮，只有文字的话，也发亮，但是只有中间一块区域发亮
         bn.adjustsImageWhenDisabled = true    // default is YES. if YES, image is drawn lighter when disabled
         bn.adjustsImageWhenHighlighted = true // 前提：showsTouchWhenHighlighted 为 false 的时候才生效。 default is YES. if YES, image is drawn darker when highlighted(pressed)
@@ -147,13 +175,9 @@ extension ButtonController {
         bn.sizeToFit()                        // 给完具体内容之后，再调用此方法
         bn.center = CGPoint(x: view.center.x, y: view.center.y + 66)
         
-        print(bn.imageEdgeInsets)
-        print(bn.titleEdgeInsets)
-        print(bn.contentEdgeInsets)
-    }
-    
-    @objc private func clicked(btn: UIButton) -> Void {
-        print(btn.title(for: .normal) ?? "none")
+//        print(bn.imageEdgeInsets)
+//        print(bn.titleEdgeInsets)
+//        print(bn.contentEdgeInsets)
     }
 }
 
@@ -161,5 +185,44 @@ extension ButtonController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         b.isEnabled = !b.isEnabled
         bn.isEnabled = !bn.isEnabled
+    }
+    
+    
+    
+    @objc private func touchUpInsideClicked(btn: UIButton) -> Void {
+        //        print(btn.title(for: .normal) ?? "none")
+        print("touchUpInsideClicked")
+    }
+    
+    @objc private func touchDownClicked(btn: UIButton) -> Void {
+        print("touchDownClicked")
+    }
+    
+    @objc private func touchDownRepeatClicked(btn: UIButton) -> Void {
+        print("touchDownRepeatClicked")
+    }
+    
+    @objc private func touchUpOutsideClicked(btn: UIButton) -> Void {
+        print("touchUpOutsideClicked")
+    }
+    
+    @objc private func touchDragInsideClicked(btn: UIButton) -> Void {
+        print("touchDragInsideClicked")
+    }
+    
+    @objc private func touchDragOutsideClicked(btn: UIButton) -> Void {
+        print("touchDragOutsideClicked")
+    }
+    
+    @objc private func touchDragEnterClicked(btn: UIButton) -> Void {
+        print("touchDragEnterClicked")
+    }
+    
+    @objc private func touchDragExitClicked(btn: UIButton) -> Void {
+        print("touchDragExitClicked")
+    }
+    
+    @objc private func touchCancelExitClicked(btn: UIButton) -> Void {
+        print("touchCancelExitClicked")
     }
 }
