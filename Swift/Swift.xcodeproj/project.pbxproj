@@ -24,6 +24,8 @@
 		017EBA8C2101821700D46E97 /* SonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017EBA8B2101821700D46E97 /* SonController.swift */; };
 		0415A0FB213D31C000D8461D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415A0FA213D31C000D8461D /* Common.swift */; };
 		042D6952213D68900056CD93 /* PageCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D6951213D68900056CD93 /* PageCategoryView.swift */; };
+		043A69452160707B00470CF5 /* ControllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A69442160707B00470CF5 /* ControllController.swift */; };
+		043A69472160793700470CF5 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A69462160793700470CF5 /* ScrollViewController.swift */; };
 		0440BC87215B38F0000A8E5E /* CopyonwriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440BC86215B38F0000A8E5E /* CopyonwriteController.swift */; };
 		044AA2CF2150899000801CA6 /* OOOrFunctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AA2CE2150899000801CA6 /* OOOrFunctionController.swift */; };
 		044D10142151DA170098BB3B /* AuthorityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D10132151DA170098BB3B /* AuthorityController.swift */; };
@@ -76,6 +78,8 @@
 		017EBA8B2101821700D46E97 /* SonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonController.swift; sourceTree = "<group>"; };
 		0415A0FA213D31C000D8461D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		042D6951213D68900056CD93 /* PageCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCategoryView.swift; sourceTree = "<group>"; };
+		043A69442160707B00470CF5 /* ControllController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllController.swift; sourceTree = "<group>"; };
+		043A69462160793700470CF5 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		0440BC86215B38F0000A8E5E /* CopyonwriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyonwriteController.swift; sourceTree = "<group>"; };
 		044AA2CE2150899000801CA6 /* OOOrFunctionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOOrFunctionController.swift; sourceTree = "<group>"; };
 		044D10132151DA170098BB3B /* AuthorityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorityController.swift; sourceTree = "<group>"; };
@@ -387,11 +391,13 @@
 			isa = PBXGroup;
 			children = (
 				04528597215DC929000CE620 /* BaseController.swift */,
-				04528599215DC937000CE620 /* LabelController.swift */,
 				0452859B215DF5CB000CE620 /* ControlController.swift */,
+				043A69462160793700470CF5 /* ScrollViewController.swift */,
+				04528599215DC937000CE620 /* LabelController.swift */,
 				0452859D215DF688000CE620 /* ButtonController.swift */,
 				04C14FC4215F1AE10073CFE0 /* ImageViewController.swift */,
 				04C14FC6215F59D30073CFE0 /* TextFieldController.swift */,
+				043A69442160707B00470CF5 /* ControllController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -796,12 +802,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043A69452160707B00470CF5 /* ControllController.swift in Sources */,
 				0452859C215DF5CB000CE620 /* ControlController.swift in Sources */,
 				04C14FC7215F59D30073CFE0 /* TextFieldController.swift in Sources */,
 				0452859E215DF688000CE620 /* ButtonController.swift in Sources */,
 				0452859A215DC937000CE620 /* LabelController.swift in Sources */,
 				04C14FC5215F1AE10073CFE0 /* ImageViewController.swift in Sources */,
 				04528589215DC82A000CE620 /* ViewController.swift in Sources */,
+				043A69472160793700470CF5 /* ScrollViewController.swift in Sources */,
 				04528598215DC929000CE620 /* BaseController.swift in Sources */,
 				04528587215DC82A000CE620 /* AppDelegate.swift in Sources */,
 			);

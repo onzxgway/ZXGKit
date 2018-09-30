@@ -24,9 +24,6 @@ class ViewController: UIViewController {
             [
                 [
                     "UILabel" : "A view that displays one or more lines of read-only text, often used in conjunction with controls to describe their intended purpose."
-                ],
-                [
-                    "UITextField" : "An object that displays an editable text area in your interface."
                 ]
             ],
             [
@@ -36,7 +33,15 @@ class ViewController: UIViewController {
             ],
             [
                 [
-                    "UIControl" : "Gather input and respond to user interactions with controls."
+                    "UIScrollView" : "A view that allows the scrolling and zooming of its contained views."
+                ],
+                [
+                    "UIStackView" : "A streamlined interface for laying out a collection of views in either a column or a row."
+                ]
+            ],
+            [
+                [
+                    "UIControl" : "The base class for controls, which are visual elements that convey a specific action or intention in response to user interactions."
                 ]
             ],
         ]
@@ -108,8 +113,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return "Content Views"
         }
         else if section == 2 {
+            return "Container Views"
+        }
+        else if section == 3 {
             return "Controls"
         }
+        
         
         return ""
     }

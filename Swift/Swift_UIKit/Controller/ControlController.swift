@@ -15,17 +15,22 @@ class ControlController: ViewController {
         let arr = [
             [
                 [
+                    "UIControll" : "The base class for controls, which are visual elements that convey a specific action or intention in response to user interactions."
+                ],
+                [
                     "UIButton" : "A control that executes your custom code in response to user interactions."
-                ]
+                ],
+                [
+                    "UITextField" : "An object that displays an editable text area in your interface."
+                ],
             ],
             ]
-
         return arr
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.title = "Controls"
     }
 
