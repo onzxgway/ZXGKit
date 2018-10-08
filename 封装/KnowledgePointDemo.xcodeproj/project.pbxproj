@@ -57,6 +57,7 @@
 		01EBA3C3208EF56700B92A42 /* CoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBA3C2208EF56700B92A42 /* CoreTextData.m */; };
 		01EBA3C6208EF59800B92A42 /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBA3C5208EF59800B92A42 /* CTDisplayView.m */; };
 		01EDF5F12089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EDF5F02089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m */; };
+		0417D20E216B96E3006EFF9C /* MemoryLeakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417D20D216B96E3006EFF9C /* MemoryLeakController.swift */; };
 		049C32BF216B591C00AEA85C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C32BE216B591C00AEA85C /* AppDelegate.swift */; };
 		049C32C1216B591C00AEA85C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C32C0216B591C00AEA85C /* ViewController.swift */; };
 		049C32C4216B591C00AEA85C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049C32C2216B591C00AEA85C /* Main.storyboard */; };
@@ -158,6 +159,7 @@
 		01EBA3C5208EF59800B92A42 /* CTDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
 		01EDF5EF2089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGJSCallOCWKWebViewController.h; sourceTree = "<group>"; };
 		01EDF5F02089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGJSCallOCWKWebViewController.m; sourceTree = "<group>"; };
+		0417D20D216B96E3006EFF9C /* MemoryLeakController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryLeakController.swift; sourceTree = "<group>"; };
 		04744CCA208E0805005F5214 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		049C32BC216B591B00AEA85C /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C32BE216B591C00AEA85C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 			children = (
 				049C32BE216B591C00AEA85C /* AppDelegate.swift */,
 				049C32C0216B591C00AEA85C /* ViewController.swift */,
+				0417D20D216B96E3006EFF9C /* MemoryLeakController.swift */,
 				049C32C2216B591C00AEA85C /* Main.storyboard */,
 				049C32C5216B591D00AEA85C /* Assets.xcassets */,
 				049C32C7216B591D00AEA85C /* LaunchScreen.storyboard */,
@@ -880,6 +883,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0417D20E216B96E3006EFF9C /* MemoryLeakController.swift in Sources */,
 				049C32C1216B591C00AEA85C /* ViewController.swift in Sources */,
 				049C32BF216B591C00AEA85C /* AppDelegate.swift in Sources */,
 			);
