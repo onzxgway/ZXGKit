@@ -15,7 +15,7 @@ class ScrollViewController: ControlController {
         let arr = [
             [
                 [
-                    "UIScrollView" : "The base class for controls, which are visual elements that convey a specific action or intention in response to user interactions."
+                    "UIScrollVieww" : "The base class for controls, which are visual elements that convey a specific action or intention in response to user interactions."
                 ],
                 [
                     "UITableView" : "Display data in a single column of customizable rows."

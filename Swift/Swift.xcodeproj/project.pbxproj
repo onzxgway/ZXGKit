@@ -53,6 +53,7 @@
 		049DBD5A214B67E1007A1826 /* ClassAndStructController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DBD59214B67E1007A1826 /* ClassAndStructController.swift */; };
 		04C14FC5215F1AE10073CFE0 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14FC4215F1AE10073CFE0 /* ImageViewController.swift */; };
 		04C14FC7215F59D30073CFE0 /* TextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14FC6215F59D30073CFE0 /* TextFieldController.swift */; };
+		04D73F88216AED2500B0CD58 /* ScrollViewwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D73F87216AED2500B0CD58 /* ScrollViewwController.swift */; };
 		04D98E582143A87E000E24C1 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D98E572143A87E000E24C1 /* PageContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		049DBD59214B67E1007A1826 /* ClassAndStructController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassAndStructController.swift; sourceTree = "<group>"; };
 		04C14FC4215F1AE10073CFE0 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		04C14FC6215F59D30073CFE0 /* TextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldController.swift; sourceTree = "<group>"; };
+		04D73F87216AED2500B0CD58 /* ScrollViewwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewwController.swift; sourceTree = "<group>"; };
 		04D98E572143A87E000E24C1 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -398,6 +400,7 @@
 				04C14FC4215F1AE10073CFE0 /* ImageViewController.swift */,
 				04C14FC6215F59D30073CFE0 /* TextFieldController.swift */,
 				043A69442160707B00470CF5 /* ControllController.swift */,
+				04D73F87216AED2500B0CD58 /* ScrollViewwController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -812,6 +815,7 @@
 				043A69472160793700470CF5 /* ScrollViewController.swift in Sources */,
 				04528598215DC929000CE620 /* BaseController.swift in Sources */,
 				04528587215DC82A000CE620 /* AppDelegate.swift in Sources */,
+				04D73F88216AED2500B0CD58 /* ScrollViewwController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
