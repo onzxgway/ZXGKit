@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ScrollView: UIScrollView {
+private class ScrollView: UIScrollView {
+    
+    fileprivate weak var superVC: UIViewController?
     
     // override points for subclasses to control delivery of touch events to subviews of the scroll view
     // called before touches are delivered to a subview of the scroll view. if it returns NO the touches will not be delivered to the subview
@@ -34,6 +36,7 @@ class ScrollViewwController: BaseController {
     private lazy var scrollView: ScrollView = {
         let scrollView = ScrollView(frame: .zero)
         scrollView.backgroundColor = .green
+        scrollView.superVC = self
         view.addSubview(scrollView)
         return scrollView
     }()
@@ -42,6 +45,10 @@ class ScrollViewwController: BaseController {
         super.viewDidLoad()
         
         automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    deinit {
+        print("ScrollViewwController 释放了！！！")
     }
 
 }
