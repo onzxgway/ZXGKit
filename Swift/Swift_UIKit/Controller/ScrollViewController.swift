@@ -15,7 +15,7 @@ class ScrollViewController: ControlController {
         let arr = [
             [
                 [
-                    "UIScrollVieww" : "The base class for controls, which are visual elements that convey a specific action or intention in response to user interactions."
+                    "UIScrollVieww" : "通过使用 UIScrollView，用户可以滑动或是缩放屏幕，来看单个屏幕无法展示的内容。"
                 ],
                 [
                     "UITableView" : "Display data in a single column of customizable rows."
