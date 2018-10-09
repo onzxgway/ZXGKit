@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import <CoreText/CoreText.h>
+#import <MLeaksFinder.h>
 
 @interface TestNSTimer: NSObject
 
@@ -80,6 +81,11 @@
  二、debug memory graph
  
  三、instruments Leak
+ */
+
+// AAAAA 如何使用三方工具检测内存泄露
+/**
+ 一、MLeaksFinder 只对 UIView 和 UIViewController 对象有效。
  */
 
 @implementation MemoryLeakController
@@ -164,8 +170,8 @@
         __strong typeof(MemoryLeakController *) ss = ws;
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [ss.tableView.mj_header endRefreshing];
-            ss.tableView.backgroundColor = UIColor.redColor;
+            [self.tableView.mj_header endRefreshing];
+            self.tableView.backgroundColor = UIColor.redColor;
         });
         
     }];

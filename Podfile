@@ -19,6 +19,7 @@ KnowledgePointDemoArray.each do |t|
         pod 'AFNetworking', '~> 3.0'
         pod 'NJKWebViewProgress'
         pod 'MJRefresh'
+        pod 'MLeaksFinder'
     end
 end
 
