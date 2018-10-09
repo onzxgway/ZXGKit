@@ -50,6 +50,8 @@
 		0475AF57213D3E1100DEBFC1 /* LiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF56213D3E1100DEBFC1 /* LiveController.swift */; };
 		0475AF59213D3E1B00DEBFC1 /* VipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF58213D3E1B00DEBFC1 /* VipController.swift */; };
 		0475AF5B213D414C00DEBFC1 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475AF5A213D414C00DEBFC1 /* PageView.swift */; };
+		04884CF7216CDE22002648BE /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04884CF6216CDE22002648BE /* MyAppDelegate.swift */; };
+		04884CF9216CDF27002648BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04884CF8216CDF26002648BE /* main.swift */; };
 		049DBD5A214B67E1007A1826 /* ClassAndStructController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DBD59214B67E1007A1826 /* ClassAndStructController.swift */; };
 		04C14FC5215F1AE10073CFE0 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14FC4215F1AE10073CFE0 /* ImageViewController.swift */; };
 		04C14FC7215F59D30073CFE0 /* TextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14FC6215F59D30073CFE0 /* TextFieldController.swift */; };
@@ -109,6 +111,8 @@
 		0475AF56213D3E1100DEBFC1 /* LiveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveController.swift; sourceTree = "<group>"; };
 		0475AF58213D3E1B00DEBFC1 /* VipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipController.swift; sourceTree = "<group>"; };
 		0475AF5A213D414C00DEBFC1 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		04884CF6216CDE22002648BE /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
+		04884CF8216CDF26002648BE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		049DBD59214B67E1007A1826 /* ClassAndStructController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassAndStructController.swift; sourceTree = "<group>"; };
 		04C14FC4215F1AE10073CFE0 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		04C14FC6215F59D30073CFE0 /* TextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldController.swift; sourceTree = "<group>"; };
@@ -355,6 +359,8 @@
 			children = (
 				049DBD58214B67E1007A1826 /* SubController */,
 				016AE39E2100271300A0D2D4 /* AppDelegate.swift */,
+				04884CF6216CDE22002648BE /* MyAppDelegate.swift */,
+				04884CF8216CDF26002648BE /* main.swift */,
 				016AE3A02100271300A0D2D4 /* ViewController.swift */,
 				016AE3A22100271300A0D2D4 /* Main.storyboard */,
 				016AE3A52100271300A0D2D4 /* Assets.xcassets */,
@@ -782,8 +788,10 @@
 			files = (
 				045F695E215CC0AA00B572CE /* ReallyController.swift in Sources */,
 				045F6951215C69C000B572CE /* PropertyObserverController.swift in Sources */,
+				04884CF9216CDF27002648BE /* main.swift in Sources */,
 				044AA2CF2150899000801CA6 /* OOOrFunctionController.swift in Sources */,
 				044D10142151DA170098BB3B /* AuthorityController.swift in Sources */,
+				04884CF7216CDE22002648BE /* MyAppDelegate.swift in Sources */,
 				017EBA8A21017F1300D46E97 /* FatherController.swift in Sources */,
 				016AE3A12100271300A0D2D4 /* ViewController.swift in Sources */,
 				017EBA8C2101821700D46E97 /* SonController.swift in Sources */,

@@ -8,7 +8,15 @@
 
 import UIKit
 
-@UIApplicationMain
+/**
+ 编译的时候 系统找 @UIApplicationMain 标记类，并插入main函数的模块代码
+ 
+ 如果注释掉该标识，会报错 ld: entry point (_main) undefined. for architecture x86_64， 表示缺少 main。 此时也可以自定义 main 函数的模块代码
+ 
+ @UIApplicationMain 和 main.swift 二者只能同时存在一个
+ */
+//@UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
