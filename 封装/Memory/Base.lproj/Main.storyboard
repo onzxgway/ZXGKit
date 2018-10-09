@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nYn-gD-EoJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nYn-gD-EoJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,18 +48,37 @@
         <!--Memory Leak Controller-->
         <scene sceneID="wEV-dN-N3C">
             <objects>
-                <viewController id="VEL-dj-oDi" customClass="MemoryLeakController" customModule="Memory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VEL-dj-oDi" customClass="MemoryLeakController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JI8-n3-fWo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pYg-up-GPa">
+                                <rect key="frame" x="93" y="162" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VEL-dj-oDi" id="Zpy-qy-LKR"/>
+                                    <outlet property="delegate" destination="VEL-dj-oDi" id="2zz-fu-gBI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pYg-up-GPa" firstAttribute="top" secondItem="JI8-n3-fWo" secondAttribute="top" id="1No-Ur-C99"/>
+                            <constraint firstAttribute="trailing" secondItem="pYg-up-GPa" secondAttribute="trailing" id="Tl6-b8-7Eq"/>
+                            <constraint firstItem="pYg-up-GPa" firstAttribute="leading" secondItem="JI8-n3-fWo" secondAttribute="leading" id="v2f-Ut-Yfu"/>
+                            <constraint firstAttribute="bottom" secondItem="pYg-up-GPa" secondAttribute="bottom" id="ybu-hZ-7kU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nHn-NU-Yna"/>
                     </view>
                     <navigationItem key="navigationItem" id="xI2-ek-QAb"/>
+                    <connections>
+                        <outlet property="tableView" destination="pYg-up-GPa" id="Pvx-uL-Jcm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paU-Uh-3MA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="-564"/>
+            <point key="canvasLocation" x="1593" y="-564"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="euY-9y-v9t">
@@ -67,7 +86,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nYn-gD-EoJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LhQ-yO-41T">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

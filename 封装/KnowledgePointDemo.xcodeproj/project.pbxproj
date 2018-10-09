@@ -57,7 +57,7 @@
 		01EBA3C3208EF56700B92A42 /* CoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBA3C2208EF56700B92A42 /* CoreTextData.m */; };
 		01EBA3C6208EF59800B92A42 /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBA3C5208EF59800B92A42 /* CTDisplayView.m */; };
 		01EDF5F12089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EDF5F02089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m */; };
-		0417D20E216B96E3006EFF9C /* MemoryLeakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417D20D216B96E3006EFF9C /* MemoryLeakController.swift */; };
+		0469BE0D216C58690055225C /* MemoryLeakController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0469BE0C216C58690055225C /* MemoryLeakController.m */; };
 		049C32BF216B591C00AEA85C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C32BE216B591C00AEA85C /* AppDelegate.swift */; };
 		049C32C1216B591C00AEA85C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C32C0216B591C00AEA85C /* ViewController.swift */; };
 		049C32C4216B591C00AEA85C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049C32C2216B591C00AEA85C /* Main.storyboard */; };
@@ -66,6 +66,7 @@
 		07955D1C7552EC3A2A3805AC /* libPods-OCAndJS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B34BEC4A6DA2310E21CD59D2 /* libPods-OCAndJS.a */; };
 		413F7F091995995BE088800D /* libPods-CoreTextDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD331ECFADBF613C3E85A78 /* libPods-CoreTextDemo.a */; };
 		52E662819C155C29E54C327F /* libPods-Packaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */; };
+		D6830E5E69F4D73B29322B81 /* libPods-Memory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 783A9EF2F78A846FE1392C58 /* libPods-Memory.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,7 +160,9 @@
 		01EBA3C5208EF59800B92A42 /* CTDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
 		01EDF5EF2089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGJSCallOCWKWebViewController.h; sourceTree = "<group>"; };
 		01EDF5F02089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGJSCallOCWKWebViewController.m; sourceTree = "<group>"; };
-		0417D20D216B96E3006EFF9C /* MemoryLeakController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryLeakController.swift; sourceTree = "<group>"; };
+		0469BE0A216C58690055225C /* Memory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memory-Bridging-Header.h"; sourceTree = "<group>"; };
+		0469BE0B216C58690055225C /* MemoryLeakController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryLeakController.h; sourceTree = "<group>"; };
+		0469BE0C216C58690055225C /* MemoryLeakController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryLeakController.m; sourceTree = "<group>"; };
 		04744CCA208E0805005F5214 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		049C32BC216B591B00AEA85C /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C32BE216B591C00AEA85C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,10 +172,13 @@
 		049C32C8216B591D00AEA85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049C32CA216B591D00AEA85C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AEA8EAF9398037384C83DA3 /* Pods-CoreTextDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTextDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CoreTextDemo/Pods-CoreTextDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		149FE04AF424A41C0FA86632 /* Pods-Memory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memory.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Memory/Pods-Memory.debug.xcconfig"; sourceTree = "<group>"; };
 		206C968552FCA7CBA0EEC10D /* Pods-CoreTextDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTextDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CoreTextDemo/Pods-CoreTextDemo.release.xcconfig"; sourceTree = "<group>"; };
 		27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Packaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C205413C2A26C60D0431A70 /* Pods-Memory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memory.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Memory/Pods-Memory.release.xcconfig"; sourceTree = "<group>"; };
 		368D4C59B8015FD37E5EA2C5 /* Pods-ZXGDatePickView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGDatePickView.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ZXGDatePickView/Pods-ZXGDatePickView.debug.xcconfig"; sourceTree = "<group>"; };
 		4E87B4407ACEB0A7EDB32C6C /* Pods-封装.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装.release.xcconfig"; path = "../Pods/Target Support Files/Pods-封装/Pods-封装.release.xcconfig"; sourceTree = "<group>"; };
+		783A9EF2F78A846FE1392C58 /* libPods-Memory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Memory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A5062107C1C3D881C5C1B9 /* Pods-OCAndJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.release.xcconfig"; sourceTree = "<group>"; };
 		9BE3BCE0BA4DF734EFEBE69F /* libPods-网络封装.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网络封装.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EE7474B78A77A50A5767E2 /* Pods-封装.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-封装/Pods-封装.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6830E5E69F4D73B29322B81 /* libPods-Memory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,11 +430,13 @@
 			children = (
 				049C32BE216B591C00AEA85C /* AppDelegate.swift */,
 				049C32C0216B591C00AEA85C /* ViewController.swift */,
-				0417D20D216B96E3006EFF9C /* MemoryLeakController.swift */,
+				0469BE0B216C58690055225C /* MemoryLeakController.h */,
+				0469BE0C216C58690055225C /* MemoryLeakController.m */,
 				049C32C2216B591C00AEA85C /* Main.storyboard */,
 				049C32C5216B591D00AEA85C /* Assets.xcassets */,
 				049C32C7216B591D00AEA85C /* LaunchScreen.storyboard */,
 				049C32CA216B591D00AEA85C /* Info.plist */,
+				0469BE0A216C58690055225C /* Memory-Bridging-Header.h */,
 			);
 			path = Memory;
 			sourceTree = "<group>";
@@ -442,6 +451,7 @@
 				B34BEC4A6DA2310E21CD59D2 /* libPods-OCAndJS.a */,
 				BBD331ECFADBF613C3E85A78 /* libPods-CoreTextDemo.a */,
 				FA51E6EA295344576ECF4922 /* libPods-ZXGDatePickView.a */,
+				783A9EF2F78A846FE1392C58 /* libPods-Memory.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -459,6 +469,8 @@
 				206C968552FCA7CBA0EEC10D /* Pods-CoreTextDemo.release.xcconfig */,
 				368D4C59B8015FD37E5EA2C5 /* Pods-ZXGDatePickView.debug.xcconfig */,
 				FD74055DEB917EBB61E684E8 /* Pods-ZXGDatePickView.release.xcconfig */,
+				149FE04AF424A41C0FA86632 /* Pods-Memory.debug.xcconfig */,
+				2C205413C2A26C60D0431A70 /* Pods-Memory.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -546,9 +558,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049C32CD216B591D00AEA85C /* Build configuration list for PBXNativeTarget "Memory" */;
 			buildPhases = (
+				06F738988818367FAB450E9A /* [CP] Check Pods Manifest.lock */,
 				049C32B8216B591B00AEA85C /* Sources */,
 				049C32B9216B591B00AEA85C /* Frameworks */,
 				049C32BA216B591B00AEA85C /* Resources */,
+				FA9B2CC31793B622D51E3EAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -588,6 +602,7 @@
 					};
 					049C32BB216B591B00AEA85C = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -671,6 +686,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		06F738988818367FAB450E9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Memory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0DF8A9255576AAB29BFD28B2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -678,10 +711,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-CoreTextDemo/Pods-CoreTextDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,10 +731,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-ZXGDatePickView/Pods-ZXGDatePickView-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -750,10 +787,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -804,15 +843,37 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Packaging/Pods-Packaging-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Packaging/Pods-Packaging-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA9B2CC31793B622D51E3EAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-Memory/Pods-Memory-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZXGCommontKit/BaseClassResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaseClassResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Memory/Pods-Memory-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -883,9 +944,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0417D20E216B96E3006EFF9C /* MemoryLeakController.swift in Sources */,
 				049C32C1216B591C00AEA85C /* ViewController.swift in Sources */,
 				049C32BF216B591C00AEA85C /* AppDelegate.swift in Sources */,
+				0469BE0D216C58690055225C /* MemoryLeakController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1235,21 +1296,24 @@
 		};
 		049C32CB216B591D00AEA85C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 149FE04AF424A41C0FA86632 /* Pods-Memory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = Memory/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Memory/Memory-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1258,19 +1322,22 @@
 		};
 		049C32CC216B591D00AEA85C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C205413C2A26C60D0431A70 /* Pods-Memory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = Memory/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Memory/Memory-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
