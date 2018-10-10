@@ -58,6 +58,12 @@
 		01EBA3C6208EF59800B92A42 /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBA3C5208EF59800B92A42 /* CTDisplayView.m */; };
 		01EDF5F12089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EDF5F02089ADF8005B35EF /* ZXGJSCallOCWKWebViewController.m */; };
 		0469BE0D216C58690055225C /* MemoryLeakController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0469BE0C216C58690055225C /* MemoryLeakController.m */; };
+		048EFE52216D95C000F7A608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EFE51216D95C000F7A608 /* AppDelegate.m */; };
+		048EFE55216D95C000F7A608 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EFE54216D95C000F7A608 /* ViewController.m */; };
+		048EFE58216D95C000F7A608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048EFE56216D95C000F7A608 /* Main.storyboard */; };
+		048EFE5A216D95C100F7A608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048EFE59216D95C100F7A608 /* Assets.xcassets */; };
+		048EFE5D216D95C100F7A608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048EFE5B216D95C100F7A608 /* LaunchScreen.storyboard */; };
+		048EFE60216D95C100F7A608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EFE5F216D95C100F7A608 /* main.m */; };
 		049C32BF216B591C00AEA85C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C32BE216B591C00AEA85C /* AppDelegate.swift */; };
 		049C32C1216B591C00AEA85C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C32C0216B591C00AEA85C /* ViewController.swift */; };
 		049C32C4216B591C00AEA85C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049C32C2216B591C00AEA85C /* Main.storyboard */; };
@@ -164,6 +170,16 @@
 		0469BE0B216C58690055225C /* MemoryLeakController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryLeakController.h; sourceTree = "<group>"; };
 		0469BE0C216C58690055225C /* MemoryLeakController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryLeakController.m; sourceTree = "<group>"; };
 		04744CCA208E0805005F5214 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		048EFE4E216D95C000F7A608 /* Lock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		048EFE50216D95C000F7A608 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		048EFE51216D95C000F7A608 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		048EFE53216D95C000F7A608 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		048EFE54216D95C000F7A608 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		048EFE57216D95C000F7A608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		048EFE59216D95C100F7A608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		048EFE5C216D95C100F7A608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		048EFE5E216D95C100F7A608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048EFE5F216D95C100F7A608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		049C32BC216B591B00AEA85C /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C32BE216B591C00AEA85C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049C32C0216B591C00AEA85C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +242,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		048EFE4B216D95C000F7A608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		049C32B9216B591B00AEA85C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +268,7 @@
 				0165F162208DB91100BCA095 /* CoreTextDemo */,
 				010E44E920B3FDCF000877B1 /* ZXGDatePickView */,
 				049C32BD216B591B00AEA85C /* Memory */,
+				048EFE4F216D95C000F7A608 /* Lock */,
 				0104688B207DAAF700DC5BA0 /* Products */,
 				6870B1D4F4700A43EF3F001A /* Pods */,
 				489AFC8005142EA0A6268AE3 /* Frameworks */,
@@ -259,6 +283,7 @@
 				0165F161208DB91100BCA095 /* CoreTextDemo.app */,
 				010E44E820B3FDCF000877B1 /* ZXGDatePickView.app */,
 				049C32BC216B591B00AEA85C /* Memory.app */,
+				048EFE4E216D95C000F7A608 /* Lock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,6 +450,22 @@
 			path = "排版引擎框架";
 			sourceTree = "<group>";
 		};
+		048EFE4F216D95C000F7A608 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				048EFE50216D95C000F7A608 /* AppDelegate.h */,
+				048EFE51216D95C000F7A608 /* AppDelegate.m */,
+				048EFE53216D95C000F7A608 /* ViewController.h */,
+				048EFE54216D95C000F7A608 /* ViewController.m */,
+				048EFE56216D95C000F7A608 /* Main.storyboard */,
+				048EFE59216D95C100F7A608 /* Assets.xcassets */,
+				048EFE5B216D95C100F7A608 /* LaunchScreen.storyboard */,
+				048EFE5E216D95C100F7A608 /* Info.plist */,
+				048EFE5F216D95C100F7A608 /* main.m */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
 		049C32BD216B591B00AEA85C /* Memory */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +595,23 @@
 			productReference = 01E3ADF520858AAE00151E1B /* Packaging.app */;
 			productType = "com.apple.product-type.application";
 		};
+		048EFE4D216D95C000F7A608 /* Lock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048EFE63216D95C100F7A608 /* Build configuration list for PBXNativeTarget "Lock" */;
+			buildPhases = (
+				048EFE4A216D95C000F7A608 /* Sources */,
+				048EFE4B216D95C000F7A608 /* Frameworks */,
+				048EFE4C216D95C000F7A608 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lock;
+			productName = Lock;
+			productReference = 048EFE4E216D95C000F7A608 /* Lock.app */;
+			productType = "com.apple.product-type.application";
+		};
 		049C32BB216B591B00AEA85C /* Memory */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049C32CD216B591D00AEA85C /* Build configuration list for PBXNativeTarget "Memory" */;
@@ -600,6 +658,10 @@
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
 					};
+					048EFE4D216D95C000F7A608 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+					};
 					049C32BB216B591B00AEA85C = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 0940;
@@ -625,6 +687,7 @@
 				0165F160208DB91100BCA095 /* CoreTextDemo */,
 				010E44E720B3FDCF000877B1 /* ZXGDatePickView */,
 				049C32BB216B591B00AEA85C /* Memory */,
+				048EFE4D216D95C000F7A608 /* Lock */,
 			);
 		};
 /* End PBXProject section */
@@ -670,6 +733,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E3AE0120858AAE00151E1B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		048EFE4C216D95C000F7A608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048EFE5D216D95C100F7A608 /* LaunchScreen.storyboard in Resources */,
+				048EFE5A216D95C100F7A608 /* Assets.xcassets in Resources */,
+				048EFE58216D95C000F7A608 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +1013,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		048EFE4A216D95C000F7A608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048EFE55216D95C000F7A608 /* ViewController.m in Sources */,
+				048EFE60216D95C100F7A608 /* main.m in Sources */,
+				048EFE52216D95C000F7A608 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		049C32B8216B591B00AEA85C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -997,6 +1080,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				018304F22088897C009EC766 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		048EFE56216D95C000F7A608 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048EFE57216D95C000F7A608 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		048EFE5B216D95C100F7A608 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048EFE5C216D95C100F7A608 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1294,6 +1393,43 @@
 			};
 			name = Release;
 		};
+		048EFE61216D95C100F7A608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = Lock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		048EFE62216D95C100F7A608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = Lock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		049C32CB216B591D00AEA85C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 149FE04AF424A41C0FA86632 /* Pods-Memory.debug.xcconfig */;
@@ -1388,6 +1524,15 @@
 			buildConfigurations = (
 				01E3AE0920858AAE00151E1B /* Debug */,
 				01E3AE0A20858AAE00151E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		048EFE63216D95C100F7A608 /* Build configuration list for PBXNativeTarget "Lock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048EFE61216D95C100F7A608 /* Debug */,
+				048EFE62216D95C100F7A608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

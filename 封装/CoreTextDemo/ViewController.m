@@ -64,6 +64,8 @@
     self.displayView.height = data.height;
     self.displayView.backgroundColor = [UIColor yellowColor];
 }
+- (IBAction)beginSale:(UIButton *)sender {
+}
 
 - (void)setupNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imagePressed:)
