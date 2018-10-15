@@ -9,8 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-int main(int argc, char * argv[]) {
+// main函数 应用启动入口
+//int main(int argc, char * argv[]) {
+//    @autoreleasepool {
+//        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+//    }
+//}
+
+/**
+ UIApplicationMain 作用:
+ 
+ 1.创建UIApplication对象。
+ 2.设置UIApplication的delegate对象。
+ 3.
+ */
+int main(int argc, char *argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass(AppDelegate.class));
     }
 }

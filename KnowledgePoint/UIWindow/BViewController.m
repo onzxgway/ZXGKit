@@ -25,12 +25,11 @@
 }
 
 - (void)exchangeKeyWindow {
-    UIWindow *win = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];//一旦创建好了之后，自动添加在整个界面上
+    UIWindow *win = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds]; // 一旦创建好了之后，自动添加在整个界面上
     win.hidden = NO;
     win.backgroundColor = kRandomColor;
     [win makeKeyAndVisible];
     [APPDELEGATE setWindow:win];
-    
 }
 
 @end

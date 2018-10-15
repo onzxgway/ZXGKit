@@ -87,6 +87,7 @@
 
 }
 
+// CGFloat类型的值
 - (void)windonLevel {
     NSLog(@"__%f__%f__%f__", UIWindowLevelNormal, UIWindowLevelStatusBar, UIWindowLevelAlert);
 }

@@ -15,7 +15,7 @@
 
 @implementation ZXGWindow
 
-//Window一旦被创建，会自动添加到界面上。
+// Window一旦被创建，会自动添加到界面上。
 + (instancetype)sharedWindow {
     static ZXGWindow *_instance;
     static dispatch_once_t onceToken;
