@@ -22,6 +22,8 @@
     [super viewDidLoad];
     [self demo];
 }
+- (IBAction)push:(id)sender {
+}
 
 - (void)demo {
     //1,拿到文件

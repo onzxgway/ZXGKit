@@ -22,6 +22,8 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"PUSH" style:UIBarButtonItemStylePlain target:self action:@selector(clicked)];
 }
+- (IBAction)pushClicked:(UIBarButtonItem *)sender {
+}
 
 - (void)clicked {
     [self.navigationController pushViewController:[ZXGViewController new] animated:YES];
