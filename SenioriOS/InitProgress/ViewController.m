@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TestViewController.h"
+#import "TestBViewController.h"
 
 @interface ViewController ()
 
@@ -22,7 +23,8 @@
 }
 
 - (void)clicked {
-    TestViewController *testViewController = [[TestViewController alloc] init];
+//    TestViewController *testViewController = [[TestViewController alloc] init];
+    TestBViewController *testViewController = [[TestBViewController alloc] init];
     [self.navigationController pushViewController:testViewController animated:YES];
 }
 

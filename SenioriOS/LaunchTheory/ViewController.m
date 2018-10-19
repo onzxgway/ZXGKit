@@ -16,7 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CFRunLoopObserverRef ref = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        
+        if (activity == kCFRunLoopEntry) {
+            NSLog(@"kCFRunLoopEntry");
+        }
+        if (activity == kCFRunLoopBeforeTimers) {
+            NSLog(@"kCFRunLoopBeforeTimers");
+        }
+        if (activity == kCFRunLoopBeforeSources) {
+            NSLog(@"kCFRunLoopBeforeSources");
+        }
+        if (activity == kCFRunLoopBeforeWaiting) {
+            NSLog(@"kCFRunLoopBeforeWaiting");
+        }
+        if (activity == kCFRunLoopAfterWaiting) {
+            NSLog(@"kCFRunLoopAfterWaiting");
+        }
+        if (activity == kCFRunLoopExit) {
+            NSLog(@"kCFRunLoopExit");
+        }
+    });
+    
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), ref, kCFRunLoopCommonModes);
 }
 
 
