@@ -61,6 +61,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    _count++;
     NSLog(@"%s", __func__);
 }
 
@@ -78,6 +79,8 @@
 
 - (void)createView {
     self.backgroundColor = [UIColor blueColor];
+    
+    _count = 0;
     
     UIView *vv = [[UIView alloc] init];
     [self addSubview:vv];

@@ -10,7 +10,7 @@
 #import "TestView.h"
 
 @interface LeftViewController ()
-
+@property (nonatomic, strong) TestView *testView;
 @end
 
 @implementation LeftViewController
@@ -43,10 +43,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    TestView *testView = [TestView new];
-    TestView *testView = [[[NSBundle mainBundle] loadNibNamed:@"TestView" owner:nil options:nil] firstObject];
-    [self.view addSubview:testView];
-    testView.frame = CGRectMake(36, 106, 266, 108);
+//    _testView = [TestView new];
+    _testView = [[[NSBundle mainBundle] loadNibNamed:@"TestView" owner:nil options:nil] firstObject];
+    [self.view addSubview:_testView];
+    _testView.frame = CGRectMake(36, 106, 266, 108);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    NSLog(@"%ld", _testView.count);
+    [_testView setNeedsLayout]; // 该方法是异步执行
+    [_testView layoutIfNeeded]; // 该方法让上句代码变为同步执行
+    NSLog(@"%ld", _testView.count);
 }
 
 @end
