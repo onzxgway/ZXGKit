@@ -142,6 +142,8 @@
     [super viewDidAppear:animated];
 
 }
+    
+// 结论： 控制器在初始化过程中，根View 的 superview 属性 在viewWillLayoutSubviews方法及之后才有值的。
 
 
 #pragma mark - LazyLoad
