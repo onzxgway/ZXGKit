@@ -39,6 +39,7 @@
 		045EA666217F1A2500A94B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045EA664217F1A2500A94B88 /* LaunchScreen.storyboard */; };
 		045EA669217F1A2500A94B88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045EA668217F1A2500A94B88 /* main.m */; };
 		045EA66E217F1A4300A94B88 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 045EA66D217F1A4300A94B88 /* README.md */; };
+		0496AFAF2181583400540C8C /* ResponderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496AFAE2181583400540C8C /* ResponderController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,8 @@
 		045EA667217F1A2500A94B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045EA668217F1A2500A94B88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		045EA66D217F1A4300A94B88 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0496AFAD2181583400540C8C /* ResponderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponderController.h; sourceTree = "<group>"; };
+		0496AFAE2181583400540C8C /* ResponderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,7 @@
 		045EA658217F1A2400A94B88 /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				0496AFAC2181581C00540C8C /* Controllers */,
 				04557B19218058C600BD3F12 /* Views */,
 				045EA659217F1A2400A94B88 /* AppDelegate.h */,
 				045EA65A217F1A2500A94B88 /* AppDelegate.m */,
@@ -237,6 +241,15 @@
 				04557B292180713100BD3F12 /* PrefixHeader.pch */,
 			);
 			path = Event;
+			sourceTree = "<group>";
+		};
+		0496AFAC2181581C00540C8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0496AFAD2181583400540C8C /* ResponderController.h */,
+				0496AFAE2181583400540C8C /* ResponderController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0496AFAF2181583400540C8C /* ResponderController.m in Sources */,
 				045EA65E217F1A2500A94B88 /* ViewController.m in Sources */,
 				04557B1F218058EC00BD3F12 /* YellowView.m in Sources */,
 				04557B222180592500BD3F12 /* RedView.m in Sources */,

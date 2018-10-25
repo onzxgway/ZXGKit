@@ -12,13 +12,17 @@
 #import "RedView.h"
 #import "BlueView.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
     
 @property (nonatomic, strong) GrayView *grayView;
 @property (nonatomic, strong) YellowView *yellowView;
 @property (nonatomic, strong) RedView *redView;
 @property (nonatomic, strong) BlueView *blueView;
-    
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray<NSDictionary<NSString *, NSString *> *> *dataSource;
+
 @end
 
 @implementation ViewController
@@ -33,8 +37,6 @@
     
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    
-    [self layoutSubView];
 }
     
 - (void)viewDidLayoutSubviews {
@@ -79,9 +81,55 @@
     NSLayoutConstraint *yellowH = [NSLayoutConstraint constraintWithItem:self.yellowView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.grayView attribute:NSLayoutAttributeHeight multiplier:1.f constant:0.f];
     [self.view addConstraints:@[yellowViewTop, yellowViewCenterX, yellowW, yellowH]];
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    NSDictionary *dic = self.dataSource[indexPath.row];
+    cell.textLabel.text = [dic.allKeys firstObject];
+    cell.textLabel.font = [UIFont systemFontOfSize:12.f];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dic = self.dataSource[indexPath.row];
     
+    // 由字符串转为类型的时候  如果类型是自定义的 需要在类型字符串前边加上你的项目的名字！
+    Class cla = NSClassFromString([dic.allValues firstObject]);
+    [self.navigationController pushViewController:[[cla alloc] init] animated:YES];
+}
     
 #pragma mark - lazy load
+
+- (NSArray *)dataSource {
+    if (!_dataSource) {
+        _dataSource = @[
+                        @{
+                          @"UIResponder和响应链的组成" : @"ResponderController"
+                          },
+                         @{
+                          @"Swift是面向对象还是函数式的编程语言？" : @"OOOrFunctionController"
+                          },
+                         @{
+                          @"Open, Public, Internal, File-private, Private" : @"AuthorityController"
+                          },
+                         @{
+                          @"在 Swift 中，怎样理解是 copy-on-write？" : @"CopyonwriteController"
+                          },
+                         @{
+                          @"什么是属性观察（Property Observer）？" : @"PropertyObserverController"
+                          },
+                         @{
+                          @"Swift 实战题" : @"ReallyController"
+                          }
+                        
+                        ];
+    }
+    return _dataSource;
+}
 
 - (GrayView *)grayView {
     if (!_grayView) {
