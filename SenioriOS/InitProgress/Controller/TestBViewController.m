@@ -145,6 +145,21 @@
     
 // 结论： 控制器在初始化过程中，根View 的 superview 属性 在viewWillLayoutSubviews方法及之后才有值的。
 
+/**
+ 此时刻 self.view.superview 是有值的， 还没有调用removeFromSuperview方法。
+ */
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+}
+
+/**
+ 此时刻 self.view 已经从 superview 移除了。
+ */
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+}
 
 #pragma mark - LazyLoad
 
