@@ -33,8 +33,8 @@
     
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     NSLog(@"%s", __func__);
-//    return [self hitTest:point event:event];
-    return [super hitTest:point withEvent:event];
+    return [self hitTest:point event:event];
+//    return [super hitTest:point withEvent:event];
 }
     
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {

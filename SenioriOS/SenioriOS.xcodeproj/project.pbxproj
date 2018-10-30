@@ -40,6 +40,9 @@
 		045EA669217F1A2500A94B88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045EA668217F1A2500A94B88 /* main.m */; };
 		045EA66E217F1A4300A94B88 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 045EA66D217F1A4300A94B88 /* README.md */; };
 		0496AFAF2181583400540C8C /* ResponderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496AFAE2181583400540C8C /* ResponderController.m */; };
+		049F8BF321888B5F00CF798C /* PracticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF221888B5F00CF798C /* PracticeController.m */; };
+		049F8BF621888BA200CF798C /* PracticeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF521888BA200CF798C /* PracticeButton.m */; };
+		049F8BF921888F2C00CF798C /* PracticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF821888F2C00CF798C /* PracticeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +102,12 @@
 		045EA66D217F1A4300A94B88 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0496AFAD2181583400540C8C /* ResponderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponderController.h; sourceTree = "<group>"; };
 		0496AFAE2181583400540C8C /* ResponderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderController.m; sourceTree = "<group>"; };
+		049F8BF121888B5F00CF798C /* PracticeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PracticeController.h; sourceTree = "<group>"; };
+		049F8BF221888B5F00CF798C /* PracticeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticeController.m; sourceTree = "<group>"; };
+		049F8BF421888BA200CF798C /* PracticeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PracticeButton.h; sourceTree = "<group>"; };
+		049F8BF521888BA200CF798C /* PracticeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticeButton.m; sourceTree = "<group>"; };
+		049F8BF721888F2C00CF798C /* PracticeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PracticeView.h; sourceTree = "<group>"; };
+		049F8BF821888F2C00CF798C /* PracticeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +191,10 @@
 				04557B242180593100BD3F12 /* BlueView.m */,
 				04557B26218070C600BD3F12 /* UIView+HitTest.h */,
 				04557B27218070C600BD3F12 /* UIView+HitTest.m */,
+				049F8BF421888BA200CF798C /* PracticeButton.h */,
+				049F8BF521888BA200CF798C /* PracticeButton.m */,
+				049F8BF721888F2C00CF798C /* PracticeView.h */,
+				049F8BF821888F2C00CF798C /* PracticeView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +261,8 @@
 			children = (
 				0496AFAD2181583400540C8C /* ResponderController.h */,
 				0496AFAE2181583400540C8C /* ResponderController.m */,
+				049F8BF121888B5F00CF798C /* PracticeController.h */,
+				049F8BF221888B5F00CF798C /* PracticeController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -418,10 +433,13 @@
 				04557B1F218058EC00BD3F12 /* YellowView.m in Sources */,
 				04557B222180592500BD3F12 /* RedView.m in Sources */,
 				045EA669217F1A2500A94B88 /* main.m in Sources */,
+				049F8BF621888BA200CF798C /* PracticeButton.m in Sources */,
 				04557B28218070C600BD3F12 /* UIView+HitTest.m in Sources */,
+				049F8BF321888B5F00CF798C /* PracticeController.m in Sources */,
 				045EA65B217F1A2500A94B88 /* AppDelegate.m in Sources */,
 				04557B252180593100BD3F12 /* BlueView.m in Sources */,
 				04557B1C218058E000BD3F12 /* GrayView.m in Sources */,
+				049F8BF921888F2C00CF798C /* PracticeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

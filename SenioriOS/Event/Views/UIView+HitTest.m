@@ -11,7 +11,7 @@
 @implementation UIView (HitTest)
     
 /**
-
+ // 原生hitTest实现逻辑。
  0.调用当前视图的pointInside:withEvent:方法判断触摸点是否在当前视图内；
  1.若返回NO,则hitTest:withEvent:返回nil;
  2.若返回YES,则向当前视图的所有子视图发送hitTest:withEvent:消息，所有子视图的遍历顺序是从top到bottom，即从subviews数组的末尾向前遍历,直到有子视图返回非空对象或者全部子视图遍历完毕；
@@ -31,22 +31,17 @@
     }
 
     NSArray *subViews = [[self.subviews reverseObjectEnumerator] allObjects];
-    UIView *tempView = nil;
+    UIView *tempView = self;
     for (UIView *view in subViews) {
         CGPoint pt = [self convertPoint:point toView:view];
-        UIView *tempV = [view hitTest:pt event:event];
+        UIView *tempV = [view hitTest:pt withEvent:event];
         if (tempV) {
             tempView = tempV;
             break;
         }
     }
 
-    if (tempView) {
-        return tempView;
-    }
-    else {
-        return self;
-    }
+    return tempView;
 
 }
 
