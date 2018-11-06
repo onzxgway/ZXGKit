@@ -70,10 +70,10 @@
                           @"hitTest和pointInside应用" : @"PracticeController"
                           },
                          @{
-                          @"Open, Public, Internal, File-private, Private" : @"AuthorityController"
+                          @"手势事件" : @"GestureEventController"
                           },
                          @{
-                          @"在 Swift 中，怎样理解是 copy-on-write？" : @"CopyonwriteController"
+                          @"UIButton事件" : @"ButtonController"
                           },
                          @{
                           @"什么是属性观察（Property Observer）？" : @"PropertyObserverController"
