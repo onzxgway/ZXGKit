@@ -24,4 +24,34 @@
 //    
 //}
 
+// 重写该方法可以劫持target-action事件。
+- (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
+    [super sendAction:@selector(btnAction) to:self forEvent:event];
+}
+
+- (void)btnAction {
+    NSLog(@"😆😆😆面朝大海😆😆😆");
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s", __func__);
+    [super touchesBegan:touches withEvent:event];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s", __func__);
+    [super touchesMoved:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s", __func__);
+    [super touchesEnded:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s", __func__);
+    [super touchesCancelled:touches withEvent:event];
+}
+
+
 @end

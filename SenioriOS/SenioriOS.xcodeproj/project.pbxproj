@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0430B7712179AF7A00BADF2F /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430B7702179AF7A00BADF2F /* TestView.m */; };
 		0430B7732179DB4000BADF2F /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0430B7722179DB4000BADF2F /* TestView.xib */; };
+		043AFB232191C8E2006C6395 /* GestureEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB222191C8E2006C6395 /* GestureEventController.m */; };
+		043AFB272191C99E006C6395 /* RedTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB262191C99E006C6395 /* RedTapGestureRecognizer.m */; };
+		043AFB2A2191D601006C6395 /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB292191D601006C6395 /* ButtonController.m */; };
 		04498CD721774C9E0060D077 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04498CD621774C9E0060D077 /* AppDelegate.m */; };
 		04498CDA21774C9E0060D077 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04498CD921774C9E0060D077 /* ViewController.m */; };
 		04498CDD21774C9E0060D077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04498CDB21774C9E0060D077 /* Main.storyboard */; };
@@ -50,6 +53,12 @@
 		0430B76F2179AF7A00BADF2F /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		0430B7702179AF7A00BADF2F /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		0430B7722179DB4000BADF2F /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		043AFB212191C8E2006C6395 /* GestureEventController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureEventController.h; sourceTree = "<group>"; };
+		043AFB222191C8E2006C6395 /* GestureEventController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureEventController.m; sourceTree = "<group>"; };
+		043AFB252191C99E006C6395 /* RedTapGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedTapGestureRecognizer.h; sourceTree = "<group>"; };
+		043AFB262191C99E006C6395 /* RedTapGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedTapGestureRecognizer.m; sourceTree = "<group>"; };
+		043AFB282191D601006C6395 /* ButtonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonController.h; sourceTree = "<group>"; };
+		043AFB292191D601006C6395 /* ButtonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonController.m; sourceTree = "<group>"; };
 		04498CD321774C9E0060D077 /* InitProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InitProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04498CD521774C9E0060D077 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04498CD621774C9E0060D077 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,6 +157,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		043AFB242191C97C006C6395 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				043AFB252191C99E006C6395 /* RedTapGestureRecognizer.h */,
+				043AFB262191C99E006C6395 /* RedTapGestureRecognizer.m */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
 		04498CD421774C9E0060D077 /* InitProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +260,7 @@
 		045EA658217F1A2400A94B88 /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				043AFB242191C97C006C6395 /* Gesture */,
 				0496AFAC2181581C00540C8C /* Controllers */,
 				04557B19218058C600BD3F12 /* Views */,
 				045EA659217F1A2400A94B88 /* AppDelegate.h */,
@@ -268,6 +287,10 @@
 				049F8BF221888B5F00CF798C /* PracticeController.m */,
 				0455C82C2199160900D027FC /* ApplyController.h */,
 				0455C82D2199160900D027FC /* ApplyController.m */,
+				043AFB212191C8E2006C6395 /* GestureEventController.h */,
+				043AFB222191C8E2006C6395 /* GestureEventController.m */,
+				043AFB282191D601006C6395 /* ButtonController.h */,
+				043AFB292191D601006C6395 /* ButtonController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -436,14 +459,17 @@
 				0496AFAF2181583400540C8C /* ResponderController.m in Sources */,
 				045EA65E217F1A2500A94B88 /* ViewController.m in Sources */,
 				04557B1F218058EC00BD3F12 /* YellowView.m in Sources */,
+				043AFB272191C99E006C6395 /* RedTapGestureRecognizer.m in Sources */,
 				04557B222180592500BD3F12 /* RedView.m in Sources */,
 				045EA669217F1A2500A94B88 /* main.m in Sources */,
 				0455C82E2199160900D027FC /* ApplyController.m in Sources */,
 				049F8BF621888BA200CF798C /* PracticeButton.m in Sources */,
 				04557B28218070C600BD3F12 /* UIView+HitTest.m in Sources */,
+				043AFB2A2191D601006C6395 /* ButtonController.m in Sources */,
 				049F8BF321888B5F00CF798C /* PracticeController.m in Sources */,
 				045EA65B217F1A2500A94B88 /* AppDelegate.m in Sources */,
 				04557B252180593100BD3F12 /* BlueView.m in Sources */,
+				043AFB232191C8E2006C6395 /* GestureEventController.m in Sources */,
 				04557B1C218058E000BD3F12 /* GrayView.m in Sources */,
 				049F8BF921888F2C00CF798C /* PracticeView.m in Sources */,
 			);

@@ -1,18 +1,19 @@
 //
-//  ResponderController.m
+//  GestureEventController.m
 //  Event
 //
-//  Created by 朱献国 on 2018/10/25.
+//  Created by 朱献国 on 2018/11/6.
 //  Copyright © 2018年 朱献国. All rights reserved.
 //
 
-#import "ResponderController.h"
+#import "GestureEventController.h"
 #import "GrayView.h"
 #import "YellowView.h"
 #import "RedView.h"
 #import "BlueView.h"
+#import "RedTapGestureRecognizer.h"
 
-@interface ResponderController ()
+@interface GestureEventController ()
 
 @property (nonatomic, strong) GrayView *grayView;
 @property (nonatomic, strong) YellowView *yellowView;
@@ -21,7 +22,17 @@
 
 @end
 
-@implementation ResponderController
+/**
+ 3.手势种类：
+ UITapGestureRecognizer
+ UIPanGestureRecognizer   (拖动)
+ UISwipeGestureRecognizer (轻扫)
+ UIPinchGestureRecognizer (捏合)
+ UIRotationGestureRecognizer  (旋转)
+ UILongPressGestureRecognizer (长按)
+ UIScreenEdgePanGestureRecognizer (屏幕边缘)
+ */
+@implementation GestureEventController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,6 +79,7 @@
 - (GrayView *)grayView {
     if (!_grayView) {
         _grayView = [[GrayView alloc] init];
+//        [_grayView addGestureRecognizer:[[RedTapGestureRecognizer alloc] initWithTarget:self action:@selector(redViewClick)]];
     }
     return _grayView;
 }
@@ -79,39 +91,34 @@
     return _yellowView;
 }
 
+/**
+ 1.手势与 hitTest 和 pointInside 的关系？
+ 
+    必须先通过两个函数找到View,然后View上添加的手势才能响应。
+ 
+    View 以及 View.superview... 上如果有手势都会响应。
+ */
 - (RedView *)redView {
     if (!_redView) {
         _redView = [[RedView alloc] init];
-        [_redView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(redViewClick)]];
+        RedTapGestureRecognizer *ges = [[RedTapGestureRecognizer alloc] initWithTarget:self action:@selector(redViewClick)];
+        ges.cancelsTouchesInView = YES; // 识别手势之后，是否取消View的touch事件。
+        ges.delaysTouchesBegan = YES;   // 是否延迟View的touch事件识别。如果延迟了，那么手势也识别了，就放弃touch事件。
+        [_redView addGestureRecognizer:ges];
     }
     return _redView;
 }
+/**
+ 4.手势和view的touch事件的关系？
+    delaysTouchesBegan
+    cancelsTouchesInView
+ */
 
 - (BlueView *)blueView {
     if (!_blueView) {
         _blueView = [[BlueView alloc] init];
     }
     return _blueView;
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesBegan:touches withEvent:event];
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesMoved:touches withEvent:event];
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesEnded:touches withEvent:event];
-}
-
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesCancelled:touches withEvent:event];
 }
 
 - (void)redViewClick {
