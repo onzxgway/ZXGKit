@@ -70,18 +70,8 @@
                           @"hitTest和pointInside应用" : @"PracticeController"
                           },
                          @{
-                          @"Open, Public, Internal, File-private, Private" : @"AuthorityController"
-                          },
-                         @{
-                          @"在 Swift 中，怎样理解是 copy-on-write？" : @"CopyonwriteController"
-                          },
-                         @{
-                          @"什么是属性观察（Property Observer）？" : @"PropertyObserverController"
-                          },
-                         @{
-                          @"Swift 实战题" : @"ReallyController"
+                          @"实际应用" : @"ApplyController"
                           }
-                        
                         ];
     }
     return _dataSource;

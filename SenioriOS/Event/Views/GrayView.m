@@ -33,8 +33,39 @@
     
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     NSLog(@"%s", __func__);
-    return [self hitTest:point event:event];
+//    return [self hitTest:point event:event];
 //    return [super hitTest:point withEvent:event];
+    
+    if (self.alpha <= 0.01 || self.hidden || !self.userInteractionEnabled) {
+        return nil;
+    }
+    
+//    if (![self pointInside:point withEvent:event]) {
+//        return nil;
+//    }
+    
+    UIView *targetV = nil;
+    for (UIView *subView in [self.subviews.reverseObjectEnumerator allObjects]) {
+        
+        CGPoint newP = [self convertPoint:point toView:subView];
+//        UIView *v = [subView hitTest:newP withEvent:event];
+//        if (v) {
+//            targetV = v;
+//            break;
+//        }
+        
+        BOOL res = [subView pointInside:newP withEvent:event];
+        if (res) {
+            targetV = [subView hitTest:newP withEvent:event];
+            break;
+        }
+    }
+    
+    if (targetV == nil && [self pointInside:point withEvent:event]) {
+        targetV = self;
+    }
+    
+    return targetV;
 }
 
 // point is in the receiver's coordinate system.

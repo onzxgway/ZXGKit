@@ -24,6 +24,7 @@
 		04557B222180592500BD3F12 /* RedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04557B212180592500BD3F12 /* RedView.m */; };
 		04557B252180593100BD3F12 /* BlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04557B242180593100BD3F12 /* BlueView.m */; };
 		04557B28218070C600BD3F12 /* UIView+HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04557B27218070C600BD3F12 /* UIView+HitTest.m */; };
+		0455C82E2199160900D027FC /* ApplyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455C82D2199160900D027FC /* ApplyController.m */; };
 		0459BB0921749B8200DFB547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459BB0821749B8200DFB547 /* AppDelegate.m */; };
 		0459BB0C21749B8200DFB547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459BB0B21749B8200DFB547 /* ViewController.m */; };
 		0459BB0F21749B8200DFB547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0459BB0D21749B8200DFB547 /* Main.storyboard */; };
@@ -77,6 +78,8 @@
 		04557B26218070C600BD3F12 /* UIView+HitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HitTest.h"; sourceTree = "<group>"; };
 		04557B27218070C600BD3F12 /* UIView+HitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HitTest.m"; sourceTree = "<group>"; };
 		04557B292180713100BD3F12 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0455C82C2199160900D027FC /* ApplyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyController.h; sourceTree = "<group>"; };
+		0455C82D2199160900D027FC /* ApplyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyController.m; sourceTree = "<group>"; };
 		0459BB0521749B8200DFB547 /* LaunchTheory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchTheory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0459BB0721749B8200DFB547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0459BB0821749B8200DFB547 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				0496AFAE2181583400540C8C /* ResponderController.m */,
 				049F8BF121888B5F00CF798C /* PracticeController.h */,
 				049F8BF221888B5F00CF798C /* PracticeController.m */,
+				0455C82C2199160900D027FC /* ApplyController.h */,
+				0455C82D2199160900D027FC /* ApplyController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				04557B1F218058EC00BD3F12 /* YellowView.m in Sources */,
 				04557B222180592500BD3F12 /* RedView.m in Sources */,
 				045EA669217F1A2500A94B88 /* main.m in Sources */,
+				0455C82E2199160900D027FC /* ApplyController.m in Sources */,
 				049F8BF621888BA200CF798C /* PracticeButton.m in Sources */,
 				04557B28218070C600BD3F12 /* UIView+HitTest.m in Sources */,
 				049F8BF321888B5F00CF798C /* PracticeController.m in Sources */,
