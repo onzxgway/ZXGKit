@@ -1,0 +1,37 @@
+//
+//  BlueGesture.m
+//  EventToo
+//
+//  Created by 朱献国 on 2018/11/13.
+//  Copyright © 2018年 朱献国. All rights reserved.
+//
+
+#import "BlueGesture.h"
+
+@implementation BlueGesture
+
+- (instancetype)initWithTarget:(id)target action:(SEL)action {
+    self = [super initWithTarget:target action:action];
+    if (self) {
+//        self.delegate = self;
+    }
+    return self;
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    return YES;
+}
+
+// 共存 当前手势是否可以与其他手势识别器共同识别
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
+// called before touchesBegan:withEvent: is called on the gesture recognizer for a new touch. return NO to prevent the gesture recognizer from seeing this touch
+// 在手势对象内部的touch事件调用之前，调用
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return YES;
+}
+
+
+@end
