@@ -72,7 +72,6 @@
                          @{
                           @"实际应用" : @"ApplyController"
                           }
-                        }
                         ];
     }
     return _dataSource;
