@@ -14,7 +14,7 @@
 - (instancetype)initWithTarget:(id)target action:(SEL)action {
     self = [super initWithTarget:target action:action];
     if (self) {
-    self.delegate = self;
+//    self.delegate = self;
     }
     return self;
 }
