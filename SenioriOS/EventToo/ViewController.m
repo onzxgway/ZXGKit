@@ -57,7 +57,7 @@
                             @"多手势共存和互斥" : @"MultiGestureController"
                             },
                         @{
-                            @"hitTest和pointInside应用" : @"PracticeController"
+                            @"轮播图" : @"BannerController"
                             },
                         @{
                             @"实际应用" : @"ApplyController"

@@ -47,6 +47,8 @@
 		049F8BF321888B5F00CF798C /* PracticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF221888B5F00CF798C /* PracticeController.m */; };
 		049F8BF621888BA200CF798C /* PracticeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF521888BA200CF798C /* PracticeButton.m */; };
 		049F8BF921888F2C00CF798C /* PracticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF821888F2C00CF798C /* PracticeView.m */; };
+		04A16BA621A3F087006E3BB8 /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A16BA521A3F087006E3BB8 /* BannerController.m */; };
+		04A16BA921A3FE14006E3BB8 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A16BA821A3FE14006E3BB8 /* BannerView.m */; };
 		04BD4E0B219AE7E200D34BAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD4E0A219AE7E200D34BAB /* AppDelegate.m */; };
 		04BD4E0E219AE7E200D34BAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD4E0D219AE7E200D34BAB /* ViewController.m */; };
 		04BD4E11219AE7E200D34BAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD4E0F219AE7E200D34BAB /* Main.storyboard */; };
@@ -134,6 +136,10 @@
 		049F8BF521888BA200CF798C /* PracticeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticeButton.m; sourceTree = "<group>"; };
 		049F8BF721888F2C00CF798C /* PracticeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PracticeView.h; sourceTree = "<group>"; };
 		049F8BF821888F2C00CF798C /* PracticeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticeView.m; sourceTree = "<group>"; };
+		04A16BA421A3F087006E3BB8 /* BannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerController.h; sourceTree = "<group>"; };
+		04A16BA521A3F087006E3BB8 /* BannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerController.m; sourceTree = "<group>"; };
+		04A16BA721A3FE14006E3BB8 /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		04A16BA821A3FE14006E3BB8 /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		04BD4E07219AE7E200D34BAB /* EventToo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventToo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD4E09219AE7E200D34BAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BD4E0A219AE7E200D34BAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -368,6 +374,8 @@
 			children = (
 				04BD4E1E219AE97900D34BAB /* MultiGestureController.h */,
 				04BD4E1F219AE97900D34BAB /* MultiGestureController.m */,
+				04A16BA421A3F087006E3BB8 /* BannerController.h */,
+				04A16BA521A3F087006E3BB8 /* BannerController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -396,6 +404,8 @@
 				04BD4E24219AF43700D34BAB /* RedView.m */,
 				04BD4E26219AF44100D34BAB /* YellowView.h */,
 				04BD4E27219AF44100D34BAB /* YellowView.m */,
+				04A16BA721A3FE14006E3BB8 /* BannerView.h */,
+				04A16BA821A3FE14006E3BB8 /* BannerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -616,8 +626,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BD4E0E219AE7E200D34BAB /* ViewController.m in Sources */,
+				04A16BA921A3FE14006E3BB8 /* BannerView.m in Sources */,
 				04BD4E20219AE97900D34BAB /* MultiGestureController.m in Sources */,
 				04BD4E34219AFE9A00D34BAB /* BlueView.m in Sources */,
+				04A16BA621A3F087006E3BB8 /* BannerController.m in Sources */,
 				04BD4E19219AE7E500D34BAB /* main.m in Sources */,
 				04BD4E25219AF43700D34BAB /* RedView.m in Sources */,
 				04BD4E28219AF44100D34BAB /* YellowView.m in Sources */,
