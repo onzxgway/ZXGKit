@@ -53,7 +53,7 @@
     YellowGesture *yG = [[YellowGesture alloc] initWithTarget:self action:@selector(yG)];
     [y addGestureRecognizer:yG];
     
-    [yG requireGestureRecognizerToFail:rG];
+//    [yG requireGestureRecognizerToFail:rG]; // 手势互斥
 }
 
 - (void)bG {
