@@ -61,6 +61,9 @@
                             },
                         @{
                             @"ScrollView事件处理" : @"ApplicationController"
+                            },
+                        @{
+                            @"UIScreenEdgePanGestureRecognizer" : @"ScreenEdgeController"
                             }
                         ];
     }

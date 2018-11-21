@@ -10,8 +10,10 @@
 #import "RedView.h"
 #import "BannerView.h"
 #import "BlueView.h"
+#import "RedGesture.h"
+#import "TableView.h"
 
-@interface ApplicationController ()
+@interface ApplicationController () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -30,8 +32,10 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self createScrollView];
+//    [self createScrollView];
     
+    
+    [self createTableView];
 }
 
 - (void)createScrollView {
@@ -56,6 +60,37 @@
     [sc addSubview:bv];
     bv.frame = CGRectMake(0, 180, 320, 280);
     
+}
+
+- (void)createTableView {
+    
+    RedGesture *ges = [[RedGesture alloc] initWithTarget:self action:@selector(click)];
+    ges.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:ges];
+    
+    TableView *tv = [[TableView alloc] initWithFrame:CGRectMake(20, 108, 320, 560) style:UITableViewStylePlain];
+    tv.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:tv];
+    tv.delegate = self;
+    tv.dataSource = self;
+    
+}
+
+- (void)click {
+    NSLog(@"RedGesture click!");
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 6;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"didSelectRowAtIndexPath");
 }
 
 @end

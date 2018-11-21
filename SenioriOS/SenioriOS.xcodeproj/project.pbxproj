@@ -29,6 +29,8 @@
 		04557B28218070C600BD3F12 /* UIView+HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04557B27218070C600BD3F12 /* UIView+HitTest.m */; };
 		0455C82E2199160900D027FC /* ApplyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455C82D2199160900D027FC /* ApplyController.m */; };
 		045734E221A4EC67007CF6BA /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734E121A4EC67007CF6BA /* ApplicationController.m */; };
+		045734E721A54E90007CF6BA /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734E621A54E90007CF6BA /* TableView.m */; };
+		045734EA21A55754007CF6BA /* ScreenEdgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734E921A55754007CF6BA /* ScreenEdgeController.m */; };
 		0459BB0921749B8200DFB547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459BB0821749B8200DFB547 /* AppDelegate.m */; };
 		0459BB0C21749B8200DFB547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459BB0B21749B8200DFB547 /* ViewController.m */; };
 		0459BB0F21749B8200DFB547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0459BB0D21749B8200DFB547 /* Main.storyboard */; };
@@ -108,6 +110,10 @@
 		0455C82D2199160900D027FC /* ApplyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyController.m; sourceTree = "<group>"; };
 		045734E021A4EC67007CF6BA /* ApplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationController.h; sourceTree = "<group>"; };
 		045734E121A4EC67007CF6BA /* ApplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationController.m; sourceTree = "<group>"; };
+		045734E521A54E90007CF6BA /* TableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
+		045734E621A54E90007CF6BA /* TableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
+		045734E821A55754007CF6BA /* ScreenEdgeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenEdgeController.h; sourceTree = "<group>"; };
+		045734E921A55754007CF6BA /* ScreenEdgeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenEdgeController.m; sourceTree = "<group>"; };
 		0459BB0521749B8200DFB547 /* LaunchTheory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchTheory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0459BB0721749B8200DFB547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0459BB0821749B8200DFB547 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -381,6 +387,8 @@
 				04A16BA521A3F087006E3BB8 /* BannerController.m */,
 				045734E021A4EC67007CF6BA /* ApplicationController.h */,
 				045734E121A4EC67007CF6BA /* ApplicationController.m */,
+				045734E821A55754007CF6BA /* ScreenEdgeController.h */,
+				045734E921A55754007CF6BA /* ScreenEdgeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +419,8 @@
 				04BD4E27219AF44100D34BAB /* YellowView.m */,
 				04A16BA721A3FE14006E3BB8 /* BannerView.h */,
 				04A16BA821A3FE14006E3BB8 /* BannerView.m */,
+				045734E521A54E90007CF6BA /* TableView.h */,
+				045734E621A54E90007CF6BA /* TableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -633,12 +643,14 @@
 				045734E221A4EC67007CF6BA /* ApplicationController.m in Sources */,
 				04BD4E0E219AE7E200D34BAB /* ViewController.m in Sources */,
 				04A16BA921A3FE14006E3BB8 /* BannerView.m in Sources */,
+				045734E721A54E90007CF6BA /* TableView.m in Sources */,
 				04BD4E20219AE97900D34BAB /* MultiGestureController.m in Sources */,
 				04BD4E34219AFE9A00D34BAB /* BlueView.m in Sources */,
 				04A16BA621A3F087006E3BB8 /* BannerController.m in Sources */,
 				04BD4E19219AE7E500D34BAB /* main.m in Sources */,
 				04BD4E25219AF43700D34BAB /* RedView.m in Sources */,
 				04BD4E28219AF44100D34BAB /* YellowView.m in Sources */,
+				045734EA21A55754007CF6BA /* ScreenEdgeController.m in Sources */,
 				04BD4E2E219AF65900D34BAB /* YellowGesture.m in Sources */,
 				04BD4E37219AFEFC00D34BAB /* BlueGesture.m in Sources */,
 				04BD4E0B219AE7E200D34BAB /* AppDelegate.m in Sources */,
