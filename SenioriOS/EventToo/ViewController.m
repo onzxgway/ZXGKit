@@ -57,10 +57,10 @@
                             @"多手势共存和互斥" : @"MultiGestureController"
                             },
                         @{
-                            @"轮播图" : @"BannerController"
+                            @"(手势案例) 轮播图" : @"BannerController"
                             },
                         @{
-                            @"实际应用" : @"ApplyController"
+                            @"ScrollView事件处理" : @"ApplicationController"
                             }
                         ];
     }

@@ -28,6 +28,7 @@
 		04557B252180593100BD3F12 /* BlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04557B242180593100BD3F12 /* BlueView.m */; };
 		04557B28218070C600BD3F12 /* UIView+HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04557B27218070C600BD3F12 /* UIView+HitTest.m */; };
 		0455C82E2199160900D027FC /* ApplyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455C82D2199160900D027FC /* ApplyController.m */; };
+		045734E221A4EC67007CF6BA /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734E121A4EC67007CF6BA /* ApplicationController.m */; };
 		0459BB0921749B8200DFB547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459BB0821749B8200DFB547 /* AppDelegate.m */; };
 		0459BB0C21749B8200DFB547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459BB0B21749B8200DFB547 /* ViewController.m */; };
 		0459BB0F21749B8200DFB547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0459BB0D21749B8200DFB547 /* Main.storyboard */; };
@@ -105,6 +106,8 @@
 		04557B292180713100BD3F12 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0455C82C2199160900D027FC /* ApplyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyController.h; sourceTree = "<group>"; };
 		0455C82D2199160900D027FC /* ApplyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyController.m; sourceTree = "<group>"; };
+		045734E021A4EC67007CF6BA /* ApplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationController.h; sourceTree = "<group>"; };
+		045734E121A4EC67007CF6BA /* ApplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationController.m; sourceTree = "<group>"; };
 		0459BB0521749B8200DFB547 /* LaunchTheory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchTheory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0459BB0721749B8200DFB547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0459BB0821749B8200DFB547 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 				04BD4E1F219AE97900D34BAB /* MultiGestureController.m */,
 				04A16BA421A3F087006E3BB8 /* BannerController.h */,
 				04A16BA521A3F087006E3BB8 /* BannerController.m */,
+				045734E021A4EC67007CF6BA /* ApplicationController.h */,
+				045734E121A4EC67007CF6BA /* ApplicationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045734E221A4EC67007CF6BA /* ApplicationController.m in Sources */,
 				04BD4E0E219AE7E200D34BAB /* ViewController.m in Sources */,
 				04A16BA921A3FE14006E3BB8 /* BannerView.m in Sources */,
 				04BD4E20219AE97900D34BAB /* MultiGestureController.m in Sources */,
