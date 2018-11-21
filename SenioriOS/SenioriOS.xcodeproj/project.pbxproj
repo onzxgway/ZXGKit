@@ -31,6 +31,8 @@
 		045734E221A4EC67007CF6BA /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734E121A4EC67007CF6BA /* ApplicationController.m */; };
 		045734E721A54E90007CF6BA /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734E621A54E90007CF6BA /* TableView.m */; };
 		045734EA21A55754007CF6BA /* ScreenEdgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734E921A55754007CF6BA /* ScreenEdgeController.m */; };
+		045734ED21A5638D007CF6BA /* TGTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734EC21A5638D007CF6BA /* TGTestController.m */; };
+		045734F021A565A7007CF6BA /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045734EF21A565A7007CF6BA /* RootView.m */; };
 		0459BB0921749B8200DFB547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459BB0821749B8200DFB547 /* AppDelegate.m */; };
 		0459BB0C21749B8200DFB547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459BB0B21749B8200DFB547 /* ViewController.m */; };
 		0459BB0F21749B8200DFB547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0459BB0D21749B8200DFB547 /* Main.storyboard */; };
@@ -114,6 +116,10 @@
 		045734E621A54E90007CF6BA /* TableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
 		045734E821A55754007CF6BA /* ScreenEdgeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenEdgeController.h; sourceTree = "<group>"; };
 		045734E921A55754007CF6BA /* ScreenEdgeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenEdgeController.m; sourceTree = "<group>"; };
+		045734EB21A5638D007CF6BA /* TGTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTestController.h; sourceTree = "<group>"; };
+		045734EC21A5638D007CF6BA /* TGTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTestController.m; sourceTree = "<group>"; };
+		045734EE21A565A7007CF6BA /* RootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
+		045734EF21A565A7007CF6BA /* RootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
 		0459BB0521749B8200DFB547 /* LaunchTheory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchTheory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0459BB0721749B8200DFB547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0459BB0821749B8200DFB547 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -389,6 +395,8 @@
 				045734E121A4EC67007CF6BA /* ApplicationController.m */,
 				045734E821A55754007CF6BA /* ScreenEdgeController.h */,
 				045734E921A55754007CF6BA /* ScreenEdgeController.m */,
+				045734EB21A5638D007CF6BA /* TGTestController.h */,
+				045734EC21A5638D007CF6BA /* TGTestController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,6 +429,8 @@
 				04A16BA821A3FE14006E3BB8 /* BannerView.m */,
 				045734E521A54E90007CF6BA /* TableView.h */,
 				045734E621A54E90007CF6BA /* TableView.m */,
+				045734EE21A565A7007CF6BA /* RootView.h */,
+				045734EF21A565A7007CF6BA /* RootView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -650,11 +660,13 @@
 				04BD4E19219AE7E500D34BAB /* main.m in Sources */,
 				04BD4E25219AF43700D34BAB /* RedView.m in Sources */,
 				04BD4E28219AF44100D34BAB /* YellowView.m in Sources */,
+				045734F021A565A7007CF6BA /* RootView.m in Sources */,
 				045734EA21A55754007CF6BA /* ScreenEdgeController.m in Sources */,
 				04BD4E2E219AF65900D34BAB /* YellowGesture.m in Sources */,
 				04BD4E37219AFEFC00D34BAB /* BlueGesture.m in Sources */,
 				04BD4E0B219AE7E200D34BAB /* AppDelegate.m in Sources */,
 				04BD4E31219AFCBE00D34BAB /* WhiteGesture.m in Sources */,
+				045734ED21A5638D007CF6BA /* TGTestController.m in Sources */,
 				04BD4E2B219AF56800D34BAB /* RedGesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

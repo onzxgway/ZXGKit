@@ -64,7 +64,11 @@
                             },
                         @{
                             @"UIScreenEdgePanGestureRecognizer" : @"ScreenEdgeController"
+                            },
+                        @{
+                            @"touch和gesture" : @"TGTestController"
                             }
+                        
                         ];
     }
     return _dataSource;
