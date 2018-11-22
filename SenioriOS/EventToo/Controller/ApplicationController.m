@@ -18,8 +18,7 @@
 @end
 
 /**
- 
- ScrollView 对touch事件的拦截（相对于 父View  和  子View 来说）
+ ScrollView上的触摸事件的分析
  
  */
 @implementation ApplicationController
@@ -32,12 +31,26 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-//    [self createScrollView];
     
+    // ScrollView 事件处理（相对于 子View）
+//    [self createScrollView];
     
     [self createTableView];
 }
 
+/**
+ 
+ 1. ScrollView 不能滚动的时候（x方向 或 y方向），其本身以及子控件的touch事件会被触发。
+ 
+ 2. ScrollView 可以滚动的时候（x方向 或 y方向），其本身以及子控件的touch事件不会被触发。
+ 
+ 原因： 当可以滚动的时候，ScrollView 本身以及子控件内部的 touch事件默认 会被 取消。
+ 
+ 需求： 1. 开启touch事件。
+        解决方法：    一  sc.panGestureRecognizer.cancelsTouchesInView = NO;
+                    二  sc.delaysContentTouches = NO;
+                        sc.canCancelContentTouches = NO;
+ */
 - (void)createScrollView {
     
     BannerView *sc = [[BannerView alloc] initWithFrame:CGRectMake(30, 108, 320, 480)];
@@ -45,15 +58,15 @@
     sc.showsHorizontalScrollIndicator = NO;
     sc.pagingEnabled = YES;
     sc.clipsToBounds = NO;
-    sc.contentSize = CGSizeMake(0, 880);
+    sc.contentSize = CGSizeMake(0, 680);
     [self.view addSubview:sc];
     
     // 属性默认是YES,
 //    sc.panGestureRecognizer.cancelsTouchesInView = NO;
     
     // 两个属性默认都是YES,
-//    sc.delaysContentTouches = NO;
-//    sc.canCancelContentTouches = NO;  //与上方的区别 如果设置为NO, 就响应SubView的触摸事件，ScrollView的手势就不响应了。
+    sc.delaysContentTouches = NO;
+    sc.canCancelContentTouches = NO;  //与上方的区别 如果设置为NO, 响应触摸事件，ScrollView的手势就不响应了。
     
     BlueView *bv = [BlueView new];
     bv.backgroundColor = [UIColor blueColor];

@@ -20,9 +20,9 @@
 }
 
 // 手势已近识别出来了，是否响应。
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    return YES;
-}
+//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+//    return YES;
+//}
 
 // 共存 当前手势是否可以与其他手势识别器（otherGestureRecognizer）共同识别
 //- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
@@ -32,11 +32,11 @@
 // called before touchesBegan:withEvent: is called on the gesture recognizer for a new touch. return NO to prevent the gesture recognizer from seeing this touch
 // 在手势对象内部的touch事件调用之前，调用，
 // 手势是否接受touch事件
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-//
-//    return ![touch.view isKindOfClass:NSClassFromString(@"UITableViewCellContentView")];
-//    return YES;
-//}
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+
+    return ![touch.view isKindOfClass:NSClassFromString(@"UITableViewCellContentView")];
+    return YES;
+}
 
 // 手势互斥
 //- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
