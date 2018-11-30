@@ -76,6 +76,32 @@
 		04BD4E31219AFCBE00D34BAB /* WhiteGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD4E30219AFCBE00D34BAB /* WhiteGesture.m */; };
 		04BD4E34219AFE9A00D34BAB /* BlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD4E33219AFE9A00D34BAB /* BlueView.m */; };
 		04BD4E37219AFEFC00D34BAB /* BlueGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD4E36219AFEFC00D34BAB /* BlueGesture.m */; };
+		04E8A77021AF7D40005173E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A76F21AF7D40005173E5 /* AppDelegate.m */; };
+		04E8A77321AF7D40005173E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A77221AF7D40005173E5 /* ViewController.m */; };
+		04E8A77621AF7D40005173E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E8A77421AF7D40005173E5 /* Main.storyboard */; };
+		04E8A77821AF7D41005173E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E8A77721AF7D41005173E5 /* Assets.xcassets */; };
+		04E8A77B21AF7D41005173E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E8A77921AF7D41005173E5 /* LaunchScreen.storyboard */; };
+		04E8A77E21AF7D41005173E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A77D21AF7D41005173E5 /* main.m */; };
+		04E8A78521AF7E6E005173E5 /* JDDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A78421AF7E6E005173E5 /* JDDetailController.m */; };
+		04E8A78821AF825D005173E5 /* JZNavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A78721AF825D005173E5 /* JZNavigationTitleView.m */; };
+		04E8A78B21AFAC6A005173E5 /* ProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A78A21AFAC6A005173E5 /* ProductController.m */; };
+		04E8A78E21AFAC83005173E5 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A78D21AFAC83005173E5 /* DetailController.m */; };
+		04E8A79121AFAC98005173E5 /* CommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A79021AFAC98005173E5 /* CommentController.m */; };
+		04E8A79421AFD0B4005173E5 /* ProductScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A79321AFD0B4005173E5 /* ProductScrollView.m */; };
+		04E8A79721AFD2C6005173E5 /* ProductDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A79621AFD2C6005173E5 /* ProductDetailView.m */; };
+		04EE1D4121B0D10900BDB206 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D4021B0D10900BDB206 /* AppDelegate.m */; };
+		04EE1D4421B0D10900BDB206 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D4321B0D10900BDB206 /* ViewController.m */; };
+		04EE1D4721B0D10900BDB206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE1D4521B0D10900BDB206 /* Main.storyboard */; };
+		04EE1D4921B0D10A00BDB206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EE1D4821B0D10A00BDB206 /* Assets.xcassets */; };
+		04EE1D4C21B0D10A00BDB206 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE1D4A21B0D10A00BDB206 /* LaunchScreen.storyboard */; };
+		04EE1D4F21B0D10A00BDB206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D4E21B0D10A00BDB206 /* main.m */; };
+		04EE1D5621B0D28500BDB206 /* ZXGScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D5521B0D28500BDB206 /* ZXGScrollView.m */; };
+		04EE1D5921B0D38300BDB206 /* CustomScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D5821B0D38300BDB206 /* CustomScrollViewController.m */; };
+		04EE1D5C21B0DE0D00BDB206 /* TwoCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D5B21B0DE0D00BDB206 /* TwoCustomViewController.m */; };
+		04EE1D5F21B0DE6700BDB206 /* ScrollViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D5E21B0DE6700BDB206 /* ScrollViewOne.m */; };
+		04EE1D6221B0DE7500BDB206 /* ScrollViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6121B0DE7500BDB206 /* ScrollViewTwo.m */; };
+		04EE1D6521B0DE7D00BDB206 /* ScrollViewThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6421B0DE7D00BDB206 /* ScrollViewThree.m */; };
+		04EE1D6821B0E41D00BDB206 /* SystemScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +228,54 @@
 		04BD4E33219AFE9A00D34BAB /* BlueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueView.m; sourceTree = "<group>"; };
 		04BD4E35219AFEFC00D34BAB /* BlueGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueGesture.h; sourceTree = "<group>"; };
 		04BD4E36219AFEFC00D34BAB /* BlueGesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueGesture.m; sourceTree = "<group>"; };
+		04E8A76C21AF7D40005173E5 /* 京东商品详情.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "京东商品详情.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E8A76E21AF7D40005173E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04E8A76F21AF7D40005173E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04E8A77121AF7D40005173E5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04E8A77221AF7D40005173E5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04E8A77521AF7D40005173E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04E8A77721AF7D41005173E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04E8A77A21AF7D41005173E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04E8A77C21AF7D41005173E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E8A77D21AF7D41005173E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04E8A78321AF7E6E005173E5 /* JDDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDDetailController.h; sourceTree = "<group>"; };
+		04E8A78421AF7E6E005173E5 /* JDDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDDetailController.m; sourceTree = "<group>"; };
+		04E8A78621AF825D005173E5 /* JZNavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNavigationTitleView.h; sourceTree = "<group>"; };
+		04E8A78721AF825D005173E5 /* JZNavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZNavigationTitleView.m; sourceTree = "<group>"; };
+		04E8A78921AFAC6A005173E5 /* ProductController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductController.h; sourceTree = "<group>"; };
+		04E8A78A21AFAC6A005173E5 /* ProductController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductController.m; sourceTree = "<group>"; };
+		04E8A78C21AFAC83005173E5 /* DetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
+		04E8A78D21AFAC83005173E5 /* DetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
+		04E8A78F21AFAC98005173E5 /* CommentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentController.h; sourceTree = "<group>"; };
+		04E8A79021AFAC98005173E5 /* CommentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentController.m; sourceTree = "<group>"; };
+		04E8A79221AFD0B4005173E5 /* ProductScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductScrollView.h; sourceTree = "<group>"; };
+		04E8A79321AFD0B4005173E5 /* ProductScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductScrollView.m; sourceTree = "<group>"; };
+		04E8A79521AFD2C6005173E5 /* ProductDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductDetailView.h; sourceTree = "<group>"; };
+		04E8A79621AFD2C6005173E5 /* ProductDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDetailView.m; sourceTree = "<group>"; };
+		04EE1D3D21B0D10900BDB206 /* ScrollView底层实现原理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScrollView底层实现原理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04EE1D3F21B0D10900BDB206 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04EE1D4021B0D10900BDB206 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04EE1D4221B0D10900BDB206 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04EE1D4321B0D10900BDB206 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04EE1D4621B0D10900BDB206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04EE1D4821B0D10A00BDB206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04EE1D4B21B0D10A00BDB206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04EE1D4D21B0D10A00BDB206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04EE1D4E21B0D10A00BDB206 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04EE1D5421B0D28500BDB206 /* ZXGScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGScrollView.h; sourceTree = "<group>"; };
+		04EE1D5521B0D28500BDB206 /* ZXGScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGScrollView.m; sourceTree = "<group>"; };
+		04EE1D5721B0D38300BDB206 /* CustomScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomScrollViewController.h; sourceTree = "<group>"; };
+		04EE1D5821B0D38300BDB206 /* CustomScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomScrollViewController.m; sourceTree = "<group>"; };
+		04EE1D5A21B0DE0D00BDB206 /* TwoCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoCustomViewController.h; sourceTree = "<group>"; };
+		04EE1D5B21B0DE0D00BDB206 /* TwoCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoCustomViewController.m; sourceTree = "<group>"; };
+		04EE1D5D21B0DE6700BDB206 /* ScrollViewOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewOne.h; sourceTree = "<group>"; };
+		04EE1D5E21B0DE6700BDB206 /* ScrollViewOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewOne.m; sourceTree = "<group>"; };
+		04EE1D6021B0DE7500BDB206 /* ScrollViewTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewTwo.h; sourceTree = "<group>"; };
+		04EE1D6121B0DE7500BDB206 /* ScrollViewTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTwo.m; sourceTree = "<group>"; };
+		04EE1D6321B0DE7D00BDB206 /* ScrollViewThree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewThree.h; sourceTree = "<group>"; };
+		04EE1D6421B0DE7D00BDB206 /* ScrollViewThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewThree.m; sourceTree = "<group>"; };
+		04EE1D6621B0E41D00BDB206 /* SystemScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemScrollViewController.h; sourceTree = "<group>"; };
+		04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +308,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04BD4E04219AE7E200D34BAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E8A76921AF7D40005173E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EE1D3A21B0D10900BDB206 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,6 +439,8 @@
 				045EA658217F1A2400A94B88 /* Event */,
 				04BD4E08219AE7E200D34BAB /* EventToo */,
 				0441D1F321AB987A009F4AD3 /* ImageView */,
+				04E8A76D21AF7D40005173E5 /* 京东商品详情 */,
+				04EE1D3E21B0D10900BDB206 /* ScrollView底层实现原理 */,
 				0459BAE921749AAD00DFB547 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -363,6 +453,8 @@
 				045EA657217F1A2400A94B88 /* Event.app */,
 				04BD4E07219AE7E200D34BAB /* EventToo.app */,
 				0441D1F221AB987A009F4AD3 /* ImageView.app */,
+				04E8A76C21AF7D40005173E5 /* 京东商品详情.app */,
+				04EE1D3D21B0D10900BDB206 /* ScrollView底层实现原理.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -492,6 +584,82 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04E8A76D21AF7D40005173E5 /* 京东商品详情 */ = {
+			isa = PBXGroup;
+			children = (
+				04E8A78221AF7E53005173E5 /* Container */,
+				04E8A76E21AF7D40005173E5 /* AppDelegate.h */,
+				04E8A76F21AF7D40005173E5 /* AppDelegate.m */,
+				04E8A77121AF7D40005173E5 /* ViewController.h */,
+				04E8A77221AF7D40005173E5 /* ViewController.m */,
+				04E8A77421AF7D40005173E5 /* Main.storyboard */,
+				04E8A77721AF7D41005173E5 /* Assets.xcassets */,
+				04E8A77921AF7D41005173E5 /* LaunchScreen.storyboard */,
+				04E8A77C21AF7D41005173E5 /* Info.plist */,
+				04E8A77D21AF7D41005173E5 /* main.m */,
+			);
+			path = "京东商品详情";
+			sourceTree = "<group>";
+		};
+		04E8A78221AF7E53005173E5 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				04E8A78621AF825D005173E5 /* JZNavigationTitleView.h */,
+				04E8A78721AF825D005173E5 /* JZNavigationTitleView.m */,
+				04E8A78321AF7E6E005173E5 /* JDDetailController.h */,
+				04E8A78421AF7E6E005173E5 /* JDDetailController.m */,
+				04E8A78921AFAC6A005173E5 /* ProductController.h */,
+				04E8A78A21AFAC6A005173E5 /* ProductController.m */,
+				04E8A78C21AFAC83005173E5 /* DetailController.h */,
+				04E8A78D21AFAC83005173E5 /* DetailController.m */,
+				04E8A78F21AFAC98005173E5 /* CommentController.h */,
+				04E8A79021AFAC98005173E5 /* CommentController.m */,
+				04E8A79221AFD0B4005173E5 /* ProductScrollView.h */,
+				04E8A79321AFD0B4005173E5 /* ProductScrollView.m */,
+				04E8A79521AFD2C6005173E5 /* ProductDetailView.h */,
+				04E8A79621AFD2C6005173E5 /* ProductDetailView.m */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		04EE1D3E21B0D10900BDB206 /* ScrollView底层实现原理 */ = {
+			isa = PBXGroup;
+			children = (
+				04EE1D5321B0D26E00BDB206 /* Container */,
+				04EE1D3F21B0D10900BDB206 /* AppDelegate.h */,
+				04EE1D4021B0D10900BDB206 /* AppDelegate.m */,
+				04EE1D4221B0D10900BDB206 /* ViewController.h */,
+				04EE1D4321B0D10900BDB206 /* ViewController.m */,
+				04EE1D4521B0D10900BDB206 /* Main.storyboard */,
+				04EE1D4821B0D10A00BDB206 /* Assets.xcassets */,
+				04EE1D4A21B0D10A00BDB206 /* LaunchScreen.storyboard */,
+				04EE1D4D21B0D10A00BDB206 /* Info.plist */,
+				04EE1D4E21B0D10A00BDB206 /* main.m */,
+			);
+			path = "ScrollView底层实现原理";
+			sourceTree = "<group>";
+		};
+		04EE1D5321B0D26E00BDB206 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				04EE1D5421B0D28500BDB206 /* ZXGScrollView.h */,
+				04EE1D5521B0D28500BDB206 /* ZXGScrollView.m */,
+				04EE1D5721B0D38300BDB206 /* CustomScrollViewController.h */,
+				04EE1D5821B0D38300BDB206 /* CustomScrollViewController.m */,
+				04EE1D5A21B0DE0D00BDB206 /* TwoCustomViewController.h */,
+				04EE1D5B21B0DE0D00BDB206 /* TwoCustomViewController.m */,
+				04EE1D5D21B0DE6700BDB206 /* ScrollViewOne.h */,
+				04EE1D5E21B0DE6700BDB206 /* ScrollViewOne.m */,
+				04EE1D6021B0DE7500BDB206 /* ScrollViewTwo.h */,
+				04EE1D6121B0DE7500BDB206 /* ScrollViewTwo.m */,
+				04EE1D6321B0DE7D00BDB206 /* ScrollViewThree.h */,
+				04EE1D6421B0DE7D00BDB206 /* ScrollViewThree.m */,
+				04EE1D6621B0E41D00BDB206 /* SystemScrollViewController.h */,
+				04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -580,6 +748,40 @@
 			productReference = 04BD4E07219AE7E200D34BAB /* EventToo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04E8A76B21AF7D40005173E5 /* 京东商品详情 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E8A78121AF7D41005173E5 /* Build configuration list for PBXNativeTarget "京东商品详情" */;
+			buildPhases = (
+				04E8A76821AF7D40005173E5 /* Sources */,
+				04E8A76921AF7D40005173E5 /* Frameworks */,
+				04E8A76A21AF7D40005173E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "京东商品详情";
+			productName = "京东商品详情";
+			productReference = 04E8A76C21AF7D40005173E5 /* 京东商品详情.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04EE1D3C21B0D10900BDB206 /* ScrollView底层实现原理 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04EE1D5221B0D10A00BDB206 /* Build configuration list for PBXNativeTarget "ScrollView底层实现原理" */;
+			buildPhases = (
+				04EE1D3921B0D10900BDB206 /* Sources */,
+				04EE1D3A21B0D10900BDB206 /* Frameworks */,
+				04EE1D3B21B0D10900BDB206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ScrollView底层实现原理";
+			productName = "ScrollView底层实现原理";
+			productReference = 04EE1D3D21B0D10900BDB206 /* ScrollView底层实现原理.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -604,6 +806,12 @@
 					04BD4E06219AE7E200D34BAB = {
 						CreatedOnToolsVersion = 9.3;
 					};
+					04E8A76B21AF7D40005173E5 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					04EE1D3C21B0D10900BDB206 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = 0459BAE321749AAD00DFB547 /* Build configuration list for PBXProject "SenioriOS" */;
@@ -624,6 +832,8 @@
 				045EA656217F1A2400A94B88 /* Event */,
 				04BD4E06219AE7E200D34BAB /* EventToo */,
 				0441D1F121AB987A009F4AD3 /* ImageView */,
+				04E8A76B21AF7D40005173E5 /* 京东商品详情 */,
+				04EE1D3C21B0D10900BDB206 /* ScrollView底层实现原理 */,
 			);
 		};
 /* End PBXProject section */
@@ -682,6 +892,26 @@
 				04BD4E16219AE7E400D34BAB /* LaunchScreen.storyboard in Resources */,
 				04BD4E13219AE7E400D34BAB /* Assets.xcassets in Resources */,
 				04BD4E11219AE7E200D34BAB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E8A76A21AF7D40005173E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E8A77B21AF7D41005173E5 /* LaunchScreen.storyboard in Resources */,
+				04E8A77821AF7D41005173E5 /* Assets.xcassets in Resources */,
+				04E8A77621AF7D40005173E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EE1D3B21B0D10900BDB206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EE1D4C21B0D10A00BDB206 /* LaunchScreen.storyboard in Resources */,
+				04EE1D4921B0D10A00BDB206 /* Assets.xcassets in Resources */,
+				04EE1D4721B0D10900BDB206 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +1001,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04E8A76821AF7D40005173E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E8A78821AF825D005173E5 /* JZNavigationTitleView.m in Sources */,
+				04E8A79721AFD2C6005173E5 /* ProductDetailView.m in Sources */,
+				04E8A78521AF7E6E005173E5 /* JDDetailController.m in Sources */,
+				04E8A77321AF7D40005173E5 /* ViewController.m in Sources */,
+				04E8A78E21AFAC83005173E5 /* DetailController.m in Sources */,
+				04E8A77E21AF7D41005173E5 /* main.m in Sources */,
+				04E8A79421AFD0B4005173E5 /* ProductScrollView.m in Sources */,
+				04E8A79121AFAC98005173E5 /* CommentController.m in Sources */,
+				04E8A77021AF7D40005173E5 /* AppDelegate.m in Sources */,
+				04E8A78B21AFAC6A005173E5 /* ProductController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EE1D3921B0D10900BDB206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EE1D5C21B0DE0D00BDB206 /* TwoCustomViewController.m in Sources */,
+				04EE1D5921B0D38300BDB206 /* CustomScrollViewController.m in Sources */,
+				04EE1D6821B0E41D00BDB206 /* SystemScrollViewController.m in Sources */,
+				04EE1D6521B0DE7D00BDB206 /* ScrollViewThree.m in Sources */,
+				04EE1D4421B0D10900BDB206 /* ViewController.m in Sources */,
+				04EE1D5621B0D28500BDB206 /* ZXGScrollView.m in Sources */,
+				04EE1D4F21B0D10A00BDB206 /* main.m in Sources */,
+				04EE1D4121B0D10900BDB206 /* AppDelegate.m in Sources */,
+				04EE1D6221B0DE7500BDB206 /* ScrollViewTwo.m in Sources */,
+				04EE1D5F21B0DE6700BDB206 /* ScrollViewOne.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -850,6 +1114,38 @@
 			isa = PBXVariantGroup;
 			children = (
 				04BD4E15219AE7E400D34BAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04E8A77421AF7D40005173E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E8A77521AF7D40005173E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04E8A77921AF7D41005173E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E8A77A21AF7D41005173E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04EE1D4521B0D10900BDB206 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04EE1D4621B0D10900BDB206 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04EE1D4A21B0D10A00BDB206 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04EE1D4B21B0D10A00BDB206 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1156,6 +1452,78 @@
 			};
 			name = Release;
 		};
+		04E8A77F21AF7D41005173E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = "京东商品详情/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04E8A78021AF7D41005173E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = "京东商品详情/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04EE1D5021B0D10A00BDB206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = "ScrollView底层实现原理/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04EE1D5121B0D10A00BDB206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = "ScrollView底层实现原理/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1209,6 +1577,24 @@
 			buildConfigurations = (
 				04BD4E1A219AE7E500D34BAB /* Debug */,
 				04BD4E1B219AE7E500D34BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E8A78121AF7D41005173E5 /* Build configuration list for PBXNativeTarget "京东商品详情" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E8A77F21AF7D41005173E5 /* Debug */,
+				04E8A78021AF7D41005173E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04EE1D5221B0D10A00BDB206 /* Build configuration list for PBXNativeTarget "ScrollView底层实现原理" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04EE1D5021B0D10A00BDB206 /* Debug */,
+				04EE1D5121B0D10A00BDB206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
