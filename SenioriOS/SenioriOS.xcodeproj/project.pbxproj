@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040347D521B530FF00E89B26 /* DemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040347D421B530FF00E89B26 /* DemoController.m */; };
 		0430B7712179AF7A00BADF2F /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430B7702179AF7A00BADF2F /* TestView.m */; };
 		0430B7732179DB4000BADF2F /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0430B7722179DB4000BADF2F /* TestView.xib */; };
 		043AFB232191C8E2006C6395 /* GestureEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB222191C8E2006C6395 /* GestureEventController.m */; };
@@ -105,6 +106,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040347D321B530FF00E89B26 /* DemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoController.h; sourceTree = "<group>"; };
+		040347D421B530FF00E89B26 /* DemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoController.m; sourceTree = "<group>"; };
 		0430B76F2179AF7A00BADF2F /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		0430B7702179AF7A00BADF2F /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		0430B7722179DB4000BADF2F /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
@@ -618,6 +621,8 @@
 				04E8A79321AFD0B4005173E5 /* ProductScrollView.m */,
 				04E8A79521AFD2C6005173E5 /* ProductDetailView.h */,
 				04E8A79621AFD2C6005173E5 /* ProductDetailView.m */,
+				040347D321B530FF00E89B26 /* DemoController.h */,
+				040347D421B530FF00E89B26 /* DemoController.m */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -1013,6 +1018,7 @@
 				04E8A77E21AF7D41005173E5 /* main.m in Sources */,
 				04E8A79421AFD0B4005173E5 /* ProductScrollView.m in Sources */,
 				04E8A79121AFAC98005173E5 /* CommentController.m in Sources */,
+				040347D521B530FF00E89B26 /* DemoController.m in Sources */,
 				04E8A77021AF7D40005173E5 /* AppDelegate.m in Sources */,
 				04E8A78B21AFAC6A005173E5 /* ProductController.m in Sources */,
 			);

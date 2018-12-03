@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "JDDetailController.h"
+#import "DemoController.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,8 @@
 #pragma mark - event response
 - (void)btnAction:(UIButton *)btn {
     
-    JDDetailController *productDetailViewCtrl = [[JDDetailController alloc] init];
+//    JDDetailController *productDetailViewCtrl = [[JDDetailController alloc] init];
+    DemoController *productDetailViewCtrl = [[DemoController alloc] init];
     [self.navigationController pushViewController:productDetailViewCtrl animated:YES];
     
 }
