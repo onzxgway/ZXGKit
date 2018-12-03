@@ -16,11 +16,10 @@
 @implementation ZXGScrollView
 
 /**
-  第一件事： 自定义一个 ZXGScrollView 继承自 UIView，高仿 UIScrollView 的功能。
+  一： 自定义一个 ZXGScrollView 继承自 UIView，高仿 UIScrollView 的功能。
  */
 
-// 原理： 根据 View 上的拖拽手势，可以获取手势滑动的方向和距离，由此改变 bounds.origin 即可实现，滑动效果。
-
+// UIScrollView底层原理： 根据 View 上的拖拽手势，可以获取手势滑动的方向和距离，由此改变 View.bounds.origin 即可实现，滑动效果。
 
 /**
  
@@ -32,7 +31,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
         UIPanGestureRecognizer *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGes:)];
         panGes.cancelsTouchesInView = NO;
         panGes.delegate = self;
@@ -80,16 +78,15 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
 
     if (self.bounds.origin.x == self.contentSize.width - self.frame.size.width) {
-
-        //往左滑动
+        // 往左滑动
         CGPoint transitionPoint = [gestureRecognizer translationInView:self];
         if (transitionPoint.x < 0) {
             return NO;
         }
         return YES;
     }
-
     return YES;
+    
 }
 
 

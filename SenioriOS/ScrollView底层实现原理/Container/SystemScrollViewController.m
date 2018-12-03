@@ -28,11 +28,10 @@
 
 /**
  
- 系统UIScrollView ，
+ 系统UIScrollView
  
  父子都是UIScrollView的时候:
- 
-  子UIScrollView可以滑动的时候，优先响应。此时父UIScrollView的手势不响应。 子UIScrollView到尽头滑动不了的时候，手势不响应。此时父UIScrollView的手势响应，可以滑动。
+  子UIScrollView可以滑动的时候，优先响应。此时父UIScrollView的手势不响应。 子UIScrollView到尽头滑动不了的时候，手势不响应。此时父UIScrollView的手势响应，可以继续滑动。
   同一时刻，只能有一个 拖拽手势响应。
  */
 - (void)createMultiScrollView {
