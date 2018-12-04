@@ -34,6 +34,8 @@
 //    [self.myScrollView addSubview:self.refreshComponent];
     self.myScrollView.one_Refresh = [OneRefreshEatHeader oneRefreshHeader:self action:@selector(refresh)];
 }
+- (IBAction)custom:(id)sender {
+}
 
 - (void)end {
     [self.myScrollView.one_Refresh endRefresh];

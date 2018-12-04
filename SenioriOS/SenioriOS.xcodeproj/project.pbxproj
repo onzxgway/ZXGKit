@@ -10,6 +10,7 @@
 		040347D521B530FF00E89B26 /* DemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040347D421B530FF00E89B26 /* DemoController.m */; };
 		0430B7712179AF7A00BADF2F /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430B7702179AF7A00BADF2F /* TestView.m */; };
 		0430B7732179DB4000BADF2F /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0430B7722179DB4000BADF2F /* TestView.xib */; };
+		04352FD521B62FB20085D970 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04352FD421B62FB20085D970 /* CustomTableViewCell.m */; };
 		043AFB232191C8E2006C6395 /* GestureEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB222191C8E2006C6395 /* GestureEventController.m */; };
 		043AFB272191C99E006C6395 /* RedTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB262191C99E006C6395 /* RedTapGestureRecognizer.m */; };
 		043AFB2A2191D601006C6395 /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB292191D601006C6395 /* ButtonController.m */; };
@@ -63,6 +64,15 @@
 		049F8BF921888F2C00CF798C /* PracticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF821888F2C00CF798C /* PracticeView.m */; };
 		04A16BA621A3F087006E3BB8 /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A16BA521A3F087006E3BB8 /* BannerController.m */; };
 		04A16BA921A3FE14006E3BB8 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A16BA821A3FE14006E3BB8 /* BannerView.m */; };
+		04B9B9FE21B6193500238640 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9B9FD21B6193500238640 /* AppDelegate.m */; };
+		04B9BA0121B6193500238640 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9BA0021B6193500238640 /* ViewController.m */; };
+		04B9BA0421B6193500238640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B9BA0221B6193500238640 /* Main.storyboard */; };
+		04B9BA0621B6193600238640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B9BA0521B6193600238640 /* Assets.xcassets */; };
+		04B9BA0921B6193600238640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B9BA0721B6193600238640 /* LaunchScreen.storyboard */; };
+		04B9BA0C21B6193600238640 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9BA0B21B6193600238640 /* main.m */; };
+		04B9BA1321B619DF00238640 /* CustonTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9BA1221B619DF00238640 /* CustonTableView.m */; };
+		04B9BA1621B61AD000238640 /* CustonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9BA1521B61AD000238640 /* CustonViewController.m */; };
+		04B9BA1921B61ADA00238640 /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9BA1821B61ADA00238640 /* SystemViewController.m */; };
 		04BD4E0B219AE7E200D34BAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD4E0A219AE7E200D34BAB /* AppDelegate.m */; };
 		04BD4E0E219AE7E200D34BAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD4E0D219AE7E200D34BAB /* ViewController.m */; };
 		04BD4E11219AE7E200D34BAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD4E0F219AE7E200D34BAB /* Main.storyboard */; };
@@ -111,6 +121,8 @@
 		0430B76F2179AF7A00BADF2F /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		0430B7702179AF7A00BADF2F /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		0430B7722179DB4000BADF2F /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		04352FD321B62FB20085D970 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		04352FD421B62FB20085D970 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		043AFB212191C8E2006C6395 /* GestureEventController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureEventController.h; sourceTree = "<group>"; };
 		043AFB222191C8E2006C6395 /* GestureEventController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureEventController.m; sourceTree = "<group>"; };
 		043AFB252191C99E006C6395 /* RedTapGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedTapGestureRecognizer.h; sourceTree = "<group>"; };
@@ -205,6 +217,22 @@
 		04A16BA521A3F087006E3BB8 /* BannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerController.m; sourceTree = "<group>"; };
 		04A16BA721A3FE14006E3BB8 /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		04A16BA821A3FE14006E3BB8 /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		04B9B9FA21B6193500238640 /* TableView原理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableView原理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B9B9FC21B6193500238640 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04B9B9FD21B6193500238640 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04B9B9FF21B6193500238640 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04B9BA0021B6193500238640 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04B9BA0321B6193500238640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04B9BA0521B6193600238640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04B9BA0821B6193600238640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04B9BA0A21B6193600238640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B9BA0B21B6193600238640 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04B9BA1121B619DF00238640 /* CustonTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustonTableView.h; sourceTree = "<group>"; };
+		04B9BA1221B619DF00238640 /* CustonTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustonTableView.m; sourceTree = "<group>"; };
+		04B9BA1421B61AD000238640 /* CustonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustonViewController.h; sourceTree = "<group>"; };
+		04B9BA1521B61AD000238640 /* CustonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustonViewController.m; sourceTree = "<group>"; };
+		04B9BA1721B61ADA00238640 /* SystemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemViewController.h; sourceTree = "<group>"; };
+		04B9BA1821B61ADA00238640 /* SystemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemViewController.m; sourceTree = "<group>"; };
 		04BD4E07219AE7E200D34BAB /* EventToo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventToo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD4E09219AE7E200D34BAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BD4E0A219AE7E200D34BAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -304,6 +332,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		045EA654217F1A2400A94B88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B9B9F721B6193500238640 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -444,6 +479,7 @@
 				0441D1F321AB987A009F4AD3 /* ImageView */,
 				04E8A76D21AF7D40005173E5 /* 京东商品详情 */,
 				04EE1D3E21B0D10900BDB206 /* ScrollView底层实现原理 */,
+				04B9B9FB21B6193500238640 /* TableView原理 */,
 				0459BAE921749AAD00DFB547 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -458,6 +494,7 @@
 				0441D1F221AB987A009F4AD3 /* ImageView.app */,
 				04E8A76C21AF7D40005173E5 /* 京东商品详情.app */,
 				04EE1D3D21B0D10900BDB206 /* ScrollView底层实现原理.app */,
+				04B9B9FA21B6193500238640 /* TableView原理.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -515,6 +552,38 @@
 				043AFB292191D601006C6395 /* ButtonController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04B9B9FB21B6193500238640 /* TableView原理 */ = {
+			isa = PBXGroup;
+			children = (
+				04B9BA1021B619C500238640 /* Container */,
+				04B9B9FC21B6193500238640 /* AppDelegate.h */,
+				04B9B9FD21B6193500238640 /* AppDelegate.m */,
+				04B9B9FF21B6193500238640 /* ViewController.h */,
+				04B9BA0021B6193500238640 /* ViewController.m */,
+				04B9BA0221B6193500238640 /* Main.storyboard */,
+				04B9BA0521B6193600238640 /* Assets.xcassets */,
+				04B9BA0721B6193600238640 /* LaunchScreen.storyboard */,
+				04B9BA0A21B6193600238640 /* Info.plist */,
+				04B9BA0B21B6193600238640 /* main.m */,
+			);
+			path = "TableView原理";
+			sourceTree = "<group>";
+		};
+		04B9BA1021B619C500238640 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				04B9BA1121B619DF00238640 /* CustonTableView.h */,
+				04B9BA1221B619DF00238640 /* CustonTableView.m */,
+				04B9BA1421B61AD000238640 /* CustonViewController.h */,
+				04B9BA1521B61AD000238640 /* CustonViewController.m */,
+				04B9BA1721B61ADA00238640 /* SystemViewController.h */,
+				04B9BA1821B61ADA00238640 /* SystemViewController.m */,
+				04352FD321B62FB20085D970 /* CustomTableViewCell.h */,
+				04352FD421B62FB20085D970 /* CustomTableViewCell.m */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 		04BD4E08219AE7E200D34BAB /* EventToo */ = {
@@ -736,6 +805,23 @@
 			productReference = 045EA657217F1A2400A94B88 /* Event.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04B9B9F921B6193500238640 /* TableView原理 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04B9BA0F21B6193600238640 /* Build configuration list for PBXNativeTarget "TableView原理" */;
+			buildPhases = (
+				04B9B9F621B6193500238640 /* Sources */,
+				04B9B9F721B6193500238640 /* Frameworks */,
+				04B9B9F821B6193500238640 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TableView原理";
+			productName = "TableView原理";
+			productReference = 04B9B9FA21B6193500238640 /* TableView原理.app */;
+			productType = "com.apple.product-type.application";
+		};
 		04BD4E06219AE7E200D34BAB /* EventToo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04BD4E1C219AE7E500D34BAB /* Build configuration list for PBXNativeTarget "EventToo" */;
@@ -808,6 +894,9 @@
 					045EA656217F1A2400A94B88 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					04B9B9F921B6193500238640 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					04BD4E06219AE7E200D34BAB = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -839,6 +928,7 @@
 				0441D1F121AB987A009F4AD3 /* ImageView */,
 				04E8A76B21AF7D40005173E5 /* 京东商品详情 */,
 				04EE1D3C21B0D10900BDB206 /* ScrollView底层实现原理 */,
+				04B9B9F921B6193500238640 /* TableView原理 */,
 			);
 		};
 /* End PBXProject section */
@@ -887,6 +977,16 @@
 				045EA663217F1A2500A94B88 /* Assets.xcassets in Resources */,
 				045EA66E217F1A4300A94B88 /* README.md in Resources */,
 				045EA661217F1A2500A94B88 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B9B9F821B6193500238640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B9BA0921B6193600238640 /* LaunchScreen.storyboard in Resources */,
+				04B9BA0621B6193600238640 /* Assets.xcassets in Resources */,
+				04B9BA0421B6193500238640 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -978,6 +1078,20 @@
 				043AFB232191C8E2006C6395 /* GestureEventController.m in Sources */,
 				04557B1C218058E000BD3F12 /* GrayView.m in Sources */,
 				049F8BF921888F2C00CF798C /* PracticeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B9B9F621B6193500238640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B9BA0121B6193500238640 /* ViewController.m in Sources */,
+				04352FD521B62FB20085D970 /* CustomTableViewCell.m in Sources */,
+				04B9BA1921B61ADA00238640 /* SystemViewController.m in Sources */,
+				04B9BA0C21B6193600238640 /* main.m in Sources */,
+				04B9B9FE21B6193500238640 /* AppDelegate.m in Sources */,
+				04B9BA1321B619DF00238640 /* CustonTableView.m in Sources */,
+				04B9BA1621B61AD000238640 /* CustonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,6 +1218,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				045EA665217F1A2500A94B88 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04B9BA0221B6193500238640 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04B9BA0321B6193500238640 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04B9BA0721B6193600238640 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04B9BA0821B6193600238640 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1421,6 +1551,42 @@
 			};
 			name = Release;
 		};
+		04B9BA0D21B6193600238640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = "TableView原理/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04B9BA0E21B6193600238640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = "TableView原理/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		04BD4E1A219AE7E500D34BAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1574,6 +1740,15 @@
 			buildConfigurations = (
 				045EA66A217F1A2500A94B88 /* Debug */,
 				045EA66B217F1A2500A94B88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04B9BA0F21B6193600238640 /* Build configuration list for PBXNativeTarget "TableView原理" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B9BA0D21B6193600238640 /* Debug */,
+				04B9BA0E21B6193600238640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
