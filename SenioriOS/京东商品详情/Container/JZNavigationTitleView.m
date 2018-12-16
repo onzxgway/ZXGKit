@@ -94,8 +94,8 @@ static const CGFloat kItemMargin = 20.f;
 }
 
 #pragma mark - apis
-- (void)scrollToPercent:(CGFloat)percent {
-    
+//- (void)scrollToPercent:(CGFloat)percent {
+
 //    NSInteger index = floor(percent);
 //    
 //    if (index >= _titles.count - 1) return;
@@ -105,14 +105,14 @@ static const CGFloat kItemMargin = 20.f;
 //    CGFloat marginH = CGRectGetMidX(curB.frame) - CGRectGetMidX(nextB.frame);
 //    
 //    self.indicatorLabel.transform = CGAffineTransformMakeTranslation(-marginH * (percent - index), 0.f);
-}
+//}
 
 #pragma mark - private
-- (void)selectedItem:(NSInteger)selectedIndex {
+- (void)selectedItem:(NSInteger)index {
     
-    if (self.btns.count <= selectedIndex || selectedIndex < 0) return;
+    if (self.btns.count <= index || index < 0) return;
     
-    UIButton *selectedBtn = [self.btns objectAtIndex:selectedIndex];
+    UIButton *selectedBtn = [self.btns objectAtIndex:index];
     selectedBtn.selected = YES;
     selectedBtn.titleLabel.font = [UIFont boldSystemFontOfSize:selectedBtn.titleLabel.font.pointSize];
     
@@ -124,7 +124,7 @@ static const CGFloat kItemMargin = 20.f;
         }
     }
     
-    self.preSelectedIndex = selectedIndex;
+    self.preSelectedIndex = index;
     
     CGPoint fr = selectedBtn.center;
     CGFloat w = self.indicatorLabel.bounds.size.width;

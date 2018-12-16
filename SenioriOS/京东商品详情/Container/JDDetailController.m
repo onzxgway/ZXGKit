@@ -12,7 +12,7 @@
 #import "DetailController.h"
 #import "CommentController.h"
 
-@interface JDDetailController () <UIScrollViewDelegate>
+@interface JDDetailController () <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
 @property (nonatomic, strong) JZNavigationTitleView *titleView;
@@ -20,6 +20,8 @@
 @property (nonatomic, strong) ProductController *productCtrl;
 @property (nonatomic, strong) DetailController *detailCtrl;
 @property (nonatomic, strong) CommentController *commentCtrl;
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -29,15 +31,20 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self.view addSubview:self.mainScrollView];
+//    [self.view addSubview:self.mainScrollView];
+    
+    [self.view addSubview:self.tableView];
+    self.tableView.frame = self.view.bounds;
     
     // 定制导航栏
     [self customNavView];
     
     // 在mainScrollView上添加商品页、商品详情页、评价页面
-    [self.mainScrollView addSubview:self.productCtrl.view];
-    [self.mainScrollView addSubview:self.detailCtrl.view];
-    [self.mainScrollView addSubview:self.commentCtrl.view];
+//    [self.mainScrollView addSubview:self.productCtrl.view];
+//    [self.mainScrollView addSubview:self.detailCtrl.view];
+//    [self.mainScrollView addSubview:self.commentCtrl.view];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,13 +69,32 @@
     _titleView.titles = @[@"商品", @"详情", @"评价"];
     self.navigationItem.titleView = _titleView;
     
+    
+    
+    
     __weak typeof(self) weakSelf = self;
     _titleView.itemClickedCallback = ^(NSInteger index) {
-        [weakSelf.mainScrollView scrollRectToVisible:CGRectMake(index * weakSelf.view.bounds.size.width, 0.f, weakSelf.view.bounds.size.width, weakSelf.view.bounds.size.height) animated:YES];
+//        [weakSelf.mainScrollView scrollRectToVisible:CGRectMake(index * weakSelf.view.bounds.size.width, 0.f, weakSelf.view.bounds.size.width, weakSelf.view.bounds.size.height) animated:YES];
+        
+        
+        // section == 1 的位置
+        CGFloat y = weakSelf.navigationController.navigationBar.frame.size.height + [UIApplication sharedApplication].statusBarFrame.size.height;
+        CGFloat sectionOneS = [weakSelf.tableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]].origin.y - y;
+        CGFloat maxOffsetY = weakSelf.tableView.contentSize.height - self.tableView.bounds.size.height;
+        
+        if (index == 1) {
+            [weakSelf.tableView setContentOffset:CGPointMake(0, sectionOneS) animated:YES];
+        }
+        else if (index == 2) {
+            [weakSelf.tableView setContentOffset:CGPointMake(0, maxOffsetY) animated:YES];
+        }
+        else {
+            [weakSelf.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
+        }
     };
     
     // titleView添加对mainScrollView的观察
-    [self.mainScrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:NULL];
+//    [self.mainScrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:NULL];
     
 //    __weak typeof(_titleView)weakTitleView = _titleView;
 //    [_titleView eocObserver:_mainScrollView keyPath:@"contentOffset" block:^{
@@ -120,25 +146,123 @@
     
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    
-    if ([keyPath isEqualToString:@"contentOffset"]) {
-        NSLog(@"%@", NSStringFromCGPoint([change[NSKeyValueChangeNewKey] CGPointValue]));
-        
-        CGFloat x = [change[NSKeyValueChangeNewKey] CGPointValue].x;
-        
-        CGFloat percent = x / self.mainScrollView.bounds.size.width;
-        
-        [self.titleView scrollToPercent:percent];
-    }
-    
-}
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+//    
+//    if ([keyPath isEqualToString:@"contentOffset"]) {
+//        NSLog(@"%@", NSStringFromCGPoint([change[NSKeyValueChangeNewKey] CGPointValue]));
+//        
+//        CGFloat x = [change[NSKeyValueChangeNewKey] CGPointValue].x;
+//        
+//        CGFloat percent = x / self.mainScrollView.bounds.size.width;
+//        
+//        [self.titleView scrollToPercent:percent];
+//    }
+//    
+//}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
 }
 
-#pragma mark - getter方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 36;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return 3;
+    }
+    else if (section == 35) {
+        return 12;
+    }
+    else {
+        return 1;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+        cell.contentView.backgroundColor = [UIColor redColor];
+        return cell;
+    }
+    else if (indexPath.section == 35) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+        cell.contentView.backgroundColor = [UIColor blueColor];
+        return cell;
+    }
+    else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
+        return cell;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 202.f;
+    }
+    else if (indexPath.section == 35) {
+        return 102.f;
+    }
+    else {
+        return 48.f;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return nil;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return nil;
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    // 手动滑动的才有效
+    if (!(scrollView.isTracking || scrollView.isDecelerating)) {
+        // 不是用户滚动的，比如setContentOffset等方法，引起的滚动不需要处理。
+        return;
+    }
+    
+    CGFloat offSetY = scrollView.contentOffset.y;
+    
+    // section == 1 的位置
+    CGFloat y = self.navigationController.navigationBar.frame.size.height + [UIApplication sharedApplication].statusBarFrame.size.height;
+    
+    CGFloat sectionOneS = [self.tableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]].origin.y - y;
+    CGFloat sectionOneE = [self.tableView rectForSection:34].origin.y + [self.tableView rectForSection:34].size.height - y;
+    CGFloat sectionTwoE = [self.tableView rectForSection:35].origin.y + [self.tableView rectForSection:35].size.height - y;
+    
+     NSLog(@"偏移量One-- %lf  %lf", sectionOneS, sectionOneE);
+    
+    //
+    if (offSetY >= sectionOneS && offSetY < sectionOneE) {
+        // 选中 1
+        [self.titleView selectedItem:1];
+    }
+    else if (offSetY >= sectionOneE && offSetY < sectionTwoE) {
+        // 选中 2
+        [self.titleView selectedItem:2];
+    }
+    else {
+        // 选中 0
+        [self.titleView selectedItem:0];
+    }
+    
+}
+
+#pragma mark - getter
 - (UIScrollView *)mainScrollView {
     
     if (!_mainScrollView) {
@@ -181,6 +305,19 @@
         [self addChildViewController:_commentCtrl];
     }
     return _commentCtrl;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        [_tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"UITableViewCell"];
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+    }
+    return _tableView;
 }
 
 @end

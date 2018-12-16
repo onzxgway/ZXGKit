@@ -18,7 +18,9 @@ typedef void(^JZNTVItemClickedBlock) (NSInteger);
 
 @property (nonatomic, copy  ) JZNTVItemClickedBlock itemClickedCallback;
 
-- (void)scrollToPercent:(CGFloat)percent;
+//- (void)scrollToPercent:(CGFloat)percent;
+
+- (void)selectedItem:(NSInteger)index;
 
 @end
 

@@ -29,8 +29,8 @@
 #pragma mark - event response
 - (void)btnAction:(UIButton *)btn {
     
-//    JDDetailController *productDetailViewCtrl = [[JDDetailController alloc] init];
-    DemoController *productDetailViewCtrl = [[DemoController alloc] init];
+    JDDetailController *productDetailViewCtrl = [[JDDetailController alloc] init];
+//    DemoController *productDetailViewCtrl = [[DemoController alloc] init];
     [self.navigationController pushViewController:productDetailViewCtrl animated:YES];
     
 }
