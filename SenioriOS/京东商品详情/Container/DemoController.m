@@ -12,7 +12,7 @@
 
 #define kYNPAGE_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
-@interface DemoController ()
+@interface DemoController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *pageScrollView;
 
@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self setupHeaderBgView];
@@ -69,7 +69,7 @@
     
     CGFloat contentHeight = kYNPAGE_SCREEN_HEIGHT;
     self.pageScrollView.frame = CGRectMake(0, 0, kYNPAGE_SCREEN_WIDTH, contentHeight);
-    self.pageScrollView.contentSize = CGSizeMake(kYNPAGE_SCREEN_WIDTH * 5, contentHeight);
+    self.pageScrollView.contentSize = CGSizeMake(kYNPAGE_SCREEN_WIDTH * 5, contentHeight * 2);
     [self.view addSubview:self.pageScrollView];
 
 }
@@ -88,6 +88,22 @@
     
 }
 
+/// 将headerView 从 tableview 上 放置 view 上
+- (void)replaceHeaderViewFromTableView {
+    CGFloat headerViewY = [self.headerBgView.superview convertRect:self.headerBgView.frame toView:self.pageScrollView].origin.y;
+//    CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:self.pageScrollView].origin.y;
+    
+    [self.headerBgView removeFromSuperview];
+//    [self.scrollMenuView removeFromSuperview];
+    CGRect rec = self.headerBgView.frame;
+    rec.origin.y = headerViewY;
+    self.headerBgView.frame = rec;
+    
+//    self.scrollMenuView.yn_y = scrollMenuViewY;
+    [self.view insertSubview:self.headerBgView aboveSubview:self.pageScrollView];
+//    [self.view insertSubview:self.scrollMenuView aboveSubview:self.headerBgView];
+}
+
 /// scrollView滚动ing
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
@@ -104,7 +120,7 @@
     CGFloat offX = currentPostion > self.lastPositionX ? ceilf(offsetX) : offsetX;
     
 //    [self replaceHeaderViewFromTableView];
-//
+
 //    [self initViewControllerWithIndex:offX];
     
     CGFloat progress = offsetX - (NSInteger)offsetX;

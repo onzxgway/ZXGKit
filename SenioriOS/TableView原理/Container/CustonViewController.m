@@ -7,7 +7,7 @@
 //
 
 #import "CustonViewController.h"
-#import "CustonTableView.h"
+#import "CustomTableView.h"
 #import "CustomTableViewCell.h"
 
 @interface CustonViewController () <CustonTableViewDataSource>
@@ -20,22 +20,32 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    CustonTableView *tb = [[CustonTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    CustomTableView *tb = [[CustomTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     tb.dataSource = self;
     [self.view addSubview:tb];
+    [tb reloadData];
 }
 
-- (NSInteger)tableView:(CustonTableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+- (NSInteger)tableView:(CustomTableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"%s", __func__);
+    return 20;
 }
 
-- (CustomTableViewCell *)tableView:(CustonTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CustomTableViewCell *)tableView:(CustomTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%s %zd__%zd", __func__, indexPath.section, indexPath.row);
     CustomTableViewCell *cell = [[CustomTableViewCell alloc] init];
+    if (indexPath.row % 2) {
+        cell.backgroundColor = [UIColor yellowColor];
+    }
+    else {
+        cell.backgroundColor = [UIColor blueColor];
+    }
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 58.f;
+    NSLog(@"%s %zd__%zd", __func__, indexPath.section, indexPath.row);
+    return 88.f;
 }
 
 @end

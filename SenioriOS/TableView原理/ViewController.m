@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "CustonTableView.h"
+#import "CustomTableView.h"
 #import "SystemViewController.h"
 #import "CustonViewController.h"
 
