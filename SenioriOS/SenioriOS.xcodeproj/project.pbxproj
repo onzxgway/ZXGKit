@@ -121,6 +121,7 @@
 		04EE1D6221B0DE7500BDB206 /* ScrollViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6121B0DE7500BDB206 /* ScrollViewTwo.m */; };
 		04EE1D6521B0DE7D00BDB206 /* ScrollViewThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6421B0DE7D00BDB206 /* ScrollViewThree.m */; };
 		04EE1D6821B0E41D00BDB206 /* SystemScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */; };
+		CC8D292721E72AFE0095370E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8D292621E72AFE0095370E /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -329,6 +330,8 @@
 		04EE1D6421B0DE7D00BDB206 /* ScrollViewThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewThree.m; sourceTree = "<group>"; };
 		04EE1D6621B0E41D00BDB206 /* SystemScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemScrollViewController.h; sourceTree = "<group>"; };
 		04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemScrollViewController.m; sourceTree = "<group>"; };
+		CC8D292521E72AFE0095370E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		CC8D292621E72AFE0095370E /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,6 +555,8 @@
 			children = (
 				045E404021E585E100876999 /* AppDelegate.h */,
 				045E404121E585E100876999 /* AppDelegate.m */,
+				CC8D292521E72AFE0095370E /* Person.h */,
+				CC8D292621E72AFE0095370E /* Person.m */,
 				045E404321E585E100876999 /* ViewController.h */,
 				045E404421E585E100876999 /* ViewController.m */,
 				045E404621E585E100876999 /* Main.storyboard */,
@@ -1146,6 +1151,7 @@
 			files = (
 				045E405621E586FF00876999 /* GCDTwoViewController.m in Sources */,
 				045E404521E585E100876999 /* ViewController.m in Sources */,
+				CC8D292721E72AFE0095370E /* Person.m in Sources */,
 				045E405021E585E200876999 /* main.m in Sources */,
 				045E404221E585E100876999 /* AppDelegate.m in Sources */,
 			);
