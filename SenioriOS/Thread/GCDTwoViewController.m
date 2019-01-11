@@ -33,7 +33,7 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
 //    [_safeAry addObject:@"3"];
     rwQueue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
     
-    [self testRWAry];
+    [self barrier_One];
 }
 
 // network
@@ -243,6 +243,41 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
     });
 }
 
+#pragma mark - =====================================semaphore==============================================
+// 可以理解为最大并发数 异步变同步 等功能
+- (void)dispatchSignal {
+    // create的value表示，最多几个资源可访问
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+    dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    // 任务1
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 1");
+        sleep(1);
+        NSLog(@"complete task 1");
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    // 任务2
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 2");
+        sleep(1);
+        NSLog(@"complete task 2");
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    // 任务3
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 3");
+        sleep(1);
+        NSLog(@"complete task 3");
+        dispatch_semaphore_signal(semaphore);
+    });
+}
+
 #pragma mark - =====================================group==============================================
 // Group使用场景：一个界面执行多个网络请求
 
@@ -280,26 +315,23 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
     
     /**
      使用注意事项：
-     添加在队列中的任务，不能再开启新线程，否则group会失效。
+     添加在队列中的任务，必须是同步的不能再开启新线程，否则group会失效。
      如果要开启，必须搭配信号量使用。
      */
     dispatch_group_enter(group); // 任务数+1
     dispatch_async(queue, ^{
-//        NSLog(@"1: %@", [NSThread currentThread]);
         [self netLoadSync:0];
         dispatch_group_leave(group); // 任务数-1
     });
     
     dispatch_group_enter(group);
     dispatch_async(queue, ^{
-//        NSLog(@"2: %@", [NSThread currentThread]);
         [self netLoadSync:0];
         dispatch_group_leave(group);
     });
     
     dispatch_group_enter(group);
     dispatch_async(queue, ^{
-//        NSLog(@"3: %@", [NSThread currentThread]);
         [self netLoadSync:0];
         dispatch_group_leave(group);
     });
