@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy ) NSString *name;
 @property (nonatomic, copy ) NSString *email;
 
+@property (nonatomic, strong) dispatch_queue_t queue;
+
 - (void)setProperty:(NSString *)name email:(NSString *)email;
 
 @end

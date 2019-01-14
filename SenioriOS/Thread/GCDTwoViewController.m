@@ -33,7 +33,7 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
 //    [_safeAry addObject:@"3"];
     rwQueue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
     
-    [self barrier_One];
+    [self testRWAry];
 }
 
 // network
@@ -90,6 +90,7 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
 //    });
     
     Person *p = [[Person alloc] init];
+    p.queue = dispatch_queue_create("abbb", DISPATCH_QUEUE_CONCURRENT);
     [self updateContact:p contacts:self.dict];
     
 }
@@ -116,7 +117,6 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
         
         dispatch_group_async(group, rwQueue, ^{
             [person setProperty:key email:value];
-            NSLog(@"%@", person);
         });
         
     }
@@ -153,10 +153,12 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
 - (NSMutableDictionary *)dict {
     
     if (!_dict) {
-        _dict = [@{@"Leijun" : @"leijun@mi.com",
-                   @"Luoyonghao" : @"luoyonghao@smartisan.com",
+        _dict = [@{
+                   @"Goodguy" : @"crafttang@gmail.com",
+                   @"Leijun" : @"leijun@mi.com",
                    @"Yuchengdong" : @"yuchengdong@huawei.com",
-                   @"Goodguy" : @"crafttang@gmail.com"} mutableCopy];
+                   @"Luoyonghao" : @"luoyonghao@smartisan.com",
+                   } mutableCopy];
     }
     return _dict;
     
