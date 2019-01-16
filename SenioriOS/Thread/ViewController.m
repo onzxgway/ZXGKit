@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GCDTwoViewController.h"
+#import "GCDOneViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -53,7 +54,7 @@
     
     UIViewController *viewCtr = nil;
     if(indexPath.row == 0) {
-        viewCtr = [GCDTwoViewController new];
+        viewCtr = [GCDOneViewController new];
     }
     else if(indexPath.row == 1) {
         viewCtr = [GCDTwoViewController new];
