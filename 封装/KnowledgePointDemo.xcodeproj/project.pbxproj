@@ -79,6 +79,18 @@
 		07955D1C7552EC3A2A3805AC /* libPods-OCAndJS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B34BEC4A6DA2310E21CD59D2 /* libPods-OCAndJS.a */; };
 		413F7F091995995BE088800D /* libPods-CoreTextDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD331ECFADBF613C3E85A78 /* libPods-CoreTextDemo.a */; };
 		52E662819C155C29E54C327F /* libPods-Packaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */; };
+		CC5EE07621F06A5600B87939 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE07521F06A5600B87939 /* AppDelegate.m */; };
+		CC5EE07921F06A5600B87939 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE07821F06A5600B87939 /* ViewController.m */; };
+		CC5EE07C21F06A5600B87939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5EE07A21F06A5600B87939 /* Main.storyboard */; };
+		CC5EE07E21F06A5700B87939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5EE07D21F06A5700B87939 /* Assets.xcassets */; };
+		CC5EE08121F06A5700B87939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5EE07F21F06A5700B87939 /* LaunchScreen.storyboard */; };
+		CC5EE08421F06A5700B87939 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE08321F06A5700B87939 /* main.m */; };
+		CC5EE08B21F06CDE00B87939 /* ZXGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE08A21F06CDE00B87939 /* ZXGPageViewController.m */; };
+		CC5EE08E21F0708E00B87939 /* ZXGPageConfigration.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE08D21F0708E00B87939 /* ZXGPageConfigration.m */; };
+		CC5EE09621F0789F00B87939 /* ZXGPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE09521F0789F00B87939 /* ZXGPageScrollView.m */; };
+		CC5EE09A21F0797C00B87939 /* UIView+ZXGPageExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE09921F0797C00B87939 /* UIView+ZXGPageExtend.m */; };
+		CC5EE09D21F0812F00B87939 /* ZXGPageScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE09C21F0812F00B87939 /* ZXGPageScrollMenuView.m */; };
+		CC5EE0A021F0836E00B87939 /* ZXGCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE09F21F0836E00B87939 /* ZXGCenterViewController.m */; };
 		D6830E5E69F4D73B29322B81 /* libPods-Memory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 783A9EF2F78A846FE1392C58 /* libPods-Memory.a */; };
 /* End PBXBuildFile section */
 
@@ -220,6 +232,28 @@
 		B34BEC4A6DA2310E21CD59D2 /* libPods-OCAndJS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCAndJS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD331ECFADBF613C3E85A78 /* libPods-CoreTextDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoreTextDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B5EF93A31DDE1D37B8962 /* libPods-封装.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-封装.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5EE07221F06A5600B87939 /* ZXGPageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXGPageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5EE07421F06A5600B87939 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC5EE07521F06A5600B87939 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC5EE07721F06A5600B87939 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC5EE07821F06A5600B87939 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CC5EE07B21F06A5600B87939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC5EE07D21F06A5700B87939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC5EE08021F06A5700B87939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC5EE08221F06A5700B87939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5EE08321F06A5700B87939 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC5EE08921F06CDE00B87939 /* ZXGPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPageViewController.h; sourceTree = "<group>"; };
+		CC5EE08A21F06CDE00B87939 /* ZXGPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPageViewController.m; sourceTree = "<group>"; };
+		CC5EE08C21F0708E00B87939 /* ZXGPageConfigration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPageConfigration.h; sourceTree = "<group>"; };
+		CC5EE08D21F0708E00B87939 /* ZXGPageConfigration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPageConfigration.m; sourceTree = "<group>"; };
+		CC5EE09421F0789F00B87939 /* ZXGPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGPageScrollView.h; sourceTree = "<group>"; };
+		CC5EE09521F0789F00B87939 /* ZXGPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGPageScrollView.m; sourceTree = "<group>"; };
+		CC5EE09821F0797C00B87939 /* UIView+ZXGPageExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZXGPageExtend.h"; sourceTree = "<group>"; };
+		CC5EE09921F0797C00B87939 /* UIView+ZXGPageExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZXGPageExtend.m"; sourceTree = "<group>"; };
+		CC5EE09B21F0812F00B87939 /* ZXGPageScrollMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGPageScrollMenuView.h; sourceTree = "<group>"; };
+		CC5EE09C21F0812F00B87939 /* ZXGPageScrollMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPageScrollMenuView.m; sourceTree = "<group>"; };
+		CC5EE09E21F0836E00B87939 /* ZXGCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGCenterViewController.h; sourceTree = "<group>"; };
+		CC5EE09F21F0836E00B87939 /* ZXGCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGCenterViewController.m; sourceTree = "<group>"; };
 		D0EFCE7CAFFB0F81252BC07B /* Pods-Packaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Packaging.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Packaging/Pods-Packaging.release.xcconfig"; sourceTree = "<group>"; };
 		E2490CD6417B10AEC0A8E801 /* Pods-OCAndJS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.debug.xcconfig"; sourceTree = "<group>"; };
 		FA51E6EA295344576ECF4922 /* libPods-ZXGDatePickView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXGDatePickView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +317,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC5EE06F21F06A5600B87939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -296,6 +337,7 @@
 				049C32BD216B591B00AEA85C /* Memory */,
 				048EFE4F216D95C000F7A608 /* Lock */,
 				04B4EFD621AE77BF009BB234 /* Chain-Programming */,
+				CC5EE07321F06A5600B87939 /* ZXGPageViewController */,
 				0104688B207DAAF700DC5BA0 /* Products */,
 				6870B1D4F4700A43EF3F001A /* Pods */,
 				489AFC8005142EA0A6268AE3 /* Frameworks */,
@@ -312,6 +354,7 @@
 				049C32BC216B591B00AEA85C /* Memory.app */,
 				048EFE4E216D95C000F7A608 /* Lock.app */,
 				04B4EFD521AE77BF009BB234 /* Chain-Programming.app */,
+				CC5EE07221F06A5600B87939 /* ZXGPageViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -570,6 +613,58 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CC5EE07321F06A5600B87939 /* ZXGPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC5EE08821F06CD100B87939 /* ZXGPageViewController */,
+				CC5EE07421F06A5600B87939 /* AppDelegate.h */,
+				CC5EE07521F06A5600B87939 /* AppDelegate.m */,
+				CC5EE07721F06A5600B87939 /* ViewController.h */,
+				CC5EE07821F06A5600B87939 /* ViewController.m */,
+				CC5EE09E21F0836E00B87939 /* ZXGCenterViewController.h */,
+				CC5EE09F21F0836E00B87939 /* ZXGCenterViewController.m */,
+				CC5EE07A21F06A5600B87939 /* Main.storyboard */,
+				CC5EE07D21F06A5700B87939 /* Assets.xcassets */,
+				CC5EE07F21F06A5700B87939 /* LaunchScreen.storyboard */,
+				CC5EE08221F06A5700B87939 /* Info.plist */,
+				CC5EE08321F06A5700B87939 /* main.m */,
+			);
+			path = ZXGPageViewController;
+			sourceTree = "<group>";
+		};
+		CC5EE08821F06CD100B87939 /* ZXGPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC5EE09721F078BE00B87939 /* Category */,
+				CC5EE09321F0789F00B87939 /* View */,
+				CC5EE08921F06CDE00B87939 /* ZXGPageViewController.h */,
+				CC5EE08A21F06CDE00B87939 /* ZXGPageViewController.m */,
+				CC5EE08C21F0708E00B87939 /* ZXGPageConfigration.h */,
+				CC5EE08D21F0708E00B87939 /* ZXGPageConfigration.m */,
+			);
+			path = ZXGPageViewController;
+			sourceTree = "<group>";
+		};
+		CC5EE09321F0789F00B87939 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC5EE09421F0789F00B87939 /* ZXGPageScrollView.h */,
+				CC5EE09521F0789F00B87939 /* ZXGPageScrollView.m */,
+				CC5EE09B21F0812F00B87939 /* ZXGPageScrollMenuView.h */,
+				CC5EE09C21F0812F00B87939 /* ZXGPageScrollMenuView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC5EE09721F078BE00B87939 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CC5EE09821F0797C00B87939 /* UIView+ZXGPageExtend.h */,
+				CC5EE09921F0797C00B87939 /* UIView+ZXGPageExtend.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -702,6 +797,23 @@
 			productReference = 04B4EFD521AE77BF009BB234 /* Chain-Programming.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CC5EE07121F06A5600B87939 /* ZXGPageViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC5EE08721F06A5700B87939 /* Build configuration list for PBXNativeTarget "ZXGPageViewController" */;
+			buildPhases = (
+				CC5EE06E21F06A5600B87939 /* Sources */,
+				CC5EE06F21F06A5600B87939 /* Frameworks */,
+				CC5EE07021F06A5600B87939 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZXGPageViewController;
+			productName = ZXGPageViewController;
+			productReference = CC5EE07221F06A5600B87939 /* ZXGPageViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -742,6 +854,10 @@
 						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
 					};
+					CC5EE07121F06A5600B87939 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 01046885207DAAF700DC5BA0 /* Build configuration list for PBXProject "KnowledgePointDemo" */;
@@ -764,6 +880,7 @@
 				049C32BB216B591B00AEA85C /* Memory */,
 				048EFE4D216D95C000F7A608 /* Lock */,
 				04B4EFD421AE77BF009BB234 /* Chain-Programming */,
+				CC5EE07121F06A5600B87939 /* ZXGPageViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -839,6 +956,16 @@
 				04B4EFE421AE77C0009BB234 /* LaunchScreen.storyboard in Resources */,
 				04B4EFE121AE77C0009BB234 /* Assets.xcassets in Resources */,
 				04B4EFDF21AE77BF009BB234 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5EE07021F06A5600B87939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5EE08121F06A5700B87939 /* LaunchScreen.storyboard in Resources */,
+				CC5EE07E21F06A5700B87939 /* Assets.xcassets in Resources */,
+				CC5EE07C21F06A5600B87939 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,6 +1257,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC5EE06E21F06A5600B87939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5EE0A021F0836E00B87939 /* ZXGCenterViewController.m in Sources */,
+				CC5EE07921F06A5600B87939 /* ViewController.m in Sources */,
+				CC5EE08E21F0708E00B87939 /* ZXGPageConfigration.m in Sources */,
+				CC5EE09A21F0797C00B87939 /* UIView+ZXGPageExtend.m in Sources */,
+				CC5EE08421F06A5700B87939 /* main.m in Sources */,
+				CC5EE07621F06A5600B87939 /* AppDelegate.m in Sources */,
+				CC5EE08B21F06CDE00B87939 /* ZXGPageViewController.m in Sources */,
+				CC5EE09621F0789F00B87939 /* ZXGPageScrollView.m in Sources */,
+				CC5EE09D21F0812F00B87939 /* ZXGPageScrollMenuView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -1225,6 +1368,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				04B4EFE321AE77C0009BB234 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CC5EE07A21F06A5600B87939 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC5EE07B21F06A5600B87939 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC5EE07F21F06A5700B87939 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC5EE08021F06A5700B87939 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1632,6 +1791,45 @@
 			};
 			name = Release;
 		};
+		CC5EE08521F06A5700B87939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = ZXGPageViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC5EE08621F06A5700B87939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = ZXGPageViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1703,6 +1901,15 @@
 			buildConfigurations = (
 				04B4EFE821AE77C0009BB234 /* Debug */,
 				04B4EFE921AE77C0009BB234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC5EE08721F06A5700B87939 /* Build configuration list for PBXNativeTarget "ZXGPageViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5EE08521F06A5700B87939 /* Debug */,
+				CC5EE08621F06A5700B87939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

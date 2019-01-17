@@ -34,7 +34,7 @@
 - (void)theard {
     
     _theard = [[NSThread alloc] initWithTarget:self selector:@selector(taskOne) object:nil];
-    
+    [_theard start];
 }
 
 - (void)taskOne {
