@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZXGPageScrollMenuView : UIView
 
+/// 标题数组
+@property (nonatomic, strong) NSMutableArray<NSString *> *titles;
+
 /**
  初始化ZXGPageScrollMenuView
  
@@ -39,6 +42,11 @@ NS_ASSUME_NONNULL_BEGIN
                  configration:(ZXGPageConfigration *)configration
                      delegate:(id<ZXGPageScrollMenuViewDelegate>)delegate
                  currentIndex:(NSInteger)currentIndex NS_DESIGNATED_INITIALIZER;
+
+- (void)adjustItemWithProgress:(CGFloat)progress
+                     lastIndex:(NSInteger)lastIndex
+                  currentIndex:(NSInteger)currentIndex;
+
 
 @end
 

@@ -10,10 +10,20 @@
 #import "ZXGPageScrollView.h"
 #import "UIView+ZXGPageExtend.h"
 
-@interface ZXGPageViewController ()
+@interface ZXGPageViewController () <UIScrollViewDelegate>
 
 /// 页面ScrollView
 @property (nonatomic, strong) ZXGPageScrollView *pageScrollView;
+/// 展示控制器的字典
+@property (nonatomic, strong) NSMutableDictionary *displayDictM;
+/// 字典控制器的缓存
+@property (nonatomic, strong) NSMutableDictionary *cacheDictM;
+/// 当前显示的页面
+@property (nonatomic, strong) UIScrollView *currentScrollView;
+/// 当前控制器
+@property (nonatomic, strong) UIViewController *currentViewController;
+/// 上次偏移的位置
+@property (nonatomic) CGFloat lastPositionX;
 
 @end
 
@@ -54,8 +64,8 @@
         _titlesM = titles.mutableCopy;
         _config = config ?: [ZXGPageConfigration defaultConfig];
         
-//        self.displayDictM = @{}.mutableCopy;
-//        self.cacheDictM = @{}.mutableCopy;
+        _displayDictM = @{}.mutableCopy;
+        _cacheDictM = @{}.mutableCopy;
 //        self.originInsetBottomDictM = @{}.mutableCopy;
 //        self.scrollViewCacheDictionryM = @{}.mutableCopy;
     }
@@ -69,7 +79,7 @@
     
     [self initData];
     [self setupSubViews];
-//    [self setSelectedPageIndex:self.pageIndex];
+    [self setSelectedPageIndex:self.pageIndex];
 }
 
 #pragma mark - Private Method
@@ -133,13 +143,12 @@
 //    }
 }
 
-/// 初始化ScrollView
+/// 初始化PageScrollMenuView
 - (void)setupPageScrollMenuView {
     CGRect frame = CGRectMake(0, 0, self.config.menuWidth, self.config.menuHeight);
     
     ZXGPageScrollMenuView *scrollMenuView = [[ZXGPageScrollMenuView alloc] initWithFrame:frame titles:self.titlesM configration:self.config delegate:self currentIndex:self.pageIndex];
     self.scrollMenuView = scrollMenuView;
-    scrollMenuView.backgroundColor = [UIColor greenColor];
     
     switch (self.config.pageStyle) {
         case ZXGPageStyleTop:
@@ -197,6 +206,24 @@
 //    }
 //}
 
+#pragma mark - Public Method
+- (void)setSelectedPageIndex:(NSInteger)pageIndex {
+    
+    if (self.cacheDictM.count > 0 && pageIndex == self.pageIndex) return;
+    
+    if (pageIndex > self.controllersM.count - 1) return;
+    
+    CGRect frame = CGRectMake(self.pageScrollView.zxg_width * pageIndex, 0, self.pageScrollView.zxg_width, self.pageScrollView.zxg_height);
+    if (frame.origin.x == self.pageScrollView.contentOffset.x) {
+        [self scrollViewDidScroll:self.pageScrollView];
+    }
+    else {
+        [self.pageScrollView scrollRectToVisible:frame animated:NO];
+    }
+    
+    [self scrollViewDidEndDecelerating:self.pageScrollView];
+    
+}
 
 /// 检查参数
 - (void)checkParams {
@@ -257,7 +284,7 @@
         _pageScrollView.pagingEnabled = YES;
 //        _pageScrollView.bounces = NO;
         _pageScrollView.delegate = self;
-        _pageScrollView.backgroundColor = [UIColor greenColor];
+        _pageScrollView.backgroundColor = [UIColor blueColor];
         if (@available(iOS 11.0, *)) {
             _pageScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
@@ -270,5 +297,243 @@
     return self.config.pageStyle == ZXGPageStyleTop;
 }
 
+- (NSString *)titleWithIndex:(NSInteger)index {
+    return self.titlesM[index];
+}
+
+- (NSInteger)getPageIndexWithTitle:(NSString *)title {
+    return [self.titlesM indexOfObject:title];
+}
+
+- (NSString *)getKeyWithTitle:(NSString *)title {
+    if ([self respondsToCustomCachekey]) {
+        NSString *ID = [self.dataSource pageViewController:self customCacheKeyForIndex:self.pageIndex];
+        return ID;
+    }
+    return title;
+};
+
+#pragma mark - UIScrollViewDelegate
+/// scrollView滚动结束
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+//    if (scrollView == self.bgScrollView) return;
+    
+//    if ([self isSuspensionTopPauseStyle]) {
+//        self.currentScrollView.scrollEnabled = YES;
+//    }
+    [self replaceHeaderViewFromView];
+    [self removeViewController];
+//    [self.scrollMenuView adjustItemPositionWithCurrentIndex:self.pageIndex];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(pageViewController:didEndDecelerating:)]) {
+        [self.delegate pageViewController:self didEndDecelerating:scrollView];
+    }
+}
+
+/// scrollView滚动ing
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+//    if (scrollView == self.bgScrollView) {
+//        [self calcuSuspendTopPauseWithBgScrollView:scrollView];
+//        [self invokeDelegateForScrollWithOffsetY:scrollView.contentOffset.y];
+//        return;
+//    }
+    
+    CGFloat currentPostion = scrollView.contentOffset.x;
+    
+    CGFloat offsetX = currentPostion / ZXGPAGE_SCREEN_WIDTH;
+    
+    CGFloat offX = currentPostion > self.lastPositionX ? ceilf(offsetX) : offsetX;
+    
+    [self replaceHeaderViewFromTableView];
+    
+    [self initViewControllerWithIndex:offX];
+    
+    CGFloat progress = offsetX - (NSInteger)offsetX;
+    
+    self.lastPositionX = currentPostion;
+    
+    [self.scrollMenuView adjustItemWithProgress:progress lastIndex:floor(offsetX) currentIndex:ceilf(offsetX)];
+    
+    if (floor(offsetX) == ceilf(offsetX)) {
+        [self.scrollMenuView adjustItemAnimate:YES];
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(pageViewController:didScroll:progress:formIndex:toIndex:)]) {
+        [self.delegate pageViewController:self didScroll:scrollView progress:progress formIndex:floor(offsetX) toIndex:ceilf(offsetX)];
+    }
+}
+
+/// 将headerView 从 view 上 放置 tableview 上
+- (void)replaceHeaderViewFromView {
+//    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
+//        if (!_headerViewInTableView) {
+//
+//            UIScrollView *scrollView = self.currentScrollView;
+//
+//            CGFloat headerViewY = [self.headerBgView.superview convertRect:self.headerBgView.frame toView:scrollView].origin.y;
+//            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:scrollView].origin.y;
+//
+//            [self.headerBgView removeFromSuperview];
+//            [self.scrollMenuView removeFromSuperview];
+//
+//            self.headerBgView.yn_y = headerViewY;
+//            self.scrollMenuView.yn_y = scrollMenuViewY;
+//
+//            [scrollView addSubview:self.headerBgView];
+//            [scrollView addSubview:self.scrollMenuView];
+//
+//            _headerViewInTableView = YES;
+//        }
+//    }
+}
+
+/// 将headerView 从 tableview 上 放置 view 上
+- (void)replaceHeaderViewFromTableView {
+    
+//    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
+//        if (_headerViewInTableView) {
+//
+//            CGFloat headerViewY = [self.headerBgView.superview convertRect:self.headerBgView.frame toView:self.pageScrollView].origin.y;
+//            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:self.pageScrollView].origin.y;
+//
+//            [self.headerBgView removeFromSuperview];
+//            [self.scrollMenuView removeFromSuperview];
+//            self.headerBgView.yn_y = headerViewY;
+//            self.scrollMenuView.yn_y = scrollMenuViewY;
+//
+//            [self.view insertSubview:self.headerBgView aboveSubview:self.pageScrollView];
+//            [self.view insertSubview:self.scrollMenuView aboveSubview:self.headerBgView];
+//
+//            _headerViewInTableView = NO;
+//        }
+//    }
+}
+
+/// 移除缓存控制器
+- (void)removeViewController {
+    NSString *title = [self titleWithIndex:self.pageIndex];
+    NSString *displayKey = [self getKeyWithTitle:title];
+    for (NSString *key in self.displayDictM.allKeys) {
+        if (![key isEqualToString:displayKey]) {
+            [self removeViewControllerWithChildVC:self.displayDictM[key] key:key];
+        }
+    }
+}
+
+#pragma mark - 初始化子控制器
+- (void)initViewControllerWithIndex:(NSInteger)index {
+    
+    self.currentViewController = self.controllersM[index];
+    
+    self.pageIndex = index;
+    NSString *title = [self titleWithIndex:index];
+    if ([self.displayDictM objectForKey:[self getKeyWithTitle:title]]) return;
+    
+    UIViewController *cacheViewController = [self.cacheDictM objectForKey:[self getKeyWithTitle:title]];
+    [self addViewControllerToParent:cacheViewController ?: self.controllersM[index] index:index];
+    
+}
+
+/// 添加到父类控制器中
+- (void)addViewControllerToParent:(UIViewController *)viewController index:(NSInteger)index {
+    
+    [self addChildViewController:self.controllersM[index]];
+    
+    viewController.view.frame = CGRectMake(ZXGPAGE_SCREEN_WIDTH * index, 0, self.pageScrollView.zxg_width, self.pageScrollView.zxg_height);
+    
+    [self.pageScrollView addSubview:viewController.view];
+    
+    NSString *title = [self titleWithIndex:index];
+    
+    [self.displayDictM setObject:viewController forKey:[self getKeyWithTitle:title]];
+    
+    UIScrollView *scrollView = self.currentScrollView;
+    
+    if (self.dataSource && [self.dataSource respondsToSelector:@selector(pageViewController:heightForScrollViewAtIndex:)]) {
+        CGFloat scrollViewHeight = [self.dataSource pageViewController:self heightForScrollViewAtIndex:index];
+        scrollView.frame = CGRectMake(0, 0, viewController.view.zxg_width, scrollViewHeight);
+    }
+    else {
+        scrollView.frame = viewController.view.bounds;
+    }
+    
+    [viewController didMoveToParentViewController:self];
+    
+//    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
+//        
+//        if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
+//            CGFloat bottom = scrollView.contentInset.bottom > 2 * kDEFAULT_INSET_BOTTOM ? 0 : scrollView.contentInset.bottom;
+//            [self.originInsetBottomDictM setValue:@(bottom) forKey:[self getKeyWithTitle:title]];
+//            
+//            /// 设置TableView内容偏移
+//            scrollView.contentInset = UIEdgeInsetsMake(_insetTop, 0, scrollView.contentInset.bottom + 3 * kDEFAULT_INSET_BOTTOM, 0);
+//        }
+//        if ([self isSuspensionBottomStyle]) {
+//            scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(_insetTop, 0, 0, 0);
+//        }
+//        
+//        if (self.cacheDictM.count == 0) {
+//            /// 初次添加headerView、scrollMenuView
+//            self.headerBgView.yn_y = - _insetTop;
+//            self.scrollMenuView.yn_y = self.headerBgView.yn_bottom;
+//            [scrollView addSubview:self.headerBgView];
+//            [scrollView addSubview:self.scrollMenuView];
+//            /// 设置首次偏移量置顶
+//            [scrollView setContentOffset:CGPointMake(0, -_insetTop) animated:NO];
+//            
+//        } else {
+//            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:self.view].origin.y;
+//            
+//            if (self.supendStatus) {
+//                /// 首次已经悬浮 设置初始化 偏移量
+//                if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
+//                    [scrollView setContentOffset:CGPointMake(0, -self.config.menuHeight - self.config.suspenOffsetY) animated:NO];
+//                } else {
+//                    /// 再次悬浮 已经加载过 设置偏移量
+//                    if (scrollView.contentOffset.y < -self.config.menuHeight - self.config.suspenOffsetY) {
+//                        [scrollView setContentOffset:CGPointMake(0, -self.config.menuHeight - self.config.suspenOffsetY) animated:NO];
+//                    }
+//                }
+//            } else {
+//                CGFloat scrollMenuViewDeltaY = _scrollMenuViewOriginY - scrollMenuViewY;
+//                scrollMenuViewDeltaY = -_insetTop +  scrollMenuViewDeltaY;
+//                /// 求出偏移了多少 未悬浮 (多个ScrollView偏移量联动)
+//                scrollView.contentOffset = CGPointMake(0, scrollMenuViewDeltaY);
+//            }
+//        }
+//    }
+    /// 缓存控制器
+    if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
+        [self.cacheDictM setObject:viewController forKey:[self getKeyWithTitle:title]];
+    }
+}
+
+/// 从父类控制器移除控制器
+- (void)removeViewControllerWithChildVC:(UIViewController *)childVC key:(NSString *)key {
+    
+    [self removeViewControllerWithChildVC:childVC];
+    
+    [self.displayDictM removeObjectForKey:key];
+    
+    if (![self.cacheDictM objectForKey:key]) {
+        [self.cacheDictM setObject:childVC forKey:key];
+    }
+}
+
+/// 添加子控制器
+- (void)addChildViewControllerWithChildVC:(UIViewController *)childVC parentVC:(UIViewController *)parentVC {
+    [parentVC addChildViewController:childVC];
+    [parentVC didMoveToParentViewController:childVC];
+    [parentVC.view addSubview:childVC.view];
+}
+
+/// 子控制器移除自己
+- (void)removeViewControllerWithChildVC:(UIViewController *)childVC {
+    [childVC.view removeFromSuperview];
+    [childVC willMoveToParentViewController:nil];
+    [childVC removeFromParentViewController];
+}
 
 @end

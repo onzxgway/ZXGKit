@@ -48,6 +48,10 @@ typedef NS_ENUM(NSInteger, ZXGPageStyle) {
 @property (nonatomic) CGFloat menuWidth;
 /** 内容区域 */
 @property (nonatomic) CGFloat contentHeight;
+/** 菜单背景color */
+@property (nonatomic, strong) UIColor *scrollViewBackgroundColor;
+/** 自定义Item 加图片 图片间隙 ... */
+@property (nonatomic, strong) NSArray<UIButton *> *buttonArray;
 
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
 

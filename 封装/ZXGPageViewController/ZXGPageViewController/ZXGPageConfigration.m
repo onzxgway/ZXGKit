@@ -36,7 +36,7 @@
 //        _converColor = [UIColor groupTableViewBackgroundColor];
 //        _addButtonBackgroundColor = [UIColor whiteColor];
 //        _bottomLineBgColor = [UIColor greenColor];
-//        _scrollViewBackgroundColor = [UIColor whiteColor];
+        _scrollViewBackgroundColor = [UIColor whiteColor];
 //        _normalItemColor = [UIColor grayColor];
 //        _selectedItemColor = [UIColor greenColor];
 //        _lineHeight = 2;
