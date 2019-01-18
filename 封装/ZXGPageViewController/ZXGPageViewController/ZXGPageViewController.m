@@ -147,7 +147,7 @@
 - (void)setupPageScrollMenuView {
     CGRect frame = CGRectMake(0, 0, self.config.menuWidth, self.config.menuHeight);
     
-    ZXGPageScrollMenuView *scrollMenuView = [[ZXGPageScrollMenuView alloc] initWithFrame:frame titles:self.titlesM configration:self.config delegate:self currentIndex:self.pageIndex];
+    ZXGPageScrollMenuView *scrollMenuView = [[ZXGPageScrollMenuView alloc] initWithFrame:frame titles:self.titlesM configuration:self.config delegate:self currentIndex:self.pageIndex];
     self.scrollMenuView = scrollMenuView;
     
     switch (self.config.pageStyle) {
@@ -357,7 +357,7 @@
     [self.scrollMenuView adjustItemWithProgress:progress lastIndex:floor(offsetX) currentIndex:ceilf(offsetX)];
     
     if (floor(offsetX) == ceilf(offsetX)) {
-        [self.scrollMenuView adjustItemAnimate:YES];
+//        [self.scrollMenuView adjustItemAnimate:YES];
     }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(pageViewController:didScroll:progress:formIndex:toIndex:)]) {

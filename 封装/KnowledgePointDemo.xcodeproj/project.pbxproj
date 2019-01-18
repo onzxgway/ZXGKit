@@ -91,6 +91,7 @@
 		CC5EE09A21F0797C00B87939 /* UIView+ZXGPageExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE09921F0797C00B87939 /* UIView+ZXGPageExtend.m */; };
 		CC5EE09D21F0812F00B87939 /* ZXGPageScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE09C21F0812F00B87939 /* ZXGPageScrollMenuView.m */; };
 		CC5EE0A021F0836E00B87939 /* ZXGCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE09F21F0836E00B87939 /* ZXGCenterViewController.m */; };
+		CC77CA9A21F1B90B002E5E91 /* ZXGTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC77CA9921F1B90B002E5E91 /* ZXGTestController.m */; };
 		D6830E5E69F4D73B29322B81 /* libPods-Memory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 783A9EF2F78A846FE1392C58 /* libPods-Memory.a */; };
 /* End PBXBuildFile section */
 
@@ -254,6 +255,8 @@
 		CC5EE09C21F0812F00B87939 /* ZXGPageScrollMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPageScrollMenuView.m; sourceTree = "<group>"; };
 		CC5EE09E21F0836E00B87939 /* ZXGCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGCenterViewController.h; sourceTree = "<group>"; };
 		CC5EE09F21F0836E00B87939 /* ZXGCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGCenterViewController.m; sourceTree = "<group>"; };
+		CC77CA9821F1B90B002E5E91 /* ZXGTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGTestController.h; sourceTree = "<group>"; };
+		CC77CA9921F1B90B002E5E91 /* ZXGTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGTestController.m; sourceTree = "<group>"; };
 		D0EFCE7CAFFB0F81252BC07B /* Pods-Packaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Packaging.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Packaging/Pods-Packaging.release.xcconfig"; sourceTree = "<group>"; };
 		E2490CD6417B10AEC0A8E801 /* Pods-OCAndJS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAndJS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-OCAndJS/Pods-OCAndJS.debug.xcconfig"; sourceTree = "<group>"; };
 		FA51E6EA295344576ECF4922 /* libPods-ZXGDatePickView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXGDatePickView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -623,6 +626,8 @@
 				CC5EE07821F06A5600B87939 /* ViewController.m */,
 				CC5EE09E21F0836E00B87939 /* ZXGCenterViewController.h */,
 				CC5EE09F21F0836E00B87939 /* ZXGCenterViewController.m */,
+				CC77CA9821F1B90B002E5E91 /* ZXGTestController.h */,
+				CC77CA9921F1B90B002E5E91 /* ZXGTestController.m */,
 				CC5EE07A21F06A5600B87939 /* Main.storyboard */,
 				CC5EE07D21F06A5700B87939 /* Assets.xcassets */,
 				CC5EE07F21F06A5700B87939 /* LaunchScreen.storyboard */,
@@ -1270,6 +1275,7 @@
 				CC5EE08B21F06CDE00B87939 /* ZXGPageViewController.m in Sources */,
 				CC5EE09621F0789F00B87939 /* ZXGPageScrollView.m in Sources */,
 				CC5EE09D21F0812F00B87939 /* ZXGPageScrollMenuView.m in Sources */,
+				CC77CA9A21F1B90B002E5E91 /* ZXGTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

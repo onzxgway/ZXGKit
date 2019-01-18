@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ZXGCenterViewController.h"
+#import "ZXGTestController.h"
 
 typedef NS_ENUM(NSInteger, ZXGVCType) {
     ZXGVCTypeSuspendCenterPageVC = 1,
@@ -110,7 +111,7 @@ typedef NS_ENUM(NSInteger, ZXGVCType) {
     switch (type) {
         case ZXGVCTypeSuspendTopPageVC:
         {
-            vc = [ZXGCenterViewController new] ;
+            vc = [ZXGTestController new] ;
         }
             break;
         case ZXGVCTypeSuspendCenterPageVC:
@@ -120,7 +121,7 @@ typedef NS_ENUM(NSInteger, ZXGVCType) {
             break;
         case ZXGVCTypeSuspendTopPausePageVC:
         {
-            vc = [ZXGCenterViewController new];
+            vc = [ZXGTestController new];
         }
             break;
         case ZXGVCTypeSuspendCustomNavOrSuspendPosition:

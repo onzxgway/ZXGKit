@@ -16,33 +16,44 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 /// 点击item
-- (void)pagescrollMenuViewItemOnClick:(UIButton *)button index:(NSInteger)index;
+- (void)menuViewItemOnClick:(UIButton *)button index:(NSInteger)index;
 
 /// 点击Add按钮
-- (void)pagescrollMenuViewAddButtonAction:(UIButton *)button;
+- (void)menuViewAddButtonAction:(UIButton *)button;
 
 @end
 
 @interface ZXGPageScrollMenuView : UIView
 
+/// + 按钮
+@property (nonatomic, strong) UIButton *addButton;
+
 /// 标题数组
-@property (nonatomic, strong) NSMutableArray<NSString *> *titles;
+@property (nonatomic, strong) NSArray<NSString *> *titles;
 
 /**
  初始化ZXGPageScrollMenuView
  
- @param frame 大小
- @param titles 标题
- @param configration 配置信息
- @param delegate 代理
+ @param frame 位置大小
+ @param titles 标题集合
+ @param configuration 配置信息
+ @param delegate 代理对象
  @param currentIndex 当前选中下标
  */
 - (instancetype)initWithFrame:(CGRect)frame
-                       titles:(NSMutableArray<NSString *> *)titles
-                 configration:(ZXGPageConfigration *)configration
-                     delegate:(id<ZXGPageScrollMenuViewDelegate>)delegate
+                       titles:(NSArray<NSString *> *)titles
+                configuration:(ZXGPageConfigration *)configuration
+                     delegate:(id<ZXGPageScrollMenuViewDelegate> _Nullable)delegate
                  currentIndex:(NSInteger)currentIndex NS_DESIGNATED_INITIALIZER;
 
+
+/**
+ <#Description#>
+
+ @param progress <#progress description#>
+ @param lastIndex <#lastIndex description#>
+ @param currentIndex <#currentIndex description#>
+ */
 - (void)adjustItemWithProgress:(CGFloat)progress
                      lastIndex:(NSInteger)lastIndex
                   currentIndex:(NSInteger)currentIndex;

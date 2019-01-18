@@ -42,16 +42,91 @@ typedef NS_ENUM(NSInteger, ZXGPageStyle) {
 @property (nonatomic) ZXGPageStyle pageStyle;
 
 #pragma mark - UIScrollMenuView Config
+/** 是否显示遮盖*/
+@property (nonatomic) BOOL showCover;
+/** 遮盖color */
+@property (nonatomic, strong) UIColor *coverColor;
+/** 遮盖圆角 14 */
+@property (nonatomic) CGFloat coverCornerRadius;
+/** 遮盖height 28 */
+@property (nonatomic) CGFloat coverHeight;
+
+
+
+/** 是否显示指示线条 YES */
+@property (nonatomic) BOOL showScrollLine;
+/** 指示线height 2 */
+@property (nonatomic) CGFloat lineHeight;
+/** 线条底部距离 0*/
+@property (nonatomic) CGFloat lineBottomMargin;
+/** 线条左右偏移量 0 */
+@property (nonatomic) CGFloat lineLeftAndRightMargin;
+/** 线条左右增加 0  默认线条宽度是等于 item宽度 */
+@property (nonatomic) CGFloat lineLeftAndRightAddWidth;
+/** 线条圆角 0 */
+@property (nonatomic) CGFloat lineCorner;
+/** 是否需要线条宽度等于字体宽度 默认 NO */
+@property (nonatomic) BOOL lineWidthEqualFontWidth;
+/** 线条color */
+@property (nonatomic, strong) UIColor *lineColor;
+
+
+/** 是否显示底部线条 NO */
+@property (nonatomic) BOOL showBottomLine;
+/** 底部线条颜色 */
+@property (nonatomic, strong) UIColor *bottomLineColor;
+/** 底部线条左右偏移量 0 */
+@property (nonatomic) CGFloat bottomLineLeftAndRightMargin;
+/** 底部线height 2 */
+@property (nonatomic) CGFloat bottomLineHeight;
+/** 底部线条圆角 0 */
+@property (nonatomic) CGFloat bottomLineCorner;
+
+
+/** 缩放系数 */
+@property (nonatomic) CGFloat itemMaxScale;
+/** 选项字体 14 */
+@property (nonatomic, strong) UIFont *itemFont;
+/** 选中字体 */
+@property (nonatomic, strong) UIFont *selectedItemFont;
+/** 选项正常color */
+@property (nonatomic, strong) UIColor *itemColor;
+/** 选项选中color */
+@property (nonatomic, strong) UIColor *selectedItemColor;
+
+
+/** 遮盖height 28 */
+@property (nonatomic) CGFloat conerHeight;
+/** 是否显示按钮 NO */
+@property (nonatomic) BOOL showAddButton;
+/** 菜单弹簧效果 NO */
+@property (nonatomic) BOOL bounces;
 /** 菜单height 默认 44 */
 @property (nonatomic) CGFloat menuHeight;
 /** 菜单widht 默认是 屏幕宽度 */
 @property (nonatomic) CGFloat menuWidth;
+
+
 /** 内容区域 */
 @property (nonatomic) CGFloat contentHeight;
+/** 选项相邻间隙 15 */
+@property (nonatomic) CGFloat itemMargin;
+/** 选项左边或者右边间隙 15 */
+@property (nonatomic) CGFloat itemLeftAndRightMargin;
 /** 菜单背景color */
-@property (nonatomic, strong) UIColor *scrollViewBackgroundColor;
+@property (nonatomic, strong) UIColor *menuViewBackgroundColor;
+
+
+/** 菜单是否滚动 YES */
+@property (nonatomic) BOOL scrollMenu;
 /** 自定义Item 加图片 图片间隙 ... */
 @property (nonatomic, strong) NSArray<UIButton *> *buttonArray;
+/**
+ *  是否居中 (当所有的Item + margin的宽度小于ScrollView宽度)  默认 YES
+ *  scrollMenu = NO, aligmentModeCenter = NO 会变成平分
+ */
+@property (nonatomic) BOOL aligmentModeCenter;
+
 
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
 

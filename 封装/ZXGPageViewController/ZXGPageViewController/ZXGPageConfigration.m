@@ -18,42 +18,46 @@
         _showNavigation = YES;
         _showTabbar = NO;
         _pageStyle = ZXGPageStyleTop;
-//        _showConver = NO;
-//        _showScrollLine = YES;
-//        _showBottomLine = NO;
+        _showCover = NO;
+        _showScrollLine = YES;
+        _showBottomLine = NO;
 //        _showGradientColor =YES;
-//        _showAddButton = NO;
-//        _scrollMenu = YES;
-//        _bounces = YES;
-//        _aligmentModeCenter = YES;
-//        _lineWidthEqualFontWidth = NO;
-//
+        _showAddButton = NO;
+        _scrollMenu = YES;
+        _bounces = YES;
+        _aligmentModeCenter = YES;
+        _lineWidthEqualFontWidth = NO;
+
 //        _pageScrollEnabled = YES;
 //
 //        _headerViewCouldScale = NO;
 //
-//        _lineColor = [UIColor redColor];
-//        _converColor = [UIColor groupTableViewBackgroundColor];
+        _lineColor = [UIColor redColor];
+        _coverColor = [UIColor groupTableViewBackgroundColor];
 //        _addButtonBackgroundColor = [UIColor whiteColor];
-//        _bottomLineBgColor = [UIColor greenColor];
-        _scrollViewBackgroundColor = [UIColor whiteColor];
-//        _normalItemColor = [UIColor grayColor];
-//        _selectedItemColor = [UIColor greenColor];
-//        _lineHeight = 2;
-//        _converHeight = 28;
+        _bottomLineColor = [UIColor greenColor];
+        _bottomLineLeftAndRightMargin = 0.f;
+        _bottomLineHeight = 2;
+        _bottomLineCorner = 0.f;
+        
+        _menuViewBackgroundColor = [UIColor redColor];
+        _itemColor = [UIColor grayColor];
+        _selectedItemColor = [UIColor greenColor];
+        _lineHeight = 2;
+        _lineBottomMargin = 0;
+        _lineCorner = 0.f;
+        _conerHeight = 28;
+        _lineLeftAndRightAddWidth = 0;
         
         _menuHeight = 44.f;
         _menuWidth = ZXGPAGE_SCREEN_WIDTH;
-//        _coverCornerRadius = 14;
-//        _itemMargin = 15;
-//        _itemLeftAndRightMargin = 15;
-//        _itemFont = [UIFont systemFontOfSize:14];
-//        _selectedItemFont = _itemFont;
-//        _itemMaxScale = 0;
-//        _lineBottomMargin = 0;
-//        _lineLeftAndRightAddWidth = 0;
-//
-//        _bottomLineHeight = 2;
+        _coverCornerRadius = 14.f;
+        _itemMargin = 15;
+        _itemLeftAndRightMargin = 15;
+        _itemFont = [UIFont systemFontOfSize:14.f];
+        _selectedItemFont = _itemFont;
+        _itemMaxScale = 0;
+
     }
     return self;
 }

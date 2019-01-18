@@ -19,7 +19,7 @@
 + (instancetype)centerVC {
     
     ZXGPageConfigration *configration = [ZXGPageConfigration defaultConfig];
-    configration.pageStyle = ZXGPageStyleSuspensionCenter;
+    configration.pageStyle = ZXGPageStyleTop;
 //    configration.headerViewCouldScale = YES;
 //    //    configration.headerViewScaleMode = YNPageHeaderViewScaleModeCenter;
 //    configration.headerViewScaleMode = YNPageHeaderViewScaleModeTop;
