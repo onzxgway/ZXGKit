@@ -96,8 +96,8 @@
                   currentIndex:(NSInteger)currentIndex {
     self.lastIndex = lastIndex;
     self.currentIndex = currentIndex;
-    
     if (lastIndex == currentIndex) return;
+    
     UIButton *lastButton = self.itemsM[self.lastIndex];
     UIButton *currentButton = self.itemsM[self.currentIndex];
 
@@ -424,31 +424,33 @@
     UIButton *currentButton = self.itemsM[self.currentIndex];
     
     [UIView animateWithDuration:animated ? 0.25 : 0 animations:^{
-        /// 缩放
-        if (self.configuration.itemMaxScale > 1) {
+        
+        /// 文字缩放
+        if (self.configuration.itemMaxScale > 1.f) {
             lastButton.transform = CGAffineTransformIdentity;
             currentButton.transform = CGAffineTransformMakeScale(self.configuration.itemMaxScale, self.configuration.itemMaxScale);
         }
         
-        /// 颜色
-        [self.itemsM enumerateObjectsUsingBlock:^(UIButton  * obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            obj.selected = NO;
-            obj.titleLabel.font = self.configuration.itemFont;
+        /// 字体及颜色
+        [self.itemsM enumerateObjectsUsingBlock:^(UIButton  *btn, NSUInteger idx, BOOL * _Nonnull stop) {
+            btn.selected = NO;
+            btn.titleLabel.font = self.configuration.itemFont;
             if (idx == self.itemsM.count - 1) {
                 currentButton.selected = YES;
                 currentButton.titleLabel.font = self.configuration.selectedItemFont;
             }
         }];
         
-        /// 线条
+        /// 指示线段
         if (self.configuration.showScrollLine) {
+            
+            // 线段长度等于btn长
             self.lineView.zxg_x = currentButton.zxg_x - self.configuration.lineLeftAndRightAddWidth + self.configuration.lineLeftAndRightMargin;
             self.lineView.zxg_width = currentButton.zxg_width + self.configuration.lineLeftAndRightAddWidth * 2 - 2 * self.configuration.lineLeftAndRightMargin;
             
             if (!self.configuration.scrollMenu &&
                 !self.configuration.aligmentModeCenter &&
-                self.configuration.lineWidthEqualFontWidth) {//处理Line宽度等于字体宽度
-                
+                self.configuration.lineWidthEqualFontWidth) { // 处理Line宽度等于字体宽度
                 self.lineView.zxg_x = currentButton.zxg_x + ([currentButton zxg_width]  - ([self.itemsWidthM[[currentButton.accessibilityIdentifier integerValue]] floatValue])) / 2 - self.configuration.lineLeftAndRightAddWidth;;
                 self.lineView.zxg_width = [self.itemsWidthM[currentButton.tag] floatValue] + self.configuration.lineLeftAndRightAddWidth * 2;
             }
@@ -467,17 +469,16 @@
 //            }
         }
         
+    } completion:^(BOOL finished) {
         self.lastIndex = self.currentIndex;
         
-        
-    } completion:^(BOOL finished) {
         [self adjustItemPositionWithCurrentIndex:self.currentIndex];
     }];
     
     
 }
 
-// 0.然后是居中动画。
+// 1.然后是居中动画。
 - (void)adjustItemPositionWithCurrentIndex:(NSInteger)index {
     
     if (self.scrollView.contentSize.width != self.scrollView.zxg_width + 20) {

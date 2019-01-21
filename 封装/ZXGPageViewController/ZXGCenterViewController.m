@@ -44,26 +44,44 @@
 //
 //    vc.headerView = autoScrollView;
     /// 指定默认选择index 页面
-    vc.pageIndex = 2;
+//    vc.pageIndex = 2;
     
     return vc;
 }
 
 + (NSArray *)getArrayVCs {
-    
     UIViewController *vc_1 = [[UIViewController alloc] init];
-//    vc_1.cellTitle = @"鞋子";
+    vc_1.view.backgroundColor = [UIColor redColor];
     
     UIViewController *vc_2 = [[UIViewController alloc] init];
-//    vc_2.cellTitle = @"衣服";
+    vc_2.view.backgroundColor = [UIColor blueColor];
     
     UIViewController *vc_3 = [[UIViewController alloc] init];
+    vc_3.view.backgroundColor = [UIColor greenColor];
     
-    return @[vc_1, vc_2, vc_3];
+    UIViewController *vc_11 = [[UIViewController alloc] init];
+    vc_11.view.backgroundColor = [UIColor redColor];
+    
+    UIViewController *vc_22 = [[UIViewController alloc] init];
+    vc_22.view.backgroundColor = [UIColor blueColor];
+    
+    UIViewController *vc_33 = [[UIViewController alloc] init];
+    vc_33.view.backgroundColor = [UIColor greenColor];
+    
+    UIViewController *vc_111 = [[UIViewController alloc] init];
+    vc_111.view.backgroundColor = [UIColor redColor];
+    
+    UIViewController *vc_222 = [[UIViewController alloc] init];
+    vc_222.view.backgroundColor = [UIColor blueColor];
+    
+    UIViewController *vc_333 = [[UIViewController alloc] init];
+    vc_333.view.backgroundColor = [UIColor greenColor];
+    
+    return @[vc_1, vc_2, vc_3, vc_11, vc_22, vc_33, vc_111, vc_222, vc_333];
 }
 
 + (NSArray *)getArrayTitles {
-    return @[@"鞋子", @"衣服", @"帽子"];
+    return @[@"鞋子帽子", @"衣服", @"帽子帽子帽子帽子", @"鞋子帽", @"衣服123", @"帽子帽子帽子帽子cv", @"鞋子ss帽子", @"衣125服", @"帽子帽99子帽子帽子"];
 }
 
 @end

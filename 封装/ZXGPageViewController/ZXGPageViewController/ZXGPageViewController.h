@@ -105,7 +105,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  自定义缓存Key 如果不实现，则不允许相同的菜单栏title
  如果对页面进行了添加、删除、调整顺序、请一起调整传递进来的数据源，防止缓存Key取错
- @param pageViewController pageVC
+ @param pageViewController pageViewController
  @param index pageIndex
  @return 唯一标识 (一般是后台ID)
  */

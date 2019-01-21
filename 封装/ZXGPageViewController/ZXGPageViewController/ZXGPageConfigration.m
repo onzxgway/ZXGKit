@@ -32,10 +32,10 @@
 //
 //        _headerViewCouldScale = NO;
 //
-        _lineColor = [UIColor redColor];
+        _lineColor = [UIColor greenColor];
         _coverColor = [UIColor groupTableViewBackgroundColor];
 //        _addButtonBackgroundColor = [UIColor whiteColor];
-        _bottomLineColor = [UIColor greenColor];
+        _bottomLineColor = [UIColor grayColor];
         _bottomLineLeftAndRightMargin = 0.f;
         _bottomLineHeight = 2;
         _bottomLineCorner = 0.f;

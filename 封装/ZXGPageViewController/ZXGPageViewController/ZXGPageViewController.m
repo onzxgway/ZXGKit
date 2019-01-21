@@ -10,12 +10,12 @@
 #import "ZXGPageScrollView.h"
 #import "UIView+ZXGPageExtend.h"
 
-@interface ZXGPageViewController () <UIScrollViewDelegate>
+@interface ZXGPageViewController () <UIScrollViewDelegate, ZXGPageScrollMenuViewDelegate>
 
 /// 页面ScrollView
 @property (nonatomic, strong) ZXGPageScrollView *pageScrollView;
-/// 展示控制器的字典
-@property (nonatomic, strong) NSMutableDictionary *displayDictM;
+/// 所有已展示的控制器 缓存
+@property (nonatomic, strong) NSMutableDictionary *displayedDictM;
 /// 字典控制器的缓存
 @property (nonatomic, strong) NSMutableDictionary *cacheDictM;
 /// 当前显示的页面
@@ -64,7 +64,7 @@
         _titlesM = titles.mutableCopy;
         _config = config ?: [ZXGPageConfigration defaultConfig];
         
-        _displayDictM = @{}.mutableCopy;
+        _displayedDictM = @{}.mutableCopy;
         _cacheDictM = @{}.mutableCopy;
 //        self.originInsetBottomDictM = @{}.mutableCopy;
 //        self.scrollViewCacheDictionryM = @{}.mutableCopy;
@@ -89,7 +89,7 @@
     [self checkParams];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 //    _headerViewInTableView = YES;
     
@@ -129,7 +129,8 @@
 //        }
 //        [self.view addSubview:self.bgScrollView];
 //
-//    } else {
+//    }
+//    else {
     
         self.pageScrollView.frame = CGRectMake(0, [self isTopStyle] ? self.config.menuHeight : 0, ZXGPAGE_SCREEN_WIDTH, ([self isTopStyle] ? contentHeight - self.config.menuHeight : contentHeight));
         
@@ -153,13 +154,11 @@
     switch (self.config.pageStyle) {
         case ZXGPageStyleTop:
         case ZXGPageStyleSuspensionTop:
-        case ZXGPageStyleSuspensionCenter:
-        {
+        case ZXGPageStyleSuspensionCenter: {
             [self.view addSubview:self.scrollMenuView];
         }
             break;
-        case ZXGPageStyleNavigation:
-        {
+        case ZXGPageStyleNavigation: {
             UIViewController *vc;
             if ([self.parentViewController isKindOfClass:[UINavigationController class]]) {
                 vc = self;
@@ -169,8 +168,7 @@
             vc.navigationItem.titleView = self.scrollMenuView;
         }
             break;
-        case ZXGPageStyleSuspensionTopPause:
-        {
+        case ZXGPageStyleSuspensionTopPause: {
 //            [self.bgScrollView addSubview:self.scrollMenuView];
         }
             break;
@@ -221,7 +219,7 @@
         [self.pageScrollView scrollRectToVisible:frame animated:NO];
     }
     
-    [self scrollViewDidEndDecelerating:self.pageScrollView];
+//    [self scrollViewDidEndDecelerating:self.pageScrollView];
     
 }
 
@@ -282,9 +280,9 @@
         _pageScrollView.showsHorizontalScrollIndicator = NO;
 //        _pageScrollView.scrollEnabled = self.config.pageScrollEnabled;
         _pageScrollView.pagingEnabled = YES;
-//        _pageScrollView.bounces = NO;
+        _pageScrollView.bounces = NO;
         _pageScrollView.delegate = self;
-        _pageScrollView.backgroundColor = [UIColor blueColor];
+        _pageScrollView.backgroundColor = [UIColor lightGrayColor];
         if (@available(iOS 11.0, *)) {
             _pageScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
@@ -307,8 +305,7 @@
 
 - (NSString *)getKeyWithTitle:(NSString *)title {
     if ([self respondsToCustomCachekey]) {
-        NSString *ID = [self.dataSource pageViewController:self customCacheKeyForIndex:self.pageIndex];
-        return ID;
+        return [self.dataSource pageViewController:self customCacheKeyForIndex:self.pageIndex];
     }
     return title;
 };
@@ -331,7 +328,7 @@
     }
 }
 
-/// scrollView滚动ing
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
 //    if (scrollView == self.bgScrollView) {
@@ -346,9 +343,9 @@
     
     CGFloat offX = currentPostion > self.lastPositionX ? ceilf(offsetX) : offsetX;
     
-    [self replaceHeaderViewFromTableView];
-    
     [self initViewControllerWithIndex:offX];
+    
+    [self replaceHeaderViewFromTableView];
     
     CGFloat progress = offsetX - (NSInteger)offsetX;
     
@@ -357,7 +354,7 @@
     [self.scrollMenuView adjustItemWithProgress:progress lastIndex:floor(offsetX) currentIndex:ceilf(offsetX)];
     
     if (floor(offsetX) == ceilf(offsetX)) {
-//        [self.scrollMenuView adjustItemAnimate:YES];
+        [self.scrollMenuView adjustItemAnimate:YES];
     }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(pageViewController:didScroll:progress:formIndex:toIndex:)]) {
@@ -415,9 +412,9 @@
 - (void)removeViewController {
     NSString *title = [self titleWithIndex:self.pageIndex];
     NSString *displayKey = [self getKeyWithTitle:title];
-    for (NSString *key in self.displayDictM.allKeys) {
+    for (NSString *key in self.displayedDictM.allKeys) {
         if (![key isEqualToString:displayKey]) {
-            [self removeViewControllerWithChildVC:self.displayDictM[key] key:key];
+            [self removeViewControllerWithChildVC:self.displayedDictM[key] key:key];
         }
     }
 }
@@ -426,13 +423,13 @@
 - (void)initViewControllerWithIndex:(NSInteger)index {
     
     self.currentViewController = self.controllersM[index];
-    
     self.pageIndex = index;
+    
     NSString *title = [self titleWithIndex:index];
-    if ([self.displayDictM objectForKey:[self getKeyWithTitle:title]]) return;
+    if ([self.displayedDictM objectForKey:[self getKeyWithTitle:title]]) return;
     
     UIViewController *cacheViewController = [self.cacheDictM objectForKey:[self getKeyWithTitle:title]];
-    [self addViewControllerToParent:cacheViewController ?: self.controllersM[index] index:index];
+    [self addViewControllerToParent:cacheViewController ?: self.currentViewController index:index];
     
 }
 
@@ -447,7 +444,7 @@
     
     NSString *title = [self titleWithIndex:index];
     
-    [self.displayDictM setObject:viewController forKey:[self getKeyWithTitle:title]];
+    [self.displayedDictM setObject:viewController forKey:[self getKeyWithTitle:title]];
     
     UIScrollView *scrollView = self.currentScrollView;
     
@@ -504,6 +501,7 @@
 //            }
 //        }
 //    }
+    
     /// 缓存控制器
     if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
         [self.cacheDictM setObject:viewController forKey:[self getKeyWithTitle:title]];
@@ -515,7 +513,7 @@
     
     [self removeViewControllerWithChildVC:childVC];
     
-    [self.displayDictM removeObjectForKey:key];
+    [self.displayedDictM removeObjectForKey:key];
     
     if (![self.cacheDictM objectForKey:key]) {
         [self.cacheDictM setObject:childVC forKey:key];

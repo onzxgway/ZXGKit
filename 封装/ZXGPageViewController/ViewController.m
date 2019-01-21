@@ -116,7 +116,7 @@ typedef NS_ENUM(NSInteger, ZXGVCType) {
             break;
         case ZXGVCTypeSuspendCenterPageVC:
         {
-            vc = [ZXGCenterViewController new];
+            vc = [ZXGCenterViewController centerVC];
         }
             break;
         case ZXGVCTypeSuspendTopPausePageVC:

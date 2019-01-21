@@ -58,6 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
                      lastIndex:(NSInteger)lastIndex
                   currentIndex:(NSInteger)currentIndex;
 
+- (void)adjustItemAnimate:(BOOL)animated;
 
 @end
 
