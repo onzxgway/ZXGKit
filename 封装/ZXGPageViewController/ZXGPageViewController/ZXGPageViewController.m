@@ -296,7 +296,7 @@
 }
 
 - (NSString *)titleWithIndex:(NSInteger)index {
-    return self.titlesM[index];
+    return self.titlesM[index] ?: @"";
 }
 
 - (NSInteger)getPageIndexWithTitle:(NSString *)title {
@@ -309,6 +309,13 @@
     }
     return title;
 };
+
+#pragma mark - ZXGPageScrollMenuViewDelegate
+- (void)menuViewItemOnClick:(UIButton *)button index:(NSInteger)index {
+    
+    [self setSelectedPageIndex:index];
+    
+}
 
 #pragma mark - UIScrollViewDelegate
 /// scrollView滚动结束
@@ -337,11 +344,11 @@
 //        return;
 //    }
     
-    CGFloat currentPostion = scrollView.contentOffset.x;
+    CGFloat currentPostionX = scrollView.contentOffset.x;
     
-    CGFloat offsetX = currentPostion / ZXGPAGE_SCREEN_WIDTH;
+    CGFloat offsetX = currentPostionX / scrollView.bounds.size.width;
     
-    CGFloat offX = currentPostion > self.lastPositionX ? ceilf(offsetX) : offsetX;
+    CGFloat offX = currentPostionX > self.lastPositionX ? ceilf(offsetX) : offsetX;
     
     [self initViewControllerWithIndex:offX];
     
@@ -349,7 +356,7 @@
     
     CGFloat progress = offsetX - (NSInteger)offsetX;
     
-    self.lastPositionX = currentPostion;
+    self.lastPositionX = currentPostionX;
     
     [self.scrollMenuView adjustItemWithProgress:progress lastIndex:floor(offsetX) currentIndex:ceilf(offsetX)];
     
@@ -419,7 +426,14 @@
     }
 }
 
-#pragma mark - 初始化子控制器
+#pragma mark - 子类控制器添加到父类控制器中
+/**
+ 0.所有的控制器在controllersM可变数组中。
+ 1.所有已展示的控制器在displayedDictM可变字典中。
+ 
+ //0.先从所有已展示的控制器缓存中取值，如果有值得话，接直接返回。
+ //1.再从所有控制器缓存中取值
+ */
 - (void)initViewControllerWithIndex:(NSInteger)index {
     
     self.currentViewController = self.controllersM[index];
@@ -433,12 +447,11 @@
     
 }
 
-/// 添加到父类控制器中
 - (void)addViewControllerToParent:(UIViewController *)viewController index:(NSInteger)index {
     
     [self addChildViewController:self.controllersM[index]];
     
-    viewController.view.frame = CGRectMake(ZXGPAGE_SCREEN_WIDTH * index, 0, self.pageScrollView.zxg_width, self.pageScrollView.zxg_height);
+    viewController.view.frame = CGRectMake(self.pageScrollView.zxg_width * index, 0, self.pageScrollView.zxg_width, self.pageScrollView.zxg_height);
     
     [self.pageScrollView addSubview:viewController.view];
     
@@ -446,15 +459,15 @@
     
     [self.displayedDictM setObject:viewController forKey:[self getKeyWithTitle:title]];
     
-    UIScrollView *scrollView = self.currentScrollView;
-    
-    if (self.dataSource && [self.dataSource respondsToSelector:@selector(pageViewController:heightForScrollViewAtIndex:)]) {
-        CGFloat scrollViewHeight = [self.dataSource pageViewController:self heightForScrollViewAtIndex:index];
-        scrollView.frame = CGRectMake(0, 0, viewController.view.zxg_width, scrollViewHeight);
-    }
-    else {
-        scrollView.frame = viewController.view.bounds;
-    }
+//    UIScrollView *scrollView = self.currentScrollView;
+//
+//    if (self.dataSource && [self.dataSource respondsToSelector:@selector(pageViewController:heightForScrollViewAtIndex:)]) {
+//        CGFloat scrollViewHeight = [self.dataSource pageViewController:self heightForScrollViewAtIndex:index];
+//        scrollView.frame = CGRectMake(0, 0, viewController.view.zxg_width, scrollViewHeight);
+//    }
+//    else {
+//        scrollView.frame = viewController.view.bounds;
+//    }
     
     [viewController didMoveToParentViewController:self];
     

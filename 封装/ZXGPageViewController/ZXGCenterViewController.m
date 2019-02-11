@@ -7,6 +7,8 @@
 //
 
 #import "ZXGCenterViewController.h"
+#import "ZXGTwoViewController.h"
+#import "ZXGOneViewController.h"
 
 @interface ZXGCenterViewController ()
 
@@ -38,11 +40,14 @@
     ZXGCenterViewController *vc = [[ZXGCenterViewController alloc] initPageViewControllerWithControllers:[self getArrayVCs] titles:[self getArrayTitles] config:config];
 //    vc.dataSource = vc;
 //    vc.delegate = vc;
+    
 //    /// 轮播图
 //    SDCycleScrollView *autoScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, 200) imageURLStringsGroup:vc.imagesURLs];
 //    autoScrollView.delegate = vc;
-//
-//    vc.headerView = autoScrollView;
+    UIView *v = [UIView new];
+    v.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200);
+    vc.headerView = v;
+    
     /// 指定默认选择index 页面
 //    vc.pageIndex = 2;
     
@@ -50,11 +55,9 @@
 }
 
 + (NSArray *)getArrayVCs {
-    UIViewController *vc_1 = [[UIViewController alloc] init];
-    vc_1.view.backgroundColor = [UIColor redColor];
+    ZXGOneViewController *vc_1 = [[ZXGOneViewController alloc] init];
     
-    UIViewController *vc_2 = [[UIViewController alloc] init];
-    vc_2.view.backgroundColor = [UIColor blueColor];
+    ZXGTwoViewController *vc_2 = [[ZXGTwoViewController alloc] init];
     
     UIViewController *vc_3 = [[UIViewController alloc] init];
     vc_3.view.backgroundColor = [UIColor greenColor];

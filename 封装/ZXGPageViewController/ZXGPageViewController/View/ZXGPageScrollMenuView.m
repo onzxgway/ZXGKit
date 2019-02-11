@@ -109,42 +109,31 @@
 //        currentButton.transform = CGAffineTransformMakeScale(scaleS, scaleS);
     }
 
-//    if (self.configuration.showGradientColor) {
-//
-//        /// 颜色渐变
+    if (self.configuration.showGradientColor) {
+
+        /// 颜色渐变
 //        [self.configuration setRGBWithProgress:progress];
 //        UIColor *norColor = [UIColor colorWithRed:self.configuration.deltaNorR green:self.configuration.deltaNorG blue:self.configuration.deltaNorB alpha:1];
 //        UIColor *selColor = [UIColor colorWithRed:self.configuration.deltaSelR green:self.configuration.deltaSelG blue:self.configuration.deltaSelB alpha:1];
 //        [lastButton setTitleColor:norColor forState:UIControlStateNormal];
 //
 //        [currentButton setTitleColor:selColor forState:UIControlStateNormal];
-//    } else{
-//        if (progress > 0.5) {
-//            lastButton.selected = NO;
-//            currentButton.selected = YES;
-//            [lastButton setTitleColor:self.configuration.normalItemColor forState:UIControlStateNormal];
-//            [currentButton setTitleColor:self.configuration.selectedItemColor forState:UIControlStateNormal];
-//            currentButton.titleLabel.font = self.configuration.selectedItemFont;
-//
-//        } else if (progress < 0.5 && progress > 0){
-//            lastButton.selected = YES;
-//            [lastButton setTitleColor:self.configuration.selectedItemColor forState:UIControlStateNormal];
-//            lastButton.titleLabel.font = self.configuration.selectedItemFont;
-//
-//            currentButton.selected = NO;
-//            [currentButton setTitleColor:self.configuration.normalItemColor forState:UIControlStateNormal];
-//            currentButton.titleLabel.font = self.configuration.itemFont;
-//
-//        }
-//    }
-
-    if (progress > 0.5) {
-        lastButton.titleLabel.font = self.configuration.itemFont;
-        currentButton.titleLabel.font = self.configuration.selectedItemFont;
     }
-    else if (progress < 0.5 && progress > 0){
-        lastButton.titleLabel.font = self.configuration.selectedItemFont;
-        currentButton.titleLabel.font = self.configuration.itemFont;
+    else {
+        if (progress > 0.5) {
+            lastButton.selected = NO;
+            lastButton.titleLabel.font = self.configuration.itemFont;
+            
+            currentButton.selected = YES;
+            currentButton.titleLabel.font = self.configuration.selectedItemFont;
+        }
+        else if (progress < 0.5 && progress > 0){
+            lastButton.selected = YES;
+            lastButton.titleLabel.font = self.configuration.selectedItemFont;
+            
+            currentButton.selected = NO;
+            currentButton.titleLabel.font = self.configuration.itemFont;
+        }
     }
     
     CGFloat xDistance = 0;
@@ -469,8 +458,9 @@
 //            }
         }
         
-    } completion:^(BOOL finished) {
         self.lastIndex = self.currentIndex;
+        
+    } completion:^(BOOL finished) {
         
         [self adjustItemPositionWithCurrentIndex:self.currentIndex];
     }];
@@ -507,7 +497,7 @@
     
     [self adjustItemWithAnimated:YES];
     
-    if (self.delegate &&[self.delegate respondsToSelector:@selector(menuViewItemOnClick:index:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(menuViewItemOnClick:index:)]) {
         [self.delegate menuViewItemOnClick:button index:self.lastIndex];
     }
     

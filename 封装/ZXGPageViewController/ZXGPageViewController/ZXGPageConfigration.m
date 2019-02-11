@@ -21,7 +21,7 @@
         _showCover = NO;
         _showScrollLine = YES;
         _showBottomLine = NO;
-//        _showGradientColor =YES;
+        _showGradientColor = NO;
         _showAddButton = NO;
         _scrollMenu = YES;
         _bounces = YES;

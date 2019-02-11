@@ -79,6 +79,8 @@
 		07955D1C7552EC3A2A3805AC /* libPods-OCAndJS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B34BEC4A6DA2310E21CD59D2 /* libPods-OCAndJS.a */; };
 		413F7F091995995BE088800D /* libPods-CoreTextDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD331ECFADBF613C3E85A78 /* libPods-CoreTextDemo.a */; };
 		52E662819C155C29E54C327F /* libPods-Packaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27609C19D370DC3892F5AEC1 /* libPods-Packaging.a */; };
+		CC1D911E2211636A00BACDEE /* ZXGOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D911D2211636A00BACDEE /* ZXGOneViewController.m */; };
+		CC1D91212211637100BACDEE /* ZXGTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D91202211637100BACDEE /* ZXGTwoViewController.m */; };
 		CC5EE07621F06A5600B87939 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE07521F06A5600B87939 /* AppDelegate.m */; };
 		CC5EE07921F06A5600B87939 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE07821F06A5600B87939 /* ViewController.m */; };
 		CC5EE07C21F06A5600B87939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5EE07A21F06A5600B87939 /* Main.storyboard */; };
@@ -233,6 +235,10 @@
 		B34BEC4A6DA2310E21CD59D2 /* libPods-OCAndJS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCAndJS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD331ECFADBF613C3E85A78 /* libPods-CoreTextDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoreTextDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B5EF93A31DDE1D37B8962 /* libPods-封装.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-封装.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1D911C2211636A00BACDEE /* ZXGOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGOneViewController.h; sourceTree = "<group>"; };
+		CC1D911D2211636A00BACDEE /* ZXGOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGOneViewController.m; sourceTree = "<group>"; };
+		CC1D911F2211637100BACDEE /* ZXGTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGTwoViewController.h; sourceTree = "<group>"; };
+		CC1D91202211637100BACDEE /* ZXGTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGTwoViewController.m; sourceTree = "<group>"; };
 		CC5EE07221F06A5600B87939 /* ZXGPageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXGPageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5EE07421F06A5600B87939 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC5EE07521F06A5600B87939 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -616,9 +622,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CC1D911B2211635500BACDEE /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				CC1D911C2211636A00BACDEE /* ZXGOneViewController.h */,
+				CC1D911D2211636A00BACDEE /* ZXGOneViewController.m */,
+				CC1D911F2211637100BACDEE /* ZXGTwoViewController.h */,
+				CC1D91202211637100BACDEE /* ZXGTwoViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		CC5EE07321F06A5600B87939 /* ZXGPageViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CC1D911B2211635500BACDEE /* Test */,
 				CC5EE08821F06CD100B87939 /* ZXGPageViewController */,
 				CC5EE07421F06A5600B87939 /* AppDelegate.h */,
 				CC5EE07521F06A5600B87939 /* AppDelegate.m */,
@@ -1273,6 +1291,8 @@
 				CC5EE08421F06A5700B87939 /* main.m in Sources */,
 				CC5EE07621F06A5600B87939 /* AppDelegate.m in Sources */,
 				CC5EE08B21F06CDE00B87939 /* ZXGPageViewController.m in Sources */,
+				CC1D91212211637100BACDEE /* ZXGTwoViewController.m in Sources */,
+				CC1D911E2211636A00BACDEE /* ZXGOneViewController.m in Sources */,
 				CC5EE09621F0789F00B87939 /* ZXGPageScrollView.m in Sources */,
 				CC5EE09D21F0812F00B87939 /* ZXGPageScrollMenuView.m in Sources */,
 				CC77CA9A21F1B90B002E5E91 /* ZXGTestController.m in Sources */,

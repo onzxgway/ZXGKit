@@ -13,12 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  ZXGPage样式
  
- - YNPageStyleTop: MenuView在顶部
- - YNPageStyleNavigation: MenuView在系统导航条
- - YNPageStyleSuspensionTop: MenuView悬浮，刷新控件在HeaderView顶部
- - YNPageStyleSuspensionCenter: MenuView悬浮，刷新控件在HeaderView底部
- - YNPageStyleSuspensionTopPause: MenuView悬浮，刷新控件在HeaderView顶部 停顿 类似QQ联系人页面
- SuspensionTopPause 需要继承YNPageTableView或YNPageCollectionView 实现那个手势 YES,如果有自己的集成体系，则单独实现那个方法
+ - ZXGPageStyleTop: MenuView在顶部
+ - ZXGPageStyleNavigation: MenuView在系统导航条
+ - ZXGPageStyleSuspensionTop: MenuView悬浮，刷新控件在HeaderView顶部
+ - ZXGPageStyleSuspensionCenter: MenuView悬浮，刷新控件在HeaderView底部
+ - ZXGPageStyleSuspensionTopPause: MenuView悬浮，刷新控件在HeaderView顶部 停顿 类似QQ联系人页面
+ SuspensionTopPause 需要继承ZXGPageTableView或ZXGPageCollectionView 实现那个手势 YES,如果有自己的集成体系，则单独实现那个方法
  */
 typedef NS_ENUM(NSInteger, ZXGPageStyle) {
     ZXGPageStyleTop = 0,
@@ -93,7 +93,8 @@ typedef NS_ENUM(NSInteger, ZXGPageStyle) {
 @property (nonatomic, strong) UIColor *itemColor;
 /** 选项选中color */
 @property (nonatomic, strong) UIColor *selectedItemColor;
-
+/** 字体颜色在过渡时是否渐变 YES */
+@property (nonatomic) BOOL showGradientColor;
 
 /** 遮盖height 28 */
 @property (nonatomic) CGFloat conerHeight;
