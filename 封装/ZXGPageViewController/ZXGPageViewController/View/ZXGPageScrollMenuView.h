@@ -60,6 +60,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)adjustItemAnimate:(BOOL)animated;
 
+- (void)adjustItemPositionWithCurrentIndex:(NSInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -57,6 +57,8 @@
         _itemFont = [UIFont systemFontOfSize:14.f];
         _selectedItemFont = _itemFont;
         _itemMaxScale = 0;
+        
+        _headerViewCouldScrollPage = NO;
 
     }
     return self;

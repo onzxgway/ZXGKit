@@ -134,6 +134,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 菜单栏
 @property (nonatomic, strong) ZXGPageScrollMenuView *scrollMenuView;
 
+/// 头部headerView
+@property (nonatomic, strong) UIView *headerView;
+
 #pragma mark - initialize
 /**
  初始化方法

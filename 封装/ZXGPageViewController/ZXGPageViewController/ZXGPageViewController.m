@@ -9,8 +9,17 @@
 #import "ZXGPageViewController.h"
 #import "ZXGPageScrollView.h"
 #import "UIView+ZXGPageExtend.h"
+#import "ZXGPageHeaderScrollView.h"
 
 @interface ZXGPageViewController () <UIScrollViewDelegate, ZXGPageScrollMenuViewDelegate>
+
+/// HeaderView的背景View
+@property (nonatomic, strong) ZXGPageHeaderScrollView *headerBgView;
+/// headerView的原始高度 用来处理头部伸缩效果
+@property (nonatomic) CGFloat headerViewOriginHeight;
+/// 判断headerView是否在列表内
+@property (nonatomic) BOOL headerViewInTableView;
+
 
 /// 页面ScrollView
 @property (nonatomic, strong) ZXGPageScrollView *pageScrollView;
@@ -91,17 +100,47 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-//    _headerViewInTableView = YES;
+    _headerViewInTableView = YES;
     
 }
 
 /// 初始化子View
 - (void)setupSubViews {
     
-//    [self setupHeaderBgView];
+    [self setupHeaderBgView];
     [self setupPageScrollMenuView];
     [self setupPageScrollView];
 }
+
+/// 初始化背景headerView
+- (void)setupHeaderBgView {
+    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle] || [self isSuspensionTopPauseStyle]) {
+#if DEBUG
+        NSAssert(self.headerView, @"Please set headerView !");
+#endif
+        self.headerBgView = [[ZXGPageHeaderScrollView alloc] initWithFrame:self.headerView.bounds];
+        self.headerBgView.contentSize = CGSizeMake(ZXGPAGE_SCREEN_WIDTH * 2, self.headerView.zxg_height);
+        [self.headerBgView addSubview:self.headerView];
+        self.headerViewOriginHeight = self.headerBgView.zxg_height;
+        self.headerBgView.scrollEnabled = !self.config.headerViewCouldScrollPage;
+        
+//        if (self.config.headerViewCouldScale && self.scaleBackgroundView) {
+//            [self.headerBgView insertSubview:self.scaleBackgroundView atIndex:0];
+//            self.scaleBackgroundView.userInteractionEnabled = NO;
+//        }
+//        self.config.tempTopHeight = self.headerBgView.zxg_height + self.config.menuHeight;
+        
+//        _insetTop = self.headerBgView.zxg_height + self.config.menuHeight;
+        
+//        _scrollMenuViewOriginY = _headerView.zxg_height;
+        
+//        if ([self isSuspensionTopPauseStyle]) {
+//            _insetTop = self.headerBgView.zxg_height - self.config.suspenOffsetY;
+//            [self.bgScrollView addSubview:self.headerBgView];
+//        }
+    }
+}
+
 
 /// 初始化PageScrollView
 - (void)setupPageScrollView {
@@ -175,35 +214,6 @@
     }
 }
 
-///// 初始化背景headerView
-//- (void)setupHeaderBgView {
-//    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle] || [self isSuspensionTopPauseStyle]) {
-//#if DEBUG
-//        NSAssert(self.headerView, @"Please set headerView !");
-//#endif
-//        self.headerBgView = [[YNPageHeaderScrollView alloc] initWithFrame:self.headerView.bounds];
-//        self.headerBgView.contentSize = CGSizeMake(kYNPAGE_SCREEN_WIDTH * 2, self.headerView.yn_height);
-//        [self.headerBgView addSubview:self.headerView];
-//        self.headerViewOriginHeight = self.headerBgView.yn_height;
-//        self.headerBgView.scrollEnabled = !self.config.headerViewCouldScrollPage;
-//
-//        if (self.config.headerViewCouldScale && self.scaleBackgroundView) {
-//            [self.headerBgView insertSubview:self.scaleBackgroundView atIndex:0];
-//            self.scaleBackgroundView.userInteractionEnabled = NO;
-//        }
-//        self.config.tempTopHeight = self.headerBgView.yn_height + self.config.menuHeight;
-//
-//        _insetTop = self.headerBgView.yn_height + self.config.menuHeight;
-//
-//        _scrollMenuViewOriginY = _headerView.yn_height;
-//
-//        if ([self isSuspensionTopPauseStyle]) {
-//            _insetTop = self.headerBgView.yn_height - self.config.suspenOffsetY;
-//            [self.bgScrollView addSubview:self.headerBgView];
-//        }
-//    }
-//}
-
 #pragma mark - Public Method
 - (void)setSelectedPageIndex:(NSInteger)pageIndex {
     
@@ -219,7 +229,7 @@
         [self.pageScrollView scrollRectToVisible:frame animated:NO];
     }
     
-//    [self scrollViewDidEndDecelerating:self.pageScrollView];
+    [self scrollViewDidEndDecelerating:self.pageScrollView];
     
 }
 
@@ -295,6 +305,18 @@
     return self.config.pageStyle == ZXGPageStyleTop;
 }
 
+- (BOOL)isSuspensionTopStyle {
+    return self.config.pageStyle == ZXGPageStyleSuspensionTop ? YES : NO;
+}
+
+- (BOOL)isSuspensionBottomStyle {
+    return self.config.pageStyle == ZXGPageStyleSuspensionCenter ? YES : NO;
+}
+
+- (BOOL)isSuspensionTopPauseStyle {
+    return self.config.pageStyle == ZXGPageStyleSuspensionTopPause ? YES : NO;
+}
+
 - (NSString *)titleWithIndex:(NSInteger)index {
     return self.titlesM[index] ?: @"";
 }
@@ -318,6 +340,32 @@
 }
 
 #pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+//    if ([self isSuspensionTopPauseStyle]) {
+//        if (scrollView == self.bgScrollView) {
+//            _beginBgScrollOffsetY = scrollView.contentOffset.y;
+//            _beginCurrentScrollOffsetY = self.currentScrollView.contentOffset.y;
+//        } else {
+//            self.currentScrollView.scrollEnabled = NO;
+//        }
+//    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    
+//    if (scrollView == self.bgScrollView) return;
+    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
+        if (!decelerate) {
+            [self scrollViewDidScroll:scrollView];
+            [self scrollViewDidEndDecelerating:scrollView];
+        }
+    }
+    else if ([self isSuspensionTopPauseStyle]) {
+        self.currentScrollView.scrollEnabled = YES;
+    }
+}
+
 /// scrollView滚动结束
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
@@ -326,9 +374,10 @@
 //    if ([self isSuspensionTopPauseStyle]) {
 //        self.currentScrollView.scrollEnabled = YES;
 //    }
+    
     [self replaceHeaderViewFromView];
     [self removeViewController];
-//    [self.scrollMenuView adjustItemPositionWithCurrentIndex:self.pageIndex];
+    [self.scrollMenuView adjustItemPositionWithCurrentIndex:self.pageIndex];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(pageViewController:didEndDecelerating:)]) {
         [self.delegate pageViewController:self didEndDecelerating:scrollView];
@@ -369,50 +418,50 @@
     }
 }
 
-/// 将headerView 从 view 上 放置 tableview 上
+/// 将headerView 从 view 上放置 tableview 上
 - (void)replaceHeaderViewFromView {
-//    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
-//        if (!_headerViewInTableView) {
-//
-//            UIScrollView *scrollView = self.currentScrollView;
-//
-//            CGFloat headerViewY = [self.headerBgView.superview convertRect:self.headerBgView.frame toView:scrollView].origin.y;
-//            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:scrollView].origin.y;
-//
-//            [self.headerBgView removeFromSuperview];
-//            [self.scrollMenuView removeFromSuperview];
-//
-//            self.headerBgView.yn_y = headerViewY;
-//            self.scrollMenuView.yn_y = scrollMenuViewY;
-//
-//            [scrollView addSubview:self.headerBgView];
-//            [scrollView addSubview:self.scrollMenuView];
-//
-//            _headerViewInTableView = YES;
-//        }
-//    }
+    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
+        if (!_headerViewInTableView) {
+
+            UIScrollView *scrollView = self.currentScrollView;
+
+            CGFloat headerViewY = [self.headerBgView.superview convertRect:self.headerBgView.frame toView:scrollView].origin.y;
+            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:scrollView].origin.y;
+
+            [self.headerBgView removeFromSuperview];
+            [self.scrollMenuView removeFromSuperview];
+
+            self.headerBgView.zxg_y = headerViewY;
+            self.scrollMenuView.zxg_y = scrollMenuViewY;
+
+            [scrollView addSubview:self.headerBgView];
+            [scrollView addSubview:self.scrollMenuView];
+
+            _headerViewInTableView = YES;
+        }
+    }
 }
 
 /// 将headerView 从 tableview 上 放置 view 上
 - (void)replaceHeaderViewFromTableView {
     
-//    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
-//        if (_headerViewInTableView) {
-//
-//            CGFloat headerViewY = [self.headerBgView.superview convertRect:self.headerBgView.frame toView:self.pageScrollView].origin.y;
-//            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:self.pageScrollView].origin.y;
-//
-//            [self.headerBgView removeFromSuperview];
-//            [self.scrollMenuView removeFromSuperview];
-//            self.headerBgView.yn_y = headerViewY;
-//            self.scrollMenuView.yn_y = scrollMenuViewY;
-//
-//            [self.view insertSubview:self.headerBgView aboveSubview:self.pageScrollView];
-//            [self.view insertSubview:self.scrollMenuView aboveSubview:self.headerBgView];
-//
-//            _headerViewInTableView = NO;
-//        }
-//    }
+    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
+        if (_headerViewInTableView) {
+
+            CGFloat headerViewY = [self.headerBgView.superview convertRect:self.headerBgView.frame toView:self.pageScrollView].origin.y;
+            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:self.pageScrollView].origin.y;
+
+            [self.headerBgView removeFromSuperview];
+            [self.scrollMenuView removeFromSuperview];
+            self.headerBgView.zxg_y = headerViewY;
+            self.scrollMenuView.zxg_y = scrollMenuViewY;
+
+            [self.view insertSubview:self.headerBgView aboveSubview:self.pageScrollView];
+            [self.view insertSubview:self.scrollMenuView aboveSubview:self.headerBgView];
+
+            _headerViewInTableView = NO;
+        }
+    }
 }
 
 /// 移除缓存控制器
@@ -545,6 +594,13 @@
     [childVC.view removeFromSuperview];
     [childVC willMoveToParentViewController:nil];
     [childVC removeFromParentViewController];
+}
+
+#pragma mark - Setter
+- (void)setHeaderView:(UIView *)headerView {
+    _headerView = headerView;
+    
+    _headerView.zxg_height = ceil(headerView.zxg_height); // 向上取整
 }
 
 @end

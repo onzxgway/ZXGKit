@@ -129,6 +129,10 @@ typedef NS_ENUM(NSInteger, ZXGPageStyle) {
 @property (nonatomic) BOOL aligmentModeCenter;
 
 
+/** 头部是否可以滚动页面 NO */
+@property (nonatomic) BOOL headerViewCouldScrollPage;
+
+
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 + (instancetype)init UNAVAILABLE_ATTRIBUTE;

@@ -21,7 +21,7 @@
 + (instancetype)centerVC {
     
     ZXGPageConfigration *configration = [ZXGPageConfigration defaultConfig];
-    configration.pageStyle = ZXGPageStyleTop;
+    configration.pageStyle = ZXGPageStyleSuspensionTop;
 //    configration.headerViewCouldScale = YES;
 //    //    configration.headerViewScaleMode = YNPageHeaderViewScaleModeCenter;
 //    configration.headerViewScaleMode = YNPageHeaderViewScaleModeTop;
@@ -45,6 +45,7 @@
 //    SDCycleScrollView *autoScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, 200) imageURLStringsGroup:vc.imagesURLs];
 //    autoScrollView.delegate = vc;
     UIView *v = [UIView new];
+    v.backgroundColor = [UIColor redColor];
     v.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200);
     vc.headerView = v;
     
