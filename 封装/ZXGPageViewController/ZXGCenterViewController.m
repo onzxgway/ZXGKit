@@ -10,7 +10,7 @@
 #import "ZXGTwoViewController.h"
 #import "ZXGOneViewController.h"
 
-@interface ZXGCenterViewController ()
+@interface ZXGCenterViewController () <ZXGPageViewControllerDataSource>
 
 @end
 
@@ -38,7 +38,7 @@
 + (instancetype)centerVC:(ZXGPageConfigration *)config {
     
     ZXGCenterViewController *vc = [[ZXGCenterViewController alloc] initPageViewControllerWithControllers:[self getArrayVCs] titles:[self getArrayTitles] config:config];
-//    vc.dataSource = vc;
+    vc.dataSource = vc;
 //    vc.delegate = vc;
     
 //    /// 轮播图
@@ -86,6 +86,11 @@
 
 + (NSArray *)getArrayTitles {
     return @[@"鞋子帽子", @"衣服", @"帽子帽子帽子帽子", @"鞋子帽", @"衣服123", @"帽子帽子帽子帽子cv", @"鞋子ss帽子", @"衣125服", @"帽子帽99子帽子帽子"];
+}
+
+- (__kindof UIScrollView *)pageViewController:(ZXGPageViewController *)pageViewController
+                                 pageForIndex:(NSInteger )index {
+    
 }
 
 @end
