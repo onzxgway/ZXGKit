@@ -11,6 +11,8 @@
 #import "UIView+ZXGPageExtend.h"
 #import "ZXGPageHeaderScrollView.h"
 
+static CGFloat const kDEFAULT_INSET_BOTTOM = 400.f;
+
 @interface ZXGPageViewController () <UIScrollViewDelegate, ZXGPageScrollMenuViewDelegate>
 
 /// HeaderView的背景View
@@ -19,20 +21,30 @@
 @property (nonatomic) CGFloat headerViewOriginHeight;
 /// 判断headerView是否在列表内
 @property (nonatomic) BOOL headerViewInTableView;
+/// TableView距离顶部的偏移量
+@property (nonatomic) CGFloat insetTop;
+/// 菜单栏的初始OriginY
+@property (nonatomic) CGFloat scrollMenuViewOriginY;
 
 
 /// 页面ScrollView
 @property (nonatomic, strong) ZXGPageScrollView *pageScrollView;
 /// 所有已展示的控制器 缓存
 @property (nonatomic, strong) NSMutableDictionary *displayedDictM;
-/// 字典控制器的缓存
+/// 控制器的缓存
 @property (nonatomic, strong) NSMutableDictionary *cacheDictM;
+/// ScrollView的缓存
+@property (nonatomic, strong) NSMutableDictionary *scrollViewCacheDictionryM;
+/// 原始InsetBottom
+@property (nonatomic, strong) NSMutableDictionary *originInsetBottomDictM;
 /// 当前显示的页面
 @property (nonatomic, strong) UIScrollView *currentScrollView;
 /// 当前控制器
 @property (nonatomic, strong) UIViewController *currentViewController;
 /// 上次偏移的位置
 @property (nonatomic) CGFloat lastPositionX;
+/// 是否是悬浮状态
+@property (nonatomic) BOOL supendStatus;
 
 @end
 
@@ -75,8 +87,8 @@
         
         _displayedDictM = @{}.mutableCopy;
         _cacheDictM = @{}.mutableCopy;
-//        self.originInsetBottomDictM = @{}.mutableCopy;
-//        self.scrollViewCacheDictionryM = @{}.mutableCopy;
+        _originInsetBottomDictM = @{}.mutableCopy;
+        _scrollViewCacheDictionryM = @{}.mutableCopy;
     }
     return self;
 }
@@ -130,9 +142,9 @@
 //        }
 //        self.config.tempTopHeight = self.headerBgView.zxg_height + self.config.menuHeight;
         
-//        _insetTop = self.headerBgView.zxg_height + self.config.menuHeight;
+        _insetTop = self.headerBgView.zxg_height + self.config.menuHeight;
         
-//        _scrollMenuViewOriginY = _headerView.zxg_height;
+        _scrollMenuViewOriginY = _headerView.zxg_height;
         
 //        if ([self isSuspensionTopPauseStyle]) {
 //            _insetTop = self.headerBgView.zxg_height - self.config.suspenOffsetY;
@@ -508,61 +520,64 @@
     
     [self.displayedDictM setObject:viewController forKey:[self getKeyWithTitle:title]];
     
-//    UIScrollView *scrollView = self.currentScrollView;
-//
-//    if (self.dataSource && [self.dataSource respondsToSelector:@selector(pageViewController:heightForScrollViewAtIndex:)]) {
-//        CGFloat scrollViewHeight = [self.dataSource pageViewController:self heightForScrollViewAtIndex:index];
-//        scrollView.frame = CGRectMake(0, 0, viewController.view.zxg_width, scrollViewHeight);
-//    }
-//    else {
-//        scrollView.frame = viewController.view.bounds;
-//    }
+    UIScrollView *scrollView = self.currentScrollView;
+
+    if (self.dataSource && [self.dataSource respondsToSelector:@selector(pageViewController:heightForScrollViewAtIndex:)]) {
+        CGFloat scrollViewHeight = [self.dataSource pageViewController:self heightForScrollViewAtIndex:index];
+        scrollView.frame = CGRectMake(0, 0, viewController.view.zxg_width, scrollViewHeight);
+    }
+    else {
+        scrollView.frame = viewController.view.bounds;
+    }
     
     [viewController didMoveToParentViewController:self];
     
-//    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
-//        
-//        if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
-//            CGFloat bottom = scrollView.contentInset.bottom > 2 * kDEFAULT_INSET_BOTTOM ? 0 : scrollView.contentInset.bottom;
-//            [self.originInsetBottomDictM setValue:@(bottom) forKey:[self getKeyWithTitle:title]];
-//            
-//            /// 设置TableView内容偏移
-//            scrollView.contentInset = UIEdgeInsetsMake(_insetTop, 0, scrollView.contentInset.bottom + 3 * kDEFAULT_INSET_BOTTOM, 0);
-//        }
-//        if ([self isSuspensionBottomStyle]) {
-//            scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(_insetTop, 0, 0, 0);
-//        }
-//        
-//        if (self.cacheDictM.count == 0) {
-//            /// 初次添加headerView、scrollMenuView
-//            self.headerBgView.yn_y = - _insetTop;
-//            self.scrollMenuView.yn_y = self.headerBgView.yn_bottom;
-//            [scrollView addSubview:self.headerBgView];
-//            [scrollView addSubview:self.scrollMenuView];
-//            /// 设置首次偏移量置顶
-//            [scrollView setContentOffset:CGPointMake(0, -_insetTop) animated:NO];
-//            
-//        } else {
-//            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:self.view].origin.y;
-//            
-//            if (self.supendStatus) {
-//                /// 首次已经悬浮 设置初始化 偏移量
-//                if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
-//                    [scrollView setContentOffset:CGPointMake(0, -self.config.menuHeight - self.config.suspenOffsetY) animated:NO];
-//                } else {
-//                    /// 再次悬浮 已经加载过 设置偏移量
-//                    if (scrollView.contentOffset.y < -self.config.menuHeight - self.config.suspenOffsetY) {
-//                        [scrollView setContentOffset:CGPointMake(0, -self.config.menuHeight - self.config.suspenOffsetY) animated:NO];
-//                    }
-//                }
-//            } else {
-//                CGFloat scrollMenuViewDeltaY = _scrollMenuViewOriginY - scrollMenuViewY;
-//                scrollMenuViewDeltaY = -_insetTop +  scrollMenuViewDeltaY;
-//                /// 求出偏移了多少 未悬浮 (多个ScrollView偏移量联动)
-//                scrollView.contentOffset = CGPointMake(0, scrollMenuViewDeltaY);
-//            }
-//        }
-//    }
+    if ([self isSuspensionBottomStyle] || [self isSuspensionTopStyle]) {
+        
+        if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
+            CGFloat bottom = scrollView.contentInset.bottom > 2 * kDEFAULT_INSET_BOTTOM ? 0 : scrollView.contentInset.bottom;
+            [self.originInsetBottomDictM setValue:@(bottom) forKey:[self getKeyWithTitle:title]];
+            
+            /// 设置TableView内容偏移
+            scrollView.contentInset = UIEdgeInsetsMake(_insetTop, 0, scrollView.contentInset.bottom + 3 * kDEFAULT_INSET_BOTTOM, 0);
+        }
+        if ([self isSuspensionBottomStyle]) {
+            scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(_insetTop, 0, 0, 0);
+        }
+        
+        if (self.cacheDictM.count == 0) {
+            /// 初次添加headerView、scrollMenuView
+            self.headerBgView.zxg_y = - _insetTop;
+            self.scrollMenuView.zxg_y = self.headerBgView.zxg_bottom;
+            [scrollView addSubview:self.headerBgView];
+            [scrollView addSubview:self.scrollMenuView];
+            /// 设置首次偏移量置顶
+            [scrollView setContentOffset:CGPointMake(0, -_insetTop) animated:NO];
+            
+        }
+        else {
+            CGFloat scrollMenuViewY = [self.scrollMenuView.superview convertRect:self.scrollMenuView.frame toView:self.view].origin.y;
+            
+            if (self.supendStatus) {
+                /// 首次已经悬浮 设置初始化 偏移量
+                if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
+                    [scrollView setContentOffset:CGPointMake(0, -self.config.menuHeight - self.config.suspenOffsetY) animated:NO];
+                }
+                else {
+                    /// 再次悬浮 已经加载过 设置偏移量
+                    if (scrollView.contentOffset.y < -self.config.menuHeight - self.config.suspenOffsetY) {
+                        [scrollView setContentOffset:CGPointMake(0, -self.config.menuHeight - self.config.suspenOffsetY) animated:NO];
+                    }
+                }
+            }
+            else {
+                CGFloat scrollMenuViewDeltaY = _scrollMenuViewOriginY - scrollMenuViewY;
+                scrollMenuViewDeltaY = -_insetTop +  scrollMenuViewDeltaY;
+                /// 求出偏移了多少 未悬浮 (多个ScrollView偏移量联动)
+                scrollView.contentOffset = CGPointMake(0, scrollMenuViewDeltaY);
+            }
+        }
+    }
     
     /// 缓存控制器
     if (![self.cacheDictM objectForKey:[self getKeyWithTitle:title]]) {
@@ -602,5 +617,49 @@
     
     _headerView.zxg_height = ceil(headerView.zxg_height); // 向上取整
 }
+
+#pragma mark - Getter
+/// 当前滚动的ScrollView
+- (UIScrollView *)currentScrollView {
+    return [self getScrollViewWithPageIndex:self.pageIndex];
+}
+
+/// 根据pageIndex 取 数据源 ScrollView
+- (UIScrollView *)getScrollViewWithPageIndex:(NSInteger)pageIndex {
+    
+    NSString *title = [self titleWithIndex:self.pageIndex];
+    NSString *key = [self getKeyWithTitle:title];
+    UIScrollView *scrollView = nil;
+    
+    if (![self.scrollViewCacheDictionryM objectForKey:key]) {
+        
+        if (self.dataSource && [self.dataSource respondsToSelector:@selector(pageViewController:pageForIndex:)]) {
+            scrollView = [self.dataSource pageViewController:self pageForIndex:pageIndex];
+//            scrollView.yn_observerDidScrollView = YES;
+//            __weak typeof(self) weakSelf = self;
+//            scrollView.yn_pageScrollViewDidScrollView = ^(UIScrollView *scrollView) {
+//                [weakSelf yn_pageScrollViewDidScrollView:scrollView];
+//            };
+//            if (self.config.pageStyle == YNPageStyleSuspensionTopPause) {
+//                scrollView.yn_pageScrollViewBeginDragginScrollView = ^(UIScrollView *scrollView) {
+//                    [weakSelf yn_pageScrollViewBeginDragginScrollView:scrollView];
+//                };
+//            }
+            if (@available(iOS 11.0, *)) {
+                if (scrollView) {
+                    scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+                }
+            }
+        }
+    } else {
+        return [self.scrollViewCacheDictionryM objectForKey:key];
+    }
+#if DEBUG
+    NSAssert(scrollView != nil, @"请设置pageViewController 的数据源！");
+#endif
+    [self.scrollViewCacheDictionryM setObject:scrollView forKey:key];
+    return scrollView;
+}
+
 
 @end

@@ -40,7 +40,7 @@
         _bottomLineHeight = 2;
         _bottomLineCorner = 0.f;
         
-        _menuViewBackgroundColor = [UIColor redColor];
+        _menuViewBackgroundColor = [UIColor blueColor];
         _itemColor = [UIColor grayColor];
         _selectedItemColor = [UIColor greenColor];
         _lineHeight = 2;
@@ -59,6 +59,8 @@
         _itemMaxScale = 0;
         
         _headerViewCouldScrollPage = NO;
+        
+        _suspenOffsetY = 0.f;
 
     }
     return self;

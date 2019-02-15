@@ -40,6 +40,8 @@ typedef NS_ENUM(NSInteger, ZXGPageStyle) {
 @property (nonatomic) CGFloat cutOutHeight;
 /** 菜单位置风格 默认 ZXGPageStyleTop */
 @property (nonatomic) ZXGPageStyle pageStyle;
+/** 悬浮ScrollMenu偏移量 默认 0 */
+@property (nonatomic) CGFloat suspenOffsetY;
 
 #pragma mark - UIScrollMenuView Config
 /** 是否显示遮盖*/
