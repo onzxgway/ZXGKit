@@ -1,17 +1,17 @@
 //
-//  ZXGPageScrollMenuView.m
-//  ZXGPageViewController
+//  XGPageScrollMenuView.m
+//  XGPageViewController
 //
 //  Created by onzxgway on 2019/1/17.
 //  Copyright © 2019年 朱献国. All rights reserved.
 //
 
-#import "ZXGPageScrollMenuView.h"
-#import "ZXGPageConfigration.h"
-#import "ZXGPageScrollView.h"
+#import "XGPageScrollMenuView.h"
+#import "XGPageConfigration.h"
+#import "XGPageScrollView.h"
 #import "UIView+ZXGPageExtend.h"
 
-@interface ZXGPageScrollMenuView ()
+@interface XGPageScrollMenuView ()
 
 /// line指示器
 @property (nonatomic, strong) UIView *lineView;
@@ -20,11 +20,11 @@
 /// 蒙层
 @property (nonatomic, strong) UIView *converView;
 /// ScrollView
-@property (nonatomic, strong) ZXGPageScrollView *scrollView;
+@property (nonatomic, strong) XGPageScrollView *scrollView;
 /// 代理
 @property (nonatomic, weak  ) id<ZXGPageScrollMenuViewDelegate> delegate;
 /// 配置信息
-@property (nonatomic, strong) ZXGPageConfigration *configuration;
+@property (nonatomic, strong) XGPageConfigration *configuration;
 /// 上次index
 @property (nonatomic) NSInteger lastIndex;
 /// 当前index
@@ -53,21 +53,21 @@
  */
 
 
-@implementation ZXGPageScrollMenuView
+@implementation XGPageScrollMenuView
 
 #pragma mark - Override
 - (instancetype)initWithFrame:(CGRect)frame {
-    return [self initWithFrame:frame titles:@[].mutableCopy configuration:[ZXGPageConfigration defaultConfig] delegate:nil currentIndex:0];
+    return [self initWithFrame:frame titles:@[].mutableCopy configuration:[XGPageConfigration defaultConfig] delegate:nil currentIndex:0];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    return [self initWithFrame:CGRectZero titles:@[].mutableCopy configuration:[ZXGPageConfigration defaultConfig] delegate:nil currentIndex:0];
+    return [self initWithFrame:CGRectZero titles:@[].mutableCopy configuration:[XGPageConfigration defaultConfig] delegate:nil currentIndex:0];
 }
 
 #pragma mark - APIs
 - (instancetype)initWithFrame:(CGRect)frame
                        titles:(NSArray<NSString *> *)titles
-                configuration:(ZXGPageConfigration *)configuration
+                configuration:(XGPageConfigration *)configuration
                      delegate:(id<ZXGPageScrollMenuViewDelegate>)delegate
                  currentIndex:(NSInteger)currentIndex {
     
@@ -79,7 +79,7 @@
         
         _titles = titles;
         _delegate = delegate;
-        _configuration = configuration ?: [ZXGPageConfigration defaultConfig];
+        _configuration = configuration ?: [XGPageConfigration defaultConfig];
         _currentIndex = currentIndex;
         _itemsM = @[].mutableCopy;
         _itemsWidthM = @[].mutableCopy;
@@ -542,9 +542,9 @@
     
 }
 
-- (ZXGPageScrollView *)scrollView {
+- (XGPageScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[ZXGPageScrollView alloc] init];
+        _scrollView = [[XGPageScrollView alloc] init];
         _scrollView.bounces = self.configuration.bounces;
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;

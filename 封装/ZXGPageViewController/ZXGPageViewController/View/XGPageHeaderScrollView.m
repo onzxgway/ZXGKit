@@ -6,13 +6,13 @@
 //  Copyright © 2019年 朱献国. All rights reserved.
 //
 
-#import "ZXGPageHeaderScrollView.h"
+#import "XGPageHeaderScrollView.h"
 
-@interface ZXGPageHeaderScrollView () <UIScrollViewDelegate>
+@interface XGPageHeaderScrollView () <UIScrollViewDelegate>
 
 @end
 
-@implementation ZXGPageHeaderScrollView
+@implementation XGPageHeaderScrollView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

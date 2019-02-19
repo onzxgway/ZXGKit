@@ -1,16 +1,16 @@
 //
-//  ZXGCenterViewController.h
+//  ZXGTestPageViewController.h
 //  ZXGPageViewController
 //
-//  Created by onzxgway on 2019/1/17.
+//  Created by onzxgway on 2019/2/19.
 //  Copyright © 2019年 朱献国. All rights reserved.
 //
 
-#import "XGPageViewController.h"
+#import "ZXGPageViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZXGCenterViewController : XGPageViewController
+@interface ZXGTestPageViewController : ZXGPageViewController
 
 + (instancetype)centerVC;
 

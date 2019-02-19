@@ -1,6 +1,6 @@
 //
-//  ZXGPageConfigration.h
-//  ZXGPageViewController
+//  XGPageConfigration.h
+//  XGPageViewController
 //
 //  Created by onzxgway on 2019/1/17.
 //  Copyright © 2019年 朱献国. All rights reserved.
@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, ZXGPageStyle) {
 };
 
 
-@interface ZXGPageConfigration : NSObject
+@interface XGPageConfigration : NSObject
 
 #pragma mark - YNPage Config
 /** 是否显示导航条 YES */

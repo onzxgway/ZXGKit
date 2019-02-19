@@ -6,9 +6,9 @@
 //  Copyright © 2019年 朱献国. All rights reserved.
 //
 
-#import "ZXGPageScrollView.h"
+#import "XGPageScrollView.h"
 
-@implementation ZXGPageScrollView
+@implementation XGPageScrollView
 
 
 

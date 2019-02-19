@@ -8,7 +8,7 @@
 
 #import "UIView+ZXGPageExtend.h"
 
-@implementation UIView (ZXGPageExtend)
+@implementation UIView (XGPageExtend)
 
 - (void)setZxg_x:(CGFloat)zxg_x {
     CGRect frame = self.frame;

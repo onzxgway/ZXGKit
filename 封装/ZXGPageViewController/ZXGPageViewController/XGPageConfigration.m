@@ -1,15 +1,15 @@
 //
-//  ZXGPageConfigration.m
-//  ZXGPageViewController
+//  XGPageConfigration.m
+//  XGPageViewController
 //
 //  Created by onzxgway on 2019/1/17.
 //  Copyright © 2019年 朱献国. All rights reserved.
 //
 
-#import "ZXGPageConfigration.h"
+#import "XGPageConfigration.h"
 #import "UIView+ZXGPageExtend.h"
 
-@implementation ZXGPageConfigration
+@implementation XGPageConfigration
 
 - (instancetype)init
 {
@@ -50,7 +50,7 @@
         _lineLeftAndRightAddWidth = 0;
         
         _menuHeight = 44.f;
-        _menuWidth = ZXGPAGE_SCREEN_WIDTH;
+        _menuWidth = XGPAGE_SCREEN_WIDTH;
         _coverCornerRadius = 14.f;
         _itemMargin = 15;
         _itemLeftAndRightMargin = 15;

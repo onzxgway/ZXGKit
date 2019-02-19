@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZXGPageScrollView : UIScrollView
+@interface XGPageScrollView : UIScrollView
 
 @end
 

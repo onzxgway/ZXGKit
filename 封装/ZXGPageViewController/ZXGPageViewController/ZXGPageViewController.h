@@ -2,79 +2,17 @@
 //  ZXGPageViewController.h
 //  ZXGPageViewController
 //
-//  Created by onzxgway on 2019/1/17.
+//  Created by onzxgway on 2019/2/19.
 //  Copyright © 2019年 朱献国. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "ZXGPageConfigration.h"
-#import "ZXGPageScrollMenuView.h"
+#import "XGPageConfigration.h"
+#import "XGPageScrollMenuView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 @class ZXGPageViewController;
-
-@protocol ZXGPageViewControllerDelegate <NSObject>
-@optional
-
-/**
- 滚动列表内容时回调
- 
- @param pageViewController PageVC
- @param contentOffsetY 内容偏移量
- @param progress 进度
- */
-- (void)pageViewController:(ZXGPageViewController *)pageViewController
-            contentOffsetY:(CGFloat)contentOffsetY
-                  progress:(CGFloat)progress;
-
-/**
- UIScrollView拖动停止时回调, 可用来自定义 ScrollMenuView
- 
- @param pageViewController PageVC
- @param scrollView UIScrollView
- */
-- (void)pageViewController:(ZXGPageViewController *)pageViewController
-        didEndDecelerating:(UIScrollView *)scrollView;
-
-/**
- UIScrollView滚动时回调, 可用来自定义 ScrollMenuView
- 
- @param pageViewController PageVC
- @param scrollView UIScrollView
- @param progress 进度
- @param fromIndex 从哪个页面
- @param toIndex 到哪个页面
- */
-- (void)pageViewController:(ZXGPageViewController *)pageViewController
-                 didScroll:(UIScrollView *)scrollView
-                  progress:(CGFloat)progress
-                 formIndex:(NSInteger)fromIndex
-                   toIndex:(NSInteger)toIndex;
-
-/**
- 点击菜单栏Item的即刻回调
- 
- @param pageViewController PageVC
- @param itemButton item
- @param index 下标
- */
-- (void)pageViewController:(ZXGPageViewController *)pageViewController
-         didScrollMenuItem:(UIButton *)itemButton
-                     index:(NSInteger)index;
-
-/**
- 点击UIScrollMenuView AddAction
- 
- @param pageViewController PageVC
- @param button Add按钮
- */
-- (void)pageViewController:(ZXGPageViewController *)pageViewController
-        didAddButtonAction:(UIButton *)button;
-
-
-@end
 
 @protocol ZXGPageViewControllerDataSource <NSObject>
 @required
@@ -86,8 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param index pageIndex
  @return 数据源
  */
-- (__kindof UIScrollView *)pageViewController:(ZXGPageViewController *)pageViewController
-                                 pageForIndex:(NSInteger )index;
+//- (__kindof UIScrollView *)pageViewController:(ZXGPageViewController *)pageViewController
+//                                 pageForIndex:(NSInteger )index;
 
 
 @optional
@@ -100,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param index pageIndex
  @return ScrollView高度
  */
-- (CGFloat)pageViewController:(ZXGPageViewController *)pageViewController heightForScrollViewAtIndex:(NSInteger )index;
+//- (CGFloat)pageViewController:(ZXGPageViewController *)pageViewController heightForScrollViewAtIndex:(NSInteger )index;
 
 /**
  自定义缓存Key 如果不实现，则不允许相同的菜单栏title
@@ -117,25 +55,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZXGPageViewController : UIViewController
 
-/// 配置信息
-@property (nonatomic, strong) ZXGPageConfigration *config;
-/// 控制器数组
-@property (nonatomic, strong) NSMutableArray<__kindof UIViewController *> *controllersM;
-/// 标题数组 默认 缓存 key 为 title 可通过数据源代理 进行替换
-@property (nonatomic, strong) NSMutableArray<NSString *> *titlesM;
+// 配置信息
+@property (nonatomic, strong) XGPageConfigration *config;
+// 控制器数组
+@property (nonatomic, strong) NSArray<UIViewController *> *controllers;
 
-/// 数据源
+// 标题数组 默认 缓存 key 为 title 可通过数据源代理 进行替换
+@property (nonatomic, strong) NSArray<NSString *> *titles;
+
+
+// 数据源
 @property (nonatomic, weak) id<ZXGPageViewControllerDataSource> dataSource;
-/// 代理
-@property (nonatomic, weak) id<ZXGPageViewControllerDelegate> delegate;
-/// 当前页面index
+// 当前页面索引
 @property (nonatomic) NSInteger pageIndex;
-
-/// 菜单栏
-@property (nonatomic, strong) ZXGPageScrollMenuView *scrollMenuView;
-
-/// 头部headerView
+// 头部headerView
 @property (nonatomic, strong) UIView *headerView;
+// 菜单栏
+@property (nonatomic, strong) XGPageScrollMenuView *scrollMenuView;
+
+
 
 #pragma mark - initialize
 /**
@@ -146,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)pageViewControllerWithControllers:(NSArray<UIViewController *> *)controllers
                                            titles:(NSArray<NSString *> *)titles
-                                           config:(ZXGPageConfigration *)config;
+                                           config:(XGPageConfigration *)config;
 /**
  初始化方法
  @param controllers 子控制器
@@ -155,7 +93,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initPageViewControllerWithControllers:(NSArray<UIViewController *> *)controllers
                                                titles:(NSArray<NSString *> *)titles
-                                               config:(ZXGPageConfigration *)config NS_DESIGNATED_INITIALIZER;
+                                               config:(XGPageConfigration *)config NS_DESIGNATED_INITIALIZER;
+
 
 @end
 

@@ -7,8 +7,8 @@
 //
 
 #import "ZXGTestController.h"
-#import "ZXGPageScrollMenuView.h"
-#import "ZXGPageConfigration.h"
+#import "XGPageScrollMenuView.h"
+#import "XGPageConfigration.h"
 
 @interface ZXGTestController ()
 
@@ -21,7 +21,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    ZXGPageConfigration *config = [ZXGPageConfigration defaultConfig];
+    XGPageConfigration *config = [XGPageConfigration defaultConfig];
     config.aligmentModeCenter = NO;
 //    config.scrollMenu = NO;
     config.showBottomLine = YES;
@@ -32,7 +32,7 @@
 //    config.lineLeftAndRightAddWidth = -6;
     config.lineWidthEqualFontWidth = YES;
     
-    ZXGPageScrollMenuView *scrollMenuView = [[ZXGPageScrollMenuView alloc] initWithFrame:CGRectMake(0, 108, 0, 0) titles:@[@"鞋子", @"衣服衣服", @"帽子", @"鞋子", @"衣服衣服衣服衣服", @"帽子", @"鞋子", @"衣衣服服", @"帽子", @"鞋衣服子", @"衣服", @"帽子"] configuration:config delegate:self currentIndex:1];
+    XGPageScrollMenuView *scrollMenuView = [[XGPageScrollMenuView alloc] initWithFrame:CGRectMake(0, 108, 0, 0) titles:@[@"鞋子", @"衣服衣服", @"帽子", @"鞋子", @"衣服衣服衣服衣服", @"帽子", @"鞋子", @"衣衣服服", @"帽子", @"鞋衣服子", @"衣服", @"帽子"] configuration:config delegate:self currentIndex:1];
     [self.view addSubview:scrollMenuView];
 }
 
