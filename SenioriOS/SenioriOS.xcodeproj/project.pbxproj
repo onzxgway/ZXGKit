@@ -65,6 +65,7 @@
 		045EA666217F1A2500A94B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045EA664217F1A2500A94B88 /* LaunchScreen.storyboard */; };
 		045EA669217F1A2500A94B88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045EA668217F1A2500A94B88 /* main.m */; };
 		045EA66E217F1A4300A94B88 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 045EA66D217F1A4300A94B88 /* README.md */; };
+		048D31802236105000872E70 /* CustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048D317F2236105000872E70 /* CustomScrollView.m */; };
 		0496AFAF2181583400540C8C /* ResponderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496AFAE2181583400540C8C /* ResponderController.m */; };
 		049F8BF321888B5F00CF798C /* PracticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF221888B5F00CF798C /* PracticeController.m */; };
 		049F8BF621888BA200CF798C /* PracticeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F8BF521888BA200CF798C /* PracticeButton.m */; };
@@ -227,6 +228,8 @@
 		045EA667217F1A2500A94B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045EA668217F1A2500A94B88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		045EA66D217F1A4300A94B88 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		048D317E2236105000872E70 /* CustomScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomScrollView.h; sourceTree = "<group>"; };
+		048D317F2236105000872E70 /* CustomScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomScrollView.m; sourceTree = "<group>"; };
 		0496AFAD2181583400540C8C /* ResponderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponderController.h; sourceTree = "<group>"; };
 		0496AFAE2181583400540C8C /* ResponderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderController.m; sourceTree = "<group>"; };
 		049F8BF121888B5F00CF798C /* PracticeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PracticeController.h; sourceTree = "<group>"; };
@@ -779,6 +782,8 @@
 			children = (
 				04EE1D5421B0D28500BDB206 /* ZXGScrollView.h */,
 				04EE1D5521B0D28500BDB206 /* ZXGScrollView.m */,
+				048D317E2236105000872E70 /* CustomScrollView.h */,
+				048D317F2236105000872E70 /* CustomScrollView.m */,
 				04EE1D5721B0D38300BDB206 /* CustomScrollViewController.h */,
 				04EE1D5821B0D38300BDB206 /* CustomScrollViewController.m */,
 				04EE1D5A21B0DE0D00BDB206 /* TwoCustomViewController.h */,
@@ -1257,6 +1262,7 @@
 				04EE1D4F21B0D10A00BDB206 /* main.m in Sources */,
 				04EE1D4121B0D10900BDB206 /* AppDelegate.m in Sources */,
 				04EE1D6221B0DE7500BDB206 /* ScrollViewTwo.m in Sources */,
+				048D31802236105000872E70 /* CustomScrollView.m in Sources */,
 				04EE1D5F21B0DE6700BDB206 /* ScrollViewOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

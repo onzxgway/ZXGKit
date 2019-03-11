@@ -8,6 +8,7 @@
 
 #import "CustomScrollViewController.h"
 #import "ZXGScrollView.h"
+#import "CustomScrollView.h"
 
 @interface CustomScrollViewController ()
 
@@ -34,7 +35,7 @@
     /**
      模拟系统UIScrollView,实现自定义的控件。
      */
-    ZXGScrollView *scrollView = [[ZXGScrollView alloc] initWithFrame:CGRectMake(110.f, [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.bounds.size.height + 322.f, 140, 150.f)];
+    CustomScrollView *scrollView = [[CustomScrollView alloc] initWithFrame:CGRectMake(110.f, [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.bounds.size.height + 322.f, 140, 150.f)];
     scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * 2, scrollView.frame.size.height * 2);
     scrollView.backgroundColor = [UIColor redColor];
     [self.view addSubview:scrollView];

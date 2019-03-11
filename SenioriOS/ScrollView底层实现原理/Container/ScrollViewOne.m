@@ -28,24 +28,24 @@
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"oneView touchBegan ");
-    [super touchesBegan:touches withEvent:event];
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"oneView touchesMoved");
-    [super touchesMoved:touches withEvent:event];
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"oneView touchesEnded");
-    [super touchesEnded:touches withEvent:event];
-}
-
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"oneView touchesCancelled");
-    [super touchesCancelled:touches withEvent:event];
-}
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"oneView touchBegan ");
+//    [super touchesBegan:touches withEvent:event];
+//}
+//
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"oneView touchesMoved");
+//    [super touchesMoved:touches withEvent:event];
+//}
+//
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"oneView touchesEnded");
+//    [super touchesEnded:touches withEvent:event];
+//}
+//
+//- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"oneView touchesCancelled");
+//    [super touchesCancelled:touches withEvent:event];
+//}
 
 @end

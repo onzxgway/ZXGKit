@@ -54,7 +54,8 @@
     
 }
 
-//contentInset：可以扩展内容区域
+// contentInset 作用：扩展内容区域
+//              原理：修改bounds
 // scrollView 及其子类 遇到 导航控制器，会自动 top 间距。
 
 - (void)createOneScrollView {
@@ -63,7 +64,7 @@
     scrollViewOne.delegate = self;
     
     if (@available(iOS 11.0, *)) {
-        scrollViewOne.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+        scrollViewOne.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
     else {
        #pragma clang diagnostic push
@@ -76,12 +77,12 @@
     [self.view addSubview:scrollViewOne];
     
 //    ScrollView.contentInset实质就是修改scrollView的bounds
-//    scrollViewOne.contentInset = UIEdgeInsetsMake(88.f, 0.f, 0.f, 0.f);
-//    scrollViewOne.contentOffset = CGPointMake(0.f, -88.f);
+    scrollViewOne.contentInset = UIEdgeInsetsMake(88.f, 0.f, 0.f, 0.f);
+    scrollViewOne.contentOffset = CGPointMake(0.f, -88.f);
 
     UIImageView *imgView = [[UIImageView alloc] init];
     imgView.backgroundColor = [UIColor greenColor];
-    imgView.frame = CGRectMake(0.f, 0.f, self.view.frame.size.width, 400.f);
+    imgView.frame = CGRectMake(0.f, 0.f, self.view.frame.size.width, 3400.f);
     [scrollViewOne addSubview:imgView];
     
 }

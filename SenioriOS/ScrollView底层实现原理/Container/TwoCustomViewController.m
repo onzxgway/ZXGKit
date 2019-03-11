@@ -31,13 +31,13 @@
     scrollViewTwo.contentSize = CGSizeMake(self.view.frame.size.width * 2, 300.f);
     scrollViewTwo.backgroundColor = [UIColor blueColor];
 
-//    ScrollViewThree *scrollViewThree = [[ScrollViewThree alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, 300.f)];
-//    scrollViewThree.contentSize = CGSizeMake(self.view.frame.size.width * 2, 300.f);
-//    scrollViewThree.backgroundColor = [UIColor yellowColor];
+    ScrollViewThree *scrollViewThree = [[ScrollViewThree alloc] initWithFrame:scrollViewTwo.bounds];
+    scrollViewThree.contentSize = CGSizeMake(self.view.frame.size.width * 2, 300.f);
+    scrollViewThree.backgroundColor = [UIColor yellowColor];
     
     [self.view addSubview:scrollViewOne];
     [scrollViewOne addSubview:scrollViewTwo];
-//    [scrollViewTwo addSubview:scrollViewThree];
+    [scrollViewTwo addSubview:scrollViewThree];
     
 }
 

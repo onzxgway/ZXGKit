@@ -72,6 +72,7 @@
 //    return YES;
 //}
 //
+
 /**
  模拟 系统的 效果。
  */
@@ -86,7 +87,7 @@
         return YES;
     }
     return YES;
-    
+
 }
 
 
