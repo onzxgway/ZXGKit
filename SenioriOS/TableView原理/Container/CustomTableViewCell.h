@@ -10,4 +10,9 @@
 
 @interface CustomTableViewCell : UIView
 
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, strong) UILabel *textLabel;
+
+- (instancetype)initWithReuseIdentifier:(NSString*)identifier;
+
 @end

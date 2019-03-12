@@ -10,12 +10,31 @@
 
 @implementation CustomTableViewCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _textLabel = [UILabel new];
+    }
+    return self;
 }
-*/
+
+- (instancetype)initWithReuseIdentifier:(NSString*)identifier{
+    self = [super init];
+    if (self) {
+        _identifier = identifier;
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    if (![_textLabel superview]) {
+        [self addSubview:_textLabel];
+    }
+    
+    _textLabel.frame = CGRectMake(15, 0, self.frame.size.width-15, self.frame.size.height);
+}
 
 @end
