@@ -8,8 +8,9 @@
 
 #import "CustonViewController.h"
 #import "ZXGTableView.h"
+#import "CustomTableView.h"
 
-@interface CustonViewController () <ZXGTableViewDataSource>
+@interface CustonViewController () <CustomTableViewDataSource>
 
 @end
 
@@ -20,36 +21,38 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     
-    ZXGTableView *tableView = [[ZXGTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    CustomTableView *tableView = [[CustomTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     [self.view addSubview:tableView];
     tableView.dataSource = self;
     [tableView reloadData];
 }
 
-- (NSInteger)tableView:(ZXGTableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(CustomTableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"%s", __func__);
     return 26;
 }
 
-- (CustomTableViewCell *)tableView:(ZXGTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CustomTableViewCell *)tableView:(CustomTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%s %zd__%zd", __func__, indexPath.section, indexPath.row);
-    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[CustomTableViewCell alloc] initWithReuseIdentifier:@"cell"];
-    }
+//    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    if (!cell) {
+//        cell = [[CustomTableViewCell alloc] initWithReuseIdentifier:@"cell"];
+//    }
+//
+//    if (indexPath.row % 2) {
+//        cell.backgroundColor = [UIColor yellowColor];
+//    }
+//    else {
+//        cell.backgroundColor = [UIColor blueColor];
+//    }
+//    cell.textLabel.text = [@(indexPath.row) description];
+//
+//    return cell;
     
-    if (indexPath.row % 2) {
-        cell.backgroundColor = [UIColor yellowColor];
-    }
-    else {
-        cell.backgroundColor = [UIColor blueColor];
-    }
-    cell.textLabel.text = [@(indexPath.row) description];
-    
-    return cell;
+    return nil;
 }
 
-- (CGFloat)tableView:(ZXGTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(CustomTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%s %zd__%zd", __func__, indexPath.section, indexPath.row);
     return 18.f;
 }

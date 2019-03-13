@@ -15,6 +15,7 @@
 		043AFB232191C8E2006C6395 /* GestureEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB222191C8E2006C6395 /* GestureEventController.m */; };
 		043AFB272191C99E006C6395 /* RedTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB262191C99E006C6395 /* RedTapGestureRecognizer.m */; };
 		043AFB2A2191D601006C6395 /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AFB292191D601006C6395 /* ButtonController.m */; };
+		043CF57F2238960900E4C744 /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043CF57E2238960900E4C744 /* CustomTableView.m */; };
 		0441D1F621AB987A009F4AD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0441D1F521AB987A009F4AD3 /* AppDelegate.m */; };
 		0441D1F921AB987A009F4AD3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0441D1F821AB987A009F4AD3 /* ViewController.m */; };
 		0441D1FC21AB987A009F4AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0441D1FA21AB987A009F4AD3 /* Main.storyboard */; };
@@ -142,6 +143,8 @@
 		043AFB262191C99E006C6395 /* RedTapGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedTapGestureRecognizer.m; sourceTree = "<group>"; };
 		043AFB282191D601006C6395 /* ButtonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonController.h; sourceTree = "<group>"; };
 		043AFB292191D601006C6395 /* ButtonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonController.m; sourceTree = "<group>"; };
+		043CF57D2238960900E4C744 /* CustomTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableView.h; sourceTree = "<group>"; };
+		043CF57E2238960900E4C744 /* CustomTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableView.m; sourceTree = "<group>"; };
 		0441D1F221AB987A009F4AD3 /* ImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0441D1F421AB987A009F4AD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0441D1F521AB987A009F4AD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -638,6 +641,8 @@
 			children = (
 				04B9BA1421B61AD000238640 /* CustonViewController.h */,
 				04B9BA1521B61AD000238640 /* CustonViewController.m */,
+				043CF57D2238960900E4C744 /* CustomTableView.h */,
+				043CF57E2238960900E4C744 /* CustomTableView.m */,
 				0417490A2237942A00F4446E /* ZXGTableView.h */,
 				0417490B2237942A00F4446E /* ZXGTableView.m */,
 				04B9BA1721B61ADA00238640 /* SystemViewController.h */,
@@ -1200,6 +1205,7 @@
 				04352FD521B62FB20085D970 /* CustomTableViewCell.m in Sources */,
 				04B9BA1921B61ADA00238640 /* SystemViewController.m in Sources */,
 				04B9BA0C21B6193600238640 /* main.m in Sources */,
+				043CF57F2238960900E4C744 /* CustomTableView.m in Sources */,
 				04B9B9FE21B6193500238640 /* AppDelegate.m in Sources */,
 				04B9BA1621B61AD000238640 /* CustonViewController.m in Sources */,
 				0417490C2237942A00F4446E /* ZXGTableView.m in Sources */,
