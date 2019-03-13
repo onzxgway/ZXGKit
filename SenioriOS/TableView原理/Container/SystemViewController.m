@@ -28,15 +28,23 @@
  
  系统UITableView加载数据的过程。
  
-     iOS 11.0 之前的数据源方法调用顺序： numberOfSectionsInTableView  ->  tableView:numberOfRowsInSection:  -> 调用numberOfRows遍tableView:heightForRowAtIndexPath:方法  ->  tableView:cellForRowAtIndexPath: -> tableView:heightForRowAtIndexPath:
+     iOS 11.0 之前的数据源方法调用顺序：
+ numberOfSectionsInTableView:  ->
+ tableView:numberOfRowsInSection:  ->
+ 遍历每一组，调用numberOfRowsInSection次tableView:heightForRowAtIndexPath:方法  ->
+ tableView:cellForRowAtIndexPath: ->
+ tableView:heightForRowAtIndexPath:
+ 
      如果 numberOfSectionsInTableView 或者 tableView:numberOfRowsInSection: 方法的返回值为0，那么 就不会再走后面的方法。
  
          1 所有cell的高度计算（ContentSize）
          2 计算当前可视范围的cell是哪些       （显示池）
-         3 不在可视区域的cell，remove掉     （放到重用池里面）
-        
+         3 不在可视区域的cell，remove掉      （重用池）
  
-    iOS 11.0 及之后的数据源方法调用顺序： numberOfSectionsInTableView  ->  tableView:numberOfRowsInSection: -> tableView:cellForRowAtIndexPath: -> tableView:heightForRowAtIndexPath:
+    iOS 11.0 及之后的数据源方法调用顺序： numberOfSectionsInTableView  ->  tableView:numberOfRowsInSection: ->
+ tableView:cellForRowAtIndexPath: ->
+ tableView:heightForRowAtIndexPath:
+ 
     如果 numberOfSectionsInTableView 或者 tableView:numberOfRowsInSection: 方法的返回值为0，那么 就不会再走后面的方法。
  */
 

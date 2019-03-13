@@ -10,13 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @class CustomTableView;
+@class CustomTableViewCell;
 
 @protocol CustomTableViewDataSource <NSObject>
 
 @required
 - (NSInteger)tableView:(CustomTableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
-- (UITableViewCell *)tableView:(CustomTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (CustomTableViewCell *)tableView:(CustomTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (CGFloat)tableView:(CustomTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -30,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id <CustomTableViewDataSource> dataSource;
 
 - (void)reloadData;
+
+- (CustomTableViewCell *)dequeueReusableCellWithIdentifier:(NSString *)identifier;
 
 @end
 

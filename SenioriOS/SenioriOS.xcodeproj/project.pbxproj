@@ -125,6 +125,7 @@
 		04EE1D6821B0E41D00BDB206 /* SystemScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */; };
 		CC4FFE2521EEC5B0008A1F7D /* GCDOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4FFE2421EEC5B0008A1F7D /* GCDOneViewController.m */; };
 		CC8D292721E72AFE0095370E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8D292621E72AFE0095370E /* Person.m */; };
+		CC9C562A2238CDD900BE271E /* KeyPoint in Resources */ = {isa = PBXBuildFile; fileRef = CC9C56292238CDD900BE271E /* KeyPoint */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -341,6 +342,7 @@
 		CC4FFE2421EEC5B0008A1F7D /* GCDOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDOneViewController.m; sourceTree = "<group>"; };
 		CC8D292521E72AFE0095370E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		CC8D292621E72AFE0095370E /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		CC9C56292238CDD900BE271E /* KeyPoint */ = {isa = PBXFileReference; lastKnownFileType = text; path = KeyPoint; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -632,6 +634,7 @@
 				04B9BA0721B6193600238640 /* LaunchScreen.storyboard */,
 				04B9BA0A21B6193600238640 /* Info.plist */,
 				04B9BA0B21B6193600238640 /* main.m */,
+				CC9C56292238CDD900BE271E /* KeyPoint */,
 			);
 			path = "TableView原理";
 			sourceTree = "<group>";
@@ -1089,6 +1092,7 @@
 				04B9BA0921B6193600238640 /* LaunchScreen.storyboard in Resources */,
 				04B9BA0621B6193600238640 /* Assets.xcassets in Resources */,
 				04B9BA0421B6193500238640 /* Main.storyboard in Resources */,
+				CC9C562A2238CDD900BE271E /* KeyPoint in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1614,7 +1618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2B7L95AWX;
+				DEVELOPMENT_TEAM = X3SHHBSR76;
 				INFOPLIST_FILE = LaunchTheory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1632,7 +1636,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2B7L95AWX;
+				DEVELOPMENT_TEAM = X3SHHBSR76;
 				INFOPLIST_FILE = LaunchTheory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1725,6 +1729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = "TableView原理/Info.plist";
@@ -1735,6 +1740,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1743,6 +1749,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = "TableView原理/Info.plist";
@@ -1753,6 +1760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.onzxgway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
