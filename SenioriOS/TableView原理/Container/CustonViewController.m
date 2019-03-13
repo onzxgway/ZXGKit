@@ -34,27 +34,26 @@
 
 - (CustomTableViewCell *)tableView:(CustomTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%s %zd__%zd", __func__, indexPath.section, indexPath.row);
-//    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-//    if (!cell) {
-//        cell = [[CustomTableViewCell alloc] initWithReuseIdentifier:@"cell"];
-//    }
-//
-//    if (indexPath.row % 2) {
-//        cell.backgroundColor = [UIColor yellowColor];
-//    }
-//    else {
-//        cell.backgroundColor = [UIColor blueColor];
-//    }
-//    cell.textLabel.text = [@(indexPath.row) description];
-//
-//    return cell;
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[CustomTableViewCell alloc] initWithReuseIdentifier:@"cell"];
+    }
     
-    return nil;
+    if (indexPath.row % 2) {
+        cell.backgroundColor = [UIColor yellowColor];
+    }
+    else {
+        cell.backgroundColor = [UIColor blueColor];
+    }
+    cell.textLabel.text = [@(indexPath.row) description];
+
+    return cell;
+    
 }
 
 - (CGFloat)tableView:(CustomTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%s %zd__%zd", __func__, indexPath.section, indexPath.row);
-    return 18.f;
+    return 68.f;
 }
 
 @end
