@@ -36,7 +36,7 @@
 //    return [self hitTest:point event:event];
 //    return self.subviews[0];
 //    return [self hitTest:point event:event];
-//    return [super hitTest:point withEvent:event];
+    return [super hitTest:point withEvent:event];
     
     if (self.alpha <= 0.01 || self.hidden || !self.userInteractionEnabled) {
         return nil;
@@ -77,24 +77,24 @@
     return res;
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesBegan:touches withEvent:event];
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesMoved:touches withEvent:event];
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesEnded:touches withEvent:event];
-}
-
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesCancelled:touches withEvent:event];
-}
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%s", __func__);
+//    [super touchesBegan:touches withEvent:event];
+//}
+//
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%s", __func__);
+//    [super touchesMoved:touches withEvent:event];
+//}
+//
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%s", __func__);
+//    [super touchesEnded:touches withEvent:event];
+//}
+//
+//- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%s", __func__);
+//    [super touchesCancelled:touches withEvent:event];
+//}
 
 @end

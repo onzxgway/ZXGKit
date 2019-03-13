@@ -36,8 +36,8 @@
     NSLog(@"%s", __func__);
     
 //    return nil;
-    return [self hitTest:point event:event];
-//    return [super hitTest:point withEvent:event];
+//    return [self hitTest:point event:event];
+    return [super hitTest:point withEvent:event];
 }
     
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
@@ -45,24 +45,24 @@
     return [super pointInside:point withEvent:event];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesBegan:touches withEvent:event];
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesMoved:touches withEvent:event];
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesEnded:touches withEvent:event];
-}
-
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%s", __func__);
-    [super touchesCancelled:touches withEvent:event];
-}
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%s", __func__);
+//    [super touchesBegan:touches withEvent:event];
+//}
+//
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%s", __func__);
+//    [super touchesMoved:touches withEvent:event];
+//}
+//
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%s", __func__);
+//    [super touchesEnded:touches withEvent:event];
+//}
+//
+//- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%s", __func__);
+//    [super touchesCancelled:touches withEvent:event];
+//}
 
 @end
