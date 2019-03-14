@@ -30,6 +30,13 @@
     [self layoutSubView];
 }
 
+/**
+ 
+ 当用户触发一个触摸事件，当前屏幕内有多个对象可以接收，那么是如何判断处理的对象是哪个？
+ 
+ 用户触摸时，UIKit会生成一个UIEvent object(包含事件发生的位置、时间、状态等信息)，把它添加到UIApplication对象维护的event队列中(FIFO)，队列把事件对象分发到keyWindow中，事件沿着一个特定的路径来传递到可处理事件的对象上来。
+ 
+ */
 - (void)layoutSubView {
     // autoLayout
     [self.view addSubview:self.grayView];

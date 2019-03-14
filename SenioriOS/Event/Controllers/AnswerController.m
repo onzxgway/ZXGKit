@@ -1,19 +1,18 @@
 //
-//  GestureEventController.m
+//  AnswerController.m
 //  Event
 //
-//  Created by 朱献国 on 2018/11/6.
-//  Copyright © 2018年 朱献国. All rights reserved.
+//  Created by onzxgway on 2019/3/14.
+//  Copyright © 2019年 朱献国. All rights reserved.
 //
 
-#import "GestureEventController.h"
+#import "AnswerController.h"
 #import "GrayView.h"
 #import "YellowView.h"
 #import "RedView.h"
 #import "BlueView.h"
-#import "RedTapGestureRecognizer.h"
 
-@interface GestureEventController ()
+@interface AnswerController ()
 
 @property (nonatomic, strong) GrayView *grayView;
 @property (nonatomic, strong) YellowView *yellowView;
@@ -22,17 +21,47 @@
 
 @end
 
+
+@implementation AnswerController
+
 /**
- 3.手势种类：
- UITapGestureRecognizer
- UIPanGestureRecognizer   (拖动)
- UISwipeGestureRecognizer (轻扫)
- UIPinchGestureRecognizer (捏合)
- UIRotationGestureRecognizer  (旋转)
- UILongPressGestureRecognizer (长按)
- UIScreenEdgePanGestureRecognizer (屏幕边缘)
+ 
+ 响应者链：
+ 
+ self.redView.nextResponder
+ <GrayView: 0x7ffe9fd3d460; frame = (44 108; 287 188); layer = <CALayer: 0x600003dd1c60>>
+ 
+ self.redView.nextResponder.nextResponder
+ <UIView: 0x7ffe9fd02520; frame = (0 0; 375 667); autoresize = W+H; layer = <CALayer: 0x600003dd6ce0>>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder
+ <AnswerController: 0x7ffe9fe20740>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder.nextResponder
+ <UIViewControllerWrapperView: 0x7ffe9fe04c10; frame = (0 0; 375 667); autoresize = W+H; layer = <CALayer: 0x600003ddc2c0>>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder
+ <UINavigationTransitionView: 0x7ffe9fc0eec0; frame = (0 0; 375 667); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003dd1680>>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder
+ <UILayoutContainerView: 0x7ffe9fc04d20; frame = (0 0; 375 667); autoresize = W+H; gestureRecognizers = <NSArray: 0x6000033c9800>; layer = <CALayer: 0x600003dd0940>>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder
+ <UINavigationController: 0x7ffea001c600>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder
+ <UIWindow: 0x7ffe9ff02210; frame = (0 0; 375 667); gestureRecognizers = <NSArray: 0x6000033d4900>; layer = <UIWindowLayer: 0x600003d845e0>>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder
+ <UIApplication: 0x7ffe9fd01da0>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder
+ <AppDelegate: 0x600003d811c0>
+ 
+ self.redView.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder.nextResponder
+ nil
+ 
  */
-@implementation GestureEventController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +70,7 @@
     [self layoutSubView];
 }
 
+#pragma mark - Navigation
 - (void)layoutSubView {
     // autoLayout
     [self.view addSubview:self.grayView];
@@ -79,7 +109,6 @@
 - (GrayView *)grayView {
     if (!_grayView) {
         _grayView = [[GrayView alloc] init];
-//        [_grayView addGestureRecognizer:[[RedTapGestureRecognizer alloc] initWithTarget:self action:@selector(redViewClick)]];
     }
     return _grayView;
 }
@@ -91,26 +120,10 @@
     return _yellowView;
 }
 
-/**
- 1.手势与 hitTest 和 pointInside 的关系？
- 
-    必须先通过两个函数找到View,然后View上添加的手势才能响应。
- 
-    View 以及 View.superview... 上如果有手势都会响应。
- */
-
-/**
- 4.手势和view的touch事件的关系？
- delaysTouchesBegan
- cancelsTouchesInView
- */
 - (RedView *)redView {
     if (!_redView) {
         _redView = [[RedView alloc] init];
-        RedTapGestureRecognizer *ges = [[RedTapGestureRecognizer alloc] initWithTarget:self action:@selector(redViewClick)];
-//        ges.cancelsTouchesInView = YES; // 识别手势之后，是否取消View的touch事件。
-//        ges.delaysTouchesBegan = YES;   // 是否延迟View的touch事件识别。如果延迟了，手势也识别了，就放弃touch事件。
-        [_redView addGestureRecognizer:ges];
+        [_redView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(redViewClick)]];
     }
     return _redView;
 }

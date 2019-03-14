@@ -71,7 +71,13 @@
                           },
                          @{
                           @"实际应用" : @"ApplyController"
-                          }
+                          },
+                         @{
+                          @"事件响应" : @"AnswerController"
+                          },
+                        @{
+                            @"手势" : @"GestureEventController"
+                            }
                         ];
     }
     return _dataSource;

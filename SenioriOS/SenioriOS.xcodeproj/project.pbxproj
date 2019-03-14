@@ -123,6 +123,8 @@
 		04EE1D6221B0DE7500BDB206 /* ScrollViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6121B0DE7500BDB206 /* ScrollViewTwo.m */; };
 		04EE1D6521B0DE7D00BDB206 /* ScrollViewThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6421B0DE7D00BDB206 /* ScrollViewThree.m */; };
 		04EE1D6821B0E41D00BDB206 /* SystemScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */; };
+		CC4FBDA92239F5C1009694D4 /* AnswerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4FBDA82239F5C1009694D4 /* AnswerController.m */; };
+		CC4FBDAB223A1DDA009694D4 /* ResponderChain.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4FBDAA223A1DDA009694D4 /* ResponderChain.png */; };
 		CC4FFE2521EEC5B0008A1F7D /* GCDOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4FFE2421EEC5B0008A1F7D /* GCDOneViewController.m */; };
 		CC8D292721E72AFE0095370E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8D292621E72AFE0095370E /* Person.m */; };
 		CC9C562A2238CDD900BE271E /* KeyPoint in Resources */ = {isa = PBXBuildFile; fileRef = CC9C56292238CDD900BE271E /* KeyPoint */; };
@@ -338,6 +340,9 @@
 		04EE1D6421B0DE7D00BDB206 /* ScrollViewThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewThree.m; sourceTree = "<group>"; };
 		04EE1D6621B0E41D00BDB206 /* SystemScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemScrollViewController.h; sourceTree = "<group>"; };
 		04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemScrollViewController.m; sourceTree = "<group>"; };
+		CC4FBDA72239F5C1009694D4 /* AnswerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerController.h; sourceTree = "<group>"; };
+		CC4FBDA82239F5C1009694D4 /* AnswerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerController.m; sourceTree = "<group>"; };
+		CC4FBDAA223A1DDA009694D4 /* ResponderChain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResponderChain.png; sourceTree = "<group>"; };
 		CC4FFE2321EEC5B0008A1F7D /* GCDOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDOneViewController.h; sourceTree = "<group>"; };
 		CC4FFE2421EEC5B0008A1F7D /* GCDOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDOneViewController.m; sourceTree = "<group>"; };
 		CC8D292521E72AFE0095370E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -599,6 +604,7 @@
 				045EA667217F1A2500A94B88 /* Info.plist */,
 				045EA668217F1A2500A94B88 /* main.m */,
 				045EA66D217F1A4300A94B88 /* README.md */,
+				CC4FBDAA223A1DDA009694D4 /* ResponderChain.png */,
 				04557B292180713100BD3F12 /* PrefixHeader.pch */,
 			);
 			path = Event;
@@ -617,6 +623,8 @@
 				043AFB222191C8E2006C6395 /* GestureEventController.m */,
 				043AFB282191D601006C6395 /* ButtonController.h */,
 				043AFB292191D601006C6395 /* ButtonController.m */,
+				CC4FBDA72239F5C1009694D4 /* AnswerController.h */,
+				CC4FBDA82239F5C1009694D4 /* AnswerController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1078,6 +1086,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4FBDAB223A1DDA009694D4 /* ResponderChain.png in Resources */,
 				045EA666217F1A2500A94B88 /* LaunchScreen.storyboard in Resources */,
 				045EA663217F1A2500A94B88 /* Assets.xcassets in Resources */,
 				045EA66E217F1A4300A94B88 /* README.md in Resources */,
@@ -1183,6 +1192,7 @@
 			files = (
 				0496AFAF2181583400540C8C /* ResponderController.m in Sources */,
 				045EA65E217F1A2500A94B88 /* ViewController.m in Sources */,
+				CC4FBDA92239F5C1009694D4 /* AnswerController.m in Sources */,
 				04557B1F218058EC00BD3F12 /* YellowView.m in Sources */,
 				043AFB272191C99E006C6395 /* RedTapGestureRecognizer.m in Sources */,
 				04557B222180592500BD3F12 /* RedView.m in Sources */,

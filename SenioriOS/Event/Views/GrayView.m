@@ -36,25 +36,20 @@
 //    return [self hitTest:point event:event];
 //    return self.subviews[0];
 //    return [self hitTest:point event:event];
-    return [super hitTest:point withEvent:event];
+//    return [super hitTest:point withEvent:event];
     
     if (self.alpha <= 0.01 || self.hidden || !self.userInteractionEnabled) {
         return nil;
     }
     
-//    if (![self pointInside:point withEvent:event]) {
-//        return nil;
-//    }
+    if (![self pointInside:point withEvent:event]) {
+        return nil;
+    }
     
     UIView *targetV = nil;
     for (UIView *subView in [self.subviews.reverseObjectEnumerator allObjects]) {
         
         CGPoint newP = [self convertPoint:point toView:subView];
-//        UIView *v = [subView hitTest:newP withEvent:event];
-//        if (v) {
-//            targetV = v;
-//            break;
-//        }
         
         BOOL res = [subView pointInside:newP withEvent:event];
         if (res) {
