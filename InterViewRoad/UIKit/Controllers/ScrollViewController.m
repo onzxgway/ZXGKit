@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.textArr = @[@"1.请说明并比较以下关键词：contentView，contentInset，contentSize，contentOffset。", @"2.storyboard/xib，和纯代码构建 UI 相比，有什么优缺点？", @"3.Auto Layout 和 Frame 在 UI 布局和渲染上有什么区别？", @"4.UIView 和 CALayer 有什么区别？", @"5.请说明并比较以下关键词：Frame, Bounds, Center", @"6.请说明并比较以下方法：layoutIfNeeded, layoutSubviews, setNeedsLayout", @"7.请说明并比较以下关键词：Safe Area, SafeAreaLayoutGuide, SafeAreaInsets", @"UIScrollView及其子类"];
+    self.textArr = @[@"1.请说明并比较以下关键词：contentView，contentInset，contentSize，contentOffset。", @"2. 请说明 UITableViewCell 的重用机制", @"3. 请说明并比较以下协议：UITableViewDelegate，UITableViewDataSource", @"4. 请说明并比较以下协议：UICollectionViewDelegate，UICollectionViewDataSource，UICollectionViewDelegateFlowLayout", @"5. UICollectionView 中的 Supplementary Views 和 Decoration Views 分别指什么？"];
     
 }
 
