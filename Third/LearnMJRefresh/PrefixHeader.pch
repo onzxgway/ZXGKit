@@ -11,4 +11,8 @@
 
 #import "ZXGCommonKit.h"
 
+#import "UIView+NewRefresh.h"
+#import "UIScrollView+Refresh.h"
+#import "NSBundle+MJRefresh.h"
+
 #endif /* PrefixHeader_pch */
