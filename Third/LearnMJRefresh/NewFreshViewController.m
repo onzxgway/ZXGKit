@@ -26,11 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _cellCount = 26;
+    _cellCount = 6;
     
-    if (@available(iOS 11.0, *)) {
-        self.table.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
-    }
+//    if (@available(iOS 11.0, *)) {
+//        self.table.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
+//    }
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"EndRefresh" style:UIBarButtonItemStyleDone target:self action:@selector(endRefresh)];
     

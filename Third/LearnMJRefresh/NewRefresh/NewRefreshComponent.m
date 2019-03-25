@@ -57,7 +57,7 @@
     
     UIScrollView *scrollView = (UIScrollView *)newSuperview;
     self.scrollView = scrollView;
-    self.originalInsets = scrollView.contentInset;
+    self.originalInsets = self.scrollView.contentInset;
     
     NSKeyValueObservingOptions option = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
     [self.scrollView addObserver:self forKeyPath:@"contentOffset" options:option context:nil];

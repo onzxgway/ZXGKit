@@ -24,7 +24,7 @@
     
     CGFloat alphaP = -offsetY / self.nr_h;
     // 临界值
-    CGFloat boundararyOffset = - self.nr_h - self.scrollView.contentInset.top;
+    CGFloat boundararyOffset = - self.nr_h - self.originalInsets.top;
     
     if (self.state == NRRefreshStateRefreshing) {
         self.alpha = 1.0f;
