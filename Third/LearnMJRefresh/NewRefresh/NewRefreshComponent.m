@@ -13,7 +13,10 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        
         [self addSubViews];
+        
+        self.state = NRRefreshStateIdle;
     }
     return self;
 }
@@ -22,13 +25,14 @@
     self = [super initWithCoder:coder];
     if (self) {
         [self addSubViews];
+        
+        self.state = NRRefreshStateIdle;
     }
     return self;
 }
 
 - (void)addSubViews {
     self.backgroundColor = [UIColor redColor];
-    self.state = NRRefreshStateIdle;
 }
 
 // 控件本身以及子控件的 位置和尺寸 调整。
@@ -86,17 +90,10 @@
     
 }
 
-- (void)scrollViewDidChanged:(NSValue *)contentOffset {
-    
-}
+- (void)scrollViewDidChanged:(NSValue *)contentOffset {}
+- (void)scrollViewGestureStateDidChanged:(NSNumber *)state {}
+- (void)scrollViewSizeDidChanged:(NSValue *)contentSize {}
 
-- (void)scrollViewGestureStateDidChanged:(NSNumber *)state {
-    
-}
-
-- (void)scrollViewSizeDidChanged:(NSValue *)contentSize {
-    
-}
 
 + (instancetype)refreshWithBlock:(RefreshBlock)refreshBlock {
     
@@ -115,12 +112,6 @@
 - (void)endRefresh {
     self.state = NRRefreshStateIdle;
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"time"];
-}
-
-- (void)setState:(NRRefreshState)state {
-    _state = state;
-    
-    
 }
 
 @end

@@ -12,6 +12,7 @@
 #import "NewRefreshNormalHeader.h"
 #import "NewRefreshAutoFooter.h"
 #import "NewRefreshBackFooter.h"
+#import "NewRefreshAutoStateFooter.h"
 
 @interface NewFreshViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -25,17 +26,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _cellCount = 6;
+    _cellCount = 26;
+    
+    if (@available(iOS 11.0, *)) {
+        self.table.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
+    }
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"EndRefresh" style:UIBarButtonItemStyleDone target:self action:@selector(endRefresh)];
     
     self.table.refreshHeader = [NewRefreshNormalHeader refreshWithBlock:^{
-        NSLog(@"Header Refreshing");
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.table.refreshHeader endRefresh];
+            
+            _cellCount += 10;
+            [self.table reloadData];
+            
+        });
+//        NSLog(@"Header Refreshing");
     }];
     
-    self.table.refreshFooter = [NewRefreshBackFooter refreshWithBlock:^{
-        NSLog(@"Footer Refreshing");
-    }];
+//    self.table.refreshFooter = [NewRefreshAutoStateFooter refreshWithBlock:^{
+////        NSLog(@"Footer Refreshing");
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self.table.refreshFooter endRefresh];
+//
+//            _cellCount += 10;
+//            [self.table reloadData];
+//        });
+//    }];
     
 }
 
@@ -43,11 +62,12 @@
     [super viewWillLayoutSubviews];
     
     self.table.tableFooterView = [UIView new];
+//    self.table.contentInset = UIEdgeInsetsMake(166, 0, 0, 0);
 }
 
 - (void)endRefresh {
-    [self.table.refreshHeader endRefresh];
-    [self.table.refreshFooter endRefresh];
+//    [self.table.refreshHeader endRefresh];
+//    [self.table.refreshFooter endRefresh];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

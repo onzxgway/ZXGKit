@@ -17,6 +17,8 @@
 
     UIEdgeInsets inset = self.scrollView.contentInset;
     inset.bottom += self.nr_h;
+//    UIEdgeInsets inset = self.originalInsets;
+//    inset.bottom += self.nr_h;
     self.scrollView.contentInset = inset;
 }
 

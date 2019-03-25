@@ -164,6 +164,7 @@
 		71764191204E6ABB006D3A18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71764170204E6ABB006D3A18 /* Info.plist */; };
 		71764193204E6B99006D3A18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71764192204E6B99006D3A18 /* Assets.xcassets */; };
 		8EB8A6EDB903288C5BE45EB7 /* libPods-Third.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 534CD848BDCCA385D90370C9 /* libPods-Third.a */; };
+		CCB6C77E2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6C77D2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m */; };
 		CCDA61EB22486FD4003941A0 /* NewRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA61EA22486FD4003941A0 /* NewRefreshFooter.m */; };
 		CCDA61EE2248701D003941A0 /* NewRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA61ED2248701D003941A0 /* NewRefreshAutoFooter.m */; };
 		CCDA61F12248A633003941A0 /* NewRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA61F02248A633003941A0 /* NewRefreshBackFooter.m */; };
@@ -475,6 +476,8 @@
 		B12462E12599086ABA0D29DB /* Pods-LearnDTCoreText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnDTCoreText.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LearnDTCoreText/Pods-LearnDTCoreText.debug.xcconfig"; sourceTree = "<group>"; };
 		B7F6A901B4C6B1EE2484AFB8 /* Pods-SDWebimage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebimage.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage.release.xcconfig"; sourceTree = "<group>"; };
 		C6AEA0E5F5C8732B365E35D4 /* libPods-LearnMJExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnMJExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCB6C77C2248C55200BC5BF5 /* NewRefreshAutoStateFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRefreshAutoStateFooter.h; sourceTree = "<group>"; };
+		CCB6C77D2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRefreshAutoStateFooter.m; sourceTree = "<group>"; };
 		CCDA61E922486FD4003941A0 /* NewRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRefreshFooter.h; sourceTree = "<group>"; };
 		CCDA61EA22486FD4003941A0 /* NewRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRefreshFooter.m; sourceTree = "<group>"; };
 		CCDA61EC2248701D003941A0 /* NewRefreshAutoFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -888,6 +891,8 @@
 				CCDA61ED2248701D003941A0 /* NewRefreshAutoFooter.m */,
 				CCDA61EF2248A633003941A0 /* NewRefreshBackFooter.h */,
 				CCDA61F02248A633003941A0 /* NewRefreshBackFooter.m */,
+				CCB6C77C2248C55200BC5BF5 /* NewRefreshAutoStateFooter.h */,
+				CCB6C77D2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m */,
 			);
 			path = NewRefresh;
 			sourceTree = "<group>";
@@ -1766,6 +1771,7 @@
 				046465C220C6BE9E007C223B /* OneRefreshHeaderState.m in Sources */,
 				CCDA61EE2248701D003941A0 /* NewRefreshAutoFooter.m in Sources */,
 				010E44DE20B3F195000877B1 /* NSBundle+MJRefresh.m in Sources */,
+				CCB6C77E2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m in Sources */,
 				0124C7A220B273D300C0BA30 /* UIScrollView+MJExtension.m in Sources */,
 				04F4B9FF22433E3600AFF47F /* NewRefreshStateHeader.m in Sources */,
 				04A31CED20CB682400968D08 /* UIScrollView+OneRefresh.m in Sources */,

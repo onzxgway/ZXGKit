@@ -23,18 +23,22 @@
     CGFloat offsetY = [contentOffset CGPointValue].y;
     
     CGFloat alphaP = -offsetY / self.nr_h;
+    // 临界值
+    CGFloat boundararyOffset = - self.nr_h - self.scrollView.contentInset.top;
     
     if (self.state == NRRefreshStateRefreshing) {
         self.alpha = 1.0f;
         return;
     }
     
+    self.originalInsets = self.scrollView.contentInset;
+    
     if (self.scrollView.isDragging) {
         
-        if (self.state == NRRefreshStateIdle && offsetY <= -self.nr_h) {
+        if (self.state == NRRefreshStateIdle && offsetY <= boundararyOffset) {
             self.state = NRRefreshStatePulling;
         }
-        else if (self.state == NRRefreshStatePulling && offsetY > -self.nr_h) {
+        else if (self.state == NRRefreshStatePulling && offsetY > boundararyOffset) {
             self.state = NRRefreshStateIdle;
         }
         
@@ -47,18 +51,24 @@
 }
 
 - (void)setState:(NRRefreshState)state {
+    NRRefreshState oldState = self.state;
+    if (state == oldState) return; 
     [super setState:state];
     
     if (state == NRRefreshStateIdle) {
+        if (oldState != NRRefreshStateRefreshing) return;
+        
         [UIView animateWithDuration:0.1 animations:^{
-            [self.scrollView setContentInset:self.originalInsets];
+            self.scrollView.contentInset = self.originalInsets;
         }];
     }
     else if (state == NRRefreshStateRefreshing) {
         [UIView animateWithDuration:0.1 animations:^{
-            UIEdgeInsets inset = self.scrollView.contentInset;
+            UIEdgeInsets inset = self.originalInsets;
             inset.top += self.nr_h;
             self.scrollView.contentInset = inset;
+        } completion:^(BOOL finished) {
+            [self beginRefresh];
         }];
     }
     
