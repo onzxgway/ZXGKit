@@ -10,21 +10,35 @@
 #import "NewRefreshComponent.h"
 #import <objc/runtime.h>
 
-static NSString *const key = @"NewRefreshComponent";
+static NSString *const headerkey = @"NewRefreshHeader";
+static NSString *const footerkey = @"NewRefreshFooter";
 
 @implementation UIScrollView (Refresh)
 
-- (void)setRefreshView:(NewRefreshComponent *)refreshView {
-    if (self.refreshView != refreshView) {
-        [self.refreshView removeFromSuperview];
-        [self insertSubview:refreshView atIndex:0];
+- (void)setRefreshHeader:(NewRefreshComponent *)refreshHeader {
+    if (self.refreshHeader != refreshHeader) {
+        [self.refreshHeader removeFromSuperview];
+        [self insertSubview:refreshHeader atIndex:0];
         
-        objc_setAssociatedObject(self, &key, refreshView, OBJC_ASSOCIATION_ASSIGN);
+        objc_setAssociatedObject(self, &headerkey, refreshHeader, OBJC_ASSOCIATION_ASSIGN);
     }
 }
 
-- (NewRefreshComponent *)refreshView {
-    return objc_getAssociatedObject(self, &key);
+- (NewRefreshComponent *)refreshHeader {
+    return objc_getAssociatedObject(self, &headerkey);
+}
+
+- (void)setRefreshFooter:(NewRefreshComponent *)refreshFooter {
+    if (self.refreshFooter != refreshFooter) {
+        [self.refreshFooter removeFromSuperview];
+        [self insertSubview:refreshFooter atIndex:0];
+        
+        objc_setAssociatedObject(self, &footerkey, refreshFooter, OBJC_ASSOCIATION_ASSIGN);
+    }
+}
+
+- (NewRefreshComponent *)refreshFooter {
+    return objc_getAssociatedObject(self, &footerkey);
 }
 
 @end

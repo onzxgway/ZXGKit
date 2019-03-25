@@ -18,6 +18,7 @@
 }
 
 - (void)scrollViewDidChanged:(NSValue *)contentOffset {
+    [super scrollViewDidChanged:contentOffset];
     
     CGFloat offsetY = [contentOffset CGPointValue].y;
     
@@ -50,12 +51,14 @@
     
     if (state == NRRefreshStateIdle) {
         [UIView animateWithDuration:0.1 animations:^{
-            [self.scrollView setContentInset:UIEdgeInsetsZero];
+            [self.scrollView setContentInset:self.originalInsets];
         }];
     }
     else if (state == NRRefreshStateRefreshing) {
         [UIView animateWithDuration:0.1 animations:^{
-            [self.scrollView setContentInset:UIEdgeInsetsMake(self.nr_h, 0, 0, 0)];
+            UIEdgeInsets inset = self.scrollView.contentInset;
+            inset.top += self.nr_h;
+            self.scrollView.contentInset = inset;
         }];
     }
     

@@ -53,8 +53,12 @@
     
     UIScrollView *scrollView = (UIScrollView *)newSuperview;
     self.scrollView = scrollView;
+    self.originalInsets = scrollView.contentInset;
     
-    [self.scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
+    NSKeyValueObservingOptions option = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
+    [self.scrollView addObserver:self forKeyPath:@"contentOffset" options:option context:nil];
+    [self.scrollView.panGestureRecognizer addObserver:self forKeyPath:@"state" options:option context:nil];
+    [self.scrollView addObserver:self forKeyPath:@"contentSize" options:option context:nil];
     
     self.nr_x = self.scrollView.bounds.origin.x;
     self.nr_w = self.scrollView.bounds.size.width;
@@ -68,9 +72,29 @@
         
     }
     
+    if ([keyPath isEqualToString:@"state"]) {
+        
+        [self scrollViewGestureStateDidChanged:[change objectForKey:NSKeyValueChangeNewKey]];
+        
+    }
+    
+    if ([keyPath isEqualToString:@"contentSize"]) {
+        
+        [self scrollViewSizeDidChanged:[change objectForKey:NSKeyValueChangeNewKey]];
+        
+    }
+    
 }
 
 - (void)scrollViewDidChanged:(NSValue *)contentOffset {
+    
+}
+
+- (void)scrollViewGestureStateDidChanged:(NSNumber *)state {
+    
+}
+
+- (void)scrollViewSizeDidChanged:(NSValue *)contentSize {
     
 }
 
@@ -82,9 +106,13 @@
     
 }
 
+- (void)beginRefresh {
+    
+    if(self.refreshBlock) self.refreshBlock();
+    
+}
 
 - (void)endRefresh {
-    
     self.state = NRRefreshStateIdle;
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"time"];
 }
@@ -92,9 +120,7 @@
 - (void)setState:(NRRefreshState)state {
     _state = state;
     
-    if (state == NRRefreshStateRefreshing) {
-        if(self.refreshBlock) self.refreshBlock();
-    }
+    
 }
 
 @end

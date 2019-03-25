@@ -23,17 +23,20 @@ typedef void(^RefreshBlock)(void);
 @property (nonatomic, weak  ) UIScrollView *scrollView;
 @property (nonatomic) NRRefreshState state;
 @property (nonatomic) RefreshBlock refreshBlock;
-
+@property (nonatomic) UIEdgeInsets originalInsets;
 
 + (instancetype)refreshWithBlock:(RefreshBlock)refreshBlock;
 
 
 - (void)endRefresh;
+- (void)beginRefresh;
 
 #pragma mark - subclass override
 - (void)addSubViews NS_REQUIRES_SUPER;
 - (void)placeSubViews NS_REQUIRES_SUPER;
-- (void)scrollViewDidChanged:(NSValue *)contentOffset;
+- (void)scrollViewDidChanged:(NSValue *)contentOffset NS_REQUIRES_SUPER;
+- (void)scrollViewGestureStateDidChanged:(NSNumber *)state NS_REQUIRES_SUPER;
+- (void)scrollViewSizeDidChanged:(NSValue *)contentSize NS_REQUIRES_SUPER;
 
 @end
 

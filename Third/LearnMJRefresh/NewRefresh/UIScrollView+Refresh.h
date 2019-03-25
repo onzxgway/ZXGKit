@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIScrollView (Refresh)
 
-@property (nonatomic, strong) NewRefreshComponent *refreshView;
+@property (nonatomic, strong) NewRefreshComponent *refreshHeader;
+
+@property (nonatomic, strong) NewRefreshComponent *refreshFooter;
 
 @end
 

@@ -164,6 +164,9 @@
 		71764191204E6ABB006D3A18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71764170204E6ABB006D3A18 /* Info.plist */; };
 		71764193204E6B99006D3A18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71764192204E6B99006D3A18 /* Assets.xcassets */; };
 		8EB8A6EDB903288C5BE45EB7 /* libPods-Third.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 534CD848BDCCA385D90370C9 /* libPods-Third.a */; };
+		CCDA61EB22486FD4003941A0 /* NewRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA61EA22486FD4003941A0 /* NewRefreshFooter.m */; };
+		CCDA61EE2248701D003941A0 /* NewRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA61ED2248701D003941A0 /* NewRefreshAutoFooter.m */; };
+		CCDA61F12248A633003941A0 /* NewRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA61F02248A633003941A0 /* NewRefreshBackFooter.m */; };
 		DE4134D8BF12A11F9BD24EEC /* libPods-LearnYYKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63927FEE508B4696B7E3DB34 /* libPods-LearnYYKit.a */; };
 		DEC078ED49C9F7D5014AD879 /* libPods-LearnFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF6E6539E0762694EDCBE30 /* libPods-LearnFMDB.a */; };
 		E6CEC8F6FA7FF65D2C148F15 /* libPods-LearnDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94598D2212DEC37BFDD48EF6 /* libPods-LearnDTCoreText.a */; };
@@ -472,6 +475,12 @@
 		B12462E12599086ABA0D29DB /* Pods-LearnDTCoreText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnDTCoreText.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LearnDTCoreText/Pods-LearnDTCoreText.debug.xcconfig"; sourceTree = "<group>"; };
 		B7F6A901B4C6B1EE2484AFB8 /* Pods-SDWebimage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebimage.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage.release.xcconfig"; sourceTree = "<group>"; };
 		C6AEA0E5F5C8732B365E35D4 /* libPods-LearnMJExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnMJExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDA61E922486FD4003941A0 /* NewRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRefreshFooter.h; sourceTree = "<group>"; };
+		CCDA61EA22486FD4003941A0 /* NewRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRefreshFooter.m; sourceTree = "<group>"; };
+		CCDA61EC2248701D003941A0 /* NewRefreshAutoFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRefreshAutoFooter.h; sourceTree = "<group>"; };
+		CCDA61ED2248701D003941A0 /* NewRefreshAutoFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRefreshAutoFooter.m; sourceTree = "<group>"; };
+		CCDA61EF2248A633003941A0 /* NewRefreshBackFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRefreshBackFooter.h; sourceTree = "<group>"; };
+		CCDA61F02248A633003941A0 /* NewRefreshBackFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRefreshBackFooter.m; sourceTree = "<group>"; };
 		D750594FC610D37555E2915D /* Pods-SDWebimage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebimage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDWebimage/Pods-SDWebimage.debug.xcconfig"; sourceTree = "<group>"; };
 		E7DCCC48E1558686B3013D57 /* Pods-LearnFMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnFMDB.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB.release.xcconfig"; sourceTree = "<group>"; };
 		EAE26EF61E8F69CC3D0E8B1F /* Pods-LearnFMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnFMDB.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LearnFMDB/Pods-LearnFMDB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -873,6 +882,12 @@
 				04A22F132243262E00FB5421 /* UIView+NewRefresh.m */,
 				04F4B9FA22432C2200AFF47F /* UIScrollView+Refresh.h */,
 				04F4B9FB22432C2200AFF47F /* UIScrollView+Refresh.m */,
+				CCDA61E922486FD4003941A0 /* NewRefreshFooter.h */,
+				CCDA61EA22486FD4003941A0 /* NewRefreshFooter.m */,
+				CCDA61EC2248701D003941A0 /* NewRefreshAutoFooter.h */,
+				CCDA61ED2248701D003941A0 /* NewRefreshAutoFooter.m */,
+				CCDA61EF2248A633003941A0 /* NewRefreshBackFooter.h */,
+				CCDA61F02248A633003941A0 /* NewRefreshBackFooter.m */,
 			);
 			path = NewRefresh;
 			sourceTree = "<group>";
@@ -1749,10 +1764,12 @@
 				01B18A2E20C6269600B1B552 /* OneRefreshHeader.m in Sources */,
 				010989FA20A3E0D80041C430 /* ViewController.m in Sources */,
 				046465C220C6BE9E007C223B /* OneRefreshHeaderState.m in Sources */,
+				CCDA61EE2248701D003941A0 /* NewRefreshAutoFooter.m in Sources */,
 				010E44DE20B3F195000877B1 /* NSBundle+MJRefresh.m in Sources */,
 				0124C7A220B273D300C0BA30 /* UIScrollView+MJExtension.m in Sources */,
 				04F4B9FF22433E3600AFF47F /* NewRefreshStateHeader.m in Sources */,
 				04A31CED20CB682400968D08 /* UIScrollView+OneRefresh.m in Sources */,
+				CCDA61F12248A633003941A0 /* NewRefreshBackFooter.m in Sources */,
 				04F4B9F922432B6600AFF47F /* NewRefreshHeader.m in Sources */,
 				014D028920B8030C00E3779C /* MJRefreshNormalHeader.m in Sources */,
 				01098A0520A3E0D80041C430 /* main.m in Sources */,
@@ -1767,6 +1784,7 @@
 				012837B720BBA11E00C37918 /* UIScrollView+MJRefresh.m in Sources */,
 				01B18A2820C620D300B1B552 /* OneRefreshComponent.m in Sources */,
 				010E44DB20B3EDA8000877B1 /* IMJRefreshStateHeader.m in Sources */,
+				CCDA61EB22486FD4003941A0 /* NewRefreshFooter.m in Sources */,
 				010989F720A3E0D80041C430 /* AppDelegate.m in Sources */,
 				04A22F11224324F000FB5421 /* NewRefreshComponent.m in Sources */,
 				041ACEFA22434300000B89B7 /* NewRefreshNormalHeader.m in Sources */,
