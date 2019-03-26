@@ -8,6 +8,12 @@
 
 #import "NewRefreshComponent.h"
 
+@interface NewRefreshComponent ()
+
+@property (strong, nonatomic) UIPanGestureRecognizer *pan; // 记录拖拽手势
+
+@end
+
 @implementation NewRefreshComponent
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -21,17 +27,9 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self addSubViews];
-        
-        self.state = NRRefreshStateIdle;
-    }
-    return self;
-}
-
 - (void)addSubViews {
+    
+//    self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.backgroundColor = [UIColor redColor];
 }
 
@@ -51,18 +49,22 @@
     
     if (!newSuperview || ![newSuperview isKindOfClass:UIScrollView.class]) return;
     
-    if (self.superview) {
-        [self.superview removeObserver:self forKeyPath:@"contentOffset"];
-    }
+    //
+    [self.superview removeObserver:self forKeyPath:@"contentOffset"];
+    [self.superview removeObserver:self forKeyPath:@"contentSize"];
+    [self.pan removeObserver:self forKeyPath:@"state"];
+    self.pan = nil;
     
-    UIScrollView *scrollView = (UIScrollView *)newSuperview;
-    self.scrollView = scrollView;
-    self.originalInsets = self.scrollView.contentInset;
     
+    _scrollView = (UIScrollView *)newSuperview;
+    self.originalInsets = _scrollView.nr_inset;
+    
+    //
     NSKeyValueObservingOptions option = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
     [self.scrollView addObserver:self forKeyPath:@"contentOffset" options:option context:nil];
-    [self.scrollView.panGestureRecognizer addObserver:self forKeyPath:@"state" options:option context:nil];
     [self.scrollView addObserver:self forKeyPath:@"contentSize" options:option context:nil];
+    self.pan = self.scrollView.panGestureRecognizer;
+    [self.pan addObserver:self forKeyPath:@"state" options:option context:nil];
     
     self.nr_x = self.scrollView.bounds.origin.x;
     self.nr_w = self.scrollView.bounds.size.width;

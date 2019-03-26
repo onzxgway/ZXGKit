@@ -41,12 +41,13 @@
 }
 
 - (void)setState:(NRRefreshState)state {
+    NRRefreshState oldState = self.state;
+    if (state == oldState) return;
     [super setState:state];
     
     if (state == NRRefreshStateIdle) {
         
         [self.indicatorView stopAnimating];
-        self.indicatorView.hidden = YES;
         self.headerImg.transform = CGAffineTransformIdentity;
         [UIView animateWithDuration:0.1 animations:^{
             self.headerImg.hidden = NO;
@@ -57,19 +58,14 @@
     else if (state == NRRefreshStateRefreshing) {
         self.indicatorView.hidden = NO;
         [self.indicatorView startAnimating];
-        [UIView animateWithDuration:0.1 animations:^{
-            
-        } completion:^(BOOL finished) {
-            self.headerImg.hidden = YES;
-        }];
+        self.headerImg.hidden = YES;
     }
     else if (state == NRRefreshStatePulling) {
         self.headerImg.hidden = NO;
+        self.indicatorView.hidden = YES;
         [UIView animateWithDuration:0.1 animations:^{
             self.headerImg.transform = CGAffineTransformMakeRotation(M_PI);
         } completion:^(BOOL finished) {
-            [self.indicatorView stopAnimating];
-            self.indicatorView.hidden = YES;
         }];
     }
     
@@ -89,7 +85,7 @@
 - (UIActivityIndicatorView *)indicatorView {
     if (!_indicatorView) {
         _indicatorView = [[UIActivityIndicatorView alloc] init];
-        _indicatorView.hidden = YES;
+        _indicatorView.hidesWhenStopped = YES;
     }
     return _indicatorView;
 }

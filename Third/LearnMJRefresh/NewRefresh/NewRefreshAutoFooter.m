@@ -14,12 +14,8 @@
     [super placeSubViews];
     
     self.nr_y = self.scrollView.contentSize.height;
-
-    UIEdgeInsets inset = self.scrollView.contentInset;
-    inset.bottom += self.nr_h;
-//    UIEdgeInsets inset = self.originalInsets;
-//    inset.bottom += self.nr_h;
-    self.scrollView.contentInset = inset;
+    self.scrollView.nr_insetB += self.nr_h;
+    
 }
 
 - (void)scrollViewDidChanged:(NSValue *)contentOffset {
@@ -27,8 +23,8 @@
     
     CGFloat offsetY = [contentOffset CGPointValue].y;
     
-    if (self.scrollView.contentSize.height > self.scrollView.frame.size.height) {
-        if (self.state != NRRefreshStateRefreshing && offsetY > (self.scrollView.contentSize.height - self.scrollView.frame.size.height + self.nr_h)) {
+    if (self.scrollView.nr_contentH > self.scrollView.frame.size.height) {
+        if (self.state != NRRefreshStateRefreshing && offsetY > (self.scrollView.nr_contentH - self.scrollView.frame.size.height + self.nr_h)) {
             self.state = NRRefreshStateRefreshing;
         }
     }
@@ -38,7 +34,7 @@
 - (void)scrollViewGestureStateDidChanged:(NSNumber *)state {
     [super scrollViewGestureStateDidChanged:state];
     
-    if (self.scrollView.contentSize.height < self.scrollView.frame.size.height) {
+    if (self.scrollView.nr_contentH < self.scrollView.frame.size.height) {
         
         CGPoint point = [self.scrollView.panGestureRecognizer translationInView:self.scrollView];
         

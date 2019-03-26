@@ -128,6 +128,7 @@
 		CC4FFE2521EEC5B0008A1F7D /* GCDOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4FFE2421EEC5B0008A1F7D /* GCDOneViewController.m */; };
 		CC8D292721E72AFE0095370E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8D292621E72AFE0095370E /* Person.m */; };
 		CC9C562A2238CDD900BE271E /* KeyPoint in Resources */ = {isa = PBXBuildFile; fileRef = CC9C56292238CDD900BE271E /* KeyPoint */; };
+		CCBAFC682249C97F00CFE368 /* iOS11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBAFC672249C97F00CFE368 /* iOS11ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -348,6 +349,8 @@
 		CC8D292521E72AFE0095370E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		CC8D292621E72AFE0095370E /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		CC9C56292238CDD900BE271E /* KeyPoint */ = {isa = PBXFileReference; lastKnownFileType = text; path = KeyPoint; sourceTree = "<group>"; };
+		CCBAFC662249C97F00CFE368 /* iOS11ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11ViewController.h; sourceTree = "<group>"; };
+		CCBAFC672249C97F00CFE368 /* iOS11ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS11ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -812,6 +815,8 @@
 				04EE1D6421B0DE7D00BDB206 /* ScrollViewThree.m */,
 				04EE1D6621B0E41D00BDB206 /* SystemScrollViewController.h */,
 				04EE1D6721B0E41D00BDB206 /* SystemScrollViewController.m */,
+				CCBAFC662249C97F00CFE368 /* iOS11ViewController.h */,
+				CCBAFC672249C97F00CFE368 /* iOS11ViewController.m */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -1281,6 +1286,7 @@
 				04EE1D5621B0D28500BDB206 /* ZXGScrollView.m in Sources */,
 				04EE1D4F21B0D10A00BDB206 /* main.m in Sources */,
 				04EE1D4121B0D10900BDB206 /* AppDelegate.m in Sources */,
+				CCBAFC682249C97F00CFE368 /* iOS11ViewController.m in Sources */,
 				04EE1D6221B0DE7500BDB206 /* ScrollViewTwo.m in Sources */,
 				048D31802236105000872E70 /* CustomScrollView.m in Sources */,
 				04EE1D5F21B0DE6700BDB206 /* ScrollViewOne.m in Sources */,
@@ -1855,7 +1861,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = "ScrollView底层实现原理/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1873,7 +1879,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2B7L95AWX;
 				INFOPLIST_FILE = "ScrollView底层实现原理/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

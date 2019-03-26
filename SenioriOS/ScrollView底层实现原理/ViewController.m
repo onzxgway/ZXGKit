@@ -10,6 +10,7 @@
 #import "CustomScrollViewController.h"
 #import "TwoCustomViewController.h"
 #import "SystemScrollViewController.h"
+#import "iOS11ViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSArray *textArr;
@@ -21,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    textArr = @[@"自定义scrollView", @"自定义scrollView事件传递", @"系统的scrollView参照", @"contentInset的实际意义"];
+    textArr = @[@"自定义scrollView", @"自定义scrollView事件传递", @"系统的scrollView参照", @"contentInset的实际意义", @"iOS11"];
     
     UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     table.delegate = self;
@@ -71,6 +72,11 @@
     } else if (indexPath.row == 3) {
         
         SystemScrollViewController *viewCtrl = [[SystemScrollViewController alloc] init];
+        [self.navigationController pushViewController:viewCtrl animated:YES];
+        
+    } else if (indexPath.row == 4) {
+        
+        iOS11ViewController *viewCtrl = [[iOS11ViewController alloc] init];
         [self.navigationController pushViewController:viewCtrl animated:YES];
         
     }

@@ -20,9 +20,12 @@
 - (void)scrollViewDidChanged:(NSValue *)contentOffset {
     [super scrollViewDidChanged:contentOffset];
     
+    // 偏移量
     CGFloat offsetY = [contentOffset CGPointValue].y;
     
-    CGFloat alphaP = -offsetY / self.nr_h;
+    // 透明度
+    CGFloat alphaP = - offsetY / self.nr_h;
+    
     // 临界值
     CGFloat boundararyOffset = - self.nr_h - self.originalInsets.top;
     
@@ -31,7 +34,9 @@
         return;
     }
     
-    self.originalInsets = self.scrollView.contentInset;
+    self.originalInsets = self.scrollView.nr_inset;
+    
+    NSLog(@"__%@__", NSStringFromUIEdgeInsets(self.scrollView.contentInset));
     
     if (self.scrollView.isDragging) {
         
@@ -59,14 +64,12 @@
         if (oldState != NRRefreshStateRefreshing) return;
         
         [UIView animateWithDuration:0.1 animations:^{
-            self.scrollView.contentInset = self.originalInsets;
+            self.scrollView.nr_insetT = self.originalInsets.top;
         }];
     }
     else if (state == NRRefreshStateRefreshing) {
         [UIView animateWithDuration:0.1 animations:^{
-            UIEdgeInsets inset = self.originalInsets;
-            inset.top += self.nr_h;
-            self.scrollView.contentInset = inset;
+            self.scrollView.nr_insetT = self.nr_h + self.originalInsets.top;
         } completion:^(BOOL finished) {
             [self beginRefresh];
         }];
