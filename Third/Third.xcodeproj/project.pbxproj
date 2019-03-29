@@ -172,6 +172,15 @@
 		CC429CE62249F358003FED84 /* UIScrollView+GGRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CC429CE52249F358003FED84 /* UIScrollView+GGRefresh.m */; };
 		CC429CE92249F7FF003FED84 /* UIScrollView+GGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CC429CE82249F7FF003FED84 /* UIScrollView+GGExtension.m */; };
 		CC429CEC224A09DF003FED84 /* GGRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CC429CEB224A09DF003FED84 /* GGRefreshStateHeader.m */; };
+		CC7CDB12224C993400FD595A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CDB11224C993400FD595A /* AppDelegate.m */; };
+		CC7CDB15224C993400FD595A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CDB14224C993400FD595A /* ViewController.m */; };
+		CC7CDB18224C993400FD595A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7CDB16224C993400FD595A /* Main.storyboard */; };
+		CC7CDB1A224C993500FD595A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7CDB19224C993500FD595A /* Assets.xcassets */; };
+		CC7CDB1D224C993500FD595A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7CDB1B224C993500FD595A /* LaunchScreen.storyboard */; };
+		CC7CDB20224C993500FD595A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CDB1F224C993500FD595A /* main.m */; };
+		CC7CDB27224C9A4000FD595A /* BreakLoadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CDB26224C9A4000FD595A /* BreakLoadImageController.m */; };
+		CC7CDB2A224CB27B00FD595A /* TwoBreakLoadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CDB29224CB27B00FD595A /* TwoBreakLoadImageController.m */; };
+		CC81B40F224DED4700D6D28E /* UploadFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81B40E224DED4700D6D28E /* UploadFileController.m */; };
 		CCA9D9B3224A0F820077A499 /* GGRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9D9B2224A0F820077A499 /* GGRefreshNormalHeader.m */; };
 		CCB6C77E2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6C77D2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m */; };
 		CCDA61EB22486FD4003941A0 /* NewRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA61EA22486FD4003941A0 /* NewRefreshFooter.m */; };
@@ -503,6 +512,22 @@
 		CC429CE82249F7FF003FED84 /* UIScrollView+GGExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GGExtension.m"; sourceTree = "<group>"; };
 		CC429CEA224A09DF003FED84 /* GGRefreshStateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGRefreshStateHeader.h; sourceTree = "<group>"; };
 		CC429CEB224A09DF003FED84 /* GGRefreshStateHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRefreshStateHeader.m; sourceTree = "<group>"; };
+		CC7CDB0E224C993300FD595A /* LearnAFN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnAFN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7CDB10224C993400FD595A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC7CDB11224C993400FD595A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC7CDB13224C993400FD595A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC7CDB14224C993400FD595A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CC7CDB17224C993400FD595A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC7CDB19224C993500FD595A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC7CDB1C224C993500FD595A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC7CDB1E224C993500FD595A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7CDB1F224C993500FD595A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC7CDB25224C9A4000FD595A /* BreakLoadImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreakLoadImageController.h; sourceTree = "<group>"; };
+		CC7CDB26224C9A4000FD595A /* BreakLoadImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreakLoadImageController.m; sourceTree = "<group>"; };
+		CC7CDB28224CB27B00FD595A /* TwoBreakLoadImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoBreakLoadImageController.h; sourceTree = "<group>"; };
+		CC7CDB29224CB27B00FD595A /* TwoBreakLoadImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoBreakLoadImageController.m; sourceTree = "<group>"; };
+		CC81B40D224DED4700D6D28E /* UploadFileController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadFileController.h; sourceTree = "<group>"; };
+		CC81B40E224DED4700D6D28E /* UploadFileController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadFileController.m; sourceTree = "<group>"; };
 		CCA9D9B1224A0F820077A499 /* GGRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGRefreshNormalHeader.h; sourceTree = "<group>"; };
 		CCA9D9B2224A0F820077A499 /* GGRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRefreshNormalHeader.m; sourceTree = "<group>"; };
 		CCB6C77C2248C55200BC5BF5 /* NewRefreshAutoStateFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRefreshAutoStateFooter.h; sourceTree = "<group>"; };
@@ -592,6 +617,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EB8A6EDB903288C5BE45EB7 /* libPods-Third.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7CDB0B224C993300FD595A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,6 +1147,7 @@
 				01F0BE0A20C4E23000D96C63 /* LearnMasonry */,
 				01694DA220D25FFC0029783F /* LearnIQKeyBoardManager */,
 				0187A13220F36825004A5F9D /* LearnDTCoreText */,
+				CC7CDB0F224C993400FD595A /* LearnAFN */,
 				71DDFCFB20468F90002B54D8 /* Products */,
 				378122F29E919E62AC4265DB /* Pods */,
 				043A97B6894260887FC53591 /* Frameworks */,
@@ -1133,6 +1166,7 @@
 				01F0BE0920C4E22F00D96C63 /* LearnMasonry.app */,
 				01694DA120D25FFC0029783F /* LearnIQKeyBoardManager.app */,
 				0187A13120F36825004A5F9D /* LearnDTCoreText.app */,
+				CC7CDB0E224C993300FD595A /* LearnAFN.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1202,6 +1236,44 @@
 				CC429CE82249F7FF003FED84 /* UIScrollView+GGExtension.m */,
 			);
 			path = category;
+			sourceTree = "<group>";
+		};
+		CC7CDB0F224C993400FD595A /* LearnAFN */ = {
+			isa = PBXGroup;
+			children = (
+				CC81B40C224DECF900D6D28E /* Upload */,
+				CC7CDB24224C9A1100FD595A /* breakPointDownload */,
+				CC7CDB10224C993400FD595A /* AppDelegate.h */,
+				CC7CDB11224C993400FD595A /* AppDelegate.m */,
+				CC7CDB13224C993400FD595A /* ViewController.h */,
+				CC7CDB14224C993400FD595A /* ViewController.m */,
+				CC7CDB16224C993400FD595A /* Main.storyboard */,
+				CC7CDB19224C993500FD595A /* Assets.xcassets */,
+				CC7CDB1B224C993500FD595A /* LaunchScreen.storyboard */,
+				CC7CDB1E224C993500FD595A /* Info.plist */,
+				CC7CDB1F224C993500FD595A /* main.m */,
+			);
+			path = LearnAFN;
+			sourceTree = "<group>";
+		};
+		CC7CDB24224C9A1100FD595A /* breakPointDownload */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CDB25224C9A4000FD595A /* BreakLoadImageController.h */,
+				CC7CDB26224C9A4000FD595A /* BreakLoadImageController.m */,
+				CC7CDB28224CB27B00FD595A /* TwoBreakLoadImageController.h */,
+				CC7CDB29224CB27B00FD595A /* TwoBreakLoadImageController.m */,
+			);
+			path = breakPointDownload;
+			sourceTree = "<group>";
+		};
+		CC81B40C224DECF900D6D28E /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				CC81B40D224DED4700D6D28E /* UploadFileController.h */,
+				CC81B40E224DED4700D6D28E /* UploadFileController.m */,
+			);
+			path = Upload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1376,6 +1448,23 @@
 			productReference = 71DDFCFA20468F90002B54D8 /* Third.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CC7CDB0D224C993300FD595A /* LearnAFN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC7CDB23224C993500FD595A /* Build configuration list for PBXNativeTarget "LearnAFN" */;
+			buildPhases = (
+				CC7CDB0A224C993300FD595A /* Sources */,
+				CC7CDB0B224C993300FD595A /* Frameworks */,
+				CC7CDB0C224C993300FD595A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnAFN;
+			productName = LearnAFN;
+			productReference = CC7CDB0E224C993300FD595A /* LearnAFN.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1422,6 +1511,10 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					CC7CDB0D224C993300FD595A = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 71DDFCF520468F90002B54D8 /* Build configuration list for PBXProject "Third" */;
@@ -1446,6 +1539,7 @@
 				01F0BE0820C4E22F00D96C63 /* LearnMasonry */,
 				01694DA020D25FFC0029783F /* LearnIQKeyBoardManager */,
 				0187A13020F36825004A5F9D /* LearnDTCoreText */,
+				CC7CDB0D224C993300FD595A /* LearnAFN */,
 			);
 		};
 /* End PBXProject section */
@@ -1546,6 +1640,16 @@
 				717640F9204E6991006D3A18 /* Assets.xcassets in Resources */,
 				717640F7204E6991006D3A18 /* Info.plist in Resources */,
 				717640FF204E69A9006D3A18 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7CDB0C224C993300FD595A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC7CDB1D224C993500FD595A /* LaunchScreen.storyboard in Resources */,
+				CC7CDB1A224C993500FD595A /* Assets.xcassets in Resources */,
+				CC7CDB18224C993400FD595A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2038,6 +2142,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC7CDB0A224C993300FD595A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC81B40F224DED4700D6D28E /* UploadFileController.m in Sources */,
+				CC7CDB15224C993400FD595A /* ViewController.m in Sources */,
+				CC7CDB2A224CB27B00FD595A /* TwoBreakLoadImageController.m in Sources */,
+				CC7CDB27224C9A4000FD595A /* BreakLoadImageController.m in Sources */,
+				CC7CDB20224C993500FD595A /* main.m in Sources */,
+				CC7CDB12224C993400FD595A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -2167,6 +2284,22 @@
 				71764125204E6A7C006D3A18 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7CDB16224C993400FD595A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7CDB17224C993400FD595A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7CDB1B224C993500FD595A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7CDB1C224C993500FD595A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -2613,6 +2746,50 @@
 			};
 			name = Release;
 		};
+		CC7CDB21224C993500FD595A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = LearnAFN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.LearnAFN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC7CDB22224C993500FD595A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = LearnAFN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.LearnAFN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2702,6 +2879,15 @@
 			buildConfigurations = (
 				71DDFD0C20468F90002B54D8 /* Debug */,
 				71DDFD0D20468F90002B54D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC7CDB23224C993500FD595A /* Build configuration list for PBXNativeTarget "LearnAFN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7CDB21224C993500FD595A /* Debug */,
+				CC7CDB22224C993500FD595A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
