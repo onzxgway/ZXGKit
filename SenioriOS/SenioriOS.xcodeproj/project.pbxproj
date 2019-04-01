@@ -126,9 +126,22 @@
 		CC4FBDA92239F5C1009694D4 /* AnswerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4FBDA82239F5C1009694D4 /* AnswerController.m */; };
 		CC4FBDAB223A1DDA009694D4 /* ResponderChain.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4FBDAA223A1DDA009694D4 /* ResponderChain.png */; };
 		CC4FFE2521EEC5B0008A1F7D /* GCDOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4FFE2421EEC5B0008A1F7D /* GCDOneViewController.m */; };
+		CC7A6CE42251B46B000DDA3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A6CE32251B46B000DDA3B /* AppDelegate.m */; };
+		CC7A6CE72251B46B000DDA3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A6CE62251B46B000DDA3B /* ViewController.m */; };
+		CC7A6CEA2251B46B000DDA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7A6CE82251B46B000DDA3B /* Main.storyboard */; };
+		CC7A6CEC2251B46C000DDA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7A6CEB2251B46C000DDA3B /* Assets.xcassets */; };
+		CC7A6CEF2251B46C000DDA3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7A6CED2251B46C000DDA3B /* LaunchScreen.storyboard */; };
+		CC7A6CF22251B46C000DDA3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A6CF12251B46C000DDA3B /* main.m */; };
+		CC7A6CF82251B581000DDA3B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A6CF72251B581000DDA3B /* CollectionViewController.m */; };
 		CC8D292721E72AFE0095370E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8D292621E72AFE0095370E /* Person.m */; };
 		CC9C562A2238CDD900BE271E /* KeyPoint in Resources */ = {isa = PBXBuildFile; fileRef = CC9C56292238CDD900BE271E /* KeyPoint */; };
 		CCBAFC682249C97F00CFE368 /* iOS11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBAFC672249C97F00CFE368 /* iOS11ViewController.m */; };
+		CCE2E2152251BB9400111944 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE2E2132251BB9400111944 /* CollectionViewCell.m */; };
+		CCE2E2162251BB9400111944 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCE2E2142251BB9400111944 /* CollectionViewCell.xib */; };
+		CCE2E21D2251BE2800111944 /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE2E21B2251BE2800111944 /* CollectionReusableView.m */; };
+		CCE2E21E2251BE2800111944 /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCE2E21C2251BE2800111944 /* CollectionReusableView.xib */; };
+		CCE2E2212251D70E00111944 /* CascadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE2E2202251D70E00111944 /* CascadeViewController.m */; };
+		CCE2E2242251D8CD00111944 /* CollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE2E2232251D8CD00111944 /* CollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -346,11 +359,33 @@
 		CC4FBDAA223A1DDA009694D4 /* ResponderChain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResponderChain.png; sourceTree = "<group>"; };
 		CC4FFE2321EEC5B0008A1F7D /* GCDOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDOneViewController.h; sourceTree = "<group>"; };
 		CC4FFE2421EEC5B0008A1F7D /* GCDOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDOneViewController.m; sourceTree = "<group>"; };
+		CC7A6CE02251B46B000DDA3B /* UICollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7A6CE22251B46B000DDA3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC7A6CE32251B46B000DDA3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC7A6CE52251B46B000DDA3B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC7A6CE62251B46B000DDA3B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CC7A6CE92251B46B000DDA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC7A6CEB2251B46C000DDA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC7A6CEE2251B46C000DDA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC7A6CF02251B46C000DDA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7A6CF12251B46C000DDA3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC7A6CF62251B581000DDA3B /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		CC7A6CF72251B581000DDA3B /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		CC8D292521E72AFE0095370E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		CC8D292621E72AFE0095370E /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		CC9C56292238CDD900BE271E /* KeyPoint */ = {isa = PBXFileReference; lastKnownFileType = text; path = KeyPoint; sourceTree = "<group>"; };
 		CCBAFC662249C97F00CFE368 /* iOS11ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS11ViewController.h; sourceTree = "<group>"; };
 		CCBAFC672249C97F00CFE368 /* iOS11ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS11ViewController.m; sourceTree = "<group>"; };
+		CCE2E2122251BB9400111944 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		CCE2E2132251BB9400111944 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		CCE2E2142251BB9400111944 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		CCE2E21A2251BE2800111944 /* CollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionReusableView.h; sourceTree = "<group>"; };
+		CCE2E21B2251BE2800111944 /* CollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableView.m; sourceTree = "<group>"; };
+		CCE2E21C2251BE2800111944 /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
+		CCE2E21F2251D70E00111944 /* CascadeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CascadeViewController.h; sourceTree = "<group>"; };
+		CCE2E2202251D70E00111944 /* CascadeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CascadeViewController.m; sourceTree = "<group>"; };
+		CCE2E2222251D8CD00111944 /* CollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewLayout.h; sourceTree = "<group>"; };
+		CCE2E2232251D8CD00111944 /* CollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +446,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04EE1D3A21B0D10900BDB206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7A6CDD2251B46B000DDA3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -531,6 +573,7 @@
 				04E8A76D21AF7D40005173E5 /* 京东商品详情 */,
 				04EE1D3E21B0D10900BDB206 /* ScrollView底层实现原理 */,
 				04B9B9FB21B6193500238640 /* TableView原理 */,
+				CC7A6CE12251B46B000DDA3B /* UICollectionView */,
 				045E403F21E585E100876999 /* Thread */,
 				0459BAE921749AAD00DFB547 /* Products */,
 			);
@@ -548,6 +591,7 @@
 				04EE1D3D21B0D10900BDB206 /* ScrollView底层实现原理.app */,
 				04B9B9FA21B6193500238640 /* TableView原理.app */,
 				045E403E21E585E100876999 /* Thread.app */,
+				CC7A6CE02251B46B000DDA3B /* UICollectionView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -821,6 +865,34 @@
 			path = Container;
 			sourceTree = "<group>";
 		};
+		CC7A6CE12251B46B000DDA3B /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A6CE22251B46B000DDA3B /* AppDelegate.h */,
+				CC7A6CE32251B46B000DDA3B /* AppDelegate.m */,
+				CC7A6CE52251B46B000DDA3B /* ViewController.h */,
+				CC7A6CE62251B46B000DDA3B /* ViewController.m */,
+				CC7A6CE82251B46B000DDA3B /* Main.storyboard */,
+				CC7A6CF62251B581000DDA3B /* CollectionViewController.h */,
+				CC7A6CF72251B581000DDA3B /* CollectionViewController.m */,
+				CCE2E21F2251D70E00111944 /* CascadeViewController.h */,
+				CCE2E2202251D70E00111944 /* CascadeViewController.m */,
+				CCE2E2222251D8CD00111944 /* CollectionViewLayout.h */,
+				CCE2E2232251D8CD00111944 /* CollectionViewLayout.m */,
+				CCE2E2122251BB9400111944 /* CollectionViewCell.h */,
+				CCE2E2132251BB9400111944 /* CollectionViewCell.m */,
+				CCE2E2142251BB9400111944 /* CollectionViewCell.xib */,
+				CCE2E21A2251BE2800111944 /* CollectionReusableView.h */,
+				CCE2E21B2251BE2800111944 /* CollectionReusableView.m */,
+				CCE2E21C2251BE2800111944 /* CollectionReusableView.xib */,
+				CC7A6CEB2251B46C000DDA3B /* Assets.xcassets */,
+				CC7A6CED2251B46C000DDA3B /* LaunchScreen.storyboard */,
+				CC7A6CF02251B46C000DDA3B /* Info.plist */,
+				CC7A6CF12251B46C000DDA3B /* main.m */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -977,6 +1049,23 @@
 			productReference = 04EE1D3D21B0D10900BDB206 /* ScrollView底层实现原理.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CC7A6CDF2251B46B000DDA3B /* UICollectionView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC7A6CF52251B46C000DDA3B /* Build configuration list for PBXNativeTarget "UICollectionView" */;
+			buildPhases = (
+				CC7A6CDC2251B46B000DDA3B /* Sources */,
+				CC7A6CDD2251B46B000DDA3B /* Frameworks */,
+				CC7A6CDE2251B46B000DDA3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UICollectionView;
+			productName = UICollectionView;
+			productReference = CC7A6CE02251B46B000DDA3B /* UICollectionView.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1013,6 +1102,9 @@
 					04EE1D3C21B0D10900BDB206 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					CC7A6CDF2251B46B000DDA3B = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 0459BAE321749AAD00DFB547 /* Build configuration list for PBXProject "SenioriOS" */;
@@ -1037,6 +1129,7 @@
 				04EE1D3C21B0D10900BDB206 /* ScrollView底层实现原理 */,
 				04B9B9F921B6193500238640 /* TableView原理 */,
 				045E403D21E585E100876999 /* Thread */,
+				CC7A6CDF2251B46B000DDA3B /* UICollectionView */,
 			);
 		};
 /* End PBXProject section */
@@ -1137,6 +1230,18 @@
 				04EE1D4C21B0D10A00BDB206 /* LaunchScreen.storyboard in Resources */,
 				04EE1D4921B0D10A00BDB206 /* Assets.xcassets in Resources */,
 				04EE1D4721B0D10900BDB206 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7A6CDE2251B46B000DDA3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE2E21E2251BE2800111944 /* CollectionReusableView.xib in Resources */,
+				CC7A6CEF2251B46C000DDA3B /* LaunchScreen.storyboard in Resources */,
+				CC7A6CEC2251B46C000DDA3B /* Assets.xcassets in Resources */,
+				CCE2E2162251BB9400111944 /* CollectionViewCell.xib in Resources */,
+				CC7A6CEA2251B46B000DDA3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1293,6 +1398,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC7A6CDC2251B46B000DDA3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC7A6CF82251B581000DDA3B /* CollectionViewController.m in Sources */,
+				CCE2E2152251BB9400111944 /* CollectionViewCell.m in Sources */,
+				CC7A6CE72251B46B000DDA3B /* ViewController.m in Sources */,
+				CC7A6CF22251B46C000DDA3B /* main.m in Sources */,
+				CC7A6CE42251B46B000DDA3B /* AppDelegate.m in Sources */,
+				CCE2E2212251D70E00111944 /* CascadeViewController.m in Sources */,
+				CCE2E2242251D8CD00111944 /* CollectionViewLayout.m in Sources */,
+				CCE2E21D2251BE2800111944 /* CollectionReusableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -1436,6 +1556,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				04EE1D4B21B0D10A00BDB206 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7A6CE82251B46B000DDA3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7A6CE92251B46B000DDA3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7A6CED2251B46C000DDA3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7A6CEE2251B46C000DDA3B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1890,6 +2026,42 @@
 			};
 			name = Release;
 		};
+		CC7A6CF32251B46C000DDA3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = UICollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.UICollectionView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC7A6CF42251B46C000DDA3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2B7L95AWX;
+				INFOPLIST_FILE = UICollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxg.UICollectionView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1979,6 +2151,15 @@
 			buildConfigurations = (
 				04EE1D5021B0D10A00BDB206 /* Debug */,
 				04EE1D5121B0D10A00BDB206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC7A6CF52251B46C000DDA3B /* Build configuration list for PBXNativeTarget "UICollectionView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7A6CF32251B46C000DDA3B /* Debug */,
+				CC7A6CF42251B46C000DDA3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
