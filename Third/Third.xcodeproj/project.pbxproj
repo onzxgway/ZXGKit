@@ -172,6 +172,7 @@
 		CC429CE62249F358003FED84 /* UIScrollView+GGRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CC429CE52249F358003FED84 /* UIScrollView+GGRefresh.m */; };
 		CC429CE92249F7FF003FED84 /* UIScrollView+GGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CC429CE82249F7FF003FED84 /* UIScrollView+GGExtension.m */; };
 		CC429CEC224A09DF003FED84 /* GGRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CC429CEB224A09DF003FED84 /* GGRefreshStateHeader.m */; };
+		CC5FE5B32253514600ADD83A /* InputStreamController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE5B22253514600ADD83A /* InputStreamController.m */; };
 		CC7CDB12224C993400FD595A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CDB11224C993400FD595A /* AppDelegate.m */; };
 		CC7CDB15224C993400FD595A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7CDB14224C993400FD595A /* ViewController.m */; };
 		CC7CDB18224C993400FD595A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7CDB16224C993400FD595A /* Main.storyboard */; };
@@ -512,6 +513,8 @@
 		CC429CE82249F7FF003FED84 /* UIScrollView+GGExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GGExtension.m"; sourceTree = "<group>"; };
 		CC429CEA224A09DF003FED84 /* GGRefreshStateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGRefreshStateHeader.h; sourceTree = "<group>"; };
 		CC429CEB224A09DF003FED84 /* GGRefreshStateHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRefreshStateHeader.m; sourceTree = "<group>"; };
+		CC5FE5B12253514600ADD83A /* InputStreamController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputStreamController.h; sourceTree = "<group>"; };
+		CC5FE5B22253514600ADD83A /* InputStreamController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputStreamController.m; sourceTree = "<group>"; };
 		CC7CDB0E224C993300FD595A /* LearnAFN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnAFN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7CDB10224C993400FD595A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC7CDB11224C993400FD595A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1238,9 +1241,19 @@
 			path = category;
 			sourceTree = "<group>";
 		};
+		CC5FE5B02253512800ADD83A /* inputStream */ = {
+			isa = PBXGroup;
+			children = (
+				CC5FE5B12253514600ADD83A /* InputStreamController.h */,
+				CC5FE5B22253514600ADD83A /* InputStreamController.m */,
+			);
+			path = inputStream;
+			sourceTree = "<group>";
+		};
 		CC7CDB0F224C993400FD595A /* LearnAFN */ = {
 			isa = PBXGroup;
 			children = (
+				CC5FE5B02253512800ADD83A /* inputStream */,
 				CC81B40C224DECF900D6D28E /* Upload */,
 				CC7CDB24224C9A1100FD595A /* breakPointDownload */,
 				CC7CDB10224C993400FD595A /* AppDelegate.h */,
@@ -2146,6 +2159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5FE5B32253514600ADD83A /* InputStreamController.m in Sources */,
 				CC81B40F224DED4700D6D28E /* UploadFileController.m in Sources */,
 				CC7CDB15224C993400FD595A /* ViewController.m in Sources */,
 				CC7CDB2A224CB27B00FD595A /* TwoBreakLoadImageController.m in Sources */,

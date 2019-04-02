@@ -10,6 +10,7 @@
 #import "BreakLoadImageController.h"
 #import "TwoBreakLoadImageController.h"
 #import "UploadFileController.h"
+#import "InputStreamController.h"
 
 @interface ViewController ()
 
@@ -25,7 +26,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    BreakLoadImageController *ctrl = [BreakLoadImageController new];
 //    TwoBreakLoadImageController *ctrl = [TwoBreakLoadImageController new];
-    UploadFileController *ctrl = [UploadFileController new];
+//    UploadFileController *ctrl = [UploadFileController new];
+    InputStreamController *ctrl = [InputStreamController new];
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
