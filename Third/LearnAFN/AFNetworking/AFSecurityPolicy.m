@@ -24,6 +24,7 @@
 #import <AssertMacros.h>
 
 #if !TARGET_OS_IOS && !TARGET_OS_WATCH && !TARGET_OS_TV
+// SecKeyRef转为NSData
 static NSData * AFSecKeyGetData(SecKeyRef key) {
     CFDataRef data = NULL;
 
@@ -40,6 +41,7 @@ _out:
 }
 #endif
 
+// 这个方法是比较两个key是否相等，如果是ios/watch/tv直接使用isEqual方法就可进行比较。因为SecKeyRef本质上是一个struct，是不能直接用isEqual比较的，正好使用上边的那个方法把它转为NSData就可以了。
 static BOOL AFSecKeyIsEqualToKey(SecKeyRef key1, SecKeyRef key2) {
 #if TARGET_OS_IOS || TARGET_OS_WATCH || TARGET_OS_TV
     return [(__bridge id)key1 isEqual:(__bridge id)key2];
@@ -48,6 +50,28 @@ static BOOL AFSecKeyIsEqualToKey(SecKeyRef key1, SecKeyRef key2) {
 #endif
 }
 
+// 在证书中获取公钥
+/**
+ 在二进制的文件中获取公钥的过程是这样
+ 
+ ① NSData *certificate -> CFDataRef -> (SecCertificateCreateWithData) -> SecCertificateRef allowedCertificate
+ 
+ ②判断SecCertificateRef allowedCertificate 是不是空，如果为空，直接跳转到后边的代码
+ 
+ ③allowedCertificate 保存在allowedCertificates数组中
+ 
+ ④allowedCertificates -> (CFArrayCreate) -> SecCertificateRef allowedCertificates[1]
+ 
+ ⑤根据函数SecPolicyCreateBasicX509() -> SecPolicyRef policy
+ 
+ ⑥SecTrustCreateWithCertificates(tempCertificates, policy, &allowedTrust) -> 生成SecTrustRef allowedTrust
+ 
+ ⑦SecTrustEvaluate(allowedTrust, &result) 校验证书
+ 
+ ⑧(__bridge_transfer id)SecTrustCopyPublicKey(allowedTrust) -> 得到公钥id allowedPublicKey
+ 
+ 这个过程我们平时也不怎么用，了解下就行了，真需要的时候知道去哪里找资料就行了。
+ */
 static id AFPublicKeyForCertificate(NSData *certificate) {
     id allowedPublicKey = nil;
     SecCertificateRef allowedCertificate;
@@ -55,13 +79,28 @@ static id AFPublicKeyForCertificate(NSData *certificate) {
     SecTrustRef allowedTrust = nil;
     SecTrustResultType result;
 
+    // 1. 根据二进制的certificate生成SecCertificateRef类型的证书
+    // NSData *certificate 通过CoreFoundation (__bridge CFDataRef)转换成 CFDataRef
+    // 看下边的这个方法就可以知道需要传递参数的类型
+   /*
+     SecCertificateRef SecCertificateCreateWithData(CFAllocatorRef __nullable allocator,
+     CFDataRef data) __OSX_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_2_0);
+    */
     allowedCertificate = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)certificate);
+    
+    // 2.如果allowedCertificate为空，则执行标记_out后边的代码
     __Require_Quiet(allowedCertificate != NULL, _out);
-
+    
+    // 3.新建policy为X.509
     policy = SecPolicyCreateBasicX509();
+    
+    // 4.创建SecTrustRef对象，如果出错就跳到_out标记处
     __Require_noErr_Quiet(SecTrustCreateWithCertificates(allowedCertificate, policy, &allowedTrust), _out);
+    
+    // 5.校验证书的过程，这个不是异步的。
     __Require_noErr_Quiet(SecTrustEvaluate(allowedTrust, &result), _out);
 
+    // 6.在SecTrustRef对象中取出公钥
     allowedPublicKey = (__bridge_transfer id)SecTrustCopyPublicKey(allowedTrust);
 
 _out:
@@ -80,17 +119,31 @@ _out:
     return allowedPublicKey;
 }
 
+// 返回服务器是否是可信任的
 static BOOL AFServerTrustIsValid(SecTrustRef serverTrust) {
     BOOL isValid = NO;
     SecTrustResultType result;
+    // 这个方法会把结果赋值给result    评估／判定（根据策略，如果policy是通过domain生成的，则是域名相关policy验证）
     __Require_noErr_Quiet(SecTrustEvaluate(serverTrust, &result), _out);
-
+    //kSecTrustResultUnspecified：不是自己设的证书的通过
+    //kSecTrustResultProceed：用户自己生成证书通过
+    /*
+     大概意思是分两种方式：下边的自定义的意思是，用户是否是自己主动设置信任的，比如有些弹窗，用户点击了信任
+     1.用户自定义的，成功是 kSecTrustResultProceed 失败是kSecTrustResultDeny
+     2.非用户定义的， 成功是kSecTrustResultUnspecified 失败是kSecTrustResultRecoverableTrustFailure
+     */
     isValid = (result == kSecTrustResultUnspecified || result == kSecTrustResultProceed);
 
 _out:
     return isValid;
 }
 
+// 取出服务器返回的所有证书
+/*
+ 举个例子，在这里我们知道SecTrustRef serverTrust 这个参数
+ 按照苹果api设计的风格，我们一定能在SectrustRef获取到我们需要的信息
+ 所以仔细看下边的代码， 需要的信息也都是SecTrustRef提供的函数获取的
+ */
 static NSArray * AFCertificateTrustChainForServerTrust(SecTrustRef serverTrust) {
     CFIndex certificateCount = SecTrustGetCertificateCount(serverTrust);
     NSMutableArray *trustChain = [NSMutableArray arrayWithCapacity:(NSUInteger)certificateCount];
@@ -103,6 +156,7 @@ static NSArray * AFCertificateTrustChainForServerTrust(SecTrustRef serverTrust) 
     return [NSArray arrayWithArray:trustChain];
 }
 
+// 取出服务器返回的所有证书中的公钥
 static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
     SecPolicyRef policy = SecPolicyCreateBasicX509();
     CFIndex certificateCount = SecTrustGetCertificateCount(serverTrust);
@@ -219,10 +273,12 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
 }
 
 #pragma mark -
-
+// 核心方法
+// 当服务器响应提出进行证书验证时，此方法将会被调用。然后app根据之前设置的验证策略来进行判断验证是否通过。
 - (BOOL)evaluateServerTrust:(SecTrustRef)serverTrust
                   forDomain:(NSString *)domain
 {
+    // 当使用自建证书验证域名时，需要使用AFSSLPinningModePublicKey或者AFSSLPinningModeCertificate进行验证
     if (domain && self.allowInvalidCertificates && self.validatesDomainName && (self.SSLPinningMode == AFSSLPinningModeNone || [self.pinnedCertificates count] == 0)) {
         // https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NetworkingTopics/Articles/OverridingSSLChainValidationCorrectly.html
         //  According to the docs, you should only trust your provided certs for evaluation.
@@ -237,35 +293,57 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
     }
 
     NSMutableArray *policies = [NSMutableArray array];
+    // 需要验证域名时，需要添加一个验证域名的策略 SecPolicyRef
     if (self.validatesDomainName) {
         [policies addObject:(__bridge_transfer id)SecPolicyCreateSSL(true, (__bridge CFStringRef)domain)];
     } else {
         [policies addObject:(__bridge_transfer id)SecPolicyCreateBasicX509()];
     }
 
+    // 设置验证的策略
     SecTrustSetPolicies(serverTrust, (__bridge CFArrayRef)policies);
 
     if (self.SSLPinningMode == AFSSLPinningModeNone) {
+        // SSLPinningMode为AFSSLPinningModeNone时，allowInvalidCertificates为YES，则代表服务器任何证书都能验证通过； 如果它为NO，则需要判断此服务器证书是否是系统信任的证书
         return self.allowInvalidCertificates || AFServerTrustIsValid(serverTrust);
     } else if (!AFServerTrustIsValid(serverTrust) && !self.allowInvalidCertificates) {
         return NO;
     }
 
+    /*
+     代码能够走到这里说明了
+     1 全部信任：allowInvalidCertificates = YES 或者 域名是对的 信任
+     2 通过了根证书的验证（AFServerTrustIsValid）
+     */
+    
+    // 1 获取验证策略的数据  2 设置策略  3 验证
+    
     switch (self.SSLPinningMode) {
-        case AFSSLPinningModeCertificate: {
+        case AFSSLPinningModeCertificate: { // 全部校验
+            
+            /*
+             self.pinnedCertificates
+             取本地证书文件.cer，转化成NSData类型
+             */
             NSMutableArray *pinnedCertificates = [NSMutableArray array];
             for (NSData *certificateData in self.pinnedCertificates) {
-                [pinnedCertificates addObject:(__bridge_transfer id)SecCertificateCreateWithData(NULL, (__bridge CFDataRef)certificateData)];
+                [pinnedCertificates addObject:(__bridge_transfer id)SecCertificateCreateWithData(NULL, (__bridge CFDataRef)certificateData)];// 根据data生成证书对象
             }
+            
+            /*
+             给serverTrust设置锚证书，即再SecTrustEvaluate评估过程中，会根据锚(pinnedCertificates)来进行验证
+             */
             SecTrustSetAnchorCertificates(serverTrust, (__bridge CFArrayRef)pinnedCertificates);
 
+            // 校验能够信任
             if (!AFServerTrustIsValid(serverTrust)) {
                 return NO;
             }
 
             // obtain the chain after being validated, which *should* contain the pinned certificate in the last position (if it's the Root CA)
+            // 从serverTrust评估信任的证书链中获取的证书（AFServerTrustIsValid后再次验证）
             NSArray *serverCertificates = AFCertificateTrustChainForServerTrust(serverTrust);
-            
+            // 判断本地证书和服务器证书是否相同
             for (NSData *trustChainCertificate in [serverCertificates reverseObjectEnumerator]) {
                 if ([self.pinnedCertificates containsObject:trustChainCertificate]) {
                     return YES;
@@ -274,10 +352,11 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
             
             return NO;
         }
-        case AFSSLPinningModePublicKey: {
+            case AFSSLPinningModePublicKey: {
             NSUInteger trustedPublicKeyCount = 0;
-            NSArray *publicKeys = AFPublicKeyTrustChainForServerTrust(serverTrust);
-
+            // AFSSLPinningModePublicKey是通过比较证书当中公钥(PublicKey)部分来进行验证，通过SecTrustCopyPublicKey方法获取本地证书和服务器证书，然后进行比较，如果有一个相同，则通过验证
+            NSArray *publicKeys = AFPublicKeyTrustChainForServerTrust(serverTrust);// 从证书中拿公钥数据
+            // 找到相同的公钥就通过
             for (id trustChainPublicKey in publicKeys) {
                 for (id pinnedPublicKey in self.pinnedPublicKeys) {
                     if (AFSecKeyIsEqualToKey((__bridge SecKeyRef)trustChainPublicKey, (__bridge SecKeyRef)pinnedPublicKey)) {
