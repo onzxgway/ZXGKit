@@ -26,8 +26,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    BreakLoadImageController *ctrl = [BreakLoadImageController new];
 //    TwoBreakLoadImageController *ctrl = [TwoBreakLoadImageController new];
-//    UploadFileController *ctrl = [UploadFileController new];
-    InputStreamController *ctrl = [InputStreamController new];
+    UploadFileController *ctrl = [UploadFileController new];
+//    InputStreamController *ctrl = [InputStreamController new];
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 

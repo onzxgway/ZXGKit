@@ -20,8 +20,93 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self uploadImage];
+    [self uploadImageAFN];
 }
+
+// 文件上传
+/**
+ AFN封装了原生网络，核心与原生网络请求流程一样。
+ */
+
+/**
+ AFN上传图片的一个完整POST请求：
+   请求头部分
+                                POST /themes/jianmo/img/upload.php HTTP/1.1
+                Host            www.8pmedu.com
+                Content-Type    multipart/form-data; boundary=Boundary+B5E2625CEF6EC7F4
+                Accept          * / *
+                User-Agent      LearnAFN/1.0 (iPhone; iOS 12.1; Scale/2.00)
+                Accept-Language en;q=1
+                Content-Length  262453
+                Accept-Encoding gzip, deflate
+                Connection      keep-alive
+   请求体部分
+                --Boundary+B5E2625CEF6EC7F4
+                Content-Disposition: form-data; name="image"
+               
+                PNG;��^3����)or�!�.st�n��x(+9'���...
+                --Boundary+B5E2625CEF6EC7F4--
+ */
+
+/**
+ AFN带参数上传图片的一个完整POST请求：
+    请求头部分
+                         POST /themes/jianmo/img/upload.php HTTP/1.1
+         Host            www.8pmedu.com
+         Content-Type    multipart/form-data; boundary=Boundary+28FBA24634750C95
+         Accept          * / *
+         User-Agent      LearnAFN/1.0 (iPhone; iOS 12.1; Scale/2.00)
+         Accept-Language en;q=1
+         Content-Length  262617
+         Accept-Encoding gzip, deflate
+         Connection      keep-alive
+ 请求体部分
+         --Boundary+28FBA24634750C95
+         Content-Disposition: form-data; name="kind"
+ 
+         image
+         --Boundary+28FBA24634750C95
+         Content-Disposition: form-data; name="number"
+ 
+         1
+         --Boundary+28FBA24634750C95
+         Content-Disposition: form-data; name="image"
+ 
+         PNG;��^3����)or�!�.st�n��x(+9'���...
+         --Boundary+28FBA24634750C95--
+ */
+
+/**
+    请求体由三个部分组成：
+        1.初始和结束边界 2.属性 3.文件数据
+*/
+- (void)uploadImageAFN {
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"text/html", nil]];
+    [manager POST:UploadImageURL parameters:@{@"kind" : @"image", @"number" : @"1"} headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        // formData可以是这 NSData NSURL NSInputStream 三种类型
+        UIImage *image = [UIImage imageNamed:@"1"];
+        NSData *imageData = UIImagePNGRepresentation(image);
+        [formData appendPartWithFormData:imageData name:@"image"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        NSLog(@"—%lld-%lld-", uploadProgress.totalUnitCount, uploadProgress.completedUnitCount);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"success");
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"failure: %@", error.localizedDescription);
+    }];
+    
+}
+
+/**
+    原生网络请求流程：
+
+    1.创建 NSURLRequest 实例。
+    2.创建 NSURLSession 实例。
+    3.创建 NSURLSessionTask 实例。
+    4.NSURLSessionTask 实例 开始。
+ */
 
 // 文件上传
 - (void)uploadImage {

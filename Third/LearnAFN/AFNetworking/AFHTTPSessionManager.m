@@ -241,6 +241,7 @@
                        success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
     NSError *serializationError = nil;
+    // 1.创建 NSURLRequest 实例
     NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters constructingBodyWithBlock:block error:&serializationError];
     for (NSString *headerField in headers.keyEnumerator) {
         [request addValue:headers[headerField] forHTTPHeaderField:headerField];
@@ -255,6 +256,8 @@
         return nil;
     }
     
+    // 2.创建 NSURLSession 实例
+    // 3.创建 NSURLSessionTask 实例
     __block NSURLSessionDataTask *task = [self uploadTaskWithStreamedRequest:request progress:uploadProgress completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
         if (error) {
             if (failure) {
@@ -267,6 +270,7 @@
         }
     }];
     
+    // 4.NSURLSessionTask 实例开始。
     [task resume];
     
     return task;

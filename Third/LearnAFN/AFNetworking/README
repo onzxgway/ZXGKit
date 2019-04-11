@@ -1,0 +1,11 @@
+
+1.根据传入的NSMutableURLRequest对象创建AFStreamingMultipartFormData实体对象，
+    同时初始化一个AFMultipartBodyStream对象。内部持有一个AFHTTPBodyPart数组。
+
+2.在AFStreamingMultipartFormData函数内部，把request.httpBodyStream = AFMultipartBodyStream对象.
+
+3.AFMultipartBodyStream对象内部的
+ - (NSInteger)read:(uint8_t *)buffer maxLength:(NSUInteger)length被调用
+
+4.AFMultipartBodyStream对象遍历内部的AFHTTPBodyPart数组，调用AFHTTPBodyPart对象的
+    - (NSInteger)read:(uint8_t *)buffer maxLength:(NSUInteger)length方法拼接表单到buffer中。

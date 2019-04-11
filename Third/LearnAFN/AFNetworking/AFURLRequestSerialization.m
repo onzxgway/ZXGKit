@@ -622,29 +622,50 @@ static inline NSString * AFContentTypeForPathExtension(NSString *extension) {
 NSUInteger const kAFUploadStream3GSuggestedPacketSize = 1024 * 16;
 NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 
+/**
+ --Boundary+B5E2625CEF6EC7F4
+ Content-Disposition: form-data; name="image"
+ Content-Type: image/png
+ 
+ PNG;��^3����)or�!�.st�n��x(+9'���...
+ --Boundary+B5E2625CEF6EC7F4--
+ */
 @interface AFHTTPBodyPart : NSObject
+// 编码方式
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
+// 头
 @property (nonatomic, strong) NSDictionary *headers;
+// 边界
 @property (nonatomic, copy) NSString *boundary;
+// 内容
 @property (nonatomic, strong) id body;
+// 内容长度
 @property (nonatomic, assign) unsigned long long bodyContentLength;
+// 输入流
 @property (nonatomic, strong) NSInputStream *inputStream;
-
+// 是否有初始边界
 @property (nonatomic, assign) BOOL hasInitialBoundary;
+// 是否有终止边界
 @property (nonatomic, assign) BOOL hasFinalBoundary;
-
+// 内容是否有可用字节（内容是否为空）
 @property (readonly, nonatomic, assign, getter = hasBytesAvailable) BOOL bytesAvailable;
+// 长度
 @property (readonly, nonatomic, assign) unsigned long long contentLength;
-
+// 读取数据
 - (NSInteger)read:(uint8_t *)buffer
         maxLength:(NSUInteger)length;
 @end
 
 @interface AFMultipartBodyStream : NSInputStream <NSStreamDelegate>
+// 读取的包的大小
 @property (nonatomic, assign) NSUInteger numberOfBytesInPacket;
+// 延时
 @property (nonatomic, assign) NSTimeInterval delay;
+// 输入流
 @property (nonatomic, strong) NSInputStream *inputStream;
+// 内容大小
 @property (readonly, nonatomic, assign) unsigned long long contentLength;
+// 是否为空
 @property (readonly, nonatomic, assign, getter = isEmpty) BOOL empty;
 
 - (instancetype)initWithStringEncoding:(NSStringEncoding)encoding;
@@ -653,7 +674,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 @end
 
 #pragma mark -
-
+// 连接urlRequest和httpBodyStream的作用
 @interface AFStreamingMultipartFormData ()
 @property (readwrite, nonatomic, copy) NSMutableURLRequest *request;
 @property (readwrite, nonatomic, assign) NSStringEncoding stringEncoding;
@@ -670,7 +691,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     if (!self) {
         return nil;
     }
-
+    // 初始化方法，创建了边界和管道
     self.request = urlRequest;
     self.stringEncoding = encoding;
     self.boundary = AFCreateMultipartFormBoundary();
@@ -691,23 +712,28 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     NSParameterAssert(fileURL);
     NSParameterAssert(name);
 
+    // lastPathComponent  https://www.baidu.com/abc.html     结果就是abc.html
+    // pathExtension  https://www.baidu.com/abc.html     结果就是html
     NSString *fileName = [fileURL lastPathComponent];
     NSString *mimeType = AFContentTypeForPathExtension([fileURL pathExtension]);
 
     return [self appendPartWithFileURL:fileURL name:name fileName:fileName mimeType:mimeType error:error];
 }
 
+// 通过本地的一个文件的URL获取数据
+// 通过这个URL能够获取到一些和文件相关的信息，然后再进行一些必要的判断，最后生成一个AFHTTPBodyPart模型，最终把这个模型拼接到管道的模型数组中
 - (BOOL)appendPartWithFileURL:(NSURL *)fileURL
                          name:(NSString *)name
                      fileName:(NSString *)fileName
                      mimeType:(NSString *)mimeType
                         error:(NSError * __autoreleasing *)error
 {
-    NSParameterAssert(fileURL);
+    NSParameterAssert(fileURL); //  NSParameterAssert()  用来判断参数是否为空，如果为空就抛出异常
     NSParameterAssert(name);
     NSParameterAssert(fileName);
     NSParameterAssert(mimeType);
 
+    // 使用isFileURL判断一个URL是否为fileURL，使用checkResourceIsReachableAndReturnError判断路径能够到达
     if (![fileURL isFileURL]) {
         NSDictionary *userInfo = @{NSLocalizedFailureReasonErrorKey: NSLocalizedStringFromTable(@"Expected URL to be a file URL", @"AFNetworking", nil)};
         if (error) {
@@ -744,6 +770,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     return YES;
 }
 
+// 通过流来获取数据
 - (void)appendPartWithInputStream:(NSInputStream *)inputStream
                              name:(NSString *)name
                          fileName:(NSString *)fileName
@@ -769,6 +796,8 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     [self.bodyStream appendHTTPBodyPart:bodyPart];
 }
 
+
+// 根据NSData 获取数据
 - (void)appendPartWithFileData:(NSData *)data
                           name:(NSString *)name
                       fileName:(NSString *)fileName
@@ -796,6 +825,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     [self appendPartWithHeaders:mutableHeaders body:data];
 }
 
+// 抽象的公共方法
 - (void)appendPartWithHeaders:(NSDictionary *)headers
                          body:(NSData *)body
 {
@@ -811,6 +841,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     [self.bodyStream appendHTTPBodyPart:bodyPart];
 }
 
+// 设置管道的两个属性
 - (void)throttleBandwidthWithPacketSize:(NSUInteger)numberOfBytes
                                   delay:(NSTimeInterval)delay
 {
@@ -818,6 +849,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     self.bodyStream.delay = delay;
 }
 
+// 把数据跟请求建立联系的核心方法，通过 [self.request setHTTPBodyStream:self.bodyStream];这个方法建立联系，然后设置Content-Type 和 Content-Length 最后返回一个NSMutableURLRequest。
 - (NSMutableURLRequest *)requestByFinalizingMultipartFormData {
     if ([self.bodyStream isEmpty]) {
         return self.request;
@@ -858,12 +890,13 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 @synthesize streamStatus;
 @synthesize streamError;
 
+// 初始化方法
 - (instancetype)initWithStringEncoding:(NSStringEncoding)encoding {
     self = [super init];
     if (!self) {
         return nil;
     }
-
+    // 初始化一些属性
     self.stringEncoding = encoding;
     self.HTTPBodyParts = [NSMutableArray array];
     self.numberOfBytesInPacket = NSIntegerMax;
@@ -871,6 +904,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     return self;
 }
 
+// 重置初始边界和结束边界，当有多个body的时候，只需要拼接一个头部边界和一个结束边界就可以了。
 - (void)setInitialAndFinalBoundaries {
     if ([self.HTTPBodyParts count] > 0) {
         for (AFHTTPBodyPart *bodyPart in self.HTTPBodyParts) {
@@ -903,12 +937,16 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     NSInteger totalNumberOfBytesRead = 0;
 
     while ((NSUInteger)totalNumberOfBytesRead < MIN(length, self.numberOfBytesInPacket)) {
+        // 如果当前读取的body不存在或者body没有可读字节
         if (!self.currentHTTPBodyPart || ![self.currentHTTPBodyPart hasBytesAvailable]) {
+            // 把下一个body赋值给当前的body 如果下一个为nil 就退出循环
             if (!(self.currentHTTPBodyPart = [self.HTTPBodyPartEnumerator nextObject])) {
                 break;
             }
         } else {
+            // 剩余可读文件的大小
             NSUInteger maxLength = MIN(length, self.numberOfBytesInPacket) - (NSUInteger)totalNumberOfBytesRead;
+            // 把当前的body的数据读入到buffer中
             NSInteger numberOfBytesRead = [self.currentHTTPBodyPart read:&buffer[totalNumberOfBytesRead] maxLength:maxLength];
             if (numberOfBytesRead == -1) {
                 self.streamError = self.currentHTTPBodyPart.inputStream.streamError;
@@ -926,6 +964,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     return totalNumberOfBytesRead;
 }
 
+// 关闭读取缓存和设置getter方法
 - (BOOL)getBuffer:(__unused uint8_t **)buffer
            length:(__unused NSUInteger *)len
 {
@@ -937,7 +976,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 }
 
 #pragma mark - NSStream
-
+// 重写open close方法
 - (void)open {
     if (self.streamStatus == NSStreamStatusOpen) {
         return;
@@ -971,6 +1010,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
                   forMode:(__unused NSString *)mode
 {}
 
+// 返回总大小
 - (unsigned long long)contentLength {
     unsigned long long length = 0;
     for (AFHTTPBodyPart *bodyPart in self.HTTPBodyParts) {
@@ -1015,22 +1055,22 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 #pragma mark -
 
 typedef enum {
-    AFEncapsulationBoundaryPhase = 1,
-    AFHeaderPhase                = 2,
-    AFBodyPhase                  = 3,
-    AFFinalBoundaryPhase         = 4,
+    AFEncapsulationBoundaryPhase = 1,   // 起始边界
+    AFHeaderPhase                = 2,   // 属性
+    AFBodyPhase                  = 3,   // 内容
+    AFFinalBoundaryPhase         = 4,   // 终止边界
 } AFHTTPBodyPartReadPhase;
 
 @interface AFHTTPBodyPart () <NSCopying> {
-    AFHTTPBodyPartReadPhase _phase;
+    AFHTTPBodyPartReadPhase _phase;         // 使用枚举包装body组成部分
     NSInputStream *_inputStream;
-    unsigned long long _phaseReadOffset;
+    unsigned long long _phaseReadOffset;    //  每个组成部分的位置
 }
 
-- (BOOL)transitionToNextPhase;
+- (BOOL)transitionToNextPhase;              // 转移到下一个阶段
 - (NSInteger)readData:(NSData *)data
            intoBuffer:(uint8_t *)buffer
-            maxLength:(NSUInteger)length;
+            maxLength:(NSUInteger)length;   // 读取数据
 @end
 
 @implementation AFHTTPBodyPart
@@ -1053,6 +1093,7 @@ typedef enum {
     }
 }
 
+// body可能有好几种类型，根据不同的类型返回不同方法创建的NSInputStream 。
 - (NSInputStream *)inputStream {
     if (!_inputStream) {
         if ([self.body isKindOfClass:[NSData class]]) {
@@ -1069,6 +1110,7 @@ typedef enum {
     return _inputStream;
 }
 
+// 根据headers字典来拼接属性
 - (NSString *)stringForHeaders {
     NSMutableString *headerString = [NSMutableString string];
     for (NSString *field in [self.headers allKeys]) {
@@ -1079,23 +1121,29 @@ typedef enum {
     return [NSString stringWithString:headerString];
 }
 
+// 获取body的大小
 - (unsigned long long)contentLength {
     unsigned long long length = 0;
-
+    // 需要注意的是初始和结束边界的问题，要做个判断
+    // 初始边界
     NSData *encapsulationBoundaryData = [([self hasInitialBoundary] ? AFMultipartFormInitialBoundary(self.boundary) : AFMultipartFormEncapsulationBoundary(self.boundary)) dataUsingEncoding:self.stringEncoding];
     length += [encapsulationBoundaryData length];
 
+    // 属性
     NSData *headersData = [[self stringForHeaders] dataUsingEncoding:self.stringEncoding];
     length += [headersData length];
 
+    // 内容
     length += _bodyContentLength;
 
+    // 结束边界
     NSData *closingBoundaryData = ([self hasFinalBoundary] ? [AFMultipartFormFinalBoundary(self.boundary) dataUsingEncoding:self.stringEncoding] : [NSData data]);
     length += [closingBoundaryData length];
 
     return length;
 }
 
+// 是否还有数据可读
 - (BOOL)hasBytesAvailable {
     // Allows `read:maxLength:` to be called again if `AFMultipartFormFinalBoundary` doesn't fit into the available buffer
     if (_phase == AFFinalBoundaryPhase) {
@@ -1155,6 +1203,7 @@ typedef enum {
     return totalNumberOfBytesRead;
 }
 
+// 数据写入到buffer中
 - (NSInteger)readData:(NSData *)data
            intoBuffer:(uint8_t *)buffer
             maxLength:(NSUInteger)length
@@ -1171,6 +1220,7 @@ typedef enum {
     return (NSInteger)range.length;
 }
 
+// 转移到下一个阶段
 - (BOOL)transitionToNextPhase {
     if (![[NSThread currentThread] isMainThread]) {
         dispatch_sync(dispatch_get_main_queue(), ^{

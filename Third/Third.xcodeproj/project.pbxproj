@@ -188,6 +188,7 @@
 		CC7D90D5225C9FBB0049F2EC /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7D90CD225C9FBB0049F2EC /* AFNetworkReachabilityManager.m */; };
 		CC7D90D6225C9FBB0049F2EC /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7D90CE225C9FBB0049F2EC /* AFSecurityPolicy.m */; };
 		CC81B40F224DED4700D6D28E /* UploadFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81B40E224DED4700D6D28E /* UploadFileController.m */; };
+		CC9D55CD225F470F001F32E4 /* README in Resources */ = {isa = PBXBuildFile; fileRef = CC9D55CC225F470F001F32E4 /* README */; };
 		CCA9D9B3224A0F820077A499 /* GGRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9D9B2224A0F820077A499 /* GGRefreshNormalHeader.m */; };
 		CCB6C77E2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6C77D2248C55200BC5BF5 /* NewRefreshAutoStateFooter.m */; };
 		CCDA61EB22486FD4003941A0 /* NewRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA61EA22486FD4003941A0 /* NewRefreshFooter.m */; };
@@ -551,6 +552,7 @@
 		CC7D90D0225C9FBB0049F2EC /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		CC81B40D224DED4700D6D28E /* UploadFileController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadFileController.h; sourceTree = "<group>"; };
 		CC81B40E224DED4700D6D28E /* UploadFileController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadFileController.m; sourceTree = "<group>"; };
+		CC9D55CC225F470F001F32E4 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		CCA9D9B1224A0F820077A499 /* GGRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGRefreshNormalHeader.h; sourceTree = "<group>"; };
 		CCA9D9B2224A0F820077A499 /* GGRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRefreshNormalHeader.m; sourceTree = "<group>"; };
 		CCB6C77C2248C55200BC5BF5 /* NewRefreshAutoStateFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRefreshAutoStateFooter.h; sourceTree = "<group>"; };
@@ -1304,20 +1306,21 @@
 		CC7D90C2225C9FBB0049F2EC /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				CC7D90CC225C9FBB0049F2EC /* AFNetworking.h */,
+				CC7D90CF225C9FBB0049F2EC /* AFCompatibilityMacros.h */,
 				CC7D90C4225C9FBB0049F2EC /* AFNetworkReachabilityManager.h */,
 				CC7D90CD225C9FBB0049F2EC /* AFNetworkReachabilityManager.m */,
 				CC7D90C3225C9FBB0049F2EC /* AFSecurityPolicy.h */,
 				CC7D90CE225C9FBB0049F2EC /* AFSecurityPolicy.m */,
+				CC7D90D0225C9FBB0049F2EC /* AFHTTPSessionManager.h */,
+				CC7D90C8225C9FBB0049F2EC /* AFHTTPSessionManager.m */,
 				CC7D90C5225C9FBB0049F2EC /* AFURLSessionManager.h */,
 				CC7D90CA225C9FBB0049F2EC /* AFURLSessionManager.m */,
 				CC7D90C6225C9FBB0049F2EC /* AFURLRequestSerialization.h */,
-				CC7D90C7225C9FBB0049F2EC /* AFURLResponseSerialization.m */,
-				CC7D90C8225C9FBB0049F2EC /* AFHTTPSessionManager.m */,
-				CC7D90C9225C9FBB0049F2EC /* AFURLResponseSerialization.h */,
 				CC7D90CB225C9FBB0049F2EC /* AFURLRequestSerialization.m */,
-				CC7D90CC225C9FBB0049F2EC /* AFNetworking.h */,
-				CC7D90CF225C9FBB0049F2EC /* AFCompatibilityMacros.h */,
-				CC7D90D0225C9FBB0049F2EC /* AFHTTPSessionManager.h */,
+				CC7D90C9225C9FBB0049F2EC /* AFURLResponseSerialization.h */,
+				CC7D90C7225C9FBB0049F2EC /* AFURLResponseSerialization.m */,
+				CC9D55CC225F470F001F32E4 /* README */,
 			);
 			path = AFNetworking;
 			sourceTree = "<group>";
@@ -1702,6 +1705,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9D55CD225F470F001F32E4 /* README in Resources */,
 				CC7CDB1D224C993500FD595A /* LaunchScreen.storyboard in Resources */,
 				CC7CDB1A224C993500FD595A /* Assets.xcassets in Resources */,
 				CC7CDB18224C993400FD595A /* Main.storyboard in Resources */,

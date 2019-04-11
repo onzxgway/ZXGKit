@@ -623,17 +623,25 @@ NSUInteger const kAFUploadStream3GSuggestedPacketSize = 1024 * 16;
 NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 
 @interface AFHTTPBodyPart : NSObject
+// 编码方式
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
+//
 @property (nonatomic, strong) NSDictionary *headers;
+//
 @property (nonatomic, copy) NSString *boundary;
+//
 @property (nonatomic, strong) id body;
+//
 @property (nonatomic, assign) unsigned long long bodyContentLength;
+//
 @property (nonatomic, strong) NSInputStream *inputStream;
-
+//
 @property (nonatomic, assign) BOOL hasInitialBoundary;
+//
 @property (nonatomic, assign) BOOL hasFinalBoundary;
-
+//
 @property (readonly, nonatomic, assign, getter = hasBytesAvailable) BOOL bytesAvailable;
+//
 @property (readonly, nonatomic, assign) unsigned long long contentLength;
 
 - (NSInteger)read:(uint8_t *)buffer
