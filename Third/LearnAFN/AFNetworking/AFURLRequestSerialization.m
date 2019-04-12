@@ -633,7 +633,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 @interface AFHTTPBodyPart : NSObject
 // 编码方式
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
-// 头
+// 属性
 @property (nonatomic, strong) NSDictionary *headers;
 // 边界
 @property (nonatomic, copy) NSString *boundary;
@@ -649,7 +649,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 @property (nonatomic, assign) BOOL hasFinalBoundary;
 // 内容是否有可用字节（内容是否为空）
 @property (readonly, nonatomic, assign, getter = hasBytesAvailable) BOOL bytesAvailable;
-// 长度
+// 总长度
 @property (readonly, nonatomic, assign) unsigned long long contentLength;
 // 读取数据
 - (NSInteger)read:(uint8_t *)buffer
@@ -695,6 +695,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     self.request = urlRequest;
     self.stringEncoding = encoding;
     self.boundary = AFCreateMultipartFormBoundary();
+    // 创建了管道
     self.bodyStream = [[AFMultipartBodyStream alloc] initWithStringEncoding:encoding];
 
     return self;
@@ -849,7 +850,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     self.bodyStream.delay = delay;
 }
 
-// 把数据跟请求建立联系的核心方法，通过 [self.request setHTTPBodyStream:self.bodyStream];这个方法建立联系，然后设置Content-Type 和 Content-Length 最后返回一个NSMutableURLRequest。
+// 核心方法
 - (NSMutableURLRequest *)requestByFinalizingMultipartFormData {
     if ([self.bodyStream isEmpty]) {
         return self.request;
@@ -857,8 +858,10 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
 
     // Reset the initial and final boundaries to ensure correct Content-Length
     [self.bodyStream setInitialAndFinalBoundaries];
+    // 把数据和请求建立联系
     [self.request setHTTPBodyStream:self.bodyStream];
 
+    // 设置请求头 Content-Type 和 vContent-Length
     [self.request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@", self.boundary] forHTTPHeaderField:@"Content-Type"];
     [self.request setValue:[NSString stringWithFormat:@"%llu", [self.bodyStream contentLength]] forHTTPHeaderField:@"Content-Length"];
 
@@ -898,6 +901,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     }
     // 初始化一些属性
     self.stringEncoding = encoding;
+    // AFHTTPBodyPart数组
     self.HTTPBodyParts = [NSMutableArray array];
     self.numberOfBytesInPacket = NSIntegerMax;
 
@@ -985,6 +989,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     self.streamStatus = NSStreamStatusOpen;
 
     [self setInitialAndFinalBoundaries];
+    // 数组转枚举对象
     self.HTTPBodyPartEnumerator = [self.HTTPBodyParts objectEnumerator];
 }
 
@@ -1062,15 +1067,15 @@ typedef enum {
 } AFHTTPBodyPartReadPhase;
 
 @interface AFHTTPBodyPart () <NSCopying> {
-    AFHTTPBodyPartReadPhase _phase;         // 使用枚举包装body组成部分
+    AFHTTPBodyPartReadPhase _phase;         // body的一个组成部分标识
     NSInputStream *_inputStream;
-    unsigned long long _phaseReadOffset;    //  每个组成部分的位置
+    unsigned long long _phaseReadOffset;    // 组成部分的位置
 }
 
-- (BOOL)transitionToNextPhase;              // 转移到下一个阶段
+- (BOOL)transitionToNextPhase;              // 转移到下一个部分
 - (NSInteger)readData:(NSData *)data
            intoBuffer:(uint8_t *)buffer
-            maxLength:(NSUInteger)length;   // 读取数据
+            maxLength:(NSUInteger)length;   // 数据写入buffer
 @end
 
 @implementation AFHTTPBodyPart
@@ -1081,6 +1086,7 @@ typedef enum {
         return nil;
     }
 
+    // 设置_phase初始值为AFEncapsulationBoundaryPhase（初始边界）
     [self transitionToNextPhase];
 
     return self;
@@ -1168,6 +1174,7 @@ typedef enum {
 - (NSInteger)read:(uint8_t *)buffer
         maxLength:(NSUInteger)length
 {
+    //
     NSInteger totalNumberOfBytesRead = 0;
 
     if (_phase == AFEncapsulationBoundaryPhase) {
@@ -1222,6 +1229,7 @@ typedef enum {
 
 // 转移到下一个阶段
 - (BOOL)transitionToNextPhase {
+    // 在主线程执行该方法
     if (![[NSThread currentThread] isMainThread]) {
         dispatch_sync(dispatch_get_main_queue(), ^{
             [self transitionToNextPhase];
@@ -1247,6 +1255,7 @@ typedef enum {
             _phase = AFEncapsulationBoundaryPhase;
             break;
     }
+    // 重置_phaseReadOffset的值
     _phaseReadOffset = 0;
 
     return YES;

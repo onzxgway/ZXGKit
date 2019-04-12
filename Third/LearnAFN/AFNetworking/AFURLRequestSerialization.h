@@ -96,7 +96,7 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
 @interface AFHTTPRequestSerializer : NSObject <AFURLRequestSerialization>
 
 /**
- The string encoding used to serialize parameters. `NSUTF8StringEncoding` by default.
+ 字符串编码. 默认是NSUTF8StringEncoding.
  */
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
 
@@ -104,6 +104,8 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  Whether created requests can use the device’s cellular radio (if present). `YES` by default.
 
  @see NSMutableURLRequest -setAllowsCellularAccess:
+ 
+ 是否容许访问蜂窝网络。
  */
 @property (nonatomic, assign) BOOL allowsCellularAccess;
 
@@ -111,6 +113,23 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  The cache policy of created requests. `NSURLRequestUseProtocolCachePolicy` by default.
 
  @see NSMutableURLRequest -setCachePolicy:
+ 
+ 缓存策略。
+ 
+ typedef NS_ENUM(NSUInteger, NSURLRequestCachePolicy)
+ {
+     NSURLRequestUseProtocolCachePolicy = 0,  // 这个是默认的缓存策略，缓存不存在，就请求服务器，缓存存在，会根据response中的Cache-Control字段判断下一步操作，如: Cache-Control字段为must-revalidata, 则询问服务端该数据是否有更新，无更新的话直接返回给用户缓存数据，若已更新，则请求服务端。
+ 
+     NSURLRequestReloadIgnoringLocalCacheData = 1, // 这个策略是不管有没有本地缓存，都请求服务器。
+     NSURLRequestReloadIgnoringLocalAndRemoteCacheData = 4, // Unimplemented 这个策略会忽略本地缓存和中间代理 直接访问源server
+     NSURLRequestReloadIgnoringCacheData = NSURLRequestReloadIgnoringLocalCacheData,
+ 
+     NSURLRequestReturnCacheDataElseLoad = 2, // 这个策略指，有缓存就是用，不管其有效性，即Cache-Control字段 ，没有就访问源server
+     NSURLRequestReturnCacheDataDontLoad = 3, // 这个策略只加载本地数据，不做其他操作，适用于没有网路的情况
+ 
+     NSURLRequestReloadRevalidatingCacheData = 5, // Unimplemented  这个策略标示缓存数据必须得到服务器确认才能使用，未实现。
+ };
+ 
  */
 @property (nonatomic, assign) NSURLRequestCachePolicy cachePolicy;
 
@@ -125,6 +144,8 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  Whether created requests can continue transmitting data before receiving a response from an earlier transmission. `NO` by default
 
  @see NSMutableURLRequest -setHTTPShouldUsePipelining:
+ 
+ 是否使用管线化
  */
 @property (nonatomic, assign) BOOL HTTPShouldUsePipelining;
 
@@ -132,6 +153,8 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  The network service type for created requests. `NSURLNetworkServiceTypeDefault` by default.
 
  @see NSMutableURLRequest -setNetworkServiceType:
+ 
+ 网络服务类型
  */
 @property (nonatomic, assign) NSURLRequestNetworkServiceType networkServiceType;
 
@@ -139,6 +162,8 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  The timeout interval, in seconds, for created requests. The default timeout interval is 60 seconds.
 
  @see NSMutableURLRequest -setTimeoutInterval:
+ 
+ 请求超时时间，以秒为单位，默认为60秒。
  */
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
 
@@ -153,11 +178,15 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  - `User-Agent` with the contents of various bundle identifiers and OS designations
 
  @discussion To add or remove default request headers, use `setValue:forHTTPHeaderField:`.
+ 
+ 请求头信息
  */
 @property (readonly, nonatomic, strong) NSDictionary <NSString *, NSString *> *HTTPRequestHeaders;
 
 /**
  Creates and returns a serializer with default configuration.
+ 
+ 使用默认配置
  */
 + (instancetype)serializer;
 
@@ -166,6 +195,8 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
 
  @param field The HTTP header to set a default value for
  @param value The value set as default for the specified header, or `nil`
+ 
+ 设置HTTP请求头，当value为nil的时候就移除field
  */
 - (void)setValue:(nullable NSString *)value
 forHTTPHeaderField:(NSString *)field;
@@ -176,9 +207,17 @@ forHTTPHeaderField:(NSString *)field;
  @param field The HTTP header to retrieve the default value for
 
  @return The value set as default for the specified header, or `nil`
+ 
+ 返回field标记的内容
  */
 - (nullable NSString *)valueForHTTPHeaderField:(NSString *)field;
 
+/**
+ 这两个方法Authorization这个词有关，上边的那个方法是根据用户名和密码 生成一个 Authorization 和值，拼接到请求头中规则是这样的
+ Authorization: Basic YWRtaW46YWRtaW4=    其中Basic表示基础认证，当然还有其他认证。后边的YWRtaW46YWRtaW4= 是根据username:password 拼接后然后在经过Base64编码后的结果。
+ 
+ 如果header中有 Authorization这个字段，那么服务器会验证用户名和密码，如果不正确的话会返回401错误。
+ */
 /**
  Sets the "Authorization" HTTP header set in request objects made by the HTTP client to a basic authentication value with Base64-encoded username and password. This overwrites any existing value for this header.
 
@@ -199,6 +238,7 @@ forHTTPHeaderField:(NSString *)field;
 
 /**
  HTTP methods for which serialized requests will encode parameters as a query string. `GET`, `HEAD`, and `DELETE` by default.
+ 默认包含 `GET`,`HEAD`,`DELETE`
  */
 @property (nonatomic, strong) NSSet <NSString *> *HTTPMethodsEncodingParametersInURI;
 
