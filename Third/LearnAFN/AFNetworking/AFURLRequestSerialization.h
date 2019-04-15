@@ -137,6 +137,7 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  Whether created requests should use the default cookie handling. `YES` by default.
 
  @see NSMutableURLRequest -setHTTPShouldHandleCookies:
+ 使用Cookie
  */
 @property (nonatomic, assign) BOOL HTTPShouldHandleCookies;
 
@@ -259,7 +260,7 @@ forHTTPHeaderField:(NSString *)field;
 - (void)setQueryStringSerializationWithBlock:(nullable NSString * (^)(NSURLRequest *request, id parameters, NSError * __autoreleasing *error))block;
 
 ///-------------------------------
-/// @name Creating Request Objects
+/// @name Creating Request Objects 以下三个是核心方法  创建NSMutableURLRequest对象
 ///-------------------------------
 
 /**
@@ -273,6 +274,8 @@ forHTTPHeaderField:(NSString *)field;
  @param error The error that occurred while constructing the request.
 
  @return An `NSMutableURLRequest` object.
+ 
+ 当method为GET/HEAD/DELETE 时，参数会被拼接到URL中，其他情况则会当做requset的body处理。
  */
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method
                                  URLString:(NSString *)URLString
@@ -291,6 +294,10 @@ forHTTPHeaderField:(NSString *)field;
  @param error The error that occurred while constructing the request.
 
  @return An `NSMutableURLRequest` object
+ 
+ 这个方法支持上传数据，值得注意的是之所以能够把本地磁盘或者内存中的数据发送到服务器，是因为NSURLRequest 有两个属性 ：
+ NSData *HTTPBody;
+ NSInputStream *HTTPBodyStream;
  */
 - (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
                                               URLString:(NSString *)URLString
@@ -308,6 +315,8 @@ forHTTPHeaderField:(NSString *)field;
  @discussion There is a bug in `NSURLSessionTask` that causes requests to not send a `Content-Length` header when streaming contents from an HTTP body, which is notably problematic when interacting with the Amazon S3 webservice. As a workaround, this method takes a request constructed with `multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:`, or any other request with an `HTTPBodyStream`, writes the contents to the specified file and returns a copy of the original request with the `HTTPBodyStream` property set to `nil`. From here, the file can either be passed to `AFURLSessionManager -uploadTaskWithRequest:fromFile:progress:completionHandler:`, or have its contents read into an `NSData` that's assigned to the `HTTPBody` property of the request.
 
  @see https://github.com/AFNetworking/AFNetworking/issues/1398
+ 
+ 这个方法可以把一个请求中的body数据保存到一个文件中，然后返回一个HTTPBodyStream为nil的请求，按照注释说的，NSURLSessionTask在使用流传数据时。如果没拼接Content-Length 会有问题。然后可以把这文件上传或者把它转为二进制文件上传。
  */
 - (NSMutableURLRequest *)requestWithMultipartFormRequest:(NSURLRequest *)request
                              writingStreamContentsToFile:(NSURL *)fileURL

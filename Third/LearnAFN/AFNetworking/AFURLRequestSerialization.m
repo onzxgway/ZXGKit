@@ -171,20 +171,26 @@ NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
 
 #pragma mark -
 
+// 监听元素的集合
 static NSArray * AFHTTPRequestSerializerObservedKeyPaths() {
     static NSArray *_AFHTTPRequestSerializerObservedKeyPaths = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _AFHTTPRequestSerializerObservedKeyPaths = @[NSStringFromSelector(@selector(allowsCellularAccess)), NSStringFromSelector(@selector(cachePolicy)), NSStringFromSelector(@selector(HTTPShouldHandleCookies)), NSStringFromSelector(@selector(HTTPShouldUsePipelining)), NSStringFromSelector(@selector(networkServiceType)), NSStringFromSelector(@selector(timeoutInterval))];
+        _AFHTTPRequestSerializerObservedKeyPaths = @[NSStringFromSelector(@selector(allowsCellularAccess)),       NSStringFromSelector(@selector(cachePolicy)), NSStringFromSelector(@selector(HTTPShouldHandleCookies)), NSStringFromSelector(@selector(HTTPShouldUsePipelining)), NSStringFromSelector(@selector(networkServiceType)), NSStringFromSelector(@selector(timeoutInterval))];
     });
-
+    // 允许访问蜂窝网络
+    // 缓存策略
+    // 使用Cookie
+    // 使用管线化
+    // 网络服务类型
+    // 超时时间
     return _AFHTTPRequestSerializerObservedKeyPaths;
 }
 
 static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerObserverContext;
 
 @interface AFHTTPRequestSerializer ()
-@property (readwrite, nonatomic, strong) NSMutableSet *mutableObservedChangedKeyPaths;
+@property (readwrite, nonatomic, strong) NSMutableSet *mutableObservedChangedKeyPaths;  // 手动设置了的属性的集合
 @property (readwrite, nonatomic, strong) NSMutableDictionary *mutableHTTPRequestHeaders;
 @property (readwrite, nonatomic, strong) dispatch_queue_t requestHeaderModificationQueue;
 @property (readwrite, nonatomic, assign) AFHTTPRequestQueryStringSerializationStyle queryStringSerializationStyle;
@@ -243,6 +249,7 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
     self.mutableObservedChangedKeyPaths = [NSMutableSet set];
     for (NSString *keyPath in AFHTTPRequestSerializerObservedKeyPaths()) {
         if ([self respondsToSelector:NSSelectorFromString(keyPath)]) {
+            // 设置KVO监听
             [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:AFHTTPRequestSerializerObserverContext];
         }
     }
@@ -253,7 +260,7 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
 - (void)dealloc {
     for (NSString *keyPath in AFHTTPRequestSerializerObservedKeyPaths()) {
         if ([self respondsToSelector:NSSelectorFromString(keyPath)]) {
-            [self removeObserver:self forKeyPath:keyPath context:AFHTTPRequestSerializerObserverContext];
+            [self removeObserver:self forKeyPath:keyPath context:AFHTTPRequestSerializerObserverContext];// 取消监听
         }
     }
 }
@@ -262,7 +269,11 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
 
 // Workarounds for crashing behavior using Key-Value Observing with XCTest
 // See https://github.com/AFNetworking/AFNetworking/issues/2523
-
+// 需要监听的属性，但看这些属性而言，要想实现当属性变化时，就调用监听方法，就需要我们手动实现监听方法。
+// 如果在开发中想要监听一个对象中某个自定义的属性时，只需要手动实现监听方法就行了。
+/**
+  *  下边的这几个setter方法，主要目的是触发kvo监听
+  */
 - (void)setAllowsCellularAccess:(BOOL)allowsCellularAccess {
     [self willChangeValueForKey:NSStringFromSelector(@selector(allowsCellularAccess))];
     _allowsCellularAccess = allowsCellularAccess;
@@ -378,20 +389,26 @@ forHTTPHeaderField:(NSString *)field
 	return mutableRequest;
 }
 
+// 专门处理上传数据的方法，这里就不允许使用GET / HEAD HTTPMethod了。会把参数拼到formdata中。
 - (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
                                               URLString:(NSString *)URLString
                                              parameters:(NSDictionary *)parameters
                               constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
                                                   error:(NSError *__autoreleasing *)error
 {
+    // method 不能为空
     NSParameterAssert(method);
+    // method 不能是 GET 和 HEAD
     NSParameterAssert(![method isEqualToString:@"GET"] && ![method isEqualToString:@"HEAD"]);
 
+    // 通过私有方法获取NSMutableURLRequest
     NSMutableURLRequest *mutableRequest = [self requestWithMethod:method URLString:URLString parameters:nil error:error];
 
+    // 创建一个AFStreamingMultipartFormData实例，用来处理数据。
     __block AFStreamingMultipartFormData *formData = [[AFStreamingMultipartFormData alloc] initWithURLRequest:mutableRequest stringEncoding:NSUTF8StringEncoding];
 
     if (parameters) {
+        // 遍历parameters后 把value转成NSData然后拼接到formData中
         for (AFQueryStringPair *pair in AFQueryStringPairsFromDictionary(parameters)) {
             NSData *data = nil;
             if ([pair.value isKindOfClass:[NSData class]]) {
@@ -422,6 +439,8 @@ forHTTPHeaderField:(NSString *)field
     NSParameterAssert(request.HTTPBodyStream);
     NSParameterAssert([fileURL isFileURL]);
 
+    // 加上上边的两个判断，下边的这些代码就是把文件写到另一个地方的典型使用方法了
+    // 一个关于使用NSInputStream和NSOutputSteam 的经典案例，用法可以做参考。
     NSInputStream *inputStream = request.HTTPBodyStream;
     NSOutputStream *outputStream = [[NSOutputStream alloc] initWithURL:fileURL append:NO];
     __block NSError *error = nil;
