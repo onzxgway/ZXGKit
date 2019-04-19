@@ -60,12 +60,14 @@ id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOptions 
  */
 @interface AFHTTPResponseSerializer : NSObject <AFURLResponseSerialization>
 
+// 初始化方法
 - (instancetype)init;
 
 @property (nonatomic, assign) NSStringEncoding stringEncoding DEPRECATED_MSG_ATTRIBUTE("The string encoding is never used. AFHTTPResponseSerializer only validates status codes and content types but does not try to decode the received data in any way.");
 
 /**
  Creates and returns a serializer with default configuration.
+ 初始化方法
  */
 + (instancetype)serializer;
 
@@ -77,11 +79,14 @@ id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOptions 
  The acceptable HTTP status codes for responses. When non-`nil`, responses with status codes not contained by the set will result in an error during validation.
 
  See http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+ 
+ 设置接收到的状态码，不在接收范围内的状态码会在验证时返回错误
  */
 @property (nonatomic, copy, nullable) NSIndexSet *acceptableStatusCodes;
 
 /**
  The acceptable MIME types for responses. When non-`nil`, responses with a `Content-Type` with MIME types that do not intersect with the set will result in an error during validation.
+ 设置接收的ContentType，不在接收范围内的ContentType会在验证时返回错误
  */
 @property (nonatomic, copy, nullable) NSSet <NSString *> *acceptableContentTypes;
 
@@ -95,6 +100,8 @@ id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOptions 
  @param error The error that occurred while attempting to validate the response.
 
  @return `YES` if the response is valid, otherwise `NO`.
+ 
+ 验证服务器返回的数据，会使用到上述两个属性。
  */
 - (BOOL)validateResponse:(nullable NSHTTPURLResponse *)response
                     data:(nullable NSData *)data

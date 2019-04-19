@@ -98,8 +98,8 @@ id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOptions 
     if (!self) {
         return nil;
     }
-
-    self.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 100)];
+    // NSIndexSet是一个有序的，唯一的，无符号整数的集合。
+    self.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 100)]; // 取200包括200后边的100个整数，状态码范围为200 ~ 299。
     self.acceptableContentTypes = nil;
 
     return self;
