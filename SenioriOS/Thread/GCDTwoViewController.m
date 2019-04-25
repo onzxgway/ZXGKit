@@ -296,7 +296,9 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
 }
 
 #pragma mark - =====================================semaphore==============================================
-// 可以理解为最大并发数 异步变同步 等功能
+// semaphore使用场景：一个界面执行多个网络请求
+
+// semaphore可以理解为最大并发数 异步变同步 的功能
 - (void)dispatchSignal {
     // create的value表示，最多几个资源可访问
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
@@ -331,7 +333,7 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
 }
 
 #pragma mark - =====================================group==============================================
-// Group使用场景：一个界面执行多个网络请求
+// Group使用场景：一个界面执行多个网络请求 （相比于semaphore效率高）
 
 - (void)group_One {
     
@@ -369,7 +371,7 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
     /**
      使用注意事项：
      添加在队列中的任务，必须是同步的不能再开启新线程，否则group会失效。
-     如果要开启，必须搭配信号量使用。
+     如果要开启，必须使用dispatch_group_enter和dispatch_group_leave。
      */
     dispatch_group_enter(group); // 任务数+1
     dispatch_async(queue, ^{
