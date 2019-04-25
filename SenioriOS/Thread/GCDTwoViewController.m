@@ -371,7 +371,7 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
     /**
      使用注意事项：
      添加在队列中的任务，必须是同步的不能再开启新线程，否则group会失效。
-     如果要开启，必须使用dispatch_group_enter和dispatch_group_leave。
+     如果要开启，必须使用dispatch_group_enter和dispatch_group_leave搭配信号量。
      */
     dispatch_group_enter(group); // 任务数+1
     dispatch_async(queue, ^{
@@ -396,6 +396,11 @@ static NSString * const URLPath = @"http://svr.tuliu.com/center/front/app/util/u
     });
     
 }
+
+#pragma mark - ================
+            // 一个界面执行多个网络请求有三种方式
+    // 1. 单用队列组。  2. 单用信号量。   3.队列组搭配信号量。
+#pragma mark - ================
 
 #pragma mark - =====================================队列==============================================
 
