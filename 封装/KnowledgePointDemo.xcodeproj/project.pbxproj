@@ -96,6 +96,8 @@
 		CC5EE0A021F0836E00B87939 /* ZXGCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5EE09F21F0836E00B87939 /* ZXGCenterViewController.m */; };
 		CC6B4E87221BE23E0004A552 /* ZXGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6B4E86221BE23E0004A552 /* ZXGPageViewController.m */; };
 		CC6B4E8D221BF6D70004A552 /* ZXGTestPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6B4E8B221BF6D70004A552 /* ZXGTestPageViewController.m */; };
+		CC719E84227846E200105ABA /* ZXGView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC719E83227846E200105ABA /* ZXGView.m */; };
+		CC719E872278481400105ABA /* ZXGFillModeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC719E852278481400105ABA /* ZXGFillModeView.m */; };
 		CC77CA9A21F1B90B002E5E91 /* ZXGTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC77CA9921F1B90B002E5E91 /* ZXGTestController.m */; };
 		CC908F89227557650089CDFC /* ZXGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC908F88227557650089CDFC /* ZXGTableViewController.m */; };
 		CC96B82B22755110006F6A30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC96B82A22755110006F6A30 /* AppDelegate.m */; };
@@ -278,6 +280,10 @@
 		CC6B4E86221BE23E0004A552 /* ZXGPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPageViewController.m; sourceTree = "<group>"; };
 		CC6B4E8B221BF6D70004A552 /* ZXGTestPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGTestPageViewController.m; sourceTree = "<group>"; };
 		CC6B4E8C221BF6D70004A552 /* ZXGTestPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGTestPageViewController.h; sourceTree = "<group>"; };
+		CC719E82227846E200105ABA /* ZXGView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGView.h; sourceTree = "<group>"; };
+		CC719E83227846E200105ABA /* ZXGView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGView.m; sourceTree = "<group>"; };
+		CC719E852278481400105ABA /* ZXGFillModeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXGFillModeView.m; sourceTree = "<group>"; };
+		CC719E862278481400105ABA /* ZXGFillModeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGFillModeView.h; sourceTree = "<group>"; };
 		CC77CA9821F1B90B002E5E91 /* ZXGTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGTestController.h; sourceTree = "<group>"; };
 		CC77CA9921F1B90B002E5E91 /* ZXGTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGTestController.m; sourceTree = "<group>"; };
 		CC908F87227557650089CDFC /* ZXGTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGTableViewController.h; sourceTree = "<group>"; };
@@ -737,6 +743,8 @@
 		CC96B82822755110006F6A30 /* UISearchController */ = {
 			isa = PBXGroup;
 			children = (
+				CC719E862278481400105ABA /* ZXGFillModeView.h */,
+				CC719E852278481400105ABA /* ZXGFillModeView.m */,
 				CC96B82922755110006F6A30 /* AppDelegate.h */,
 				CC96B82A22755110006F6A30 /* AppDelegate.m */,
 				CC96B82C22755110006F6A30 /* ViewController.h */,
@@ -745,6 +753,8 @@
 				CC96B83E22755174006F6A30 /* ZXGTestViewController.m */,
 				CC908F87227557650089CDFC /* ZXGTableViewController.h */,
 				CC908F88227557650089CDFC /* ZXGTableViewController.m */,
+				CC719E82227846E200105ABA /* ZXGView.h */,
+				CC719E83227846E200105ABA /* ZXGView.m */,
 				CC96B82F22755110006F6A30 /* Main.storyboard */,
 				CC96B83222755111006F6A30 /* Assets.xcassets */,
 				CC96B83422755111006F6A30 /* LaunchScreen.storyboard */,
@@ -1404,7 +1414,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC719E84227846E200105ABA /* ZXGView.m in Sources */,
 				CC96B82E22755110006F6A30 /* ViewController.m in Sources */,
+				CC719E872278481400105ABA /* ZXGFillModeView.m in Sources */,
 				CC908F89227557650089CDFC /* ZXGTableViewController.m in Sources */,
 				CC96B83922755111006F6A30 /* main.m in Sources */,
 				CC96B83F22755174006F6A30 /* ZXGTestViewController.m in Sources */,
