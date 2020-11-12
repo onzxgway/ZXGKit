@@ -401,15 +401,18 @@ forHTTPHeaderField:(NSString *)field
     // method 不能是 GET 和 HEAD
     NSParameterAssert(![method isEqualToString:@"GET"] && ![method isEqualToString:@"HEAD"]);
 
-    // 通过私有方法获取NSMutableURLRequest
+    //1，通过私有方法获取NSMutableURLRequest，配置了method、URLString
     NSMutableURLRequest *mutableRequest = [self requestWithMethod:method URLString:URLString parameters:nil error:error];
 
-    // 创建一个AFStreamingMultipartFormData实例，用来处理数据。
+    //2， 创建一个AFStreamingMultipartFormData实例，处理表单的对象。
     __block AFStreamingMultipartFormData *formData = [[AFStreamingMultipartFormData alloc] initWithURLRequest:mutableRequest stringEncoding:NSUTF8StringEncoding];
 
+    //2.1， 处理非文件数据表单
     if (parameters) {
         // 遍历parameters后 把value转成NSData然后拼接到formData中
         for (AFQueryStringPair *pair in AFQueryStringPairsFromDictionary(parameters)) {
+            // 把字典parameters转化为AFQueryStringPair数组对象，一个key和value对应一个AFQueryStringPair对象，
+            // 一个参数对应一个小表单（边界+属性+值）
             NSData *data = nil;
             if ([pair.value isKindOfClass:[NSData class]]) {
                 data = pair.value;
@@ -420,11 +423,14 @@ forHTTPHeaderField:(NSString *)field
             }
 
             if (data) {
+                // 拼接表单
+                // 保存表单的属性，在read的时候拼接
                 [formData appendPartWithFormData:data name:[pair.field description]];
             }
         }
     }
 
+    //2.2， 处理文件数据表单
     if (block) {
         block(formData);
     }
@@ -838,10 +844,10 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
                           name:(NSString *)name
 {
     NSParameterAssert(name);
-
+    // 表单属性的创建
     NSMutableDictionary *mutableHeaders = [NSMutableDictionary dictionary];
     [mutableHeaders setValue:[NSString stringWithFormat:@"form-data; name=\"%@\"", name] forKey:@"Content-Disposition"];
-
+    // 相关属性的保存，是通过AFHTTPBodyPart实现
     [self appendPartWithHeaders:mutableHeaders body:data];
 }
 

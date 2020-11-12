@@ -241,6 +241,7 @@
                        success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
     NSError *serializationError = nil;
+    // AFURLRequestSerialization 请求头 请求体 的封装
     // 1.创建 NSURLRequest 实例
     NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters constructingBodyWithBlock:block error:&serializationError];
     for (NSString *headerField in headers.keyEnumerator) {
@@ -256,6 +257,7 @@
         return nil;
     }
     
+    // AFURLSessionManager 涉及到系统的代理
     // 2.创建 NSURLSession 实例
     // 3.创建 NSURLSessionTask 实例
     __block NSURLSessionDataTask *task = [self uploadTaskWithStreamedRequest:request progress:uploadProgress completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {

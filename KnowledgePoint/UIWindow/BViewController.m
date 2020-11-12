@@ -14,7 +14,9 @@
 
 @end
 
-@implementation BViewController
+@implementation BViewController {
+    UIWindow *_window;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,11 +27,19 @@
 }
 
 - (void)exchangeKeyWindow {
-    UIWindow *win = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds]; // 一旦创建好了之后，自动添加在整个界面上
-    win.hidden = NO;
-    win.backgroundColor = kRandomColor;
-    [win makeKeyAndVisible];
-    [APPDELEGATE setWindow:win];
+    
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds]; // 一旦创建好了之后，自动添加在整个界面上
+    _window.windowLevel = UIWindowLevelNormal;
+    _window.hidden = NO;
+    _window.backgroundColor = [UIColor redColor];
+    
+    UIGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideWindow:)];
+    [_window addGestureRecognizer:gesture];
+}
+
+- (void)hideWindow:(UIGestureRecognizer *)ges {
+    _window.hidden = YES;
+    _window = nil;
 }
 
 @end

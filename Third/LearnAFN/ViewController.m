@@ -11,6 +11,8 @@
 #import "TwoBreakLoadImageController.h"
 #import "UploadFileController.h"
 #import "InputStreamController.h"
+#import "AFNetworking.h"
+#import "AFNetworking/AFNetworking.h"
 
 @interface ViewController ()
 
